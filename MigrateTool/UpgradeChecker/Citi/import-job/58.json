@@ -1,0 +1,79 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "ca591162-0877-4158-bdb8-8c0f7346a904",
+    "path": "/Users/admin/Datameer Consumption/Ingestions/Imp_Lnk_size.lnk",
+    "description": "Import information (Datalinks, Import Jobs) for all artifacts and their respective owner",
+    "name": "Imp_Lnk_size"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "3ffe3a23-2d5d-4b44-a2fa-dd1c36d34c9c"
+    ],
+    "!query!": [
+      "select name NAME, bytes_processed SizeInBytes, extension TYPE , owner\r\n-- select * \r\nfrom dap_file , permission\r\nwhere extension like \u0027%IMPORT%\u0027 and file_mode\u003d\u0027NORMAL\u0027 and bytes_processed \u003e 0 and dap_file.permission_fk \u003d permission.id \r\norder by bytes_processed desc"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Datameer Consumption/Connections/DatameerDatabase.dst",
+    "uuid": "3c81ba86-ffc4-41fb-b60e-2fc5f07862bf"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 157,
+      "acceptEmpty": true,
+      "name": "NAME",
+      "origin": "NAME",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 158,
+      "acceptEmpty": true,
+      "name": "SizeInBytes",
+      "origin": "SizeInBytes",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 159,
+      "acceptEmpty": false,
+      "name": "TYPE",
+      "origin": "TYPE",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 160,
+      "acceptEmpty": false,
+      "name": "owner",
+      "origin": "owner",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

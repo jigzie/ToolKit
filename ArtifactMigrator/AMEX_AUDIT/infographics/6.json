@@ -1,0 +1,1709 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.infographic.Infographic",
+  "links": {
+    "self": "/rest/infographics/6"
+  },
+  "file": {
+    "uuid": "3b2bb637-9461-4a23-8137-db7abdd178ea",
+    "path": "/Users/admin/Applications/Tutorial Click Path/Web User Behavior.ifg",
+    "description": "An infographic that visualizes web visitor session statistics and click paths.",
+    "name": "Web User Behavior"
+  },
+  "sameBackgroundForTabs": false,
+  "presentationMode": "tabs",
+  "slideshowEffect": "none",
+  "slideshowTime": 5,
+  "pageSize": "USLetter",
+  "pageOrientation": "portrait",
+  "showGuides": false,
+  "allowPdfFromView": false,
+  "tabs": [
+    {
+      "backgroundType": "color",
+      "backgroundImagePlacement": "fixed",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both",
+      "name": "Overview",
+      "order": 0,
+      "id": "2bb99eb8-1659-49cc-8549-d401f971bb66",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Multi bar chart",
+            "chart": "charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 10,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "panelGroup": "chart",
+            "isBarChart": true
+          },
+          "name": "Multi bar chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 18,
+          "top": 165,
+          "width": 699,
+          "height": 370,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 7,
+          "id": "babf8188-bbdf-448f-8b77-014d02ba48e8",
+          "dataSet": {
+            "maxSize": "100",
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs2YWFiZmU5Yy03M2QxLTRiZTgtOTcxZS1jOWM3ZTBiZTEyNDQ",
+                  "type": "FLOAT",
+                  "name": "UserSessionStats.avgClicks",
+                  "columnId": "aa10510250ccfb02caa399f1d27c6b1f",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / Joined / UserSessionStats.avgClicks",
+                  "id": "c87a1aa4-3608-4d81-871e-8c475ebd8897",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "6aabfe9c-73d1-4be8-971e-c9c7e0be1244",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs2YWFiZmU5Yy03M2QxLTRiZTgtOTcxZS1jOWM3ZTBiZTEyNDQ",
+                  "type": "FLOAT",
+                  "name": "UserSessionStats.avgMins",
+                  "columnId": "bad987c890285f0371ae752273ab1243",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / Joined / UserSessionStats.avgMins",
+                  "id": "8700a733-b34a-44a7-843c-f84733d74773",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "6aabfe9c-73d1-4be8-971e-c9c7e0be1244",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs2YWFiZmU5Yy03M2QxLTRiZTgtOTcxZS1jOWM3ZTBiZTEyNDQ",
+                  "type": "STRING",
+                  "name": "Customer_Profile.Email",
+                  "columnId": "918d2a481997e9131840e442901828d3",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / Joined / Customer_Profile.Email",
+                  "id": "762a1ff0-1783-4410-ac9f-e08587896f0c",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "6aabfe9c-73d1-4be8-971e-c9c7e0be1244",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "lastExecutionDate": "10/18/2012 06:10:05 PM",
+            "isTruncated": false,
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs2YWFiZmU5Yy03M2QxLTRiZTgtOTcxZS1jOWM3ZTBiZTEyNDQ",
+            "dataSourceSpec": {
+              "jobId": 33,
+              "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+              "sheetId": "6aabfe9c-73d1-4be8-971e-c9c7e0be1244",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": true,
+          "opacity": "1",
+          "maxSize": "100",
+          "offset": 10,
+          "scale": "linear",
+          "isShadowVisible": false,
+          "isStyleVisible": false,
+          "labelOrientation": "horizontal",
+          "fillColorList": [
+            "rgb(64, 147, 181)",
+            "rgb(213, 32, 32)",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "rgb(226, 219, 206)",
+          "labelColor": "rgb(51, 44, 40)",
+          "dataDescriptor": {
+            "maxSize": 10,
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL"
+              ],
+              "dimensions": [
+                1,
+                10
+              ]
+            },
+            "label": {
+              "type": [
+                "ANY"
+              ],
+              "dimensions": [
+                1,
+                1
+              ]
+            }
+          },
+          "variant": "grouped",
+          "groupGapInPercent": 20,
+          "fontSize": "10",
+          "fontName": "Geneva",
+          "labelLength": 100,
+          "colorScheme": "categorical",
+          "isBarChart": true,
+          "showPoints": true,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "transpose": false,
+          "marginRight": "70",
+          "marginTop": 10,
+          "marginBottom": "105",
+          "marginLeft": 28.080000000000002,
+          "margin": 20,
+          "isGridVisible": false,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "labelOrientationX": "diagonal",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "offsetVariant": "zero",
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showAreas": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": true,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": "10",
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1,
+          "fontName_text": "Geneva",
+          "ignoreEmpties": true,
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "subtype": "grouped_bar",
+          "isVisibleX": true,
+          "isVisibleY": true,
+          "gridToBack": true,
+          "autoMargins": false,
+          "legendVisible": false,
+          "hasLegend": true,
+          "legendId": "e56ae6cc-cbad-45ae-8da3-0a5d7645ae10",
+          "resetLegendPosition": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Circular network",
+            "chart": "charts/circular_network",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "start": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "end": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "weight": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/circular_network_inspector",
+            "panelGroup": "chart"
+          },
+          "name": "Circular network",
+          "inspectorName": "infographics/views/circular_network_inspector",
+          "left": 609,
+          "top": 104,
+          "width": 539,
+          "height": 466,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 18,
+          "id": "479d5cec-23e9-47fd-a36f-2d8d8045dd64",
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "start": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "end": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "weight": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "start": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs1MzBmMTQ4My1iOTBjLTQ0OGYtYjVjZS02MDgxYWViZTJjOTU",
+                  "type": "STRING",
+                  "name": "From",
+                  "columnId": "0",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / InternalMoves / From",
+                  "id": "4f9ee18e-ace1-4f80-94f6-9e718907f289",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "530f1483-b90c-448f-b5ce-6081aebe2c95",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "end": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs1MzBmMTQ4My1iOTBjLTQ0OGYtYjVjZS02MDgxYWViZTJjOTU",
+                  "type": "STRING",
+                  "name": "To",
+                  "columnId": "1",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / InternalMoves / To",
+                  "id": "e9e00c42-7787-490c-b3bf-23fca4afa933",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "530f1483-b90c-448f-b5ce-6081aebe2c95",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "weight": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs1MzBmMTQ4My1iOTBjLTQ0OGYtYjVjZS02MDgxYWViZTJjOTU",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "2",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / InternalMoves / Count",
+                  "id": "417299ca-92fe-4f17-a0b7-b983e924e765",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "530f1483-b90c-448f-b5ce-6081aebe2c95",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "lastExecutionDate": "10/18/2012 06:10:05 PM",
+            "isTruncated": false,
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs1MzBmMTQ4My1iOTBjLTQ0OGYtYjVjZS02MDgxYWViZTJjOTU",
+            "dataSourceSpec": {
+              "jobId": 33,
+              "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+              "sheetId": "530f1483-b90c-448f-b5ce-6081aebe2c95",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": true,
+          "opacity": "1",
+          "maxSize": "50",
+          "fontSize": "11",
+          "fontName": "Geneva",
+          "labelLength": "21",
+          "labelColor": "rgb(83, 71, 65)",
+          "fillColorList": [
+            "rgb(64, 147, 181)",
+            "rgb(122, 164, 181)",
+            "rgb(150, 172, 181)",
+            "rgb(172, 179, 181)",
+            "rgb(213, 32, 32)",
+            "#fd8d3c",
+            "#fdae6b",
+            "#fdd0a2",
+            "#31a354",
+            "#74c476",
+            "#a1d99b",
+            "#c7e9c0",
+            "#756bb1",
+            "#9e9ac8",
+            "#bcbddc",
+            "#dadaeb",
+            "#636363",
+            "#969696",
+            "#bdbdbd",
+            "#d9d9d9"
+          ],
+          "enableTooltips": true,
+          "marginTop": "116",
+          "marginRight": 100,
+          "marginBottom": "143",
+          "marginLeft": 100,
+          "strokeColor": "rgb(226, 219, 206)",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "fontName_text": "Geneva"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 49,
+          "top": 106,
+          "width": 201,
+          "height": 30,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 9,
+          "id": "addc58e3-a01b-4383-95a5-4a77268cf01a",
+          "showFrame": true,
+          "opacity": "1",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": " Visitor Statistics",
+          "fontSize": "22",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 255, 255)",
+          "fontName_text": "Chunk",
+          "backgroundType_text": "None",
+          "backgroundColor": "rgb(83, 71, 65)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 96,
+          "top": 162.5,
+          "width": 114,
+          "height": 20,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 16,
+          "id": "7adbd959-1a3e-439e-82b6-a2e24c2a9838",
+          "showFrame": true,
+          "opacity": "1",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Avg session length",
+          "fontSize": "11",
+          "fontName": "Geneva",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black",
+          "group": "dbb0f59b-a32c-460f-8989-7e9daf9c2496",
+          "fontName_text": "Geneva"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 96,
+          "top": 182.5,
+          "width": 126,
+          "height": 21,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 17,
+          "id": "19700fb1-2399-4166-84f4-72b312ca63c0",
+          "showFrame": true,
+          "opacity": "1",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Avg clicks per session",
+          "fontSize": "11",
+          "fontName": "Geneva",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black",
+          "group": "dbb0f59b-a32c-460f-8989-7e9daf9c2496",
+          "fontName_text": "Geneva"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "New Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "New Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 31.5,
+          "top": 581,
+          "width": 305,
+          "height": 299,
+          "angle": "0",
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "fb8b2d56-2583-454a-b16a-676f6c12b4c1",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDthNjc5MjEyZi01Y2UzLTQ3YTQtYjI4Yy05NWNlY2VhNzYwMzY",
+                  "type": "STRING",
+                  "name": "LandingPage",
+                  "columnId": "0",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / TopLandingPages / LandingPage",
+                  "id": "1f92aa95-60dc-41a3-96f2-5c0920efb641",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "a679212f-5ce3-47a4-b28c-95cecea76036",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDthNjc5MjEyZi01Y2UzLTQ3YTQtYjI4Yy05NWNlY2VhNzYwMzY",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "1",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / TopLandingPages / Count",
+                  "id": "1b056f57-e6b0-4773-8eac-52f6758f99d4",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "a679212f-5ce3-47a4-b28c-95cecea76036",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "lastExecutionDate": "10/18/2012 06:10:05 PM",
+            "isTruncated": false,
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDthNjc5MjEyZi01Y2UzLTQ3YTQtYjI4Yy05NWNlY2VhNzYwMzY",
+            "dataSourceSpec": {
+              "jobId": 33,
+              "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+              "sheetId": "a679212f-5ce3-47a4-b28c-95cecea76036",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": true,
+          "opacity": "1",
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "scale": "linear",
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e"
+          ],
+          "strokeColor": "white",
+          "labelColor": "black",
+          "labelLength": 100,
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "fontSize": "12",
+          "fontName": "Ubuntu",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "hasRowHeader": false,
+          "headerBgColor": "rgb(154, 145, 135)",
+          "cellBgColor": "rgb(255, 255, 255)",
+          "defaultStrokeColor": "rgb(226, 219, 206)",
+          "frontierStrokeColor": "gray",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(83, 71, 65)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": "5",
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": "70",
+          "cellH": 40,
+          "colWidths": [
+            197,
+            70
+          ],
+          "fontName_text": "Ubuntu",
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "New Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "New Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 468,
+          "top": 611,
+          "width": 890,
+          "height": 490,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 20,
+          "id": "8d3e5bf4-b7c5-48de-b405-9f71093011a1",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDsyNzBhNzRiZC0zNjYyLTRmY2MtOTEzNC1hNDNiOTM0YTk4Njg",
+                  "type": "STRING",
+                  "name": "ClickPath",
+                  "columnId": "0",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / TopDesirableClickPaths / ClickPath",
+                  "id": "7cd3bcc5-68eb-49da-b240-01b73e636e67",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "270a74bd-3662-4fcc-9134-a43b934a9868",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDsyNzBhNzRiZC0zNjYyLTRmY2MtOTEzNC1hNDNiOTM0YTk4Njg",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "1",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / TopDesirableClickPaths / Count",
+                  "id": "898eaeaf-efea-4440-bc1f-c6d4db88b287",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "270a74bd-3662-4fcc-9134-a43b934a9868",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDsyNzBhNzRiZC0zNjYyLTRmY2MtOTEzNC1hNDNiOTM0YTk4Njg",
+                  "type": "INTEGER",
+                  "name": "UsersFollowed",
+                  "columnId": "2",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / TopDesirableClickPaths / UsersFollowed",
+                  "id": "c513fe16-f95f-4d08-b3f2-0c88be75756c",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "270a74bd-3662-4fcc-9134-a43b934a9868",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "lastExecutionDate": "10/18/2012 06:10:05 PM",
+            "isTruncated": false,
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDsyNzBhNzRiZC0zNjYyLTRmY2MtOTEzNC1hNDNiOTM0YTk4Njg",
+            "dataSourceSpec": {
+              "jobId": 33,
+              "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+              "sheetId": "270a74bd-3662-4fcc-9134-a43b934a9868",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": true,
+          "opacity": "1",
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "scale": "linear",
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e"
+          ],
+          "strokeColor": "white",
+          "labelColor": "black",
+          "labelLength": 100,
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "fontSize": "12",
+          "fontName": "Ubuntu",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "hasRowHeader": false,
+          "headerBgColor": "rgb(154, 145, 135)",
+          "cellBgColor": "white",
+          "defaultStrokeColor": "rgb(226, 219, 206)",
+          "frontierStrokeColor": "gray",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(83, 71, 65)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": "5",
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": 70,
+          "cellH": 40,
+          "colWidths": [
+            575,
+            131,
+            150
+          ],
+          "fontName_text": "Ubuntu",
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "30",
+          "top": 12,
+          "width": 183,
+          "height": "100px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 21,
+          "id": "0664b8f3-da89-4a0c-89c3-96bae35f6ba5",
+          "showFrame": true,
+          "opacity": "1",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Web",
+          "fontSize": "70",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": true,
+          "align": "left",
+          "color": "rgb(213, 32, 32)",
+          "fontName_text": "Arial"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 179,
+          "top": 12,
+          "width": 599,
+          "height": "100px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 2,
+          "id": "d720f0d2-7d1f-4031-a18a-17887341265b",
+          "showFrame": true,
+          "opacity": "1",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "User Behavior",
+          "fontSize": "70",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(83, 71, 65)",
+          "fontName_text": "Arial"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Circle",
+            "imageName": "circle.svg",
+            "defaultWidth": 79,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Circle",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 72,
+          "top": 161,
+          "width": "20",
+          "height": 20,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 23,
+          "id": "b094afe5-01fb-4cb8-a229-46d3f21a8028",
+          "showFrame": false,
+          "opacity": "1",
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(213, 32, 32)",
+          "imageName": "circle.svg",
+          "shadow": false,
+          "shadowOpacity": "0.5",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js",
+          "keepProportions": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Circle",
+            "imageName": "circle.svg",
+            "defaultWidth": 79,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Circle",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 72,
+          "top": 181,
+          "width": 20,
+          "height": 20,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 24,
+          "id": "e106e16f-6c32-4201-8f33-9396c881b799",
+          "showFrame": false,
+          "opacity": "1",
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(64, 147, 181)",
+          "imageName": "circle.svg",
+          "shadow": false,
+          "shadowOpacity": "0.5",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js",
+          "keepProportions": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 108.5,
+          "top": 546,
+          "width": 181,
+          "height": 31,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 10,
+          "id": "0c31acf5-0a5d-48fe-8ee5-d44bc7b25ec3",
+          "showFrame": true,
+          "opacity": "1",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top Landings",
+          "fontSize": "22",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 255, 255)",
+          "fontName_text": "Chunk",
+          "backgroundType_text": "None",
+          "backgroundColor": "rgb(83, 71, 65)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 174.5,
+          "top": 888,
+          "width": 125,
+          "height": 29,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 11,
+          "id": "6114aa58-b865-4dbb-9f46-ff61c4a9e70f",
+          "showFrame": true,
+          "opacity": "1",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Stickiness",
+          "fontSize": "22",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 255, 255)",
+          "fontName_text": "Chunk",
+          "backgroundType_text": "None",
+          "backgroundColor": "rgb(83, 71, 65)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "New Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "New Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 33,
+          "top": 917,
+          "width": 408,
+          "height": 296,
+          "angle": "0",
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 25,
+          "id": "276d6f82-2f44-4626-8b80-1bd27eb9a822",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDtlYmQwMTNjMC04M2U0LTQwMDUtYTFhNi01NWQ1Njc0NTQ1NjI",
+                  "type": "STRING",
+                  "name": "Page",
+                  "columnId": "0",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / TopPageDwells / Page",
+                  "id": "785df4d3-6d4e-44a8-9717-03b7faba95d6",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "ebd013c0-83e4-4005-a1a6-55d567454562",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDtlYmQwMTNjMC04M2U0LTQwMDUtYTFhNi01NWQ1Njc0NTQ1NjI",
+                  "type": "FLOAT",
+                  "name": "DwellSeconds",
+                  "columnId": "1",
+                  "toolTip": "Resources / NewClickstreamProcessor / Latest Result / TopPageDwells / DwellSeconds",
+                  "id": "f1e220cb-96b4-4a4b-b6e7-9da5145e12e3",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "ebd013c0-83e4-4005-a1a6-55d567454562",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "lastExecutionDate": "10/18/2012 06:10:05 PM",
+            "isTruncated": false,
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDtlYmQwMTNjMC04M2U0LTQwMDUtYTFhNi01NWQ1Njc0NTQ1NjI",
+            "dataSourceSpec": {
+              "jobId": 33,
+              "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+              "sheetId": "ebd013c0-83e4-4005-a1a6-55d567454562",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": true,
+          "opacity": "1",
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "scale": "linear",
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e"
+          ],
+          "strokeColor": "white",
+          "labelColor": "black",
+          "labelLength": 100,
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "fontSize": "12",
+          "fontName": "Ubuntu",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "hasRowHeader": false,
+          "headerBgColor": "rgb(154, 145, 135)",
+          "cellBgColor": "rgb(255, 255, 255)",
+          "defaultStrokeColor": "rgb(226, 219, 206)",
+          "frontierStrokeColor": "gray",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(83, 71, 65)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": "5",
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": "70",
+          "cellH": 40,
+          "colWidths": [
+            197,
+            163
+          ],
+          "fontName_text": "Ubuntu",
+          "decimalPlaces": "2",
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 717,
+          "top": 106,
+          "width": 196,
+          "height": 29,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 9,
+          "id": "e53d8b8f-776a-4586-81ad-8856b421d023",
+          "showFrame": true,
+          "opacity": "1",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top Click Paths",
+          "fontSize": "22",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 255, 255)",
+          "fontName_text": "Chunk",
+          "backgroundType_text": "None",
+          "backgroundColor": "rgb(83, 71, 65)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 844.5,
+          "top": 583,
+          "width": 137,
+          "height": 27,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 10,
+          "id": "04181682-033d-40d3-a13c-a8543b66149d",
+          "showFrame": true,
+          "opacity": "1",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Click Paths",
+          "fontSize": "22",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 255, 255)",
+          "fontName_text": "Chunk",
+          "backgroundType_text": "None",
+          "backgroundColor": "rgb(83, 71, 65)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Network",
+            "chart": "charts/network",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "source": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "target": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "strength": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              },
+              "sourceCategory": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              },
+              "targetCategory": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/network_inspector",
+            "panelGroup": "chart"
+          },
+          "name": "Network",
+          "inspectorName": "infographics/views/network_inspector",
+          "left": 1059,
+          "top": 132,
+          "width": 399,
+          "height": 371,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 19,
+          "id": "81cc27c2-e776-47d4-a315-3ba633fd726d",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "source": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "target": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "strength": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              },
+              "sourceCategory": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              },
+              "targetCategory": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "source": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs1MzBmMTQ4My1iOTBjLTQ0OGYtYjVjZS02MDgxYWViZTJjOTU",
+                  "type": "STRING",
+                  "name": "From",
+                  "columnId": "0",
+                  "toolTip": "Tutorial Click Path / Clickstream Analysis / Latest Result / TopMoves / From",
+                  "id": "7a79bbfe-761e-452d-9381-c004ad8106a2",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "530f1483-b90c-448f-b5ce-6081aebe2c95",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "target": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs1MzBmMTQ4My1iOTBjLTQ0OGYtYjVjZS02MDgxYWViZTJjOTU",
+                  "type": "STRING",
+                  "name": "To",
+                  "columnId": "1",
+                  "toolTip": "Tutorial Click Path / Clickstream Analysis / Latest Result / TopMoves / To",
+                  "id": "24d56450-5bb2-48ae-8401-dcdf268ec4ad",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "530f1483-b90c-448f-b5ce-6081aebe2c95",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "strength": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs1MzBmMTQ4My1iOTBjLTQ0OGYtYjVjZS02MDgxYWViZTJjOTU",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "2",
+                  "toolTip": "Tutorial Click Path / Clickstream Analysis / Latest Result / TopMoves / Count",
+                  "id": "5d0ac3b0-fd80-4d61-8e0d-4647055d518c",
+                  "dataSourceSpec": {
+                    "jobId": 33,
+                    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+                    "sheetId": "530f1483-b90c-448f-b5ce-6081aebe2c95",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "sourceCategory": [],
+              "targetCategory": []
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVHV0b3JpYWwgQ2xpY2sgUGF0aC9DbGlja3N0cmVhbSBBbmFseXNpcy53Yms7YzhiMjNlZWItMjZkZi00Y2EwLWJjNjctNWMwNjJkNjY0OTcwOzA7MDs1MzBmMTQ4My1iOTBjLTQ0OGYtYjVjZS02MDgxYWViZTJjOTU",
+            "dataSourceSpec": {
+              "jobId": 33,
+              "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+              "sheetId": "530f1483-b90c-448f-b5ce-6081aebe2c95",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": "1",
+          "fillColorList": [
+            "rgb(213, 32, 32)",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "linkColor": "rgb(122, 164, 181)",
+          "labelColor": "black",
+          "fontSize": 10,
+          "fontName": "Geneva",
+          "showLabels": true,
+          "pointSize": "4",
+          "enableTooltips": true,
+          "offsetX": 0,
+          "offsetY": 0,
+          "scaleX": "3.1",
+          "scaleY": "3.2",
+          "lineThickness": "2.1",
+          "maxLineThicknessMult": "5",
+          "charge": "154",
+          "theta": 0.8,
+          "gravity": "0.1",
+          "linkLength": "41",
+          "fontName_text": "Geneva"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 1193,
+          "top": 104,
+          "width": 131,
+          "height": 28,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 9,
+          "id": "9bc4ddfb-b53c-4be2-a1d6-ef827c229a0f",
+          "showFrame": true,
+          "opacity": "1",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Click Flow",
+          "fontSize": "22",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 255, 255)",
+          "fontName_text": "Chunk",
+          "backgroundType_text": "None",
+          "backgroundColor": "rgb(83, 71, 65)"
+        },
+        {
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": -1,
+          "maxSize": 20,
+          "showFrame": true,
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "id": "e56ae6cc-cbad-45ae-8da3-0a5d7645ae10",
+          "_uicType": "widget",
+          "inspectorName": "infographics/views/legend_inspector",
+          "titleHeight": 30,
+          "left": 18,
+          "top": 545,
+          "width": 699,
+          "height": 45,
+          "isLegend": true,
+          "parentChartId": "babf8188-bbdf-448f-8b77-014d02ba48e8",
+          "legendLock": false,
+          "legendOffsetX": 0,
+          "legendOffsetY": 380,
+          "visible": false,
+          "frameColor": "#ecebeb",
+          "name": "Legend: Multi bar chart",
+          "type": {
+            "name": "Chart Legend",
+            "chart": "charts/legends/box_legend",
+            "dataDescriptor": {
+              "maxSize": 20,
+              "color": {
+                "type": [
+                  "STRING"
+                ]
+              },
+              "label": {
+                "type": [
+                  "STRING"
+                ]
+              }
+            },
+            "inspector": "infographics/views/legend_inspector",
+            "panelGroup": "none",
+            "supportsLegend": false
+          }
+        },
+        {
+          "id": "63f66ab1-382d-4178-ba32-adb73926b9bc",
+          "widgets": [
+            "babf8188-bbdf-448f-8b77-014d02ba48e8",
+            "e56ae6cc-cbad-45ae-8da3-0a5d7645ae10"
+          ],
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "name": "Multi bar chart",
+          "_uicType": "legendGroup",
+          "isLegendGroup": true,
+          "childNames": [
+            "Multi bar chart",
+            "Legend: Multi bar chart"
+          ],
+          "left": 18,
+          "top": 165,
+          "width": 699,
+          "height": 370
+        }
+      ],
+      "backgroundColor": "rgb(226, 219, 206)",
+      "backgroundImage": {
+        "path": "/Applications/Click+Path+Analysis+Example/images/BlankMap-World-noborders.png"
+      },
+      "links": []
+    }
+  ],
+  "backgroundType_text": "Color",
+  "backgroundImageUrl": "/image-upload?path\u003d%2FApplications%2FClick%2BPath%2BAnalysis%2BExample%2Fimages%2FBlankMap-World-noborders.png",
+  "backgroundImagePlacement_text": "Fixed Position"
+}

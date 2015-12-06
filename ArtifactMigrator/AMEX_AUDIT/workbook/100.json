@@ -1,0 +1,234 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "573eab9d-408a-4b47-9f68-ac4376886156",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_24_job_execution.wbk",
+    "description": "",
+    "name": "_00_24_job_execution"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_job_execution_src",
+      "sheetId": "6604d199-9b8b-41ad-bf3f-4a5ffeed37d0",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_job_execution.lnk",
+        "uuid": "9a79b94e-09c7-4755-b8a1-6b1ed7a9c020"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_job_execution",
+      "sheetId": "45543d9a-470f-4059-bb11-018aa46b4c9e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_job_execution_src!id"
+        },
+        {
+          "columnName": "hadoop_properties",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_job_execution_src!hadoop_properties"
+        },
+        {
+          "columnName": "job_data",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_job_execution_src!job_data"
+        },
+        {
+          "columnName": "job_exception",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_job_execution_src!job_exception"
+        },
+        {
+          "columnName": "job_status",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MySQL_job_execution_src!job_status"
+        },
+        {
+          "columnName": "queued_time",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#MySQL_job_execution_src!queued_time"
+        },
+        {
+          "columnName": "start_time",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#MySQL_job_execution_src!start_time"
+        },
+        {
+          "columnName": "stop_time",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#MySQL_job_execution_src!stop_time"
+        },
+        {
+          "columnName": "triggered_by",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#MySQL_job_execution_src!triggered_by"
+        },
+        {
+          "columnName": "type",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#MySQL_job_execution_src!type"
+        },
+        {
+          "columnName": "user",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#MySQL_job_execution_src!user"
+        },
+        {
+          "columnName": "created_data__id",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#MySQL_job_execution_src!created_data__id"
+        },
+        {
+          "columnName": "dap_job_configuration__id",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#MySQL_job_execution_src!dap_job_configuration__id"
+        },
+        {
+          "columnName": "execution_plan_fk",
+          "columnId": "13",
+          "columnIndex": 13,
+          "formulaString": "\u003d#MySQL_job_execution_src!execution_plan_fk"
+        },
+        {
+          "columnName": "logging_properties",
+          "columnId": "14",
+          "columnIndex": 14,
+          "formulaString": "\u003d#MySQL_job_execution_src!logging_properties"
+        },
+        {
+          "columnName": "root_logger_level",
+          "columnId": "15",
+          "columnIndex": 15,
+          "formulaString": "\u003d#MySQL_job_execution_src!root_logger_level"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "hadoop_properties",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "job_data",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "job_exception",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "job_status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "queued_time",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "start_time",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "stop_time",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "triggered_by",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "user",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "created_data__id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "dap_job_configuration__id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "13",
+          "name": "execution_plan_fk",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "14",
+          "name": "logging_properties",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "root_logger_level",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 16
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

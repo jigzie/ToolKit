@@ -1,0 +1,10 @@
+{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Analytics/Workbooks/ConsumptionApp.wbk\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "No function with name IRIS_KM found."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Analytics/Workbooks/Wbk1.wbk\u0027 already exists."
+}

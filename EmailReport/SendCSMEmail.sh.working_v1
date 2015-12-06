@@ -1,0 +1,106 @@
+#!/bin/bash
+#This script is to send email to the CSM on regular schedule
+#Current Schedule: 
+#WEEKLY: RED Accounts
+#BI-WEEKLY: YELLOW
+#MONTHLY: GREEN
+#v1: Just send email to ALL ID's identified, no check on Red/Yellow/Green
+#v2: Add logic for Red/Yellow/Green; so you'll need to maintain lastRun information
+
+###Perform a read on the file & only use the ones where you have CSM Email address
+IFS=$'\n'
+
+currentDate = date +"%d-%b-%Y"
+while IFS='|' read workbookID customer CSMEmail
+do
+	clear
+	if [ "${CSMEmail}" == "" ]; then
+		#No CSM to email then skip this record.
+		#Later add the notify admin for fixing this.
+		echo "Skipping workbook ID: ${workbookID} as no CSMEmail found."
+		continue
+	fi
+		###Start building Email
+		rm EmailReport.html
+		echo "Building Email Report for: ${customer}"
+		echo "<!DOCTYPE html>" > EmailReport.html
+		echo "<html><head>" >> EmailReport.html    
+		echo "<style type=\"text/css\">" >> EmailReport.html    
+		#echo "table {border-collapse:collapse;}" >> EmailReport.html   
+		echo "table {border-collapse:collapse;}" >> EmailReport.html   
+		echo "table, td, th {border:1px solid black;}" >> EmailReport.html ##  
+		#echo "table, td, th {td font-family:\"Arial Black\",Gadget,sans-serif;}" >> EmailReport.html  
+		echo "table, td, th {td font-family:\"Helvetica\",Gadget,sans-serif;}" >> EmailReport.html  
+		echo "table, td {font-size:95%;}" >> EmailReport.html 
+		echo "td {text-align:center;}" >> EmailReport.html  
+		echo "table, th {font-weight:bold;}" >> EmailReport.html  
+		echo "</style>" >> EmailReport.html   
+		echo "</head><body text=\"Black\">" >> EmailReport.html 
+		echo "<pre>" >> EmailReport.html 
+		###Common header information for Customer
+		echo `cat CustomerEmail.header |sed 's/CUSTOMER/'${customer}'/g' ` >> EmailReport.html
+		echo "<p style=\"font-size:15px;color:#2D79B1\">" >> EmailReport.html  
+		echo "  " >> EmailReport.html
+	
+		echo "<b>Datameer bugs FIXED for ${customer}</b>" >> EmailReport.html	
+		echo "<table>" >> EmailReport.html
+		###Download the FIXED BUGS from workbook
+		###Append to email
+		curl -u jigz:'D@t@m33rR0ck5!' -X GET 'https://idas.datameer.com/rest/data/workbook/'${workbookID}'/FixedRequestEmailReport/download' > Fixed.csv
+		#First line=Header
+		head -n 1 Fixed.csv > Fixed.header
+		#Rest is data
+		awk 'NR>1' Fixed.csv > Fixed.report
+		cat Fixed.header | sed 's/\"\,\"/\|/g' |sed 's/\"//g' > Fixed.header.tmp
+		cat Fixed.report | sed 's/\"\,\"/\|/g' |sed 's/\"//g' > Fixed.report.tmp
+
+		mv Fixed.header.tmp Fixed.header
+		mv Fixed.report.tmp Fixed.report
+
+		cat  Fixed.header | awk -F"\|" '{print "<tr><th>"$1"</th> <th>"$2"</th><th>"$3"</th><th>"$4"</th><th>"$5"</th></tr>"}' >> EmailReport.html
+		cat  Fixed.report | awk -F"\|" '{print "<tr><td>"$1"</td> <td>"$2"</td><td>"$3"</td><td>"$4"</td><td>"$5"</td></tr>"}' >> EmailReport.html
+		echo "</table>" >> EmailReport.html
+                #rm Fixed.header Fixed.report Fixed.report.tmp Fixed.csv
+
+		###Download the New & Noteworthy form workbook
+		###Append to email
+		curl -u jigz:'D@t@m33rR0ck5!' -X GET 'https://idas.datameer.com/rest/data/workbook/'${workbookID}'/EmailReport/download' > New_Noteworthy.csv
+		echo "<p style=\"font-size:15px; color:#2D79B1\">" >> EmailReport.html 
+		echo "<b>New & Noteworthy Features</b>" >> EmailReport.html
+		echo "<table>" >> EmailReport.html
+
+		head -n 1 New_Noteworthy.csv > New_Noteworthy.header
+		awk 'NR>1' New_Noteworthy.csv > New_Noteworthy.report
+		
+		cat New_Noteworthy.header | sed 's/\"\,\"/\|/g' |sed 's/\"//g' > New_Noteworthy.header.tmp
+                cat New_Noteworthy.report | sed 's/\"\,\"/\|/g' |sed 's/\"//g' > New_Noteworthy.report.tmp
+
+		mv New_Noteworthy.header.tmp New_Noteworthy.header
+                mv New_Noteworthy.report.tmp New_Noteworthy.report
+
+		cat New_Noteworthy.header | awk -F"\|" '{print "<tr><th>"$1"</th><th>"$2"</th></tr>"}' >> EmailReport.html
+		#awk 'NR>1' New_Noteworthy.csv | sed 's/\"\,\"/\|/g'| sed 's/\"//g' > New_Noteworthy.report 
+	
+		###ADDING NEW & NOTEWORTHY DETAILS for this customer.
+		cat  New_Noteworthy.report | awk -F"\|" '{print "<tr><td>"$1"</td><td>"$2"</td></tr>"}' >> EmailReport.html 
+		echo "</p></pre>" >> EmailReport.html
+		echo "<table border=\"1\">" >>  EmailReport.html
+		echo "</table>" >> EmailReport.html           
+		echo "</p>" >> EmailReport.html
+		cat CustomerEmail.footer >> EmailReport.html
+		echo "</body></html>" >> EmailReport.html
+		sleep 3;
+
+##SEND EMAIL; DO NOT CHANGE THE BELOW format or ADD TAB for formatting, it breaks the sendEmail format
+cat - EmailReport.html <<EOF| sendmail -oi -t
+From: CSMReport@datameer.com
+To: `echo ${CSMEmail}` 
+Subject: Datameer Report: `echo ${customer} ${currentDate}`  
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+EOF
+
+rm Fixed.*
+rm New_Noteworthy*
+done < WbkIDs.list

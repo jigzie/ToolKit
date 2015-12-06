@@ -1,0 +1,108 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "3060eb65-4c35-4a16-b59c-7f8bc8d23c57",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/LicensePageDetails.wbk",
+    "description": "",
+    "name": "LicensePageDetails"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "HTTP_License_Page",
+      "sheetId": "5a12e38a-351a-472f-9cf2-1381613e8d7b",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "HTTP_License_Page",
+        "sheetId": "29c964ef-ec46-47f0-8ae3-a0949523c15b",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/base/_01_25_License_Page.wbk",
+          "uuid": "0b161557-e8bc-46c3-85f5-3c95787a167b"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "data_prep",
+      "sheetId": "ddd8225a-9664-4846-bd8a-1b0a5aff9f4c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "content",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dLISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#HTTP_License_Page!parsed_html;\"#content\");0)"
+        },
+        {
+          "columnName": "dls",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dEXPAND(ELEMENTS_BY_SELECTOR_QUERY(#content;\"dl\"))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "content",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "dls",
+          "width": 893,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "licensePageDetails",
+      "sheetId": "252779e8-f017-463c-af22-785565884ace",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "key",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dREPLACEALL(LISTELEMENT(CONTENTS_BY_TAG_NAME(#data_prep!dls;\"label\");0);\":\";\"\")"
+        },
+        {
+          "columnName": "val",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dLISTELEMENT(CONTENTS_BY_TAG_NAME(#data_prep!dls;\"dd\");0)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 123,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 754,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

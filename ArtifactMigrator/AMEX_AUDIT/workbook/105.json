@@ -1,0 +1,131 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "fc30e8d3-e9fe-4e3c-b069-32cb2eaf6e98",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/ClusterConfig.wbk",
+    "description": "",
+    "name": "ClusterConfig"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "HTTP_Cluster_Config_Page",
+      "sheetId": "a0e1bdef-2f8a-430e-bf90-17a26b06d6ea",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "HTTP_Cluster_Config_Page",
+        "sheetId": "c1700c95-ae37-4bcb-a43b-f09ed02e3a02",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/base/_01_05_Cluster_Config_Page.wbk",
+          "uuid": "5062adfe-a0f9-4458-8961-756a19e1bc02"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "data_prep",
+      "sheetId": "d5e99987-9b74-42d1-98ff-67ca09d7321e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "clusterProps",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dLISTELEMENT(CONTENTS_BY_TAG_NAME(#HTTP_Cluster_Config_Page!parsed_html;\"pre\");0)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "clusterProps",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "explode_props",
+      "sheetId": "04747f23-8b5a-44c4-9c0d-3328d17f9d55",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "clusterProps",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dTOKENIZE(#data_prep!clusterProps;\"\\\\n\")"
+        },
+        {
+          "columnName": "equalsIdx",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dINDEX(#clusterProps;\"\u003d\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "clusterProps",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "equalsIdx",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "clusterConfs",
+      "sheetId": "45657f19-6479-44b0-9c46-aa8179ec331f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "key",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dLEFT(#explode_props!clusterProps;#explode_props!equalsIdx)"
+        },
+        {
+          "columnName": "val",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dSUBSTR(#explode_props!clusterProps;#explode_props!equalsIdx+1)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 223,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

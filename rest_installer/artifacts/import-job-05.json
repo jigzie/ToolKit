@@ -1,0 +1,105 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10658,
+            "include": true,
+            "name": "FormulaID",
+            "origin": "id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10659,
+            "include": true,
+            "name": "ColumnID",
+            "origin": "column_id",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10660,
+            "include": false,
+            "name": "column_index",
+            "origin": "column_index",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10661,
+            "include": true,
+            "name": "FormulaString",
+            "origin": "formula_string",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10662,
+            "include": true,
+            "name": "SheetID",
+            "origin": "id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10663,
+            "include": true,
+            "name": "WorkbookID",
+            "origin": "workbook_fk",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "Importing Formulas from the Formula table joined with Sheet table",
+        "name": "MySQL_Functions",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_Functions.lnk",
+        "uuid": "c7fde5b5-ae93-4425-b666-914adfd30e66"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            "select formula.id, formula.column_id,formula.column_index,formula.formula_string,sheet.id,sheet.workbook_fk from formula,sheet where formula.sheet_fk = sheet.id"
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "1e63714b-f5ea-4da2-8486-73c88ee7595d"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ],
+        "tableName": [
+            "!query!"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

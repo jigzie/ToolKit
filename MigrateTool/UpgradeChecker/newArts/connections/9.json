@@ -1,0 +1,31 @@
+{
+  "version": "2.1.4.5",
+  "className": "datameer.dap.sdk.entity.CustomDataStore",
+  "file": {
+    "uuid": "0aa0f660-27c3-487e-a9e4-7d8aa82b94c5",
+    "path": "/Users/admin/Applications/Facebook Social Stats/Resources/Facebook.dst",
+    "description": "",
+    "name": "Facebook"
+  },
+  "typeId": "das.plugin.webservice.FacebookDataStoreType",
+  "properties": {
+    "webservice.port": [
+      "443"
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "6f0dbe1b-48a0-4833-bbfc-19b64cd56f2d"
+    ],
+    "dataStoreUsage": [
+      "IMPORT_EXPORT"
+    ],
+    "webservice.host": [
+      "graph.facebook.com"
+    ],
+    "webservice.protocol": [
+      "https"
+    ],
+    "webservice.rootPath": [
+      "/fql"
+    ]
+  }
+}

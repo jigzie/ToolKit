@@ -1,0 +1,103 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "bc91804b-c08b-44c8-bbf2-e183ef6dde19",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Exports/_04_CentralizedExport.wbk",
+    "description": "",
+    "name": "_04_CentralizedExport"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "db_encoded_output",
+      "sheetId": "d42238a5-0cb3-46f9-87b2-917d74fd10fb",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "db_encoded_output",
+        "sheetId": "afc739ac-c62b-4015-af0d-76b580c7c957",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Exports/_01_DB_Data_Combiner.wbk",
+          "uuid": "5e2842c0-d044-4f19-8a56-c8f14d812eda"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "logs_encoded_output",
+      "sheetId": "7562e83c-eb8d-4839-9088-65856da4d3c0",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "logs_encoded_output",
+        "sheetId": "96cadb14-d668-4073-be8a-84f05ffe478a",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Exports/_03_Logs_Combiner.wbk",
+          "uuid": "5c6f3b2f-535c-4b91-b280-ce613bf0fd0a"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "http_encoded_output",
+      "sheetId": "857015a4-c490-405a-aaf3-846993940b4f",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "http_encoded_output",
+        "sheetId": "9a60a594-c0b2-40c1-8824-b6b14fdce0a6",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Exports/_02_HTTP_Combiner.wbk",
+          "uuid": "bdfbee9f-d4ce-4411-9d58-03d6133e2510"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "json_output",
+      "sheetId": "3657c23b-c057-4525-a0a0-fe595b991ece",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "unionSources": [
+          "db_encoded_output",
+          "logs_encoded_output",
+          "http_encoded_output"
+        ]
+      },
+      "columnStyles": []
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

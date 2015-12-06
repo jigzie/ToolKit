@@ -1,0 +1,98 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "4adc0676-1bde-4c78-83d3-bd4d46f452bf",
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/DEL_wbk.wbk",
+    "description": "",
+    "name": "DEL_wbk"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "sheets": [
+    {
+      "name": "Copy_of_User",
+      "sheetId": "54f74594-a1a2-403d-9414-15d8a8fd39c5",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/Copy_of_User.lnk",
+        "uuid": "2b158dc3-26cf-4c6e-8f2f-ce30c327169e"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "GroupByEnabled",
+      "sheetId": "3224cbb1-2ff9-4818-b4c4-7d3820fd14c6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "A",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Copy_of_User!Enabled)"
+        },
+        {
+          "columnName": "B",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCONCAT(#Copy_of_User!UserId)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "A",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "B",
+          "width": 947,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "GroupByID",
+      "sheetId": "17496517-5a52-46cc-b792-445fc8adba73",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "A",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Copy_of_User!UserId)"
+        },
+        {
+          "columnName": "B",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCONCAT(#Copy_of_User!User)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "A",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "B",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

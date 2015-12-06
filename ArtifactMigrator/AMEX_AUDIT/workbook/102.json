@@ -1,0 +1,162 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "f910d342-b3b2-4b3b-bb7c-27243a6096c6",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_32_job_configuration.wbk",
+    "description": "",
+    "name": "_00_32_job_configuration"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_job_configuration_src",
+      "sheetId": "739bcf20-03ec-4586-80a9-fe79bc486d2e",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_job_configuration.lnk",
+        "uuid": "fa777c50-a72e-4342-952c-834d11740d90"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_job_configuration",
+      "sheetId": "f9f668f3-1f0a-4111-9031-7103e55243e2",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_job_configuration_src!id"
+        },
+        {
+          "columnName": "data_volume_size_by_license_period",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_job_configuration_src!data_volume_size_by_license_period"
+        },
+        {
+          "columnName": "expire_time_days",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_job_configuration_src!expire_time_days"
+        },
+        {
+          "columnName": "hadoop_properties",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_job_configuration_src!hadoop_properties"
+        },
+        {
+          "columnName": "min_keep_count",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MySQL_job_configuration_src!min_keep_count"
+        },
+        {
+          "columnName": "pull_type",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#MySQL_job_configuration_src!pull_type"
+        },
+        {
+          "columnName": "schedule",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#MySQL_job_configuration_src!schedule"
+        },
+        {
+          "columnName": "dap_file__id",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#MySQL_job_configuration_src!dap_file__id"
+        },
+        {
+          "columnName": "logging_properties",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#MySQL_job_configuration_src!logging_properties"
+        },
+        {
+          "columnName": "root_logger_level",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#MySQL_job_configuration_src!root_logger_level"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "data_volume_size_by_license_period",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "expire_time_days",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "hadoop_properties",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "min_keep_count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "pull_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "schedule",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "dap_file__id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "logging_properties",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "root_logger_level",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 10
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

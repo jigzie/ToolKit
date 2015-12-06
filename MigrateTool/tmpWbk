@@ -1,0 +1,39 @@
+on": "3.0.5",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "12933682-bf98-46a4-9ec3-ddc4e047a470",
+    "path": "/Users/admin/Applications/Hadoop Summit v4/Column Dependencies/test_DEL_2.wbk",
+    "description": "",
+    "name": "test_DEL_2"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "histograms.generation": [
+      "false"
+    ],
+    "cardinalities.generation": [
+      "false"
+    ],
+    "minmaxmean.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "ColDep",
+      "sheetId": "0cfeeeec-24ab-4905-8dd2-90ba619ca28b",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": true,
+      "datasource": {
+        "path": "/Users/admin/Applications/Hadoop Summit v4/_data/ColDep.upl",
+        "uuid": "8a611228-fe0b-4878-af14-4f885eb47609"
+      },
+      "columnStyles": []
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

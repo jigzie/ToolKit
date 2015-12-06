@@ -1,0 +1,1237 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "553f4854-9265-472e-b8b9-e6372639a9b7",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/_h_Workbook_Config_Stats_Workbook.wbk",
+    "description": "",
+    "name": "_h_Workbook_Config_Stats_Workbook"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Workbook_Config_Stats",
+      "sheetId": "712c1b0a-1291-4ea8-ab84-20e6ad52e449",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "filterSourceSheet": "Workbook_Config_Stats",
+      "filterTargetSheet": "Workbook_Config_Stats",
+      "filterArguments": [
+        {
+          "filterExpression": "FORMULA",
+          "value": "!ISNULL(#WorkbookID) \u0026\u0026 !ISBLANK(#WorkbookID)",
+          "valueStatic": false,
+          "type": "ADVANCED_FORMULA"
+        }
+      ],
+      "referencedSheet": {
+        "name": "MySQL_Workbook_Config_Stats",
+        "sheetId": "f52c3f95-9638-4c7a-ae1b-776e77a16180",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_30_Workbook_Config_Stats.wbk",
+          "uuid": "b348cb35-b250-4154-92ac-ac6b728f0c9f"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "PartitionDefinition",
+          "width": 195,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "PartitionSelector",
+          "width": 188,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "SheetType",
+          "width": 202,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "ExternalSheetID",
+          "width": 105,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "GroupedForSheets",
+      "sheetId": "4647700e-b56f-434b-ad76-7a4db76289e9",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "WorkbookID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Workbook_Config_Stats!WorkbookID)"
+        },
+        {
+          "columnName": "NumberOfSheets",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "Sheets",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"Sheets\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "NumberOfSheets",
+          "width": 144,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Sheets",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "Sheets",
+      "sheetId": "c072f4ba-e43d-4f71-bda2-bd86a9038d98",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ConfigType",
+          "columnId": "1",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#GroupedForSheets!Sheets)"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "0",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMIN(#GroupedForSheets!NumberOfSheets)"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#GroupedForSheets!NumberOfSheets)"
+        },
+        {
+          "columnName": "Median",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPMEDIAN(#GroupedForSheets!NumberOfSheets)"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPAVERAGE(#GroupedForSheets!NumberOfSheets)"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPSUM(#GroupedForSheets!NumberOfSheets)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "ConfigType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Median",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "GroupedForJoins",
+      "sheetId": "f8b4ad3b-db46-4eed-9b7d-935b4e373c2d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "GroupedForJoins",
+      "filterTargetSheet": "GroupedForJoins",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "SheetType",
+          "filterExpression": "TEXT_EQUALS",
+          "value": "das.internal.JoinedSheetType",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "WorkbookID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Workbook_Config_Stats!WorkbookID)"
+        },
+        {
+          "columnName": "SheetType",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#Workbook_Config_Stats!SheetType)"
+        },
+        {
+          "columnName": "NumberOfJoins",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "Joins",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d\"Joins\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "SheetType",
+          "width": 202,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "NumberOfJoins",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Joins",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "Joins",
+      "sheetId": "a65ba1cd-7336-42d1-8db2-690f1d07c068",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ConfigType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#GroupedForJoins!Joins)"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMIN(#GroupedForJoins!NumberOfJoins)"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#GroupedForJoins!NumberOfJoins)"
+        },
+        {
+          "columnName": "Median",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPMEDIAN(#GroupedForJoins!NumberOfJoins)"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPAVERAGE(#GroupedForJoins!NumberOfJoins)"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPSUM(#GroupedForJoins!NumberOfJoins)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConfigType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Median",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "GroupedForUnions",
+      "sheetId": "85f961e4-0fc7-40ca-a0dd-d75983664cbb",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "GroupedForUnions",
+      "filterTargetSheet": "GroupedForUnions",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "SheetType",
+          "filterExpression": "TEXT_EQUALS",
+          "value": "das.internal.UnionSheetType",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "WorkbookID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Workbook_Config_Stats!WorkbookID)"
+        },
+        {
+          "columnName": "SheetType",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#Workbook_Config_Stats!SheetType)"
+        },
+        {
+          "columnName": "NumberOfUnions",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "Unions",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d\"Unions\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "SheetType",
+          "width": 140,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "NumberOfUnions",
+          "width": 111,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Unions",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "Unions",
+      "sheetId": "4ee9d046-0ef9-4664-95f0-b77e6c0678ac",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ConfigType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#GroupedForUnions!Unions)"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMIN(#GroupedForUnions!NumberOfUnions)"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#GroupedForUnions!NumberOfUnions)"
+        },
+        {
+          "columnName": "Median",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPMEDIAN(#GroupedForUnions!NumberOfUnions)"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPAVERAGE(#GroupedForUnions!NumberOfUnions)"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPSUM(#GroupedForUnions!NumberOfUnions)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConfigType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Median",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "FilterOnlySorts",
+      "sheetId": "2b8d943c-bdee-4a2e-8062-21d0a927a62e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "FilterOnlySorts",
+      "filterTargetSheet": "FilterOnlySorts",
+      "filterArguments": [
+        {
+          "filterExpression": "FORMULA",
+          "value": "!ISNULL(#SortID) \u0026\u0026 !ISBLANK(#SortID)",
+          "valueStatic": false,
+          "type": "ADVANCED_FORMULA"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "WorkbookID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dCOPY(#Workbook_Config_Stats!WorkbookID)"
+        },
+        {
+          "columnName": "SortID",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dCOPY(#Workbook_Config_Stats!SortID)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "SortID",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "GroupedForSorts",
+      "sheetId": "043b3db2-9283-4791-b690-f67d535c4536",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "WorkbookID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#FilterOnlySorts!WorkbookID)"
+        },
+        {
+          "columnName": "NumberOfSorts",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "Sorts",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"Sorts\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "NumberOfSorts",
+          "width": 111,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Sorts",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "Sorts",
+      "sheetId": "ef25f17c-d3a1-4664-b926-66783c89fd4d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ConfigType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#GroupedForSorts!Sorts)"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMIN(#GroupedForSorts!NumberOfSorts)"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#GroupedForSorts!NumberOfSorts)"
+        },
+        {
+          "columnName": "Median",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPMEDIAN(#GroupedForSorts!NumberOfSorts)"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPAverage(#GroupedForSorts!NumberOfSorts)"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPSUM(#GroupedForSorts!NumberOfSorts)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConfigType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Median",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "FilterOnlyFilters",
+      "sheetId": "8277505e-df3d-4daa-888b-49f5c469d4c9",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "FilterOnlyFilters",
+      "filterTargetSheet": "FilterOnlyFilters",
+      "filterArguments": [
+        {
+          "filterExpression": "FORMULA",
+          "value": "!ISNULL(#FilterID) \u0026\u0026 !ISBLANK(#FilterID)",
+          "valueStatic": false,
+          "type": "ADVANCED_FORMULA"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "WorkbookID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dCOPY(#Workbook_Config_Stats!WorkbookID)"
+        },
+        {
+          "columnName": "FilterID",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dCOPY(#Workbook_Config_Stats!FilterID)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "FilterID",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "GroupedForFilters",
+      "sheetId": "3a32b196-1e55-4beb-91b2-c3c75153d38f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "WorkbookID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#FilterOnlyFilters!WorkbookID)"
+        },
+        {
+          "columnName": "NumberOfFilters",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "Filters",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"Filters\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "NumberOfFilters",
+          "width": 111,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Filters",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "Filters",
+      "sheetId": "559a4f19-82cc-45e3-b195-a0c24c748af9",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ConfigType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#GroupedForFilters!Filters)"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMIN(#GroupedForFilters!NumberOfFilters)"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#GroupedForFilters!NumberOfFilters)"
+        },
+        {
+          "columnName": "Median",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPMEDIAN(#GroupedForFilters!NumberOfFilters)"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPAVERAGE(#GroupedForFilters!NumberOfFilters)"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPSUM(#GroupedForFilters!NumberOfFilters)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConfigType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Median",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "GroupedForImportedSheets",
+      "sheetId": "da7b88c7-e903-4c32-b881-d36af948c62b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "GroupedForImportedSheets",
+      "filterTargetSheet": "GroupedForImportedSheets",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "SheetType",
+          "filterExpression": "TEXT_EQUALS",
+          "value": "das.internal.ExternalWorkbookSheetType",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "WorkbookID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Workbook_Config_Stats!WorkbookID)"
+        },
+        {
+          "columnName": "SheetType",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#Workbook_Config_Stats!SheetType)"
+        },
+        {
+          "columnName": "NumberOfImportedSheets",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "ImportedSheets",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d\"ImportedSheets\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "SheetType",
+          "width": 140,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "NumberOfImportedSheets",
+          "width": 111,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "ImportedSheets",
+          "width": 105,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "ImportedSheets",
+      "sheetId": "3188e6ee-6907-4c57-952e-144e8db132ac",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ConfigType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#GroupedForImportedSheets!ImportedSheets)"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMIN(#GroupedForImportedSheets!NumberOfImportedSheets)"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#GroupedForImportedSheets!NumberOfImportedSheets)"
+        },
+        {
+          "columnName": "Median",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPMEDIAN(#GroupedForImportedSheets!NumberOfImportedSheets)"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPAVERAGE(#GroupedForImportedSheets!NumberOfImportedSheets)"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPSUM(#GroupedForImportedSheets!NumberOfImportedSheets)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConfigType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Median",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "FilterOnlyPartitions",
+      "sheetId": "9383bc41-253a-450d-b7ab-b12a4f73b183",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "FilterOnlyPartitions",
+      "filterTargetSheet": "FilterOnlyPartitions",
+      "filterArguments": [
+        {
+          "filterExpression": "FORMULA",
+          "value": "!ISNULL(#PartitionSelector) \u0026\u0026 !ISBLANK(#PartitionSelector)",
+          "valueStatic": false,
+          "type": "ADVANCED_FORMULA"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "WorkbookID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Workbook_Config_Stats!WorkbookID"
+        },
+        {
+          "columnName": "PartitionDefinition",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Workbook_Config_Stats!PartitionDefinition"
+        },
+        {
+          "columnName": "PartitionSelector",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Workbook_Config_Stats!PartitionSelector"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "PartitionDefinition",
+          "width": 195,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "PartitionSelector",
+          "width": 188,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "GroupedForPartitions",
+      "sheetId": "7950ba21-afcb-4eec-9fba-3f0b0a935e5c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "WorkbookID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#FilterOnlyPartitions!WorkbookID)"
+        },
+        {
+          "columnName": "NumberOfPartitions",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "Partitions",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"Partitions\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "NumberOfPartitions",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Partitions",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "Partitions",
+      "sheetId": "e6bb48a9-6397-445d-b572-4f848ab24bb7",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ConfigType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#GroupedForPartitions!Partitions)"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMIN(#GroupedForPartitions!NumberOfPartitions)"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#GroupedForPartitions!NumberOfPartitions)"
+        },
+        {
+          "columnName": "Median",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPMEDIAN(#GroupedForPartitions!NumberOfPartitions)"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPAVERAGE(#GroupedForPartitions!NumberOfPartitions)"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPSUM(#GroupedForPartitions!NumberOfPartitions)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConfigType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Median",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "Results",
+      "sheetId": "459ab125-5bdd-4a6c-8eca-07c9b3dadd0b",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": true,
+      "sortSourceSheet": "Results",
+      "sortTargetSheet": "Results",
+      "sortKeys": [
+        {
+          "column": "Total",
+          "sortOrder": "DESC"
+        }
+      ],
+      "sheetDefinition": {
+        "unionSources": [
+          "Sheets",
+          "Joins",
+          "Unions",
+          "Sorts",
+          "Filters",
+          "ImportedSheets",
+          "Partitions"
+        ]
+      },
+      "columnStyles": [
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 3,
+          "thousandSeparator": true
+        }
+      ]
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

@@ -1,0 +1,103 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "93971caa-8867-486b-8b63-8105810bbb47",
+    "path": "/AMEX_Audit/Data Sources/DF.lnk",
+    "description": "Dap_File",
+    "name": "DF"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "858381d3-d76a-4f76-b17b-879460c7d507"
+    ],
+    "jdbc.property.select.sql.action": [
+      "CUSTOM_SQL"
+    ],
+    "jdbc.property.query": [
+      "Select ID, Name, Permission_FK, Description\r\nfrom dap_file\r\nwhere extension \u003d \u0027WORKBOOK_EXTENSION\u0027\r\nand file_mode\u003d\u0027NORMAL\u0027"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/AMEX_Audit/Connections/DB_Self.dst",
+    "uuid": "9ddbed56-8987-45ef-905f-bd1ccecef594"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 410,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "ID",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 411,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Workbook_Name",
+      "origin": "name",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 412,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "Permission_FK",
+      "origin": "permission_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 413,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Description",
+      "origin": "description",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 414,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 415,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

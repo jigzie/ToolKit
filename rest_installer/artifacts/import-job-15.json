@@ -1,0 +1,191 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_Logs_SSH.dst",
+        "uuid": "3b3f9a84-7034-41e2-920d-4fe01cc05623"
+    },
+    "errorHandlingMode": "DROP_RECORD",
+    "fields": [
+        {
+            "acceptEmpty": true,
+            "id": 10746,
+            "include": true,
+            "name": "Timestamp",
+            "origin": "0",
+            "pattern": "yyyy-MM-dd HH:mm:ss",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10747,
+            "include": true,
+            "name": "Hadoop_Job_Id",
+            "origin": "1",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10748,
+            "include": true,
+            "name": "Job_Name",
+            "origin": "2",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10749,
+            "include": true,
+            "name": "Counter_Name",
+            "origin": "3",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10750,
+            "include": true,
+            "name": "Counter_Value",
+            "origin": "4",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10751,
+            "include": false,
+            "name": "dasFileName",
+            "origin": "fileInfo.fileName",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10752,
+            "include": false,
+            "name": "dasFilePath",
+            "origin": "fileInfo.filePath",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10753,
+            "include": false,
+            "name": "dasLastModified",
+            "origin": "fileInfo.lastModified",
+            "pattern": "",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10754,
+            "include": false,
+            "name": "dasJobExecutionId",
+            "origin": "jobexecutionInfo.id",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10755,
+            "include": false,
+            "name": "dasJobExecutionStartTime",
+            "origin": "jobexecutionInfo.starttime",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "",
+        "name": "Logs_Hadoop_Metrics",
+        "path": "/Administration/HUMv2/Ingestion/Logs_Hadoop_Metrics.lnk",
+        "uuid": "7401c415-fe67-4072-99f4-4f8e9bd20bf3"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 1,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "GenericConfigurationImpl.temp-file-store": [
+            "419574c3-0480-4962-95e5-4e56896536d0"
+        ],
+        "TextFileFormat": [
+            "TEXT"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "collectAdditionalFields": [
+            "false"
+        ],
+        "csv.max-lines-per-record": [
+            "1"
+        ],
+        "data.includes.header": [
+            "false"
+        ],
+        "delimiter": [
+            ","
+        ],
+        "detectColumnDefinition": [
+            "SELECT_PARSE_AUTO"
+        ],
+        "escapeCharacter": [
+            ""
+        ],
+        "external.store": [
+            "false"
+        ],
+        "file": [
+            "logs/hadoop-metrics.log*"
+        ],
+        "fileNameTimeRange_mode": [
+            "OFF"
+        ],
+        "fileType": [
+            "CSV"
+        ],
+        "filter.maxAge": [
+            ""
+        ],
+        "filter.minAge": [
+            ""
+        ],
+        "filter.page.does.split.creation": [
+            "false"
+        ],
+        "ignore.first.n.lines": [
+            "0"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "quoteCharacter": [
+            "\""
+        ],
+        "recordSampleSize": [
+            "1000"
+        ],
+        "source.data.partitioned": [
+            "false"
+        ],
+        "strictQuotes": [
+            "false"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

@@ -1,0 +1,94 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "a524d2f8-8f60-4b9a-b185-598223163afe",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_20_HTTP_Errors.wbk",
+    "description": "",
+    "name": "_02_20_HTTP_Errors"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "HTTP_Errors_src",
+      "sheetId": "8c70fa44-ed82-4c86-b480-cfe85d068fa2",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Logs_HTTP_Errors.lnk",
+        "uuid": "38880e5b-d694-4eb8-9339-5e59109d53a3"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "HTTP_Errors",
+      "sheetId": "cdcc2735-860a-4b79-8c46-8e76b0f77783",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "outputPartitionDefinition": {
+        "dateFormat": "yyyyMMdd",
+        "dateGenerator": "\u003d(#Timestamp)"
+      },
+      "formulas": [
+        {
+          "columnName": "Timestamp",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#HTTP_Errors_src!Timestamp"
+        },
+        {
+          "columnName": "HttpStatusCode",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#HTTP_Errors_src!HttpStatusCode"
+        },
+        {
+          "columnName": "Page",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#HTTP_Errors_src!Page"
+        },
+        {
+          "columnName": "Stacktrace",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#HTTP_Errors_src!Stacktrace"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Timestamp",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "HttpStatusCode",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Page",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Stacktrace",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

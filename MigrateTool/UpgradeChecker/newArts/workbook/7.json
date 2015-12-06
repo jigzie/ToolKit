@@ -1,0 +1,799 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "79bb62bc-3795-49b4-b892-298228a45bd8",
+    "path": "/Datameer Consumption Stats/Resources/Wbks_Volume.wbk",
+    "description": "Datameer Volume Consumption Analysis",
+    "name": "Wbks_Volume"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "sheets": [
+    {
+      "name": "DM_User_Group_Info",
+      "sheetId": "ec49cc9f-ca8e-46b4-b50c-84a6df90c866",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Datameer Consumption Stats/Resources/DM_User_Group_Info.lnk",
+        "uuid": "43fb6ac4-aa23-41d6-9694-ada3107e5bf5"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "DM_Owner_Wbk_Sheet_Stats",
+      "sheetId": "362282a4-58cf-4bcd-bbdd-92f8ef6d682b",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Datameer Consumption Stats/Resources/DM_Owner_Wbk_Sheet_Stats.lnk",
+        "uuid": "d8fcf87f-ceea-48a5-b98c-428809753a6d"
+      },
+      "columnStyles": [
+        {
+          "columnId": "DataStatistics",
+          "width": 227,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "WorkbookName",
+          "width": 281,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "DM_Owner_Volume",
+      "sheetId": "d3db4ab6-b468-42f3-9552-f88569cc57ef",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "sortSourceSheet": "DM_Owner_Volume",
+      "sortTargetSheet": "DM_Owner_Volume",
+      "topN": 10,
+      "sortKeys": [
+        {
+          "column": "VOLUME",
+          "sortOrder": "DESC"
+        }
+      ],
+      "datasource": {
+        "path": "/Datameer Consumption Stats/Resources/DM_Owner_Volume.lnk",
+        "uuid": "02d5d356-510d-408b-922b-9c21102836af"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "RecordsCounts",
+      "sheetId": "c782bb48-9169-42e9-9cb5-1552684bf6b2",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "RecordsCounts",
+      "filterTargetSheet": "RecordsCounts",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "RecordCounts",
+          "filterExpression": "GREATER",
+          "value": "1000",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "UncompressedBytes",
+          "filterExpression": "GREATER",
+          "value": "1073741824",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "HDFS_Bytes",
+          "filterExpression": "GREATER",
+          "value": "1073741824",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "owner",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#DM_Owner_Wbk_Sheet_Stats!owner"
+        },
+        {
+          "columnName": "WorkbookID",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#DM_Owner_Wbk_Sheet_Stats!WorkbookID"
+        },
+        {
+          "columnName": "HDFS_Location",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#DM_Owner_Wbk_Sheet_Stats!HDFS_Location"
+        },
+        {
+          "columnName": "WorkbookName",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#DM_Owner_Wbk_Sheet_Stats!WorkbookName"
+        },
+        {
+          "columnName": "WorkbookSheetName",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#DM_Owner_Wbk_Sheet_Stats!WorkbookSheetName"
+        },
+        {
+          "columnName": "DataStatistics",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#DM_Owner_Wbk_Sheet_Stats!DataStatistics"
+        },
+        {
+          "columnName": "DataStats_no_quotes",
+          "columnId": "16",
+          "columnIndex": 6,
+          "formulaString": "\u003dREPLACEALL(REPLACEALL(REPLACEALL(#DataStatistics;\"\\\"\");\"\\\\{|\\\\}\");\"[a-zA-Z:.]\";\"\")"
+        },
+        {
+          "columnName": "HDFS_Bytes",
+          "columnId": "29",
+          "columnIndex": 7,
+          "formulaString": "\u003dINT(TOKENIZE(#DataStats_no_quotes;\",\";0))"
+        },
+        {
+          "columnName": "UncompressedBytes",
+          "columnId": "30",
+          "columnIndex": 8,
+          "formulaString": "\u003dINT(TOKENIZE(#DataStats_no_quotes;\",\";1))"
+        },
+        {
+          "columnName": "RecordCounts",
+          "columnId": "31",
+          "columnIndex": 9,
+          "formulaString": "\u003dINT(TOKENIZE(#DataStats_no_quotes;\",\";2))"
+        },
+        {
+          "columnName": "Hidden_field",
+          "columnId": "32",
+          "columnIndex": 10,
+          "formulaString": "\u003d\"1\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "owner",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "HDFS_Location",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "WorkbookName",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "WorkbookSheetName",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "DataStatistics",
+          "width": 883,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "DataStats_no_quotes",
+          "width": 276,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "29",
+          "name": "HDFS_Bytes",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "30",
+          "name": "UncompressedBytes",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "31",
+          "name": "RecordCounts",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "32",
+          "name": "Hidden_field",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 33
+    },
+    {
+      "name": "Owner_Wbk_Sheet_Stats",
+      "sheetId": "179e406a-ef0e-442a-890c-ad9d92f30e3d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "owner",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#RecordsCounts!owner"
+        },
+        {
+          "columnName": "WorkbookID",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#RecordsCounts!WorkbookID"
+        },
+        {
+          "columnName": "WorkbookName",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#RecordsCounts!WorkbookName"
+        },
+        {
+          "columnName": "WorkbookSheetName",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#RecordsCounts!WorkbookSheetName"
+        },
+        {
+          "columnName": "HDFS_in_GB",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dTRUNC((((INT(#RecordsCounts!HDFS_Bytes))/1024)/1024)/1024)"
+        },
+        {
+          "columnName": "Uncompressed_Size_in_GB",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dTRUNC((((INT(#RecordsCounts!UncompressedBytes))/1024)/1024)/1024)"
+        },
+        {
+          "columnName": "Records_Imported_in_K",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003dTRUNC((INT(#RecordsCounts!RecordCounts))/1000)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "owner",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "WorkbookName",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "WorkbookSheetName",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "HDFS_in_GB",
+          "width": 170,
+          "alignment": "LEFT",
+          "decimalDigits": 0,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "5",
+          "name": "Uncompressed_Size_in_GB",
+          "width": 190,
+          "alignment": "LEFT",
+          "decimalDigits": 0,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "6",
+          "name": "Records_Imported_in_K",
+          "width": 200,
+          "alignment": "LEFT",
+          "decimalDigits": 0,
+          "thousandSeparator": false
+        }
+      ],
+      "nextColumnId": 8
+    },
+    {
+      "name": "Group_Owner_HDFS_in_GB",
+      "sheetId": "c83f9cbc-111d-4637-b2c9-512c94ff98b3",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Owner",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Owner_Wbk_Sheet_Stats!owner)"
+        },
+        {
+          "columnName": "HDFS_Consumed_GB",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dTRUNC(GROUPSUM(#Owner_Wbk_Sheet_Stats!HDFS_in_GB))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Owner",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "HDFS_Consumed_GB",
+          "width": 267,
+          "alignment": "LEFT",
+          "thousandSeparator": false
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "Top20_Wbk_Sheet_Storage",
+      "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "Top20_Wbk_Sheet_Storage",
+      "sortTargetSheet": "Top20_Wbk_Sheet_Storage",
+      "topN": 20,
+      "sortKeys": [
+        {
+          "column": "HDFS_Stored_in_GB",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "owner",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Owner_Wbk_Sheet_Stats!owner"
+        },
+        {
+          "columnName": "WorkbookID",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Owner_Wbk_Sheet_Stats!WorkbookID"
+        },
+        {
+          "columnName": "WorkbookName",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Owner_Wbk_Sheet_Stats!WorkbookName"
+        },
+        {
+          "columnName": "WorkbookSheetName",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Owner_Wbk_Sheet_Stats!WorkbookSheetName"
+        },
+        {
+          "columnName": "HDFS_Stored_in_GB",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Owner_Wbk_Sheet_Stats!HDFS_in_GB"
+        },
+        {
+          "columnName": "Uncompressed_Size_in_GB",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Owner_Wbk_Sheet_Stats!Uncompressed_Size_in_GB"
+        },
+        {
+          "columnName": "Total_Records_Imported",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Owner_Wbk_Sheet_Stats!Records_Imported_in_K"
+        },
+        {
+          "columnName": "PercentReduction",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003dTRUNC((#Owner_Wbk_Sheet_Stats!HDFS_in_GB/#Top20_Wbk_Sheet_Storage!Uncompressed_Size_in_GB)*100)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "owner",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "WorkbookID",
+          "width": 100,
+          "alignment": "LEFT",
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "2",
+          "name": "WorkbookName",
+          "width": 268,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "WorkbookSheetName",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "HDFS_Stored_in_GB",
+          "width": 213,
+          "alignment": "LEFT",
+          "decimalDigits": 0,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "5",
+          "name": "Uncompressed_Size_in_GB",
+          "width": 182,
+          "alignment": "LEFT",
+          "decimalDigits": 0,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "6",
+          "name": "Total_Records_Imported",
+          "width": 107,
+          "alignment": "LEFT",
+          "decimalDigits": 0,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "7",
+          "name": "PercentReduction",
+          "width": 120,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 9
+    },
+    {
+      "name": "Top20_Users_w_Storage",
+      "sheetId": "32e79fa3-a285-4d7f-b844-e4a4de59a21e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "Top20_Users_w_Storage",
+      "sortTargetSheet": "Top20_Users_w_Storage",
+      "topN": 20,
+      "sortKeys": [
+        {
+          "column": "Total_Storage_in_GB",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Owner",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Group_Owner_HDFS_in_GB!Owner"
+        },
+        {
+          "columnName": "Total_Storage_in_GB",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dTRUNC(#Group_Owner_HDFS_in_GB!HDFS_Consumed_GB)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Owner",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Total_Storage_in_GB",
+          "width": 152,
+          "alignment": "LEFT",
+          "thousandSeparator": false
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "Joined",
+      "sheetId": "4448db57-09aa-43ff-b953-d697a5278318",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "DM_User_Group_Info",
+            "sheet2": "Owner_Wbk_Sheet_Stats",
+            "joinColumns1": [
+              "UserName"
+            ],
+            "joinColumns2": [
+              "owner"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "DM_User_Group_Info": [
+            "UserName",
+            "ActiveUser",
+            "GroupName"
+          ],
+          "Owner_Wbk_Sheet_Stats": [
+            "WorkbookName",
+            "WorkbookSheetName",
+            "HDFS_in_GB",
+            "Records_Imported_in_K"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "a282575886fa83ccaabf81fc0440aeb9",
+          "width": 193,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "43aa366f6d761f35a6afb9eb6a0fc592",
+          "width": 229,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Top10_GroupsUsingDas",
+      "sheetId": "5d2057f8-f71e-4ec9-b9c4-21dd203275f9",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "Top10_GroupsUsingDas",
+      "sortTargetSheet": "Top10_GroupsUsingDas",
+      "topN": 10,
+      "sortKeys": [
+        {
+          "column": "Storage_in_GB",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "GroupName",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Joined!DM_User_Group_Info.GroupName)"
+        },
+        {
+          "columnName": "NumberOfUsers",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#Joined!DM_User_Group_Info.UserName)"
+        },
+        {
+          "columnName": "TotalArtifacts",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#Joined!Owner_Wbk_Sheet_Stats.WorkbookName)"
+        },
+        {
+          "columnName": "Storage_in_GB",
+          "columnId": "1",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPSUM(#Joined!Owner_Wbk_Sheet_Stats.HDFS_in_GB)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "GroupName",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Storage_in_GB",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "NumberOfUsers",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "TotalArtifacts",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "Top10_Users_by_Volume",
+      "sheetId": "2397d8e4-70b2-4a9f-9038-028fc81e0f21",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "OWNER",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#DM_Owner_Volume!OWNER"
+        },
+        {
+          "columnName": "VOLUME_in_GB",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dTRUNC(((#DM_Owner_Volume!VOLUME)/1024)/1024)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "OWNER",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "VOLUME_in_GB",
+          "width": 114,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "LicenseDetails",
+      "sheetId": "8ad92478-3ff1-40fd-909b-f27a99246312",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Datameer Consumption Stats/Resources/LicenseDetails.imp",
+        "uuid": "d274de64-d2fc-471a-a809-bbb14562dbed"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "LicenseSize",
+      "sheetId": "4744e779-b769-4948-9921-7bda10e19fe7",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "unlimitedLicense",
+          "columnId": "1",
+          "columnIndex": 0,
+          "formulaString": "\u003dEQUALS(#LicenseDetails!LicenseVolumelimitInBytes;-1)"
+        },
+        {
+          "columnName": "LicenseSize",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dIF(#unlimitedLicense;\"Unlimited\";\"#LicenseDetails!LicenseVolumelimitInBytes\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "unlimitedLicense",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "LicenseSize",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "DatameerVolumeStats",
+      "sheetId": "ee958604-530c-43ec-a21e-b94f461bedc2",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "Hidden_field",
+          "columnId": "2",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#RecordsCounts!Hidden_field)"
+        },
+        {
+          "columnName": "HDFS_Stored_in_GB",
+          "columnId": "3",
+          "columnIndex": 1,
+          "formulaString": "\u003d((GROUPSUM(#RecordsCounts!HDFS_Bytes)/1024)/1024)/1024"
+        },
+        {
+          "columnName": "Uncompressed_in_GB",
+          "columnId": "4",
+          "columnIndex": 2,
+          "formulaString": "\u003d((GROUPSUM(#RecordsCounts!UncompressedBytes)/1024)/1024)/1024"
+        },
+        {
+          "columnName": "RecordCounts_in_K",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPSUM(#RecordsCounts!RecordCounts)/1000"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "2",
+          "name": "Hidden_field",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "HDFS_Stored_in_GB",
+          "width": 157,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Uncompressed_in_GB",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "RecordCounts_in_K",
+          "width": 132,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

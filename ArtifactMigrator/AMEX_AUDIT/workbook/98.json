@@ -1,0 +1,102 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "db56724d-5e57-413b-9116-629f26087bab",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_20_Functions.wbk",
+    "description": "",
+    "name": "_00_20_Functions"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_Functions_src",
+      "sheetId": "ae150d13-cee1-44de-a8eb-5b756223ad16",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_Functions.lnk",
+        "uuid": "8ecc5e69-7c14-4cc7-8096-582faf52feb1"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_Functions",
+      "sheetId": "ae0ff95c-34e3-40b3-82fd-676dc3000846",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "FormulaID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_Functions_src!FormulaID"
+        },
+        {
+          "columnName": "ColumnID",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_Functions_src!ColumnID"
+        },
+        {
+          "columnName": "FormulaString",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_Functions_src!FormulaString"
+        },
+        {
+          "columnName": "SheetID",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_Functions_src!SheetID"
+        },
+        {
+          "columnName": "WorkbookID",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MySQL_Functions_src!WorkbookID"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "FormulaID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "ColumnID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "FormulaString",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "SheetID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

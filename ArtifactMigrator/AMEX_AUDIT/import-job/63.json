@@ -1,0 +1,170 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "ca091694-9faf-497c-83ed-0f50274fe5f9",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Logs_Metrics.lnk",
+    "description": "",
+    "name": "Logs_Metrics"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "a880cc1e-a8d0-4199-a419-ac9ebf03e1bd"
+    ],
+    "file": [
+      "logs/metrics.log*"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "data.includes.header": [
+      "false"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "fileNameTimeRange_mode": [
+      "OFF"
+    ],
+    "filter.maxAge": [
+      ""
+    ],
+    "filter.minAge": [
+      ""
+    ],
+    "source.data.partitioned": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "external.store": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_Logs_SSH.dst",
+    "uuid": "295824be-d327-47ec-b46c-e03311616a6d"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 279,
+      "pattern": "yyyy-MM-dd HH:mm:ss",
+      "acceptEmpty": true,
+      "name": "Timestamp",
+      "origin": "0",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 280,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Event",
+      "origin": "1",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 281,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Value1",
+      "origin": "2",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 282,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Value2",
+      "origin": "3",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 283,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Value3",
+      "origin": "4",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 284,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 285,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 286,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

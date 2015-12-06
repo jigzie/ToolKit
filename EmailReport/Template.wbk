@@ -1,0 +1,1393 @@
+{
+  "version": "5.5.1",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "6bd9778a-50cb-46be-8f5e-29b3bb448c6d",
+    "path": "/Users/jigz/_KEEP/Customer Reports/Sources/Customer_Report_Template.wbk",
+    "description": "",
+    "name": "Customer_Report_Template"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "histograms.generation": [
+      "false"
+    ],
+    "cardinalities.generation": [
+      "false"
+    ],
+    "minmaxmean.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Jira_ALL_Tickets",
+      "sheetId": "110d5568-8679-4de8-a58d-13916cc02bb0",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "datasource": {
+        "path": "/Datameer/Services/TAM Reports/Jira ALL Tickets.imp",
+        "uuid": "1505e201-7754-45b7-a0e6-af933c5e494e"
+      },
+      "columnStyles": [
+        {
+          "columnId": "UpdatedAt",
+          "width": 243,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "FixVersions",
+          "width": 251,
+          "thousandSeparator": true
+        }
+      ],
+      "partitionSelectionExpression": "$partition \u003e\u003d TODAY()-730d"
+    },
+    {
+      "name": "EnvironmentsSalesforce",
+      "sheetId": "dc88928a-f38d-4ed4-a086-97db234394bf",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "datasource": {
+        "path": "/Users/jigz/_KEEP/TAM Reports/EnvironmentsSalesforce.lnk",
+        "uuid": "e13de7bd-67be-4814-b562-af2d2b63dcae"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "SFDC_Accounts",
+      "sheetId": "e523caa6-b7e7-4581-94e2-45173dc2722b",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "datasource": {
+        "path": "/Users/jigz/_KEEP/TAM Reports/SFDC Accounts.imp",
+        "uuid": "4a61e636-74d9-4f9a-b883-8ff10c822cc5"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "SFDC_FILTER",
+      "sheetId": "b65e6e7c-d7d7-4167-9b38-595c8b9fdc52",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "filterSourceSheet": "SFDC_FILTER",
+      "filterTargetSheet": "SFDC_FILTER",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "SFDC_Accounts.Name",
+          "filterExpression": "MATCHES",
+          "value": "REPLACE_ME",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "EnvironmentsSalesforce",
+            "sheet2": "SFDC_Accounts",
+            "joinColumns1": [
+              "Account"
+            ],
+            "joinColumns2": [
+              "Id"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "EnvironmentsSalesforce": [
+            "Name",
+            "Datameer_Version",
+            "Hadoop_Distribution",
+            "Hadoop_Version"
+          ],
+          "SFDC_Accounts": [
+            "Name",
+            "Type",
+            "CustomerSuccessMgr"
+          ]
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "CleanDAP_FILTER",
+      "sheetId": "ee1e179a-f855-4c43-a2c3-242bed74a674",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "CleanDAP_FILTER",
+      "filterTargetSheet": "CleanDAP_FILTER",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Custom_Customer",
+          "filterExpression": "MATCHES",
+          "value": "REPLACE_ME",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "CleanDAP_FILTER",
+      "sortTargetSheet": "CleanDAP_FILTER",
+      "sortKeys": [
+        {
+          "column": "Key",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Key",
+          "columnId": "6",
+          "columnIndex": 0,
+          "formulaString": "\u003dGroupBy(#Jira_ALL_Tickets!Key)"
+        },
+        {
+          "columnName": "FixVersions",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dCOPY(#Jira_ALL_Tickets!FixVersions)"
+        },
+        {
+          "columnName": "Summary",
+          "columnId": "7",
+          "columnIndex": 2,
+          "formulaString": "\u003dCOPY(#Jira_ALL_Tickets!Summary)"
+        },
+        {
+          "columnName": "IssueType",
+          "columnId": "8",
+          "columnIndex": 3,
+          "formulaString": "\u003dCOPY(#Jira_ALL_Tickets!IssueType)"
+        },
+        {
+          "columnName": "Priority",
+          "columnId": "9",
+          "columnIndex": 4,
+          "formulaString": "\u003dCOPY(#Jira_ALL_Tickets!Priority)"
+        },
+        {
+          "columnName": "Component",
+          "columnId": "10",
+          "columnIndex": 5,
+          "formulaString": "\u003dCOPY(#Jira_ALL_Tickets!Component)"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "11",
+          "columnIndex": 6,
+          "formulaString": "\u003dCOPY(#Jira_ALL_Tickets!Status)"
+        },
+        {
+          "columnName": "Resolution",
+          "columnId": "12",
+          "columnIndex": 7,
+          "formulaString": "\u003dCOPY(#Jira_ALL_Tickets!Resolution)"
+        },
+        {
+          "columnName": "Custom_Customer",
+          "columnId": "15",
+          "columnIndex": 8,
+          "formulaString": "\u003dGROUPBY(#Jira_ALL_Tickets!Custom_Customer)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "FixVersions",
+          "width": 276,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "Key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Summary",
+          "width": 304,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "IssueType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Priority",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "Component",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "Resolution",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "Custom_Customer",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 16
+    },
+    {
+      "name": "Customer_LCM",
+      "sheetId": "fd3863c4-dc65-4c93-91d3-b29760d5ce7c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "SFDC_Accounts_Name",
+          "columnId": "1",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#SFDC_FILTER!SFDC_Accounts.Name)"
+        },
+        {
+          "columnName": "Min_EnvironmentsSalesforce_Datameer_Version",
+          "columnId": "0",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMIN(#SFDC_FILTER!EnvironmentsSalesforce.Datameer_Version)"
+        },
+        {
+          "columnName": "JoinKey",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"Customer\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Min_EnvironmentsSalesforce_Datameer_Version",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "SFDC_Accounts_Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "JoinKey",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "NOT_FIXED",
+      "sheetId": "9c1b362b-0a7f-4d3d-86bf-bac00abe41d6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "NOT_FIXED",
+      "filterTargetSheet": "NOT_FIXED",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Status",
+          "filterExpression": "TEXT_EQUALS",
+          "value": "Open",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "NOT_FIXED",
+      "sortTargetSheet": "NOT_FIXED",
+      "sortKeys": [
+        {
+          "column": "Key",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "FixVersions",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Customer_FILTER!FixVersions"
+        },
+        {
+          "columnName": "Key",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Customer_FILTER!Key"
+        },
+        {
+          "columnName": "Summary",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Customer_FILTER!Summary"
+        },
+        {
+          "columnName": "IssueType",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Customer_FILTER!IssueType"
+        },
+        {
+          "columnName": "Priority",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Customer_FILTER!Priority"
+        },
+        {
+          "columnName": "Component",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Customer_FILTER!Component"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Customer_FILTER!Status"
+        },
+        {
+          "columnName": "Resolution",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Customer_FILTER!Resolution"
+        },
+        {
+          "columnName": "Custom_Customer",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Customer_FILTER!Custom_Customer"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "FixVersions",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Summary",
+          "width": 304,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "IssueType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Priority",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Component",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Resolution",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Custom_Customer",
+          "width": 293,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 9
+    },
+    {
+      "name": "Customer_FILTER",
+      "sheetId": "d7f241bc-909c-4a03-8848-fd7a8c16904c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "Customer_FILTER",
+      "filterTargetSheet": "Customer_FILTER",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Custom_Customer",
+          "filterExpression": "MATCHES",
+          "value": "REPLACE_ME",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "Customer_FILTER",
+      "sortTargetSheet": "Customer_FILTER",
+      "sortKeys": [
+        {
+          "column": "FixVersions",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "FixVersions",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#CleanDAP_FILTER!FixVersions"
+        },
+        {
+          "columnName": "Key",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#CleanDAP_FILTER!Key"
+        },
+        {
+          "columnName": "Summary",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#CleanDAP_FILTER!Summary"
+        },
+        {
+          "columnName": "IssueType",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#CleanDAP_FILTER!IssueType"
+        },
+        {
+          "columnName": "Priority",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#CleanDAP_FILTER!Priority"
+        },
+        {
+          "columnName": "Component",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#CleanDAP_FILTER!Component"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#CleanDAP_FILTER!Status"
+        },
+        {
+          "columnName": "Resolution",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#CleanDAP_FILTER!Resolution"
+        },
+        {
+          "columnName": "Custom_Customer",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#CleanDAP_FILTER!Custom_Customer"
+        },
+        {
+          "columnName": "JoinKey",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d\"Customer\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "FixVersions",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Summary",
+          "width": 400,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "IssueType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Priority",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Component",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Resolution",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Custom_Customer",
+          "width": 293,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "JoinKey",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 10
+    },
+    {
+      "name": "SFDC_Jira",
+      "sheetId": "8e44de45-0a0e-4c6d-bf85-9f07b1b84a6e",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "FULL_OUTER",
+            "sheet1": "Customer_FILTER",
+            "sheet2": "Customer_LCM",
+            "joinColumns1": [
+              "JoinKey"
+            ],
+            "joinColumns2": [
+              "JoinKey"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "Customer_LCM": [
+            "SFDC_Accounts_Name",
+            "Min_EnvironmentsSalesforce_Datameer_Version"
+          ],
+          "Customer_FILTER": [
+            "FixVersions",
+            "Key",
+            "Summary",
+            "IssueType",
+            "Priority",
+            "Component",
+            "Status",
+            "Resolution"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "2038ec18de59fac7e74dc0e6e8514e87",
+          "name": "FixVersions",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "b23d289bb5f76a946a1f0eb9ad4f2cfc",
+          "name": "Key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4380591a1a0a8aa57fdb264bbc479dfa",
+          "name": "Summary",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "251e1a7f67c95c08bea363b30c6da8e4",
+          "name": "IssueType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "b5746e60f24a09e5fc3b252641257cba",
+          "name": "Priority",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7e967e06dd70d0d193eac1f0954755df",
+          "name": "Component",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "78e53b4168b1780f8a2fb2996a30a0ef",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5e5cfaf37213f7384eec687c9d846884",
+          "name": "Resolution",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8ee04aa88849e672f960d3b0a07c0196",
+          "name": "CustomerName",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9cf97d24335b0c4979937aabe2029dfa",
+          "name": "CustomerLCM",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Normalized_FixedJiras",
+      "sheetId": "08cadb4d-9cfa-4cbd-af54-508eef2bf524",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "Normalized_FixedJiras",
+      "filterTargetSheet": "Normalized_FixedJiras",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "FixDesired",
+          "filterExpression": "TRUE",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "Normalized_FixedJiras",
+      "sortTargetSheet": "Normalized_FixedJiras",
+      "sortKeys": [
+        {
+          "column": "FixVersions",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "FixVersions",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#SFDC_Jira!FixVersions"
+        },
+        {
+          "columnName": "FixVersion",
+          "columnId": "11",
+          "columnIndex": 1,
+          "formulaString": "\u003dREGEXTRACT(#FixVersions;\"\\\\d+\\\\.\\\\d+\\\\.\\\\d+\\\\.\\\\d+|\\\\d+\\\\.\\\\d+\\\\.\\\\d+|\\\\d+\\\\.\\\\d+\")"
+        },
+        {
+          "columnName": "CustomerLCM",
+          "columnId": "12",
+          "columnIndex": 2,
+          "formulaString": "\u003dCOPY(#SFDC_Jira!CustomerLCM)"
+        },
+        {
+          "columnName": "FixDesired",
+          "columnId": "16",
+          "columnIndex": 3,
+          "formulaString": "\u003dAND(IF(INT(TOKENIZE(#FixVersion;\"\\\\.\";0))\u003e\u003dINT(TOKENIZE(#CustomerLCM;\"\\\\.\";0));true;false);IF(INT(TOKENIZE(#FixVersion;\"\\\\.\";1))\u003e\u003dINT(TOKENIZE(#CustomerLCM;\"\\\\.\";1));true;false);IF(IF(ISBLANK(INT(TOKENIZE(#FixVersion;\"\\\\.\";2)));INT(TOKENIZE(#CustomerLCM;\"\\\\.\";2))+1;INT(TOKENIZE(#FixVersion;\"\\\\.\";2)))\u003eINT(TOKENIZE(#CustomerLCM;\"\\\\.\";2));true;false))"
+        },
+        {
+          "columnName": "Key",
+          "columnId": "1",
+          "columnIndex": 4,
+          "formulaString": "\u003d#SFDC_Jira!Key"
+        },
+        {
+          "columnName": "Summary",
+          "columnId": "2",
+          "columnIndex": 5,
+          "formulaString": "\u003d#SFDC_Jira!Summary"
+        },
+        {
+          "columnName": "IssueType",
+          "columnId": "3",
+          "columnIndex": 6,
+          "formulaString": "\u003d#SFDC_Jira!IssueType"
+        },
+        {
+          "columnName": "Priority",
+          "columnId": "4",
+          "columnIndex": 7,
+          "formulaString": "\u003d#SFDC_Jira!Priority"
+        },
+        {
+          "columnName": "Component",
+          "columnId": "5",
+          "columnIndex": 8,
+          "formulaString": "\u003d#SFDC_Jira!Component"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "6",
+          "columnIndex": 9,
+          "formulaString": "\u003d#SFDC_Jira!Status"
+        },
+        {
+          "columnName": "Resolution",
+          "columnId": "7",
+          "columnIndex": 10,
+          "formulaString": "\u003d#SFDC_Jira!Resolution"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "FixVersions",
+          "width": 417,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Summary",
+          "width": 304,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "IssueType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Priority",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Component",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Resolution",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "FixVersion",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CustomerLCM",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "FixDesired",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 19
+    },
+    {
+      "name": "Distribution",
+      "sheetId": "957b8001-1226-4da2-820f-99baa05f643f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "sortSourceSheet": "Distribution",
+      "sortTargetSheet": "Distribution",
+      "sortKeys": [
+        {
+          "column": "IssueType",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "Status",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Status",
+          "columnId": "1",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Customer_FILTER!Status)"
+        },
+        {
+          "columnName": "IssueType_DistinctCount",
+          "columnId": "5",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#Customer_FILTER!IssueType)"
+        },
+        {
+          "columnName": "IssueType",
+          "columnId": "0",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCONCATDISTINCT(#Customer_FILTER!IssueType)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "IssueType",
+          "width": 408,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "IssueType_DistinctCount",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "FIXED",
+      "sheetId": "a728c885-fb2e-449c-8bb8-7c4d842860a4",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "sortSourceSheet": "FIXED",
+      "sortTargetSheet": "FIXED",
+      "sortKeys": [
+        {
+          "column": "HighVersion",
+          "sortOrder": "DESC"
+        },
+        {
+          "column": "MinVersion",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Jira",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Normalized_FixedJiras!Key)"
+        },
+        {
+          "columnName": "HighVersion",
+          "columnId": "5",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMAX(#Normalized_FixedJiras!FixVersion)"
+        },
+        {
+          "columnName": "MinVersion",
+          "columnId": "6",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMIN(#Normalized_FixedJiras!FixVersion)"
+        },
+        {
+          "columnName": "CustomerLCM",
+          "columnId": "8",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPANY(#Normalized_FixedJiras!CustomerLCM)"
+        },
+        {
+          "columnName": "Title",
+          "columnId": "1",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPANY(#Normalized_FixedJiras!Summary)"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "2",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPANY(#Normalized_FixedJiras!IssueType)"
+        },
+        {
+          "columnName": "Severity",
+          "columnId": "3",
+          "columnIndex": 6,
+          "formulaString": "\u003dGROUPANY(#Normalized_FixedJiras!Priority)"
+        },
+        {
+          "columnName": "FixedVersions",
+          "columnId": "4",
+          "columnIndex": 7,
+          "formulaString": "\u003dGROUPANY(#Normalized_FixedJiras!FixVersions)"
+        },
+        {
+          "columnName": "NotPatched",
+          "columnId": "12",
+          "columnIndex": 8,
+          "formulaString": "\u003dtrue"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Jira",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Title",
+          "width": 383,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Severity",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "FixedVersions",
+          "width": 249,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "HighVersion",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "MinVersion",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "CustomerLCM",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "NotPatched",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "FixedRequestEmailReport",
+      "sheetId": "f4bbe20a-ee7a-4d64-bc96-8d024343b1b8",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "FixedRequestEmailReport",
+      "sortTargetSheet": "FixedRequestEmailReport",
+      "sortKeys": [
+        {
+          "column": "LatestRelease",
+          "sortOrder": "DESC"
+        },
+        {
+          "column": "MinimalVersion",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Severity",
+          "columnId": "6",
+          "columnIndex": 0,
+          "formulaString": "\u003d#FIXED!Severity"
+        },
+        {
+          "columnName": "Title",
+          "columnId": "4",
+          "columnIndex": 1,
+          "formulaString": "\u003d#FIXED!Title"
+        },
+        {
+          "columnName": "LatestRelease",
+          "columnId": "1",
+          "columnIndex": 2,
+          "formulaString": "\u003d#FIXED!HighVersion"
+        },
+        {
+          "columnName": "MinimalVersion",
+          "columnId": "2",
+          "columnIndex": 3,
+          "formulaString": "\u003d#FIXED!MinVersion"
+        },
+        {
+          "columnName": "CustomerVersion",
+          "columnId": "3",
+          "columnIndex": 4,
+          "formulaString": "\u003d#FIXED!CustomerLCM"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "LatestRelease",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "MinimalVersion",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "CustomerVersion",
+          "width": 166,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Title",
+          "width": 383,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "Severity",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 9
+    },
+    {
+      "name": "New_Noteworthy",
+      "sheetId": "91128dee-ae3b-49fd-9220-2a9b58786baf",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "New_Noteworthy",
+        "sheetId": "7537056e-6642-4d89-a306-22dd0f5fd6a5",
+        "workbook": {
+          "path": "/Users/jigz/_KEEP/Customer Reports/Sources/DM_NewandNoteworthy.wbk",
+          "uuid": "ac451f66-5e84-4196-ac30-b355ef953fd4"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "Version",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "NewNoteworthy_Normalized",
+      "sheetId": "bb3bd64d-83ff-47b0-960f-9e41484999dc",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Title",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#New_Noteworthy!Title"
+        },
+        {
+          "columnName": "Version",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#New_Noteworthy!Version"
+        },
+        {
+          "columnName": "JoinCol",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dtrue"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Title",
+          "width": 342,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Version",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "JoinCol",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "EmailDataset",
+      "sheetId": "22e5cff6-1a68-4f78-b9d4-cac37d39e6cb",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "FIXED",
+            "sheet2": "NewNoteworthy_Normalized",
+            "joinColumns1": [
+              "NotPatched"
+            ],
+            "joinColumns2": [
+              "JoinCol"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "FIXED": [
+            "CustomerLCM"
+          ],
+          "NewNoteworthy_Normalized": [
+            "Title",
+            "Version"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "03756634c4c4967580c75956b865258f",
+          "name": "HighVersion",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "e425731722940848dcf9a5fea4bd251b",
+          "name": "MinVersion",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "73a90349c943a7267d7cde7b295f7416",
+          "name": "CustomerLCM",
+          "width": 192,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "cee4a4586fbeccb54aa7a76256a783a9",
+          "name": "Title",
+          "width": 277,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "d6ae10846d6270e69126bfe3c0a2313b",
+          "name": "NewNoteworthyVersion",
+          "width": 189,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "EmailResults",
+      "sheetId": "613a96df-34e6-458d-b2bd-d8b7d839209d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "EmailResults",
+      "filterTargetSheet": "EmailResults",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "IncludeResult",
+          "filterExpression": "TRUE",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Title",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#EmailDataset!Title)"
+        },
+        {
+          "columnName": "NewNoteworthyVersion",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPANY(#EmailDataset!NewNoteworthyVersion)"
+        },
+        {
+          "columnName": "CustomerLCM",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPANY(#EmailDataset!CustomerLCM)"
+        },
+        {
+          "columnName": "IncludeResult",
+          "columnId": "6",
+          "columnIndex": 3,
+          "formulaString": "\u003dIF(#CustomerLCM \u003c\u003d #NewNoteworthyVersion;true;false)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Title",
+          "width": 391,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "NewNoteworthyVersion",
+          "width": 176,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "CustomerLCM",
+          "width": 221,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "IncludeResult",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    },
+    {
+      "name": "EmailReport",
+      "sheetId": "908c35cb-506e-40de-a237-c1ff6f510b3a",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "EmailReport",
+      "sortTargetSheet": "EmailReport",
+      "sortKeys": [
+        {
+          "column": "Version",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Version",
+          "columnId": "1",
+          "columnIndex": 0,
+          "formulaString": "\u003d#EmailResults!NewNoteworthyVersion"
+        },
+        {
+          "columnName": "Title",
+          "columnId": "0",
+          "columnIndex": 1,
+          "formulaString": "\u003d#EmailResults!Title"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Title",
+          "width": 391,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Version",
+          "width": 176,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

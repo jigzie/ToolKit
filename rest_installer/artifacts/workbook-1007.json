@@ -1,0 +1,91 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_12_export_file_types",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_12_export_file_types.wbk",
+        "uuid": "58d2851e-9ab2-4d41-b2ba-6a437506fe7c"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "12 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_export_file_types.lnk",
+                "uuid": "93d5bfe5-76a1-46fc-8e30-f21335a3931a"
+            },
+            "keep": false,
+            "name": "MySQL_export_file_types_src",
+            "sheetId": "e74fad37-b39a-4755-b86e-63ab6aaee3a0",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ConnectionType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "JDBC",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ConsumerType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "FileType",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "ConnectionType",
+                    "formulaString": "=#MySQL_export_file_types_src!ConnectionType"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "JDBC",
+                    "formulaString": "=#MySQL_export_file_types_src!JDBC"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ConsumerType",
+                    "formulaString": "=#MySQL_export_file_types_src!ConsumerType"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "FileType",
+                    "formulaString": "=#MySQL_export_file_types_src!FileType"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_export_file_types",
+            "nextColumnId": 4,
+            "sheetId": "10950f6d-312f-43a1-aab1-eb85ae9a9aa1",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

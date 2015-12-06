@@ -1,0 +1,229 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "088e700b-832b-4390-ab47-33bc3851af3e",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/_e_TopFunctions_Workbook.wbk",
+    "description": "",
+    "name": "_e_TopFunctions_Workbook"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Functions",
+      "sheetId": "83acf311-88b8-4138-934c-1072a0f02321",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "MySQL_Functions",
+        "sheetId": "ae0ff95c-34e3-40b3-82fd-676dc3000846",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_20_Functions.wbk",
+          "uuid": "db56724d-5e57-413b-9116-629f26087bab"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "FormulaString",
+          "width": 409,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "PreparingToCombine",
+      "sheetId": "21f7fef6-d67a-4e0d-ac5e-e80484549aea",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "FormulaString",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Functions!FormulaString"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "FormulaString",
+          "width": 409,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "Advanced_Filter_Functions",
+      "sheetId": "2341c38b-0625-4397-88c2-c77a7d16fa33",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "MySQL_Advanced_Filter_Functions",
+        "sheetId": "35b315b6-450b-4371-bca4-b514a5f196c1",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_00_Advanced_Filter_Functions.wbk",
+          "uuid": "28d267cf-7d4b-41f9-8177-ca543427ecb4"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "FormulaString",
+          "width": 193,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "CombiningAdvancedFiltersAndFinctions",
+      "sheetId": "3cd7d45e-4670-463b-b600-368a41762a0d",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "unionSources": [
+          "PreparingToCombine",
+          "Advanced_Filter_Functions"
+        ]
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "width": 224,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "ListOfAllFunctions",
+      "sheetId": "29965c56-4c2f-4e4a-9ade-26859218e979",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "ListOfAllFunctions",
+      "filterTargetSheet": "ListOfAllFunctions",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "FormulaString",
+          "filterExpression": "CONTAINS",
+          "value": "(",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "FormulaString",
+          "filterExpression": "CONTAINS",
+          "value": ")",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "FormulaString",
+          "columnId": "2",
+          "columnIndex": 0,
+          "formulaString": "\u003d#CombiningAdvancedFiltersAndFinctions!FormulaString"
+        },
+        {
+          "columnName": "CleanedQuotes",
+          "columnId": "15",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(#FormulaString;\"(\\\"[^\\\"]*\\\")|(\u0027[^\u0027]\u0027)*\";\"\")"
+        },
+        {
+          "columnName": "RawNestedFunctions",
+          "columnId": "12",
+          "columnIndex": 2,
+          "formulaString": "\u003dEXPAND(SUBLIST(REVERSE(TOKENIZELIST(#CleanedQuotes;\"\\\\(\"));1))"
+        },
+        {
+          "columnName": "AllFunctions",
+          "columnId": "6",
+          "columnIndex": 3,
+          "formulaString": "\u003dUPPER(REGEXTRACT(#RawNestedFunctions;\"[a-zA-Z0-9_]+$\"))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "2",
+          "name": "FormulaString",
+          "width": 557,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "AllFunctions",
+          "width": 125,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "RawNestedFunctions",
+          "width": 214,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "CleanedQuotes",
+          "width": 532,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 16
+    },
+    {
+      "name": "Top20Functions",
+      "sheetId": "215454c0-2970-4a7c-ba96-ca5aa05e374b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "Top20Functions",
+      "sortTargetSheet": "Top20Functions",
+      "topN": 20,
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "AllFunctions",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#ListOfAllFunctions!AllFunctions)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "AllFunctions",
+          "width": 225,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

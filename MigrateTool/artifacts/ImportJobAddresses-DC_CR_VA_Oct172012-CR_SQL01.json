@@ -1,0 +1,244 @@
+{
+  "version": "2.1.4.5",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "456811f2-a9e9-45d3-a67e-e067a3a8ab29",
+    "path": "/Users/admin/Data/ImportJobs/SQL DBs/American Crossroads/CR_SQL01_DC_CR_VA_Oct172012_Addresses.imp",
+    "description": "CR_SQL01 DC_CR_VA_Oct172012 Addresses Import",
+    "name": "CR_SQL01_DC_CR_VA_Oct172012_Addresses"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "3040fa7a-6acb-47b2-969d-c86e14853d62"
+    ],
+    "!query!": [
+      ""
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "\u0027Addresses\u0027"
+    ],
+    "orderColumn": [
+      "AddressId"
+    ],
+    "histogram.generation": [
+      "false"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Data/Connections/SQL DBs/CR_SQL01_DC_CR_VA_Oct172012.dst",
+    "uuid": "269db53d-e5ef-4829-98ad-2fd642eebaae"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 5368,
+      "acceptEmpty": false,
+      "name": "AddressId",
+      "origin": "AddressId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5369,
+      "acceptEmpty": false,
+      "name": "VoterId",
+      "origin": "VoterId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5370,
+      "acceptEmpty": false,
+      "name": "AddressType",
+      "origin": "AddressType",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5371,
+      "acceptEmpty": false,
+      "name": "Address1",
+      "origin": "Address1",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5372,
+      "acceptEmpty": true,
+      "name": "Address2",
+      "origin": "Address2",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5373,
+      "acceptEmpty": true,
+      "name": "City",
+      "origin": "City",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5374,
+      "acceptEmpty": true,
+      "name": "State",
+      "origin": "State",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5375,
+      "acceptEmpty": true,
+      "name": "Zip",
+      "origin": "Zip",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5376,
+      "acceptEmpty": true,
+      "name": "Zip4",
+      "origin": "Zip4",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5377,
+      "acceptEmpty": true,
+      "name": "OddEvenCode",
+      "origin": "OddEvenCode",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5378,
+      "acceptEmpty": true,
+      "name": "HouseNumber",
+      "origin": "HouseNumber",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5379,
+      "acceptEmpty": true,
+      "name": "HouseHalf",
+      "origin": "HouseHalf",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5380,
+      "acceptEmpty": true,
+      "name": "StreetPre",
+      "origin": "StreetPre",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5381,
+      "acceptEmpty": true,
+      "name": "StreetName",
+      "origin": "StreetName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5382,
+      "acceptEmpty": true,
+      "name": "StreetType",
+      "origin": "StreetType",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5383,
+      "acceptEmpty": true,
+      "name": "StreetPost",
+      "origin": "StreetPost",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5384,
+      "acceptEmpty": true,
+      "name": "Unit",
+      "origin": "Unit",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5385,
+      "acceptEmpty": true,
+      "name": "UnitNumber",
+      "origin": "UnitNumber",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5386,
+      "acceptEmpty": true,
+      "name": "CreatedBy",
+      "origin": "CreatedBy",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5387,
+      "acceptEmpty": true,
+      "name": "CreatedOn",
+      "origin": "CreatedOn",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5388,
+      "acceptEmpty": true,
+      "name": "ModifiedBy",
+      "origin": "ModifiedBy",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5389,
+      "acceptEmpty": true,
+      "name": "ModifiedOn",
+      "origin": "ModifiedOn",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

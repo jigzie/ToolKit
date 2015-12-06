@@ -1,0 +1,85 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "971d31de-e536-402e-8a33-a1e6d370e79a",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_import_file_types.lnk",
+    "description": "",
+    "name": "MySQL_import_file_types"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "a4043a94-ac5b-443e-bff3-7b3a652ccb14"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      "select ds.type_id,dd.name,df2.extension,jcp.property_value from file_dependency fd\r\ninner join dap_file df1 on df1.id\u003dfd.dependency_file_id and df1.extension\u003d\u0027DATA_STORE_EXTENSION\u0027\r\ninner join dap_file df2 on df2.id\u003dfd.source_file_id and (df2.extension\u003d\u0027IMPORT_JOB_EXTENSION\u0027 or df2.extension\u003d\u0027IMPORT_LINK_JOB_EXTENSION\u0027)\r\ninner join data_store ds on ds.dap_file__id\u003ddf1.id\r\nleft join db_driver dd on ds.db_type_fk\u003ddd.id\r\ninner join dap_job_configuration djc on djc.dap_file__id\u003ddf2.id\r\nleft join job_configuration_property jcp on jcp.configuration_fk\u003ddjc.id and jcp.property_key\u003d\u0027fileType\u0027"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 219,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "ConnectionType",
+      "origin": "type_id",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 220,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "JDBC",
+      "origin": "name",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 221,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "ConsumerType",
+      "origin": "extension",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 222,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "FileType",
+      "origin": "property_value",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.sdk.entity.CustomDataStore",
+  "file": {
+    "uuid": "295824be-d327-47ec-b46c-e03311616a6d",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_Logs_SSH.dst",
+    "description": "Connection to Datameer Server for Log Retrieval and Data Archiving.",
+    "name": "Datameer_Logs_SSH"
+  },
+  "typeId": "das.ScpFileDataStoreType",
+  "properties": {
+    "dataStoreUsage": [
+      "IMPORT_EXPORT"
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "bfad62d6-9505-4e91-92c6-6233fa02d020"
+    ],
+    "dataStoreTemplate": [
+      "false"
+    ],
+    "host": [
+      "54.81.124.105"
+    ],
+    "port": [
+      "22"
+    ],
+    "user_name": [
+      "root"
+    ],
+    "user_name_1": [
+      ""
+    ],
+    "password": [
+      "SECURE:0:7l3drkYEKFapIh0fJohcRQ\u003d\u003d"
+    ],
+    "password_1": [
+      "SECURE:0:wu6dI+CamV+UYzNios7pNg\u003d\u003d"
+    ],
+    "sshKey": [
+      "SECURE:0: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"
+    ],
+    "sshKey_1": [
+      ""
+    ],
+    "rootPathPrefix": [
+      "/opt/datameer/current/"
+    ]
+  }
+}

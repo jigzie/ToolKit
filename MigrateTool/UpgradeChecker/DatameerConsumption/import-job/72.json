@@ -1,0 +1,79 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "80de1de8-9a67-4d90-ac24-159d05d49cba",
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/Sht.lnk",
+    "description": "Sht for Health Check",
+    "name": "Sht"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "268e0e3e-5929-4252-b163-18ccb97e4d26"
+    ],
+    "!query!": [
+      "select sht.id SheetId, sht.name Name, sht.keep Keep, sht.workbook_fk\r\nfrom sheet sht"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/SystemDatabase.dst",
+    "uuid": "1c07895a-11dd-4e7b-9929-642b7db9c90d"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 5,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 224,
+      "acceptEmpty": false,
+      "name": "SheetId",
+      "origin": "SheetId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 225,
+      "acceptEmpty": true,
+      "name": "Name",
+      "origin": "Name",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 226,
+      "acceptEmpty": false,
+      "name": "Keep",
+      "origin": "Keep",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 227,
+      "acceptEmpty": true,
+      "name": "workbook_fk",
+      "origin": "workbook_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

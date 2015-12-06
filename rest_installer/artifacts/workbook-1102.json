@@ -1,0 +1,55 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_01_10_Cluster_Health_Page",
+        "path": "/Administration/HUMv2/Reports/http/base/_01_10_Cluster_Health_Page.wbk",
+        "uuid": "d7de75b3-fde2-415e-9820-f70f478083aa"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "10 1 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/HTTP_Cluster_Health_Page.lnk",
+                "uuid": "96a4e21a-b54d-4f09-8825-33e618f06d61"
+            },
+            "keep": false,
+            "name": "HTTP_Cluster_Page_src",
+            "sheetId": "89a2fe21-f4f8-4b44-b9f9-0590a6006ecf",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "parsed_html",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "parsed_html",
+                    "formulaString": "=#HTTP_Cluster_Page_src!parsed_html"
+                }
+            ],
+            "keep": true,
+            "name": "HTTP_Cluster_Page",
+            "nextColumnId": 1,
+            "sheetId": "187ad499-bf50-4099-b98b-35d79bcb4e5e",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

@@ -1,0 +1,131 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "b604e40a-dc04-4574-bb61-3db6473fe15c",
+    "path": "/Users/superuser/Applications/Enron Email Analytics/EnronEmailFileUpload.upl",
+    "description": "",
+    "name": "EnronEmailFileUpload"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "fe8a5a32-12be-418c-994c-05adaf110d6b"
+    ],
+    "file": [
+      "/Users/hadoop/jigz/fileuploads/5/EnronEmailWorkbook_FromToDate-1.csv"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "data.includes.header": [
+      "true"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "08eba90e-189d-402e-9e85-3662d5a587ce"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 11,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "from",
+      "origin": "0",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 12,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "to",
+      "origin": "1",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 13,
+      "pattern": "yyyy-MM-dd KK:mm:ss aa",
+      "acceptEmpty": true,
+      "name": "date",
+      "origin": "2",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 14,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 15,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 16,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

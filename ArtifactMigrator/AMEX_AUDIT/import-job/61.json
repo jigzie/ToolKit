@@ -1,0 +1,191 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "bc14e0cb-1470-40ad-b32b-928d0c221382",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Logs_Hadoop_Metrics.lnk",
+    "description": "",
+    "name": "Logs_Hadoop_Metrics"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "419574c3-0480-4962-95e5-4e56896536d0"
+    ],
+    "incrementalMode": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ],
+    "file": [
+      "logs/hadoop-metrics.log*"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "data.includes.header": [
+      "false"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "fileNameTimeRange_mode": [
+      "OFF"
+    ],
+    "filter.maxAge": [
+      ""
+    ],
+    "filter.minAge": [
+      ""
+    ],
+    "external.store": [
+      "false"
+    ],
+    "source.data.partitioned": [
+      "false"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "ignore.first.n.lines": [
+      "0"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_Logs_SSH.dst",
+    "uuid": "295824be-d327-47ec-b46c-e03311616a6d"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 253,
+      "pattern": "yyyy-MM-dd HH:mm:ss",
+      "acceptEmpty": true,
+      "name": "Timestamp",
+      "origin": "0",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 254,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Hadoop_Job_Id",
+      "origin": "1",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 255,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Job_Name",
+      "origin": "2",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 256,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Counter_Name",
+      "origin": "3",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 257,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Counter_Value",
+      "origin": "4",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 258,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 259,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 260,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 261,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 262,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

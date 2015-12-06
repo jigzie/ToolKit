@@ -1,0 +1,246 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "5b0be934-21fd-4952-9daa-251d622733b6",
+    "path": "/Users/admin/Applications/AMEX/jobDefn_5941.upl",
+    "description": "JobDefn.json 5941",
+    "name": "jobDefn_5941"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "76f53806-fd3b-4be5-bc9f-8c6ec9585eae"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-5.9.4-mapr-4.0.2-mr2/das-data/fileuploads/29/job-definition.json"
+    ],
+    "fileType": [
+      "JSON"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "rootPath": [
+      ""
+    ],
+    "maxTraverseDepth": [
+      "0"
+    ],
+    "alwaysIncludePaths": [
+      ""
+    ],
+    "skipExpandPaths": [
+      ""
+    ],
+    "ignorePaths": [
+      ""
+    ],
+    "collect_additional_fields": [
+      "false"
+    ],
+    "unwrap_root_array": [
+      "false"
+    ],
+    "ignore_surrounding_text": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT_SCANNER"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "b92bfaf1-5794-48fc-a490-e679c78290cd"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 94,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "version",
+      "origin": "version",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 95,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "className",
+      "origin": "className",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 96,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "file_uuid",
+      "origin": "file.uuid",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 97,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "file_path",
+      "origin": "file.path",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 98,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "file_description",
+      "origin": "file.description",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 99,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "file_name",
+      "origin": "file.name",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 100,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "pullType",
+      "origin": "pullType",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 101,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "minKeepCount",
+      "origin": "minKeepCount",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 102,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "notificationAddresses",
+      "origin": "notificationAddresses",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 103,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "notificationSuccessAddresses",
+      "origin": "notificationSuccessAddresses",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 104,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "sheets",
+      "origin": "sheets",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 105,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "advancedSchedulingInUse",
+      "origin": "advancedSchedulingInUse",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 106,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "errorHandlingMode",
+      "origin": "errorHandlingMode",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 107,
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 108,
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 109,
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 110,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 111,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

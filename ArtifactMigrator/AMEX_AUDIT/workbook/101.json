@@ -1,0 +1,102 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "df357902-c8d0-4882-a419-2cdf90943d15",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_28_users.wbk",
+    "description": "",
+    "name": "_00_28_users"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_users_src",
+      "sheetId": "4b09ed6f-3b41-44db-a235-80f3403a6ffe",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_users.lnk",
+        "uuid": "cebd559e-eb30-47e2-a190-8c223f9e91a3"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_users",
+      "sheetId": "063305fd-fe2a-4f43-91c4-263ece882554",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_users_src!id"
+        },
+        {
+          "columnName": "name",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_users_src!name"
+        },
+        {
+          "columnName": "email",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_users_src!email"
+        },
+        {
+          "columnName": "login_count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_users_src!login_count"
+        },
+        {
+          "columnName": "enabled",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MySQL_users_src!enabled"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "email",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "login_count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "enabled",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

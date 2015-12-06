@@ -1,0 +1,881 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "c8b23eeb-26df-4ca0-bc67-5c062d664970",
+    "path": "/Users/admin/Applications/Tutorial Click Path/Clickstream Analysis.wbk",
+    "description": "",
+    "name": "Clickstream Analysis"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 4,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Clickstream_Data",
+      "sheetId": "96b11c1a-4b15-4906-8f57-d091df4622eb",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "filterSourceSheet": "Clickstream_Data",
+      "filterTargetSheet": "Clickstream_Data",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "request",
+          "filterExpression": "CONTAINS",
+          "value": "html",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "status",
+          "filterExpression": "EQUALS",
+          "value": "200",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "remoteUser",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "timeEnglishFormat",
+          "width": 187,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "remoteUser",
+          "width": 123,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "request",
+          "width": 357,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Format",
+      "sheetId": "d10743e0-c865-4182-8017-ef3d3d6ae3a5",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "IP",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Clickstream_Data!remoteHost"
+        },
+        {
+          "columnName": "User",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Clickstream_Data!remoteUser"
+        },
+        {
+          "columnName": "Timestamp",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Clickstream_Data!timeEnglishFormat"
+        },
+        {
+          "columnName": "Filename",
+          "columnId": "6",
+          "columnIndex": 3,
+          "formulaString": "\u003dURL_FILE(#Clickstream_Data!request)"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Clickstream_Data!status"
+        },
+        {
+          "columnName": "Traffic",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Clickstream_Data!bytesSent/1024"
+        },
+        {
+          "columnName": "H",
+          "columnId": "22",
+          "columnIndex": 6,
+          "formulaString": "\u003dHEX2BIN(T(#Status))"
+        },
+        {
+          "columnName": "H1",
+          "columnId": "23",
+          "columnIndex": 7,
+          "formulaString": "\u003dHEX2BIN(T(#Status))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "IP",
+          "width": 108,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Timestamp",
+          "width": 194,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Traffic",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 2,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "Filename",
+          "width": 195,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "22",
+          "name": "H",
+          "width": 137,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "23",
+          "name": "H1",
+          "width": 221,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 24
+    },
+    {
+      "name": "SessionStats",
+      "sheetId": "2649c35c-6b04-485c-b6d6-0477b0869f6b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "User",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Format!User)"
+        },
+        {
+          "columnName": "sessionStart",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBYGAP(#Format!Timestamp;5m)"
+        },
+        {
+          "columnName": "sessionEnd",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#Format!Timestamp)"
+        },
+        {
+          "columnName": "Clicks",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "Path",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPCONCAT(#Format!Filename;#Format!Timestamp)"
+        },
+        {
+          "columnName": "Mins",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d(#sessionEnd-#sessionStart)/60000"
+        },
+        {
+          "columnName": "LandingPage",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003dLISTELEMENT(#Path;0)"
+        },
+        {
+          "columnName": "ExitPage",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003dLISTELEMENT(#Path;SIZE(#Path)-1)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "sessionStart",
+          "width": 141,
+          "alignment": "LEFT",
+          "datePattern": "MM/dd/yy HH:mm:ss",
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "sessionEnd",
+          "width": 161,
+          "alignment": "LEFT",
+          "datePattern": "MM/dd/yy HH:mm:ss",
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Clicks",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Path",
+          "width": 771,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Mins",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 2,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "LandingPage",
+          "width": 172,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "ExitPage",
+          "width": 185,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 8
+    },
+    {
+      "name": "UserSessionStats",
+      "sheetId": "c8a6ed0b-6752-47a5-be59-5d597791e0ed",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "User",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#SessionStats!User)"
+        },
+        {
+          "columnName": "avgClicks",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPAVERAGE(#SessionStats!Clicks)"
+        },
+        {
+          "columnName": "avgMins",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPAVERAGE(#SessionStats!Mins)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "avgClicks",
+          "width": 156,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "avgMins",
+          "width": 149,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "Customer_Profile",
+      "sheetId": "117e7e50-688d-47cd-b56e-575b90c30c7b",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Tutorial Click Path/Customer Profile.upl",
+        "uuid": "e05e4bd8-4860-408b-b298-27689578c2a3"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Joined",
+      "sheetId": "6aabfe9c-73d1-4be8-971e-c9c7e0be1244",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "UserSessionStats",
+            "sheet2": "Customer_Profile",
+            "joinColumns1": [
+              "User"
+            ],
+            "joinColumns2": [
+              "User"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "UserSessionStats": [
+            "User",
+            "avgClicks",
+            "avgMins"
+          ],
+          "Customer_Profile": [
+            "Email",
+            "Role",
+            "Activated"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "aa10510250ccfb02caa399f1d27c6b1f",
+          "name": "UserSessionStats.avgClicks",
+          "width": 183,
+          "alignment": "CENTER",
+          "decimalDigits": 2,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "bad987c890285f0371ae752273ab1243",
+          "name": "UserSessionStats.avgMins",
+          "width": 176,
+          "alignment": "CENTER",
+          "decimalDigits": 2,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "918d2a481997e9131840e442901828d3",
+          "width": 160,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "d765e916019ef4501dc7226bb120c310",
+          "width": 153,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "00b00c2b65ce31ad8186f087dd6cb5bd",
+          "width": 183,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "f8cdec2cd275804569059aa7b40b69c2",
+          "width": 153,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "TopLandingPages",
+      "sheetId": "a679212f-5ce3-47a4-b28c-95cecea76036",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "TopLandingPages",
+      "sortTargetSheet": "TopLandingPages",
+      "topN": 10,
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LandingPage",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#SessionStats!LandingPage)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LandingPage",
+          "width": 198,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "TopFalloutPages",
+      "sheetId": "c34eb89c-475b-4415-ad4d-9ade68f12c56",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "TopFalloutPages",
+      "sortTargetSheet": "TopFalloutPages",
+      "topN": 10,
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "FalloutPage",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#SessionStats!ExitPage)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "FalloutPage",
+          "width": 186,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "ClickPath3Plus",
+      "sheetId": "7a438838-772a-4e04-9041-26c6995b39ab",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "ClickPath3Plus",
+      "filterTargetSheet": "ClickPath3Plus",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Clicks",
+          "filterExpression": "GREATER_EQUALS",
+          "value": "3",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "User",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#SessionStats!User"
+        },
+        {
+          "columnName": "sessionStart",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#SessionStats!sessionStart"
+        },
+        {
+          "columnName": "sessionEnd",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#SessionStats!sessionEnd"
+        },
+        {
+          "columnName": "Clicks",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#SessionStats!Clicks"
+        },
+        {
+          "columnName": "Path",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#SessionStats!Path"
+        },
+        {
+          "columnName": "Mins",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#SessionStats!Mins"
+        },
+        {
+          "columnName": "LandingPage",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#SessionStats!LandingPage"
+        },
+        {
+          "columnName": "ExitPage",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#SessionStats!ExitPage"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "sessionStart",
+          "width": 151,
+          "alignment": "LEFT",
+          "datePattern": "MM/dd/yy HH:mm:ss",
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "sessionEnd",
+          "width": 152,
+          "alignment": "LEFT",
+          "datePattern": "MM/dd/yy HH:mm:ss",
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Clicks",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Path",
+          "width": 269,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Mins",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 2,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "LandingPage",
+          "width": 172,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "ExitPage",
+          "width": 186,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 8
+    },
+    {
+      "name": "TopClickPaths",
+      "sheetId": "270a74bd-3662-4fcc-9134-a43b934a9868",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "TopClickPaths",
+      "sortTargetSheet": "TopClickPaths",
+      "topN": 10,
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "ClickPath",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#ClickPath3Plus!Path+\"\")"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "UsersFollowed",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#ClickPath3Plus!User)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ClickPath",
+          "width": 471,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "UsersFollowed",
+          "width": 116,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "ClickPairs",
+      "sheetId": "0b91ad2d-b4c5-4b79-9bc9-17ebcc2d5c57",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "User",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Format!User)"
+        },
+        {
+          "columnName": "sessionStart",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBYGAP(#Format!Timestamp;5m)"
+        },
+        {
+          "columnName": "Path",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUP_PATH_CHANGES(#Format!Filename)"
+        },
+        {
+          "columnName": "From",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dJSON_ELEMENT(#Path;0)"
+        },
+        {
+          "columnName": "To",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dJSON_ELEMENT(#Path;1)"
+        },
+        {
+          "columnName": "DwellTimeSecs",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dDENULLIFY(GROUP_DIFF(#Format!Timestamp))/1000"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "sessionStart",
+          "width": 206,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Path",
+          "width": 340,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "From",
+          "width": 180,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "To",
+          "width": 203,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "DwellTimeSecs",
+          "width": 112,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    },
+    {
+      "name": "TopMoves",
+      "sheetId": "530f1483-b90c-448f-b5ce-6081aebe2c95",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "From",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#ClickPairs!From)"
+        },
+        {
+          "columnName": "To",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#ClickPairs!To)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "From",
+          "width": 183,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "To",
+          "width": 196,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "alignment": "CENTER",
+          "color": "#F90707",
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "LongestDwellTime",
+      "sheetId": "ebd013c0-83e4-4005-a1a6-55d567454562",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "LongestDwellTime",
+      "filterTargetSheet": "LongestDwellTime",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Page",
+          "filterExpression": "TEXT_NOT_EQUALS",
+          "value": "external",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "LongestDwellTime",
+      "sortTargetSheet": "LongestDwellTime",
+      "topN": 10,
+      "sortKeys": [
+        {
+          "column": "DwellSeconds",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Page",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#ClickPairs!From)"
+        },
+        {
+          "columnName": "DwellSeconds",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPAVERAGE(#ClickPairs!DwellTimeSecs)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Page",
+          "width": 171,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "DwellSeconds",
+          "width": 131,
+          "alignment": "CENTER",
+          "color": "#FA0707",
+          "decimalDigits": 2,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

@@ -1,0 +1,1712 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "5c6f3b2f-535c-4b91-b280-ce613bf0fd0a",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Exports/_03_Logs_Combiner.wbk",
+    "description": "",
+    "name": "_03_Logs_Combiner"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {
+    "histograms.generation": [
+      "true"
+    ],
+    "cardinalities.generation": [
+      "true"
+    ],
+    "topk.generation": [
+      "true"
+    ],
+    "minmaxmean.generation": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "ArtifactNames",
+      "sheetId": "edd4effd-7297-4061-ad60-a017d54ff1bd",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "ArtifactNames",
+        "sheetId": "05e3c751-6b71-4e99-9347-b945b4551b8d",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/ArtifactNames.wbk",
+          "uuid": "7b1e12ea-d9f5-4385-bf33-13970c0b57fa"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "6374b22ca13c4f404ecee3c2fbf8cf84",
+          "name": "extension",
+          "width": 196,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "ba0f19c94067b7d12c47d4cb38529336",
+          "name": "artifact",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "ArtifactNames_prep",
+      "sheetId": "8b17b7b7-c28b-44f4-9def-0f8229add0b1",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "extension",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#ArtifactNames!extension"
+        },
+        {
+          "columnName": "ArtifactName",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#ArtifactNames!artifact"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"ArtifactNames\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dTOJSON(LIST(\"extension\";\"ArtifactName\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dTOJSON(LIST(#extension;#ArtifactName;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "extension",
+          "width": 204,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "ArtifactName",
+          "width": 120,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ImportName_",
+          "width": 198,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "values",
+          "width": 392,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "ArtifactNames_rpt",
+      "sheetId": "c3afb2ac-72a6-4171-9107-0831722b6b45",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#ArtifactNames_prep!keys;#ArtifactNames_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 656,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "Hadoop_Metrics",
+      "sheetId": "85cbfa45-0bc4-40fd-8c82-b5c9b0b4195e",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "Hadoop_Metrics",
+        "sheetId": "232cd893-6474-498b-b1fb-c9354aa8db6a",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_10_Hadoop_Metrics.wbk",
+          "uuid": "9e4b378a-9cc1-4e8b-ae42-ce523dbf3acd"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "Job_Name",
+          "width": 209,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Hadoop_Metrics_prep",
+      "sheetId": "3b1366c7-a67f-4b06-9c13-38bb12986d39",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Timestamp",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dT(#Hadoop_Metrics!Timestamp)"
+        },
+        {
+          "columnName": "Hadoop_Job_Id",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Hadoop_Metrics!Hadoop_Job_Id"
+        },
+        {
+          "columnName": "Job_Name",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Hadoop_Metrics!Job_Name"
+        },
+        {
+          "columnName": "Counter_Name",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Hadoop_Metrics!Counter_Name"
+        },
+        {
+          "columnName": "Counter_Value",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dT(#Hadoop_Metrics!Counter_Value)"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "7",
+          "columnIndex": 5,
+          "formulaString": "\u003d\"Hadoop_Metrics\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "5",
+          "columnIndex": 6,
+          "formulaString": "\u003dTOJSON(LIST(\"Timestamp\";\"Hadoop_Job_Id\";\"Job_Name\";\"Counter_Name\";\"Counter_Value\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "6",
+          "columnIndex": 7,
+          "formulaString": "\u003dTOJSON(LIST(#Timestamp;#Hadoop_Job_Id;#Job_Name;#Counter_Name;#Counter_Value;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Timestamp",
+          "width": 197,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Hadoop_Job_Id",
+          "width": 109,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Job_Name",
+          "width": 312,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Counter_Name",
+          "width": 210,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Counter_Value",
+          "width": 110,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 8
+    },
+    {
+      "name": "Hadoop_Metrics_rpt",
+      "sheetId": "d96e69a0-2d3f-44d4-a9ce-384f2cc67290",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#Hadoop_Metrics_prep!keys;#Hadoop_Metrics_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 1674,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "HTTP_Errors",
+      "sheetId": "b45f9d8c-f443-4703-8325-c2f39b7f1616",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "HTTP_Errors",
+        "sheetId": "cdcc2735-860a-4b79-8c46-8e76b0f77783",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_20_HTTP_Errors.wbk",
+          "uuid": "a524d2f8-8f60-4b9a-b185-598223163afe"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "Stacktrace",
+          "width": 183,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "Page",
+          "width": 198,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "HTTP_Errors_prep",
+      "sheetId": "1c1eb74d-1842-44b0-825d-ed4cafeb9659",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Timestamp",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dT(#HTTP_Errors!Timestamp)"
+        },
+        {
+          "columnName": "HttpStatusCode",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dT(#HTTP_Errors!HttpStatusCode)"
+        },
+        {
+          "columnName": "Page",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#HTTP_Errors!Page"
+        },
+        {
+          "columnName": "Stacktrace",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#HTTP_Errors!Stacktrace"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "6",
+          "columnIndex": 4,
+          "formulaString": "\u003d\"HTTP_Errors\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "4",
+          "columnIndex": 5,
+          "formulaString": "\u003dTOJSON(LIST(\"Timestamp\";\"HttpStatusCode\";\"Page\";\"Stacktrace\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "5",
+          "columnIndex": 6,
+          "formulaString": "\u003dTOJSON(LIST(#Timestamp;#HttpStatusCode;#Page;#Stacktrace;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Timestamp",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "HttpStatusCode",
+          "width": 182,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Page",
+          "width": 198,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Stacktrace",
+          "width": 183,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    },
+    {
+      "name": "HTTP_Errors_rpt",
+      "sheetId": "1af66a92-1b37-4b85-9038-8c57750a420d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "A",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#HTTP_Errors_prep!keys;#HTTP_Errors_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "A",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "Metrics_Jamon",
+      "sheetId": "96a77246-fa66-44d4-89c6-1062d43e6ef7",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "Metrics_Jamon",
+        "sheetId": "df910fe1-0a9a-4ba5-b02b-93dd9c4397fb",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_40_Metrics_Jamon.wbk",
+          "uuid": "d8cff675-7fd3-4a52-8cb9-2475192a6f78"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Metrics_Jamon_prep",
+      "sheetId": "2c97755f-cd1a-40e6-b31c-d196b79a96dd",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dT(#Metrics_Jamon!LogTime)"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics_Jamon!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_Jamon!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dT(#Metrics_Jamon!Count)"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dT(#Metrics_Jamon!Average)"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dT(#Metrics_Jamon!Total)"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003dT(#Metrics_Jamon!StandardDev)"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003dT(#Metrics_Jamon!Min)"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003dT(#Metrics_Jamon!Max)"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003dT(#Metrics_Jamon!Active)"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003dT(#Metrics_Jamon!AverageActive)"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003dT(#Metrics_Jamon!MaxActive)"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003dT(#Metrics_Jamon!CollectionTime)"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "13",
+          "columnIndex": 13,
+          "formulaString": "\u003d\"Metrics_Jamon\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "14",
+          "columnIndex": 14,
+          "formulaString": "\u003dTOJSON(LIST(\"LogTime\";\"Label\";\"Units\";\"Count\";\"Average\";\"Total\";\"StandardDev\";\"Min\";\"Max\";\"Active\";\"AverageActive\";\"MaxActive\";\"CollectionTime\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "15",
+          "columnIndex": 15,
+          "formulaString": "\u003dTOJSON(LIST(#LogTime;#Label;#Units;#Count;#Average;#Total;#StandardDev;#Min;#Max;#Active;#AverageActive;#MaxActive;#CollectionTime;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 113,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "13",
+          "name": "ImportName_",
+          "width": 136,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "14",
+          "name": "keys",
+          "width": 127,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "values",
+          "width": 168,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 16
+    },
+    {
+      "name": "Metrics_Jamon_rpt",
+      "sheetId": "32d98bd5-c875-4e00-8a89-7eeed9f22315",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#Metrics_Jamon_prep!keys;#Metrics_Jamon_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "Metrics",
+      "sheetId": "df0fc19b-28b8-46a8-b3d1-9dffcf39e6ff",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "Metrics",
+        "sheetId": "73f9c80d-003c-48ff-a1b3-bbe3e7af6707",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_30_Metrics.wbk",
+          "uuid": "8ab39afa-26ed-4772-97ee-6afe854bce73"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "width": 213,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Metrics_prep",
+      "sheetId": "19bff080-257b-4f9d-88cb-b8ace8945f32",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Timestamp",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dT(#Metrics!Timestamp)"
+        },
+        {
+          "columnName": "Event",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics!Event"
+        },
+        {
+          "columnName": "Value1",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dT(#Metrics!ms)"
+        },
+        {
+          "columnName": "Value2",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dT(#Metrics!Value2)"
+        },
+        {
+          "columnName": "Value3",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dT(#Metrics!Value3)"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d\"Metrics\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003dTOJSON(LIST(\"Timestamp\";\"Event\";\"Value1\";\"Value2\";\"Value3\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003dTOJSON(LIST(#Timestamp;#Event;#Value1;#Value2;#Value3;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Timestamp",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Event",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Value1",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Value2",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Value3",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "ImportName_",
+          "width": 140,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 8
+    },
+    {
+      "name": "Metrics_rpt",
+      "sheetId": "f9bbaf0c-7df0-4a68-b5b6-8c50442eb0e3",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#Metrics_prep!keys;#Metrics_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "user_action",
+      "sheetId": "4f89d3b3-ac8b-45b8-9a63-bf1036283789",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "User_Action",
+        "sheetId": "b0279367-e4e1-461a-9f0d-9fde7d140fa4",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_00_User_Action.wbk",
+          "uuid": "f292852a-c4a8-4d5c-b80b-7240a4f72faa"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "user_action_prep",
+      "sheetId": "c9b9ac35-8ef1-4d4b-bd1f-4a4d4a9ee40f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "timestamp",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dT(#user_action!timestamp)"
+        },
+        {
+          "columnName": "action_type",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#user_action!action_type"
+        },
+        {
+          "columnName": "action",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#user_action!action"
+        },
+        {
+          "columnName": "performed_by_user",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dSHA_256(#user_action!performed_by_user)"
+        },
+        {
+          "columnName": "performer_roles",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#user_action!performer_roles"
+        },
+        {
+          "columnName": "ip_address",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dSHA_256(#user_action!ip_address)"
+        },
+        {
+          "columnName": "root_uuid",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#user_action!root_uuid"
+        },
+        {
+          "columnName": "file_uuid",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#user_action!file_uuid"
+        },
+        {
+          "columnName": "file_path",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003dSHA_256(#user_action!file_path)"
+        },
+        {
+          "columnName": "folder_path",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003dSHA_256(#user_action!folder_path)"
+        },
+        {
+          "columnName": "group_name",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003dSHA_256(#user_action!group_name)"
+        },
+        {
+          "columnName": "read_permission",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003dT(#user_action!read_permission)"
+        },
+        {
+          "columnName": "write_permission",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003dT(#user_action!write_permission)"
+        },
+        {
+          "columnName": "execute_permission",
+          "columnId": "13",
+          "columnIndex": 13,
+          "formulaString": "\u003dT(#user_action!execute_permission)"
+        },
+        {
+          "columnName": "shared_public",
+          "columnId": "14",
+          "columnIndex": 14,
+          "formulaString": "\u003d#user_action!shared_public"
+        },
+        {
+          "columnName": "new_owner_name",
+          "columnId": "15",
+          "columnIndex": 15,
+          "formulaString": "\u003dSHA_256(#user_action!new_owner_name)"
+        },
+        {
+          "columnName": "user_name",
+          "columnId": "16",
+          "columnIndex": 16,
+          "formulaString": "\u003dSHA_256(#user_action!user_name)"
+        },
+        {
+          "columnName": "role_name",
+          "columnId": "17",
+          "columnIndex": 17,
+          "formulaString": "\u003dSHA_256(#user_action!role_name)"
+        },
+        {
+          "columnName": "execution_id",
+          "columnId": "18",
+          "columnIndex": 18,
+          "formulaString": "\u003dT(#user_action!execution_id)"
+        },
+        {
+          "columnName": "execution_type",
+          "columnId": "19",
+          "columnIndex": 19,
+          "formulaString": "\u003d#user_action!execution_type"
+        },
+        {
+          "columnName": "execution_triggered_by",
+          "columnId": "20",
+          "columnIndex": 20,
+          "formulaString": "\u003d#user_action!execution_triggered_by"
+        },
+        {
+          "columnName": "execution_job_schedule",
+          "columnId": "21",
+          "columnIndex": 21,
+          "formulaString": "\u003d#user_action!execution_job_schedule"
+        },
+        {
+          "columnName": "execution_configuration_path",
+          "columnId": "22",
+          "columnIndex": 22,
+          "formulaString": "\u003dSHA_256(#user_action!execution_configuration_path)"
+        },
+        {
+          "columnName": "execution_configuration_uuid",
+          "columnId": "23",
+          "columnIndex": 23,
+          "formulaString": "\u003d#user_action!execution_configuration_uuid"
+        },
+        {
+          "columnName": "execution_job_status",
+          "columnId": "24",
+          "columnIndex": 24,
+          "formulaString": "\u003d#user_action!execution_job_status"
+        },
+        {
+          "columnName": "execution_job_user",
+          "columnId": "25",
+          "columnIndex": 25,
+          "formulaString": "\u003dSHA_256(#user_action!execution_job_user)"
+        },
+        {
+          "columnName": "data_uuid",
+          "columnId": "26",
+          "columnIndex": 26,
+          "formulaString": "\u003d#user_action!data_uuid"
+        },
+        {
+          "columnName": "data_path",
+          "columnId": "27",
+          "columnIndex": 27,
+          "formulaString": "\u003dSHA_256(#user_action!data_path)"
+        },
+        {
+          "columnName": "workbook_uuid",
+          "columnId": "28",
+          "columnIndex": 28,
+          "formulaString": "\u003d#user_action!workbook_uuid"
+        },
+        {
+          "columnName": "workbook_path",
+          "columnId": "29",
+          "columnIndex": 29,
+          "formulaString": "\u003dSHA_256(#user_action!workbook_path)"
+        },
+        {
+          "columnName": "workbook_sheet_name",
+          "columnId": "30",
+          "columnIndex": 30,
+          "formulaString": "\u003dSHA_256(#user_action!workbook_sheet_name)"
+        },
+        {
+          "columnName": "workbook_sheet_column_name",
+          "columnId": "31",
+          "columnIndex": 31,
+          "formulaString": "\u003dSHA_256(#user_action!workbook_sheet_column_name)"
+        },
+        {
+          "columnName": "workbook_sheet_column_index",
+          "columnId": "32",
+          "columnIndex": 32,
+          "formulaString": "\u003dT(#user_action!workbook_sheet_column_index)"
+        },
+        {
+          "columnName": "datasource_uuid",
+          "columnId": "33",
+          "columnIndex": 33,
+          "formulaString": "\u003d#user_action!datasource_uuid"
+        },
+        {
+          "columnName": "datasource_path",
+          "columnId": "34",
+          "columnIndex": 34,
+          "formulaString": "\u003dSHA_256(#user_action!datasource_path)"
+        },
+        {
+          "columnName": "workbook_join_sheets",
+          "columnId": "35",
+          "columnIndex": 35,
+          "formulaString": "\u003d#user_action!workbook_join_sheets"
+        },
+        {
+          "columnName": "application_uuid",
+          "columnId": "36",
+          "columnIndex": 36,
+          "formulaString": "\u003d#user_action!application_uuid"
+        },
+        {
+          "columnName": "application_path",
+          "columnId": "37",
+          "columnIndex": 37,
+          "formulaString": "\u003dSHA_256(#user_action!application_path)"
+        },
+        {
+          "columnName": "old_name",
+          "columnId": "38",
+          "columnIndex": 38,
+          "formulaString": "\u003dSHA_256(#user_action!old_name)"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "39",
+          "columnIndex": 39,
+          "formulaString": "\u003d\"User_Action\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "40",
+          "columnIndex": 40,
+          "formulaString": "\u003dTOJSON(LIST(\"timestamp\";\"action_type\";\"action\";\"performed_by_user\";\"performer_roles\";\"ip_address\";\"root_uuid\";\"file_uuid\";\"file_path\";\"folder_path\";\"group_name\";\"read_permission\";\"write_permission\";\"execute_permission\";\"shared_public\";\"new_owner_name\";\"user_name\";\"role_name\";\"execution_id\";\"execution_type\";\"execution_triggered_by\";\"execution_job_schedule\";\"execution_configuration_path\";\"execution_configuration_uuid\";\"execution_job_status\";\"execution_job_user\";\"data_uuid\";\"data_path\";\"workbook_uuid\";\"workbook_path\";\"workbook_sheet_name\";\"workbook_sheet_column_name\";\"workbook_sheet_column_index\";\"datasource_uuid\";\"datasource_path\";\"workbook_join_sheets\";\"application_uuid\";\"application_path\";\"old_name\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "41",
+          "columnIndex": 41,
+          "formulaString": "\u003dTOJSON(LIST(#timestamp;#action_type;#action;#performed_by_user;#performer_roles;#ip_address;#root_uuid;#file_uuid;#file_path;#folder_path;#group_name;#read_permission;#write_permission;#execute_permission;#shared_public;#new_owner_name;#user_name;#role_name;#execution_id;#execution_type;#execution_triggered_by;#execution_job_schedule;#execution_configuration_path;#execution_configuration_uuid;#execution_job_status;#execution_job_user;#data_uuid;#data_path;#workbook_uuid;#workbook_path;#workbook_sheet_name;#workbook_sheet_column_name;#workbook_sheet_column_index;#datasource_uuid;#datasource_path;#workbook_join_sheets;#application_uuid;#application_path;#old_name;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "timestamp",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "action_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "action",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "performed_by_user",
+          "width": 147,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "performer_roles",
+          "width": 125,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "ip_address",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "root_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "file_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "file_path",
+          "width": 183,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "folder_path",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "group_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "read_permission",
+          "width": 129,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "write_permission",
+          "width": 126,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "13",
+          "name": "execute_permission",
+          "width": 133,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "14",
+          "name": "shared_public",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "new_owner_name",
+          "width": 139,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "user_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "17",
+          "name": "role_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "18",
+          "name": "execution_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "19",
+          "name": "execution_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "20",
+          "name": "execution_triggered_by",
+          "width": 194,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "21",
+          "name": "execution_job_schedule",
+          "width": 182,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "22",
+          "name": "execution_configuration_path",
+          "width": 232,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "23",
+          "name": "execution_configuration_uuid",
+          "width": 209,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "24",
+          "name": "execution_job_status",
+          "width": 174,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "25",
+          "name": "execution_job_user",
+          "width": 154,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "26",
+          "name": "data_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "27",
+          "name": "data_path",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "28",
+          "name": "workbook_uuid",
+          "width": 153,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "29",
+          "name": "workbook_path",
+          "width": 143,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "30",
+          "name": "workbook_sheet_name",
+          "width": 169,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "31",
+          "name": "workbook_sheet_column_name",
+          "width": 217,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "32",
+          "name": "workbook_sheet_column_index",
+          "width": 219,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "33",
+          "name": "datasource_uuid",
+          "width": 116,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "34",
+          "name": "datasource_path",
+          "width": 118,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "35",
+          "name": "workbook_join_sheets",
+          "width": 165,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "36",
+          "name": "application_uuid",
+          "width": 119,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "37",
+          "name": "application_path",
+          "width": 115,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "38",
+          "name": "old_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "39",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "40",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "41",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 42
+    },
+    {
+      "name": "user_action_rpt",
+      "sheetId": "a73ddfe6-1d6c-46b2-82b7-f1a45d13e502",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#user_action_prep!keys;#user_action_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "Volume",
+      "sheetId": "087e597f-77a1-4950-ba76-9e1604206d04",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "Volume",
+        "sheetId": "35b83ba9-4b91-45db-9861-f6d6eaf89f4b",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_50_Volume.wbk",
+          "uuid": "2c3e133c-9b80-4ba3-bf8c-2f397af31553"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Volume_prep",
+      "sheetId": "d4d7b3cd-9337-4032-bec4-b640d0e1ff3b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "execution_date",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dT(#Volume!execution_date)"
+        },
+        {
+          "columnName": "execution_id",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dT(#Volume!execution_id)"
+        },
+        {
+          "columnName": "execution_configuration_uuid",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Volume!execution_configuration_uuid"
+        },
+        {
+          "columnName": "execution_configuration_job_type",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Volume!execution_configuration_job_type"
+        },
+        {
+          "columnName": "total_sample_size",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dT(#Volume!total_sample_size)"
+        },
+        {
+          "columnName": "source_input_size",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Volume!source_input_size"
+        },
+        {
+          "columnName": "dropped_records",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003dT(#Volume!dropped_records)"
+        },
+        {
+          "columnName": "dropped_splits",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003dT(#Volume!dropped_splits)"
+        },
+        {
+          "columnName": "byte_throughput",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Volume!byte_throughput"
+        },
+        {
+          "columnName": "record_throughput",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Volume!record_throughput"
+        },
+        {
+          "columnName": "records_proccesed",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003dT(#Volume!records_proccesed)"
+        },
+        {
+          "columnName": "data_volume_imported",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003dT(#Volume!data_volume_imported)"
+        },
+        {
+          "columnName": "import_size_imported",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003dT(#Volume!import_size_imported)"
+        },
+        {
+          "columnName": "produced_records",
+          "columnId": "13",
+          "columnIndex": 13,
+          "formulaString": "\u003dT(#Volume!produced_records)"
+        },
+        {
+          "columnName": "produced_size",
+          "columnId": "14",
+          "columnIndex": 14,
+          "formulaString": "\u003dT(#Volume!produced_size)"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "15",
+          "columnIndex": 15,
+          "formulaString": "\u003d\"Volume\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "16",
+          "columnIndex": 16,
+          "formulaString": "\u003dTOJSON(LIST(\"execution_date\";\"execution_id\";\"execution_configuration_uuid\";\"execution_configuration_job_type\";\"total_sample_size\";\"source_input_size\";\"dropped_records\";\"dropped_splits\";\"byte_throughput\";\"record_throughput\";\"records_proccesed\";\"data_volume_imported\";\"import_size_imported\";\"produced_records\";\"produced_size\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "17",
+          "columnIndex": 17,
+          "formulaString": "\u003dTOJSON(LIST(#execution_date;#execution_id;#execution_configuration_uuid;#execution_configuration_job_type;#total_sample_size;#source_input_size;#dropped_records;#dropped_splits;#byte_throughput;#record_throughput;#records_proccesed;#data_volume_imported;#import_size_imported;#produced_records;#produced_size;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "execution_date",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "execution_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "execution_configuration_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "execution_configuration_job_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "total_sample_size",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "source_input_size",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "dropped_records",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "dropped_splits",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "byte_throughput",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "record_throughput",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "records_proccesed",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "data_volume_imported",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "import_size_imported",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "13",
+          "name": "produced_records",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "14",
+          "name": "produced_size",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "17",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 18
+    },
+    {
+      "name": "Volume_rpt",
+      "sheetId": "51152605-c859-4cc0-a876-b3acae94d606",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#Volume_prep!keys;#Volume_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "combined_json",
+      "sheetId": "24e078d5-8d19-4a67-a2ae-d11e110cdb3b",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "unionSources": [
+          "ArtifactNames_rpt",
+          "HTTP_Errors_rpt",
+          "Hadoop_Metrics_rpt",
+          "Metrics_Jamon_rpt",
+          "Metrics_rpt",
+          "Volume_rpt",
+          "user_action_rpt"
+        ]
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "logs_encoded_output",
+      "sheetId": "96cadb14-d668-4073-be8a-84f05ffe478a",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dENC_BASE64(#combined_json!json)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

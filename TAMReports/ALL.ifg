@@ -1,0 +1,2389 @@
+[{
+  "uuid": "76a8df8d-ecfa-43fa-bc9b-210c8786e509",
+  "path": "/Applications/Work in Progress/Google Analytics/Google_Analytics.ifg",
+  "name": "Google_Analytics",
+  "id": 1
+},{
+  "uuid": "eaede5c7-3a2f-49ee-9161-87a5b2bfc82f",
+  "path": "/Applications/Work in Progress/SFDC/SFDC Infographic.ifg",
+  "name": "SFDC Infographic",
+  "id": 5
+},{
+  "uuid": "b9da0c04-10ae-48fa-8c04-5c6a241a2b1b",
+  "path": "/Applications/Work in Progress/Downloads/Datameer_Download_Stats.ifg",
+  "name": "Datameer_Download_Stats",
+  "id": 6
+},{
+  "uuid": "53b78fee-f921-44d8-a8c4-d6afcfcb4f33",
+  "path": "/Applications/Work in Progress/Facebook/Facebook Infographic.ifg",
+  "name": "Facebook Infographic",
+  "id": 9
+},{
+  "uuid": "a5161318-1eb2-4ee9-928c-335d660580ea",
+  "path": "/Applications/Work in Progress/Downloads/Download_Analytics.ifg",
+  "name": "Download_Analytics",
+  "id": 12
+},{
+  "uuid": "21162610-381c-4650-8a4b-576fc4912d7d",
+  "path": "/Infographic Templates/working.ifg",
+  "name": "working",
+  "id": 13
+},{
+  "uuid": "3b3622b4-1062-4689-9c7b-4daba8ba4e66",
+  "path": "/Applications/Work in Progress/Email Top Contact Analytics/Inbox Summary.ifg",
+  "name": "Inbox Summary",
+  "id": 15
+},{
+  "uuid": "b1d295dd-19bf-45b8-89d2-4ff1bf30ec44",
+  "path": "/Applications/Final/Zendesk Tickets/Zendesk_Tickets.ifg",
+  "name": "Zendesk_Tickets",
+  "id": 17
+},{
+  "uuid": "cd95db48-cba3-456e-97ac-832b8336a18f",
+  "path": "/Applications/Work in Progress/Zendesk/Zendesk_Test.ifg",
+  "name": "Zendesk_Test",
+  "id": 21
+},{
+  "uuid": "50d9c7e8-0ff1-4bb8-a271-cb54207be6b3",
+  "path": "/Applications/Work in Progress/Email Top Contact Analytics/Individual Summary.ifg",
+  "name": "Individual Summary",
+  "id": 26
+},{
+  "uuid": "8170e1f4-1ec9-41d0-8b5b-eaa9f8454615",
+  "path": "/Applications/Backlog/FranksTopics/TopicTagCloud.ifg",
+  "name": "TopicTagCloud",
+  "id": 27
+},{
+  "uuid": "92123bf0-839c-410a-a0fb-ef98bdf018b6",
+  "path": "/Applications/Work in Progress/Google Analytics/TempUploads/GA.ifg",
+  "name": "GA",
+  "id": 32
+},{
+  "uuid": "ea9c1c2c-c3b8-45a3-9fa3-d6e650a17025",
+  "path": "/Applications/Final/Email Exchange/email network analysis.ifg",
+  "name": "email network analysis",
+  "id": 36
+},{
+  "uuid": "31ddd715-ce80-4a4c-b190-306ff0b0e9d8",
+  "path": "/Applications/Final/Email Delivery Analysis/Email Delivery Analysis.ifg",
+  "description": "",
+  "name": "Email Delivery Analysis",
+  "id": 37
+},{
+  "uuid": "70eeb986-b95a-4c5c-8d65-7038a5c272b4",
+  "path": "/Applications/Backlog/Vimeo/Vimeo_Views.ifg",
+  "name": "Vimeo_Views",
+  "id": 40
+},{
+  "uuid": "08412002-cee5-4c37-ac3c-c779bc2d5c71",
+  "path": "/Applications/Work in Progress/Google Analytics/WebsiteAnalysis/Demographics_v1.ifg",
+  "name": "Demographics_v1",
+  "id": 45
+},{
+  "uuid": "a1008e7d-8f70-441f-acbb-4e4811a5292f",
+  "path": "/Applications/Work in Progress/Google Analytics/TempUploads/Test_ifg.ifg",
+  "name": "Test_ifg",
+  "id": 46
+},{
+  "uuid": "cfeb73ff-be33-45bf-a033-68e64ab6b024",
+  "path": "/Applications/Work in Progress/Google Analytics/WebsiteAnalysis/Site_Traffic_v1.ifg",
+  "name": "Site_Traffic_v1",
+  "id": 47
+},{
+  "uuid": "21b003bb-2a65-4566-9d5c-9352fe266528",
+  "path": "/Applications/Work in Progress/Google Analytics/WebsiteAnalysis/Referrals_v1.ifg",
+  "name": "Referrals_v1",
+  "id": 48
+},{
+  "uuid": "4ba26a6c-7f79-40bb-be12-bea0b0cade7c",
+  "path": "/Applications/Work in Progress/Zendesk/ZendeskUser_Infographic.ifg",
+  "name": "ZendeskUser_Infographic",
+  "id": 49
+},{
+  "uuid": "f16414f0-d472-44bb-8cfe-223d124c3ec9",
+  "path": "/Applications/Work in Progress/Google Analytics/WebsiteAnalysis/Demographics_v2.ifg",
+  "name": "Demographics_v2",
+  "id": 53
+},{
+  "uuid": "afe8a198-949e-46db-8831-eb41d9afe0bd",
+  "path": "/Applications/Work in Progress/Facebook/Friends.ifg",
+  "name": "Friends",
+  "id": 59
+},{
+  "uuid": "45a49de1-1a1c-404f-b9d1-6cc7b154a1b0",
+  "path": "/Applications/Work in Progress/Facebook/Network/TopTenFriends.ifg",
+  "name": "TopTenFriends",
+  "id": 61
+},{
+  "uuid": "43adf9b3-228d-49dd-bfc5-77f3e45bc9c8",
+  "path": "/Applications/Work in Progress/SFDC Sales Pipeline/SFDC Sales Pipeline.ifg",
+  "name": "SFDC Sales Pipeline",
+  "id": 67
+},{
+  "uuid": "a057277b-0a45-426b-a923-b206e3e04768",
+  "path": "/Applications/Work in Progress/Facebook/Activity/Activity.ifg",
+  "name": "Activity",
+  "id": 69
+},{
+  "uuid": "8a14a519-769e-4219-bad6-16d72d40280e",
+  "path": "/Applications/Work in Progress/Downloads/IP_To_Geo.ifg",
+  "name": "IP_To_Geo",
+  "id": 70
+},{
+  "uuid": "84323eae-3382-4613-831b-d24105f59290",
+  "path": "/Applications/Work in Progress/Google Analytics/WebsiteAnalysis/Referrals_v2.ifg",
+  "name": "Referrals_v2",
+  "id": 75
+},{
+  "uuid": "6308a578-d4d1-4fa7-b66a-8ca33e6a2eca",
+  "path": "/Applications/Work in Progress/Google Analytics/WebsiteAnalysis/Site_Traffic_v2.ifg",
+  "name": "Site_Traffic_v2",
+  "id": 76
+},{
+  "uuid": "7ca87aa6-2aae-483b-ad9e-b822e418b8b4",
+  "path": "/Applications/Final/Twitter Brand Sentiment/Twitter Brand Sentiment.ifg",
+  "name": "Twitter Brand Sentiment",
+  "id": 78
+},{
+  "uuid": "822080fa-183c-4a7f-ae45-8f2300b27986",
+  "path": "/Applications/Final/Facebook Social Stats/Facebook Social Statistics.ifg",
+  "name": "Facebook Social Statistics",
+  "id": 81
+},{
+  "uuid": "99664ff9-2774-4543-9b60-f24d1eb2deca",
+  "path": "/Applications/Final/Facebook Network/Social Network Graph.ifg",
+  "name": "Social Network Graph",
+  "id": 83
+},{
+  "uuid": "4625bccd-134b-47a4-a3ea-95c9adb21ac5",
+  "path": "/Applications/Final/Website Traffic/Website Traffic Analysis.ifg",
+  "description": "Find out how people navigate your site. What sections for your site are the most popular. What are your traffic trends.",
+  "name": "Website Traffic Analysis",
+  "id": 95
+},{
+  "uuid": "13515850-28d1-40bd-899c-c609ece01be9",
+  "path": "/Applications/Final/Website Visitors/Website Demographic Analysis.ifg",
+  "description": "How are people seeing your site? Find out what browser versions, platforms, and devices are popular with your visitors.",
+  "name": "Website Demographic Analysis",
+  "id": 96
+},{
+  "uuid": "324e48e8-c99a-442b-b340-e5835656b391",
+  "path": "/Applications/Final/Website Referrals/Website Referral Analysis.ifg",
+  "description": "Traffic arrives at your site through many different channels. Have a look at what sites are referring traffic to you and what keywords are most effective for driving your traffic.",
+  "name": "Website Referral Analysis",
+  "id": 97
+},{
+  "uuid": "ec75fdc7-3318-49f9-b2db-b0123e4da072",
+  "path": "/Datameer/SG/ADemo/Infographic.ifg",
+  "name": "Infographic",
+  "id": 112
+},{
+  "uuid": "310d9149-c9a8-4132-9332-a1d57e45d2e9",
+  "path": "/Applications/Final/Tutorial Web Server Analytics/Web Server Operations Overview.ifg",
+  "description": "An infographic demonstrating log file analytics for systems management, error monitoring.",
+  "name": "Web Server Operations Overview",
+  "id": 119
+},{
+  "uuid": "a990cc36-6ce7-42cb-98bb-57c77d15b97a",
+  "path": "/Datameer/Tim/LinkedIn Tim/Linkedin Professional Network Analysis.ifg",
+  "name": "Linkedin Professional Network Analysis",
+  "id": 126
+},{
+  "uuid": "477c65b9-63b3-42d4-a557-f79ac1c6e0e1",
+  "path": "/Datameer/Tim/LinkedIn Tim/Resources/Statistics.ifg",
+  "name": "Statistics",
+  "id": 127
+},{
+  "uuid": "99a31bb6-24eb-47c1-ada2-8f6034c33c66",
+  "path": "/Applications/Final/Email Communication/Email Language Happiness.ifg",
+  "name": "Email Language Happiness",
+  "id": 135
+},{
+  "uuid": "881971e7-1a39-49ca-abd7-1be88ff289d9",
+  "path": "/Applications/Final/Google Adsense/Google Adsense.ifg",
+  "name": "Google Adsense",
+  "id": 156
+},{
+  "uuid": "d2a942bc-6774-49a1-a837-e9816e14358e",
+  "path": "/Datameer/mrm/DAP11896.ifg",
+  "name": "DAP11896",
+  "id": 159
+},{
+  "uuid": "4670d12a-9795-4e78-bcd8-c1690ee7dd0a",
+  "path": "/Datameer/mrm/Copy_of_DAP11896.ifg",
+  "name": "Copy_of_DAP11896",
+  "id": 162
+},{
+  "uuid": "b5522498-3f2a-4e28-8668-fe1f07f93af0",
+  "path": "/Datameer/mrm/Copy_of_Facebook Social Statistics.ifg",
+  "name": "Copy_of_Facebook Social Statistics",
+  "id": 163
+},{
+  "uuid": "521be5d8-72df-40da-96fd-18fdada6fabb",
+  "path": "/Applications/Work in Progress/Email Exchange Analytics 1/email network analysis.ifg",
+  "name": "email network analysis",
+  "id": 164
+},{
+  "uuid": "ac7f982e-8dd1-40c2-b9f3-e014e29e4791",
+  "path": "/Applications/Final/GitHub Commits/GitHub_Commits.ifg",
+  "name": "GitHub_Commits",
+  "id": 169
+},{
+  "uuid": "56e87fea-f73f-4040-8c97-429006c9996b",
+  "path": "/Applications/Work in Progress/Twitter Election Sentiment Oct16 Oct18/HappinessRatioObamaRomney16.ifg",
+  "name": "HappinessRatioObamaRomney16",
+  "id": 185
+},{
+  "uuid": "e84074f5-2398-4af9-a6b9-8fa04e2140c8",
+  "path": "/Applications/Work in Progress/Twitter Election Sentiment Oct16 Oct18/HappinessRatioObamaRomney18.ifg",
+  "name": "HappinessRatioObamaRomney18",
+  "id": 186
+},{
+  "uuid": "0ebac6a5-efc4-45fb-9651-592f9c5e037f",
+  "path": "/Applications/Work in Progress/Jira GitHub Zendesk/Git_Jira.ifg",
+  "description": "Git , Jira and Zendesk combined",
+  "name": "Git_Jira",
+  "id": 187
+},{
+  "uuid": "34be5e8d-6e1d-4d58-aacc-db97ae4af492",
+  "path": "/Applications/Final/Zendesk Agent Performance/Zendesk_Agent_Performance.ifg",
+  "name": "Zendesk_Agent_Performance",
+  "id": 245
+},{
+  "uuid": "1690a490-b6fc-4b19-9e62-06cfb747af97",
+  "path": "/Applications/Work in Progress/Solution/Basic Infographic.ifg",
+  "description": "A simple infographic that displays basic web traffic statistics, measuring clicks and traffic per visitor.  This infographic is powered by the \u0027Basic Workbook\u0027 workbook.",
+  "name": "Basic Infographic",
+  "id": 258
+},{
+  "uuid": "947c5459-7ce1-4eee-86e2-0cc6aeab910a",
+  "path": "/Applications/Work in Progress/Twitter Election Sentiment Oct16 Oct18/Twitter Brand Sentiment 1/Twitter Brand Sentiment.ifg",
+  "name": "Twitter Brand Sentiment",
+  "id": 263
+},{
+  "uuid": "ffdd82ee-3e70-4602-b234-31b9409ac91c",
+  "path": "/Applications/Work in Progress/Twitter Election Sentiment Oct16 Oct18/Twitter Brand Sentiment 1/Resources/Happiness.ifg",
+  "name": "Happiness",
+  "id": 264
+},{
+  "uuid": "41056f65-0f45-4529-b715-a9c31fc30a18",
+  "path": "/Applications/Work in Progress/Power /PowerRestore.ifg",
+  "name": "PowerRestore",
+  "id": 269
+},{
+  "uuid": "a47eba1b-2c83-45d1-b1dd-859007136f8b",
+  "path": "/Applications/Work in Progress/Power Back/PowerBack.ifg",
+  "name": "PowerBack",
+  "id": 270
+},{
+  "uuid": "c55541b5-2963-4d57-b103-2afd83643183",
+  "path": "/Applications/Work in Progress/Jira GitHub Zendesk/Git_Jira_orig.ifg",
+  "description": "Git , Jira and Zendesk combined",
+  "name": "Git_Jira_orig",
+  "id": 288
+},{
+  "uuid": "94e48678-9c09-455a-ad8f-4d689572ebf1",
+  "path": "/Applications/Final/LinkedIn Pro Network/Linkedin Pro Network.ifg",
+  "name": "Linkedin Pro Network",
+  "id": 302
+},{
+  "uuid": "e1456c48-8663-4830-889a-e55ee744b171",
+  "path": "/Applications/Final/LinkedIn Pro Stats/LinkedIn Stats.ifg",
+  "name": "LinkedIn Stats",
+  "id": 313
+},{
+  "uuid": "24739676-6875-4a65-a9dd-8e9796def8ad",
+  "path": "/Applications/Final/Zendesk Forum Analytics/ZendeskForums.ifg",
+  "description": "Zendesk Forums Analytics",
+  "name": "ZendeskForums",
+  "id": 320
+},{
+  "uuid": "dcae0f03-f082-4b68-ac12-0d5003d470c6",
+  "path": "/Infographic Templates/Color_Kuler1.ifg",
+  "name": "Color_Kuler1",
+  "id": 327
+},{
+  "uuid": "938d4613-47ca-4764-958b-31746b3e1b13",
+  "path": "/Infographic Templates/Color_Kuler1/Color_Kuler2.ifg",
+  "name": "Color_Kuler2",
+  "id": 328
+},{
+  "uuid": "ba03bb4c-d53f-46f8-8233-eaa329f4d9d6",
+  "path": "/Infographic Templates/Color_Kuler3.ifg",
+  "name": "Color_Kuler3",
+  "id": 329
+},{
+  "uuid": "79e3b7d9-89e6-4b22-8ed9-19aabc4ddc0e",
+  "path": "/Applications/Work in Progress/Twitter Hadoop Sentiment_/Twitter Hadoop Sentiment.ifg",
+  "name": "Twitter Hadoop Sentiment",
+  "id": 342
+},{
+  "uuid": "91087211-dc6b-4ff9-a008-df569dc8843f",
+  "path": "/Applications/Work in Progress/Twitter Viral 1/TwitterViral.ifg",
+  "name": "TwitterViral",
+  "id": 351
+},{
+  "uuid": "605bacb5-c406-4749-aa19-1e1b4e0bdd4b",
+  "path": "/Applications/Final/World Economic Factors/World Economic Factors.ifg",
+  "name": "World Economic Factors",
+  "id": 352
+},{
+  "uuid": "c3936b33-5b02-412c-9368-a893e9b60197",
+  "path": "/Applications/Final/Healthy Eating/Healthy Eating.ifg",
+  "name": "Healthy Eating",
+  "id": 354
+},{
+  "uuid": "53e709b6-9ca2-4c63-ad8b-9f054e2f2af5",
+  "path": "/Applications/Work in Progress/Twitter History/Twitter History.ifg",
+  "name": "Twitter History",
+  "id": 365
+},{
+  "uuid": "e2ea2de2-6fb9-4d03-8600-4ccdbf27f767",
+  "path": "/Applications/Final/Beer Consumption/US Beer Consumption.ifg",
+  "name": "US Beer Consumption",
+  "id": 366
+},{
+  "uuid": "7a1c5e66-067a-439d-ac9d-e5dd2cb91405",
+  "path": "/Applications/Work in Progress/Roman/InfographicTest.ifg",
+  "name": "InfographicTest",
+  "id": 368
+},{
+  "uuid": "c3b4d220-4000-41ca-8b3e-4779033513b3",
+  "path": "/Applications/Final/Global Terror Footprint/Global Terror Footprint.ifg",
+  "name": "Global Terror Footprint",
+  "id": 370
+},{
+  "uuid": "be41f939-626f-47c5-9e6f-aff255ad5722",
+  "path": "/Applications/Backlog/Online Offers Perf Monitor/Online Offers Performance Monitor.ifg",
+  "name": "Online Offers Performance Monitor",
+  "id": 371
+},{
+  "uuid": "bab3c5d3-f30b-4fe1-b52b-109ebe730fb9",
+  "path": "/Applications/Backlog/GA Campaign Performance/CampaignStatsVisualization.ifg",
+  "name": "CampaignStatsVisualization",
+  "id": 375
+},{
+  "uuid": "2e13740e-2d00-4e0b-afc4-b72a179ceeea",
+  "path": "/Applications/Work in Progress/Twitter Hadoop Sentiment/Twitter Hadoop Sentiment.ifg",
+  "name": "Twitter Hadoop Sentiment",
+  "id": 380
+},{
+  "uuid": "51947649-7370-4e5f-ba0e-92a57674652b",
+  "path": "/Applications/Work in Progress/Log File Analysis/Apache Log File Analysis.ifg",
+  "name": "Apache Log File Analysis",
+  "id": 382
+},{
+  "uuid": "ef7908ee-8c0e-4a00-a190-9dc4ea8cd3b1",
+  "path": "/Applications/QA/Social Circles/Social Circles.ifg",
+  "name": "Social Circles",
+  "id": 383
+},{
+  "uuid": "9d9e0a54-6306-4ba6-983a-0e8513c302f4",
+  "path": "/Applications/Work in Progress/Twitter Virality 1/Twitter Virality.ifg",
+  "description": "",
+  "name": "Twitter Virality",
+  "id": 385
+},{
+  "uuid": "5a056b7e-c423-43d7-bf39-6da981ded29e",
+  "path": "/Applications/Final/SalesTrajectory 2/MonthlyTrajectory.ifg",
+  "name": "MonthlyTrajectory",
+  "id": 409
+},{
+  "uuid": "fa0a0589-8091-46f0-bed0-4a3434f61171",
+  "path": "/Applications/Final/Twitter Brand Sentiment/Twitter Brand Sentiment Iteration Georg.ifg",
+  "name": "Twitter Brand Sentiment Iteration Georg",
+  "id": 410
+},{
+  "uuid": "8549a9ae-3615-4094-8c21-db19ecfa82e8",
+  "path": "/Applications/Final/Google Adsense/Google Adsense Iteration Georg.ifg",
+  "name": "Google Adsense Iteration Georg",
+  "id": 411
+},{
+  "uuid": "51accc3e-7a0c-4fcf-b33d-71e39e7c0180",
+  "path": "/Applications/Final/Flight Delays/Flight Delays.ifg",
+  "name": "Flight Delays",
+  "id": 412
+},{
+  "uuid": "490cba57-9812-409c-a454-5a92730821f1",
+  "path": "/Applications/Final/Tutorial Click Path/Web User Behavior.ifg",
+  "description": "An infographic that visualizes web visitor session statistics and click paths.",
+  "name": "Web User Behavior",
+  "id": 416
+},{
+  "uuid": "45823ddd-b894-4aab-8c76-19ef03124221",
+  "path": "/Applications/Final/Tutorial Click Path/Web User Behavior Georg Iteration.ifg",
+  "description": "An infographic that visualizes web visitor session statistics and click paths.",
+  "name": "Web User Behavior Georg Iteration",
+  "id": 417
+},{
+  "uuid": "085d182c-a45e-4706-b8f2-e0372932ec87",
+  "path": "/Datameer/hgabriel/Twitter Brand Sentiment/Twitter Brand Sentiment.ifg",
+  "name": "Twitter Brand Sentiment",
+  "id": 419
+},{
+  "uuid": "31dd986b-0e2d-435a-bf12-bdf09e3e8698",
+  "path": "/Datameer/hgabriel/Twitter Viral/Twitter Viral.ifg",
+  "description": "",
+  "name": "Twitter Viral",
+  "id": 430
+},{
+  "uuid": "eb30a4fe-0c90-425c-9040-4c91f1792ad3",
+  "path": "/Datameer/hgabriel/Twitter Archive/Twitter Archive.ifg",
+  "name": "Twitter Archive",
+  "id": 435
+},{
+  "uuid": "ff961e44-6b94-402e-8b31-f00060f3a1fd",
+  "path": "/Applications/Fujitsu Brand Sentiment/Twitter Brand Sentiment.ifg",
+  "name": "Twitter Brand Sentiment",
+  "id": 440
+},{
+  "uuid": "b9df2ac3-f1e9-4f91-8cde-d20035a2e2b7",
+  "path": "/Datameer/hgabriel/Twitter Brand Sentiment bck/Twitter Brand Sentiment.ifg",
+  "name": "Twitter Brand Sentiment",
+  "id": 451
+},{
+  "uuid": "7a26ac8d-35fc-43da-80e9-1caf2d35fd8f",
+  "path": "/Applications/Work in Progress/TasteMakerX_Sample.ifg",
+  "description": "An infographic that visualizes web visitor session statistics and click paths.",
+  "name": "TasteMakerX_Sample",
+  "id": 453
+},{
+  "uuid": "7a46a421-52f2-4aa3-9934-24b54a59e53f",
+  "path": "/Users/wbenica/WB/myDatameer/Apps_myDatameer/AppDetails.ifg",
+  "description": "App Market Statistics",
+  "name": "AppDetails",
+  "id": 459
+},{
+  "uuid": "832db9ca-b581-4616-a8c8-2fc91b82fdb1",
+  "path": "/Users/wbenica/WB/myDatameer/Licenses_myDatameer/LicenseVersions.ifg",
+  "name": "LicenseVersions",
+  "id": 462
+},{
+  "uuid": "dba0a455-1b4c-4928-ab29-ef1c86fb3238",
+  "path": "/Users/jweber/Applications/Email Delivery Analysis/Email Delivery Analysis.ifg",
+  "description": "",
+  "name": "Email Delivery Analysis",
+  "id": 470
+},{
+  "uuid": "c88fc8a1-2015-4d4e-83f7-ef8535ef939c",
+  "path": "/Users/sbuechner/Applications/EC2 Monitor/InstanceMonitor.ifg",
+  "description": "Wallboard like Infographic about currently running EC2 instances!",
+  "name": "InstanceMonitor",
+  "id": 474
+},{
+  "uuid": "ac778201-496d-436e-834f-0bb7431be0ad",
+  "path": "/Users/jz/Applications/Tutorial Click Path/Web User Behavior.ifg",
+  "description": "An infographic that visualizes web visitor session statistics and click paths.",
+  "name": "Web User Behavior",
+  "id": 485
+},{
+  "uuid": "a75a7b45-4903-4ddc-8418-8a580f8bf66c",
+  "path": "/Pending Apps/Customer Funnel Optimization Demo/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 487
+},{
+  "uuid": "d1292e3c-7558-4134-b786-ab96650f457d",
+  "path": "/Pending Apps/Amazon EC2 Monitor/InstanceMonitor.ifg",
+  "description": "Wallboard like Infographic about currently running EC2 instances!",
+  "name": "InstanceMonitor",
+  "id": 490
+},{
+  "uuid": "2150410e-cffe-4cdc-872f-52c876597ce6",
+  "path": "/Pending Apps/Last fm friends/picked recommendations.ifg",
+  "name": "picked recommendations",
+  "id": 491
+},{
+  "uuid": "391dc95e-2fa6-4043-8665-b7d8f75f9512",
+  "path": "/Pending Apps/Last fm neighbours/picked recommendations.ifg",
+  "name": "picked recommendations",
+  "id": 492
+},{
+  "uuid": "2e8aefe8-779d-49a0-a771-183bc6692bbc",
+  "path": "/Users/erosas/Applications/Zendesk Tickets/Zendesk_Tickets.ifg",
+  "name": "Zendesk_Tickets",
+  "id": 494
+},{
+  "uuid": "14b67d85-bc27-4e9f-9e30-32b638c57c99",
+  "path": "/Users/spuccinelli/_KEEP/Big Data and Hadoop Tech Press Coverage/Jul2012-Jul2013/Big Data and Hadoop Coverage Jul12 thru Jul13.ifg",
+  "name": "Big Data and Hadoop Coverage Jul12 thru Jul13",
+  "id": 498
+},{
+  "uuid": "2841f203-31b0-47ad-b667-a28e4caa2ab5",
+  "path": "/Datameer Metrics/Ticket Scoring/Most important tickets.ifg",
+  "name": "Most important tickets",
+  "id": 499
+},{
+  "uuid": "785372c4-516e-459b-b7cc-6e5e4eb7e53b",
+  "path": "/Users/spuccinelli/_KEEP/Big Data and Hadoop Tech Press Coverage/2012 v 2013/2013/Big Data and Hadoop Coverage 2013.ifg",
+  "name": "Big Data and Hadoop Coverage 2013",
+  "id": 502
+},{
+  "uuid": "9dc6f329-4cf5-4296-b84e-6723146b9757",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights_old/crunchbase insights.ifg",
+  "name": "crunchbase insights",
+  "id": 509
+},{
+  "uuid": "fe1d94b0-2867-41ed-b57d-da735bfd67a4",
+  "path": "/Users/spuccinelli/_KEEP/Big Data and Hadoop Tech Press Coverage/2012 v 2013/2012/Big Data and Hadoop Coverage in 2012.ifg",
+  "name": "Big Data and Hadoop Coverage in 2012",
+  "id": 510
+},{
+  "uuid": "739ba4c0-fb9f-4952-aaf0-b6bb1a794fe7",
+  "path": "/Applications/Work in Progress/Analytics/Linear Regression/LinearRegression.ifg",
+  "name": "LinearRegression",
+  "id": 512
+},{
+  "uuid": "2b0da5b8-c2ce-4c05-9dca-495530bc05f5",
+  "path": "/Applications/Work in Progress/Analytics/ANOVA/ANOVA.ifg",
+  "name": "ANOVA",
+  "id": 513
+},{
+  "uuid": "cb21a878-349e-4362-bd90-022c538e92f1",
+  "path": "/Applications/Work in Progress/Analytics/R2 Correlation/correlation.ifg",
+  "name": "correlation",
+  "id": 514
+},{
+  "uuid": "9ac8bd37-5a70-4e4b-b241-0713bf8e7b22",
+  "path": "/Applications/Work in Progress/Analytics/Student\u0027s t-test/tTest.ifg",
+  "name": "tTest",
+  "id": 515
+},{
+  "uuid": "22a93c09-a43b-465a-8603-fcb8d0f827d9",
+  "path": "/Users/tscholz/Applications/Twitter Trending Topics/Twitter Trending Topics.ifg",
+  "name": "Twitter Trending Topics",
+  "id": 516
+},{
+  "uuid": "ed4a869e-e6ee-4424-b018-57433ba121f4",
+  "path": "/Users/spuccinelli/_KEEP/Big Data and Hadoop Tech Press Coverage/ITDatabase SearchTerm Analytics/ITDatabase Topic Analytics.ifg",
+  "name": "ITDatabase Topic Analytics",
+  "id": 517
+},{
+  "uuid": "f7a1a06e-e744-4d9f-9fad-ff191220cd3d",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights_V.01/crunchbase insights.ifg",
+  "name": "crunchbase insights",
+  "id": 518
+},{
+  "uuid": "b8d88049-3bc8-4a86-8c53-3c165d0fb0a7",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights V.02/crunchbase insights.ifg",
+  "name": "crunchbase insights",
+  "id": 519
+},{
+  "uuid": "d4b1e02a-d93e-43ce-9aaa-dcb918382640",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights V.03/crunchbase insights.ifg",
+  "name": "crunchbase insights",
+  "id": 520
+},{
+  "uuid": "838ebf3b-6a0f-4836-a1d3-25a9a419ae35",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights V.01.1/crunchbase insights.ifg",
+  "name": "crunchbase insights",
+  "id": 522
+},{
+  "uuid": "ab589d64-a724-44d2-b97a-afc1785a9a09",
+  "path": "/Pending Apps/Acquisition Funnelt/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 524
+},{
+  "uuid": "8098283c-d05d-42d0-92eb-ad304b5e9f7d",
+  "path": "/Users/tscholz/Applications/Zendesk Forum Analytics/ZendeskForums.ifg",
+  "description": "Zendesk Forums Analytics",
+  "name": "ZendeskForums",
+  "id": 535
+},{
+  "uuid": "ba70632f-b773-4856-8415-df91c86564d3",
+  "path": "/Users/tscholz/Applications/SalesTrajectory 2/MonthlyTrajectory.ifg",
+  "name": "MonthlyTrajectory",
+  "id": 536
+},{
+  "uuid": "21bf43bc-12b4-4351-8b68-ee7647e3a34a",
+  "path": "/Users/sbuechner/Applications/ITDatabase SearchTerm Analytics/ITDatabase Topic Analytics.ifg",
+  "name": "ITDatabase Topic Analytics",
+  "id": 537
+},{
+  "uuid": "8aa22b49-3e57-4463-a8f2-afd5c20706be",
+  "path": "/Users/tscholz/Applications/Zendesk Forum Analytics 1/ZendeskForums.ifg",
+  "description": "Zendesk Forums Analytics",
+  "name": "ZendeskForums",
+  "id": 538
+},{
+  "uuid": "ec586402-9609-4ba2-b796-3762464a9f9b",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo_old/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 539
+},{
+  "uuid": "94fbc62c-1af5-487f-aa7b-5f6154de7554",
+  "path": "/Users/kkolman/Applications/Customer Funnel Optimization Demo/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 540
+},{
+  "uuid": "72b5de1f-4975-4b59-8fde-c26384d9d55a",
+  "path": "/Users/spuccinelli/Applications/Facebook Network/Social Network Graph.ifg",
+  "name": "Social Network Graph",
+  "id": 541
+},{
+  "uuid": "9e4f01cb-b155-41e1-ad65-c4aa6dcf8e59",
+  "path": "/Datameer/Copy_of_Infographic.ifg",
+  "name": "Copy_of_Infographic",
+  "id": 547
+},{
+  "uuid": "5cfe9ab7-aa3e-4f4d-986d-c7c446eb519d",
+  "path": "/Users/tscholz/Applications/Crunchbase InsightsV.04/crunchbase insights.ifg",
+  "name": "crunchbase insights",
+  "id": 563
+},{
+  "uuid": "90a19c72-b3b6-42e1-91ba-b111a3b1dae7",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights/crunchbase insights.ifg",
+  "name": "crunchbase insights",
+  "id": 564
+},{
+  "uuid": "9ecc97ef-30aa-43b2-af35-49374f2e2f75",
+  "path": "/Users/spuccinelli/_KEEP/VentureBeat/Visualization.ifg",
+  "name": "Visualization",
+  "id": 567
+},{
+  "uuid": "f999168c-0cf9-4f96-8871-a87c1c25599a",
+  "path": "/Users/tscholz/Applications/Email Delivery Analysis/Email Delivery Analysis.ifg",
+  "description": "",
+  "name": "Email Delivery Analysis",
+  "id": 571
+},{
+  "uuid": "fec6cb2b-51ae-4f30-9b6d-c7d17407792c",
+  "path": "/Users/tscholz/Applications/Email Delivery Analysis 1/Email Delivery Analysis.ifg",
+  "description": "",
+  "name": "Email Delivery Analysis",
+  "id": 572
+},{
+  "uuid": "6ac505d5-2688-450f-b899-828408df9ac0",
+  "path": "/Users/tscholz/Applications/Email Delivery Analysis 2/Email Delivery Analysis.ifg",
+  "description": "",
+  "name": "Email Delivery Analysis",
+  "id": 573
+},{
+  "uuid": "37616676-4f42-49e3-abb5-b3f2431157ba",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo Sebastian1/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 578
+},{
+  "uuid": "c70bce40-d653-4d4d-9031-6572de1b602e",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo Sebastian2/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 581
+},{
+  "uuid": "642f1613-8d53-4029-888e-73bf6f6b7c03",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 587
+},{
+  "uuid": "e0409827-8fb7-4a6f-adac-6d7740edc80b",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo 1/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 588
+},{
+  "uuid": "15581fc1-0b65-4e72-8e0a-6bf8808f7f76",
+  "path": "/Users/amalbet/_KEEP/Zendesk Ticket Monitoring/Ticket Monitoring.ifg",
+  "name": "Ticket Monitoring",
+  "id": 592
+},{
+  "uuid": "c923c3f3-f727-4b49-b028-d1fb80c712e9",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo 2/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 594
+},{
+  "uuid": "d020c971-b67f-4899-b4b8-c2dc4bb97ae1",
+  "path": "/Users/sbuechner/Applications/FixedSystemHealthCheck/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 598
+},{
+  "uuid": "ae2153fe-b01c-4b06-8682-db2308fc9423",
+  "path": "/Users/tscholz/Applications/DSHC 2/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 602
+},{
+  "uuid": "b664f906-4ffd-40a9-a8e7-bd306712580a",
+  "path": "/Users/pstoepel/Untitled Folder/Infographic1.ifg",
+  "name": "Infographic1",
+  "id": 603
+},{
+  "uuid": "7b237c5d-3828-4a2d-a46a-e1eb266b54cd",
+  "path": "/Users/ghofmann/Applications/Hadoop Summit v4/Clustering/ClusterOppsInfographic.ifg",
+  "name": "ClusterOppsInfographic",
+  "id": 608
+},{
+  "uuid": "24c1de2f-2568-45bf-9123-211de7d200e1",
+  "path": "/Users/ghofmann/Applications/Hadoop Summit v4/Column Dependencies/InfographicColDep.ifg",
+  "description": "ColumnDependencies",
+  "name": "InfographicColDep",
+  "id": 609
+},{
+  "uuid": "4b719ee8-541c-4db6-9895-7c3810c6bdbf",
+  "path": "/Users/jigz/Applications/Trial Demo/CDInfographic.ifg",
+  "name": "CDInfographic",
+  "id": 610
+},{
+  "uuid": "5562f514-e3db-4b6a-aa43-87eebb0df666",
+  "path": "/Users/jigz/Applications/Trial Demo/AllDataClusteringInfographic.ifg",
+  "name": "AllDataClusteringInfographic",
+  "id": 611
+},{
+  "uuid": "9aa81db3-3512-466e-a2a1-30d3f0c23bf0",
+  "path": "/Applications/Work in Progress/CreditCardFraud/CreditCardFraud.ifg",
+  "name": "CreditCardFraud",
+  "id": 621
+},{
+  "uuid": "ac741925-f9d9-49b7-b4e5-a6f0ed5b0bb1",
+  "path": "/Users/bwiegelmann/Applications/Smart Analytics Tutorial/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 622
+},{
+  "uuid": "64dfa3bd-0948-4825-a250-8475203f87b9",
+  "path": "/Users/bwiegelmann/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 623
+},{
+  "uuid": "eb105830-8c46-4a95-a2ae-f462b215904c",
+  "path": "/Users/bwiegelmann/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 624
+},{
+  "uuid": "45617f8f-d731-44b4-9138-b7c4cc49ac5e",
+  "path": "/Users/bwiegelmann/Applications/Google Zeitgeist/Google Zeitgeist.ifg",
+  "name": "Google Zeitgeist",
+  "id": 625
+},{
+  "uuid": "f3679be7-568f-460f-987f-4db200e33e4e",
+  "path": "/Users/bwiegelmann/Applications/Website Traffic/Website Traffic Analysis.ifg",
+  "description": "Find out how people navigate your site. What sections for your site are the most popular. What are your traffic trends.",
+  "name": "Website Traffic Analysis",
+  "id": 626
+},{
+  "uuid": "bb4bd8fd-7c06-4293-91e7-a307d0b09c9b",
+  "path": "/Users/bwiegelmann/Applications/Email Delivery Analysis/Email Delivery Analysis.ifg",
+  "description": "",
+  "name": "Email Delivery Analysis",
+  "id": 627
+},{
+  "uuid": "2b96211b-8faa-46af-b311-cea2fe5092d6",
+  "path": "/Users/kkolman/Applications/Twitter Brand Sentiment/Twitter Brand Sentiment.ifg",
+  "name": "Twitter Brand Sentiment",
+  "id": 628
+},{
+  "uuid": "22c2ed39-471e-4e80-9c5e-7421270770c0",
+  "path": "/Users/kkolman/Applications/Twitter Viral/Twitter Viral.ifg",
+  "description": "",
+  "name": "Twitter Viral",
+  "id": 629
+},{
+  "uuid": "26d7c61e-7508-4e17-bd59-b179b7ab965b",
+  "path": "/Applications/Work in Progress/Credit Card Fraud/CreditCardFraud.ifg",
+  "name": "CreditCardFraud",
+  "id": 630
+},{
+  "uuid": "dc88fda6-a9e6-45ba-b546-4ccfdd89fa74",
+  "path": "/Applications/ADG/Hadoop Email Archives LeadGen/Email Content Visualization.ifg",
+  "description": "An infographic that visualizes the text content of emails, displaying correlated words, word use, and utilizing data-driven text for summary statistics.",
+  "name": "Email Content Visualization",
+  "id": 632
+},{
+  "uuid": "f3f7db6e-c928-4f7d-885a-82feac808f3f",
+  "path": "/Users/tscholz/Applications/DSHC 6/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 640
+},{
+  "uuid": "43f523df-6fc2-4699-ad2e-abf03a3bf2bf",
+  "path": "/Users/pjeitschko/Applications/Datameer System Health Check/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 641
+},{
+  "uuid": "cc13ccf7-1734-40b1-9303-bf2f9d852519",
+  "path": "/Users/amalbet/Applications/INTERNAL BT Training October/Salsa/SalsaInfographic.ifg",
+  "name": "SalsaInfographic",
+  "id": 642
+},{
+  "uuid": "ac4cf75e-d01f-4067-819a-9d72ad801d87",
+  "path": "/Users/tscholz/Applications/CreditCardFraudsmall5/CreditCardFraud.ifg",
+  "name": "CreditCardFraud",
+  "id": 647
+},{
+  "uuid": "74b067c0-10d9-49ce-9569-c87135015033",
+  "path": "/Users/sbuechner/Applications/CreditCardFraudsmall6/CreditCardFraud.ifg",
+  "name": "CreditCardFraud",
+  "id": 648
+},{
+  "uuid": "659c049a-eb44-4992-8fe0-e1c50af24ae6",
+  "path": "/Users/sbuechner/Applications/Smart Analytics Tutorial/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 651
+},{
+  "uuid": "44ec9bb0-5633-49e5-b0c1-cd9e544f78ad",
+  "path": "/Users/sbuechner/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 652
+},{
+  "uuid": "8eff603b-0672-4143-a80a-329fa35779c3",
+  "path": "/Users/sbuechner/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 653
+},{
+  "uuid": "6691ad91-3274-408d-a27a-990a0eb89660",
+  "path": "/Users/sbuechner/Applications/Facebook Network/Social Network Graph.ifg",
+  "name": "Social Network Graph",
+  "id": 656
+},{
+  "uuid": "2db9a70c-1abb-42bf-929e-e265228ecaaa",
+  "path": "/Applications/Work in Progress/Analytics/Correlation/Correlation.ifg",
+  "name": "Correlation",
+  "id": 662
+},{
+  "uuid": "a4237d0d-aef1-4039-9688-08a3319e3ef9",
+  "path": "/Users/hgabriel/Applications/Correlation/Correlation.ifg",
+  "name": "Correlation",
+  "id": 663
+},{
+  "uuid": "0a316ebb-1a0b-46bc-8c13-8cc992e423de",
+  "path": "/Users/jigz/Applications/Datameer Scheduling/HC_Scheduling.ifg",
+  "description": "Health Check Scheduling Infographic",
+  "name": "HC_Scheduling",
+  "id": 665
+},{
+  "uuid": "53d5168a-ece2-453e-a555-7254704326be",
+  "path": "/Users/tscholz/Applications/Zendesk Forum Analytics 2/ZendeskForums.ifg",
+  "description": "Zendesk Forums Analytics",
+  "name": "ZendeskForums",
+  "id": 666
+},{
+  "uuid": "c3a7b165-cabd-4da6-9882-a17b417266a1",
+  "path": "/Users/tscholz/Applications/CreditCardFraudsmall7/CreditCardFraud.ifg",
+  "name": "CreditCardFraud",
+  "id": 667
+},{
+  "uuid": "4a957270-d95b-4ee7-b5bf-105a18f5d32c",
+  "path": "/Users/kkolman/Applications/Zendesk Forum Analytics/ZendeskForums.ifg",
+  "description": "Zendesk Forums Analytics",
+  "name": "ZendeskForums",
+  "id": 668
+},{
+  "uuid": "5b865a13-9186-4e72-b343-284dc33b2638",
+  "path": "/Users/tscholz/Applications/Zendesk Forum Analytics 3/ZendeskForums.ifg",
+  "description": "Zendesk Forums Analytics",
+  "name": "ZendeskForums",
+  "id": 669
+},{
+  "uuid": "6156c22f-b361-4af1-aefa-24914ee95123",
+  "path": "/Users/esusanto/Applications/Facebook Network/Social Network Graph.ifg",
+  "name": "Social Network Graph",
+  "id": 671
+},{
+  "uuid": "43faa2fb-3efc-47c1-a199-39263d86f2b6",
+  "path": "/Users/tscholz/Applications/CreditCardFraudsmall7 1/CreditCardFraud.ifg",
+  "name": "CreditCardFraud",
+  "id": 672
+},{
+  "uuid": "8d0ecdd5-397a-4de2-b9f1-b7b3cc157211",
+  "path": "/Users/ghofmann/Applications/Ersatz/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 675
+},{
+  "uuid": "10988cc9-2d82-42fb-b02a-d9371d9e2828",
+  "path": "/Users/akuester/testing/Infographic save test.ifg",
+  "name": "Infographic save test",
+  "id": 676
+},{
+  "uuid": "e3a03b99-6957-4683-ae58-573f5e6ad33d",
+  "path": "/Datameer Metrics/Resolved Customer Issues by Version/Resolved Customer Issues by Version.ifg",
+  "name": "Resolved Customer Issues by Version",
+  "id": 682
+},{
+  "uuid": "a77d0246-d741-4d97-a223-f7532ad08fdd",
+  "path": "/Users/jigz/CustomerTests/InfographicBofA.ifg",
+  "name": "InfographicBofA",
+  "id": 683
+},{
+  "uuid": "9474b1dd-a919-464e-a81a-31f30b4700ed",
+  "path": "/Users/cbishop/Applications/Datameer System Health Check/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 688
+},{
+  "uuid": "28abeda5-27c7-4e12-b547-ee9e5a3f2fff",
+  "path": "/Datameer/Services/Customer User Locations/CustomerByLocation.ifg",
+  "name": "CustomerByLocation",
+  "id": 692
+},{
+  "uuid": "5a791476-f39c-4805-86ec-5c98d1251838",
+  "path": "/Datameer/Services/Customer User Locations/Copy_of_CustomerByLocation.ifg",
+  "name": "Copy_of_CustomerByLocation",
+  "id": 693
+},{
+  "uuid": "9a36e997-3c9b-453d-a923-1fc06a7f486a",
+  "path": "/Users/cbishop/Applications/Tutorial Basic/Basic Infographic.ifg",
+  "description": "A simple infographic that displays basic web traffic statistics, measuring clicks and traffic per visitor.  This infographic is powered by the \u0027Basic Workbook\u0027 workbook.",
+  "name": "Basic Infographic",
+  "id": 694
+},{
+  "uuid": "d27ff71c-7331-41cd-b120-198154bfa858",
+  "path": "/Users/cbishop/Applications/Tutorial Hello World/My Infographic.ifg",
+  "description": "STEP 3 of the \"Hello World\" tutorial.\n\nFor more information, please visit: http://datameer.com/documentation/display/DAS20/Getting+Started",
+  "name": "My Infographic",
+  "id": 695
+},{
+  "uuid": "e6421222-5ac3-43e7-83b3-a30daf5bcba6",
+  "path": "/Users/ghofmann/Applications/Ersatz/HealthCheckStats02.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats02",
+  "id": 697
+},{
+  "uuid": "26cc2d55-3695-4537-add4-40fcfc558f53",
+  "path": "/Users/ghofmann/Applications/Datameer System Health Check 1/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 698
+},{
+  "uuid": "7954d57c-8336-4bcd-94cb-4681e5d01120",
+  "path": "/Users/ghofmann/Applications/Ersatz/Copy_of_Copy_of_HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "Copy_of_Copy_of_HealthCheckStats",
+  "id": 699
+},{
+  "uuid": "abb7818b-313f-43bc-9d6e-77988e7f85ba",
+  "path": "/Users/tscholz/Applications/Marketo Metrics/Marketo.ifg",
+  "name": "Marketo",
+  "id": 701
+},{
+  "uuid": "ff87b870-74c3-4c8d-badb-3a9e83136598",
+  "path": "/Datameer/WillBenica/CustomerRequests23/CustomerByCategory.ifg",
+  "name": "CustomerByCategory",
+  "id": 702
+},{
+  "uuid": "f3d29df7-f7ad-4f32-b141-43f765ff291f",
+  "path": "/Users/tscholz/Applications/Marketo Metrics 1/Marketo.ifg",
+  "name": "Marketo",
+  "id": 703
+},{
+  "uuid": "fad42344-0cbf-40db-ad01-20a2d0e35c9e",
+  "path": "/Users/tscholz/Applications/Marketo Metrics 2/Marketo.ifg",
+  "name": "Marketo",
+  "id": 707
+},{
+  "uuid": "83f66749-0436-4a3e-816e-d9e591db2554",
+  "path": "/Users/tscholz/Applications/Marketo Metrics 3/Marketo.ifg",
+  "name": "Marketo",
+  "id": 708
+},{
+  "uuid": "61737103-163e-4cde-957f-75a4753a4ece",
+  "path": "/Users/tscholz/Applications/Marketo Metrics 4/Marketo.ifg",
+  "name": "Marketo",
+  "id": 709
+},{
+  "uuid": "002e6ca8-5e9a-4d87-91e7-b74fecc9fb7a",
+  "path": "/Users/tscholz/Applications/Marketo Metrics 5/Marketo.ifg",
+  "name": "Marketo",
+  "id": 710
+},{
+  "uuid": "b1417da9-18c6-4ae2-a6a2-7f28bf78e4b3",
+  "path": "/Users/tscholz/Applications/Marketo Metrics 6/Marketo.ifg",
+  "name": "Marketo",
+  "id": 711
+},{
+  "uuid": "d728d73b-bb04-4979-94ab-295c32e6c274",
+  "path": "/Users/criazuelo/Applications/Tutorial Hello World/My Infographic.ifg",
+  "description": "STEP 3 of the \"Hello World\" tutorial.\n\nFor more information, please visit: http://datameer.com/documentation/display/DAS20/Getting+Started",
+  "name": "My Infographic",
+  "id": 719
+},{
+  "uuid": "277596c7-ecbe-413f-9736-08ffd73e82d9",
+  "path": "/Users/criazuelo/Applications/CitiBike/Graphs.ifg",
+  "name": "Graphs",
+  "id": 720
+},{
+  "uuid": "34be780a-8a32-48c0-9ee0-afcab813484b",
+  "path": "/Datameer/Services/Customer Metrics/Customers stats/Customer Stats.ifg",
+  "name": "Customer Stats",
+  "id": 731
+},{
+  "uuid": "8273f54b-d873-4a06-803f-9ecf692c1e07",
+  "path": "/Users/tscholz/Applications/DSHC 3/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 732
+},{
+  "uuid": "aba380fa-f697-44b8-965e-f12e47c2cc59",
+  "path": "/Users/tscholz/Applications/DSHC 7/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 733
+},{
+  "uuid": "855e4ebe-9b82-417d-b20e-fc632021f055",
+  "path": "/Users/tscholz/Applications/Datameer Health Check/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 734
+},{
+  "uuid": "99928f5f-ad47-40bc-b5bf-bf54fbffd8a9",
+  "path": "/Users/jigz/Applications/Smart Analytics Tutorial/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 738
+},{
+  "uuid": "a41d717d-cc8b-4433-9639-fa0f6f5ac6bc",
+  "path": "/Users/jigz/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 739
+},{
+  "uuid": "01b91d12-9937-453a-91a6-201f01456348",
+  "path": "/Users/jigz/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 740
+},{
+  "uuid": "05310d79-23f1-434f-9a08-c91ffaa22f86",
+  "path": "/Users/ghofmann/Applications/Credit Card Fraud/CreditCardFraud.ifg",
+  "name": "CreditCardFraud",
+  "id": 742
+},{
+  "uuid": "5d773f52-2fc2-40db-a4fb-0a2f73e057a9",
+  "path": "/Users/ghofmann/Applications/Earthquakes Last 7 Days/EarthquakeDataInfographic.ifg",
+  "name": "EarthquakeDataInfographic",
+  "id": 743
+},{
+  "uuid": "58708e91-e090-43b5-bf13-9770c54b1d35",
+  "path": "/Datameer Metrics/Online Instance Behavior/resources/__Online Instance Behavior.ifg",
+  "name": "__Online Instance Behavior",
+  "id": 744
+},{
+  "uuid": "c96ff21d-3c74-493e-96c1-a76080bfe159",
+  "path": "/Datameer Metrics/Marketing/Website Traffic/Website Traffic Analysis.ifg",
+  "description": "Find out how people navigate your site. What sections for your site are the most popular. What are your traffic trends.",
+  "name": "Website Traffic Analysis",
+  "id": 745
+},{
+  "uuid": "9a57365c-a333-4d9f-b62b-79fa36853ee7",
+  "path": "/Datameer Metrics/Marketing/Website Referrals/Website Referral Analysis.ifg",
+  "description": "Traffic arrives at your site through many different channels. Have a look at what sites are referring traffic to you and what keywords are most effective for driving your traffic.",
+  "name": "Website Referral Analysis",
+  "id": 746
+},{
+  "uuid": "aa025e9b-fd54-417a-a15c-774552ed353e",
+  "path": "/Datameer Metrics/Marketing/Website Visitors/Website Demographic Analysis.ifg",
+  "description": "How are people seeing your site? Find out what browser versions, platforms, and devices are popular with your visitors.",
+  "name": "Website Demographic Analysis",
+  "id": 747
+},{
+  "uuid": "3095cb1c-7e72-48b3-bf35-bce5d18ca8fa",
+  "path": "/Users/sbuechner/Applications/Website Traffic/Website Traffic Analysis.ifg",
+  "description": "Find out how people navigate your site. What sections for your site are the most popular. What are your traffic trends.",
+  "name": "Website Traffic Analysis",
+  "id": 749
+},{
+  "uuid": "f28903aa-54aa-4620-b5af-3916422a2bd0",
+  "path": "/Users/sbuechner/Applications/Website Referrals/Website Referral Analysis.ifg",
+  "description": "Traffic arrives at your site through many different channels. Have a look at what sites are referring traffic to you and what keywords are most effective for driving your traffic.",
+  "name": "Website Referral Analysis",
+  "id": 750
+},{
+  "uuid": "270af1bd-14ef-425b-b7c9-6ce631c587cf",
+  "path": "/Users/sbuechner/Applications/Website Visitors/Website Demographic Analysis.ifg",
+  "description": "How are people seeing your site? Find out what browser versions, platforms, and devices are popular with your visitors.",
+  "name": "Website Demographic Analysis",
+  "id": 751
+},{
+  "uuid": "935e924c-798d-4e2d-b9fa-3ccec84be512",
+  "path": "/Datameer Metrics/Online Instance Behavior/Online Instance Behavior.ifg",
+  "name": "Online Instance Behavior",
+  "id": 755
+},{
+  "uuid": "46075dd7-fe7f-455f-90df-527b28c548cc",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 762
+},{
+  "uuid": "3162d898-d30c-48e8-858c-0d66930c3e04",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 763
+},{
+  "uuid": "482f74d7-f50e-4f82-be47-76108e0f4f5d",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 764
+},{
+  "uuid": "11bcc920-a6e9-4305-9254-698a66fc02f3",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 1/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 765
+},{
+  "uuid": "6e9846a9-9309-4fe8-bef8-87efb3507960",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 1/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 766
+},{
+  "uuid": "1e292825-cdc5-43af-a705-1f3ce68d34c5",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 1/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 767
+},{
+  "uuid": "7f574e82-ea9c-4057-bdb5-5b49fc837cbf",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 2/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 768
+},{
+  "uuid": "b82bc978-a760-43aa-b429-2b7e7710353a",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 2/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 769
+},{
+  "uuid": "23b2511e-0ede-40b2-8f89-5e3570def3b1",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 2/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 770
+},{
+  "uuid": "9fa6aa12-2fb5-412d-862b-6dd41314ecf9",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 3/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 771
+},{
+  "uuid": "7f43ae9b-07f6-474c-8f34-fd1e0f5342d6",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 3/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 772
+},{
+  "uuid": "88a1ea75-c65c-4cd2-894a-3d7ce95f6d9a",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 3/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 773
+},{
+  "uuid": "3ad79b5f-e049-4c0d-85aa-93cb4ab27c13",
+  "path": "/Users/tscholz/Applications/Zendesk Tickets/Zendesk_Tickets.ifg",
+  "name": "Zendesk_Tickets",
+  "id": 776
+},{
+  "uuid": "4b6bb9cc-a4f0-433f-885f-2c77fba52134",
+  "path": "/Users/jigz/Applications/Datameer Health/Datameer Metrics.ifg",
+  "name": "Datameer Metrics",
+  "id": 780
+},{
+  "uuid": "2293bc0f-84df-4e26-854b-d89e8b58e75c",
+  "path": "/Users/jigz/Applications/Datameer Health/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 781
+},{
+  "uuid": "e10d93a4-aee4-4ec2-8fca-99e4d8e84bd6",
+  "path": "/Users/jigz/Applications/Website Traffic/Website Traffic Analysis.ifg",
+  "description": "Find out how people navigate your site. What sections for your site are the most popular. What are your traffic trends.",
+  "name": "Website Traffic Analysis",
+  "id": 782
+},{
+  "uuid": "89daf9c6-a044-41c2-877c-9bd608df9044",
+  "path": "/Users/tscholz/Applications/Zendesk Tickets 1/Zendesk_Tickets.ifg",
+  "name": "Zendesk_Tickets",
+  "id": 783
+},{
+  "uuid": "62df1875-9917-49f9-b160-72d4e62bff93",
+  "path": "/Users/tscholz/Applications/SalesTrajectory 2 1/MonthlyTrajectory.ifg",
+  "name": "MonthlyTrajectory",
+  "id": 784
+},{
+  "uuid": "f0bedb7a-4dc9-4d5c-9bb2-762d5a5d71d7",
+  "path": "/Users/amalbet/_KEEP/CustomerEnvironments/CurrentAccountsView.ifg",
+  "name": "CurrentAccountsView",
+  "id": 785
+},{
+  "uuid": "030b586d-6ab7-419a-84a4-d349e6d7d40b",
+  "path": "/Users/tscholz/Applications/DSHC 4/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 786
+},{
+  "uuid": "d91da979-25c0-4173-b444-04f8881ffb59",
+  "path": "/Users/mnavid/Applications/Marketo Metrics/Marketo.ifg",
+  "name": "Marketo",
+  "id": 789
+},{
+  "uuid": "176ead1c-7e05-465c-a679-7a4ab6887598",
+  "path": "/Users/mnavid/Applications/Tutorial Hello World/My Infographic.ifg",
+  "description": "STEP 3 of the \"Hello World\" tutorial.\n\nFor more information, please visit: http://datameer.com/documentation/display/DAS20/Getting+Started",
+  "name": "My Infographic",
+  "id": 792
+},{
+  "uuid": "e72d87cb-0fd1-4cb3-af66-c1c22f35e02d",
+  "path": "/Users/mnavid/Applications/Tutorial Basic/Basic Infographic.ifg",
+  "description": "A simple infographic that displays basic web traffic statistics, measuring clicks and traffic per visitor.  This infographic is powered by the \u0027Basic Workbook\u0027 workbook.",
+  "name": "Basic Infographic",
+  "id": 793
+},{
+  "uuid": "584bffbc-13c8-478a-861a-1f53290d7026",
+  "path": "/Users/spuccinelli/InfographicDemo.ifg",
+  "name": "InfographicDemo",
+  "id": 794
+},{
+  "uuid": "a791605b-9443-447c-bdad-76c25c3ebdfa",
+  "path": "/Users/tehrenhard/Applications/use case challenge/I_THE.ifg",
+  "name": "I_THE",
+  "id": 796
+},{
+  "uuid": "38222f7e-4f65-4f5c-83a6-aa504b8ad32b",
+  "path": "/Datameer/Services/Challenge/1 TimeSeries/Solutions/TimeSeries Challenge IFG JTA.ifg",
+  "name": "TimeSeries Challenge IFG JTA",
+  "id": 798
+},{
+  "uuid": "599bdcb9-e70d-4c45-80fb-839aef5fcbe3",
+  "path": "/Datameer/Services/Challenge/1 TimeSeries/Solutions/jstewartNewUsersInfographic.ifg",
+  "name": "jstewartNewUsersInfographic",
+  "id": 799
+},{
+  "uuid": "db52890b-9acd-4085-b474-ed951550b724",
+  "path": "/Users/jigz/Applications/Customer Funnel Optimization Demo/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 801
+},{
+  "uuid": "f34e663c-f3bf-4f06-ba24-be806483374d",
+  "path": "/Users/mnavid/Applications/Sales Opportunity/Sales Opportunity.ifg",
+  "name": "Sales Opportunity",
+  "id": 802
+},{
+  "uuid": "e549c61e-04a0-487d-a116-63a2e89eb101",
+  "path": "/Datameer/Halle Offsite Analysis Viz.ifg",
+  "name": "Halle Offsite Analysis Viz",
+  "id": 804
+},{
+  "uuid": "b8327491-424f-4a8c-9adb-459ad2e47fac",
+  "path": "/Users/msherman/InfographicHalle.ifg",
+  "name": "InfographicHalle",
+  "id": 810
+},{
+  "uuid": "028e5f37-2a1a-44c1-b8ab-f9d0d745091a",
+  "path": "/Datameer/Services/Challenge/1 TimeSeries/Solutions/TimeSeriesInfographic.ifg",
+  "name": "TimeSeriesInfographic",
+  "id": 816
+},{
+  "uuid": "9493256b-7814-4024-b7e9-0812ea335df1",
+  "path": "/Datameer/Services/Challenge/1 TimeSeries/Solutions/ChallengeTimeSeries.ifg",
+  "name": "ChallengeTimeSeries",
+  "id": 817
+},{
+  "uuid": "768c4f67-e0f2-4375-a7cc-297adec1b8f9",
+  "path": "/Datameer Metrics/Marketing/DatameerAnalysis2014/Hadoop Distros customer pipeline.ifg",
+  "name": "Hadoop Distros customer pipeline",
+  "id": 823
+},{
+  "uuid": "a932b8bf-88bb-4138-bded-a9f21368bb2e",
+  "path": "/Datameer Metrics/Marketing/DatameerAnalysis2014/working.ifg",
+  "name": "working",
+  "id": 824
+},{
+  "uuid": "d9b4e2ac-6637-44d7-8b77-436f39a2f75d",
+  "path": "/Users/criazuelo/Applications/Smart Analytics Tutorial/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 825
+},{
+  "uuid": "40010198-296f-46d2-a7f9-9432dfd6d702",
+  "path": "/Users/criazuelo/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 826
+},{
+  "uuid": "ee8b362b-c8f4-4580-92eb-bade59debf21",
+  "path": "/Users/criazuelo/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 827
+},{
+  "uuid": "c7c31e73-2839-47f3-9a75-791b6c0c1ccf",
+  "path": "/Users/bwiegelmann/Applications/Smart Analytics Tutorial 1/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 828
+},{
+  "uuid": "3dec675c-1b1a-4564-bad4-2205245aa776",
+  "path": "/Users/bwiegelmann/Applications/Smart Analytics Tutorial 1/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 829
+},{
+  "uuid": "1211da1a-59ae-470c-93c5-7c5ab0dcad23",
+  "path": "/Users/bwiegelmann/Applications/Smart Analytics Tutorial 1/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 830
+},{
+  "uuid": "e3d238c2-2a40-48e6-b48e-1ad95315c2a7",
+  "path": "/Users/bwiegelmann/Applications/Smart Analytics Tutorial 2/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 831
+},{
+  "uuid": "6d444c41-1a45-42fe-9e4d-b28e35227a18",
+  "path": "/Users/bwiegelmann/Applications/Smart Analytics Tutorial 2/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 832
+},{
+  "uuid": "d8fa272d-b68c-48cd-acc1-236a315b7cab",
+  "path": "/Users/bwiegelmann/Applications/Smart Analytics Tutorial 2/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 833
+},{
+  "uuid": "eac16495-9a07-4379-b026-9385f20e62ea",
+  "path": "/Users/criazuelo/Applications/Use Case Challenges/Time Series Analysis/SimpleTimeAnalysisChallenge.ifg",
+  "name": "SimpleTimeAnalysisChallenge",
+  "id": 838
+},{
+  "uuid": "8cc9e4ff-aa91-446b-91ab-869a20e1ca29",
+  "path": "/Datameer/Services/Challenge/1 TimeSeries/Solutions/SampleIFG.ifg",
+  "name": "SampleIFG",
+  "id": 839
+},{
+  "uuid": "5f765865-11f3-4ef2-92c9-20a04bfba511",
+  "path": "/Datameer/Services/Challenge/1 TimeSeries/Solutions/TimeAnalysis_Armen/TimeAnalysis_Infographic.ifg",
+  "name": "TimeAnalysis_Infographic",
+  "id": 840
+},{
+  "uuid": "554ac323-9d08-4e5b-9ff0-f84dd294a2d7",
+  "path": "/Datameer/Services/Challenge/1 TimeSeries/Solutions/timeS_THE.ifg",
+  "name": "timeS_THE",
+  "id": 841
+},{
+  "uuid": "6b1ae097-c345-43c7-95f8-25115940f3fd",
+  "path": "/Users/mrm/Applications/Email Communication/Email Language Happiness.ifg",
+  "name": "Email Language Happiness",
+  "id": 845
+},{
+  "uuid": "89381280-516a-468a-920a-1dad7490c448",
+  "path": "/Users/sbuechner/Applications/Email Communication/Email Language Happiness.ifg",
+  "name": "Email Language Happiness",
+  "id": 846
+},{
+  "uuid": "f84fb568-4cd7-4658-b18c-4ab53a5796ed",
+  "path": "/Users/tscholz/Applications/Datameer Performance Monitor/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 847
+},{
+  "uuid": "cdd391fc-9a18-43bf-b9fe-ae84ac7a8dc6",
+  "path": "/Datameer Metrics/Ticket Scoring/Most important tickets 2.ifg",
+  "name": "Most important tickets 2",
+  "id": 852
+},{
+  "uuid": "43e86142-f844-4277-94f0-3a48f44c11a5",
+  "path": "/Users/tscholz/Applications/Tutorial Click Path/Web User Behavior.ifg",
+  "description": "An infographic that visualizes web visitor session statistics and click paths.",
+  "name": "Web User Behavior",
+  "id": 853
+},{
+  "uuid": "f892105f-b3f4-4697-9fbb-a0543b0389fe",
+  "path": "/Users/akuester/00 PM/DEVAPP JIRA Release Planning/Developer Statistics.ifg",
+  "name": "Developer Statistics",
+  "id": 856
+},{
+  "uuid": "7adbc3b5-1889-4537-8d86-5ea9a7a7309e",
+  "path": "/Datameer Metrics/StrategyAndTactical/Report.ifg",
+  "name": "Report",
+  "id": 860
+},{
+  "uuid": "e8ac9335-9d0a-4c67-ad58-68ba415d9484",
+  "path": "/Users/Azita/Applications/LinkedIn Pro Network/Linkedin Pro Network.ifg",
+  "name": "Linkedin Pro Network",
+  "id": 862
+},{
+  "uuid": "cf792629-3ffa-45e5-9b8a-10016f40e86d",
+  "path": "/Datameer/Services/archive/Well Solutions/InfographicNelson.ifg",
+  "name": "InfographicNelson",
+  "id": 866
+},{
+  "uuid": "c373be24-fad9-4a68-9559-825572f51bc4",
+  "path": "/Users/tehrenhard/Applications/Well Production/Infographic.ifg",
+  "name": "Infographic",
+  "id": 867
+},{
+  "uuid": "9cae01be-c49d-4f78-aa54-9b6a375247df",
+  "path": "/Users/amalbet/_KEEP/Zendesk Ticket Monitoring/AnthonyTicketCount.ifg",
+  "name": "AnthonyTicketCount",
+  "id": 873
+},{
+  "uuid": "dd7232bf-669a-4722-861a-f09e4dc61bcc",
+  "path": "/Users/tscholz/Applications/Datameer Users Stats/HC_Users.ifg",
+  "description": "Health Check User Statistics Infographic",
+  "name": "HC_Users",
+  "id": 878
+},{
+  "uuid": "dd3c72a8-3c9e-4780-acbc-244411be945d",
+  "path": "/Datameer/Marketing/LeadToClose/Results.ifg",
+  "name": "Results",
+  "id": 879
+},{
+  "uuid": "eb2b911e-755d-4f37-8456-0e88a7047747",
+  "path": "/Users/tscholz/Applications/User Action Analysis_old/UserActionAnalysis.ifg",
+  "name": "UserActionAnalysis",
+  "id": 882
+},{
+  "uuid": "b426b237-42d7-4f22-b3e4-48fb660a5116",
+  "path": "/Users/jarrigo/Challenges/May 2014 Challenge.ifg",
+  "name": "May 2014 Challenge",
+  "id": 888
+},{
+  "uuid": "3cf4c41b-632d-49b2-8dec-82ed73ce8eef",
+  "path": "/Datameer/Services/archive/Well Solutions/jarrigo IFG 05_2014.ifg",
+  "name": "jarrigo IFG 05_2014",
+  "id": 892
+},{
+  "uuid": "9abf5e05-50de-4a51-b868-fab7310e0f16",
+  "path": "/Users/joel/Applications/Twitter Analysis/Twitter Analysis.ifg",
+  "name": "Twitter Analysis",
+  "id": 895
+},{
+  "uuid": "89994841-7750-46b2-8545-b28e3a80aea5",
+  "path": "/Users/joel/Applications/Copy_of_Twitter Analysis/Twitter Analysis.ifg",
+  "name": "Twitter Analysis",
+  "id": 896
+},{
+  "uuid": "a80df900-17e3-41df-b7da-ae873204d55c",
+  "path": "/Users/mnavid/Applications/Smart Analytics Tutorial/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 898
+},{
+  "uuid": "13567f17-7a36-4572-a8c1-ba02ba326fe8",
+  "path": "/Users/mnavid/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 899
+},{
+  "uuid": "e4206ed0-3b0d-49b5-a255-df0c5f573f8d",
+  "path": "/Users/mnavid/Applications/Smart Analytics Tutorial/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 900
+},{
+  "uuid": "3bfb7065-a8cb-4c89-8d26-2c5da6da7dc5",
+  "path": "/Users/tscholz/Applications/DSHC 5/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 901
+},{
+  "uuid": "3f599532-6cc6-4b8c-8cf3-3ae675efa288",
+  "path": "/Users/tscholz/Applications/Datameer System Health Check 1/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 902
+},{
+  "uuid": "b9804c7b-28e2-4db4-a7fb-732d324fd00e",
+  "path": "/Users/tscholz/Applications/Wikipedia Sentiment/Wikipedia Sentiment.ifg",
+  "name": "Wikipedia Sentiment",
+  "id": 903
+},{
+  "uuid": "798b4188-1c56-40fc-9686-0b8dc60cb4a4",
+  "path": "/Users/jbenincasa/Applications/Facebook Network/Social Network Graph.ifg",
+  "name": "Social Network Graph",
+  "id": 904
+},{
+  "uuid": "f484bc05-aabf-4577-a724-5e8e381e4447",
+  "path": "/Users/jbenincasa/Applications/Facebook Network 1/Social Network Graph.ifg",
+  "name": "Social Network Graph",
+  "id": 905
+},{
+  "uuid": "4ae0df0c-65ad-487c-ab2a-245e162495c6",
+  "path": "/Users/tscholz/Applications/User Action Analysis_13.6/UserActionAnalysis.ifg",
+  "name": "UserActionAnalysis",
+  "id": 906
+},{
+  "uuid": "c7e8aee0-4e87-4665-90c4-acf1d3027fee",
+  "path": "/Users/tscholz/Applications/User Action Analysis/UserActionAnalysis.ifg",
+  "name": "UserActionAnalysis",
+  "id": 908
+},{
+  "uuid": "03a7e736-1a23-4c2b-a8fb-38130ce8a80a",
+  "path": "/Users/tscholz/Applications/User Action Analysis 1/UserActionAnalysis.ifg",
+  "name": "UserActionAnalysis",
+  "id": 909
+},{
+  "uuid": "43721be7-61f4-41d9-9045-5521ccae5032",
+  "path": "/Datameer/Marketing/LeadToClose/Website_Visit_Before_CloseWon_Influenced.ifg",
+  "name": "Website_Visit_Before_CloseWon_Influenced",
+  "id": 911
+},{
+  "uuid": "63cd9190-6a83-4c71-a402-c9b562dd1505",
+  "path": "/Datameer/Services/Challenge/3 Temperature Readings/Solutions/Nelson_Infographic.ifg",
+  "name": "Nelson_Infographic",
+  "id": 913
+},{
+  "uuid": "a8a22b4d-7b0e-47fe-bb8b-bfdba844e27a",
+  "path": "/Users/mnavid/Applications/Tutorial Click Path/Web User Behavior.ifg",
+  "description": "An infographic that visualizes web visitor session statistics and click paths.",
+  "name": "Web User Behavior",
+  "id": 914
+},{
+  "uuid": "c74a9dac-75cd-40bb-b17e-348b0119a500",
+  "path": "/Datameer/Services/Challenge/3 Temperature Readings/Solutions/TempAve.ifg",
+  "name": "TempAve",
+  "id": 915
+},{
+  "uuid": "eed71390-5281-41a3-9431-c5e5a45f25df",
+  "path": "/Datameer/Services/Challenge/3 Temperature Readings/Solutions/jstewart.ifg",
+  "name": "jstewart",
+  "id": 917
+},{
+  "uuid": "4801eaba-9cf5-4451-904c-ddc577febad1",
+  "path": "/Users/tehrenhard/Applications/Temper/Infographic.ifg",
+  "name": "Infographic",
+  "id": 920
+},{
+  "uuid": "7b627ec2-feb7-4a35-86ab-d03985240452",
+  "path": "/Users/amalbet/Applications/Datameer Health/Datameer Metrics.ifg",
+  "name": "Datameer Metrics",
+  "id": 925
+},{
+  "uuid": "474f9646-649e-4fc3-b60b-657ba9aec8c7",
+  "path": "/Users/amalbet/Applications/Datameer Health/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 926
+},{
+  "uuid": "3f4099dd-8f11-4014-a531-36fa44f33a7a",
+  "path": "/Datameer Metrics/Engineering Stats/Sprint Composition.ifg",
+  "name": "Sprint Composition",
+  "id": 927
+},{
+  "uuid": "302c31b6-941d-4a25-a252-3eb7444f4a44",
+  "path": "/Users/mnavid/Applications/Hadoop Ecosystem/Hadoop Ecosystem Infographic.ifg",
+  "name": "Hadoop Ecosystem Infographic",
+  "id": 929
+},{
+  "uuid": "353b1ff8-7e5f-418c-982b-9e05e8925dcf",
+  "path": "/Users/amalbet/Applications/American Time Use/American Time Use.ifg",
+  "name": "American Time Use",
+  "id": 930
+},{
+  "uuid": "f9484c9a-cc60-4734-834c-72a0d8db22f5",
+  "path": "/Users/amalbet/Archive/Datameer HUM V1/Datameer Metrics.ifg",
+  "name": "Datameer Metrics",
+  "id": 933
+},{
+  "uuid": "d385fb94-066c-4d17-af27-9a3c25cdaa9e",
+  "path": "/Users/amalbet/Archive/Datameer HUM V1/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 934
+},{
+  "uuid": "a0012387-3a9d-4c49-b068-aa9de87d7c4b",
+  "path": "/Users/amalbet/Archive/Datameer HUM V1/Datameer Usage.ifg",
+  "name": "Datameer Usage",
+  "id": 935
+},{
+  "uuid": "2c53d5cc-fd36-4b0d-80c4-4feb45f9ae30",
+  "path": "/Users/tscholz/Applications/Datameer Performance Monitor 1/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 936
+},{
+  "uuid": "a85aae98-e068-4848-825d-5fdadbee4877",
+  "path": "/Users/jmesney/Applications/Datameer Users Stats/HC_Users.ifg",
+  "description": "Health Check User Statistics Infographic",
+  "name": "HC_Users",
+  "id": 937
+},{
+  "uuid": "01fd90d8-739d-42c5-9892-ed52d42593e1",
+  "path": "/Users/amalbet/SearsAnalysis/Datameer Health/Datameer Metrics.ifg",
+  "name": "Datameer Metrics",
+  "id": 939
+},{
+  "uuid": "5d62c23a-5f68-4705-89a4-69f9f137b992",
+  "path": "/Users/amalbet/SearsAnalysis/Datameer Health/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 940
+},{
+  "uuid": "497da869-f8af-4ee7-803a-205d8804064a",
+  "path": "/Users/amalbet/SearsAnalysis/Datameer Health/Datameer Usage.ifg",
+  "name": "Datameer Usage",
+  "id": 941
+},{
+  "uuid": "9016175e-db77-474c-815e-39616bd49566",
+  "path": "/Datameer Metrics/Cycle Time Urgent Bugs Service Requested(still used)/Cycle Time Urgent Bugs Service Requested 90d.ifg",
+  "name": "Cycle Time Urgent Bugs Service Requested 90d",
+  "id": 944
+},{
+  "uuid": "0dde3ad3-407b-4e81-88c1-afdb93f37ba7",
+  "path": "/Datameer/Marketing/LeadToClose/Oppt_Website_Visit_Before_Pipe_Not_Influenced.ifg",
+  "name": "Oppt_Website_Visit_Before_Pipe_Not_Influenced",
+  "id": 946
+},{
+  "uuid": "b193d2eb-7190-4ea7-b950-4b74e00ea6cd",
+  "path": "/Users/anguyen/ZendeskProject/AccountTicketStatus.ifg",
+  "name": "AccountTicketStatus",
+  "id": 948
+},{
+  "uuid": "20f48794-d031-4fa2-bfe2-3ff56781983b",
+  "path": "/Datameer/Mojtaba/Unemployment/Workforce_Movement.ifg",
+  "name": "Workforce_Movement",
+  "id": 951
+},{
+  "uuid": "ddee4c01-4b36-4f31-b0b1-7ebd51dea9a2",
+  "path": "/Users/anguyen/Applications/Datameer System Health Check 1/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 952
+},{
+  "uuid": "9b764d76-56e0-41e3-bf69-46776d0d6851",
+  "path": "/Users/jigz/Applications/Datameer System Health Check 1/HealthCheckStats.ifg",
+  "description": "Datameer Application Dashboard",
+  "name": "HealthCheckStats",
+  "id": 955
+},{
+  "uuid": "681a529a-f675-4e9c-83b8-0a5e6f61cc6f",
+  "path": "/Datameer/Services/TAM Reports/Template/AccountStatus.ifg",
+  "name": "AccountStatus",
+  "id": 956
+},{
+  "uuid": "092df26e-bb65-4816-bfaa-1425c907757f",
+  "path": "/Users/hgabriel/TimeSeriesDecomposition/Decomposition.ifg",
+  "name": "Decomposition",
+  "id": 957
+},{
+  "uuid": "66b75f64-76cc-4937-84ef-b131f52574e3",
+  "path": "/Users/anguyen/Applications/Earthquakes Last 7 Days 1/EarthquakeDataInfographic.ifg",
+  "name": "EarthquakeDataInfographic",
+  "id": 960
+},{
+  "uuid": "47cb8bc5-689e-490a-9047-7b4a6cd51dba",
+  "path": "/Users/mnavid/Applications/Marketo LeadToClose/Results.ifg",
+  "name": "Results",
+  "id": 966
+},{
+  "uuid": "aae1e2ef-852c-4cb3-82f9-b1b3439b8dc0",
+  "path": "/Users/mnavid/Hackathon/LeadToPipe/Marketo_Activities.ifg",
+  "name": "Marketo_Activities",
+  "id": 981
+},{
+  "uuid": "43ed6746-b1f0-4f4a-8098-36f43412a93c",
+  "path": "/Users/mnavid/Test/Customers_By_Vertical.ifg",
+  "name": "Customers_By_Vertical",
+  "id": 1094
+},{
+  "uuid": "ef914931-3061-4b43-9308-4baa48d6b237",
+  "path": "/Users/mnavid/Hackathon/LeadToClose/Results.ifg",
+  "name": "Results",
+  "id": 1096
+},{
+  "uuid": "6e10d7c8-9a83-4af6-9439-6f7afac1b769",
+  "path": "/Users/amalbet/_KEEP/Administration/Datameer HUM V1/Datameer Metrics.ifg",
+  "name": "Datameer Metrics",
+  "id": 1119
+},{
+  "uuid": "ded5e07d-796c-4470-989d-0f7f73dd78cd",
+  "path": "/Users/amalbet/_KEEP/Administration/Datameer HUM V1/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 1120
+},{
+  "uuid": "2f52dce6-bde2-4de1-a81a-37c1fb29b30b",
+  "path": "/Users/amalbet/_KEEP/Administration/Datameer HUM V1/Datameer Usage.ifg",
+  "name": "Datameer Usage",
+  "id": 1121
+},{
+  "uuid": "d81b42b5-ec29-4ff9-96e8-0582d2b784a0",
+  "path": "/Users/amalbet/_KEEP/OSQA/Community Stats.ifg",
+  "name": "Community Stats",
+  "id": 1122
+},{
+  "uuid": "c5f08ac0-de58-45ee-abb0-748bad960d64",
+  "path": "/Users/criazuelo/Administration/Datameer License Usage/Datameer Stats.ifg",
+  "name": "Datameer Stats",
+  "id": 1123
+},{
+  "uuid": "10771dbb-c651-4f5c-b658-afbef5f30d16",
+  "path": "/Users/tscholz/Applications/Zendesk Tickets 2/Zendesk_Tickets.ifg",
+  "name": "Zendesk_Tickets",
+  "id": 1137
+},{
+  "uuid": "1b20371c-50b8-4dfc-8bd7-f5d657edc917",
+  "path": "/Users/tscholz/Applications/Zendesk Forum Analytics 4/ZendeskForums.ifg",
+  "description": "Zendesk Forums Analytics",
+  "name": "ZendeskForums",
+  "id": 1138
+},{
+  "uuid": "e3a8937c-c13d-48db-a5f9-ca9db0e673dd",
+  "path": "/Users/sg/Applications/Zendesk Tickets/Zendesk_Tickets.ifg",
+  "name": "Zendesk_Tickets",
+  "id": 1139
+},{
+  "uuid": "9cd0b09a-f981-45ae-8f8f-d8f35521453b",
+  "path": "/Users/tscholz/Applications/Marketo Metrics 7/Marketo.ifg",
+  "name": "Marketo",
+  "id": 1140
+},{
+  "uuid": "23985198-c7df-4755-8ef0-3a4781cc85ef",
+  "path": "/Users/tscholz/Applications/Datameer Performance Monitor 2/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 1144
+},{
+  "uuid": "61c79bfa-9729-47a9-837c-02b7e37ac19c",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo 3/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 1146
+},{
+  "uuid": "5cf3a084-c543-4c37-9ef9-bd46072fb950",
+  "path": "/Users/tscholz/Applications/Datameer HUM V1/Datameer Metrics.ifg",
+  "name": "Datameer Metrics",
+  "id": 1148
+},{
+  "uuid": "9630ed8f-b3fa-4761-99e5-b1235d16e254",
+  "path": "/Users/tscholz/Applications/Datameer HUM V1/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 1149
+},{
+  "uuid": "0fb228ac-9e3e-441c-b072-725d166898cc",
+  "path": "/Users/tscholz/Applications/Datameer HUM V1/Datameer Usage.ifg",
+  "name": "Datameer Usage",
+  "id": 1150
+},{
+  "uuid": "7ca81dc9-9d13-4804-b8b7-27675ed12d6c",
+  "path": "/Users/akuester/Applications/Facebook Network/Social Network Graph.ifg",
+  "name": "Social Network Graph",
+  "id": 1158
+},{
+  "uuid": "d2ef1dec-3c8e-42f2-af58-c9fa7666c4a2",
+  "path": "/Users/akuester/Applications/Facebook Network 1/Social Network Graph.ifg",
+  "name": "Social Network Graph",
+  "id": 1159
+},{
+  "uuid": "9fa3b3d4-c20b-4496-9b4e-c32334a459ea",
+  "path": "/Datameer/Hum Dev/Datameer HUM V2/Datameer Metrics.ifg",
+  "name": "Datameer Metrics",
+  "id": 1161
+},{
+  "uuid": "29233ecf-05ad-48b7-a210-fa97764959be",
+  "path": "/Datameer/Hum Dev/Datameer HUM V2/Datameer Usage.ifg",
+  "name": "Datameer Usage",
+  "id": 1163
+},{
+  "uuid": "7c68ed82-ebd8-4eae-8ea0-cb6fa2d95157",
+  "path": "/Datameer/Hum Dev/Datameer HUM V2/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 1164
+},{
+  "uuid": "e37f9e83-9ec9-48e2-bd55-70c885dbd179",
+  "path": "/Users/tehrenhard/Applications/User Action Analysis/UserActionAnalysis.ifg",
+  "name": "UserActionAnalysis",
+  "id": 1165
+},{
+  "uuid": "7e4f7468-7a59-4eb8-b0d2-d6d65bc0e46a",
+  "path": "/Users/amalbet/_KEEP/Zendesk Ticket Monitoring/ClosedTicketAnalysis.ifg",
+  "name": "ClosedTicketAnalysis",
+  "id": 1166
+},{
+  "uuid": "ce7031d3-e398-49bd-b7ca-f5b11b3bf6a8",
+  "path": "/Users/cbishop/Applications/Datameer HUM V1/Datameer Metrics.ifg",
+  "name": "Datameer Metrics",
+  "id": 1175
+},{
+  "uuid": "81e5765d-c96d-4341-9b9d-e20954f8f717",
+  "path": "/Users/cbishop/Applications/Datameer HUM V1/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 1176
+},{
+  "uuid": "ce90c955-fa70-45ce-81d6-053e224cab89",
+  "path": "/Users/cbishop/Applications/Datameer HUM V1/Datameer Usage.ifg",
+  "name": "Datameer Usage",
+  "id": 1177
+},{
+  "uuid": "b110afd2-f20d-4374-931b-431162f4a9f1",
+  "path": "/Users/sbuechner/Applications/Datameer HUM V1 1/Datameer Metrics.ifg",
+  "name": "Datameer Metrics",
+  "id": 1178
+},{
+  "uuid": "9c6bea2c-a01d-4fa1-8be0-a448df24bab8",
+  "path": "/Users/sbuechner/Applications/Datameer HUM V1 1/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 1179
+},{
+  "uuid": "8ae5bc27-447b-4cad-98dd-2b6a14b075b9",
+  "path": "/Users/sbuechner/Applications/Datameer HUM V1 1/Datameer Usage.ifg",
+  "name": "Datameer Usage",
+  "id": 1180
+},{
+  "uuid": "5f98c3f1-3f70-4414-92ad-e00274a45b6e",
+  "path": "/Users/tscholz/Applications/Wikipedia Sentiment 1/Wikipedia Sentiment.ifg",
+  "name": "Wikipedia Sentiment",
+  "id": 1181
+},{
+  "uuid": "d1d14abb-f13b-4903-9cea-2e5144c989f7",
+  "path": "/Datameer/Services/Customer Metrics/HUM V1 All Customers/Datameer Metrics.ifg",
+  "name": "Datameer Metrics",
+  "id": 1183
+},{
+  "uuid": "c7032577-144e-48f3-afd5-aced92c766a9",
+  "path": "/Datameer/Services/Customer Metrics/HUM V1 All Customers/Datameer Health.ifg",
+  "name": "Datameer Health",
+  "id": 1184
+},{
+  "uuid": "06a0ed52-93d3-472b-b03c-b3d60bf9d820",
+  "path": "/Datameer/Services/Customer Metrics/HUM V1 All Customers/Datameer Usage.ifg",
+  "name": "Datameer Usage",
+  "id": 1185
+},{
+  "uuid": "cacbd4ce-483c-47a3-a649-939c1bd94889",
+  "path": "/Datameer Metrics/Dev KPIs/a Cycle Time Urgent Bugs Service Requested 90d.ifg",
+  "name": "a Cycle Time Urgent Bugs Service Requested 90d",
+  "id": 1192
+},{
+  "uuid": "d98c7d89-7d0d-4ca6-a3d6-7d086c8e2aac",
+  "path": "/Datameer Metrics/Dev KPIs/b Sprint Composition.ifg",
+  "name": "b Sprint Composition",
+  "id": 1193
+},{
+  "uuid": "a5e0910a-c20e-453d-975b-ef4da71409a0",
+  "path": "/Datameer Metrics/Dev KPIs/c Resolved Customer Issues by Version.ifg",
+  "name": "c Resolved Customer Issues by Version",
+  "id": 1194
+},{
+  "uuid": "d6983abc-ace7-4d06-b093-7232c56ac44e",
+  "path": "/Datameer Metrics/Dev KPIs/d Report.ifg",
+  "name": "d Report",
+  "id": 1195
+},{
+  "uuid": "c2bf2430-d303-4f61-8c58-e745ece6c5c6",
+  "path": "/Datameer/Services/Customer Metrics/All Customers/Analytics/Datameer Usage.ifg",
+  "name": "Datameer Usage",
+  "id": 1200
+},{
+  "uuid": "eb7a5df4-fd6d-4944-8124-c7bb3cf8423a",
+  "path": "/Datameer Metrics/Dev KPIs/Q3/EscalationCycleTimes.ifg",
+  "name": "EscalationCycleTimes",
+  "id": 1201
+},{
+  "uuid": "e3edfe2f-ff7d-418f-885d-e698fe933622",
+  "path": "/Datameer Metrics/Dev KPIs/Q3/WeightIssueThroughput.ifg",
+  "name": "WeightIssueThroughput",
+  "id": 1202
+},{
+  "uuid": "91ab1160-1c6b-47f9-85f0-38baca740559",
+  "path": "/Datameer Metrics/Dev KPIs/Q3/CustomerPerRelease/LastQuarterReleases.ifg",
+  "name": "LastQuarterReleases",
+  "id": 1203
+},{
+  "uuid": "49a3a15d-fbf6-40ca-9a25-53f90c4ad0c0",
+  "path": "/Users/tehrenhard/Applications/Challenge-4/Infographic4a.ifg",
+  "name": "Infographic4a",
+  "id": 1207
+},{
+  "uuid": "7c7b99ac-eba8-4625-8038-1364289a16b4",
+  "path": "/Users/criazuelo/Administration/Datameer License Usage V2/Datameer Stats.ifg",
+  "name": "Datameer Stats",
+  "id": 1209
+},{
+  "uuid": "d4d41dc4-c627-4492-9228-31f2616611a9",
+  "path": "/Users/agugliciello/Applications/User Action Analysis/UserActionAnalysis.ifg",
+  "name": "UserActionAnalysis",
+  "id": 1210
+},{
+  "uuid": "6adae5e6-f62a-4b6e-8bc8-b9784a8b699b",
+  "path": "/Users/fh/_KEEP/Trial Analysis/Timeseries.ifg",
+  "name": "Timeseries",
+  "id": 1213
+},{
+  "uuid": "69572e4d-0d43-4e7a-b2c8-c2b04f3266b4",
+  "path": "/Users/ddoan/_KEEP/Trial Activity/Trial Activity.ifg",
+  "name": "Trial Activity",
+  "id": 1218
+},{
+  "uuid": "fb3aaf37-01d2-41a8-947a-7142282b4da0",
+  "path": "/Datameer/Services/archive/Well Solutions/matt ifg.ifg",
+  "name": "matt ifg",
+  "id": 1219
+},{
+  "uuid": "a59cf0fd-e872-4f0a-ac4c-4d38a61715fd",
+  "path": "/Users/hgabriel/LinkedInChangedJob/recentlyChangedJob.ifg",
+  "name": "recentlyChangedJob",
+  "id": 1225
+},{
+  "uuid": "7138c4d8-c172-4f80-bc96-3b8b27b11e82",
+  "path": "/Users/pstoepel/Untitled Folder/Infographic.ifg",
+  "name": "Infographic",
+  "id": 1228
+},{
+  "uuid": "af9c95ec-42d0-46f5-9485-52bc580fa1f2",
+  "path": "/Users/mrm/Applications/Escalations/EscalationBreakdown.ifg",
+  "name": "EscalationBreakdown",
+  "id": 1230
+},{
+  "uuid": "8663c5c8-9555-438d-9b70-931c1ec206b9",
+  "path": "/Users/wei/New_Trial_Last_3_Days.ifg",
+  "name": "New_Trial_Last_3_Days",
+  "id": 1233
+},{
+  "uuid": "cc93f4f9-f873-40d9-bb1d-3b0ac1da6699",
+  "path": "/Users/segan/LinkedInChangedJob_segan/recentlyChangedJob.ifg",
+  "name": "recentlyChangedJob",
+  "id": 1234
+},{
+  "uuid": "b12289ab-7ffc-4c98-a5ea-60de279d4ec2",
+  "path": "/Users/tscholz/Applications/Datameer Scheduling/HC_Scheduling.ifg",
+  "description": "Health Check Scheduling Infographic",
+  "name": "HC_Scheduling",
+  "id": 1237
+},{
+  "uuid": "221ed71a-3fba-449b-846a-f7d2124540e6",
+  "path": "/Users/dschmidt/Applications/Customer Funnel Optimization Demo/Acquisition Funnel.ifg",
+  "name": "Acquisition Funnel",
+  "id": 1238
+},{
+  "uuid": "5d2a521b-dc43-41f9-97e3-89c1d0a66782",
+  "path": "/Users/pjeitschko/Applications/Strata Barcelona 2014/Strata Barcelona Dashboard.ifg",
+  "name": "Strata Barcelona Dashboard",
+  "id": 1241
+},{
+  "uuid": "d7486207-f29c-48cc-95a8-122f8704421d",
+  "path": "/Users/pjeitschko/Applications/Strata Barcelona 2014/Strata Barcelona Leads.ifg",
+  "name": "Strata Barcelona Leads",
+  "id": 1242
+},{
+  "uuid": "3846b3bf-0cc0-431c-bf7f-340d2ca5373f",
+  "path": "/Users/tscholz/Applications/Twitter Analysis/Twitter Analysis.ifg",
+  "name": "Twitter Analysis",
+  "id": 1246
+},{
+  "uuid": "22a15404-4fc9-43ea-9ed5-1acd91f4906a",
+  "path": "/Users/mhawkins/old/CBvsBF.ifg",
+  "name": "CBvsBF",
+  "id": 1247
+},{
+  "uuid": "8f3cfb8f-fa15-47a8-9a57-f109f3e0f95a",
+  "path": "/Users/tscholz/Applications/Customer Churn V02/Column Dependency Infographic.ifg",
+  "name": "Column Dependency Infographic",
+  "id": 1248
+},{
+  "uuid": "105b1021-51cb-4552-b51e-08df39b8d2b2",
+  "path": "/Users/wbenica/JIRA/JIRA_CustomerRequests/AppDownloads_OnlineInstance.ifg",
+  "name": "AppDownloads_OnlineInstance",
+  "id": 1249
+},{
+  "uuid": "1c3640fe-c543-46a9-83c2-29920b917481",
+  "path": "/Users/tscholz/Applications/Twitter Analysis 1/Twitter Analysis.ifg",
+  "name": "Twitter Analysis",
+  "id": 1251
+},{
+  "uuid": "23c098e0-fb91-4869-8975-014afe9bcb48",
+  "path": "/Users/jmesney/Applications/Training/Oil/Infographic.ifg",
+  "name": "Infographic",
+  "id": 1252
+},{
+  "uuid": "a3296cd8-f41c-4eac-b7a6-8980625757a3",
+  "path": "/Users/tscholz/Applications/Demo 360 Customer View/Customer Analytics.ifg",
+  "description": "",
+  "name": "Customer Analytics",
+  "id": 1254
+},{
+  "uuid": "499097c7-68f3-4d79-854c-7b1fc3166a50",
+  "path": "/Users/tscholz/Applications/Demo 360 Customer View/Twitter Brand Sentiment.ifg",
+  "name": "Twitter Brand Sentiment",
+  "id": 1255
+},{
+  "uuid": "09120cf2-c784-41dc-8730-4680a890192e",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 4/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 1256
+},{
+  "uuid": "b62bf474-57a4-4a94-b5a3-38d2466c61a9",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 4/2 Clustering/IFG for Successful Contacts/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 1257
+},{
+  "uuid": "2bb2e97f-2a2e-47f8-8ec3-52ee20e01e65",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 4/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 1258
+},{
+  "uuid": "21f93772-0105-450e-8521-f9f45066049a",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 4/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 1259
+},{
+  "uuid": "c9e05a78-adc3-43ec-b69d-28d69ca1119a",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 4/2 Clustering/IFG for Unsuccessful Contacts/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 1260
+},{
+  "uuid": "f8e2efdf-8fc9-45be-a351-5a0ce2a5bffb",
+  "path": "/Datameer Metrics/Dev KPIs/Q4/EscalationCycleTimes.ifg",
+  "name": "EscalationCycleTimes",
+  "id": 1261
+},{
+  "uuid": "99526c6e-bf3d-41e3-9cf8-6994ef54c2df",
+  "path": "/Datameer Metrics/Dev KPIs/Q4/WeightIssueThroughput.ifg",
+  "name": "WeightIssueThroughput",
+  "id": 1262
+},{
+  "uuid": "a2ba3f7a-202b-46d3-bcef-a793c305aa95",
+  "path": "/Datameer Metrics/Dev KPIs/Q4/CustomerPerRelease/LastQuarterReleases.ifg",
+  "name": "LastQuarterReleases",
+  "id": 1263
+},{
+  "uuid": "8ae4a689-7f63-4ed2-a97f-aee5577e0078",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 5/1 Column Dependencies/ColumnDependencyIFG.ifg",
+  "name": "ColumnDependencyIFG",
+  "id": 1264
+},{
+  "uuid": "8fa4cb91-9b10-4852-8050-21b6dd194ee8",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 5/2 Clustering/IFG for Successful Contacts.ifg",
+  "name": "IFG for Successful Contacts",
+  "id": 1265
+},{
+  "uuid": "d0c02a2e-a03a-40c9-b388-25bd33c64071",
+  "path": "/Users/tscholz/Applications/Smart Analytics Tutorial 5/2 Clustering/IFG for Unsuccessful Contacts.ifg",
+  "name": "IFG for Unsuccessful Contacts",
+  "id": 1266
+},{
+  "uuid": "f741a6b9-4558-40a1-bc5b-5a163177829b",
+  "path": "/Datameer Metrics/Engineering stats since 2014/Stats 2014.ifg",
+  "name": "Stats 2014",
+  "id": 1272
+},{
+  "uuid": "241ca2e1-ea11-4937-8b29-0cc5cf8485f0",
+  "path": "/Users/tscholz/Applications/Twitter Analysis 3/Twitter Analysis.ifg",
+  "name": "Twitter Analysis",
+  "id": 1273
+},{
+  "uuid": "4794913c-5151-43f2-9908-ec289c31558f",
+  "path": "/Users/pv/Stats/All Stats.ifg",
+  "name": "All Stats",
+  "id": 1275
+},{
+  "uuid": "a5815b08-a868-415c-8c9e-3e3724bd94bf",
+  "path": "/Users/mhawkins/old/InfographicXmasSongs.ifg",
+  "name": "InfographicXmasSongs",
+  "id": 1279
+},{
+  "uuid": "0f19c0cd-e712-428f-a58c-97b60d937145",
+  "path": "/Users/mrm/SysOps/SysOpTicketAnalysis.ifg",
+  "name": "SysOpTicketAnalysis",
+  "id": 1280
+},{
+  "uuid": "9676ed90-4a63-4a47-a18c-4296bca80a84",
+  "path": "/Users/spuccinelli/_KEEP/Big Data and Hadoop Tech Press Coverage/2014 Big Data Coverage/Big Data and Hadoop Coverage 2014.ifg",
+  "name": "Big Data and Hadoop Coverage 2014",
+  "id": 1282
+},{
+  "uuid": "cd879345-b85b-41c9-9ec3-af57b43f3cf7",
+  "path": "/Users/hgabriel/Applications/RecentlyChangedJob/recentlyChangedJob.ifg",
+  "name": "recentlyChangedJob",
+  "id": 1336
+},{
+  "uuid": "37e3b724-75c3-4ef2-aeb6-f9736d2f572d",
+  "path": "/Users/pv/Stats/Prevent Support Cases.ifg",
+  "name": "Prevent Support Cases",
+  "id": 1337
+},{
+  "uuid": "9d753904-3792-47da-802b-6acfaacb0be3",
+  "path": "/Users/mschumpert/Applications/ThreeSixty Degree View of Customer/Customer Analytics.ifg",
+  "description": "",
+  "name": "Customer Analytics",
+  "id": 1340
+},{
+  "uuid": "2fd3a30f-5edf-405d-bcba-33dc2b36f453",
+  "path": "/Users/mschumpert/Applications/ThreeSixty Degree View of Customer/Twitter Brand Sentiment.ifg",
+  "name": "Twitter Brand Sentiment",
+  "id": 1341
+},{
+  "uuid": "7cb4d384-ecb5-4b62-8d4a-5ceab785c840",
+  "path": "/Users/kbuell/Attrition/Attrition.ifg",
+  "name": "Attrition",
+  "id": 1344
+},{
+  "uuid": "4ec0bd4c-5464-46d5-a814-6c106e95cefe",
+  "path": "/Users/joel/InfographicZen.ifg",
+  "name": "InfographicZen",
+  "id": 1345
+},{
+  "uuid": "5791011c-b3d9-4dc4-8382-1b5fb802b070",
+  "path": "/Users/avarshneya/Applications/LinkedIn Pro Network/Linkedin Pro Network.ifg",
+  "name": "Linkedin Pro Network",
+  "id": 1346
+},{
+  "uuid": "a5fa1f67-4074-456a-a5ee-e09cd077a3fa",
+  "path": "/Users/frances/Applications/CH Assessment/CH_Analysis.ifg",
+  "name": "CH_Analysis",
+  "id": 1349
+},{
+  "uuid": "86ca0b52-8881-4ae1-a36a-02ce17eb50a3",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_02_Lead Sources/_05_MostPopularCampaignTypesForNewLeads.ifg",
+  "name": "_05_MostPopularCampaignTypesForNewLeads",
+  "id": 1351
+},{
+  "uuid": "5eaad5e6-8537-4ef1-a9d0-e36ad93da5a0",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_02_Lead Sources/_06_LeadTracking.ifg",
+  "name": "_06_LeadTracking",
+  "id": 1352
+},{
+  "uuid": "d9c48e3c-f32f-479c-83c4-509ced1e2f6f",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_03_Opportunities/_08_MostPopularLeadSourceForNewOpportunity.ifg",
+  "name": "_08_MostPopularLeadSourceForNewOpportunity",
+  "id": 1353
+},{
+  "uuid": "faa2ff5b-f9a0-45d2-990d-7e47b4d87856",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_03_Opportunities/_11_OpportunityTracking.ifg",
+  "name": "_11_OpportunityTracking",
+  "id": 1357
+},{
+  "uuid": "3da7ca96-88c0-4cb2-98b3-cedc6315b0b9",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_03_Opportunities/_10_MostPopularCampaignTypeforNewOpportunities.ifg",
+  "name": "_10_MostPopularCampaignTypeforNewOpportunities",
+  "id": 1358
+},{
+  "uuid": "e55235ac-49cc-4841-ad9c-f611828901ba",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_03_Opportunities/_07_OpportunityToValue.ifg",
+  "name": "_07_OpportunityToValue",
+  "id": 1359
+},{
+  "uuid": "dc68cf74-3450-4c7e-8fa5-b38c76b0ca03",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_04_Wins/_15_MostPopularCampaignTypeforNewDeals.ifg",
+  "name": "_15_MostPopularCampaignTypeforNewDeals",
+  "id": 1360
+},{
+  "uuid": "db7580c2-6be9-4f6e-a95d-e13f2fc69c3b",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_04_Wins/_13_PopularLeadsForDeals.ifg",
+  "name": "_13_PopularLeadsForDeals",
+  "id": 1362
+},{
+  "uuid": "0260248f-1009-47d5-ab72-1e41610fa164",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_04_Wins/_16_DealTracking.ifg",
+  "name": "_16_DealTracking",
+  "id": 1364
+},{
+  "uuid": "04e71531-efcc-419e-b349-d51aa2b43275",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_04_Wins/_12_NumberOfDealsWon_TotalAcvGenerated.ifg",
+  "name": "_12_NumberOfDealsWon_TotalAcvGenerated",
+  "id": 1365
+},{
+  "uuid": "d0dee6d7-ae37-4ca7-9ca8-d97396e53e7a",
+  "path": "/Users/reiling/Applications/MarketovDT2/MostPopularLeadSources.ifg",
+  "description": "This Infographic Contains the following time periods:\n1) Current Year by Quarters\n2) Last Year by Quarters\n3) Current Quarter by Months\n4) Current Quarter by Weeks\n5) Current Month by Weeks\n6) Last Month by Weeks",
+  "name": "MostPopularLeadSources",
+  "id": 1367
+},{
+  "uuid": "3fb5c360-28a1-4347-9a2b-7c6199729094",
+  "path": "/Users/reiling/Applications/MarketovDT2/TotalLeadsGenerated.ifg",
+  "description": "This Infographic Contains the following time periods:\n1) Current Year by Quarters\n2) Last Year by Quarters\n3) Current Quarter by Months\n4) Current Quarter by Weeks\n5) Current Month by Weeks\n6) Last Month by Weeks",
+  "name": "TotalLeadsGenerated",
+  "id": 1368
+},{
+  "uuid": "23985212-93c9-47dc-8443-1ee7f8dc08f4",
+  "path": "/Users/kreza/Applications/MarketovDT2/MostPopularLeadSources.ifg",
+  "description": "This Infographic Contains the following time periods:\n1) Current Year by Quarters\n2) Last Year by Quarters\n3) Current Quarter by Months\n4) Current Quarter by Weeks\n5) Current Month by Weeks\n6) Last Month by Weeks",
+  "name": "MostPopularLeadSources",
+  "id": 1369
+},{
+  "uuid": "43bcc9b8-dd60-4f6c-8327-dfd2cc61a26a",
+  "path": "/Users/kreza/Applications/MarketovDT2/TotalLeadsGenerated.ifg",
+  "description": "This Infographic Contains the following time periods:\n1) Current Year by Quarters\n2) Last Year by Quarters\n3) Current Quarter by Months\n4) Current Quarter by Weeks\n5) Current Month by Weeks\n6) Last Month by Weeks",
+  "name": "TotalLeadsGenerated",
+  "id": 1370
+},{
+  "uuid": "a9bf0da9-81f6-4917-b4ac-e34c45332b89",
+  "path": "/Users/reiling/Applications/Marketing/SalesForce_Graphs.ifg",
+  "name": "SalesForce_Graphs",
+  "id": 1371
+},{
+  "uuid": "d22c5f06-6c00-4588-84c8-931e184ef50a",
+  "path": "/Users/reiling/Applications/Marketing/_02_LeadSources/FA_05/MostPopularCampaignTypesForNewLeads.ifg",
+  "name": "MostPopularCampaignTypesForNewLeads",
+  "id": 1372
+},{
+  "uuid": "f0cc6849-89bb-4a63-812b-c02972cc8eba",
+  "path": "/Users/reiling/Applications/Marketing/_02_LeadSources/FA_06/LeadTracking.ifg",
+  "name": "LeadTracking",
+  "id": 1373
+},{
+  "uuid": "356c7ce2-a9cd-4280-88b5-c7d2d04a12aa",
+  "path": "/Users/reiling/Applications/Marketing/_03_Opportunities/FA_07/Opportunity to Value.ifg",
+  "name": "Opportunity to Value",
+  "id": 1374
+},{
+  "uuid": "af98a4e3-acf1-43ff-8ca1-e660de247c6e",
+  "path": "/Users/reiling/Applications/Marketing/_03_Opportunities/FA_08/MostPopularLeadSourceForNewOpportunity.ifg",
+  "name": "MostPopularLeadSourceForNewOpportunity",
+  "id": 1375
+},{
+  "uuid": "722b2fac-19a9-4336-aa1e-f100bf02ca0a",
+  "path": "/Users/reiling/Applications/Marketing/_03_Opportunities/FA_10/MostPopularCampaignTypeforNewOpportunities.ifg",
+  "name": "MostPopularCampaignTypeforNewOpportunities",
+  "id": 1376
+},{
+  "uuid": "51fe5154-ac3a-4f76-9281-e11f657d6eab",
+  "path": "/Users/reiling/Applications/Marketing/_03_Opportunities/FA_11/OpportunityTracking.ifg",
+  "name": "OpportunityTracking",
+  "id": 1377
+},{
+  "uuid": "1fc90f3b-4328-4f15-8705-d03471fb938c",
+  "path": "/Users/reiling/Applications/Marketing/_04_ClosedWon/FA_12/NumberOfDealsWon_TotalAcvGenerated.ifg",
+  "name": "NumberOfDealsWon_TotalAcvGenerated",
+  "id": 1378
+},{
+  "uuid": "b73895f8-7f49-4ab0-a586-b458b7322d41",
+  "path": "/Users/reiling/Applications/Marketing/_04_ClosedWon/FA_13/Popular Leads for Deals.ifg",
+  "name": "Popular Leads for Deals",
+  "id": 1379
+},{
+  "uuid": "108f15e4-d722-4520-9176-1c1ad92c404a",
+  "path": "/Users/reiling/Applications/Marketing/_04_ClosedWon/FA_15/MostPopularCampaignTypeforNewDeals.ifg",
+  "name": "MostPopularCampaignTypeforNewDeals",
+  "id": 1380
+},{
+  "uuid": "8055e145-947d-4cf4-b800-0655865a822c",
+  "path": "/Users/reiling/Applications/Marketing/_04_ClosedWon/FA_16/DealTracking.ifg",
+  "name": "DealTracking",
+  "id": 1381
+},{
+  "uuid": "a0c7d74f-71f8-47be-b75c-c3a9fabdce17",
+  "path": "/Users/kreza/Applications/Marketing/SalesForce_Graphs.ifg",
+  "name": "SalesForce_Graphs",
+  "id": 1382
+},{
+  "uuid": "d05f45fa-cdc0-40d5-ba80-41d5d0e71cd2",
+  "path": "/Users/kreza/Applications/Marketing/_02_LeadSources/FA_05/MostPopularCampaignTypesForNewLeads.ifg",
+  "name": "MostPopularCampaignTypesForNewLeads",
+  "id": 1383
+},{
+  "uuid": "63ffe135-112b-4f63-abf7-5000954d4ac9",
+  "path": "/Users/kreza/Applications/Marketing/_02_LeadSources/FA_06/LeadTracking.ifg",
+  "name": "LeadTracking",
+  "id": 1384
+},{
+  "uuid": "802727aa-9c98-4a52-a3aa-1cbaf9030e38",
+  "path": "/Users/kreza/Applications/Marketing/_03_Opportunities/FA_07/Opportunity to Value.ifg",
+  "name": "Opportunity to Value",
+  "id": 1385
+},{
+  "uuid": "996fcf74-4aa3-40af-a52f-66b72ec189f3",
+  "path": "/Users/kreza/Applications/Marketing/_03_Opportunities/FA_08/MostPopularLeadSourceForNewOpportunity.ifg",
+  "name": "MostPopularLeadSourceForNewOpportunity",
+  "id": 1386
+},{
+  "uuid": "4933e7d4-94df-49fb-9efd-8263b83cd887",
+  "path": "/Users/kreza/Applications/Marketing/_03_Opportunities/FA_10/MostPopularCampaignTypeforNewOpportunities.ifg",
+  "name": "MostPopularCampaignTypeforNewOpportunities",
+  "id": 1387
+},{
+  "uuid": "fb6c898e-48bc-4319-b6bc-f7198786ed76",
+  "path": "/Users/kreza/Applications/Marketing/_03_Opportunities/FA_11/OpportunityTracking.ifg",
+  "name": "OpportunityTracking",
+  "id": 1388
+},{
+  "uuid": "199bd283-b2d8-440a-b60b-e9fac80e1cc0",
+  "path": "/Users/kreza/Applications/Marketing/_04_ClosedWon/FA_12/NumberOfDealsWon_TotalAcvGenerated.ifg",
+  "name": "NumberOfDealsWon_TotalAcvGenerated",
+  "id": 1389
+},{
+  "uuid": "5f5d5a9e-78e6-4458-a265-e7f522a4ab5a",
+  "path": "/Users/kreza/Applications/Marketing/_04_ClosedWon/FA_13/Popular Leads for Deals.ifg",
+  "name": "Popular Leads for Deals",
+  "id": 1390
+},{
+  "uuid": "2fd34a64-e71c-4196-b022-a95018ddd8da",
+  "path": "/Users/kreza/Applications/Marketing/_04_ClosedWon/FA_15/MostPopularCampaignTypeforNewDeals.ifg",
+  "name": "MostPopularCampaignTypeforNewDeals",
+  "id": 1391
+},{
+  "uuid": "be2783dd-06b4-4147-80f2-5c3f82929002",
+  "path": "/Users/kreza/Applications/Marketing/_04_ClosedWon/FA_16/DealTracking.ifg",
+  "name": "DealTracking",
+  "id": 1392
+},{
+  "uuid": "7ad9eaf3-6bde-4a9d-8ef0-004f9b85a50a",
+  "path": "/Users/kreza/Applications/Marketing 1/SalesForce_Graphs.ifg",
+  "name": "SalesForce_Graphs",
+  "id": 1393
+},{
+  "uuid": "2eee68f2-057f-4adb-ab3d-6f36ad20ac1c",
+  "path": "/Users/kreza/Applications/Marketing 1/_02_LeadSources/FA_05/MostPopularCampaignTypesForNewLeads.ifg",
+  "name": "MostPopularCampaignTypesForNewLeads",
+  "id": 1394
+},{
+  "uuid": "f6d0ca04-c8fa-489e-ba25-484cac84713d",
+  "path": "/Users/kreza/Applications/Marketing 1/_02_LeadSources/FA_06/LeadTracking.ifg",
+  "name": "LeadTracking",
+  "id": 1395
+},{
+  "uuid": "3b297d4c-aef8-4c1d-98a0-97e7461fc2f1",
+  "path": "/Users/kreza/Applications/Marketing 1/_03_Opportunities/FA_07/Opportunity to Value.ifg",
+  "name": "Opportunity to Value",
+  "id": 1396
+},{
+  "uuid": "0df997b1-49a3-4a4f-a372-75449ca2496d",
+  "path": "/Users/kreza/Applications/Marketing 1/_03_Opportunities/FA_08/MostPopularLeadSourceForNewOpportunity.ifg",
+  "name": "MostPopularLeadSourceForNewOpportunity",
+  "id": 1397
+},{
+  "uuid": "c0ab0942-779e-4ad3-8ef1-df532823fe44",
+  "path": "/Users/kreza/Applications/Marketing 1/_03_Opportunities/FA_10/MostPopularCampaignTypeforNewOpportunities.ifg",
+  "name": "MostPopularCampaignTypeforNewOpportunities",
+  "id": 1398
+},{
+  "uuid": "d7aea98b-c40b-47af-9175-3243a8cb230b",
+  "path": "/Users/kreza/Applications/Marketing 1/_03_Opportunities/FA_11/OpportunityTracking.ifg",
+  "name": "OpportunityTracking",
+  "id": 1399
+},{
+  "uuid": "dd2e3600-7559-4723-958f-1880497f55c0",
+  "path": "/Users/kreza/Applications/Marketing 1/_04_ClosedWon/FA_12/NumberOfDealsWon_TotalAcvGenerated.ifg",
+  "name": "NumberOfDealsWon_TotalAcvGenerated",
+  "id": 1400
+},{
+  "uuid": "873e6110-ca6f-4822-a907-b875a276bff7",
+  "path": "/Users/kreza/Applications/Marketing 1/_04_ClosedWon/FA_13/Popular Leads for Deals.ifg",
+  "name": "Popular Leads for Deals",
+  "id": 1401
+},{
+  "uuid": "68eea5a3-6be3-42a0-a23b-a5bb92ee559d",
+  "path": "/Users/kreza/Applications/Marketing 1/_04_ClosedWon/FA_15/MostPopularCampaignTypeforNewDeals.ifg",
+  "name": "MostPopularCampaignTypeforNewDeals",
+  "id": 1402
+},{
+  "uuid": "3e02ee3b-f9e9-413a-93d5-030b35659c54",
+  "path": "/Users/kreza/Applications/Marketing 1/_04_ClosedWon/FA_16/DealTracking.ifg",
+  "name": "DealTracking",
+  "id": 1403
+},{
+  "uuid": "cc3e6e04-c435-43e7-88e7-61a88d91f075",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_02_Lead Sources/_03_MostSuccessfulLeadSources.ifg",
+  "description": "This Infographic Contains the following time periods:\n1) Current Year by Quarters\n2) Last Year by Quarters\n3) Current Quarter by Months\n4) Current Quarter by Weeks\n5) Current Month by Weeks\n6) Last Month by Weeks",
+  "name": "_03_MostSuccessfulLeadSources",
+  "id": 1404
+},{
+  "uuid": "17547889-6742-4b56-af46-a547dd35b2ae",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_02_Lead Sources/_02_TotalLeadsGenerated.ifg",
+  "description": "This Infographic Contains the following time periods:\n1) Current Year by Quarters\n2) Last Year by Quarters\n3) Current Quarter by Months\n4) Current Quarter by Weeks\n5) Current Month by Weeks\n6) Last Month by Weeks",
+  "name": "_02_TotalLeadsGenerated",
+  "id": 1405
+},{
+  "uuid": "284d6878-2174-4c39-9eb5-1b2516f3b8b8",
+  "path": "/Users/mpittman/Applications/Facebook Social Stats/Facebook Social Statistics.ifg",
+  "name": "Facebook Social Statistics",
+  "id": 1411
+},{
+  "uuid": "dd6ba554-9498-4666-a4b5-9197af62bad7",
+  "path": "/Users/kbuell/Copy_of_Attrition/Attrition.ifg",
+  "name": "Attrition",
+  "id": 1426
+},{
+  "uuid": "c7b16d7f-bdc5-4717-a4a4-91a620b13847",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_05_ROI/_18_ROIAnalysisByCampaignTypeAndName.ifg",
+  "description": "This Sheet Contains the Infographic for FA_18: ROI Analysis by Campaign Name and Type for the following time periods:\n1) Last Year\n2) Quarter To Date\n3) Month to Date.",
+  "name": "_18_ROIAnalysisByCampaignTypeAndName",
+  "id": 1427
+},{
+  "uuid": "1eae153f-0bec-45d9-908d-bc9ce3c1f92b",
+  "path": "/Datameer/CloudOfferingApps/Marketing/_01_Infographics/_01_Web/_01_MostSuccessfulChannelsForWebsite.ifg",
+  "description": "\n\nThis Infographic Contains the following time periods:\n1) Current Year by Quarters\n2) Last Year by Quarters\n3) Current Quarter by Months\n4) Current Quarter by Weeks\n5) Current Month by Weeks\n6) Last Month by Weeks",
+  "name": "_01_MostSuccessfulChannelsForWebsite",
+  "id": 1428
+},{
+  "uuid": "8648653a-46d2-4ecd-a142-ade10d042cbd",
+  "path": "/Datameer/FrankT/Copy_of__11_OpportunityTracking.ifg",
+  "name": "Copy_of__11_OpportunityTracking",
+  "id": 1429
+},{
+  "uuid": "cae5dde9-e2a1-40d5-825e-56ff421e0243",
+  "path": "/.system/5c9d4d05-7e1d-4b24-a1e7-016bfb281e22.ifg",
+  "name": "5c9d4d05-7e1d-4b24-a1e7-016bfb281e22",
+  "id": 1430
+},{
+  "uuid": "ba101379-0abf-4a9b-813e-633efa7afde9",
+  "path": "/.system/32af7676-3ffe-444c-b5ed-ceca167c31e5.ifg",
+  "name": "32af7676-3ffe-444c-b5ed-ceca167c31e5",
+  "id": 1431
+},{
+  "uuid": "140605eb-e3c5-4fa7-a4fd-e99e6f9142f7",
+  "path": "/.system/47929021-1a04-425e-9d40-bbb718301dd2.ifg",
+  "name": "47929021-1a04-425e-9d40-bbb718301dd2",
+  "id": 1432
+},{
+  "uuid": "e45da1cd-d70e-4022-8190-a176adb53c53",
+  "path": "/Users/jigz/_KEEP/TAM Reports/Template/AccountStatus.ifg",
+  "name": "AccountStatus",
+  "id": 1433
+}]

@@ -1,0 +1,77 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.FileDataSinkImpl",
+  "file": {
+    "uuid": "86a582c0-b84e-4db4-bbda-886921ddd3c2",
+    "path": "/Users/admin/Applications/AMEX/ExportJob_SplitCount_1.exp",
+    "description": "",
+    "name": "ExportJob_SplitCount_1"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.splitCount\u003d1",
+  "connection": "/Data/Connections/Datameer server filesystem",
+  "sheet": {
+    "name": "Joined2",
+    "sheetId": "d618efec-c4ed-4404-a244-8a7d7b2de79b",
+    "workbook": {
+      "path": "/Users/admin/Applications/AMEX/Workbook_jobConf.wbk",
+      "uuid": "b8783a31-2ee1-46e8-820d-67f05415f4af"
+    }
+  },
+  "mappings": [
+    {
+      "name": "JC_Cluster_Key5941",
+      "srcColumnIndex": 0,
+      "nullable": true
+    },
+    {
+      "name": "JC_Key_5941",
+      "srcColumnIndex": 1,
+      "nullable": true
+    },
+    {
+      "name": "JC_Cluster_Key_550",
+      "srcColumnIndex": 2,
+      "nullable": true
+    },
+    {
+      "name": "JC_Cluster_Value_550",
+      "srcColumnIndex": 3,
+      "nullable": true
+    },
+    {
+      "name": "JC_Cluster_Value_5941",
+      "srcColumnIndex": 4,
+      "nullable": true
+    },
+    {
+      "name": "JC_Key_550",
+      "srcColumnIndex": 5,
+      "nullable": true
+    },
+    {
+      "name": "JC_Value_550",
+      "srcColumnIndex": 6,
+      "nullable": true
+    },
+    {
+      "name": "JC_Value_5941",
+      "srcColumnIndex": 7,
+      "nullable": true
+    }
+  ],
+  "errorHandlingMode": "DROP_RECORD",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fileName": "DM_exp",
+  "confirmOverwrite": false,
+  "clearTargetDirectory": false,
+  "includeHeader": true,
+  "delimiterString": ",",
+  "quoteString": "\"",
+  "escapeString": "\\",
+  "characterEncoding": "UTF-8",
+  "exportFileType": "datameer.dap.sdk.exportjob.internal.CsvExportFileType"
+}

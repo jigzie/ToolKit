@@ -1,0 +1,227 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_02_50_Volume",
+        "path": "/Administration/HUMv2/Reports/logs/base/_02_50_Volume.wbk",
+        "uuid": "c5973021-13ff-4133-9e80-36c70ff2050a"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "50 2 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/Logs_Volume.lnk",
+                "uuid": "e606b755-5e16-4012-a10a-697d9125d509"
+            },
+            "keep": false,
+            "name": "Volume_src",
+            "sheetId": "06efbe90-cb3c-45e2-bc56-4c055adea448",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "execution_date",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "execution_configuration_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "execution_configuration_job_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "total_sample_size",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "source_input_size",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "dropped_records",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "dropped_splits",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "byte_throughput",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "record_throughput",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "records_proccesed",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "data_volume_imported",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "import_size_imported",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "13",
+                    "name": "produced_records",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "14",
+                    "name": "produced_size",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "execution_date",
+                    "formulaString": "=#Volume_src!execution_date"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "execution_id",
+                    "formulaString": "=#Volume_src!execution_id"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "execution_configuration_uuid",
+                    "formulaString": "=#Volume_src!execution_configuration_uuid"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "execution_configuration_job_type",
+                    "formulaString": "=#Volume_src!execution_configuration_job_type"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "total_sample_size",
+                    "formulaString": "=#Volume_src!total_sample_size"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "source_input_size",
+                    "formulaString": "=#Volume_src!source_input_size"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "dropped_records",
+                    "formulaString": "=#Volume_src!dropped_records"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "dropped_splits",
+                    "formulaString": "=#Volume_src!dropped_splits"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "byte_throughput",
+                    "formulaString": "=#Volume_src!byte_throughput"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "record_throughput",
+                    "formulaString": "=#Volume_src!record_throughput"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "records_proccesed",
+                    "formulaString": "=#Volume_src!records_proccesed"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "data_volume_imported",
+                    "formulaString": "=#Volume_src!data_volume_imported"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 12,
+                    "columnName": "import_size_imported",
+                    "formulaString": "=#Volume_src!import_size_imported"
+                },
+                {
+                    "columnId": "13",
+                    "columnIndex": 13,
+                    "columnName": "produced_records",
+                    "formulaString": "=#Volume_src!produced_records"
+                },
+                {
+                    "columnId": "14",
+                    "columnIndex": 14,
+                    "columnName": "produced_size",
+                    "formulaString": "=#Volume_src!produced_size"
+                }
+            ],
+            "keep": true,
+            "name": "Volume",
+            "nextColumnId": 15,
+            "outputPartitionDefinition": {
+                "dateFormat": "yyyyMMdd",
+                "dateGenerator": "=(#execution_date)"
+            },
+            "sheetId": "35b83ba9-4b91-45db-9861-f6d6eaf89f4b",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

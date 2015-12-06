@@ -1,0 +1,360 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "05d90590-db8f-4703-a79c-29d929035180",
+    "path": "/Data/FileUploads/AmericanTimeSpent.upl",
+    "description": "250MB file",
+    "name": "AmericanTimeSpent"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "6d5e7ad5-fd61-4984-87d1-6bdf75313b75"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-4.1.2-cdh4.6-mr2/das-data/fileuploads/8/American Time Use.csv"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "data.includes.header": [
+      "true"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "ea6451f0-1296-4ccd-a010-533cb9e06812"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 25,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TUCASEID",
+      "origin": "0",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 26,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TUACTIVITY_N",
+      "origin": "1",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 27,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TUACTDUR24",
+      "origin": "2",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 28,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TUCC5",
+      "origin": "3",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 29,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TUCC5B",
+      "origin": "4",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 30,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRTCCTOT_LN",
+      "origin": "5",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 31,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRTCC_LN",
+      "origin": "6",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 32,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRTCOC_LN",
+      "origin": "7",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 33,
+      "pattern": "yyyy-MM-dd HH:mm:ss",
+      "acceptEmpty": true,
+      "name": "TUSTARTTIM",
+      "origin": "8",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 34,
+      "pattern": "yyyy-MM-dd HH:mm:ss",
+      "acceptEmpty": true,
+      "name": "TUSTOPTIME",
+      "origin": "9",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 35,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRCODEP",
+      "origin": "10",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 36,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRTIER1P",
+      "origin": "11",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 37,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRTIER2P",
+      "origin": "12",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 38,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TUCC8",
+      "origin": "13",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 39,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TUCUMDUR",
+      "origin": "14",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 40,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TUCUMDUR24",
+      "origin": "15",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 41,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TUACTDUR",
+      "origin": "16",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 42,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TR_03CC57",
+      "origin": "17",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 43,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRTO_LN",
+      "origin": "18",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 44,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRTONHH_LN",
+      "origin": "19",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 45,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRTOHH_LN",
+      "origin": "20",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 46,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRTHH_LN",
+      "origin": "21",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 47,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRTNOHH_LN",
+      "origin": "22",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 48,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TEWHERE",
+      "origin": "23",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 49,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TUCC7",
+      "origin": "24",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 50,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "TRWBELIG",
+      "origin": "25",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 51,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 52,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 53,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

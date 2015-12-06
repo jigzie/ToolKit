@@ -1,0 +1,540 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "7eff2474-105e-43d0-8bef-115d5fa9abeb",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/ClusterHealthPage.wbk",
+    "description": "",
+    "name": "ClusterHealthPage"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "HTTP_Cluster_Page",
+      "sheetId": "3a14c0e7-ad88-4217-8fb4-cca918c0b7ad",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "HTTP_Cluster_Page",
+        "sheetId": "187ad499-bf50-4099-b98b-35d79bcb4e5e",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/base/_01_10_Cluster_Health_Page.wbk",
+          "uuid": "3aac0b73-7208-4c27-9cb4-ffb74f79a656"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "data_prep",
+      "sheetId": "50a6de2e-2565-45e1-bf65-e3ea791dece4",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "content",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dLISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#HTTP_Cluster_Page!parsed_html;\"#content\");0)"
+        },
+        {
+          "columnName": "dls",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dEXPAND(ELEMENTS_BY_SELECTOR_QUERY(#content;\"dl\"))"
+        },
+        {
+          "columnName": "dataNodeStats",
+          "columnId": "4",
+          "columnIndex": 2,
+          "formulaString": "\u003dLISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#dls;\"#dataNodeStats\");0)"
+        },
+        {
+          "columnName": "mr_ver",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003dIF(CONTAINS(#content;\"Job Tracker Status\");\"mr1\";IF(CONTAINS(#content;\"YARN cluster Status\");\"mr2\";\"n/a\"))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "content",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "dls",
+          "width": 786,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "dataNodeStats",
+          "width": 252,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "data_prep_dns",
+      "sheetId": "6561e95f-dc5b-4d74-a025-50e7eabd6a13",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "data_prep_dns",
+      "filterTargetSheet": "data_prep_dns",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "dataNodeStats",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "dataNodeStats",
+          "columnId": "4",
+          "columnIndex": 0,
+          "formulaString": "\u003dCONCAT(\"\u003ctable\u003e\";EXPAND(ELEMENTS_BY_TAG_NAME(REMOVE_ELEMENTS_BY_TAG_NAME(#data_prep!dataNodeStats;\"thead\");\"tr\"));\"\u003c/table\u003e\")"
+        },
+        {
+          "columnName": "td_elements",
+          "columnId": "7",
+          "columnIndex": 1,
+          "formulaString": "\u003dCONTENTS_BY_TAG_NAME(#dataNodeStats;\"td\")"
+        },
+        {
+          "columnName": "mr_ver",
+          "columnId": "9",
+          "columnIndex": 2,
+          "formulaString": "\u003d#data_prep!mr_ver"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "4",
+          "name": "dataNodeStats",
+          "width": 438,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "td_elements",
+          "width": 874,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 10
+    },
+    {
+      "name": "data_node_statistics_rpt",
+      "sheetId": "f0cd4057-de1c-4efe-8a42-405bf1df84a6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "host",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_dns!td_elements;0)"
+        },
+        {
+          "columnName": "capacity",
+          "columnId": "3",
+          "columnIndex": 1,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_dns!td_elements;1)"
+        },
+        {
+          "columnName": "used",
+          "columnId": "4",
+          "columnIndex": 2,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_dns!td_elements;2)"
+        },
+        {
+          "columnName": "requests",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_dns!td_elements;3)"
+        },
+        {
+          "columnName": "lastUpdate",
+          "columnId": "6",
+          "columnIndex": 4,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_dns!td_elements;4)"
+        },
+        {
+          "columnName": "state",
+          "columnId": "7",
+          "columnIndex": 5,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_dns!td_elements;5)"
+        },
+        {
+          "columnName": "mr_ver",
+          "columnId": "8",
+          "columnIndex": 6,
+          "formulaString": "\u003d#data_prep_dns!mr_ver"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "host",
+          "width": 200,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "capacity",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "used",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "requests",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "lastUpdate",
+          "width": 164,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "state",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 9
+    },
+    {
+      "name": "data_prep_no_dns",
+      "sheetId": "38da2891-f46b-401b-a60e-3b9a2166dc9b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "data_prep_no_dns",
+      "filterTargetSheet": "data_prep_no_dns",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "dataNodeStats",
+          "filterExpression": "BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "dls",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "checkSystem",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "content",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#data_prep!content"
+        },
+        {
+          "columnName": "dls",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#data_prep!dls"
+        },
+        {
+          "columnName": "dataNodeStats",
+          "columnId": "4",
+          "columnIndex": 2,
+          "formulaString": "\u003d#data_prep!dataNodeStats"
+        },
+        {
+          "columnName": "mr_ver",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003d#data_prep!mr_ver"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "content",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "dls",
+          "width": 786,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "dataNodeStats",
+          "width": 252,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "cluster_health_rpt",
+      "sheetId": "48e638ed-6af0-4689-ae70-85f697cc2359",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "key",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dREPLACEALL(LISTELEMENT(CONTENTS_BY_TAG_NAME(#data_prep_no_dns!dls;\"label\");0);\":\";\"\")"
+        },
+        {
+          "columnName": "val",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dLISTELEMENT(CONTENTS_BY_TAG_NAME(#data_prep_no_dns!dls;\"dd\");0)"
+        },
+        {
+          "columnName": "mr_ver",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#data_prep_no_dns!mr_ver"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 317,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 286,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "data_prep_nm",
+      "sheetId": "f7aabc10-cdc8-4f95-a2ac-28bace08c5b0",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "data_prep_nm",
+      "filterTargetSheet": "data_prep_nm",
+      "filterArguments": [
+        {
+          "filterExpression": "FORMULA",
+          "value": "SIZE(#tds) \u003e 0",
+          "valueStatic": false,
+          "type": "ADVANCED_FORMULA"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "nodeManagerMarkup",
+          "columnId": "1",
+          "columnIndex": 0,
+          "formulaString": "\u003dREMOVE_ELEMENTS_BY_TAG_NAME(LISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#HTTP_Cluster_Page!parsed_html;\"#nodeManagerMarkup\");0);\"thead\")"
+        },
+        {
+          "columnName": "tds",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dCONTENTS_BY_TAG_NAME(#nodeManagerMarkup;\"td\")"
+        },
+        {
+          "columnName": "mr_ver",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"mr2\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "nodeManagerMarkup",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "tds",
+          "width": 747,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "node_manager_rpt",
+      "sheetId": "8f7fbdba-7513-4c1a-afb3-7e5603ab66ed",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "rack",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_nm!tds;0)"
+        },
+        {
+          "columnName": "state",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_nm!tds;1)"
+        },
+        {
+          "columnName": "host",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_nm!tds;2)"
+        },
+        {
+          "columnName": "status",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_nm!tds;3)"
+        },
+        {
+          "columnName": "containers",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_nm!tds;4)"
+        },
+        {
+          "columnName": "used_mem_mb",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_nm!tds;5)"
+        },
+        {
+          "columnName": "available_mem_mb",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_nm!tds;6)"
+        },
+        {
+          "columnName": "mr_ver",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#data_prep_nm!mr_ver"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "rack",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "state",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "host",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "containers",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "used_mem_mb",
+          "width": 139,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "available_mem_mb",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 8
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

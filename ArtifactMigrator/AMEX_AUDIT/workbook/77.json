@@ -1,0 +1,106 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "9e4b378a-9cc1-4e8b-ae42-ce523dbf3acd",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_10_Hadoop_Metrics.wbk",
+    "description": "",
+    "name": "_02_10_Hadoop_Metrics"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Hadoop_Metrics_src",
+      "sheetId": "2decd755-ad48-4437-859a-b3aa9bfe04df",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Logs_Hadoop_Metrics.lnk",
+        "uuid": "bc14e0cb-1470-40ad-b32b-928d0c221382"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Hadoop_Metrics",
+      "sheetId": "232cd893-6474-498b-b1fb-c9354aa8db6a",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "outputPartitionDefinition": {
+        "dateFormat": "yyyyMMdd",
+        "dateGenerator": "\u003d(#Timestamp)"
+      },
+      "formulas": [
+        {
+          "columnName": "Timestamp",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Hadoop_Metrics_src!Timestamp"
+        },
+        {
+          "columnName": "Hadoop_Job_Id",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Hadoop_Metrics_src!Hadoop_Job_Id"
+        },
+        {
+          "columnName": "Job_Name",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Hadoop_Metrics_src!Job_Name"
+        },
+        {
+          "columnName": "Counter_Name",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Hadoop_Metrics_src!Counter_Name"
+        },
+        {
+          "columnName": "Counter_Value",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Hadoop_Metrics_src!Counter_Value"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Timestamp",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Hadoop_Job_Id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Job_Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Counter_Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Counter_Value",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

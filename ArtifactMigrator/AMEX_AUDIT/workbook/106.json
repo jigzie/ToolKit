@@ -1,0 +1,155 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "ccf9ccdd-146f-4925-ae4d-288bb542d6a0",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/Plugins.wbk",
+    "description": "",
+    "name": "Plugins"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "HTTP_Plugins_Page",
+      "sheetId": "fa471f30-bedc-489a-a179-3d978fd1eb82",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "HTTP_Plugins_Page",
+        "sheetId": "83eef186-ecae-4f6f-8c23-5f630c86ed7f",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/base/_01_30_Plugins_Page.wbk",
+          "uuid": "b413afab-1fdc-4c71-aac9-ae5c0ee35748"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "data_prep",
+      "sheetId": "47be5996-36d0-4a95-b6f0-b772fab537ce",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "plugin_div",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dLISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#HTTP_Plugins_Page!parsed_html;\"#plugins\");0)"
+        },
+        {
+          "columnName": "thread_removed",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREMOVE_ELEMENTS_BY_TAG_NAME(#plugin_div;\"thead\")"
+        },
+        {
+          "columnName": "plugins",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dLISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#thread_removed;\"#plugins\");0)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "plugin_div",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "thread_removed",
+          "width": 134,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "plugins",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "data_prep_expand",
+      "sheetId": "65ab1e93-6213-46b0-a970-ef04cf7d128a",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "tr_elements",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dCONCAT(\"\u003ctable\u003e\";EXPAND(ELEMENTS_BY_TAG_NAME(#data_prep!plugins;\"tr\"));\"\u003c/table\u003e\")"
+        },
+        {
+          "columnName": "td_contents",
+          "columnId": "16",
+          "columnIndex": 1,
+          "formulaString": "\u003dCONTENTS_BY_TAG_NAME(#data_prep_expand!tr_elements;\"td\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "tr_elements",
+          "width": 543,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "td_contents",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 17
+    },
+    {
+      "name": "plugins_n_versions",
+      "sheetId": "2ebb8afd-37fc-4d58-aa30-93151e6e635e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "plugin_name",
+          "columnId": "1",
+          "columnIndex": 0,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_expand!td_contents;0)"
+        },
+        {
+          "columnName": "plugin_version",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dLISTELEMENT(#data_prep_expand!td_contents;1)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "plugin_name",
+          "width": 214,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "plugin_version",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

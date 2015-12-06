@@ -1,0 +1,65 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10736,
+            "include": true,
+            "name": "ConsumerType",
+            "origin": "extension",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10737,
+            "include": true,
+            "name": "FileType",
+            "origin": "property_value",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "",
+        "name": "MySQL_fileupload_file_types",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_fileupload_file_types.lnk",
+        "uuid": "43a8687a-35af-4250-aac6-2879e1ca0b8c"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            "select df.extension,jcp.property_value from dap_file df\r\ninner join dap_job_configuration djc on djc.dap_file__id=df.id\r\nleft join job_configuration_property jcp on jcp.configuration_fk=djc.id and jcp.property_key='fileType'\r\nwhere df.extension='UPLOAD_JOB_EXTENSION' and df.extension is not null and jcp.property_value is not null"
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "a4043a94-ac5b-443e-bff3-7b3a652ccb14"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ],
+        "tableName": [
+            "!query!"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

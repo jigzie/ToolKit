@@ -1,0 +1,14 @@
+dn: uid=NAS30001,ou=professional services,ou=people,ou=datameer,dc=jigz-local,dc=com
+cn: User 30001
+uidNumber: 29001
+uid: NAS30001
+sn: UserM
+homeDirectory: /home/NAS30001
+gidNumber: 1
+objectClass: top
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: inetOrgPerson
+objectClass: person
+mail: NAS30001@jigz-local.com
+l: USA

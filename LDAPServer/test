@@ -1,0 +1,7 @@
+dn: cn=pdx.swh.datameer_admin,ou=groups,ou=datameer,dc=support-local,dc=com 
+cn: pdx.swh.datameer_admin 
+objectClass: posixGroup 
+objectClass: top 
+description: PDX Statistics Warehouse Datameer administrators 
+memberUid: das-ps100
+memberUid: das-ps101

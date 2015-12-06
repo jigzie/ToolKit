@@ -1,0 +1,193 @@
+{
+    "advancedSchedulingInUse": false,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "ArtifactNames",
+        "path": "/Administration/HUMv2/Ingestion/ArtifactNames.wbk",
+        "uuid": "f9c38958-cd08-4483-8d48-d2286ea8f1b6"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "MANUALLY",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "extension",
+                    "thousandSeparator": true,
+                    "width": 122
+                },
+                {
+                    "columnId": "1",
+                    "name": "artifact",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "extension",
+                    "formulaString": "=LIST(\"DATA_STORE_EXTENSION\";\"EXPORT_JOB_EXTENSION\";\"IMPORT_JOB_EXTENSION\";\"IMPORT_LINK_JOB_EXTENSION\";\"INFOGRAPHIC_EXTENSION\";\"UPLOAD_JOB_EXTENSION\";\"WORKBOOK_EXTENSION\")"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "artifact",
+                    "formulaString": "=LIST(\"Connection\";\"ExportJob\";\"ImportJob\";\"DataLink\";\"Infographic\";\"UploadJob\";\"Workbook\")"
+                }
+            ],
+            "keep": false,
+            "name": "data",
+            "nextColumnId": 2,
+            "sheetId": "cc66a3b5-608f-4cfb-a86d-ce2cafd75fd6",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "extension",
+                    "thousandSeparator": true,
+                    "width": 197
+                },
+                {
+                    "columnId": "2",
+                    "name": "A",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Row_Number",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "2",
+                    "columnIndex": 0,
+                    "columnName": "A",
+                    "formulaString": "=GROUPBY(1)"
+                },
+                {
+                    "columnId": "0",
+                    "columnIndex": 1,
+                    "columnName": "extension",
+                    "formulaString": "=EXPAND(#data!extension)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 2,
+                    "columnName": "Row_Number",
+                    "formulaString": "=GROUPROWNUMBER()"
+                }
+            ],
+            "keep": false,
+            "name": "extension",
+            "nextColumnId": 4,
+            "sheetId": "65c7ef8b-3dad-46cc-8e9a-6b03a9a588c9",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "A",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "artifact",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Row_Number",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "A",
+                    "formulaString": "=GROUPBY(1)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "artifact",
+                    "formulaString": "=EXPAND(#data!artifact)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Row_Number",
+                    "formulaString": "=GROUPROWNUMBER()"
+                }
+            ],
+            "keep": false,
+            "name": "aftifact",
+            "nextColumnId": 3,
+            "sheetId": "6a962994-7b25-4004-b4bf-7e82234dba4d",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "6374b22ca13c4f404ecee3c2fbf8cf84",
+                    "name": "extension",
+                    "thousandSeparator": true,
+                    "width": 196
+                },
+                {
+                    "columnId": "ba0f19c94067b7d12c47d4cb38529336",
+                    "name": "artifact",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": true,
+            "name": "ArtifactNames",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "Row_Number"
+                        ],
+                        "joinColumns2": [
+                            "Row_Number"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "extension",
+                        "sheet2": "aftifact"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "aftifact": [
+                        "artifact"
+                    ],
+                    "extension": [
+                        "extension"
+                    ]
+                }
+            },
+            "sheetId": "05e3c751-6b71-4e99-9347-b945b4551b8d",
+            "sheetType": "das.internal.JoinedSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

@@ -1,0 +1,210 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "32f9096c-cbb8-4038-aa78-e4873051602d",
+    "path": "/Data/FileUploads/Zementis.upl",
+    "description": "Test",
+    "name": "Zementis"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "b057548d-6b83-4239-be24-61dd59acc2dc"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-4.1.2-cdh4.6-mr2/das-data/fileuploads/15/Iris_KM.csv"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "data.includes.header": [
+      "true"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "ea6451f0-1296-4ccd-a010-533cb9e06812"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 119,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "ROW_ID",
+      "origin": "0",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 120,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "SEPAL_LE",
+      "origin": "1",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 121,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "SEPAL_WI",
+      "origin": "2",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 122,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "PETAL_LE",
+      "origin": "3",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 123,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "PETAL_WI",
+      "origin": "4",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 124,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "CLASS",
+      "origin": "5",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 125,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Cluster_ID",
+      "origin": "6",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 126,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Cluster_Affinity_for_predicted",
+      "origin": "7",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 127,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Cluster_Affinity_for_setosa",
+      "origin": "8",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 128,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Cluster_Affinity_for_versic",
+      "origin": "9",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 129,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Cluster_Affinity_for_virgin",
+      "origin": "10",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 130,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 131,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 132,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

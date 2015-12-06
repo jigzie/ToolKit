@@ -1,0 +1,19 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.sdk.entity.CustomDataStore",
+  "file": {
+    "uuid": "b92bfaf1-5794-48fc-a490-e679c78290cd",
+    "path": "/.system/FileUploadDataStore.dst",
+    "description": "hidden datastore to upload files: FileUploadDataStore",
+    "name": "FileUploadDataStore"
+  },
+  "typeId": "das.FileUploadDataStoreType",
+  "properties": {
+    "dataStoreUsage": [
+      "IMPORT"
+    ],
+    "custom-file-protocol.url": [
+      "file:///"
+    ]
+  }
+}

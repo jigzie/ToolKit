@@ -1,0 +1,29 @@
+#README
+
+#This is the file to be used with the ImpersonationSync script to set permissions on artifacts in hadoop w/ Datameer permissions
+#The script needs to do the following:
+#1. Run SQL query on Datameer database to get the artifacts ID, owner, Shared groups
+    For Example: select df.id, df.name, p.owner, df.extension from dap_file df, permission p where p.id=df.permission_fk and df.extension like '%EXTENSION%' and p.owner != 'admin';
+                 -- Remove the static admin user, most of the LDAP/AD won't have this ID
+		 -- Only use EXTENSION where the artifact execution is possible & written to Hadoop
+#2. Run this script as hadoop user with SUPERUSER permissions (hdfs/mapr/yarn) which is ALLOWED to change folder permissions.
+#3. You can break it down to ARTIFACT types, for parallel processing (if desired)
+#4. Now translate the ID into shell ID & their primary groupID; Hadoop would like the permissions to be owner:primaryGroupID (You can skip it for now...?)
+#5. Based on artifact ID & type the script needs to run a command: hadoop fs -chown user:group /DatameerPrivateDir/<ArtifactType>/<ID>  
+    -- Simple impersonation: You don't need to do run the CHMOD command as the permissions will be 755
+    -- For Secure impersonation: Additional Step that can be executed at the end of everything: hadoop fs -chmod 770 /DatameerPrivateDir (except tmp/temp)
+
+
+#############For Parallel Execution###########
+#0. Run the DB query: select df.id, name, extension, min_keep_count from dap_file df, dap_job_configuration djc where df.id =djc.dap_file__id and min_keep_count > 1 order by 4 asc;
+    -- Check how many workbooks are keeping more than 1 results?? It's not available so why to store?
+    -- Run housekeeping, maybe manually change the min_keep_count to 1 for ALL workbooks
+#1a. Run the Datameer DB query for each artifact type: select df.id, df.name, p.owner, df.extension from dap_file df, permission p where p.id=df.permission_fk and df.extension like '%EXTENSION%' and file_mode='NORMAL' and p.owner != 'admin' and df.extension like '%WORKBOOK%; //OR %IMPORT% ....
+				OR
+#1b. Run the same query but then parse the results into equal chunks of ID's using the following:
+	(i) wc -l Artifacts.sql | awk '{print $1}' --This is the total number of lines
+	(ii) Divide the above number by 10, for example. So 6490/10 == 649; round it to 700.
+	(iii) Run: tail -n +1 Artifacts.sql | head -n 700 > Artifacts.700.sql
+		   tail -n +701 Artifacts.sql | head -n 700 > Artifacts.1400.sql
+#2. Run the script ./syncDMHadoop.permissions.sh Artifacts.700.sql OR ./syncDMHadoop.permissions.sh Artifacts.workbooks.sql
+#3. Run the Commands from OneTime.Amex file; I would recommend running the workbooks/import-jobs on an individual putty session to have things in parallel. Additionally it would be efficient if you could run that from different machines (to have better performance as well)

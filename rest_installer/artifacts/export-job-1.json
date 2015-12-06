@@ -1,0 +1,42 @@
+{
+    "characterEncoding": "UTF-8",
+    "className": "datameer.dap.common.entity.FileDataSinkImpl",
+    "clearTargetDirectory": false,
+    "confirmOverwrite": false,
+    "connection": "/Administration/HUMv2/Ingestion/Datameer_Logs_SSH",
+    "delimiterString": ",",
+    "errorHandlingMode": "DROP_RECORD",
+    "escapeString": "\\",
+    "exportFileType": "datameer.das.plugin.avro.AvroExportFileType",
+    "file": {
+        "description": "",
+        "name": "MetricsResultsExport",
+        "path": "/Administration/HUMv2/Exports/MetricsResultsExport.exp",
+        "uuid": "ce51f0b6-177e-457c-83b9-8e1c883fb9f6"
+    },
+    "fileName": "/logs/%productId%_%env:companyName%_%env:Name%-v2-%year%%month%%day%_%hour%%min%.avro",
+    "hadoopProperties": "das.debug.job.report-progress-interval=60000\r\ndas.splitting.max-split-count=1\r\nmapred.map.output.compression.codec=org.apache.hadoop.io.compress.GzipCodec\r\ndas.execution-framework=Local",
+    "includeHeader": false,
+    "mappings": [
+        {
+            "name": "json",
+            "nullable": true,
+            "srcColumnIndex": 0
+        }
+    ],
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "quoteString": "\"",
+    "sheet": {
+        "name": "json_output",
+        "sheetId": "3657c23b-c057-4525-a0a0-fe595b991ece",
+        "workbook": {
+            "path": "/Administration/HUMv2/Exports/_04_CentralizedExport.wbk",
+            "uuid": "964f64cc-a18d-4a51-b8db-5028dddec6d7"
+        }
+    },
+    "version": "4.5.0"
+}

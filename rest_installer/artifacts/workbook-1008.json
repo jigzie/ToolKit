@@ -1,0 +1,67 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_14_fileupload_file_types",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_14_fileupload_file_types.wbk",
+        "uuid": "d146fb35-c2cd-4f56-b95b-d17a3dac03c7"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "14 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_fileupload_file_types.lnk",
+                "uuid": "43a8687a-35af-4250-aac6-2879e1ca0b8c"
+            },
+            "keep": false,
+            "name": "MySQL_fileupload_file_types_src",
+            "sheetId": "1707ac4f-ac8a-4a7c-ac3f-1b27c18f23d3",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ConsumerType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "FileType",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "ConsumerType",
+                    "formulaString": "=#MySQL_fileupload_file_types_src!ConsumerType"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "FileType",
+                    "formulaString": "=#MySQL_fileupload_file_types_src!FileType"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_fileupload_file_types",
+            "nextColumnId": 2,
+            "sheetId": "beb64991-cbc4-456b-b606-2fdd6438ad4f",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

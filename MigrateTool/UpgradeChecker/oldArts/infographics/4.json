@@ -1,0 +1,2765 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.infographic.Infographic",
+  "links": {
+    "self": "/rest/infographics/4"
+  },
+  "file": {
+    "uuid": "ae55868d-d5af-4b70-acd2-b826b1775514",
+    "path": "/Users/admin/Applications/Datameer Users Stats 1/HC_Users.ifg",
+    "description": "Health Check User Statistics Infographic",
+    "name": "HC_Users"
+  },
+  "presentationMode": "tabs",
+  "slideshowEffect": "none",
+  "slideshowTime": 5,
+  "tabs": [
+    {
+      "name": "Page 1",
+      "order": 0,
+      "id": "a7d4c5c7-4737-4e72-b365-90528938f7fc",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "red",
+            "imageName": "rect.svg",
+            "panelGroup": "shape",
+            "defaultWidth": 79,
+            "defaultHeight": 79
+          },
+          "name": "Square",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": "1",
+          "top": "2300",
+          "width": "2",
+          "height": "2",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 16,
+          "id": "ece25346-1d43-467e-ae8f-0994fa9ff848",
+          "showFrame": true,
+          "opacity": 1,
+          "baseColor": "red",
+          "strokeColor": "grey",
+          "fillColor": "white",
+          "imageName": "rect.svg",
+          "shadow": false,
+          "shadowOpacity": "0",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": 1,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "200",
+          "top": "1270",
+          "width": "250",
+          "height": "25",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 25,
+          "id": "2904d2a8-3788-40bc-98af-5de7c7a0fc11",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Jobs That Ran Most Often",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 44, 83)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "450",
+          "top": "300",
+          "width": "200",
+          "height": "25",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 31,
+          "id": "fc175a67-b38d-44a6-8417-e47e7b90515d",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Executions",
+          "fontSize": "18",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 145, 208)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "infographics/charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": "450",
+          "top": "218",
+          "width": "200",
+          "height": "75",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 33,
+          "id": "ecf1d280-9be3-4aeb-81e0-167776e6-afdb-4749-964d-0abf7c0e7dfa150ac6071",
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;46bfbac7-bd93-4bfd-ae15-1c1854f6fbd0",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "2",
+                  "id": "a684186c-127b-4732-b8bc-63f0b9249913"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;46bfbac7-bd93-4bfd-ae15-1c1854f6fbd0",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "maxSize": "1000",
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "50",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 44, 83)",
+          "statistic": "sum",
+          "statistic_text": "Sum",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "infographics/charts/table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/table_inspector",
+          "left": "200",
+          "top": "1300",
+          "width": "300",
+          "height": "300",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 35,
+          "id": "c80def0f-8cb9-4d37-a79f-b45704f62505",
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3c984e9f-6f40-4a47-92c5-825d3e1e87b2",
+                  "type": "STRING",
+                  "name": "User",
+                  "columnId": "0",
+                  "id": "4eee2859-2898-48f3-8b59-39b6131c2cfb"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3c984e9f-6f40-4a47-92c5-825d3e1e87b2",
+                  "type": "STRING",
+                  "name": "Job",
+                  "columnId": "1",
+                  "id": "755a8f88-1e6d-4c2e-82e6-797eb45dcd65"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3c984e9f-6f40-4a47-92c5-825d3e1e87b2",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "3",
+                  "id": "cf5989ff-b9a1-41ca-bf14-fa4a04e4a049"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3c984e9f-6f40-4a47-92c5-825d3e1e87b2",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "dataDescriptor": {
+            "maxSize": 100,
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL",
+                "STRING",
+                "DATE"
+              ],
+              "dimensions": [
+                1,
+                100
+              ]
+            }
+          },
+          "maxSize": 3,
+          "headerBackground": "transparent",
+          "rowEvenBackground": "transparent",
+          "rowOddBackground": "transparent",
+          "borderColor": "LightGrey",
+          "headerFontColor": "black",
+          "cellFontColor": "rgb(0, 44, 83)",
+          "columnWidths": [
+            94,
+            129,
+            56
+          ],
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "70",
+          "top": "500",
+          "width": "400",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 19,
+          "id": "ac0a00b9-9fed-4fa4-a817-0da8c1d43712",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Jobs Created by Users and Type",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 44, 83)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "660",
+          "top": "300",
+          "width": "200",
+          "height": 25,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 32,
+          "id": "fd3544f5-753b-4fda-abc3-83f80fd3ed83",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Workbooks",
+          "fontSize": "18",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 145, 208)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "870",
+          "top": "300",
+          "width": "200",
+          "height": "25",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 30,
+          "id": "91619360-0367-464f-a349-a3e5ef5d90bb",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Worksheets",
+          "fontSize": "18",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 145, 208)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "820",
+          "top": "1240",
+          "width": "400",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 20,
+          "id": "cefe1652-68a7-4765-9e0f-df6ef9080198",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Job Started by Someone Other Than Owner",
+          "fontSize": "18",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 44, 83)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "1080",
+          "top": "300",
+          "width": "200",
+          "height": "25",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 29,
+          "id": "d1e1e240-bbc6-4785-a7b8-45c3857001c3",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Avg. Sheets/Book",
+          "fontSize": "18",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 145, 208)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Multi bar chart",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 10,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "panelGroup": "chart",
+            "isBarChart": true
+          },
+          "name": "Multi bar chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 0,
+          "top": 519,
+          "width": "600",
+          "height": 300,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 36,
+          "id": "bdade2ec-1dd4-49d8-a5a0-c63f0a443b0b",
+          "dataSet": {
+            "maxSize": "20",
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "ExportJobCount",
+                  "columnId": "15",
+                  "id": "cd19f1a3-5c5b-4abc-b6a6-e1583faceb69"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "ImportJobCount",
+                  "columnId": "17",
+                  "id": "ccf1f8d0-6f2c-4c92-9062-42ba26ee37ce"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "LinkedJobCount",
+                  "columnId": "19",
+                  "id": "3e1acf48-83c4-4649-9ab2-e9731ae8e6b7"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "UploadJobCount",
+                  "columnId": "21",
+                  "id": "675fa5c6-c52a-484e-8635-3880a2b5a9e4"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "WbJobCount",
+                  "columnId": "23",
+                  "id": "b55d8036-3615-4ff4-990a-eb92a9428a32"
+                }
+              ],
+              "label": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "STRING",
+                  "name": "User",
+                  "columnId": "14",
+                  "id": "2e63f80e-c447-4510-8817-a8413068b343"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": true
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "offset": 10,
+          "scale": "square-root",
+          "isShadowVisible": true,
+          "isStyleVisible": true,
+          "labelOrientation": "diagonal",
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "steelblue",
+          "labelColor": "black",
+          "dataDescriptor": {
+            "maxSize": 10,
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL"
+              ],
+              "dimensions": [
+                1,
+                10
+              ]
+            },
+            "label": {
+              "type": [
+                "ANY"
+              ],
+              "dimensions": [
+                1,
+                1
+              ]
+            }
+          },
+          "variant": "stacked",
+          "maxSize": "20",
+          "groupGapInPercent": 20,
+          "fontSize": 10,
+          "fontName": "Verdana",
+          "labelLength": "74",
+          "colorScheme": "categorical",
+          "isBarChart": true,
+          "showPoints": true,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "labelOrientation_text": "Diagonal",
+          "transpose": false,
+          "marginRight": 10,
+          "variant_text": "Stacked",
+          "scale_text": "Square root",
+          "isGridVisible": false,
+          "labelOrientationX": "diagonal",
+          "labelOrientationY": "horizontal",
+          "offsetVariant": "zero",
+          "isHistogram": false,
+          "showAreas": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "marginTop": 10,
+          "marginBottom": "70",
+          "marginLeft": "70",
+          "margin": 20,
+          "isFrameVisible": false,
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "isZeroLineVisible": true,
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "isBulletChart": false,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "infographics/charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": "660",
+          "top": "218",
+          "width": "200",
+          "height": "75",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 37,
+          "id": "f40f4337-43a5-40b5-9799-c26fbcbaef9e",
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;548a2ffc-f781-49b0-90a1-8aebb3b99391",
+                  "type": "INTEGER",
+                  "name": "WBId",
+                  "index": 3,
+                  "id": "82ee0d72-4278-4691-864c-e31d6436493c"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;548a2ffc-f781-49b0-90a1-8aebb3b99391",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "50",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 44, 83)",
+          "statistic": "count",
+          "maxSize": "1000",
+          "statistic_text": "Count",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "infographics/charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": "30",
+          "top": "218",
+          "width": "200",
+          "height": "75",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 38,
+          "id": "e636204a-69e8-47fb-829c-6d61e329b387",
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;095f915f-2ba1-47ee-8fec-cd48d9028dc8",
+                  "type": "INTEGER",
+                  "name": "id",
+                  "columnId": "0",
+                  "id": "0ebab3a8-94d1-4386-b001-5570e51aaaf6"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;095f915f-2ba1-47ee-8fec-cd48d9028dc8",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "50",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 44, 83)",
+          "statistic": "count",
+          "maxSize": "1000",
+          "statistic_text": "Count",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "30",
+          "top": "300",
+          "width": "200",
+          "height": 25,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 27,
+          "id": "ef96d063-ea45-45ce-bed7-f3d18ee0ecb8",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Users",
+          "fontSize": "18",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 145, 208)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "infographics/charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": "240",
+          "top": "218",
+          "width": "200",
+          "height": "75",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 39,
+          "id": "7be8f36d-d16e-4bb0-bce3-86d0532601b0",
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;062b91e1-7de5-43d3-99e5-6c7f6e893301",
+                  "type": "INTEGER",
+                  "name": "JobCount",
+                  "index": 1,
+                  "id": "8a5656f3-5cc3-40aa-9ce8-f7e8e955962b"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;062b91e1-7de5-43d3-99e5-6c7f6e893301",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "50",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 44, 83)",
+          "statistic": "sum",
+          "maxSize": "1000",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "240",
+          "top": "300",
+          "width": "200",
+          "height": "25",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 28,
+          "id": "3db70f6f-ea8b-4ae5-96a6-f2d46a5ca353",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Jobs",
+          "fontSize": "18",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 145, 208)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "infographics/charts/table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/table_inspector",
+          "left": "820",
+          "top": "1280",
+          "width": "400",
+          "height": "350",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 42,
+          "id": "b1a045ea-41a1-4dcc-9556-93ec173a98ff",
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;0362b052-abcf-46a3-96be-ff91c8cd41c6",
+                  "type": "STRING",
+                  "name": "Name",
+                  "columnId": "0",
+                  "id": "2786e606-937b-4559-a355-b0ba29dab217"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;0362b052-abcf-46a3-96be-ff91c8cd41c6",
+                  "type": "STRING",
+                  "name": "Owner",
+                  "columnId": "1",
+                  "id": "886969f4-1c1d-4e57-86b7-d7b2b9f32489"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;0362b052-abcf-46a3-96be-ff91c8cd41c6",
+                  "type": "STRING",
+                  "name": "User",
+                  "columnId": "2",
+                  "id": "a22786d0-8726-4ea8-bc1d-d0d96e349631"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;0362b052-abcf-46a3-96be-ff91c8cd41c6",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "4",
+                  "id": "35d9ee78-950b-4004-8119-ff9fd7f02dcb"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;0362b052-abcf-46a3-96be-ff91c8cd41c6",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": true
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "dataDescriptor": {
+            "maxSize": 100,
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL",
+                "STRING",
+                "DATE"
+              ],
+              "dimensions": [
+                1,
+                100
+              ]
+            }
+          },
+          "maxSize": 3,
+          "headerBackground": "transparent",
+          "rowEvenBackground": "transparent",
+          "rowOddBackground": "transparent",
+          "borderColor": "LightGrey",
+          "headerFontColor": "black",
+          "cellFontColor": "#2E6E9E",
+          "columnWidths": [
+            165,
+            70,
+            74,
+            69
+          ],
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "infographics/charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": "870",
+          "top": "218",
+          "width": "200",
+          "height": "75",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 43,
+          "id": "4558a222-7aef-4e3c-a19c-eb6269555e01",
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;548a2ffc-f781-49b0-90a1-8aebb3b99391",
+                  "type": "INTEGER",
+                  "name": "Total",
+                  "columnId": "12",
+                  "id": "3c2c7e42-1f76-429c-8226-b26fb852cf63"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;548a2ffc-f781-49b0-90a1-8aebb3b99391",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "50",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 44, 83)",
+          "statistic": "sum",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "infographics/charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": "1080",
+          "top": "218",
+          "width": "200",
+          "height": "75",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 44,
+          "id": "4b64e7de-2deb-4c9f-976d-388b18c7b7b0",
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;548a2ffc-f781-49b0-90a1-8aebb3b99391",
+                  "type": "INTEGER",
+                  "name": "Total",
+                  "columnId": "12",
+                  "id": "7f2109ce-22b4-4582-a7bb-d4e1e9bf2218"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;548a2ffc-f781-49b0-90a1-8aebb3b99391",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "50",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(0, 44, 83)",
+          "statistic": "mean",
+          "statistic_text": "Mean",
+          "prefix": "",
+          "suffix": "",
+          "decimalPlaces": "4",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "infographics/charts/table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/table_inspector",
+          "left": "60",
+          "top": 1780,
+          "width": "420",
+          "height": "380",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 45,
+          "id": "1323a44e-9869-492d-9f3d-6957166c1e7a",
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;4baa9823-981f-457b-8938-e8380b52ba1d",
+                  "type": "STRING",
+                  "name": "Name",
+                  "columnId": "0",
+                  "id": "f3a36ef3-a683-40c8-893a-2cd51aeeb730"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;4baa9823-981f-457b-8938-e8380b52ba1d",
+                  "type": "STRING",
+                  "name": "Type",
+                  "columnId": "1",
+                  "id": "15ebe45f-0044-4e83-ba82-79ed2d081378"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;4baa9823-981f-457b-8938-e8380b52ba1d",
+                  "type": "STRING",
+                  "name": "Permission",
+                  "columnId": "2",
+                  "id": "d5a2e023-fa7f-42ca-8123-774b6e055155"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;4baa9823-981f-457b-8938-e8380b52ba1d",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "dataDescriptor": {
+            "maxSize": 100,
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL",
+                "STRING",
+                "DATE"
+              ],
+              "dimensions": [
+                1,
+                100
+              ]
+            }
+          },
+          "maxSize": 3,
+          "headerBackground": "transparent",
+          "rowEvenBackground": "transparent",
+          "rowOddBackground": "transparent",
+          "borderColor": "LightGrey",
+          "headerFontColor": "black",
+          "cellFontColor": "rgb(0, 44, 83)",
+          "columnWidths": [
+            200,
+            104,
+            101
+          ],
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "60",
+          "top": "1740",
+          "width": "350",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 48,
+          "id": "c19255b6-4a16-49ff-bb70-76e42d790ad5",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Global Permission",
+          "fontSize": "18",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 44, 83)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Multi bar chart",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 20,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              }
+            },
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "panelGroup": "chart",
+            "isBarChart": true
+          },
+          "name": "Multi bar chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": "680",
+          "top": "520",
+          "width": "600",
+          "height": 300,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 29,
+          "id": "c69e3544-f5f0-4d89-8ed8-c81da4d910fa",
+          "dataSet": {
+            "maxSize": "20",
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "STRING",
+                  "name": "User",
+                  "columnId": "14",
+                  "id": "e879dc81-8d80-4502-9032-c23452145b54"
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "ExportRunCount",
+                  "columnId": "25",
+                  "id": "c0b2ae35-6825-4ee0-88f0-6b578561bcd0"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "ImportRunCount",
+                  "columnId": "27",
+                  "id": "da05a383-5bb8-485f-9673-c48da69ee4c9"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "LinkedRunCount",
+                  "columnId": "29",
+                  "id": "7b504234-e6e6-4e47-b610-73a046578960"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "UploadRunCount",
+                  "columnId": "31",
+                  "id": "2ec28b9a-c301-4133-a8df-6a02fafb4cce"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "WbRunCount",
+                  "columnId": "33",
+                  "id": "3b2c03fd-576b-4c84-9f20-82f71b8854ac"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": true
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "offset": 10,
+          "scale": "square-root",
+          "isShadowVisible": true,
+          "isStyleVisible": true,
+          "labelOrientation": "diagonal",
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "steelblue",
+          "labelColor": "black",
+          "dataDescriptor": {
+            "maxSize": 20,
+            "label": {
+              "type": [
+                "ANY"
+              ],
+              "dimensions": [
+                1,
+                1
+              ]
+            },
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL"
+              ],
+              "dimensions": [
+                1,
+                10
+              ]
+            }
+          },
+          "variant": "stacked",
+          "maxSize": "20",
+          "groupGapInPercent": 20,
+          "fontSize": 10,
+          "fontName": "Verdana",
+          "labelLength": 100,
+          "colorScheme": "categorical",
+          "isBarChart": true,
+          "showPoints": true,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "transpose": false,
+          "marginRight": 10,
+          "variant_text": "Stacked",
+          "scale_text": "Square root",
+          "labelOrientation_text": "Diagonal",
+          "isGridVisible": false,
+          "labelOrientationX": "diagonal",
+          "labelOrientationY": "horizontal",
+          "offsetVariant": "zero",
+          "isHistogram": false,
+          "showAreas": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "marginTop": 10,
+          "marginBottom": "70",
+          "marginLeft": "70",
+          "margin": 20,
+          "isFrameVisible": false,
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "isZeroLineVisible": true,
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "isBulletChart": false,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "750",
+          "top": "500",
+          "width": "400",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 30,
+          "id": "58ba482c-6c9a-4774-a7dc-9bfad578dfb3",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Jobs Ran by Users and Type",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 44, 83)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "600",
+          "top": "605",
+          "width": "100",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 31,
+          "id": "bf6070cf-4393-4f52-b88d-915d3b24b750",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Export Jobs",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(45, 121, 177)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "600",
+          "top": "585",
+          "width": "100",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 32,
+          "id": "caba7f3d-e300-41f4-b61a-75ab97ba87df",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Import Jobs",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(239, 132, 56)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "600",
+          "top": "565",
+          "width": "100",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 33,
+          "id": "19890314-089e-4469-814a-673c0abff514",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Data Link Jobs",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(44, 153, 78)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "600",
+          "top": "545",
+          "width": "100",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 34,
+          "id": "b1787e85-147e-4c69-90a3-3140d421a38a",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Upload Jobs",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 0, 0)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "600",
+          "top": "525",
+          "width": "100",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 35,
+          "id": "69aed4f4-5a8d-4f2c-ba8b-69b0c269b064",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Workbook Jobs",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(109, 100, 166)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "infographics/charts/table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/table_inspector",
+          "left": "40",
+          "top": "860",
+          "width": "600",
+          "height": 300,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 36,
+          "id": "94530d44-bc05-420c-ad58-0a99ede56f2e",
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "STRING",
+                  "name": "User",
+                  "columnId": "14",
+                  "id": "6000d593-e43f-406b-aefb-5d732b5571c3"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "ExportJobCount",
+                  "columnId": "15",
+                  "id": "36b03a76-3a88-4063-af66-f90d4da41240"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "ImportJobCount",
+                  "columnId": "17",
+                  "id": "2ae69349-396c-4556-bb22-924aa1b6d6da"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "LinkedJobCount",
+                  "columnId": "19",
+                  "id": "5c560575-3670-4543-afd8-452779319f6c"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "UploadJobCount",
+                  "columnId": "21",
+                  "id": "ef90a36e-2e6a-44a2-bb13-454dd44e7914"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "WbJobCount",
+                  "columnId": "23",
+                  "id": "5fad8406-bcfc-4083-a567-d99b66c7aa67"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "JobCountTotal",
+                  "columnId": "34",
+                  "id": "7b4802ac-99c6-4276-bb50-0acff6d73c89"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "dataDescriptor": {
+            "maxSize": 100,
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL",
+                "STRING",
+                "DATE"
+              ],
+              "dimensions": [
+                1,
+                100
+              ]
+            }
+          },
+          "maxSize": 3,
+          "headerBackground": "transparent",
+          "rowEvenBackground": "transparent",
+          "rowOddBackground": "transparent",
+          "borderColor": "LightGrey",
+          "headerFontColor": "black",
+          "cellFontColor": "rgb(0, 44, 83)",
+          "columnWidths": [
+            109,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80
+          ],
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "infographics/charts/table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/table_inspector",
+          "left": "680",
+          "top": "860",
+          "width": "600",
+          "height": 300,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 37,
+          "id": "81be8e00-aacc-452a-9fec-038959f1f993",
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "STRING",
+                  "name": "User",
+                  "columnId": "14",
+                  "id": "9105794d-5896-4ba4-af8d-57f4b890df35"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "ExportRunCount",
+                  "columnId": "25",
+                  "id": "924ec4e9-3e08-4546-8b9d-ff31e2ee61ba"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "ImportRunCount",
+                  "columnId": "27",
+                  "id": "bb8b75ad-fed5-496c-a325-9365d7c3fb2b"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "LinkedRunCount",
+                  "columnId": "29",
+                  "id": "083614ff-d4bb-4d35-a509-40de800c76a0"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "UploadRunCount",
+                  "columnId": "31",
+                  "id": "909f06cf-049e-4294-bba2-0d2289adecc5"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "WbRunCount",
+                  "columnId": "33",
+                  "id": "56f7faa8-6690-4276-bb46-1b80ebaba510"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+                  "type": "INTEGER",
+                  "name": "ExeCountTotal",
+                  "columnId": "36",
+                  "id": "7aee0a86-e791-44fa-92f8-edbb74a2de39"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;3933345a-fe04-4376-8852-a866dc1af092",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "dataDescriptor": {
+            "maxSize": 100,
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL",
+                "STRING",
+                "DATE"
+              ],
+              "dimensions": [
+                1,
+                100
+              ]
+            }
+          },
+          "maxSize": 3,
+          "headerBackground": "transparent",
+          "rowEvenBackground": "transparent",
+          "rowOddBackground": "transparent",
+          "borderColor": "LightGrey",
+          "headerFontColor": "black",
+          "cellFontColor": "rgb(0, 44, 83)",
+          "columnWidths": [
+            109,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80
+          ],
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "40",
+          "top": "840",
+          "width": "200",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 38,
+          "id": "89311282-4484-4a6c-a386-af0bf3e97e93",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "All Jobs Created by User \u0026 Type",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 44, 83)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "680",
+          "top": "840",
+          "width": "200",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 39,
+          "id": "e8573d5b-85b0-4801-b5e9-16e63af4819c",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "All Jobs Ran by User \u0026 Type",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 44, 83)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "550",
+          "top": "1740",
+          "width": "350",
+          "height": "20",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 41,
+          "id": "f4f39017-0509-4ba2-a737-3f4766ea0ff5",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "User Permissions",
+          "fontSize": "18",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 44, 83)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "infographics/charts/table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/table_inspector",
+          "left": "550",
+          "top": "1780",
+          "width": "710",
+          "height": 300,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 42,
+          "id": "195b3f65-3079-4314-b0c6-35702654a77c",
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;2225b71a-8a44-44f8-aabc-c7b8985430e1",
+                  "type": "STRING",
+                  "name": "User",
+                  "columnId": "0",
+                  "id": "309c2f90-63f7-49c8-94ac-3179583455aa"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;2225b71a-8a44-44f8-aabc-c7b8985430e1",
+                  "type": "STRING",
+                  "name": "Type",
+                  "columnId": "26",
+                  "id": "92aa0637-81be-4a64-983c-eb99689c3715"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;2225b71a-8a44-44f8-aabc-c7b8985430e1",
+                  "type": "STRING",
+                  "name": "Name",
+                  "columnId": "24",
+                  "id": "254879d2-80e2-4fa3-8b30-5b4124bf1464"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;2225b71a-8a44-44f8-aabc-c7b8985430e1",
+                  "type": "STRING",
+                  "name": "Read",
+                  "columnId": "4",
+                  "id": "57e11f9e-8455-4ecc-8d83-ef6993855f0e"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;2225b71a-8a44-44f8-aabc-c7b8985430e1",
+                  "type": "STRING",
+                  "name": "Write",
+                  "columnId": "15",
+                  "id": "8f28cf0e-eef0-4c0f-89ee-e904d810c3e8"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;2225b71a-8a44-44f8-aabc-c7b8985430e1",
+                  "type": "STRING",
+                  "name": "Execute",
+                  "columnId": "17",
+                  "id": "11657cdf-dea5-4348-8915-d67f15c3afd7"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Datameer Users Stats 1/Resources/HealthCheck.wbk;167776e6-afdb-4749-964d-0abf7c0e7dfa;0;0;2225b71a-8a44-44f8-aabc-c7b8985430e1",
+            "lastExecutionDate": "10/19/2012 05:08:36 PM",
+            "isTruncated": true
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "dataDescriptor": {
+            "maxSize": 100,
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL",
+                "STRING",
+                "DATE"
+              ],
+              "dimensions": [
+                1,
+                100
+              ]
+            }
+          },
+          "maxSize": 3,
+          "headerBackground": "transparent",
+          "rowEvenBackground": "transparent",
+          "rowOddBackground": "transparent",
+          "borderColor": "LightGrey",
+          "headerFontColor": "black",
+          "cellFontColor": "#2E6E9E",
+          "columnWidths": [
+            122,
+            135,
+            245,
+            60,
+            62,
+            65
+          ],
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "570",
+          "top": "100",
+          "width": "400",
+          "height": "75",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 43,
+          "id": "ae5236c0-16ff-465c-8183-56b3a49de898",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "User Stats",
+          "fontSize": "60",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 145, 208)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": "50",
+          "top": "20",
+          "width": "800",
+          "height": "70",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 37,
+          "id": "0e6d259d-21c8-42db-9ce6-1279c7b90731",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "System Health Check",
+          "fontSize": "60",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 145, 208)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 68,
+          "top": 430,
+          "width": "200",
+          "height": "45",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 38,
+          "id": "598a488b-6d47-44d7-abc1-53791befa992",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 20",
+          "fontSize": "30",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 145, 208)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 200,
+          "top": 1209,
+          "width": "200",
+          "height": "45",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 38,
+          "id": "2ea0770a-46a6-4254-a172-d22996b249e4",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 100",
+          "fontSize": "30",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(0, 145, 208)"
+        }
+      ],
+      "backgroundColor": "rgb(222, 234, 252)",
+      "backgroundType": "color",
+      "backgroundImagePlacement": "tile",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both"
+    }
+  ],
+  "backgroundType_text": "Color",
+  "backgroundImageUrl": "/image-upload?path\u003d%2FApplications%2FDatameer%20Health%20Check%2FImages%2FPattern.png",
+  "backgroundImagePlacement_text": "Tile"
+}

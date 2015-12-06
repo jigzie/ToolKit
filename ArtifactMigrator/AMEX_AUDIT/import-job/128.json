@@ -1,0 +1,111 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "698d2163-946f-4a42-91d2-9700f9f4d595",
+    "path": "/Users/admin/Applications/AMEX/jobConf_5941.upl",
+    "description": "JobConf 5941",
+    "name": "jobConf_5941"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "b9425550-0442-414f-bacb-0a661cb64249"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-5.9.4-mapr-4.0.2-mr2/das-data/fileuploads/27/job-conf.xml"
+    ],
+    "fileType": [
+      "XML"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "namespaces": [
+      ""
+    ],
+    "rootElement": [
+      "property"
+    ],
+    "xPaths": [
+      "/"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT_SCANNER"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "b92bfaf1-5794-48fc-a490-e679c78290cd"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 88,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "jobConf_5941",
+      "origin": "/",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 89,
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 90,
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 91,
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 92,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 93,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

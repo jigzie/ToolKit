@@ -1,0 +1,77 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_26_property",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_26_property.wbk",
+        "uuid": "3088303f-fffb-4513-a164-0c82952621c4"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "26 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_property.lnk",
+                "uuid": "443e843a-44bd-416d-aebe-df7ae3d0ade5"
+            },
+            "keep": false,
+            "name": "MySQL_property_src",
+            "sheetId": "874b1e33-2218-4146-90a5-b8bd0aaa6bb7",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "value",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "filterArguments": [
+                {
+                    "filterExpression": "FORMULA",
+                    "type": "ADVANCED_FORMULA",
+                    "value": "#name != \"mail.password\" && #name != \"hadoop.ec2PrivateKeyFile\" && #name != \"hadoop.ec2AccessSecret\" && #name != \"hadoop.ec2AccessKey\" && #name != \"hadoop.secureHdfsPrincipal\" && #name != \"hadoop.secureUserPrincipal\" && #name != \"hadoop.secureUserKeytabPath\" && #name != \"hadoop.secureMapReducePrincipal\" && #name != \"hadoop.secureYarnPrincipal\"",
+                    "valueStatic": false
+                }
+            ],
+            "filterSourceSheet": "MySQL_property",
+            "filterTargetSheet": "MySQL_property",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "name",
+                    "formulaString": "=#MySQL_property_src!name"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "value",
+                    "formulaString": "=#MySQL_property_src!value"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_property",
+            "nextColumnId": 2,
+            "sheetId": "2181ef28-b94a-4239-8076-b663baea8d4f",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

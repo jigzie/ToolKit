@@ -1,0 +1,1380 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_02_HTTP_Combiner",
+        "path": "/Administration/HUMv2/Exports/_02_HTTP_Combiner.wbk",
+        "uuid": "7d25320f-8dd7-4223-be0b-8091cd0c5266"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 223
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "clusterConfs",
+            "referencedSheet": {
+                "name": "clusterConfs",
+                "sheetId": "45657f19-6479-44b0-9c46-aa8179ec331f",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/ClusterConfig.wbk",
+                    "uuid": "de78919e-b8c7-4d87-bbf4-14671f333b6f"
+                }
+            },
+            "sheetId": "55549e55-c525-401d-baee-5aa4f8b623bb",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 223
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "key",
+                    "formulaString": "=#clusterConfs!key"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "val",
+                    "formulaString": "=#clusterConfs!val"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"clusterConfs\""
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 3,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"key\";\"val\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 4,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#key;#val;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "clusterConfs_prep",
+            "nextColumnId": 5,
+            "sheetId": "6c908dd8-c0e2-433a-b98e-4570ef2a6152",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 571
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#clusterConfs_prep!keys;#clusterConfs_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "clusterConfs_rpt",
+            "nextColumnId": 1,
+            "sheetId": "79dff905-7341-4c7b-ba4d-f82d5ecc0ce8",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "conductorConfs",
+            "referencedSheet": {
+                "name": "conductorConfs",
+                "sheetId": "a21e461c-34fd-48a3-9191-5b81820d0176",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/ConductorConfig.wbk",
+                    "uuid": "1055440a-a3e4-4f02-8368-198501882b33"
+                }
+            },
+            "sheetId": "0a542ed4-45fe-49a7-a805-779a27c0221b",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "key",
+                    "formulaString": "=#conductorConfs!key"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "val",
+                    "formulaString": "=#conductorConfs!val"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"conductorConfs\""
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"key\";\"val\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#key;#val;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "conductorConfs_prep",
+            "nextColumnId": 5,
+            "sheetId": "5fa9b7b8-32d4-4d4a-aea6-bf6a8d33179e",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#conductorConfs_prep!keys;#conductorConfs_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "conductorConfs_rpt",
+            "nextColumnId": 1,
+            "sheetId": "928f3979-affc-4047-a336-d7853c687527",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 317
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 286
+                },
+                {
+                    "columnId": "2",
+                    "name": "mr_ver",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "cluster_health",
+            "referencedSheet": {
+                "name": "cluster_health_rpt",
+                "sheetId": "48e638ed-6af0-4689-ae70-85f697cc2359",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/ClusterHealthPage.wbk",
+                    "uuid": "d39b25ca-c6f7-4bf3-9023-da676c2c8983"
+                }
+            },
+            "sheetId": "87276ced-cb28-44b1-8a1f-cd896cf9e1d5",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 317
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 286
+                },
+                {
+                    "columnId": "2",
+                    "name": "mr_ver",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "key",
+                    "formulaString": "=#cluster_health!key"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "val",
+                    "formulaString": "=#cluster_health!val"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "mr_ver",
+                    "formulaString": "=#cluster_health!mr_ver"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"clusterHealth\""
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"key\";\"val\";\"mr_ver\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#key;#val;#mr_ver;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "cluster_health_prep",
+            "nextColumnId": 6,
+            "sheetId": "95be5054-649a-4e86-9cc9-769601c9645d",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#cluster_health_prep!keys;#cluster_health_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "cluster_health_rpt",
+            "nextColumnId": 1,
+            "sheetId": "b39533c2-1597-4579-af59-7144aa597fc5",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "rack",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "state",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "host",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "status",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "containers",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "used_mem_mb",
+                    "thousandSeparator": true,
+                    "width": 139
+                },
+                {
+                    "columnId": "6",
+                    "name": "available_mem_mb",
+                    "thousandSeparator": true,
+                    "width": 149
+                },
+                {
+                    "columnId": "7",
+                    "name": "mr_ver",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "node_manager",
+            "referencedSheet": {
+                "name": "node_manager_rpt",
+                "sheetId": "8f7fbdba-7513-4c1a-afb3-7e5603ab66ed",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/ClusterHealthPage.wbk",
+                    "uuid": "d39b25ca-c6f7-4bf3-9023-da676c2c8983"
+                }
+            },
+            "sheetId": "ee0d96dc-18a9-42fe-8b25-ef6828285061",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "rack",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "state",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "host",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "status",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "containers",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "used_mem_mb",
+                    "thousandSeparator": true,
+                    "width": 139
+                },
+                {
+                    "columnId": "6",
+                    "name": "available_mem_mb",
+                    "thousandSeparator": true,
+                    "width": 149
+                },
+                {
+                    "columnId": "7",
+                    "name": "mr_ver",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "rack",
+                    "formulaString": "=#node_manager!rack"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "state",
+                    "formulaString": "=#node_manager!state"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "host",
+                    "formulaString": "=SHA_256(#node_manager!host)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "status",
+                    "formulaString": "=#node_manager!status"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "containers",
+                    "formulaString": "=#node_manager!containers"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "used_mem_mb",
+                    "formulaString": "=#node_manager!used_mem_mb"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "available_mem_mb",
+                    "formulaString": "=#node_manager!available_mem_mb"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "mr_ver",
+                    "formulaString": "=#node_manager!mr_ver"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"nodeManager\""
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"rack\";\"state\";\"host\";\"status\";\"containers\";\"used_mem_mb\";\"available_mem_mb\";\"mr_ver\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#rack;#state;#host;#status;#containers;#used_mem_mb;#available_mem_mb;#mr_ver;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "node_manager_prep",
+            "nextColumnId": 11,
+            "sheetId": "fd0d9a66-b1a4-4666-8628-db8904932459",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#node_manager_prep!keys;#node_manager_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "node_manager_rpt",
+            "nextColumnId": 1,
+            "sheetId": "f7028f17-f511-482a-b615-895d027b49af",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "host",
+                    "thousandSeparator": true,
+                    "width": 200
+                },
+                {
+                    "columnId": "3",
+                    "name": "capacity",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "used",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "requests",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "lastUpdate",
+                    "thousandSeparator": true,
+                    "width": 164
+                },
+                {
+                    "columnId": "7",
+                    "name": "state",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "mr_ver",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "data_node_statistics",
+            "referencedSheet": {
+                "name": "data_node_statistics_rpt",
+                "sheetId": "f0cd4057-de1c-4efe-8a42-405bf1df84a6",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/ClusterHealthPage.wbk",
+                    "uuid": "d39b25ca-c6f7-4bf3-9023-da676c2c8983"
+                }
+            },
+            "sheetId": "fbb19fd3-0c68-4c77-b5a3-cc488a020be0",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "host",
+                    "thousandSeparator": true,
+                    "width": 200
+                },
+                {
+                    "columnId": "1",
+                    "name": "capacity",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "used",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "requests",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "lastUpdate",
+                    "thousandSeparator": true,
+                    "width": 164
+                },
+                {
+                    "columnId": "5",
+                    "name": "state",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "mr_ver",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "host",
+                    "formulaString": "=SHA_256(#data_node_statistics!host)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "capacity",
+                    "formulaString": "=#data_node_statistics!capacity"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "used",
+                    "formulaString": "=#data_node_statistics!used"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "requests",
+                    "formulaString": "=#data_node_statistics!requests"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "lastUpdate",
+                    "formulaString": "=#data_node_statistics!lastUpdate"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "state",
+                    "formulaString": "=#data_node_statistics!state"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "mr_ver",
+                    "formulaString": "=#data_node_statistics!mr_ver"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"data_node_statistics\""
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"host\";\"capacity\";\"used\";\"requests\";\"lastUpdate\";\"state\";\"mr_ver\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#host;#capacity;#used;#requests;#lastUpdate;#state;#mr_ver;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "data_node_statistics_prep",
+            "nextColumnId": 10,
+            "sheetId": "3aae9759-cf11-43fd-a083-e9fb2d81279a",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#data_node_statistics_prep!keys;#data_node_statistics_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "data_node_statistics_rpt",
+            "nextColumnId": 1,
+            "sheetId": "027bc23f-1c1f-4ff2-9649-5236e6e29478",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 204
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 236
+                }
+            ],
+            "keep": false,
+            "name": "devPageDetails",
+            "referencedSheet": {
+                "name": "devPageDetails",
+                "sheetId": "db771e13-51ed-4310-8a7f-402afc5a4270",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/DevPageDetails.wbk",
+                    "uuid": "e61e7e6e-09b8-41bc-b4ae-ca0839630870"
+                }
+            },
+            "sheetId": "d115365f-3c95-4837-8a28-494f414011ed",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 204
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 236
+                },
+                {
+                    "columnId": "2",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "key",
+                    "formulaString": "=#devPageDetails!key"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "val",
+                    "formulaString": "=#devPageDetails!val"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"devPageDetails\""
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"key\";\"val\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#key;#val;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "devPageDetails_prep",
+            "nextColumnId": 5,
+            "sheetId": "6f87333f-6c99-4c97-a532-737354979fba",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#devPageDetails_prep!keys;#devPageDetails_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "devPageDetails_rpt",
+            "nextColumnId": 1,
+            "sheetId": "5b37ec26-1fa6-4a1d-b4e7-13f16d98b919",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 123
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 754
+                }
+            ],
+            "keep": false,
+            "name": "licensePageDetails",
+            "referencedSheet": {
+                "name": "licensePageDetails",
+                "sheetId": "252779e8-f017-463c-af22-785565884ace",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/LicensePageDetails.wbk",
+                    "uuid": "a8fae03b-da15-4bcc-b96a-84fa4c1ec7df"
+                }
+            },
+            "sheetId": "3422f656-35de-412a-90a0-1fd0f55d741b",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 123
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 754
+                },
+                {
+                    "columnId": "2",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "key",
+                    "formulaString": "=#licensePageDetails!key"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "val",
+                    "formulaString": "=#licensePageDetails!val"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"licensePageDetails\""
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"key\";\"val\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#key;#val;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "licensePageDetails_prep",
+            "nextColumnId": 5,
+            "sheetId": "49e7e219-18e3-4796-9867-15774adbaeef",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#licensePageDetails_prep!keys;#licensePageDetails_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "licensePageDetails_rpt",
+            "nextColumnId": 1,
+            "sheetId": "5f1d1db7-14c5-4dad-80d6-253ea7d2ff7e",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "1",
+                    "name": "plugin_name",
+                    "thousandSeparator": true,
+                    "width": 214
+                },
+                {
+                    "columnId": "2",
+                    "name": "plugin_version",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "plugins_n_versions",
+            "referencedSheet": {
+                "name": "plugins_n_versions",
+                "sheetId": "2ebb8afd-37fc-4d58-aa30-93151e6e635e",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/Plugins.wbk",
+                    "uuid": "3076e475-7acb-48d3-8b16-35e276e5f8b0"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "c47bda10-2078-4839-8846-614520a9e846",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "plugin_name",
+                    "thousandSeparator": true,
+                    "width": 214
+                },
+                {
+                    "columnId": "1",
+                    "name": "plugin_version",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "plugin_name",
+                    "formulaString": "=#plugins_n_versions!plugin_name"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "plugin_version",
+                    "formulaString": "=#plugins_n_versions!plugin_version"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"plugins_n_versions\""
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"plugin_name\";\"plugin_version\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#plugin_name;#plugin_version;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "plugins_n_versions_prep",
+            "nextColumnId": 5,
+            "sheetId": "0a7ae3f2-72b7-4973-a922-f08bc4dd64c6",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#plugins_n_versions_prep!keys;#plugins_n_versions_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "plugins_n_versions_rpt",
+            "nextColumnId": 1,
+            "sheetId": "aaa5605f-148d-43ec-8d90-4f7ccf62dd1c",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "value",
+                    "thousandSeparator": true,
+                    "width": 362
+                }
+            ],
+            "keep": false,
+            "name": "versionConfig",
+            "referencedSheet": {
+                "name": "versionConfig",
+                "sheetId": "d6a1c435-dc71-4bb1-805c-1662eeeeaf11",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/VersionDetails.wbk",
+                    "uuid": "76576f46-359e-4999-acf0-0bae61f9bc7a"
+                }
+            },
+            "sheetId": "0f037a5c-4b78-45a2-937b-79a1c3a726e1",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 362
+                },
+                {
+                    "columnId": "2",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "key",
+                    "formulaString": "=#versionConfig!key"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "val",
+                    "formulaString": "=#versionConfig!value"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"versionConfig\""
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"key\";\"val\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#key;#val;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "versionConfig_prep",
+            "nextColumnId": 5,
+            "sheetId": "68cdc315-c49a-42dc-bdf5-f84312a88b37",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 400
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#versionConfig_prep!keys;#versionConfig_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "versionConfig_rpt",
+            "nextColumnId": 1,
+            "sheetId": "c0111ed7-2ba7-44b2-87a3-3191ff952e7c",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "combined_json",
+            "sheetDefinition": {
+                "unionSources": [
+                    "clusterConfs_rpt",
+                    "conductorConfs_rpt",
+                    "cluster_health_rpt",
+                    "node_manager_rpt",
+                    "data_node_statistics_rpt",
+                    "devPageDetails_rpt",
+                    "licensePageDetails_rpt",
+                    "plugins_n_versions_rpt",
+                    "versionConfig_rpt"
+                ]
+            },
+            "sheetId": "5a76cb11-2f4a-4170-a8e0-27eb01d34a62",
+            "sheetType": "das.internal.UnionSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=ENC_BASE64(#combined_json!json)"
+                }
+            ],
+            "keep": true,
+            "name": "http_encoded_output",
+            "nextColumnId": 1,
+            "sheetId": "9a60a594-c0b2-40c1-8824-b6b14fdce0a6",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

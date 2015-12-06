@@ -1,0 +1,121 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "c0cf2042-36e2-4f15-ba64-ad4b88addbcb",
+    "path": "/Data/FileUploads/FlsDateSub.upl",
+    "description": "",
+    "name": "FlsDateSub"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "5a152581-e683-4af3-a3c5-8ad2d487fe0a"
+    ],
+    "file": [
+      "/private/tmp/fileuploads/45/pkunick.flsconnect"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "data.includes.header": [
+      "true"
+    ],
+    "delimiter": [
+      ";"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "quoteCharacter": [
+      ""
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "08eba90e-189d-402e-9e85-3662d5a587ce"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 126,
+      "pattern": "MMM dd, yyyy HH:mm:ss",
+      "acceptEmpty": true,
+      "name": "Date1",
+      "origin": "0",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 127,
+      "pattern": "MMM dd, yyyy HH:mm:ss",
+      "acceptEmpty": true,
+      "name": "Date2",
+      "origin": "1",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 128,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 129,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 130,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

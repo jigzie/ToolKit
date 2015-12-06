@@ -1,0 +1,73 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "2b158dc3-26cf-4c6e-8f2f-ce30c327169e",
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/Copy_of_User.lnk",
+    "description": "User for Health Check",
+    "name": "Copy_of_User"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "cccd6c03-ad0d-4e95-909f-df16e45a74f2"
+    ],
+    "!query!": [
+      "select usr.id UserId, usr.name User, usr.enabled Enabled\r\nfrom user usr"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "histogram.generation": [
+      "false"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/SystemDatabase.dst",
+    "uuid": "1c07895a-11dd-4e7b-9929-642b7db9c90d"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 5,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 251,
+      "acceptEmpty": false,
+      "name": "UserId",
+      "origin": "UserId",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 252,
+      "acceptEmpty": true,
+      "name": "User",
+      "origin": "User",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 253,
+      "acceptEmpty": false,
+      "name": "Enabled",
+      "origin": "Enabled",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "43fb6ac4-aa23-41d6-9694-ada3107e5bf5",
+    "path": "/Datameer Consumption Stats/Resources/DM_User_Group_Info.lnk",
+    "description": "Datameer User \u0026 User Group Information",
+    "name": "DM_User_Group_Info"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "30c6bcf5-9722-46d6-b9e4-bb55a58e6c6d"
+    ],
+    "!query!": [
+      "select u.name UserName, u.email UserEmail, u.enabled ActiveUser, ug.name GroupName\r\nfrom user u, user_group ug, usergroup_user ugu\r\nwhere u.id\u003dugu.user_id\r\nand ugu.group_id \u003d ug.id"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Datameer Consumption Stats/Resources/MySQL_DB.dst",
+    "uuid": "0672f52b-2468-4942-996c-f12b4facc747"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 7,
+      "acceptEmpty": true,
+      "name": "UserName",
+      "origin": "UserName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 8,
+      "acceptEmpty": false,
+      "name": "UserEmail",
+      "origin": "UserEmail",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 9,
+      "acceptEmpty": false,
+      "name": "ActiveUser",
+      "origin": "ActiveUser",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 10,
+      "acceptEmpty": true,
+      "name": "GroupName",
+      "origin": "GroupName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

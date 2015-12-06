@@ -1,0 +1,507 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_Logs_SSH.dst",
+        "uuid": "3b3f9a84-7034-41e2-920d-4fe01cc05623"
+    },
+    "errorHandlingMode": "DROP_RECORD",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10664,
+            "include": true,
+            "name": "timestamp",
+            "origin": "timestamp",
+            "pattern": "yyyy-MM-dd HH:mm:ss",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10665,
+            "include": true,
+            "name": "action_type",
+            "origin": "action-type",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10666,
+            "include": true,
+            "name": "action",
+            "origin": "action",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10667,
+            "include": true,
+            "name": "performed_by_user",
+            "origin": "performed-by-user",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10668,
+            "include": true,
+            "name": "performer_roles",
+            "origin": "performer-roles",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10669,
+            "include": true,
+            "name": "ip_address",
+            "origin": "ip-address",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10670,
+            "include": true,
+            "name": "root_uuid",
+            "origin": "root-uuid",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10671,
+            "include": true,
+            "name": "file_uuid",
+            "origin": "file-uuid",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10672,
+            "include": true,
+            "name": "file_path",
+            "origin": "file-path",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10673,
+            "include": true,
+            "name": "folder_path",
+            "origin": "folder-path",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10674,
+            "include": true,
+            "name": "group_name",
+            "origin": "group-name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10675,
+            "include": true,
+            "name": "read_permission",
+            "origin": "read-permission",
+            "pattern": "",
+            "valueType": "{\"type\":\"BOOLEAN\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10676,
+            "include": true,
+            "name": "write_permission",
+            "origin": "write-permission",
+            "pattern": "",
+            "valueType": "{\"type\":\"BOOLEAN\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10677,
+            "include": true,
+            "name": "execute_permission",
+            "origin": "execute-permission",
+            "pattern": "",
+            "valueType": "{\"type\":\"BOOLEAN\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10678,
+            "include": true,
+            "name": "shared_public",
+            "origin": "shared-public",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10679,
+            "include": true,
+            "name": "new_owner_name",
+            "origin": "new-owner-name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10680,
+            "include": true,
+            "name": "user_name",
+            "origin": "user-name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10681,
+            "include": true,
+            "name": "role_name",
+            "origin": "role-name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10682,
+            "include": true,
+            "name": "execution_id",
+            "origin": "execution-id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10683,
+            "include": true,
+            "name": "execution_type",
+            "origin": "execution-type",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10684,
+            "include": true,
+            "name": "execution_triggered_by",
+            "origin": "execution-triggered-by",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10685,
+            "include": true,
+            "name": "execution_job_schedule",
+            "origin": "execution-job-schedule",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10686,
+            "include": true,
+            "name": "execution_configuration_path",
+            "origin": "execution-configuration-path",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10687,
+            "include": true,
+            "name": "execution_configuration_uuid",
+            "origin": "execution-configuration-uuid",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10688,
+            "include": true,
+            "name": "execution_job_status",
+            "origin": "execution-job-status",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10689,
+            "include": true,
+            "name": "execution_job_user",
+            "origin": "execution-job-user",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10690,
+            "include": true,
+            "name": "data_uuid",
+            "origin": "data-uuid",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10691,
+            "include": true,
+            "name": "data_path",
+            "origin": "data-path",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10692,
+            "include": true,
+            "name": "workbook_uuid",
+            "origin": "workbook-uuid",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10693,
+            "include": true,
+            "name": "workbook_path",
+            "origin": "workbook-path",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10694,
+            "include": true,
+            "name": "workbook_sheet_name",
+            "origin": "workbook-sheet-name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10695,
+            "include": true,
+            "name": "workbook_sheet_column_name",
+            "origin": "workbook-sheet-column-name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10696,
+            "include": true,
+            "name": "workbook_sheet_column_index",
+            "origin": "workbook-sheet-column-index",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10697,
+            "include": true,
+            "name": "datasource_uuid",
+            "origin": "datasource-uuid",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10698,
+            "include": true,
+            "name": "datasource_path",
+            "origin": "datasource-path",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10699,
+            "include": true,
+            "name": "workbook_join_sheets",
+            "origin": "workbook-join-sheets",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10700,
+            "include": true,
+            "name": "application_uuid",
+            "origin": "application-uuid",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10701,
+            "include": true,
+            "name": "application_path",
+            "origin": "application-path",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10702,
+            "include": true,
+            "name": "old_name",
+            "origin": "old-name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10703,
+            "include": false,
+            "name": "dasFileName",
+            "origin": "fileInfo.fileName",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10704,
+            "include": false,
+            "name": "dasFilePath",
+            "origin": "fileInfo.filePath",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10705,
+            "include": false,
+            "name": "dasLastModified",
+            "origin": "fileInfo.lastModified",
+            "pattern": "",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "User Logins",
+        "name": "Logs_User_Action",
+        "path": "/Administration/HUMv2/Ingestion/Logs_User_Action.lnk",
+        "uuid": "1392922b-301a-4dd4-b706-e44630310594"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 5,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "GenericConfigurationImpl.temp-file-store": [
+            "0986a9af-d2a4-43e6-8112-5f1099973556"
+        ],
+        "TextFileFormat": [
+            "TEXT_SCANNER"
+        ],
+        "alwaysIncludePaths": [
+            ""
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "collect_additional_fields": [
+            "false"
+        ],
+        "file": [
+            "logs/useraction.log*"
+        ],
+        "fileNameTimeRange_mode": [
+            "OFF"
+        ],
+        "fileType": [
+            "JSON"
+        ],
+        "filter.maxAge": [
+            ""
+        ],
+        "filter.minAge": [
+            ""
+        ],
+        "filter.page.does.split.creation": [
+            "false"
+        ],
+        "ignorePaths": [
+            ""
+        ],
+        "ignore_surrounding_text": [
+            "false"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "maxTraverseDepth": [
+            "0"
+        ],
+        "recordSampleSize": [
+            "1000"
+        ],
+        "rootPath": [
+            ""
+        ],
+        "skipExpandPaths": [
+            ""
+        ],
+        "source.data.partitioned": [
+            "false"
+        ],
+        "unwrap_root_array": [
+            "false"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

@@ -1,0 +1,526 @@
+{
+    "advancedSchedulingInUse": false,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_a_Hadoop MR Job Metrics",
+        "path": "/Administration/HUMv2/Reports/logs/_a_Hadoop MR Job Metrics.wbk",
+        "uuid": "1aaaadea-bfd0-44ee-aec4-e211ec096685"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "cardinalities.generation": [
+            "true"
+        ],
+        "histograms.generation": [
+            "true"
+        ],
+        "minmaxmean.generation": [
+            "true"
+        ]
+    },
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "Job_Name",
+                    "thousandSeparator": true,
+                    "width": 450
+                },
+                {
+                    "columnId": "Hadoop_Job_Id",
+                    "thousandSeparator": true,
+                    "width": 182
+                },
+                {
+                    "columnId": "Counter_Name",
+                    "thousandSeparator": true,
+                    "width": 170
+                },
+                {
+                    "columnId": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 185
+                },
+                {
+                    "columnId": "1",
+                    "thousandSeparator": true,
+                    "width": 242
+                },
+                {
+                    "columnId": "2",
+                    "thousandSeparator": true,
+                    "width": 244
+                },
+                {
+                    "columnId": "3",
+                    "thousandSeparator": true,
+                    "width": 176
+                }
+            ],
+            "keep": false,
+            "name": "Hadoop_Metrics",
+            "partitionSelectionExpression": "$partition >= ADDTODATE(TODAY();\"-30d\")",
+            "referencedSheet": {
+                "name": "Hadoop_Metrics",
+                "sheetId": "232cd893-6474-498b-b1fb-c9354aa8db6a",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/base/_02_10_Hadoop_Metrics.wbk",
+                    "uuid": "958332b0-e4b6-4f6b-9792-f9ebe2ec7b0e"
+                }
+            },
+            "sheetId": "bf196738-34d9-43af-baad-428bd1e14cc1",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Counter_Name",
+                    "thousandSeparator": true,
+                    "width": 200
+                },
+                {
+                    "columnId": "4",
+                    "name": "Counter_Value",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "Job_Name",
+                    "thousandSeparator": true,
+                    "width": 466
+                },
+                {
+                    "columnId": "8",
+                    "name": "Execution_Id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "Hadoop_Job_Id",
+                    "thousandSeparator": true,
+                    "width": 206
+                },
+                {
+                    "columnId": "11",
+                    "name": "Job_Type",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Hadoop_Metrics!Timestamp"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 1,
+                    "columnName": "Hadoop_Job_Id",
+                    "formulaString": "=COPY(#Hadoop_Metrics!Hadoop_Job_Id)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 2,
+                    "columnName": "Job_Name",
+                    "formulaString": "=COPY(#Hadoop_Metrics!Job_Name)"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 3,
+                    "columnName": "Job_Type",
+                    "formulaString": "=IF(startswith(#Job_Name;\"COMPACTION\");\"Compaction job\";REPLACEALL(#Job_Name;\" [(].*\";\"\"))"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 4,
+                    "columnName": "Execution_Id",
+                    "formulaString": "=INT(IF(EQUALS(#Job_Type;\"Compaction job\");\"\";IF(CONTAINS(#Job_Name;\"(\");SUBSTR(SUBSTR(#Job_Name;INDEX(#Job_Name;\"\\\\(\") + 1);0;INDEX(SUBSTR(#Job_Name;INDEX(#Job_Name;\"\\\\(\") + 1);\"\\\\)\"));SUBSTR(SUBSTR(#Job_Name;INDEX(#Job_Name;\"_\")+1);0;INDEX(SUBSTR(#Job_Name;INDEX(#Job_Name;\"_\")+1);\"__\")))))"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 5,
+                    "columnName": "Counter_Name",
+                    "formulaString": "=REPLACEALL(#Hadoop_Metrics!Counter_Name;\"[.].*\";\"\")"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 6,
+                    "columnName": "Counter_Value",
+                    "formulaString": "=#Hadoop_Metrics!Counter_Value"
+                }
+            ],
+            "keep": false,
+            "name": "HadoopMetrics",
+            "nextColumnId": 14,
+            "sheetId": "2e10a8b8-18f3-47f0-971c-f7d34004f117",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Counter_Name",
+                    "thousandSeparator": true,
+                    "width": 284
+                },
+                {
+                    "columnId": "1",
+                    "name": "Sample_Counter_Value",
+                    "thousandSeparator": true,
+                    "width": 161
+                },
+                {
+                    "columnId": "2",
+                    "name": "Average_Counter_Value",
+                    "thousandSeparator": true,
+                    "width": 160
+                },
+                {
+                    "columnId": "3",
+                    "name": "Max_Counter_Value",
+                    "thousandSeparator": true,
+                    "width": 135
+                },
+                {
+                    "columnId": "4",
+                    "name": "Min_Counter_Value",
+                    "thousandSeparator": true,
+                    "width": 128
+                },
+                {
+                    "columnId": "5",
+                    "name": "Median_Counter_Value",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "Sum_Counter_Value",
+                    "thousandSeparator": true,
+                    "width": 145
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Counter_Name",
+                    "formulaString": "=GROUPBY(#HadoopMetrics!Counter_Name)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Sample_Counter_Value",
+                    "formulaString": "=GROUPANY(#HadoopMetrics!Counter_Value)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Average_Counter_Value",
+                    "formulaString": "=GROUPAVERAGE(#HadoopMetrics!Counter_Value)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Max_Counter_Value",
+                    "formulaString": "=GROUPMAX(#HadoopMetrics!Counter_Value)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Min_Counter_Value",
+                    "formulaString": "=GROUPMIN(#HadoopMetrics!Counter_Value)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "Median_Counter_Value",
+                    "formulaString": "=GROUPMEDIAN(#HadoopMetrics!Counter_Value)"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "Sum_Counter_Value",
+                    "formulaString": "=GROUPSUM(#HadoopMetrics!Counter_Value)"
+                }
+            ],
+            "keep": true,
+            "name": "Counters",
+            "nextColumnId": 7,
+            "sheetId": "e7c92df0-e2d5-44f8-8b4c-c429373754dc",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Counter_Name",
+                    "sortOrder": "ASC"
+                }
+            ],
+            "sortSourceSheet": "Counters",
+            "sortTargetSheet": "Counters"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "HadoopJobId",
+                    "thousandSeparator": true,
+                    "width": 187
+                },
+                {
+                    "columnId": "1",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "OutputBytes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "processedBytes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "RunTimeMinutes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "JobTypeId",
+                    "thousandSeparator": true,
+                    "width": 149
+                },
+                {
+                    "columnId": "8",
+                    "name": "JobType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "DatameerJobId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "MapSlots",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "ReduceSlots",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "FileBytesRead",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "13",
+                    "name": "HdfsBytesRead",
+                    "thousandSeparator": true,
+                    "width": 141
+                },
+                {
+                    "columnId": "14",
+                    "name": "S3nBytesRead",
+                    "thousandSeparator": true,
+                    "width": 132
+                },
+                {
+                    "columnId": "15",
+                    "name": "S3BytesRead",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "16",
+                    "name": "ScpBytesRead",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "17",
+                    "name": "MapInputBytes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "18",
+                    "name": "ImportBytesThroughput",
+                    "thousandSeparator": true,
+                    "width": 164
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "processedBytes",
+                    "filterExpression": "NOT_EMPTY",
+                    "type": "CONSTANT",
+                    "value": "null",
+                    "valueStatic": true
+                },
+                {
+                    "column": "OutputBytes",
+                    "filterExpression": "NOT_EMPTY",
+                    "type": "CONSTANT",
+                    "value": "null",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "PerMrJobStats",
+            "filterTargetSheet": "PerMrJobStats",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "HadoopJobId",
+                    "formulaString": "=GROUPBY(#HadoopMetrics!Hadoop_Job_Id)"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 1,
+                    "columnName": "DatameerJobId",
+                    "formulaString": "=GROUPANY(#HadoopMetrics!Execution_Id)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 2,
+                    "columnName": "Timestamp",
+                    "formulaString": "=GROUPANY(#HadoopMetrics!Timestamp)"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 3,
+                    "columnName": "JobTypeId",
+                    "formulaString": "=REPLACEALL(GROUPANY(#HadoopMetrics!Job_Name);\":.*\";\"\")"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 4,
+                    "columnName": "JobType",
+                    "formulaString": "=REPLACEALL(#JobTypeId;\" [(].*\";\"\")"
+                },
+                {
+                    "columnId": "17",
+                    "columnIndex": 5,
+                    "columnName": "MapInputBytes",
+                    "formulaString": "=GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"MAP_INPUT_BYTES\";#HadoopMetrics!Counter_Value))"
+                },
+                {
+                    "columnId": "18",
+                    "columnIndex": 6,
+                    "columnName": "ImportBytesThroughput",
+                    "formulaString": "=GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"IMPORT_BYTES_THROUGHPUT\";#HadoopMetrics!Counter_Value))"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 7,
+                    "columnName": "FileBytesRead",
+                    "formulaString": "=GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"FILE_BYTES_READ\";#HadoopMetrics!Counter_Value))"
+                },
+                {
+                    "columnId": "13",
+                    "columnIndex": 8,
+                    "columnName": "HdfsBytesRead",
+                    "formulaString": "=GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"HDFS_BYTES_READ\";#HadoopMetrics!Counter_Value))"
+                },
+                {
+                    "columnId": "14",
+                    "columnIndex": 9,
+                    "columnName": "S3nBytesRead",
+                    "formulaString": "=GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"S3N_BYTES_READ\";#HadoopMetrics!Counter_Value))"
+                },
+                {
+                    "columnId": "15",
+                    "columnIndex": 10,
+                    "columnName": "S3BytesRead",
+                    "formulaString": "=GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"S3_BYTES_READ\";#HadoopMetrics!Counter_Value))"
+                },
+                {
+                    "columnId": "16",
+                    "columnIndex": 11,
+                    "columnName": "ScpBytesRead",
+                    "formulaString": "=GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"SCP_BYTES_READ\";#HadoopMetrics!Counter_Value))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 12,
+                    "columnName": "processedBytes",
+                    "formulaString": "=IF(GT(#MapInputBytes;0);#MapInputBytes;IF(GT(#ImportBytesThroughput;0);#ImportBytesThroughput;SUM(#PerMrJobStats!MapInputBytes;#PerMrJobStats!FileBytesRead;#PerMrJobStats!HdfsBytesRead;#PerMrJobStats!S3nBytesRead;#PerMrJobStats!S3BytesRead;#PerMrJobStats!ScpBytesRead)))"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 13,
+                    "columnName": "OutputBytes",
+                    "formulaString": "=GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"OUTPUT_BYTES\";#HadoopMetrics!Counter_Value))"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 14,
+                    "columnName": "RunTimeMinutes",
+                    "formulaString": "=GROUPANY(SELECT(#HadoopMetrics!Counter_Name;\"JOB_COMPLETION_TIME\";#HadoopMetrics!Counter_Value))/1m"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 15,
+                    "columnName": "MapSlots",
+                    "formulaString": "=IF(GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"TOTAL_LAUNCHED_MAPS\";#HadoopMetrics!Counter_Value)) == 0; 1; GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"TOTAL_LAUNCHED_MAPS\";#HadoopMetrics!Counter_Value)))"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 16,
+                    "columnName": "ReduceSlots",
+                    "formulaString": "=IF(GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"TOTAL_LAUNCHED_REDUCES\";#HadoopMetrics!Counter_Value)) == 0;1;GROUPSUM(SELECT(#HadoopMetrics!Counter_Name;\"TOTAL_LAUNCHED_REDUCES\";#HadoopMetrics!Counter_Value)))"
+                }
+            ],
+            "keep": true,
+            "name": "PerMrJobStats",
+            "nextColumnId": 22,
+            "outputPartitionDefinition": {
+                "dateFormat": "yyyyMMdd",
+                "dateGenerator": "=(#Timestamp)"
+            },
+            "sheetId": "592b1879-4b10-4daa-877e-652071b4a6ff",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Timestamp",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "PerMrJobStats",
+            "sortTargetSheet": "PerMrJobStats"
+        }
+    ],
+    "version": "4.5.0"
+}

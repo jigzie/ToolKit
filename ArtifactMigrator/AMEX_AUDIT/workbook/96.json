@@ -1,0 +1,102 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "8e10b741-748b-4ee9-a292-a3fe4d79aaf3",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_16_file_dependency.wbk",
+    "description": "",
+    "name": "_00_16_file_dependency"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_file_dependency_src",
+      "sheetId": "f3663139-1603-4849-a29b-8aac0964f1a5",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_file_dependency.lnk",
+        "uuid": "79aa1624-809e-4952-86bd-3b8b29ffab1e"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_file_dependency",
+      "sheetId": "560d458f-44a3-42ce-b340-c12ca1883869",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_file_dependency_src!id"
+        },
+        {
+          "columnName": "key_text",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_file_dependency_src!key_text"
+        },
+        {
+          "columnName": "path",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_file_dependency_src!path"
+        },
+        {
+          "columnName": "dependency_file_id",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_file_dependency_src!dependency_file_id"
+        },
+        {
+          "columnName": "source_file_id",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MySQL_file_dependency_src!source_file_id"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "key_text",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "path",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "dependency_file_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "source_file_id",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

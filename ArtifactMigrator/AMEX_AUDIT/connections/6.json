@@ -1,0 +1,31 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataBaseConnection",
+  "file": {
+    "uuid": "9ddbed56-8987-45ef-905f-bd1ccecef594",
+    "path": "/AMEX_Audit/Connections/DB_Self.dst",
+    "description": "DAP_OPS",
+    "name": "DB_Self"
+  },
+  "typeId": "das.JdbcDataStoreType",
+  "properties": {
+    "user_name": [
+      "root"
+    ],
+    "password": [
+      "SECURE:0:cukhzdfsVyAvhWXAWc8DdA\u003d\u003d"
+    ],
+    "key.connectionUrl": [
+      "jdbc:mysql://localhost:3306/TestAMEX?tinyInt1isBit\u003dfalse"
+    ],
+    "dataStoreTemplate": [
+      "false"
+    ],
+    "dataStoreUsage": [
+      "IMPORT_EXPORT"
+    ]
+  },
+  "dbType": {
+    "name": "MySQL"
+  }
+}

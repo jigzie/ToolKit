@@ -1,0 +1,72 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "cbbf998f-347f-4692-9da3-dd56421cb3f2",
+    "path": "/Datameer Consumption Stats/Resources/DM_Top5_UserIngestions.wbk",
+    "description": "",
+    "name": "DM_Top5_UserIngestions"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "sheets": [
+    {
+      "name": "DM_Owner_Volume",
+      "sheetId": "8b3af3a7-2ad4-440e-b719-87a53f2d423b",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "sortSourceSheet": "DM_Owner_Volume",
+      "sortTargetSheet": "DM_Owner_Volume",
+      "topN": 5,
+      "sortKeys": [
+        {
+          "column": "VOLUME",
+          "sortOrder": "DESC"
+        }
+      ],
+      "datasource": {
+        "path": "/Datameer Consumption Stats/Resources/DM_Owner_Volume.lnk",
+        "uuid": "02d5d356-510d-408b-922b-9c21102836af"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Top5_IngestionByVolumeinGB",
+      "sheetId": "88cf7d89-e15f-46dc-8c78-a126cb943c8c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "OWNER",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#DM_Owner_Volume!OWNER"
+        },
+        {
+          "columnName": "VOLUME_in_GB",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dTRUNC((((#DM_Owner_Volume!VOLUME)/1024)/1024)/1024)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "OWNER",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "VOLUME_in_GB",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

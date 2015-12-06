@@ -1,0 +1,71 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.FileDataSinkImpl",
+  "file": {
+    "uuid": "1b5f044d-50a0-4a8f-9b37-3c29a26c5aa9",
+    "path": "/Examples/Hello World/Solution/ExportJob.exp",
+    "description": "",
+    "name": "ExportJob"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "table_name": [
+      "bc0300ac_e8b2_459d_8a2e_d16d8db7584e_UnionSheet1"
+    ],
+    "transformation_name": [
+      "My Workbook"
+    ],
+    "transformation_description": [
+      ""
+    ],
+    "business_purpose": [
+      ""
+    ],
+    "run_frequency": [
+      "Daily"
+    ],
+    "status": [
+      "REQUEST_CREATION"
+    ]
+  },
+  "hadoopProperties": "",
+  "connection": "/Data/Connections/Datameer server filesystem",
+  "sheet": {
+    "name": "UnionSheet1",
+    "sheetId": "80db2430-53f1-43e0-9788-ffebbe17ba02",
+    "workbook": {
+      "path": "/Examples/Hello World/Solution/My Workbook.wbk",
+      "uuid": "bc0300ac-e8b2-459d-8a2e-d16d8db7584e"
+    }
+  },
+  "mappings": [
+    {
+      "name": "Name",
+      "srcColumnIndex": 0,
+      "nullable": true
+    },
+    {
+      "name": "Age",
+      "srcColumnIndex": 1,
+      "nullable": true
+    },
+    {
+      "name": "City",
+      "srcColumnIndex": 2,
+      "nullable": true
+    }
+  ],
+  "errorHandlingMode": "DROP_RECORD",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fileName": "/tmp/DTExp_Amex_BDP_022",
+  "confirmOverwrite": false,
+  "clearTargetDirectory": false,
+  "includeHeader": true,
+  "delimiterString": ",",
+  "quoteString": "\"",
+  "escapeString": "\\",
+  "characterEncoding": "UTF-8",
+  "exportFileType": "DT_export"
+}

@@ -1,0 +1,210 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "8d8e2ead-afb6-49ef-9baf-b681a85d8796",
+    "path": "/Examples/Hello World/Solution/Workbook_newone_basic.wbk",
+    "description": "",
+    "name": "Workbook_newone_basic"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "DataLink_apac_monthly_hist",
+      "sheetId": "de7092a3-3c48-42fb-9e5e-790b35ed7cdf",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Examples/Hello World/Solution/DataLink_apac_monthly_hist.upl",
+        "uuid": "8f303479-fcfa-46aa-91a3-ae37a8bb2704"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Sheet1",
+      "sheetId": "37bbf8ca-7daf-49fa-a818-e8a14d359b28",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "A",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#DataLink_apac_monthly_hist!A"
+        },
+        {
+          "columnName": "B",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#DataLink_apac_monthly_hist!B"
+        },
+        {
+          "columnName": "C",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#DataLink_apac_monthly_hist!C"
+        },
+        {
+          "columnName": "D",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#DataLink_apac_monthly_hist!D"
+        },
+        {
+          "columnName": "E",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#DataLink_apac_monthly_hist!E"
+        },
+        {
+          "columnName": "F",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#DataLink_apac_monthly_hist!F"
+        },
+        {
+          "columnName": "G",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#DataLink_apac_monthly_hist!G"
+        },
+        {
+          "columnName": "H",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#DataLink_apac_monthly_hist!H"
+        },
+        {
+          "columnName": "I",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#DataLink_apac_monthly_hist!I"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "A",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "B",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "C",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "D",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "E",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "F",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "G",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "H",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "I",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 9
+    },
+    {
+      "name": "UnionSheet1",
+      "sheetId": "36a56b9e-ea00-4834-a65b-bbc72084cdb7",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "unionSources": [
+          "DataLink_apac_monthly_hist",
+          "Sheet1"
+        ]
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Joined",
+      "sheetId": "056a2240-0d82-4b81-aaca-5f14b51f6b2a",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "UnionSheet1",
+            "sheet2": "Sheet1",
+            "joinColumns1": [
+              "C"
+            ],
+            "joinColumns2": [
+              "C"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "UnionSheet1": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I"
+          ],
+          "Sheet1": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I"
+          ]
+        }
+      },
+      "columnStyles": []
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

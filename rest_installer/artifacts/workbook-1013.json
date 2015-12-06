@@ -1,0 +1,235 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_24_job_execution",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_24_job_execution.wbk",
+        "uuid": "d6d72ad2-290d-4db7-817f-809cce8c7e71"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "24 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_job_execution.lnk",
+                "uuid": "344b0062-608e-4c98-a82d-45ffb6275183"
+            },
+            "keep": false,
+            "name": "MySQL_job_execution_src",
+            "sheetId": "6604d199-9b8b-41ad-bf3f-4a5ffeed37d0",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "hadoop_properties",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "job_data",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "job_exception",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "job_status",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "queued_time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "start_time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "stop_time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "triggered_by",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "created_data__id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "dap_job_configuration__id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "13",
+                    "name": "execution_plan_fk",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "14",
+                    "name": "logging_properties",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "15",
+                    "name": "root_logger_level",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=#MySQL_job_execution_src!id"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "hadoop_properties",
+                    "formulaString": "=#MySQL_job_execution_src!hadoop_properties"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "job_data",
+                    "formulaString": "=#MySQL_job_execution_src!job_data"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "job_exception",
+                    "formulaString": "=#MySQL_job_execution_src!job_exception"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "job_status",
+                    "formulaString": "=#MySQL_job_execution_src!job_status"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "queued_time",
+                    "formulaString": "=#MySQL_job_execution_src!queued_time"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "start_time",
+                    "formulaString": "=#MySQL_job_execution_src!start_time"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "stop_time",
+                    "formulaString": "=#MySQL_job_execution_src!stop_time"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "triggered_by",
+                    "formulaString": "=#MySQL_job_execution_src!triggered_by"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "type",
+                    "formulaString": "=#MySQL_job_execution_src!type"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "user",
+                    "formulaString": "=#MySQL_job_execution_src!user"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "created_data__id",
+                    "formulaString": "=#MySQL_job_execution_src!created_data__id"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 12,
+                    "columnName": "dap_job_configuration__id",
+                    "formulaString": "=#MySQL_job_execution_src!dap_job_configuration__id"
+                },
+                {
+                    "columnId": "13",
+                    "columnIndex": 13,
+                    "columnName": "execution_plan_fk",
+                    "formulaString": "=#MySQL_job_execution_src!execution_plan_fk"
+                },
+                {
+                    "columnId": "14",
+                    "columnIndex": 14,
+                    "columnName": "logging_properties",
+                    "formulaString": "=#MySQL_job_execution_src!logging_properties"
+                },
+                {
+                    "columnId": "15",
+                    "columnIndex": 15,
+                    "columnName": "root_logger_level",
+                    "formulaString": "=#MySQL_job_execution_src!root_logger_level"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_job_execution",
+            "nextColumnId": 16,
+            "sheetId": "45543d9a-470f-4059-bb11-018aa46b4c9e",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

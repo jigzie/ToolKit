@@ -1,0 +1,61 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "02d5d356-510d-408b-922b-9c21102836af",
+    "path": "/Datameer Consumption Stats/Resources/DM_Owner_Volume.lnk",
+    "description": "Datameer Owner-Consumption volume information",
+    "name": "DM_Owner_Volume"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "2b543210-5cae-4e12-b7b1-756b9b805b99"
+    ],
+    "!query!": [
+      "select permission.owner OWNER, sum(data_volume_summary.volume) VOLUME\r\n from data_volume_summary, dap_job_configuration, dap_file, permission \r\nwhere data_volume_summary.job_conf_id \u003d dap_job_configuration.id \r\nand dap_job_configuration.dap_file__id \u003d dap_file.id \r\nand dap_file.permission_fk \u003d permission.id \r\ngroup by permission.owner"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Datameer Consumption Stats/Resources/MySQL_DB.dst",
+    "uuid": "0672f52b-2468-4942-996c-f12b4facc747"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 20,
+      "acceptEmpty": true,
+      "name": "OWNER",
+      "origin": "OWNER",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 21,
+      "acceptEmpty": true,
+      "name": "VOLUME",
+      "origin": "VOLUME",
+      "valueType": "{\"type\":\"BIG_INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

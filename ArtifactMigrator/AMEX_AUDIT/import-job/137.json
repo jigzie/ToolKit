@@ -1,0 +1,203 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "713d4e27-02c6-4e00-82fd-7d6122878141",
+    "path": "/AMEX_Audit/Data Sources/WSD.lnk",
+    "description": "Workbook_Sheet_data Table",
+    "name": "WSD"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "83abd342-e985-44d7-93d8-acf56ffedf14"
+    ],
+    "jdbc.property.select.sql.action": [
+      "TABLE"
+    ],
+    "jdbc.property.table": [
+      "\u0027workbook_sheet_data\u0027"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "orderColumn": [
+      "id"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/AMEX_Audit/Connections/DB_Self.dst",
+    "uuid": "9ddbed56-8987-45ef-905f-bd1ccecef594"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 449,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 450,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "data_statistic__bytes",
+      "origin": "data_statistic__bytes",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 451,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "data_statistic__failed_record_count",
+      "origin": "data_statistic__failed_record_count",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 452,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "data_statistic__output_partition_count",
+      "origin": "data_statistic__output_partition_count",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 453,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "data_statistic__record_count",
+      "origin": "data_statistic__record_count",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 454,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "data_statistic__uncompressed_bytes",
+      "origin": "data_statistic__uncompressed_bytes",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 455,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "is_artifact_sheet",
+      "origin": "is_artifact_sheet",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 456,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "kept",
+      "origin": "kept",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 457,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "sheet_id",
+      "origin": "sheet_id",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 458,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "sheet_name",
+      "origin": "sheet_name",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 459,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "sheet_schema_json",
+      "origin": "sheet_schema_json",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 460,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "sheet_schema_fk",
+      "origin": "sheet_schema_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 461,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "partition_index__id",
+      "origin": "partition_index__id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 462,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "workbook_data_fk",
+      "origin": "workbook_data_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 463,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 464,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

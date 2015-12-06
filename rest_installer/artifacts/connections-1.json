@@ -1,0 +1,22 @@
+{
+    "className": "datameer.dap.sdk.entity.CustomDataStore",
+    "file": {
+        "description": "Connection to Datameer Server for Log Retrieval and Data Archiving.",
+        "name": "Datameer_Logs_SSH",
+        "path": "/Administration/HUMv2/Ingestion/Datameer_Logs_SSH.dst",
+        "uuid": "3b3f9a84-7034-41e2-920d-4fe01cc05623"
+    },
+    "properties": {
+        "GenericConfigurationImpl.temp-file-store": [
+            "bfad62d6-9505-4e91-92c6-6233fa02d020"
+        ],
+        "dataStoreTemplate": [
+            "false"
+        ],
+        "dataStoreUsage": [
+            "IMPORT_EXPORT"
+        ]
+    },
+    "typeId": "das.ScpFileDataStoreType",
+    "version": "4.5.0"
+}

@@ -1,0 +1,1227 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.infographic.Infographic",
+  "links": {
+    "self": "/rest/infographics/1"
+  },
+  "file": {
+    "uuid": "abe27f12-bb75-4bc9-a962-588b0e579b04",
+    "path": "/Users/superuser/Applications/Enron Email Analytics/EnronInfoGraphic.ifg",
+    "name": "EnronInfoGraphic"
+  },
+  "sameBackgroundForTabs": false,
+  "presentationMode": "tabs",
+  "slideshowEffect": "none",
+  "slideshowTime": 5,
+  "tabs": [
+    {
+      "backgroundType": "color",
+      "backgroundImagePlacement": "full",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both",
+      "name": "Page 1",
+      "order": 0,
+      "id": "e3513c45-9579-44cf-be04-04b54f560be6",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Circular network",
+            "chart": "infographics/charts/circular_network",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "start": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "end": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "weight": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/circular_network_inspector",
+            "panelGroup": "chart"
+          },
+          "name": "Circular network",
+          "inspectorName": "infographics/views/circular_network_inspector",
+          "left": 8,
+          "top": 81,
+          "width": 614,
+          "height": 495,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 4,
+          "id": "a836828d-f930-4d01-b910-73627cbcd8b5",
+          "dataSet": {
+            "maxSize": "10",
+            "descriptor": {
+              "start": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "end": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "weight": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "start": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9zdXBlcnVzZXIvQXBwbGljYXRpb25zL0Vucm9uIEVtYWlsIEFuYWx5dGljcy9FbnJvbkVtYWlsV29ya2Jvb2sud2JrO2NlZjY5MmU4LWZjMzItNDYxOS1iY2QyLTI4ZWUwNWRmZDhlMjswOzA7NzQxOGYzMzItOWEyMC00MzkzLThkY2ItZTZiMzdhMjRlM2M1",
+                  "type": "STRING",
+                  "name": "From",
+                  "columnId": "0",
+                  "id": "92f61292-9e2d-479a-b3bd-57f9e69de680",
+                  "dataSourceSpec": {
+                    "jobId": 6,
+                    "path": "/Users/superuser/Applications/Enron Email Analytics/EnronEmailWorkbook.wbk",
+                    "sheetId": "7418f332-9a20-4393-8dcb-e6b37a24e3c5",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "end": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9zdXBlcnVzZXIvQXBwbGljYXRpb25zL0Vucm9uIEVtYWlsIEFuYWx5dGljcy9FbnJvbkVtYWlsV29ya2Jvb2sud2JrO2NlZjY5MmU4LWZjMzItNDYxOS1iY2QyLTI4ZWUwNWRmZDhlMjswOzA7NzQxOGYzMzItOWEyMC00MzkzLThkY2ItZTZiMzdhMjRlM2M1",
+                  "type": "STRING",
+                  "name": "To",
+                  "columnId": "1",
+                  "id": "f00517d2-3538-443b-b52e-2d5600972f2f",
+                  "dataSourceSpec": {
+                    "jobId": 6,
+                    "path": "/Users/superuser/Applications/Enron Email Analytics/EnronEmailWorkbook.wbk",
+                    "sheetId": "7418f332-9a20-4393-8dcb-e6b37a24e3c5",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "weight": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9zdXBlcnVzZXIvQXBwbGljYXRpb25zL0Vucm9uIEVtYWlsIEFuYWx5dGljcy9FbnJvbkVtYWlsV29ya2Jvb2sud2JrO2NlZjY5MmU4LWZjMzItNDYxOS1iY2QyLTI4ZWUwNWRmZDhlMjswOzA7NzQxOGYzMzItOWEyMC00MzkzLThkY2ItZTZiMzdhMjRlM2M1",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "3",
+                  "id": "1dea3140-7515-4952-b859-6c0913924c85",
+                  "dataSourceSpec": {
+                    "jobId": 6,
+                    "path": "/Users/superuser/Applications/Enron Email Analytics/EnronEmailWorkbook.wbk",
+                    "sheetId": "7418f332-9a20-4393-8dcb-e6b37a24e3c5",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9zdXBlcnVzZXIvQXBwbGljYXRpb25zL0Vucm9uIEVtYWlsIEFuYWx5dGljcy9FbnJvbkVtYWlsV29ya2Jvb2sud2JrO2NlZjY5MmU4LWZjMzItNDYxOS1iY2QyLTI4ZWUwNWRmZDhlMjswOzA7NzQxOGYzMzItOWEyMC00MzkzLThkY2ItZTZiMzdhMjRlM2M1",
+            "lastExecutionDate": "07/23/2012 04:24:07 PM",
+            "isTruncated": true,
+            "dataSourceSpec": {
+              "jobId": 6,
+              "path": "/Users/superuser/Applications/Enron Email Analytics/EnronEmailWorkbook.wbk",
+              "sheetId": "7418f332-9a20-4393-8dcb-e6b37a24e3c5",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": true,
+          "opacity": "1",
+          "fontSize": "1",
+          "fontName": "Times",
+          "labelLength": "69",
+          "labelColor": "black",
+          "fillColorList": [
+            "#3182bd",
+            "#6baed6",
+            "#9ecae1",
+            "#c6dbef",
+            "#e6550d",
+            "#fd8d3c",
+            "#fdae6b",
+            "#fdd0a2",
+            "#31a354",
+            "#74c476",
+            "#a1d99b",
+            "#c7e9c0",
+            "#756bb1",
+            "#9e9ac8",
+            "#bcbddc",
+            "#dadaeb",
+            "#636363",
+            "#969696",
+            "#bdbdbd",
+            "#d9d9d9"
+          ],
+          "enableTooltips": true,
+          "fontName_text": "Times",
+          "maxSize": "10",
+          "marginTop": 78,
+          "marginRight": 78,
+          "marginBottom": 78,
+          "marginLeft": 78,
+          "strokeColor": "white",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Multi bar chart",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 20,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              }
+            },
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "panelGroup": "chart",
+            "isBarChart": true
+          },
+          "name": "Multi bar chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 84,
+          "top": 540,
+          "width": 1046,
+          "height": 231,
+          "angle": "-2",
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 5,
+          "id": "ed614e01-9026-4595-abd4-a06600d9b516",
+          "dataSet": {
+            "maxSize": "1000",
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9zdXBlcnVzZXIvQXBwbGljYXRpb25zL0Vucm9uIEVtYWlsIEFuYWx5dGljcy9FbnJvbkVtYWlsV29ya2Jvb2sud2JrO2NlZjY5MmU4LWZjMzItNDYxOS1iY2QyLTI4ZWUwNWRmZDhlMjswOzA7YjE3NWM4NWMtM2JkOC00MmJhLWJkNjctNTg0NDgzOTI5ZTU3",
+                  "type": "DATE",
+                  "name": "Date",
+                  "columnId": "1",
+                  "toolTip": "Enron Email Analytics / EnronEmailWorkbook / Latest Result / EmailCountByMonthSort / Date",
+                  "id": "1244bb8d-b5c0-4603-a397-2b916d9d12c3",
+                  "dataSourceSpec": {
+                    "jobId": 6,
+                    "path": "/Users/superuser/Applications/Enron Email Analytics/EnronEmailWorkbook.wbk",
+                    "sheetId": "b175c85c-3bd8-42ba-bd67-584483929e57",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9zdXBlcnVzZXIvQXBwbGljYXRpb25zL0Vucm9uIEVtYWlsIEFuYWx5dGljcy9FbnJvbkVtYWlsV29ya2Jvb2sud2JrO2NlZjY5MmU4LWZjMzItNDYxOS1iY2QyLTI4ZWUwNWRmZDhlMjswOzA7YjE3NWM4NWMtM2JkOC00MmJhLWJkNjctNTg0NDgzOTI5ZTU3",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "3",
+                  "toolTip": "Enron Email Analytics / EnronEmailWorkbook / Latest Result / EmailCountByMonthSort / Count",
+                  "id": "958cf66b-db9f-456c-a12c-e2342e09bc8c",
+                  "dataSourceSpec": {
+                    "jobId": 6,
+                    "path": "/Users/superuser/Applications/Enron Email Analytics/EnronEmailWorkbook.wbk",
+                    "sheetId": "b175c85c-3bd8-42ba-bd67-584483929e57",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "lastExecutionDate": "07/23/2012 04:24:07 PM",
+            "isTruncated": false,
+            "dataSourceId": "V0JLOy9Vc2Vycy9zdXBlcnVzZXIvQXBwbGljYXRpb25zL0Vucm9uIEVtYWlsIEFuYWx5dGljcy9FbnJvbkVtYWlsV29ya2Jvb2sud2JrO2NlZjY5MmU4LWZjMzItNDYxOS1iY2QyLTI4ZWUwNWRmZDhlMjswOzA7YjE3NWM4NWMtM2JkOC00MmJhLWJkNjctNTg0NDgzOTI5ZTU3",
+            "dataSourceSpec": {
+              "jobId": 6,
+              "path": "/Users/superuser/Applications/Enron Email Analytics/EnronEmailWorkbook.wbk",
+              "sheetId": "b175c85c-3bd8-42ba-bd67-584483929e57",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "offset": 10,
+          "scale": "linear",
+          "isShadowVisible": false,
+          "isStyleVisible": false,
+          "labelOrientation": "horizontal",
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "steelblue",
+          "labelColor": "black",
+          "dataDescriptor": {
+            "maxSize": 20,
+            "label": {
+              "type": [
+                "ANY"
+              ],
+              "dimensions": [
+                1,
+                1
+              ]
+            },
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL"
+              ],
+              "dimensions": [
+                1,
+                10
+              ]
+            }
+          },
+          "variant": "grouped",
+          "maxSize": "1000",
+          "groupGapInPercent": 20,
+          "fontSize": "8",
+          "fontName": "Verdana",
+          "labelLength": 100,
+          "colorScheme": "categorical",
+          "isBarChart": true,
+          "showPoints": true,
+          "enableTooltips": true,
+          "xAxisSkipCount": "1",
+          "transpose": false,
+          "marginRight": 10,
+          "group": "34ba27c2-9cb6-4bc0-aac6-bd2105294457",
+          "marginTop": 10,
+          "marginBottom": 66.99,
+          "marginLeft": 66.99,
+          "margin": 20,
+          "isGridVisible": false,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "labelOrientationX": "diagonal",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM-YY",
+          "prefix": "",
+          "suffix": "",
+          "offsetVariant": "zero",
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showAreas": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": true,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1,
+          "ignoreEmpties": true,
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "subtype": "grouped_bar"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 748,
+          "top": 376,
+          "width": 297,
+          "height": 46,
+          "angle": "-2",
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "7bc668b1-6876-4e5e-a1be-81a22cf8ae78",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Email Volume (by month)\n",
+          "fontSize": "24",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 181,
+          "top": 147,
+          "width": 36,
+          "height": 53,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 7,
+          "id": "6aab06c6-a3dd-455f-a6a1-bae77391b9ba",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "evelyn_c.png",
+          "image": {
+            "uuid": "76f980f9-87e9-4a23-9f79-a863ec9c2966",
+            "id": 100,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/evelyn_c.png",
+            "name": "evelyn_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fevelyn_c.png\u0026uuid\u003d76f980f9-87e9-4a23-9f79-a863ec9c2966",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 290,
+          "top": 111,
+          "width": 49,
+          "height": 44,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 8,
+          "id": "f2050072-0d73-42a6-9e83-ab3af561ac4b",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "gabriel_c.png",
+          "image": {
+            "uuid": "95d7e244-7b97-4e5b-b814-8cf7d27e7fdc",
+            "id": 101,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/gabriel_c.png",
+            "name": "gabriel_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fgabriel_c.png\u0026uuid\u003d95d7e244-7b97-4e5b-b814-8cf7d27e7fdc",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 112,
+          "top": 277,
+          "width": 31,
+          "height": 45,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 9,
+          "id": "19cf6a6a-933b-4ab2-8cd2-24fd3cab6ec5",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "kate_c.png",
+          "image": {
+            "uuid": "b9c9bcf7-6b21-4bbf-9e99-89fc205b95b4",
+            "id": 102,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/kate_c.png",
+            "name": "kate_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fkate_c.png\u0026uuid\u003db9c9bcf7-6b21-4bbf-9e99-89fc205b95b4",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 254,
+          "top": 116,
+          "width": 35,
+          "height": 45,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 10,
+          "id": "8643870d-e79f-4b37-a648-6d6e08b0ea87",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "kathleen2_c.png",
+          "image": {
+            "uuid": "f68fc756-1f66-480a-ac3c-8619c759ded7",
+            "id": 104,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/kathleen2_c.png",
+            "name": "kathleen2_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fkathleen2_c.png\u0026uuid\u003df68fc756-1f66-480a-ac3c-8619c759ded7",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 332,
+          "top": 494,
+          "width": 42,
+          "height": 53,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 11,
+          "id": "d8077fa4-7a73-4d2f-9dff-d9b74d5a6ba4",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "kay_c.png",
+          "image": {
+            "uuid": "987b43f9-fb82-478b-a1d1-1a8f6fc577d5",
+            "id": 105,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/kay_c.png",
+            "name": "kay_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fkay_c.png\u0026uuid\u003d987b43f9-fb82-478b-a1d1-1a8f6fc577d5",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 212,
+          "top": 130,
+          "width": 50,
+          "height": 43,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 12,
+          "id": "a5690d84-be6c-4ca8-a9a6-0279a2fb55eb",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "kerry2_c.png",
+          "image": {
+            "uuid": "2621a90a-c0af-47c0-8692-e22406db454b",
+            "id": 107,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/kerry2_c.png",
+            "name": "kerry2_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fkerry2_c.png\u0026uuid\u003d2621a90a-c0af-47c0-8692-e22406db454b",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 114,
+          "top": 366,
+          "width": 42,
+          "height": 58,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 13,
+          "id": "b59c4ecb-16b3-4ba1-82d5-488506597cdb",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "maureen_c.png",
+          "image": {
+            "uuid": "a313f791-f3f8-4942-9010-b156e9696601",
+            "id": 110,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/maureen_c.png",
+            "name": "maureen_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fmaureen_c.png\u0026uuid\u003da313f791-f3f8-4942-9010-b156e9696601",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 75,
+          "top": 370,
+          "width": 41,
+          "height": 50,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 14,
+          "id": "3c008e03-73e4-4b7d-a048-695318db646b",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "nmann_c.png",
+          "image": {
+            "uuid": "7950ef18-a0c1-4311-ac34-10bcd0992441",
+            "id": 111,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/nmann_c.png",
+            "name": "nmann_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fnmann_c.png\u0026uuid\u003d7950ef18-a0c1-4311-ac34-10bcd0992441",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 188,
+          "top": 461,
+          "width": 39,
+          "height": 49,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 15,
+          "id": "f730921b-cf46-478e-918f-01e437878196",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "shirley_c.png",
+          "image": {
+            "uuid": "b7ee2199-f195-4e1f-a711-ad91250e70df",
+            "id": 115,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/shirley_c.png",
+            "name": "shirley_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fshirley_c.png\u0026uuid\u003db7ee2199-f195-4e1f-a711-ad91250e70df",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 154,
+          "top": 481,
+          "width": 45,
+          "height": 49,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 16,
+          "id": "26c2757e-11a2-49ef-918b-cf9be1d2bc9b",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "suzanne_c.png",
+          "image": {
+            "uuid": "8a693e1e-f5c5-452b-80f8-aeb48eb1ca27",
+            "id": 118,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/suzanne_c.png",
+            "name": "suzanne_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fsuzanne_c.png\u0026uuid\u003d8a693e1e-f5c5-452b-80f8-aeb48eb1ca27",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 452,
+          "top": 420,
+          "width": 39,
+          "height": 56,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 17,
+          "id": "6eaca046-6c6c-4f2c-9cc5-2b940e63dde6",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "vince_c.png",
+          "image": {
+            "uuid": "6938c088-cd17-426e-b8ce-ddba48718fa9",
+            "id": 119,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/vince_c.png",
+            "name": "vince_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fvince_c.png\u0026uuid\u003d6938c088-cd17-426e-b8ce-ddba48718fa9",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 463,
+          "top": 202,
+          "width": 34,
+          "height": 52,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 22,
+          "id": "0291659b-9744-46f3-bb57-7a755f93835d",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "vince_c.png",
+          "image": {
+            "uuid": "6938c088-cd17-426e-b8ce-ddba48718fa9",
+            "id": 119,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/vince_c.png",
+            "name": "vince_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fvince_c.png\u0026uuid\u003d6938c088-cd17-426e-b8ce-ddba48718fa9",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 144,
+          "top": 424,
+          "width": 43,
+          "height": 48,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 18,
+          "id": "690c45eb-dd4a-49f0-92d4-48ad9ee7f979",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "steven_c.png",
+          "image": {
+            "uuid": "436d9b74-6225-4afe-8693-81af7c7ce72e",
+            "id": 117,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/steven_c.png",
+            "name": "steven_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fsteven_c.png\u0026uuid\u003d436d9b74-6225-4afe-8693-81af7c7ce72e",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 191,
+          "top": 99,
+          "width": 51,
+          "height": 41,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 19,
+          "id": "2d44c9a9-1da6-4b42-9054-9d4aedaf0b8c",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "kathleen_c.png",
+          "image": {
+            "uuid": "57c6c9a8-f44b-4f14-b7b9-a8f9d75d3e92",
+            "id": 103,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/kathleen_c.png",
+            "name": "kathleen_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fkathleen_c.png\u0026uuid\u003d57c6c9a8-f44b-4f14-b7b9-a8f9d75d3e92",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 184,
+          "top": 62,
+          "width": 307,
+          "height": 25,
+          "angle": "5",
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 20,
+          "id": "743c61df-9d60-44dd-82e8-3c4e4a5aa7ea",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Executive Email Connections",
+          "fontSize": "20",
+          "fontName": "Arial",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black",
+          "fontName_text": "Arial"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 76,
+          "top": 319,
+          "width": "1146",
+          "height": "473",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 2,
+          "id": "a4a2dd27-9af2-4b24-90b5-9c5543c1dd57",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "paper_rect.png",
+          "group": "34ba27c2-9cb6-4bc0-aac6-bd2105294457",
+          "image": {
+            "uuid": "7a561021-df36-44e8-8e1b-9233e6750728",
+            "id": 112,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/paper_rect.png",
+            "name": "paper_rect",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fpaper_rect.png\u0026uuid\u003d7a561021-df36-44e8-8e1b-9233e6750728",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "defaultUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200,
+            "async": true
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": "0",
+          "top": "0",
+          "width": "659",
+          "height": "628",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "255f770b-2f2f-40cc-85ae-344cdc3a595a",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fpaper_square.png\u0026uuid\u003dfc619344-f48b-4ee1-b0c9-187cdb8a90b5",
+          "imageName": "paper_square.png",
+          "defaultUrl": "/js/infographics/charts/images/image_example.png",
+          "image": {
+            "uuid": "fc619344-f48b-4ee1-b0c9-187cdb8a90b5",
+            "id": 113,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/paper_square.png",
+            "name": "paper_square",
+            "type": "png"
+          }
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "imageUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 146,
+          "top": 184,
+          "width": 38,
+          "height": 52,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 14,
+          "id": "5f48d0c0-9a7c-4929-8b40-bebbada7022b",
+          "showFrame": true,
+          "opacity": 1,
+          "imageName": "kerri_c.png",
+          "image": {
+            "uuid": "03cdb8ee-fbad-4c5c-9ddc-be35841c2632",
+            "id": 106,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/kerri_c.png",
+            "name": "kerri_c",
+            "type": "png"
+          },
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fkerri_c.png\u0026uuid\u003d03cdb8ee-fbad-4c5c-9ddc-be35841c2632",
+          "defaultUrl": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "defaultUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200,
+            "async": true
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 717,
+          "top": 40,
+          "width": 280,
+          "height": 274,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 23,
+          "id": "05b58050-9d22-4639-ac9d-d63bcb101bba",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "imageUrl": "/image-upload?path\u003d%2FUsers%2Fsuperuser%2FApplications%2FEnron%20Email%20Analytics%2Fimages%2Fenron_logo.png\u0026uuid\u003de6724183-cd16-445c-b617-2982c26d8c39",
+          "imageName": "enron_logo.png",
+          "defaultUrl": "/js/infographics/charts/images/image_example.png",
+          "image": {
+            "uuid": "e6724183-cd16-445c-b617-2982c26d8c39",
+            "id": 475,
+            "path": "/Users/superuser/Applications/Enron Email Analytics/images/enron_logo.png",
+            "name": "enron_logo",
+            "type": "png"
+          }
+        }
+      ]
+    }
+  ]
+}

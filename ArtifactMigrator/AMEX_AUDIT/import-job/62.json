@@ -1,0 +1,250 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "b20a0620-746d-4452-a268-d52155c3e535",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Logs_Metrics_Jamon.lnk",
+    "description": "",
+    "name": "Logs_Metrics_Jamon"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "adbe7a65-7531-4ba8-82ab-10bc90eac3da"
+    ],
+    "file": [
+      "logs/metrics-jamon.log*"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "data.includes.header": [
+      "false"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "fileNameTimeRange_mode": [
+      "OFF"
+    ],
+    "filter.maxAge": [
+      ""
+    ],
+    "filter.minAge": [
+      ""
+    ],
+    "source.data.partitioned": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "external.store": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_Logs_SSH.dst",
+    "uuid": "295824be-d327-47ec-b46c-e03311616a6d"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 263,
+      "pattern": "yyyy-MM-dd HH:mm:ss",
+      "acceptEmpty": true,
+      "name": "LogTime",
+      "origin": "0",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 264,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Label",
+      "origin": "1",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 265,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Units",
+      "origin": "2",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 266,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Count",
+      "origin": "3",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 267,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Average",
+      "origin": "4",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 268,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Total",
+      "origin": "5",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 269,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "StandardDev",
+      "origin": "6",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 270,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Min",
+      "origin": "7",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 271,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Max",
+      "origin": "8",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 272,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Active",
+      "origin": "9",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 273,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "AverageActive",
+      "origin": "10",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 274,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "MaxActive",
+      "origin": "11",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 275,
+      "pattern": "yyyy-MM-dd HH:mm:ss",
+      "acceptEmpty": true,
+      "name": "CollectionTime",
+      "origin": "12",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 276,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 277,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 278,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

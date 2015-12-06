@@ -1,0 +1,132 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "c1f3f402-91e6-4d0b-ab93-ed0abd4f1593",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/VersionDetails.wbk",
+    "description": "",
+    "name": "VersionDetails"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "HTTP_Admin_Page",
+      "sheetId": "0b71a135-cf9d-40c9-b1c1-81e663710e40",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "HTTP_Admin_Page",
+        "sheetId": "e0700f90-d525-4001-b2c1-c6b765c3b5ff",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/base/_01_00_Admin_Page.wbk",
+          "uuid": "2fdda2ed-9a32-412a-a839-7cb9ec80a155"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "data_prep",
+      "sheetId": "f3dc205f-50f8-4ba9-97a4-c4f1bcf27a30",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "A",
+          "columnId": "1",
+          "columnIndex": 0,
+          "formulaString": "\u003dLISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#HTTP_Admin_Page!parsed_html;\"#aboutTable\");0)"
+        },
+        {
+          "columnName": "label_contents",
+          "columnId": "8",
+          "columnIndex": 1,
+          "formulaString": "\u003dCONTENTS_BY_TAG_NAME(REPLACEALL(EXPAND(ELEMENTS_BY_TAG_NAME(#A;\"tr\"));\"span\";\"label\");\"label\")"
+        },
+        {
+          "columnName": "label",
+          "columnId": "9",
+          "columnIndex": 2,
+          "formulaString": "\u003dREPLACEALL(LISTELEMENT(#label_contents;0);\":\")"
+        },
+        {
+          "columnName": "value",
+          "columnId": "11",
+          "columnIndex": 3,
+          "formulaString": "\u003dLISTELEMENT(#label_contents;1)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "A",
+          "width": 168,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "label_contents",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "label",
+          "width": 194,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "value",
+          "width": 272,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "versionConfig",
+      "sheetId": "d6a1c435-dc71-4bb1-805c-1662eeeeaf11",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "key",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dREPLACEALL(LISTELEMENT(#data_prep!label_contents;0);\":\")"
+        },
+        {
+          "columnName": "value",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dLISTELEMENT(#data_prep!label_contents;1)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "value",
+          "width": 362,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

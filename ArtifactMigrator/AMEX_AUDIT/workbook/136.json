@@ -1,0 +1,156 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "aa562d8e-c6c8-4c87-883c-06c14b0fac2c",
+    "path": "/AMEX_Audit/Wbk_MinHistory_GT_1.wbk",
+    "description": "",
+    "name": "Wbk_MinHistory_GT_1"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "DJC",
+      "sheetId": "167325f4-2c8f-4e6b-812d-31df93125a8b",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "filterSourceSheet": "DJC",
+      "filterTargetSheet": "DJC",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "min_keep_count",
+          "filterExpression": "GREATER",
+          "value": "1",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "datasource": {
+        "path": "/AMEX_Audit/Data Sources/DJC.lnk",
+        "uuid": "4abe005d-73c8-42c1-97bb-ec3c1f562deb"
+      },
+      "columnStyles": [
+        {
+          "columnId": "min_keep_count",
+          "width": 153,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "DF",
+      "sheetId": "cb5c0fb9-855c-4076-bac5-92ec295d00db",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/AMEX_Audit/Data Sources/DF.lnk",
+        "uuid": "93971caa-8867-486b-8b63-8105810bbb47"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Permission",
+      "sheetId": "8adc4222-0cb9-45e2-aca3-e22c8412932b",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/AMEX_Audit/Data Sources/Permission.lnk",
+        "uuid": "5ffc1058-8f51-412a-a9f9-9bd780527f05"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "WBK_History",
+      "sheetId": "ca85fd0d-302a-4446-83a3-9c115eaccfd5",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "MULTI_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "DJC",
+            "sheet2": "DF",
+            "joinColumns1": [
+              "dap_file__id"
+            ],
+            "joinColumns2": [
+              "ID"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "DF",
+            "sheet2": "Permission",
+            "joinColumns1": [
+              "Permission_FK"
+            ],
+            "joinColumns2": [
+              "id"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "DJC": [
+            "data_volume_size_by_license_period",
+            "min_keep_count"
+          ],
+          "DF": [
+            "ID",
+            "Workbook_Name",
+            "Description"
+          ],
+          "Permission": [
+            "owner"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "b7d402fb31057151e6c33a13424d68fb",
+          "name": "Description",
+          "width": 261,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "cc33d82135e96934682f26abfb7ec926",
+          "name": "Workbook_Name",
+          "width": 203,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9fc322e77c246516674a6bdbdf5d95f8",
+          "name": "WbkID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "91bd0e098fd336409b115cfc9d0f19b2",
+          "name": "Data_Volume",
+          "width": 119,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "216315e531034c510c2c1c731d91132b",
+          "name": "Kept_History",
+          "width": 132,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "29fb9ecfee61e61c9f87cb0464001d7c",
+          "name": "Owner",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

@@ -1,0 +1,119 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10789,
+            "include": true,
+            "name": "id",
+            "origin": "id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10790,
+            "include": true,
+            "name": "name",
+            "origin": "name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10791,
+            "include": true,
+            "name": "email",
+            "origin": "email",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10792,
+            "include": true,
+            "name": "login_count",
+            "origin": "login_count",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10793,
+            "include": true,
+            "name": "enabled",
+            "origin": "enabled",
+            "pattern": "",
+            "valueType": "{\"type\":\"BOOLEAN\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10794,
+            "include": false,
+            "name": "dasJobExecutionId",
+            "origin": "jobexecutionInfo.id",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10795,
+            "include": false,
+            "name": "dasJobExecutionStartTime",
+            "origin": "jobexecutionInfo.starttime",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "user data",
+        "name": "MySQL_users",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_users.lnk",
+        "uuid": "d2aca5b3-8bed-45e9-9047-bf2f4987bbfa"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "tableName": [
+            "!query!"
+         ],
+         "!query!": [
+            "select id, name, email, login_count, enabled from user"
+         ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "09e2db42-a540-40f7-b82b-42a0855d242d"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "jdbc.property.query": [
+            "select id, name, email, login_count, enabled from user"
+        ],
+        "jdbc.property.select.sql.action": [
+            "CUSTOM_SQL"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

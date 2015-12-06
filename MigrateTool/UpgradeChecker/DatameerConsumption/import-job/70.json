@@ -1,0 +1,70 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "8d44ae5e-e45d-43ec-9d71-c9b29e9454a6",
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/Perm.lnk",
+    "description": "Perm for Health Check",
+    "name": "Perm"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "a141abad-d9b4-45c6-ba3f-44d43d22a61f"
+    ],
+    "!query!": [
+      "select perm.id PermissionId, perm.owner Owner, perm.other_permission_bits OtherPermissionBit\r\nfrom permission perm"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/SystemDatabase.dst",
+    "uuid": "1c07895a-11dd-4e7b-9929-642b7db9c90d"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 5,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 219,
+      "acceptEmpty": false,
+      "name": "PermissionId",
+      "origin": "PermissionId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 220,
+      "acceptEmpty": true,
+      "name": "Owner",
+      "origin": "Owner",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 221,
+      "acceptEmpty": true,
+      "name": "OtherPermissionBit",
+      "origin": "OtherPermissionBit",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

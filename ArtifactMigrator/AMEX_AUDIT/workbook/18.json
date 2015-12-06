@@ -1,0 +1,514 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "f292852a-c4a8-4d5c-b80b-7240a4f72faa",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_00_User_Action.wbk",
+    "description": "",
+    "name": "_02_00_User_Action"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "User_Action_src",
+      "sheetId": "a6753189-101e-4878-bf5e-4911fd8e6b16",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Logs_User_Action.lnk",
+        "uuid": "63fded20-367f-40b5-a81b-cbb474dd49ff"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "User_Action",
+      "sheetId": "b0279367-e4e1-461a-9f0d-9fde7d140fa4",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "outputPartitionDefinition": {
+        "dateFormat": "yyyyMMdd",
+        "dateGenerator": "\u003d(#timestamp)"
+      },
+      "formulas": [
+        {
+          "columnName": "timestamp",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#User_Action_src!timestamp"
+        },
+        {
+          "columnName": "action_type",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#User_Action_src!action_type"
+        },
+        {
+          "columnName": "action",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#User_Action_src!action"
+        },
+        {
+          "columnName": "performed_by_user",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#User_Action_src!performed_by_user"
+        },
+        {
+          "columnName": "performer_roles",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#User_Action_src!performer_roles"
+        },
+        {
+          "columnName": "ip_address",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#User_Action_src!ip_address"
+        },
+        {
+          "columnName": "root_uuid",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#User_Action_src!root_uuid"
+        },
+        {
+          "columnName": "file_uuid",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#User_Action_src!file_uuid"
+        },
+        {
+          "columnName": "file_path",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#User_Action_src!file_path"
+        },
+        {
+          "columnName": "folder_path",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#User_Action_src!folder_path"
+        },
+        {
+          "columnName": "group_name",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#User_Action_src!group_name"
+        },
+        {
+          "columnName": "read_permission",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#User_Action_src!read_permission"
+        },
+        {
+          "columnName": "write_permission",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#User_Action_src!write_permission"
+        },
+        {
+          "columnName": "execute_permission",
+          "columnId": "13",
+          "columnIndex": 13,
+          "formulaString": "\u003d#User_Action_src!execute_permission"
+        },
+        {
+          "columnName": "shared_public",
+          "columnId": "14",
+          "columnIndex": 14,
+          "formulaString": "\u003d#User_Action_src!shared_public"
+        },
+        {
+          "columnName": "new_owner_name",
+          "columnId": "15",
+          "columnIndex": 15,
+          "formulaString": "\u003d#User_Action_src!new_owner_name"
+        },
+        {
+          "columnName": "user_name",
+          "columnId": "16",
+          "columnIndex": 16,
+          "formulaString": "\u003d#User_Action_src!user_name"
+        },
+        {
+          "columnName": "role_name",
+          "columnId": "17",
+          "columnIndex": 17,
+          "formulaString": "\u003d#User_Action_src!role_name"
+        },
+        {
+          "columnName": "execution_id",
+          "columnId": "18",
+          "columnIndex": 18,
+          "formulaString": "\u003d#User_Action_src!execution_id"
+        },
+        {
+          "columnName": "execution_type",
+          "columnId": "19",
+          "columnIndex": 19,
+          "formulaString": "\u003d#User_Action_src!execution_type"
+        },
+        {
+          "columnName": "execution_triggered_by",
+          "columnId": "20",
+          "columnIndex": 20,
+          "formulaString": "\u003d#User_Action_src!execution_triggered_by"
+        },
+        {
+          "columnName": "execution_job_schedule",
+          "columnId": "21",
+          "columnIndex": 21,
+          "formulaString": "\u003d#User_Action_src!execution_job_schedule"
+        },
+        {
+          "columnName": "execution_configuration_path",
+          "columnId": "22",
+          "columnIndex": 22,
+          "formulaString": "\u003d#User_Action_src!execution_configuration_path"
+        },
+        {
+          "columnName": "execution_configuration_uuid",
+          "columnId": "23",
+          "columnIndex": 23,
+          "formulaString": "\u003d#User_Action_src!execution_configuration_uuid"
+        },
+        {
+          "columnName": "execution_job_status",
+          "columnId": "24",
+          "columnIndex": 24,
+          "formulaString": "\u003d#User_Action_src!execution_job_status"
+        },
+        {
+          "columnName": "execution_job_user",
+          "columnId": "25",
+          "columnIndex": 25,
+          "formulaString": "\u003d#User_Action_src!execution_job_user"
+        },
+        {
+          "columnName": "data_uuid",
+          "columnId": "26",
+          "columnIndex": 26,
+          "formulaString": "\u003d#User_Action_src!data_uuid"
+        },
+        {
+          "columnName": "data_path",
+          "columnId": "27",
+          "columnIndex": 27,
+          "formulaString": "\u003d#User_Action_src!data_path"
+        },
+        {
+          "columnName": "workbook_uuid",
+          "columnId": "28",
+          "columnIndex": 28,
+          "formulaString": "\u003d#User_Action_src!workbook_uuid"
+        },
+        {
+          "columnName": "workbook_path",
+          "columnId": "29",
+          "columnIndex": 29,
+          "formulaString": "\u003d#User_Action_src!workbook_path"
+        },
+        {
+          "columnName": "workbook_sheet_name",
+          "columnId": "30",
+          "columnIndex": 30,
+          "formulaString": "\u003d#User_Action_src!workbook_sheet_name"
+        },
+        {
+          "columnName": "workbook_sheet_column_name",
+          "columnId": "31",
+          "columnIndex": 31,
+          "formulaString": "\u003d#User_Action_src!workbook_sheet_column_name"
+        },
+        {
+          "columnName": "workbook_sheet_column_index",
+          "columnId": "32",
+          "columnIndex": 32,
+          "formulaString": "\u003d#User_Action_src!workbook_sheet_column_index"
+        },
+        {
+          "columnName": "datasource_uuid",
+          "columnId": "33",
+          "columnIndex": 33,
+          "formulaString": "\u003d#User_Action_src!datasource_uuid"
+        },
+        {
+          "columnName": "datasource_path",
+          "columnId": "34",
+          "columnIndex": 34,
+          "formulaString": "\u003d#User_Action_src!datasource_path"
+        },
+        {
+          "columnName": "workbook_join_sheets",
+          "columnId": "35",
+          "columnIndex": 35,
+          "formulaString": "\u003d#User_Action_src!workbook_join_sheets"
+        },
+        {
+          "columnName": "application_uuid",
+          "columnId": "36",
+          "columnIndex": 36,
+          "formulaString": "\u003d#User_Action_src!application_uuid"
+        },
+        {
+          "columnName": "application_path",
+          "columnId": "37",
+          "columnIndex": 37,
+          "formulaString": "\u003d#User_Action_src!application_path"
+        },
+        {
+          "columnName": "old_name",
+          "columnId": "38",
+          "columnIndex": 38,
+          "formulaString": "\u003d#User_Action_src!old_name"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "timestamp",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "action_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "action",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "performed_by_user",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "performer_roles",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "ip_address",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "root_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "file_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "file_path",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "folder_path",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "group_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "read_permission",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "write_permission",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "13",
+          "name": "execute_permission",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "14",
+          "name": "shared_public",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "new_owner_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "user_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "17",
+          "name": "role_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "18",
+          "name": "execution_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "19",
+          "name": "execution_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "20",
+          "name": "execution_triggered_by",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "21",
+          "name": "execution_job_schedule",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "22",
+          "name": "execution_configuration_path",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "23",
+          "name": "execution_configuration_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "24",
+          "name": "execution_job_status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "25",
+          "name": "execution_job_user",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "26",
+          "name": "data_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "27",
+          "name": "data_path",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "28",
+          "name": "workbook_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "29",
+          "name": "workbook_path",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "30",
+          "name": "workbook_sheet_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "31",
+          "name": "workbook_sheet_column_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "32",
+          "name": "workbook_sheet_column_index",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "33",
+          "name": "datasource_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "34",
+          "name": "datasource_path",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "35",
+          "name": "workbook_join_sheets",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "36",
+          "name": "application_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "37",
+          "name": "application_path",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "38",
+          "name": "old_name",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 39
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

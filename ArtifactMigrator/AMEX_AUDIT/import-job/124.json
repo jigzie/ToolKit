@@ -1,0 +1,142 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "4a53c8fa-703a-40d3-bb8d-153c89d73878",
+    "path": "/Users/admin/Sample CSV Data.upl",
+    "description": "STEP 1 of the \"Hello World\" tutorial.\n\nFor more information, please visit:http://datameer.com/documentation/display/DAS20/Getting+Started",
+    "name": "Sample CSV Data"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "a03a8b81-f98b-4518-afac-bf1c73fe63ee"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-5.9.4-mapr-4.0.2-mr2/das-data/fileuploads/4/HelloWorld.csv"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "external.header.file": [
+      ""
+    ],
+    "external.header.delimiter": [
+      ","
+    ],
+    "delimiter": [
+      ","
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "quoteCharacter": [
+      ""
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "data.includes.header": [
+      "true"
+    ],
+    "external.contains.data": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "b92bfaf1-5794-48fc-a490-e679c78290cd"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 7,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Name",
+      "origin": "0",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 8,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Age",
+      "origin": "1",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 9,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "City",
+      "origin": "2",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 10,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 11,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 12,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

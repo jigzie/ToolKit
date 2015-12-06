@@ -1,0 +1,95 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10639,
+            "include": true,
+            "name": "id",
+            "origin": "id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10640,
+            "include": true,
+            "name": "key_text",
+            "origin": "key_text",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10641,
+            "include": true,
+            "name": "path",
+            "origin": "path",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10642,
+            "include": true,
+            "name": "dependency_file_id",
+            "origin": "dependency_file_id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10643,
+            "include": true,
+            "name": "source_file_id",
+            "origin": "source_file_id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "file_dependency",
+        "name": "MySQL_file_dependency",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_file_dependency.lnk",
+        "uuid": "1ade44b7-1d2f-402b-be88-219bf48d66b4"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            ""
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "76950b78-9eda-45b3-82d5-cc65ab9501f1"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "id"
+        ],
+        "tableName": [
+            "'file_dependency'"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

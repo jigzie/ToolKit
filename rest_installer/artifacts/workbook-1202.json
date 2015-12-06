@@ -1,0 +1,95 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_02_20_HTTP_Errors",
+        "path": "/Administration/HUMv2/Reports/logs/base/_02_20_HTTP_Errors.wbk",
+        "uuid": "ef7da2af-7664-42b9-800c-88c790a79a39"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "20 2 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/Logs_HTTP_Errors.lnk",
+                "uuid": "edc17310-5e41-4ecb-bd53-d973f1c9d51c"
+            },
+            "keep": false,
+            "name": "HTTP_Errors_src",
+            "sheetId": "8c70fa44-ed82-4c86-b480-cfe85d068fa2",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "HttpStatusCode",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Page",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Stacktrace",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#HTTP_Errors_src!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "HttpStatusCode",
+                    "formulaString": "=#HTTP_Errors_src!HttpStatusCode"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Page",
+                    "formulaString": "=#HTTP_Errors_src!Page"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Stacktrace",
+                    "formulaString": "=#HTTP_Errors_src!Stacktrace"
+                }
+            ],
+            "keep": true,
+            "name": "HTTP_Errors",
+            "nextColumnId": 4,
+            "outputPartitionDefinition": {
+                "dateFormat": "yyyyMMdd",
+                "dateGenerator": "=(#Timestamp)"
+            },
+            "sheetId": "cdcc2735-860a-4b79-8c46-8e76b0f77783",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

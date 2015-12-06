@@ -1,0 +1,1238 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_q_H_Hadoop Metrics",
+        "path": "/Administration/HUMv2/Reports/logs/_q_H_Hadoop Metrics.wbk",
+        "uuid": "4f2b4da5-b3d4-4862-b0da-cbb4f48201c4"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "Job_Name",
+                    "thousandSeparator": true,
+                    "width": 450
+                },
+                {
+                    "columnId": "Hadoop_Job_Id",
+                    "thousandSeparator": true,
+                    "width": 182
+                },
+                {
+                    "columnId": "Counter_Name",
+                    "thousandSeparator": true,
+                    "width": 170
+                },
+                {
+                    "columnId": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 185
+                },
+                {
+                    "columnId": "1",
+                    "thousandSeparator": true,
+                    "width": 101
+                }
+            ],
+            "keep": false,
+            "name": "Hadoop_Metrics",
+            "referencedSheet": {
+                "name": "Hadoop_Metrics",
+                "sheetId": "232cd893-6474-498b-b1fb-c9354aa8db6a",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/base/_02_10_Hadoop_Metrics.wbk",
+                    "uuid": "958332b0-e4b6-4f6b-9792-f9ebe2ec7b0e"
+                }
+            },
+            "sheetId": "bf196738-34d9-43af-baad-428bd1e14cc1",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Hadoop_Job_Id",
+                    "thousandSeparator": true,
+                    "width": 182
+                },
+                {
+                    "columnId": "3",
+                    "name": "Counter_Name",
+                    "thousandSeparator": true,
+                    "width": 200
+                },
+                {
+                    "columnId": "4",
+                    "name": "Counter_Value",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "JobTypeId",
+                    "thousandSeparator": true,
+                    "width": 554
+                },
+                {
+                    "columnId": "6",
+                    "name": "JobName",
+                    "thousandSeparator": true,
+                    "width": 288
+                },
+                {
+                    "columnId": "7",
+                    "name": "JobType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "executionId",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Hadoop_Metrics!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Hadoop_Job_Id",
+                    "formulaString": "=#Hadoop_Metrics!Hadoop_Job_Id"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 2,
+                    "columnName": "JobTypeId",
+                    "formulaString": "=REPLACEALL(#Hadoop_Metrics!Job_Name;\":.*\";\"\")"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 3,
+                    "columnName": "JobType",
+                    "formulaString": "=IF(startswith(#JobTypeId;\"COMPACTION\");\"Compaction job\";REPLACEALL(#JobTypeId;\" [(].*\";\"\"))"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 4,
+                    "columnName": "JobName",
+                    "formulaString": "=REPLACEALL(#Hadoop_Metrics!Job_Name;\".*: \";\"\")"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 5,
+                    "columnName": "Counter_Name",
+                    "formulaString": "=REPLACEALL(#Hadoop_Metrics!Counter_Name;\"[.].*\";\"\")"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 6,
+                    "columnName": "Counter_Value",
+                    "formulaString": "=#Hadoop_Metrics!Counter_Value"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 7,
+                    "columnName": "executionId",
+                    "formulaString": "=INT(IF(EQUALS(#JobType;\"Compaction job\");\"\";IF(CONTAINS(#JobTypeId;\"(\");SUBSTR(SUBSTR(#JobTypeId;INDEX(#JobTypeId;\"\\\\(\") + 1);0;INDEX(SUBSTR(#JobTypeId;INDEX(#JobTypeId;\"\\\\(\") + 1);\"\\\\)\"));SUBSTR(SUBSTR(#JobTypeId;INDEX(#JobTypeId;\"_\")+1);0;INDEX(SUBSTR(#JobTypeId;INDEX(#JobTypeId;\"_\")+1);\"__\")))))"
+                }
+            ],
+            "keep": false,
+            "name": "HadoopMetrics",
+            "nextColumnId": 15,
+            "sheetId": "2e10a8b8-18f3-47f0-971c-f7d34004f117",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 164
+                },
+                {
+                    "columnId": "1",
+                    "name": "JOB_COMPLETION_TIME_TOTAL",
+                    "thousandSeparator": true,
+                    "width": 244
+                },
+                {
+                    "columnId": "2",
+                    "name": "RunCount",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "AverageRunTimeMinutes",
+                    "thousandSeparator": true,
+                    "width": 208
+                },
+                {
+                    "columnId": "4",
+                    "name": "JOB_COMPLETION_TIME_MAX",
+                    "thousandSeparator": true,
+                    "width": 220
+                }
+            ],
+            "filterArguments": [
+                {
+                    "filterExpression": "FORMULA",
+                    "type": "ADVANCED_FORMULA",
+                    "value": "ASDATE(#Day;\"yyyy-MM-dd\")>=TODAY()-30d",
+                    "valueStatic": false
+                }
+            ],
+            "filterSourceSheet": "HadoopMetricsByDay",
+            "filterTargetSheet": "HadoopMetricsByDay",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=GROUPBY(FORMATDATE(#HadoopMetrics!Timestamp;\"yyyy-MM-dd\"))"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 1,
+                    "columnName": "RunCount",
+                    "formulaString": "=GROUPSUM(IF(#HadoopMetrics!Counter_Name==\"JOB_COMPLETION_TIME\";1;0))"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 2,
+                    "columnName": "JOB_COMPLETION_TIME_TOTAL",
+                    "formulaString": "=GROUPSUM(IF(#HadoopMetrics!Counter_Name==\"JOB_COMPLETION_TIME\";#HadoopMetrics!Counter_Value/1h;0))"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "AverageRunTimeMinutes",
+                    "formulaString": "=#JOB_COMPLETION_TIME_TOTAL/#RunCount*60"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "JOB_COMPLETION_TIME_MAX",
+                    "formulaString": "=GROUPMAX(IF(#HadoopMetrics!Counter_Name==\"JOB_COMPLETION_TIME\";#HadoopMetrics!Counter_Value/1h;0))"
+                }
+            ],
+            "keep": true,
+            "name": "HadoopMetricsByDay",
+            "nextColumnId": 5,
+            "sheetId": "b4104b65-a683-4c6b-8897-903aee3effa0",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Day",
+                    "sortOrder": "ASC"
+                }
+            ],
+            "sortSourceSheet": "HadoopMetricsByDay",
+            "sortTargetSheet": "HadoopMetricsByDay"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 164
+                },
+                {
+                    "columnId": "1",
+                    "name": "RunCount",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "JOB_COMPLETION_TIME_TOTAL",
+                    "thousandSeparator": true,
+                    "width": 244
+                },
+                {
+                    "columnId": "3",
+                    "name": "JOB_COMPLETION_TIME_AVG",
+                    "thousandSeparator": true,
+                    "width": 208
+                },
+                {
+                    "columnId": "4",
+                    "name": "JOB_COMPLETION_TIME_MAX",
+                    "thousandSeparator": true,
+                    "width": 220
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=#HadoopMetricsByDay!Day"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "RunCount",
+                    "formulaString": "=#HadoopMetricsByDay!RunCount"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "JOB_COMPLETION_TIME_TOTAL",
+                    "formulaString": "=#HadoopMetricsByDay!JOB_COMPLETION_TIME_TOTAL"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "JOB_COMPLETION_TIME_AVG",
+                    "formulaString": "=#HadoopMetricsByDay!AverageRunTimeMinutes"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "JOB_COMPLETION_TIME_MAX",
+                    "formulaString": "=#HadoopMetricsByDay!JOB_COMPLETION_TIME_MAX"
+                }
+            ],
+            "keep": true,
+            "name": "HadoopMetricsByDayDesc",
+            "nextColumnId": 5,
+            "sheetId": "4ea2e4c7-a6ef-4751-8bff-b936ccea7f45",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Day",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "HadoopMetricsByDayDesc",
+            "sortTargetSheet": "HadoopMetricsByDayDesc"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "JobName",
+                    "thousandSeparator": true,
+                    "width": 347
+                },
+                {
+                    "columnId": "2",
+                    "name": "JOB_COMPLETION_TIME_TOTAL",
+                    "thousandSeparator": true,
+                    "width": 210
+                },
+                {
+                    "columnId": "3",
+                    "name": "RunCount",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "JOB_COMPLETION_TIME_AVG",
+                    "thousandSeparator": true,
+                    "width": 227
+                },
+                {
+                    "columnId": "5",
+                    "name": "JOB_COMPLETION_TIME_MAX",
+                    "thousandSeparator": true,
+                    "width": 208
+                },
+                {
+                    "columnId": "7",
+                    "name": "JobType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "null",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "MB_READ",
+                    "thousandSeparator": true,
+                    "width": 116
+                },
+                {
+                    "columnId": "9",
+                    "name": "MB_WRITTEN",
+                    "thousandSeparator": true,
+                    "width": 151
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=GROUPBY(FORMATDATE(#HadoopMetrics!Timestamp;\"yyyy-MM-dd\"))"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 1,
+                    "columnName": "JobType",
+                    "formulaString": "=GROUPBY(#HadoopMetrics!JobType)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 2,
+                    "columnName": "JobName",
+                    "formulaString": "=GROUPBY(REPLACEALL(REPLACEALL(#HadoopMetrics!JobName;\".*: \";\"\");\"#.\"))"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "RunCount",
+                    "formulaString": "=GROUPSUM(IF(#HadoopMetrics!Counter_Name==\"JOB_COMPLETION_TIME\";1;0))"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 4,
+                    "columnName": "JOB_COMPLETION_TIME_TOTAL",
+                    "formulaString": "=GROUPSUM(IF(#HadoopMetrics!Counter_Name==\"JOB_COMPLETION_TIME\";#HadoopMetrics!Counter_Value/1h;0))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 5,
+                    "columnName": "JOB_COMPLETION_TIME_AVG",
+                    "formulaString": "=IF(#HadoopMetricsByDayPerJob!RunCount>0;#JOB_COMPLETION_TIME_TOTAL/#HadoopMetricsByDayPerJob!RunCount;0)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 6,
+                    "columnName": "JOB_COMPLETION_TIME_MAX",
+                    "formulaString": "=GROUPMAX(IF(#HadoopMetrics!Counter_Name==\"JOB_COMPLETION_TIME\";#HadoopMetrics!Counter_Value/1h;0))"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 7,
+                    "columnName": "MB_READ",
+                    "formulaString": "=GROUPSUM(IF(CONTAINS(#HadoopMetrics!Counter_Name;\"_BYTES_READ\");ROUND(#HadoopMetrics!Counter_Value/1024);0))"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 8,
+                    "columnName": "MB_WRITTEN",
+                    "formulaString": "=GROUPSUM(IF(CONTAINS(#HadoopMetrics!Counter_Name;\"_BYTES_WRITTEN\");ROUND(#HadoopMetrics!Counter_Value/1024);0))"
+                }
+            ],
+            "keep": true,
+            "name": "HadoopMetricsByDayPerJob",
+            "nextColumnId": 10,
+            "sheetId": "98f63fcb-f07e-4654-b002-f49689a03019",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Day",
+                    "sortOrder": "DESC"
+                },
+                {
+                    "column": "JOB_COMPLETION_TIME_MAX",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "HadoopMetricsByDayPerJob",
+            "sortTargetSheet": "HadoopMetricsByDayPerJob"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "JOB_COMPLETION_TIME_MAX",
+                    "thousandSeparator": true,
+                    "width": 277
+                },
+                {
+                    "columnId": "2",
+                    "name": "JobName",
+                    "thousandSeparator": true,
+                    "width": 236
+                },
+                {
+                    "columnId": "3",
+                    "name": "JobType",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=GROUPBY(#HadoopMetricsByDayPerJob!Day)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 1,
+                    "columnName": "JobType",
+                    "formulaString": "=#HadoopMetricsByDayPerJob!JobType"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "JobName",
+                    "formulaString": "=#HadoopMetricsByDayPerJob!JobName"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 3,
+                    "columnName": "JOB_COMPLETION_TIME_MAX",
+                    "formulaString": "=GROUPTOPN(#HadoopMetricsByDayPerJob!JOB_COMPLETION_TIME_MAX;1)"
+                }
+            ],
+            "keep": true,
+            "name": "HadoopMetricsByDaySlowest",
+            "nextColumnId": 4,
+            "sheetId": "a9532486-75f7-4ccf-98d0-37bc8fbe61e8",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Day",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "HadoopMetricsByDaySlowest",
+            "sortTargetSheet": "HadoopMetricsByDaySlowest"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "JobType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "RunCount",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "JOB_COMPLETION_TIME_TOTAL",
+                    "thousandSeparator": true,
+                    "width": 285
+                },
+                {
+                    "columnId": "4",
+                    "name": "JOB_COMPLETION_TIME_AVG",
+                    "thousandSeparator": true,
+                    "width": 219
+                },
+                {
+                    "columnId": "5",
+                    "name": "JOB_COMPLETION_TIME_MAX",
+                    "thousandSeparator": true,
+                    "width": 265
+                },
+                {
+                    "columnId": "6",
+                    "name": "MB_READ",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "MB_WRITTEN",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=GROUPBY(#HadoopMetricsByDayPerJob!Day)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "JobType",
+                    "formulaString": "=GROUPBY(#HadoopMetricsByDayPerJob!JobType)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "RunCount",
+                    "formulaString": "=GROUPSUM(#HadoopMetricsByDayPerJob!RunCount)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "JOB_COMPLETION_TIME_TOTAL",
+                    "formulaString": "=GROUPSUM(#HadoopMetricsByDayPerJob!JOB_COMPLETION_TIME_TOTAL)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "JOB_COMPLETION_TIME_AVG",
+                    "formulaString": "=#HadoopMetricsByDayByJobTypeDesc!JOB_COMPLETION_TIME_TOTAL/#HadoopMetricsByDayByJobTypeDesc!RunCount"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "JOB_COMPLETION_TIME_MAX",
+                    "formulaString": "=GROUPMAX(#HadoopMetricsByDayPerJob!JOB_COMPLETION_TIME_MAX)"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "MB_READ",
+                    "formulaString": "=GROUPSUM(#HadoopMetricsByDayPerJob!MB_READ)"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "MB_WRITTEN",
+                    "formulaString": "=GROUPSUM(#HadoopMetricsByDayPerJob!MB_WRITTEN)"
+                }
+            ],
+            "keep": true,
+            "name": "HadoopMetricsByDayByJobTypeDesc",
+            "nextColumnId": 9,
+            "sheetId": "0430eb87-92f8-4e5a-ac09-a4db8966570f",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Day",
+                    "sortOrder": "DESC"
+                },
+                {
+                    "column": "JOB_COMPLETION_TIME_TOTAL",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "HadoopMetricsByDayByJobTypeDesc",
+            "sortTargetSheet": "HadoopMetricsByDayByJobTypeDesc"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "1",
+                    "decimalDigits": 1,
+                    "name": "ImportJobTotalRunTimeHours",
+                    "thousandSeparator": true,
+                    "width": 172
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "2",
+                    "decimalDigits": 1,
+                    "name": "ImportLinkJobTotalRunTimeHours",
+                    "thousandSeparator": true,
+                    "width": 198
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "3",
+                    "decimalDigits": 1,
+                    "name": "WorkbookJobTotalRunTimeHours",
+                    "thousandSeparator": true,
+                    "width": 238
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "4",
+                    "decimalDigits": 1,
+                    "name": "ExportJobTotalRunTimeHours",
+                    "thousandSeparator": true,
+                    "width": 170
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "5",
+                    "decimalDigits": 1,
+                    "name": "CompactionJobTotalRunTimeHours",
+                    "thousandSeparator": false,
+                    "width": 203
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=GROUPBY(FORMATDATE(ASDATE(#HadoopMetricsByDayByJobTypeDesc!Day;\"yyyy-MM-dd\");\"yyyy ww\"))"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "ImportJobTotalRunTimeHours",
+                    "formulaString": "=GROUPSUM(IF(#HadoopMetricsByDayByJobTypeDesc!JobType==\"Import job\";#HadoopMetricsByDayByJobTypeDesc!JOB_COMPLETION_TIME_TOTAL;0))"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportLinkJobTotalRunTimeHours",
+                    "formulaString": "=GROUPSUM(IF(#HadoopMetricsByDayByJobTypeDesc!JobType==\"Import link job\";#HadoopMetricsByDayByJobTypeDesc!JOB_COMPLETION_TIME_TOTAL;0))"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "WorkbookJobTotalRunTimeHours",
+                    "formulaString": "=GROUPSUM(IF(#HadoopMetricsByDayByJobTypeDesc!JobType==\"Workbook job\";#HadoopMetricsByDayByJobTypeDesc!JOB_COMPLETION_TIME_TOTAL;0))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "ExportJobTotalRunTimeHours",
+                    "formulaString": "=GROUPSUM(IF(#HadoopMetricsByDayByJobTypeDesc!JobType==\"Export job\";#HadoopMetricsByDayByJobTypeDesc!JOB_COMPLETION_TIME_TOTAL;0))"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "CompactionJobTotalRunTimeHours",
+                    "formulaString": "=GROUPSUM(IF(#HadoopMetricsByDayByJobTypeDesc!JobType==\"Compaction job\";#HadoopMetricsByDayByJobTypeDesc!JOB_COMPLETION_TIME_TOTAL;0))"
+                }
+            ],
+            "keep": true,
+            "name": "JobExecutionTimeByWeek",
+            "nextColumnId": 6,
+            "sheetId": "09b3ff2a-f6e1-4ab2-9a21-1ce7410118aa",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "Event",
+                    "thousandSeparator": true,
+                    "width": 205
+                }
+            ],
+            "keep": false,
+            "name": "Metrics",
+            "referencedSheet": {
+                "name": "Metrics",
+                "sheetId": "73f9c80d-003c-48ff-a1b3-bbe3e7af6707",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/base/_02_30_Metrics.wbk",
+                    "uuid": "53590388-9038-4bfe-b43a-5ab0060f6c90"
+                }
+            },
+            "sheetId": "b38bbb96-69c3-4d73-a2f3-14833a1c2209",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "2",
+                    "name": "confId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "executionId",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "2",
+                    "columnIndex": 0,
+                    "columnName": "confId",
+                    "formulaString": "=INT(#Metrics!ms)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 1,
+                    "columnName": "executionId",
+                    "formulaString": "=#Metrics!Value2"
+                }
+            ],
+            "keep": true,
+            "name": "ConfIdToExecutionId",
+            "nextColumnId": 4,
+            "sheetId": "a2eecf5e-ab48-4ede-9e7a-492b9b49eb7e",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "3",
+                    "name": "JobType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "Counter_Name",
+                    "thousandSeparator": true,
+                    "width": 200
+                },
+                {
+                    "columnId": "6",
+                    "name": "RunTimeSeconds",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "executionId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Counter_Name",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "JOB_COMPLETION_TIME",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "RunTimes",
+            "filterTargetSheet": "RunTimes",
+            "formulas": [
+                {
+                    "columnId": "8",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=FORMATDATE(#HadoopMetrics!Timestamp;\"yyyy-MM-dd\")"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 1,
+                    "columnName": "JobType",
+                    "formulaString": "=#HadoopMetrics!JobType"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 2,
+                    "columnName": "Counter_Name",
+                    "formulaString": "=#HadoopMetrics!Counter_Name"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 3,
+                    "columnName": "executionId",
+                    "formulaString": "=#HadoopMetrics!executionId"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 4,
+                    "columnName": "RunTimeSeconds",
+                    "formulaString": "=#HadoopMetrics!Counter_Value/1s"
+                }
+            ],
+            "keep": true,
+            "name": "RunTimes",
+            "nextColumnId": 9,
+            "sheetId": "d81c61a2-17f3-4975-afc3-9636bbe21a65",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "f00009a45d2d01d5db5cc2ac2a983a0f",
+                    "thousandSeparator": true,
+                    "width": 176
+                }
+            ],
+            "filterArguments": [
+                {
+                    "filterExpression": "FORMULA",
+                    "type": "ADVANCED_FORMULA",
+                    "value": "ASDATE(#RunTimes.Day;\"yyyy-MM-dd\") > TODAY()-7d",
+                    "valueStatic": false
+                }
+            ],
+            "filterSourceSheet": "Joined2FilterOnLast7Days",
+            "filterTargetSheet": "Joined2FilterOnLast7Days",
+            "keep": false,
+            "name": "Joined2FilterOnLast7Days",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "executionId"
+                        ],
+                        "joinColumns2": [
+                            "executionId"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "RunTimes",
+                        "sheet2": "ConfIdToExecutionId"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "ConfIdToExecutionId": [
+                        "confId"
+                    ],
+                    "ExecutionJobUserXExecutionId": [
+                        "execution_job_user"
+                    ],
+                    "RunTimes": [
+                        "Day",
+                        "JobType",
+                        "RunTimeSeconds"
+                    ]
+                }
+            },
+            "sheetId": "3104cf6d-b202-4aba-a051-e2a659ca267e",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "1",
+                    "name": "Configuration",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "2",
+                    "decimalDigits": 1,
+                    "name": "RunTimeMinutes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "JobType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Runs",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "1",
+                    "columnIndex": 0,
+                    "columnName": "Configuration",
+                    "formulaString": "=GROUPBY(#Joined2FilterOnLast7Days!ConfIdToExecutionId.confId)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 1,
+                    "columnName": "RunTimeMinutes",
+                    "formulaString": "=GROUPSUM(#Joined2FilterOnLast7Days!RunTimes.RunTimeSeconds)/60"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 2,
+                    "columnName": "JobType",
+                    "formulaString": "=GROUPANY(#Joined2FilterOnLast7Days!RunTimes.JobType)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 3,
+                    "columnName": "Runs",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": false,
+            "name": "RuntimePerDayAndConfiguration",
+            "nextColumnId": 5,
+            "sheetId": "7595bf69-d266-46ba-9bc0-1b837fc3c890",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "1",
+                    "name": "UnnecessaryKeptSheets",
+                    "thousandSeparator": true,
+                    "width": 224
+                },
+                {
+                    "columnId": "2",
+                    "name": "PullType",
+                    "thousandSeparator": true,
+                    "width": 218
+                },
+                {
+                    "columnId": "0",
+                    "name": "ConfigurationId",
+                    "thousandSeparator": true,
+                    "width": 159
+                }
+            ],
+            "keep": false,
+            "name": "ConfMetaData",
+            "referencedSheet": {
+                "name": "ConfMetaData",
+                "sheetId": "c620ab15-0526-42f2-af85-7456874acf15",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/_h_Configuration and Job Metadata.wbk",
+                    "uuid": "d9dd5d1a-bbcf-4374-8bad-6974df583925"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "09f879ad-f318-4594-b3cf-74b426fa45e1",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "ec95e4f01920be557cd7d32ac92c2ca1",
+                    "thousandSeparator": true,
+                    "width": 297
+                },
+                {
+                    "columnId": "fd15d26dbd2cdc176e1d3902653cc641",
+                    "thousandSeparator": true,
+                    "width": 316
+                }
+            ],
+            "keep": true,
+            "name": "Joined3",
+            "sheetDefinition": {
+                "joinCategory": "MULTI_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "Configuration"
+                        ],
+                        "joinColumns2": [
+                            "ConfigurationId"
+                        ],
+                        "joinType": "OUTER_LEFT",
+                        "sheet1": "RuntimePerDayAndConfiguration",
+                        "sheet2": "ConfMetaData"
+                    },
+                    {
+                        "joinColumns1": [
+                            "ConfigurationId"
+                        ],
+                        "joinColumns2": [
+                            "MySQL_job_execution_dap_job_configuration__id"
+                        ],
+                        "joinType": "OUTER_LEFT",
+                        "sheet1": "ConfMetaData",
+                        "sheet2": "LastExecutionPerConfiguration"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "ConfMetaData": [
+                        "UnnecessaryKeptSheets",
+                        "PullType"
+                    ],
+                    "LastExecutionPerConfiguration": [
+                        "MySQL_users_name"
+                    ],
+                    "RuntimePerDayAndConfiguration": [
+                        "Configuration",
+                        "RunTimeMinutes",
+                        "JobType",
+                        "Runs"
+                    ]
+                }
+            },
+            "sheetId": "2861c197-f68c-49fb-9517-c61276877f40",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "1",
+                    "name": "ConfigurationId",
+                    "thousandSeparator": true,
+                    "width": 101
+                },
+                {
+                    "columnId": "2",
+                    "name": "RuntimeHours",
+                    "thousandSeparator": true,
+                    "width": 202
+                },
+                {
+                    "columnId": "3",
+                    "name": "Runs",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "UnnecessaryKeptSheets",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "PullType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "JobType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "User",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "1",
+                    "columnIndex": 0,
+                    "columnName": "ConfigurationId",
+                    "formulaString": "=GROUPBY(#Joined3!RuntimePerDayAndConfiguration.Configuration)"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 1,
+                    "columnName": "JobType",
+                    "formulaString": "=GROUPANY(#Joined3!RuntimePerDayAndConfiguration.JobType)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 2,
+                    "columnName": "PullType",
+                    "formulaString": "=GROUPANY(#Joined3!ConfMetaData.PullType)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 3,
+                    "columnName": "RuntimeHours",
+                    "formulaString": "=GROUPSUM(#Joined3!RuntimePerDayAndConfiguration.RunTimeMinutes)/60"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 4,
+                    "columnName": "Runs",
+                    "formulaString": "=GROUPSUM(#Joined3!RuntimePerDayAndConfiguration.Runs)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 5,
+                    "columnName": "UnnecessaryKeptSheets",
+                    "formulaString": "=GROUPANY(#Joined3!ConfMetaData.UnnecessaryKeptSheets)"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 6,
+                    "columnName": "User",
+                    "formulaString": "=GROUPANY(#Joined3!LastExecutionPerConfiguration.MySQL_users_name)"
+                }
+            ],
+            "keep": true,
+            "name": "SlowestJobsLast7Days",
+            "nextColumnId": 8,
+            "sheetId": "58a115b7-8533-411e-ae3b-564c2bbc7eba",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "RuntimeHours",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "SlowestJobsLast7Days",
+            "sortTargetSheet": "SlowestJobsLast7Days",
+            "topN": 50
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "MySQL_job_execution_dap_job_configuration__id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Max_MySQL_job_execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "MySQL_users_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": true,
+            "name": "LastExecutionPerConfiguration",
+            "referencedSheet": {
+                "name": "LastExecutionPerConfiguration",
+                "sheetId": "66f0d24e-0dbf-44bb-8366-f25b8ead3d1c",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/_f_User_job_execution.wbk",
+                    "uuid": "15c6138d-13a5-4f07-8cee-19a8608c99f4"
+                }
+            },
+            "sheetId": "f5fbcd34-0ca1-4768-9a18-5d6c6574e988",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

@@ -1,0 +1,22 @@
+{
+    "className": "datameer.dap.common.entity.DataBaseConnection",
+    "dbType": {
+        "name": "MySQL"
+    },
+    "file": {
+        "description": "Connection to MySQL database",
+        "name": "Datameer_DB",
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "properties": {
+        "dataStoreTemplate": [
+            "false"
+        ],
+        "dataStoreUsage": [
+            "IMPORT"
+        ]
+    },
+    "typeId": "das.JdbcDataStoreType",
+    "version": "4.5.0"
+}

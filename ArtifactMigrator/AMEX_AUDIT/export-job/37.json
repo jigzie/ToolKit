@@ -1,0 +1,86 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.FileDataSinkImpl",
+  "file": {
+    "uuid": "418d5a50-ea9b-4875-a645-12edc55d6514",
+    "path": "/Examples/Hello World/Solution/ExportJob1.exp",
+    "description": "",
+    "name": "ExportJob1"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "table_name": [
+      "67c7ed45_774a_4010_8216_b380a2108fc7_Joined"
+    ],
+    "transformation_name": [
+      "Copy_of_My Workbook"
+    ],
+    "transformation_description": [
+      ""
+    ],
+    "business_purpose": [
+      ""
+    ],
+    "run_frequency": [
+      "Daily"
+    ],
+    "status": [
+      "REQUEST_CREATION"
+    ]
+  },
+  "hadoopProperties": "",
+  "connection": "/Data/Connections/Datameer server filesystem",
+  "sheet": {
+    "name": "Joined",
+    "sheetId": "4f1f8e6b-5e66-431c-8c2d-30d9e4a59a73",
+    "workbook": {
+      "path": "/Examples/Hello World/Solution/Copy_of_My Workbook.wbk",
+      "uuid": "67c7ed45-774a-4010-8216-b380a2108fc7"
+    }
+  },
+  "mappings": [
+    {
+      "name": "MyUpload_Name",
+      "srcColumnIndex": 0,
+      "nullable": true
+    },
+    {
+      "name": "Dup_Name",
+      "srcColumnIndex": 1,
+      "nullable": true
+    },
+    {
+      "name": "MyUpload_Age",
+      "srcColumnIndex": 2,
+      "nullable": true
+    },
+    {
+      "name": "MyUpload_City",
+      "srcColumnIndex": 3,
+      "nullable": true
+    },
+    {
+      "name": "Dup_Age",
+      "srcColumnIndex": 4,
+      "nullable": true
+    },
+    {
+      "name": "Dup_City",
+      "srcColumnIndex": 5,
+      "nullable": true
+    }
+  ],
+  "errorHandlingMode": "DROP_RECORD",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fileName": "tmp/AEXP_JOIN_BDP_022",
+  "confirmOverwrite": false,
+  "clearTargetDirectory": false,
+  "includeHeader": true,
+  "delimiterString": ",",
+  "quoteString": "\"",
+  "escapeString": "\\",
+  "characterEncoding": "UTF-8",
+  "exportFileType": "DT_export"
+}

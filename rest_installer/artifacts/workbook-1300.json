@@ -1,0 +1,2681 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_01_DB_Data_Combiner",
+        "path": "/Administration/HUMv2/Exports/_01_DB_Data_Combiner.wbk",
+        "uuid": "6bb0ab3b-bde7-4ca3-b39a-9ecdc6a2ef07"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "cardinalities.generation": [
+            "true"
+        ],
+        "histograms.generation": [
+            "true"
+        ],
+        "minmaxmean.generation": [
+            "true"
+        ],
+        "topk.generation": [
+            "true"
+        ]
+    },
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "Artifact_Count_By_Type",
+            "referencedSheet": {
+                "name": "MySQL_Artifact_Count_By_Type",
+                "sheetId": "6127ba20-6b27-4290-bfdb-f2eae57294da",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_02_Artifact_Count_By_Type.wbk",
+                    "uuid": "7a9588e2-7222-4d78-a038-c7abfdb9c5fb"
+                }
+            },
+            "sheetId": "c9af26fc-c25a-419d-86c1-4b5d22f79565",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "extension",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "NumOfArtifacts",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "extension",
+                    "formulaString": "=#Artifact_Count_By_Type!extension"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "NumOfArtifacts",
+                    "formulaString": "=T(#Artifact_Count_By_Type!NumOfArtifacts)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"Artifact_Count_By_Type\""
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"extension\";\"NumOfArtifacts\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#extension;#NumOfArtifacts;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "Artifact_Count_By_Type_prep",
+            "nextColumnId": 5,
+            "sheetId": "1922d2c5-ff9b-4545-982f-7b652a5dbdaf",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 237
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#Artifact_Count_By_Type_prep!keys;#Artifact_Count_By_Type_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "Artifact_Count_By_Type_DataLink_rpt",
+            "nextColumnId": 1,
+            "sheetId": "fe381e6d-eaa5-4656-9374-106939ead2d2",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_Advanced_Filter_Functions",
+            "referencedSheet": {
+                "name": "MySQL_Advanced_Filter_Functions",
+                "sheetId": "35b315b6-450b-4371-bca4-b514a5f196c1",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_00_Advanced_Filter_Functions.wbk",
+                    "uuid": "3f53a076-fb6e-4aea-adcc-c5adc41c06a9"
+                }
+            },
+            "sheetId": "3722f067-93af-425e-83cb-295b14e78078",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "FormulaString",
+                    "thousandSeparator": true,
+                    "width": 339
+                },
+                {
+                    "columnId": "1",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "FormulaString",
+                    "formulaString": "=#MySQL_Advanced_Filter_Functions!FormulaString"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_Advanced_Filter_Functions\""
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"FormulaString\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#FormulaString;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_Advanced_Filter_Functions_prep",
+            "nextColumnId": 4,
+            "sheetId": "d5e325c6-7997-4c86-81df-d093274ac41c",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_Advanced_Filter_Functions_prep!keys;#MySQL_Advanced_Filter_Functions_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_Advanced_Filter_Functions_rpt",
+            "nextColumnId": 1,
+            "sheetId": "7e1ecd23-d8a3-4883-a058-3bf3d8e7fafe",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_dap_file",
+            "referencedSheet": {
+                "name": "MySQL_dap_file",
+                "sheetId": "c4b99187-2d5c-41a0-9ab1-851dda23f133",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_04_dap_file.wbk",
+                    "uuid": "b1008197-c92b-4cb5-9451-4f633f83ba51"
+                }
+            },
+            "sheetId": "dad88c20-c2e8-465f-96a7-90cac635a213",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "bytes_processed",
+                    "thousandSeparator": true,
+                    "width": 184
+                },
+                {
+                    "columnId": "2",
+                    "name": "extension",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "file_mode",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "version",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "folder_fk",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "permission_fk",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=T(#MySQL_dap_file!id)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "bytes_processed",
+                    "formulaString": "=T(#MySQL_dap_file!bytes_processed)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "extension",
+                    "formulaString": "=#MySQL_dap_file!extension"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "file_mode",
+                    "formulaString": "=#MySQL_dap_file!file_mode"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "name",
+                    "formulaString": "=#MySQL_dap_file!name"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "version",
+                    "formulaString": "=T(#MySQL_dap_file!version)"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "folder_fk",
+                    "formulaString": "=T(#MySQL_dap_file!folder_fk)"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "permission_fk",
+                    "formulaString": "=T(#MySQL_dap_file!permission_fk)"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_dap_file\""
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"id\";\"bytes_processed\";\"extension\";\"file_mode\";\"name\";\"version\";\"folder_fk\";\"permission_fk\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#id;#bytes_processed;#extension;#file_mode;#name;#version;#folder_fk;#permission_fk;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_dap_file_prep",
+            "nextColumnId": 11,
+            "sheetId": "d326ae28-acc6-4c9e-9eb2-78b8af56e1fe",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_dap_file_prep!keys;#MySQL_dap_file_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_dap_file_rpt",
+            "nextColumnId": 1,
+            "sheetId": "9f410b19-102f-4700-9d73-0cd0578030b5",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_data_store",
+            "referencedSheet": {
+                "name": "MySQL_data_store",
+                "sheetId": "5cf48759-c46c-47dc-879e-9f58fc4cee34",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_08_data_store.wbk",
+                    "uuid": "de7f2645-4df2-4364-9c3f-ab8c8c7d6c29"
+                }
+            },
+            "sheetId": "902905c2-9f98-457f-82d2-7374b3e5de6e",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "type_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "dap_file__id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "db_type_fk",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "type",
+                    "formulaString": "=#MySQL_data_store!type"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "id",
+                    "formulaString": "=T(#MySQL_data_store!id)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "type_id",
+                    "formulaString": "=#MySQL_data_store!type_id"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "dap_file__id",
+                    "formulaString": "=T(#MySQL_data_store!dap_file__id)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "db_type_fk",
+                    "formulaString": "=T(#MySQL_data_store!db_type_fk)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_data_store\""
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"type\";\"id\";\"type_id\";\"dap_file__id\";\"db_type_fk\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#type;#id;#type_id;#dap_file__id;#db_type_fk;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_data_store_prep",
+            "nextColumnId": 8,
+            "sheetId": "f26e94eb-7c2f-4f85-a2ea-3828c6e0c183",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_data_store_prep!keys;#MySQL_data_store_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_data_store_rpt",
+            "nextColumnId": 1,
+            "sheetId": "57ac231d-ac84-4ce4-b850-2ffbc17410af",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_db_driver",
+            "referencedSheet": {
+                "name": "MySQL_db_driver",
+                "sheetId": "1e005457-5746-4168-a810-4f8148663cc8",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_10_db_driver.wbk",
+                    "uuid": "fef313c2-a5de-4f84-9441-5659cd0c14d6"
+                }
+            },
+            "sheetId": "d6ab9583-3c07-4503-bd30-00dce4b5feba",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "connection_pattern",
+                    "thousandSeparator": true,
+                    "width": 206
+                },
+                {
+                    "columnId": "3",
+                    "name": "dialect_class_name",
+                    "thousandSeparator": true,
+                    "width": 177
+                },
+                {
+                    "columnId": "4",
+                    "name": "driver_class_name",
+                    "thousandSeparator": true,
+                    "width": 148
+                },
+                {
+                    "columnId": "5",
+                    "name": "uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=T(#MySQL_db_driver!id)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "name",
+                    "formulaString": "=#MySQL_db_driver!name"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "connection_pattern",
+                    "formulaString": "=#MySQL_db_driver!connection_pattern"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "dialect_class_name",
+                    "formulaString": "=#MySQL_db_driver!dialect_class_name"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "driver_class_name",
+                    "formulaString": "=#MySQL_db_driver!driver_class_name"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "uuid",
+                    "formulaString": "=#MySQL_db_driver!uuid"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_db_driver\""
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"id\";\"name\";\"connection_pattern\";\"dialect_class_name\";\"driver_class_name\";\"uuid\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#id;#name;#connection_pattern;#dialect_class_name;#driver_class_name;#uuid;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_db_driver_prep",
+            "nextColumnId": 9,
+            "sheetId": "26e1705e-c59d-43f3-854b-e987cd82a848",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_db_driver_prep!keys;#MySQL_db_driver_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_db_driver_rpt",
+            "nextColumnId": 1,
+            "sheetId": "93b2d7e7-9d8c-4d46-bc35-8ac1f3583939",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_export_file_types",
+            "referencedSheet": {
+                "name": "MySQL_export_file_types",
+                "sheetId": "10950f6d-312f-43a1-aab1-eb85ae9a9aa1",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_12_export_file_types.wbk",
+                    "uuid": "58d2851e-9ab2-4d41-b2ba-6a437506fe7c"
+                }
+            },
+            "sheetId": "3cba5505-41ce-46cd-86e7-f82910748407",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ConnectionType",
+                    "thousandSeparator": true,
+                    "width": 152
+                },
+                {
+                    "columnId": "1",
+                    "name": "JDBC",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ConsumerType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "FileType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "ConnectionType",
+                    "formulaString": "=#MySQL_export_file_types!ConnectionType"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "JDBC",
+                    "formulaString": "=#MySQL_export_file_types!JDBC"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ConsumerType",
+                    "formulaString": "=#MySQL_export_file_types!ConsumerType"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "FileType",
+                    "formulaString": "=#MySQL_export_file_types!FileType"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_export_file_types\""
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"ConnectionType\";\"JDBC\";\"ConsumerType\";\"FileType\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#ConnectionType;#JDBC;#ConsumerType;#FileType;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_export_file_types_prep",
+            "nextColumnId": 7,
+            "sheetId": "9ae53080-8a47-44c3-9a58-4cfb69543566",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_export_file_types_prep!keys;#MySQL_export_file_types_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_export_file_types_rpt",
+            "nextColumnId": 1,
+            "sheetId": "2660864c-758d-4dda-8bfb-bb7b0d6e6ec0",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_fileupload_file_types",
+            "referencedSheet": {
+                "name": "MySQL_fileupload_file_types",
+                "sheetId": "beb64991-cbc4-456b-b606-2fdd6438ad4f",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_14_fileupload_file_types.wbk",
+                    "uuid": "d146fb35-c2cd-4f56-b95b-d17a3dac03c7"
+                }
+            },
+            "sheetId": "a2881786-f51a-49f1-8d7f-53b540170f16",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ConsumerType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "FileType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "ConsumerType",
+                    "formulaString": "=#MySQL_fileupload_file_types!ConsumerType"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "FileType",
+                    "formulaString": "=#MySQL_fileupload_file_types!FileType"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_fileupload_file_types\""
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"ConsumerType\";\"FileType\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#ConsumerType;#FileType;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_fileupload_file_types_prep",
+            "nextColumnId": 5,
+            "sheetId": "171d075c-aa71-4689-ade8-62e1020978f1",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_fileupload_file_types_prep!keys;#MySQL_fileupload_file_types_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_fileupload_file_types_rpt",
+            "nextColumnId": 1,
+            "sheetId": "cd9f6775-9b27-4873-b675-aaa60d3ec9d6",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_file_dependency",
+            "referencedSheet": {
+                "name": "MySQL_file_dependency",
+                "sheetId": "560d458f-44a3-42ce-b340-c12ca1883869",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_16_file_dependency.wbk",
+                    "uuid": "7a530a8d-d24b-451d-9810-88df12966449"
+                }
+            },
+            "sheetId": "8f3ecd81-0a9e-4d28-b794-c9359ebaab1e",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "key_text",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "dependency_file_id",
+                    "thousandSeparator": true,
+                    "width": 175
+                },
+                {
+                    "columnId": "4",
+                    "name": "source_file_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=T(#MySQL_file_dependency!id)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "key_text",
+                    "formulaString": "=#MySQL_file_dependency!key_text"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "path",
+                    "formulaString": "=#MySQL_file_dependency!path"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "dependency_file_id",
+                    "formulaString": "=T(#MySQL_file_dependency!dependency_file_id)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "source_file_id",
+                    "formulaString": "=T(#MySQL_file_dependency!source_file_id)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_file_dependency\""
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"id\";\"key_text\";\"path\";\"dependency_file_id\";\"source_file_id\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#id;#key_text;#path;#dependency_file_id;#source_file_id;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_file_dependency_prep",
+            "nextColumnId": 8,
+            "sheetId": "00abcef4-0bfe-4f71-8d05-f7c040171b98",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_file_dependency_prep!keys;#MySQL_file_dependency_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_file_dependency_rpt",
+            "nextColumnId": 1,
+            "sheetId": "68750998-1700-4162-9c7c-4f7808bc8a44",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_file_type",
+            "referencedSheet": {
+                "name": "MySQL_file_type",
+                "sheetId": "9b8fb20e-06f0-47fa-956e-2f0e0db62cbb",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_18_file_type.wbk",
+                    "uuid": "bc001228-0fec-4963-bb31-856db82c1b96"
+                }
+            },
+            "sheetId": "8cad9d70-7416-442e-95bf-d0623731790a",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "file_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "dap_file_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "file_type",
+                    "formulaString": "=#MySQL_file_type!file_type"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "dap_file_id",
+                    "formulaString": "=T(#MySQL_file_type!dap_file_id)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_file_type\""
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"file_type\";\"dap_file_id\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#file_type;#dap_file_id;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_file_type_prep",
+            "nextColumnId": 5,
+            "sheetId": "ff30fcdc-8ea5-48fc-9132-abe8c6b21ce8",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_file_type_prep!keys;#MySQL_file_type_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_file_type_rpt",
+            "nextColumnId": 1,
+            "sheetId": "7ca7ddf0-4dc4-4f46-8e00-f83f0fcbed5e",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_Functions",
+            "referencedSheet": {
+                "name": "MySQL_Functions",
+                "sheetId": "ae0ff95c-34e3-40b3-82fd-676dc3000846",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_20_Functions.wbk",
+                    "uuid": "2f0508b5-d062-4a5f-bfe9-20b44b0e2aaf"
+                }
+            },
+            "sheetId": "cd805ef7-3037-4cfe-956e-d92a3595c353",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "FormulaID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "ColumnID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "FormulaString",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "SheetID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "WorkbookID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "FormulaID",
+                    "formulaString": "=T(#MySQL_Functions!FormulaID)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "ColumnID",
+                    "formulaString": "=T(#MySQL_Functions!ColumnID)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "FormulaString",
+                    "formulaString": "=#MySQL_Functions!FormulaString"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "SheetID",
+                    "formulaString": "=T(#MySQL_Functions!SheetID)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "WorkbookID",
+                    "formulaString": "=T(#MySQL_Functions!WorkbookID)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_Functions\""
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"FormulaID\";\"ColumnID\";\"FormulaString\";\"SheetID\";\"WorkbookID\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#FormulaID;#ColumnID;#FormulaString;#SheetID;#WorkbookID;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_Functions_prep",
+            "nextColumnId": 8,
+            "sheetId": "63594967-8f80-4073-b637-369ef14d272c",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_Functions_prep!keys;#MySQL_Functions_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_Functions_rpt",
+            "nextColumnId": 1,
+            "sheetId": "e36538b7-a068-4774-8e98-e134fa162fa6",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_import_file_types",
+            "referencedSheet": {
+                "name": "MySQL_import_file_types",
+                "sheetId": "9c5cc9d6-46c1-4cab-b6a3-f198b8284f33",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_22_import_file_type.wbk",
+                    "uuid": "f5d81570-845c-4bc9-92aa-bf9c0a41f46d"
+                }
+            },
+            "sheetId": "160bb3ac-7737-48ff-93e7-a919a01edbf6",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ConnectionType",
+                    "thousandSeparator": true,
+                    "width": 138
+                },
+                {
+                    "columnId": "1",
+                    "name": "JDBC",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ConsumerType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "FileType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "ConnectionType",
+                    "formulaString": "=#MySQL_import_file_types!ConnectionType"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "JDBC",
+                    "formulaString": "=#MySQL_import_file_types!JDBC"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ConsumerType",
+                    "formulaString": "=#MySQL_import_file_types!ConsumerType"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "FileType",
+                    "formulaString": "=#MySQL_import_file_types!FileType"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_import_file_types\""
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"ConnectionType\";\"JDBC\";\"ConsumerType\";\"FileType\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#ConnectionType;#JDBC;#ConsumerType;#FileType;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_import_file_types_prep",
+            "nextColumnId": 7,
+            "sheetId": "034e3941-8999-4c45-90e7-af1befa2ecac",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_import_file_types_prep!keys;#MySQL_import_file_types_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_import_file_types_rpt",
+            "nextColumnId": 1,
+            "sheetId": "6a04f094-3b26-45e3-8181-05d29573e4db",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "Workbook_Config_Stats",
+            "referencedSheet": {
+                "name": "MySQL_Workbook_Config_Stats",
+                "sheetId": "f52c3f95-9638-4c7a-ae1b-776e77a16180",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_30_Workbook_Config_Stats.wbk",
+                    "uuid": "692634b4-0d8a-4d93-8504-f9d1903f7ac8"
+                }
+            },
+            "sheetId": "3dd12149-6cdf-4039-9695-21dbc33be2b4",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "SheetID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "WorkbookID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "FilterID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "SortID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "ExternalSheetID",
+                    "thousandSeparator": true,
+                    "width": 169
+                },
+                {
+                    "columnId": "5",
+                    "name": "SheetType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "PartitionDefinition",
+                    "thousandSeparator": true,
+                    "width": 150
+                },
+                {
+                    "columnId": "7",
+                    "name": "PartitionSelector",
+                    "thousandSeparator": true,
+                    "width": 130
+                },
+                {
+                    "columnId": "8",
+                    "name": "Keep",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "SheetID",
+                    "formulaString": "=T(#Workbook_Config_Stats!SheetID)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "WorkbookID",
+                    "formulaString": "=T(#Workbook_Config_Stats!WorkbookID)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "FilterID",
+                    "formulaString": "=T(#Workbook_Config_Stats!FilterID)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "SortID",
+                    "formulaString": "=T(#Workbook_Config_Stats!SortID)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "ExternalSheetID",
+                    "formulaString": "=T(#Workbook_Config_Stats!ExternalSheetID)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "SheetType",
+                    "formulaString": "=#Workbook_Config_Stats!SheetType"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "PartitionDefinition",
+                    "formulaString": "=#Workbook_Config_Stats!PartitionDefinition"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "PartitionSelector",
+                    "formulaString": "=#Workbook_Config_Stats!PartitionSelector"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "Keep",
+                    "formulaString": "=T(#Workbook_Config_Stats!Keep)"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"Workbook_Config_Stats\""
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"SheetID\";\"WorkbookID\";\"FilterID\";\"SortID\";\"ExternalSheetID\";\"SheetType\";\"PartitionDefinition\";\"PartitionSelector\";\"Keep\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#SheetID;#WorkbookID;#FilterID;#SortID;#ExternalSheetID;#SheetType;#PartitionDefinition;#PartitionSelector;#Keep;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "Workbook_Config_Stats_prep",
+            "nextColumnId": 12,
+            "sheetId": "bdbba4c6-9b82-41e6-81b6-3e6765c6876f",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#Workbook_Config_Stats_prep!keys;#Workbook_Config_Stats_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "Workbook_Config_Stats_rpt",
+            "nextColumnId": 1,
+            "sheetId": "497950b9-df6d-4653-9370-b68e3c4589c3",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_dap_vol",
+            "referencedSheet": {
+                "name": "MySQL_dap_vol",
+                "sheetId": "07f5ba3c-c458-4536-887a-0e2e704a84a0",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_06_dap_vol.wbk",
+                    "uuid": "76ea9018-e823-46fe-a41a-f4d09c753733"
+                }
+            },
+            "sheetId": "b9b0ac6a-6f89-4bfb-8580-a505d4c4b2c1",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "day",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "job_conf_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "volume",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=T(#MySQL_dap_vol!id)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "day",
+                    "formulaString": "=T(#MySQL_dap_vol!day)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "job_conf_id",
+                    "formulaString": "=T(#MySQL_dap_vol!job_conf_id)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "volume",
+                    "formulaString": "=T(#MySQL_dap_vol!volume)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_dap_vol\""
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"id\";\"day\";\"job_conf_id\";\"volume\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#id;#day;#job_conf_id;#volume;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_dap_vol_prep",
+            "nextColumnId": 9,
+            "sheetId": "16838915-ff15-4589-8ccc-fda8ec954c90",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_dap_vol_prep!keys;#MySQL_dap_vol_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_dap_vol_rpt",
+            "nextColumnId": 1,
+            "sheetId": "d1760190-5a95-40bc-b9b3-ff90ed37a5b8",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_property",
+            "referencedSheet": {
+                "name": "MySQL_property",
+                "sheetId": "2181ef28-b94a-4239-8076-b663baea8d4f",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_26_property.wbk",
+                    "uuid": "3088303f-fffb-4513-a164-0c82952621c4"
+                }
+            },
+            "sheetId": "33684b68-919a-4738-a231-1fc28a48cd96",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "value",
+                    "thousandSeparator": true,
+                    "width": 265
+                },
+                {
+                    "columnId": "2",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "name",
+                    "thousandSeparator": true,
+                    "width": 209
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "9",
+                    "columnIndex": 0,
+                    "columnName": "name",
+                    "formulaString": "=#MySQL_property!name"
+                },
+                {
+                    "columnId": "0",
+                    "columnIndex": 1,
+                    "columnName": "value",
+                    "formulaString": "=#MySQL_property!value"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_property\""
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"name\";\"value\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#name;#value;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_property_prep",
+            "nextColumnId": 10,
+            "sheetId": "35c4526c-0667-40d9-8761-5aab1e71578c",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 156
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_property_prep!keys;#MySQL_property_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_property_rpt",
+            "nextColumnId": 1,
+            "sheetId": "da1218d1-b048-4ca9-9d90-bb8e155439f6",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_job_execution",
+            "referencedSheet": {
+                "name": "MySQL_job_execution",
+                "sheetId": "45543d9a-470f-4059-bb11-018aa46b4c9e",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_24_job_execution.wbk",
+                    "uuid": "d6d72ad2-290d-4db7-817f-809cce8c7e71"
+                }
+            },
+            "sheetId": "82fc3790-8ab1-40f6-a23d-a6cc2c8bfad9",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "hadoop_properties",
+                    "thousandSeparator": true,
+                    "width": 152
+                },
+                {
+                    "columnId": "2",
+                    "name": "job_data",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "job_exception",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "job_status",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "queued_time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "start_time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "stop_time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "triggered_by",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "created_data__id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "dap_job_configuration__id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "13",
+                    "name": "execution_plan_fk",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "14",
+                    "name": "logging_properties",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "15",
+                    "name": "root_logger_level",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "16",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "17",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "18",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=T(#MySQL_job_execution!id)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "hadoop_properties",
+                    "formulaString": "=#MySQL_job_execution!hadoop_properties"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "job_data",
+                    "formulaString": "=#MySQL_job_execution!job_data"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "job_exception",
+                    "formulaString": "=#MySQL_job_execution!job_exception"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "job_status",
+                    "formulaString": "=T(#MySQL_job_execution!job_status)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "queued_time",
+                    "formulaString": "=T(#MySQL_job_execution!queued_time)"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "start_time",
+                    "formulaString": "=T(#MySQL_job_execution!start_time)"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "stop_time",
+                    "formulaString": "=T(#MySQL_job_execution!stop_time)"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "triggered_by",
+                    "formulaString": "=T(#MySQL_job_execution!triggered_by)"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "type",
+                    "formulaString": "=#MySQL_job_execution!type"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "user",
+                    "formulaString": "=SHA_256(#MySQL_job_execution!user)"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "created_data__id",
+                    "formulaString": "=T(#MySQL_job_execution!created_data__id)"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 12,
+                    "columnName": "dap_job_configuration__id",
+                    "formulaString": "=T(#MySQL_job_execution!dap_job_configuration__id)"
+                },
+                {
+                    "columnId": "13",
+                    "columnIndex": 13,
+                    "columnName": "execution_plan_fk",
+                    "formulaString": "=T(#MySQL_job_execution!execution_plan_fk)"
+                },
+                {
+                    "columnId": "14",
+                    "columnIndex": 14,
+                    "columnName": "logging_properties",
+                    "formulaString": "=#MySQL_job_execution!logging_properties"
+                },
+                {
+                    "columnId": "15",
+                    "columnIndex": 15,
+                    "columnName": "root_logger_level",
+                    "formulaString": "=#MySQL_job_execution!root_logger_level"
+                },
+                {
+                    "columnId": "16",
+                    "columnIndex": 16,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_job_execution\""
+                },
+                {
+                    "columnId": "17",
+                    "columnIndex": 17,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"id\";\"hadoop_properties\";\"job_data\";\"job_exception\";\"job_status\";\"queued_time\";\"start_time\";\"stop_time\";\"triggered_by\";\"type\";\"user\";\"created_data__id\";\"dap_job_configuration__id\";\"execution_plan_fk\";\"logging_properties\";\"root_logger_level\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "18",
+                    "columnIndex": 18,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#id;#hadoop_properties;#job_data;#job_exception;#job_status;#queued_time;#start_time;#stop_time;#triggered_by;#type;#user;#created_data__id;#dap_job_configuration__id;#execution_plan_fk;#logging_properties;#root_logger_level;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_job_execution_prep",
+            "nextColumnId": 19,
+            "sheetId": "1fec790b-c8d6-4c6e-a1eb-16885c39c3fc",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_job_execution_prep!keys;#MySQL_job_execution_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_job_execution_rpt",
+            "nextColumnId": 1,
+            "sheetId": "d61c2e70-e050-4852-8f47-abbce0db3d58",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "MySQL_users",
+            "referencedSheet": {
+                "name": "MySQL_users",
+                "sheetId": "063305fd-fe2a-4f43-91c4-263ece882554",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_28_users.wbk",
+                    "uuid": "6ef03463-280f-48ad-a033-52e13d4ed7b2"
+                }
+            },
+            "sheetId": "3f153f97-f854-45ac-9649-871ed03b1b08",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "email",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "login_count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "enabled",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 164
+                },
+                {
+                    "columnId": "7",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 172
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=T(#MySQL_users!id)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "name",
+                    "formulaString": "=SHA_256(#MySQL_users!name)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "email",
+                    "formulaString": "=SHA_256(#MySQL_users!email)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "login_count",
+                    "formulaString": "=T(#MySQL_users!login_count)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "enabled",
+                    "formulaString": "=T(#MySQL_users!enabled)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_users\""
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"id\";\"name\";\"email\";\"login_count\";\"enabled\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#id;#name;#email;#login_count;#enabled;#ImportName_))"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_users_prep",
+            "nextColumnId": 8,
+            "sheetId": "11efadb7-60a9-4ba4-8734-9956ef3bf3a0",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_users_prep!keys;#MySQL_users_prep!values)"
+                }
+            ],
+            "keep": false,
+            "name": "MySQL_users_rpt",
+            "nextColumnId": 1,
+            "sheetId": "df1ada43-b6b6-4cd4-b4cc-5083ec0623d7",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "data_volume_size_by_license_period",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "expire_time_days",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "hadoop_properties",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "min_keep_count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "pull_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "schedule",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "dap_file__id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "logging_properties",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "root_logger_level",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_job_configuration",
+            "referencedSheet": {
+                "name": "MySQL_job_configuration",
+                "sheetId": "f9f668f3-1f0a-4111-9031-7103e55243e2",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_32_job_configuration.wbk",
+                    "uuid": "f262dbff-f741-4bdd-b176-42ad28a1e252"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "a7583f67-7a91-49df-92d0-72581257d248",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "data_volume_size_by_license_period",
+                    "thousandSeparator": true,
+                    "width": 237
+                },
+                {
+                    "columnId": "2",
+                    "name": "expire_time_days",
+                    "thousandSeparator": true,
+                    "width": 115
+                },
+                {
+                    "columnId": "3",
+                    "name": "hadoop_properties",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "min_keep_count",
+                    "thousandSeparator": true,
+                    "width": 107
+                },
+                {
+                    "columnId": "5",
+                    "name": "pull_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "schedule",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "dap_file__id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "logging_properties",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "root_logger_level",
+                    "thousandSeparator": true,
+                    "width": 114
+                },
+                {
+                    "columnId": "10",
+                    "name": "ImportName_",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "keys",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "values",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=T(#MySQL_job_configuration!id)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "data_volume_size_by_license_period",
+                    "formulaString": "=T(#MySQL_job_configuration!data_volume_size_by_license_period)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "expire_time_days",
+                    "formulaString": "=T(#MySQL_job_configuration!expire_time_days)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "hadoop_properties",
+                    "formulaString": "=#MySQL_job_configuration!hadoop_properties"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "min_keep_count",
+                    "formulaString": "=T(#MySQL_job_configuration!min_keep_count)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "pull_type",
+                    "formulaString": "=T(#MySQL_job_configuration!pull_type)"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "schedule",
+                    "formulaString": "=#MySQL_job_configuration!schedule"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "dap_file__id",
+                    "formulaString": "=T(#MySQL_job_configuration!dap_file__id)"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "logging_properties",
+                    "formulaString": "=#MySQL_job_configuration!logging_properties"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "root_logger_level",
+                    "formulaString": "=#MySQL_job_configuration!root_logger_level"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "ImportName_",
+                    "formulaString": "=\"MySQL_job_configuration\""
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "keys",
+                    "formulaString": "=TOJSON(LIST(\"id\";\"data_volume_size_by_license_period\";\"expire_time_days\";\"hadoop_properties\";\"min_keep_count\";\"pull_type\";\"schedule\";\"dap_file__id\";\"logging_properties\";\"min_keep_count\";\"root_logger_level\";\"ImportName_\"))"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 12,
+                    "columnName": "values",
+                    "formulaString": "=TOJSON(LIST(#id;#data_volume_size_by_license_period;#expire_time_days;#hadoop_properties;#min_keep_count;#pull_type;#schedule;#dap_file__id;#logging_properties;#min_keep_count;#root_logger_level;#ImportName_))"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_job_configuration_prep",
+            "nextColumnId": 13,
+            "sheetId": "d910c1de-a4af-4e6f-96c2-a73db2c2c518",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=JSON_MAP(#MySQL_job_configuration_prep!keys;#MySQL_job_configuration_prep!values)"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_job_configuration_rpt",
+            "nextColumnId": 1,
+            "sheetId": "8d86e2c3-f45c-4bf1-9240-443d0f2e94c1",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "combined_json",
+            "nextColumnId": 1,
+            "sheetDefinition": {
+                "unionSources": [
+                    "Artifact_Count_By_Type_DataLink_rpt",
+                    "MySQL_Advanced_Filter_Functions_rpt",
+                    "MySQL_dap_file_rpt",
+                    "MySQL_data_store_rpt",
+                    "MySQL_db_driver_rpt",
+                    "MySQL_export_file_types_rpt",
+                    "MySQL_fileupload_file_types_rpt",
+                    "MySQL_file_dependency_rpt",
+                    "MySQL_file_type_rpt",
+                    "MySQL_Functions_rpt",
+                    "MySQL_import_file_types_rpt",
+                    "MySQL_job_execution_rpt",
+                    "Workbook_Config_Stats_rpt",
+                    "MySQL_dap_vol_rpt",
+                    "MySQL_property_rpt",
+                    "MySQL_users_rpt",
+                    "MySQL_job_configuration_rpt"
+                ]
+            },
+            "sheetId": "24e078d5-8d19-4a67-a2ae-d11e110cdb3b",
+            "sheetType": "das.internal.UnionSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 200
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "json",
+                    "formulaString": "=ENC_BASE64(#combined_json!json)"
+                }
+            ],
+            "keep": true,
+            "name": "db_encoded_output",
+            "nextColumnId": 2,
+            "sheetId": "afc739ac-c62b-4015-af0d-76b580c7c957",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

@@ -1,0 +1,103 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_08_data_store",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_08_data_store.wbk",
+        "uuid": "de7f2645-4df2-4364-9c3f-ab8c8c7d6c29"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "8 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_data_store.lnk",
+                "uuid": "c50f54a8-7b51-4e93-bb1e-5c58cf34b213"
+            },
+            "keep": false,
+            "name": "MySQL_data_store_src",
+            "sheetId": "4281bb25-1149-4f7d-9ba0-962a7b7398f5",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "type_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "dap_file__id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "db_type_fk",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "type",
+                    "formulaString": "=#MySQL_data_store_src!type"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "id",
+                    "formulaString": "=#MySQL_data_store_src!id"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "type_id",
+                    "formulaString": "=#MySQL_data_store_src!type_id"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "dap_file__id",
+                    "formulaString": "=#MySQL_data_store_src!dap_file__id"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "db_type_fk",
+                    "formulaString": "=#MySQL_data_store_src!db_type_fk"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_data_store",
+            "nextColumnId": 5,
+            "sheetId": "5cf48759-c46c-47dc-879e-9f58fc4cee34",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

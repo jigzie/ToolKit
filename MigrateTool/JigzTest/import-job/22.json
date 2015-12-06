@@ -1,0 +1,27 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "3a16e10c-d130-4fa3-be35-5439402224d8",
+    "path": "/.system/93af603a-ffa9-477b-8288-22d387ab4223.upl",
+    "description": "",
+    "name": "93af603a-ffa9-477b-8288-22d387ab4223"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "78863420-6778-4a21-a8ed-71fd0f716e78"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "ea6451f0-1296-4ccd-a010-533cb9e06812"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": []
+}

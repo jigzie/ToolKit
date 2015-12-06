@@ -1,0 +1,84 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "d74ed4db-86a7-48f1-b595-ff5086d365f8",
+    "path": "/Data/ImportJobs/GroupPermission.imp",
+    "description": "GroupPermission Table: This contains the groups where this artifact is shared (ownership decides the license consumption)",
+    "name": "GroupPermission"
+  },
+  "pullType": "MANUALLY",
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "cc64a145-d8a2-400c-a0b0-b571c6c21c32"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      ""
+    ],
+    "tableName": [
+      "\u0027group_permission\u0027"
+    ],
+    "orderColumn": [
+      "id"
+    ],
+    "incrementalMode": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Data/Connections/Dap4120.dst",
+    "uuid": "1412c847-b9a7-4686-84c7-fd5caebd9a20"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 76,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 77,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "group_name",
+      "origin": "group_name",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 78,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "permission_bits",
+      "origin": "permission_bits",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 79,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "permission__id",
+      "origin": "permission__id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

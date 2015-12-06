@@ -1,0 +1,1380 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "bdfbee9f-d4ce-4411-9d58-03d6133e2510",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Exports/_02_HTTP_Combiner.wbk",
+    "description": "",
+    "name": "_02_HTTP_Combiner"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "clusterConfs",
+      "sheetId": "55549e55-c525-401d-baee-5aa4f8b623bb",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "clusterConfs",
+        "sheetId": "45657f19-6479-44b0-9c46-aa8179ec331f",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/ClusterConfig.wbk",
+          "uuid": "fc30e8d3-e9fe-4e3c-b069-32cb2eaf6e98"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 223,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "clusterConfs_prep",
+      "sheetId": "6c908dd8-c0e2-433a-b98e-4570ef2a6152",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "key",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#clusterConfs!key"
+        },
+        {
+          "columnName": "val",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#clusterConfs!val"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"clusterConfs\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "4",
+          "columnIndex": 3,
+          "formulaString": "\u003dTOJSON(LIST(\"key\";\"val\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "3",
+          "columnIndex": 4,
+          "formulaString": "\u003dTOJSON(LIST(#key;#val;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 223,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "clusterConfs_rpt",
+      "sheetId": "79dff905-7341-4c7b-ba4d-f82d5ecc0ce8",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#clusterConfs_prep!keys;#clusterConfs_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 571,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "conductorConfs",
+      "sheetId": "0a542ed4-45fe-49a7-a805-779a27c0221b",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "conductorConfs",
+        "sheetId": "a21e461c-34fd-48a3-9191-5b81820d0176",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/ConductorConfig.wbk",
+          "uuid": "983a5039-6727-489b-a25a-e995cd065d29"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "conductorConfs_prep",
+      "sheetId": "5fa9b7b8-32d4-4d4a-aea6-bf6a8d33179e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "key",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#conductorConfs!key"
+        },
+        {
+          "columnName": "val",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#conductorConfs!val"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"conductorConfs\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dTOJSON(LIST(\"key\";\"val\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dTOJSON(LIST(#key;#val;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "conductorConfs_rpt",
+      "sheetId": "928f3979-affc-4047-a336-d7853c687527",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#conductorConfs_prep!keys;#conductorConfs_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "cluster_health",
+      "sheetId": "87276ced-cb28-44b1-8a1f-cd896cf9e1d5",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "cluster_health_rpt",
+        "sheetId": "48e638ed-6af0-4689-ae70-85f697cc2359",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/ClusterHealthPage.wbk",
+          "uuid": "7eff2474-105e-43d0-8bef-115d5fa9abeb"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 317,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 286,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "cluster_health_prep",
+      "sheetId": "95be5054-649a-4e86-9cc9-769601c9645d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "key",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#cluster_health!key"
+        },
+        {
+          "columnName": "val",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#cluster_health!val"
+        },
+        {
+          "columnName": "mr_ver",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#cluster_health!mr_ver"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d\"clusterHealth\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dTOJSON(LIST(\"key\";\"val\";\"mr_ver\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dTOJSON(LIST(#key;#val;#mr_ver;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 317,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 286,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "cluster_health_rpt",
+      "sheetId": "b39533c2-1597-4579-af59-7144aa597fc5",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#cluster_health_prep!keys;#cluster_health_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "node_manager",
+      "sheetId": "ee0d96dc-18a9-42fe-8b25-ef6828285061",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "node_manager_rpt",
+        "sheetId": "8f7fbdba-7513-4c1a-afb3-7e5603ab66ed",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/ClusterHealthPage.wbk",
+          "uuid": "7eff2474-105e-43d0-8bef-115d5fa9abeb"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "rack",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "state",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "host",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "containers",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "used_mem_mb",
+          "width": 139,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "available_mem_mb",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "node_manager_prep",
+      "sheetId": "fd0d9a66-b1a4-4666-8628-db8904932459",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "rack",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#node_manager!rack"
+        },
+        {
+          "columnName": "state",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#node_manager!state"
+        },
+        {
+          "columnName": "host",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dSHA_256(#node_manager!host)"
+        },
+        {
+          "columnName": "status",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#node_manager!status"
+        },
+        {
+          "columnName": "containers",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#node_manager!containers"
+        },
+        {
+          "columnName": "used_mem_mb",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#node_manager!used_mem_mb"
+        },
+        {
+          "columnName": "available_mem_mb",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#node_manager!available_mem_mb"
+        },
+        {
+          "columnName": "mr_ver",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#node_manager!mr_ver"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d\"nodeManager\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003dTOJSON(LIST(\"rack\";\"state\";\"host\";\"status\";\"containers\";\"used_mem_mb\";\"available_mem_mb\";\"mr_ver\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003dTOJSON(LIST(#rack;#state;#host;#status;#containers;#used_mem_mb;#available_mem_mb;#mr_ver;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "rack",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "state",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "host",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "containers",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "used_mem_mb",
+          "width": 139,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "available_mem_mb",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 11
+    },
+    {
+      "name": "node_manager_rpt",
+      "sheetId": "f7028f17-f511-482a-b615-895d027b49af",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#node_manager_prep!keys;#node_manager_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "data_node_statistics",
+      "sheetId": "fbb19fd3-0c68-4c77-b5a3-cc488a020be0",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "data_node_statistics_rpt",
+        "sheetId": "f0cd4057-de1c-4efe-8a42-405bf1df84a6",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/ClusterHealthPage.wbk",
+          "uuid": "7eff2474-105e-43d0-8bef-115d5fa9abeb"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "host",
+          "width": 200,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "capacity",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "used",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "requests",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "lastUpdate",
+          "width": 164,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "state",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "data_node_statistics_prep",
+      "sheetId": "3aae9759-cf11-43fd-a083-e9fb2d81279a",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "host",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dSHA_256(#data_node_statistics!host)"
+        },
+        {
+          "columnName": "capacity",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#data_node_statistics!capacity"
+        },
+        {
+          "columnName": "used",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#data_node_statistics!used"
+        },
+        {
+          "columnName": "requests",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#data_node_statistics!requests"
+        },
+        {
+          "columnName": "lastUpdate",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#data_node_statistics!lastUpdate"
+        },
+        {
+          "columnName": "state",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#data_node_statistics!state"
+        },
+        {
+          "columnName": "mr_ver",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#data_node_statistics!mr_ver"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d\"data_node_statistics\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003dTOJSON(LIST(\"host\";\"capacity\";\"used\";\"requests\";\"lastUpdate\";\"state\";\"mr_ver\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003dTOJSON(LIST(#host;#capacity;#used;#requests;#lastUpdate;#state;#mr_ver;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "host",
+          "width": 200,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "capacity",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "used",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "requests",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "lastUpdate",
+          "width": 164,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "state",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "mr_ver",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 10
+    },
+    {
+      "name": "data_node_statistics_rpt",
+      "sheetId": "027bc23f-1c1f-4ff2-9649-5236e6e29478",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#data_node_statistics_prep!keys;#data_node_statistics_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "devPageDetails",
+      "sheetId": "d115365f-3c95-4837-8a28-494f414011ed",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "devPageDetails",
+        "sheetId": "db771e13-51ed-4310-8a7f-402afc5a4270",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/DevPageDetails.wbk",
+          "uuid": "d8bafa85-67cf-40aa-8d06-a01bc5d20867"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 204,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 236,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "devPageDetails_prep",
+      "sheetId": "6f87333f-6c99-4c97-a532-737354979fba",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "key",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#devPageDetails!key"
+        },
+        {
+          "columnName": "val",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#devPageDetails!val"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"devPageDetails\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dTOJSON(LIST(\"key\";\"val\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dTOJSON(LIST(#key;#val;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 204,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 236,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "devPageDetails_rpt",
+      "sheetId": "5b37ec26-1fa6-4a1d-b4e7-13f16d98b919",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#devPageDetails_prep!keys;#devPageDetails_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "licensePageDetails",
+      "sheetId": "3422f656-35de-412a-90a0-1fd0f55d741b",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "licensePageDetails",
+        "sheetId": "252779e8-f017-463c-af22-785565884ace",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/LicensePageDetails.wbk",
+          "uuid": "3060eb65-4c35-4a16-b59c-7f8bc8d23c57"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 123,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 754,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "licensePageDetails_prep",
+      "sheetId": "49e7e219-18e3-4796-9867-15774adbaeef",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "key",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#licensePageDetails!key"
+        },
+        {
+          "columnName": "val",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#licensePageDetails!val"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"licensePageDetails\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dTOJSON(LIST(\"key\";\"val\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dTOJSON(LIST(#key;#val;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 123,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 754,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "licensePageDetails_rpt",
+      "sheetId": "5f1d1db7-14c5-4dad-80d6-253ea7d2ff7e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#licensePageDetails_prep!keys;#licensePageDetails_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "plugins_n_versions",
+      "sheetId": "c47bda10-2078-4839-8846-614520a9e846",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "plugins_n_versions",
+        "sheetId": "2ebb8afd-37fc-4d58-aa30-93151e6e635e",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/Plugins.wbk",
+          "uuid": "ccf9ccdd-146f-4925-ae4d-288bb542d6a0"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "plugin_name",
+          "width": 214,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "plugin_version",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "plugins_n_versions_prep",
+      "sheetId": "0a7ae3f2-72b7-4973-a922-f08bc4dd64c6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "plugin_name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#plugins_n_versions!plugin_name"
+        },
+        {
+          "columnName": "plugin_version",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#plugins_n_versions!plugin_version"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"plugins_n_versions\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dTOJSON(LIST(\"plugin_name\";\"plugin_version\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dTOJSON(LIST(#plugin_name;#plugin_version;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "plugin_name",
+          "width": 214,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "plugin_version",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "plugins_n_versions_rpt",
+      "sheetId": "aaa5605f-148d-43ec-8d90-4f7ccf62dd1c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#plugins_n_versions_prep!keys;#plugins_n_versions_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "versionConfig",
+      "sheetId": "0f037a5c-4b78-45a2-937b-79a1c3a726e1",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "versionConfig",
+        "sheetId": "d6a1c435-dc71-4bb1-805c-1662eeeeaf11",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/http/VersionDetails.wbk",
+          "uuid": "c1f3f402-91e6-4d0b-ab93-ed0abd4f1593"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "value",
+          "width": 362,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "versionConfig_prep",
+      "sheetId": "68cdc315-c49a-42dc-bdf5-f84312a88b37",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "key",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#versionConfig!key"
+        },
+        {
+          "columnName": "val",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#versionConfig!value"
+        },
+        {
+          "columnName": "ImportName_",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"versionConfig\""
+        },
+        {
+          "columnName": "keys",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dTOJSON(LIST(\"key\";\"val\";\"ImportName_\"))"
+        },
+        {
+          "columnName": "values",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dTOJSON(LIST(#key;#val;#ImportName_))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "val",
+          "width": 362,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ImportName_",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "keys",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "values",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "versionConfig_rpt",
+      "sheetId": "c0111ed7-2ba7-44b2-87a3-3191ff952e7c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dJSON_MAP(#versionConfig_prep!keys;#versionConfig_prep!values)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 400,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    },
+    {
+      "name": "combined_json",
+      "sheetId": "5a76cb11-2f4a-4170-a8e0-27eb01d34a62",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "unionSources": [
+          "clusterConfs_rpt",
+          "conductorConfs_rpt",
+          "cluster_health_rpt",
+          "node_manager_rpt",
+          "data_node_statistics_rpt",
+          "devPageDetails_rpt",
+          "licensePageDetails_rpt",
+          "plugins_n_versions_rpt",
+          "versionConfig_rpt"
+        ]
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "http_encoded_output",
+      "sheetId": "9a60a594-c0b2-40c1-8824-b6b14fdce0a6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "json",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dENC_BASE64(#combined_json!json)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "json",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

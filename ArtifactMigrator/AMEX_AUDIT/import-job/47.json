@@ -1,0 +1,65 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "ba1407d8-18a5-40d7-b198-963d5ed2308b",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_Artifact_Count_By_Type.lnk",
+    "description": "Getting the count for each Artifact type",
+    "name": "MySQL_Artifact_Count_By_Type"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "ad6e0010-952e-4d0f-9b1f-dda66f72915d"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      "select df.extension, count(*) as NumOfArtifacts from dap_file df\r\ninner join permission p on df.permission_fk\u003dp.id\r\nwhere df.file_mode\u003d\u0027NORMAL\u0027 and p.owner!\u003d\u0027system\u0027 and df.extension in \r\n(\u0027DATA_STORE_EXTENSION\u0027,\u0027UPLOAD_JOB_EXTENSION\u0027,\u0027IMPORT_JOB_EXTENSION\u0027,\u0027IMPORT_LINK_JOB_EXTENSION\u0027,\u0027EXPORT_JOB_EXTENSION\u0027,\u0027WORKBOOK_EXTENSION\u0027,\u0027INFOGRAPHIC_EXTENSION\u0027)\r\ngroup by df.extension"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 142,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "extension",
+      "origin": "extension",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 143,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "NumOfArtifacts",
+      "origin": "NumOfArtifacts",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

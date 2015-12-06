@@ -1,0 +1,163 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_c_Artifacts_Workbook",
+        "path": "/Administration/HUMv2/Reports/db/_c_Artifacts_Workbook.wbk",
+        "uuid": "fa60d267-4bb8-434d-888d-e77a42373875"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "extension",
+                    "thousandSeparator": true,
+                    "width": 198
+                },
+                {
+                    "columnId": "NumOfArtifacts",
+                    "thousandSeparator": true,
+                    "width": 118
+                }
+            ],
+            "keep": true,
+            "name": "Artifact_Count_By_Type_DataLink",
+            "referencedSheet": {
+                "name": "MySQL_Artifact_Count_By_Type",
+                "sheetId": "6127ba20-6b27-4290-bfdb-f2eae57294da",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/db/base/_00_02_Artifact_Count_By_Type.wbk",
+                    "uuid": "7a9588e2-7222-4d78-a038-c7abfdb9c5fb"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "01402d2d-8e45-404c-ab7f-27dbd3353d49",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "6374b22ca13c4f404ecee3c2fbf8cf84",
+                    "name": "extension",
+                    "thousandSeparator": true,
+                    "width": 196
+                },
+                {
+                    "columnId": "ba0f19c94067b7d12c47d4cb38529336",
+                    "name": "artifact",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": true,
+            "name": "ArtifactNames",
+            "referencedSheet": {
+                "name": "ArtifactNames",
+                "sheetId": "05e3c751-6b71-4e99-9347-b945b4551b8d",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Ingestion/ArtifactNames.wbk",
+                    "uuid": "f9c38958-cd08-4483-8d48-d2286ea8f1b6"
+                }
+            },
+            "sheetId": "66a44da1-8128-44bb-9a0d-6b2544591635",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "ee81ef5f5e31453ee7da08c8144f0e3c",
+                    "thousandSeparator": true,
+                    "width": 191
+                },
+                {
+                    "columnId": "94c067eba6169f552eafb1f0b7af4d48",
+                    "thousandSeparator": true,
+                    "width": 232
+                }
+            ],
+            "keep": true,
+            "name": "Joined",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "extension"
+                        ],
+                        "joinColumns2": [
+                            "extension"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "Artifact_Count_By_Type_DataLink",
+                        "sheet2": "ArtifactNames"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "ArtifactNames": [
+                        "extension",
+                        "artifact"
+                    ],
+                    "Artifact_Count_By_Type_DataLink": [
+                        "NumOfArtifacts"
+                    ]
+                }
+            },
+            "sheetId": "24bb97d1-7bda-44da-a4cc-9e36457180e8",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 148
+                },
+                {
+                    "columnId": "1",
+                    "name": "ArtifactType",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "1",
+                    "columnIndex": 0,
+                    "columnName": "ArtifactType",
+                    "formulaString": "=#Joined!ArtifactNames.artifact"
+                },
+                {
+                    "columnId": "0",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=#Joined!Artifact_Count_By_Type_DataLink.NumOfArtifacts"
+                }
+            ],
+            "keep": true,
+            "name": "artifacts",
+            "nextColumnId": 2,
+            "sheetId": "3dcc54f8-ef6a-452f-bb60-92d43e159e6d",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Count",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "artifacts",
+            "sortTargetSheet": "artifacts"
+        }
+    ],
+    "version": "4.5.0"
+}

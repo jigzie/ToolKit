@@ -1,0 +1,638 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "b8783a31-2ee1-46e8-820d-67f05415f4af",
+    "path": "/Users/admin/Applications/AMEX/Workbook_jobConf.wbk",
+    "description": "",
+    "name": "Workbook_jobConf"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "jobConf_550",
+      "sheetId": "77e123f2-ca4e-4898-a976-71ff56a60053",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/AMEX/jobConf_550.upl",
+        "uuid": "3a964df9-2f6d-4042-9347-02b1bf36cde7"
+      },
+      "columnStyles": [
+        {
+          "columnId": "jobConf_55",
+          "width": 600,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "_550KeyValue",
+      "sheetId": "c5fbd33c-f802-4c30-92f0-329cf1ad90b6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "jobConf_55",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#jobConf_550!jobConf_55"
+        },
+        {
+          "columnName": "Tokens",
+          "columnId": "4",
+          "columnIndex": 1,
+          "formulaString": "\u003dREGEXTRACT(#jobConf_55;\"\\\"name\\\":.*,\")"
+        },
+        {
+          "columnName": "Key_550",
+          "columnId": "6",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZE(#Tokens;\",\";0)"
+        },
+        {
+          "columnName": "Value_550",
+          "columnId": "7",
+          "columnIndex": 3,
+          "formulaString": "\u003dTOKENIZE(#Tokens;\",\";1)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "jobConf_55",
+          "width": 541,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Tokens",
+          "width": 480,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "Key_550",
+          "width": 237,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Value_550",
+          "width": 260,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 8
+    },
+    {
+      "name": "jobConf_5941",
+      "sheetId": "76d0c379-aa4a-4bb3-914b-b77ab101e52d",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/AMEX/jobConf_5941.upl",
+        "uuid": "698d2163-946f-4a42-91d2-9700f9f4d595"
+      },
+      "columnStyles": [
+        {
+          "columnId": "jobConf_5941",
+          "width": 319,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "_5941KeyValue",
+      "sheetId": "e692bf4d-9d10-42a7-a1e1-17e81e6f8ef3",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "A",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dREGEXTRACT(#jobConf_5941!jobConf_5941;\"\\\"name\\\":.*,\")"
+        },
+        {
+          "columnName": "Key_5941",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dTOKENIZE(#A;\",\";0)"
+        },
+        {
+          "columnName": "Value_5941",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZE(#A;\",\";1)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "A",
+          "width": 283,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Key_5941",
+          "width": 339,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Value_5941",
+          "width": 327,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "Joined",
+      "sheetId": "4f5a6bd3-4adf-42e5-b11e-e633d25fc8a4",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "FULL_OUTER",
+            "sheet1": "_550KeyValue",
+            "sheet2": "_5941KeyValue",
+            "joinColumns1": [
+              "Key_550"
+            ],
+            "joinColumns2": [
+              "Key_5941"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "_550KeyValue": [
+            "Key_550",
+            "Value_550"
+          ],
+          "_5941KeyValue": [
+            "Key_5941",
+            "Value_5941"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "406af666c6b58bca95e4135c865c1acf",
+          "width": 402,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "aea310eac33e67282b29b8a237f8b0a7",
+          "width": 313,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "a9da86ecda79e95560c6485b7c5aa185",
+          "width": 300,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "JC_Compare_F",
+      "sheetId": "945cb315-b27e-404c-9bf1-22f9aead0323",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "JC_Compare_F",
+      "filterTargetSheet": "JC_Compare_F",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "E",
+          "filterExpression": "FALSE",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "JC_Key_550",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Joined!_550KeyValue.Key_550"
+        },
+        {
+          "columnName": "JC_Key_5941",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Joined!_5941KeyValue.Key_5941"
+        },
+        {
+          "columnName": "JC_Value_550",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Joined!_550KeyValue.Value_550"
+        },
+        {
+          "columnName": "JC_Value_5941",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Joined!_5941KeyValue.Value_5941"
+        },
+        {
+          "columnName": "E",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dif(COMPARE(#JC_Value_550;#JC_Value_5941)\u003d\u003d0;true;false)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "JC_Key_550",
+          "width": 266,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "JC_Key_5941",
+          "width": 347,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "JC_Value_550",
+          "width": 210,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "JC_Value_5941",
+          "width": 402,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "E",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "JC_Compare_T",
+      "sheetId": "f9eff47b-3d67-4a92-8ee6-93b9552d92f0",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "JC_Compare_T",
+      "filterTargetSheet": "JC_Compare_T",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "E",
+          "filterExpression": "TRUE",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "JC_Key_550",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Joined!_550KeyValue.Key_550"
+        },
+        {
+          "columnName": "JC_Key_5941",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Joined!_5941KeyValue.Key_5941"
+        },
+        {
+          "columnName": "JC_Value_550",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Joined!_550KeyValue.Value_550"
+        },
+        {
+          "columnName": "JC_Value_5941",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Joined!_5941KeyValue.Value_5941"
+        },
+        {
+          "columnName": "E",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dif(COMPARE(#JC_Value_550;#JC_Value_5941)\u003d\u003d0; true; false)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "JC_Key_550",
+          "width": 300,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "JC_Key_5941",
+          "width": 313,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "JC_Value_550",
+          "width": 261,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "JC_Value_5941",
+          "width": 402,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "E",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "JC_Cluster_Compare",
+      "sheetId": "ff31fa9b-626c-414e-aca1-1919733d52e7",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": true,
+      "referencedSheet": {
+        "name": "Sheet1",
+        "sheetId": "c38b85de-dfba-48a9-b89c-2a58925081b8",
+        "workbook": {
+          "path": "/Users/admin/Applications/AMEX/Workbook_jc_cluster.wbk",
+          "uuid": "4a7519a5-2ab7-4b23-97fa-f863ba698cd3"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "jc_550.jc_cluster_550_key",
+          "width": 236,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "jc_5941.jc_cluster_5941_key",
+          "width": 303,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "jc_550.jc_cluster_550_value",
+          "width": 235,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "jc_5941.jc_cluser_5941_value",
+          "width": 420,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "E",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Joined2",
+      "sheetId": "d618efec-c4ed-4404-a244-8a7d7b2de79b",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "FULL_OUTER",
+            "sheet1": "JC_Cluster_Compare",
+            "sheet2": "JC_Compare_F",
+            "joinColumns1": [
+              "jc_5941.jc_cluster_5941_key"
+            ],
+            "joinColumns2": [
+              "JC_Key_5941"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "JC_Cluster_Compare": [
+            "jc_550.jc_cluster_550_key",
+            "jc_5941.jc_cluster_5941_key",
+            "jc_550.jc_cluster_550_value",
+            "jc_5941.jc_cluser_5941_value"
+          ],
+          "JC_Compare_F": [
+            "JC_Key_550",
+            "JC_Key_5941",
+            "JC_Value_550",
+            "JC_Value_5941"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "b5165f0583a780f01ee4c4eec5a70fe8",
+          "name": "JC_Cluster_Value_550",
+          "width": 323,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "e4a6bcc9ad08aa596983d6195af5d1d7",
+          "name": "JC_Key_550",
+          "width": 171,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1dcc6c44131f183179bb23972b7a4022",
+          "name": "JC_Value_550",
+          "width": 200,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "847a37c23cea734a247686f4b951ca01",
+          "name": "JC_Cluster_Key5941",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "c00a1001a706f168fa5b5125c41b1a43",
+          "name": "JC_Key_5941",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "ed81c928dc08b64ce0ecfe324d8a4f0b",
+          "name": "JC_Cluster_Key_550",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "fdc3972eb6a8aa758963bde1aa002be9",
+          "name": "JC_Cluster_Value_5941",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "990119b33da6427b19716c9579cc580c",
+          "name": "JC_Value_5941",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "ClusterMapping",
+      "sheetId": "942c3814-3ce9-4b75-8795-71ecd9853897",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "ClusterMapping",
+      "filterTargetSheet": "ClusterMapping",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "KeySize",
+          "filterExpression": "LESS_EQUALS",
+          "value": "250",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "JC_C_Key550",
+          "columnId": "2",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Joined2!JC_Cluster_Key_550"
+        },
+        {
+          "columnName": "JC_C_Value_550",
+          "columnId": "3",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Joined2!JC_Cluster_Value_550"
+        },
+        {
+          "columnName": "JC_Key_550",
+          "columnId": "5",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Joined2!JC_Key_550"
+        },
+        {
+          "columnName": "JC_Value_550",
+          "columnId": "6",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Joined2!JC_Value_550"
+        },
+        {
+          "columnName": "JC_C_Key_5941",
+          "columnId": "0",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Joined2!JC_Cluster_Key5941"
+        },
+        {
+          "columnName": "JC_C_Value_5941",
+          "columnId": "4",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Joined2!JC_Cluster_Value_5941"
+        },
+        {
+          "columnName": "JC_Key_5941",
+          "columnId": "1",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Joined2!JC_Key_5941"
+        },
+        {
+          "columnName": "JC_Value_5941",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Joined2!JC_Value_5941"
+        },
+        {
+          "columnName": "KeySize",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003dIF(LEN(#JC_Value_550)\u003eLEN(#JC_Value_5941);LEN(#JC_Value_550);LEN(#JC_Value_5941))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "JC_C_Key_5941",
+          "width": 282,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "JC_Key_5941",
+          "width": 156,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "JC_C_Key550",
+          "width": 168,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "JC_C_Value_550",
+          "width": 145,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "JC_C_Value_5941",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "JC_Key_550",
+          "width": 171,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "JC_Value_550",
+          "width": 122,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "JC_Value_5941",
+          "width": 183,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "KeySize",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 9
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

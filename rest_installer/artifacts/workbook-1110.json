@@ -1,0 +1,131 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "ConductorConfig",
+        "path": "/Administration/HUMv2/Reports/http/ConductorConfig.wbk",
+        "uuid": "1055440a-a3e4-4f02-8368-198501882b33"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "HTTP_Conductor_Config_Page",
+            "referencedSheet": {
+                "name": "HTTP_Conductor_Config_Page",
+                "sheetId": "1ab0f328-2530-4465-86fc-6a20508ea300",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/base/_01_15_Conductor_Config_Page.wbk",
+                    "uuid": "c4e00127-483a-48de-b8a8-1f5a5ce7586a"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "cd377f1b-d5e5-4859-aab0-d86d987b79ff",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "conductorProps",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "conductorProps",
+                    "formulaString": "=LISTELEMENT(CONTENTS_BY_TAG_NAME(#HTTP_Conductor_Config_Page!parsed_html;\"pre\");0)"
+                }
+            ],
+            "keep": false,
+            "name": "data_prep",
+            "nextColumnId": 1,
+            "sheetId": "f399afd1-3409-45b9-a703-7ab43ce35370",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "conductorProps",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "equalsIdx",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "conductorProps",
+                    "formulaString": "=TOKENIZE(#data_prep!conductorProps;\"\\\\n\")"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "equalsIdx",
+                    "formulaString": "=INDEX(#conductorProps;\"=\")"
+                }
+            ],
+            "keep": false,
+            "name": "explode_props",
+            "nextColumnId": 2,
+            "sheetId": "36091e10-dba0-4084-8de5-3ddf92b99718",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "key",
+                    "formulaString": "=LEFT(#explode_props!conductorProps;#explode_props!equalsIdx)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "val",
+                    "formulaString": "=SUBSTR(#explode_props!conductorProps;#explode_props!equalsIdx+1)"
+                }
+            ],
+            "keep": true,
+            "name": "conductorConfs",
+            "nextColumnId": 2,
+            "sheetId": "a21e461c-34fd-48a3-9191-5b81820d0176",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

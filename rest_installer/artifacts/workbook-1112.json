@@ -1,0 +1,108 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "DevPageDetails",
+        "path": "/Administration/HUMv2/Reports/http/DevPageDetails.wbk",
+        "uuid": "e61e7e6e-09b8-41bc-b4ae-ca0839630870"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "HTTP_Dev_Page",
+            "referencedSheet": {
+                "name": "HTTP_Dev_Page",
+                "sheetId": "bf7fca89-db1e-43c8-8d68-04e65051ef0b",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/base/_01_20_Dev_Page.wbk",
+                    "uuid": "31f523ec-80e7-4dee-81e2-407996e51fb1"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "0383eb53-4c8e-41f9-ac59-3cea115e3502",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "content",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "dls",
+                    "thousandSeparator": true,
+                    "width": 534
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "content",
+                    "formulaString": "=LISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#HTTP_Dev_Page!parsed_html;\"#content\");0)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "dls",
+                    "formulaString": "=EXPAND(ELEMENTS_BY_SELECTOR_QUERY(#content;\"dl\"))"
+                }
+            ],
+            "keep": false,
+            "name": "data_prep",
+            "nextColumnId": 2,
+            "sheetId": "e3068e24-c6cf-4d6c-8192-635f10d89ede",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 204
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 236
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "key",
+                    "formulaString": "=REPLACEALL(LISTELEMENT(CONTENTS_BY_TAG_NAME(#data_prep!dls;\"label\");0);\":\";\"\")"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "val",
+                    "formulaString": "=LISTELEMENT(CONTENTS_BY_TAG_NAME(#data_prep!dls;\"dd\");0)"
+                }
+            ],
+            "keep": true,
+            "name": "devPageDetails",
+            "nextColumnId": 2,
+            "sheetId": "db771e13-51ed-4310-8a7f-402afc5a4270",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

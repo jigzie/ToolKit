@@ -1,0 +1,91 @@
+{
+  "version": "2.1.4.5",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "37d5e097-cc71-4161-b738-86300d7b93f2",
+    "path": "/Users/admin/Data/ImportJobs/SQL DBs/American Crossroads/CR_SQL01_DC_CR_PA_Sep212012_Phones.imp",
+    "description": "CR_SQL01 DC_CR_PA_Sep212012 Phones Import",
+    "name": "CR_SQL01_DC_CR_PA_Sep212012_Phones"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "ddeb0f16-8743-4e99-a65b-6de4b6c068d7"
+    ],
+    "!query!": [
+      ""
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "\u0027Phones\u0027"
+    ],
+    "orderColumn": [
+      "PhoneId"
+    ],
+    "histogram.generation": [
+      "false"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Data/Connections/SQL DBs/CR_SQL01_DC_CR_PA_Sep212012.dst",
+    "uuid": "269db53d-e5ef-4829-98ad-2fd642eebaae"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 5390,
+      "acceptEmpty": false,
+      "name": "PhoneId",
+      "origin": "PhoneId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5391,
+      "acceptEmpty": false,
+      "name": "VoterId",
+      "origin": "VoterId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5392,
+      "acceptEmpty": false,
+      "name": "PhoneType",
+      "origin": "PhoneType",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5393,
+      "acceptEmpty": true,
+      "name": "AreaCode",
+      "origin": "AreaCode",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5394,
+      "acceptEmpty": true,
+      "name": "PhoneNumber",
+      "origin": "PhoneNumber",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

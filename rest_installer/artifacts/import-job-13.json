@@ -1,0 +1,61 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10738,
+            "include": true,
+            "name": "FormulaString",
+            "origin": "value",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "Importing Advanced Filter configuration formulas",
+        "name": "MySQL_Advanced_Filter_Functions",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_Advanced_Filter_Functions.lnk",
+        "uuid": "14e29a02-8177-4484-bb38-8df011445901"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "GenericConfigurationImpl.temp-file-store": [
+            "1e63714b-f5ea-4da2-8486-73c88ee7595d"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "jdbc.property.query": [
+            "select value from filter_argument where type='ADVANCED_FORMULA'"
+        ],
+        "jdbc.property.select.sql.action": [
+            "CUSTOM_SQL"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ],
+       "tableName": [
+           "!query!"
+        ],
+        "!query!": [
+           "select value from filter_argument where type\u003d\u0027ADVANCED_FORMULA\u0027"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

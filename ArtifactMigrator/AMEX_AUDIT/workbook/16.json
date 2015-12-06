@@ -1,0 +1,603 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "8c764b2f-7580-4c3e-b3c3-4b5a2ab5102b",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/_d_jamon_pagerequest_Workbook.wbk",
+    "description": "",
+    "name": "_d_jamon_pagerequest_Workbook"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {
+    "cardinalities.generation": [
+      "false"
+    ],
+    "histograms.generation": [
+      "false"
+    ],
+    "minmaxmean.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Metrics_Jamon",
+      "sheetId": "5e5cad56-bcf1-4e39-9233-87a8b18ccf29",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "Metrics_Jamon",
+        "sheetId": "df910fe1-0a9a-4ba5-b02b-93dd9c4397fb",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_40_Metrics_Jamon.wbk",
+          "uuid": "d8cff675-7fd3-4a52-8cb9-2475192a6f78"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "PagesOrderByLabel",
+      "sheetId": "6f57b720-3a4e-4974-9aa1-d3e956e6f7a2",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "PagesOrderByLabel",
+      "filterTargetSheet": "PagesOrderByLabel",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Hits",
+          "filterExpression": "GREATER",
+          "value": "0",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "PagesOrderByLabel",
+      "sortTargetSheet": "PagesOrderByLabel",
+      "sortKeys": [
+        {
+          "column": "Label",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "CollectionTime",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics_Jamon!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dSUBSTITUTEFIRST(#Metrics_Jamon!Label;\"com.jamonapi.http.JAMonJettyHandler.request.page.value: \";\"\")"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_Jamon!Units"
+        },
+        {
+          "columnName": "Hits",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Metrics_Jamon!Count"
+        },
+        {
+          "columnName": "Avg",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Metrics_Jamon!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Metrics_Jamon!Total"
+        },
+        {
+          "columnName": "StdDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Metrics_Jamon!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Metrics_Jamon!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Metrics_Jamon!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Metrics_Jamon!Active"
+        },
+        {
+          "columnName": "AvgActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Metrics_Jamon!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Metrics_Jamon!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#Metrics_Jamon!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 228,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 660,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Hits",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Avg",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StdDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AvgActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "PagesTimeByDay",
+      "sheetId": "66515616-9794-48d6-845d-ee672d648c79",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "PagesTimeByDay",
+      "sortTargetSheet": "PagesTimeByDay",
+      "sortKeys": [
+        {
+          "column": "Label",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "CollectionTime",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "CollectionTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(FORMATDATE(#PagesOrderByLabel!CollectionTime;\"yyyy-MM-dd\"))"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(REPLACEALL(#PagesOrderByLabel!Label;\"\\\\d+\";\"#\"))"
+        },
+        {
+          "columnName": "AvgExecutionTime",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#PagesOrderByLabel!Total)/GROUPSUM(#PagesOrderByLabel!Hits)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 585,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "AvgExecutionTime",
+          "width": 158,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "PageExecutionTimeDeltaByDay",
+      "sheetId": "e3f0b49f-49b1-4c86-9d68-bb518276ba24",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "sortSourceSheet": "PageExecutionTimeDeltaByDay",
+      "sortTargetSheet": "PageExecutionTimeDeltaByDay",
+      "sortKeys": [
+        {
+          "column": "Label",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "CollectionTime",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#PagesTimeByDay!Label)"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "3",
+          "columnIndex": 1,
+          "formulaString": "\u003d#PagesTimeByDay!CollectionTime"
+        },
+        {
+          "columnName": "Previous_AvgExecutionTime",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUP_PREVIOUS(#PagesTimeByDay!AvgExecutionTime)"
+        },
+        {
+          "columnName": "AvgExecutionTime",
+          "columnId": "4",
+          "columnIndex": 3,
+          "formulaString": "\u003d#PagesTimeByDay!AvgExecutionTime"
+        },
+        {
+          "columnName": "AvgExecutionTimeDelta",
+          "columnId": "5",
+          "columnIndex": 4,
+          "formulaString": "\u003d#AvgExecutionTime-if(#Previous_AvgExecutionTime\u003d\u003dnull;#AvgExecutionTime;#Previous_AvgExecutionTime)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 620,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Previous_AvgExecutionTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "AvgExecutionTime",
+          "width": 172,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "AvgExecutionTimeDelta",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "PageExecutionTimeOrderByDeltaDesc",
+      "sheetId": "51eb8617-a298-4f24-b25f-91fb9176e829",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "PageExecutionTimeOrderByDeltaDesc",
+      "sortTargetSheet": "PageExecutionTimeOrderByDeltaDesc",
+      "sortKeys": [
+        {
+          "column": "AvgExecutionTimeDelta",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Label",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#PageExecutionTimeDeltaByDay!Label"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#PageExecutionTimeDeltaByDay!CollectionTime"
+        },
+        {
+          "columnName": "Previous_AvgExecutionTime",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#PageExecutionTimeDeltaByDay!Previous_AvgExecutionTime"
+        },
+        {
+          "columnName": "AvgExecutionTime",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#PageExecutionTimeDeltaByDay!AvgExecutionTime"
+        },
+        {
+          "columnName": "AvgExecutionTimeDelta",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#PageExecutionTimeDeltaByDay!AvgExecutionTimeDelta"
+        },
+        {
+          "columnName": "XTimesGreater",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dif(denullify(#Previous_AvgExecutionTime;0)!\u003d0;#AvgExecutionTime/#Previous_AvgExecutionTime;0)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Label",
+          "width": 620,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Previous_AvgExecutionTime",
+          "width": 242,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "AvgExecutionTime",
+          "width": 172,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "AvgExecutionTimeDelta",
+          "width": 177,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "XTimesGreater",
+          "width": 178,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "PageExecutionTimeOrderByXTimesGreaterDesc",
+      "sheetId": "f16f0f86-7c01-4ff9-809c-eda82c6f91bc",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "PageExecutionTimeOrderByXTimesGreaterDesc",
+      "sortTargetSheet": "PageExecutionTimeOrderByXTimesGreaterDesc",
+      "sortKeys": [
+        {
+          "column": "XTimesGreater",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Label",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#PageExecutionTimeOrderByDeltaDesc!Label"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#PageExecutionTimeOrderByDeltaDesc!CollectionTime"
+        },
+        {
+          "columnName": "Previous_AvgExecutionTime",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#PageExecutionTimeOrderByDeltaDesc!Previous_AvgExecutionTime"
+        },
+        {
+          "columnName": "AvgExecutionTime",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#PageExecutionTimeOrderByDeltaDesc!AvgExecutionTime"
+        },
+        {
+          "columnName": "AvgExecutionTimeDelta",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#PageExecutionTimeOrderByDeltaDesc!AvgExecutionTimeDelta"
+        },
+        {
+          "columnName": "XTimesGreater",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#PageExecutionTimeOrderByDeltaDesc!XTimesGreater"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Label",
+          "width": 620,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Previous_AvgExecutionTime",
+          "width": 242,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "AvgExecutionTime",
+          "width": 172,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "AvgExecutionTimeDelta",
+          "width": 177,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "XTimesGreater",
+          "width": 178,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "PageRequestsByDayDesc",
+      "sheetId": "5af63765-b3de-4a42-85df-244eb2845a45",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "PageRequestsByDayDesc",
+      "sortTargetSheet": "PageRequestsByDayDesc",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(FORMATDATE(#Metrics_Jamon!LogTime;\"yyyy-MM-dd\"))"
+        },
+        {
+          "columnName": "PageRequestCount",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "PageRequestCount",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "advancedSchedulingInUse": false,
+  "errorHandlingMode": "DROP_RECORD"
+}

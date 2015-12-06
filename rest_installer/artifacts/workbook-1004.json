@@ -1,0 +1,91 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_06_dap_vol",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_06_dap_vol.wbk",
+        "uuid": "76ea9018-e823-46fe-a41a-f4d09c753733"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "6 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_dap_vol.lnk",
+                "uuid": "92bdd06f-21c0-40d7-b670-945bf9fdcd5c"
+            },
+            "keep": false,
+            "name": "MySQL_dap_vol_src",
+            "sheetId": "9fcb129c-7134-4357-9f95-fb63b4c6f48e",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "day",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "job_conf_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "volume",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=#MySQL_dap_vol_src!id"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "day",
+                    "formulaString": "=#MySQL_dap_vol_src!day"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "job_conf_id",
+                    "formulaString": "=#MySQL_dap_vol_src!job_conf_id"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "volume",
+                    "formulaString": "=#MySQL_dap_vol_src!volume"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_dap_vol",
+            "nextColumnId": 4,
+            "sheetId": "07f5ba3c-c458-4536-887a-0e2e704a84a0",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

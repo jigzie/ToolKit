@@ -1,0 +1,209 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "08ec9bda-bd95-48d7-af70-44b5f2d21cc9",
+    "path": "/Examples/Hello World/Solution/DataLink_today1.upl",
+    "description": "",
+    "name": "DataLink_today1"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "549b7345-df1d-435c-831c-416bb5b268ac"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "data.includes.header": [
+      "false"
+    ],
+    "ignore.first.n.lines": [
+      "0"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-5.9.4-mapr-4.0.2-mr2/das-data/fileuploads/18/Test.csv"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "b92bfaf1-5794-48fc-a490-e679c78290cd"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 27,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "A",
+      "origin": "0",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 28,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "B",
+      "origin": "1",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 29,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "C",
+      "origin": "2",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 30,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "D",
+      "origin": "3",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 31,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "E",
+      "origin": "4",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 32,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "F",
+      "origin": "5",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 33,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "G",
+      "origin": "6",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 34,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "H",
+      "origin": "7",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 35,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "I",
+      "origin": "8",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 36,
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 37,
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 38,
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 39,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 40,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

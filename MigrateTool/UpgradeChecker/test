@@ -1,0 +1,37 @@
+[
+{
+  "uuid": "d8fcf87f-ceea-48a5-b98c-428809753a6d",
+  "path": "/Datameer Consumption Stats/Resources/DM_Owner_Wbk_Sheet_Stats.lnk",
+  "description": "Datameer Workbook, Sheet, Owner, Statistics information from MySQL",
+  "name": "DM_Owner_Wbk_Sheet_Stats",
+  "id": 3
+}
+,{
+  "uuid": "43fb6ac4-aa23-41d6-9694-ada3107e5bf5",
+  "path": "/Datameer Consumption Stats/Resources/DM_User_Group_Info.lnk",
+  "description": "Datameer User \u0026amp; User Group Information",
+  "name": "DM_User_Group_Info",
+  "id": 4
+}
+,{
+  "uuid": "724c5fcf-f596-4e4c-b281-2ad6bfe4a787",
+  "path": "/Datameer Consumption Stats/Resources/DM_Ingestion_Utilization.lnk",
+  "description": "Data Link to identify highly utilized: ImportJobs, DataLinks and Uploads utilized by the Datameer Application.",
+  "name": "DM_Ingestion_Utilization",
+  "id": 9
+}
+,{
+  "uuid": "02d5d356-510d-408b-922b-9c21102836af",
+  "path": "/Datameer Consumption Stats/Resources/DM_Owner_Volume.lnk",
+  "description": "Datameer Owner-Consumption volume information",
+  "name": "DM_Owner_Volume",
+  "id": 13
+}
+,{
+  "uuid": "d274de64-d2fc-471a-a809-bbb14562dbed",
+  "path": "/Datameer Consumption Stats/Resources/LicenseDetails.imp",
+  "description": "License Details for installation of Datameer",
+  "name": "LicenseDetails",
+  "id": 51
+}
+]

@@ -1,0 +1,85 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "923f31c3-ea4a-4201-a192-90e93386cdad",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_dap_vol.lnk",
+    "description": "data_volume_summary",
+    "name": "MySQL_dap_vol"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "2f7c5bbf-f63d-43d6-acf5-3d2e223545a4"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      ""
+    ],
+    "tableName": [
+      "\u0027data_volume_summary\u0027"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 287,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 288,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "day",
+      "origin": "day",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 289,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "job_conf_id",
+      "origin": "job_conf_id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 290,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "volume",
+      "origin": "volume",
+      "valueType": "{\"type\":\"BIG_INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

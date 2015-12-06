@@ -1,0 +1,131 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "2f765ae2-e1f8-4701-840e-3b8217cea8aa",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/HTTP_Cluster_Health_Page.lnk",
+    "description": "Cluster Settings Page Information",
+    "name": "HTTP_Cluster_Health_Page"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "535ec9c7-e968-4143-9cac-71a8e6da484a"
+    ],
+    "fileType": [
+      "datameer.das.plugin.html.input.HtmlFileType"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "maxFileSizeLimit": [
+      "4096"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "filter.minAge": [
+      ""
+    ],
+    "filter.maxAge": [
+      ""
+    ],
+    "fileNameTimeRange_mode": [
+      "OFF"
+    ],
+    "parseOptions": [
+      "removeMeta"
+    ],
+    "file": [
+      "/admin/clusterHealth"
+    ],
+    "TextFileFormat": [
+      "TEXT_WHOLE_FILE"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_HTTP.dst",
+    "uuid": "53c64e6b-82c6-43ac-a49b-c3b374461d2a"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 383,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "parsed_html",
+      "origin": "parsed_html",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 384,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "original_html",
+      "origin": "original_html",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 385,
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 386,
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 387,
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 388,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 389,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

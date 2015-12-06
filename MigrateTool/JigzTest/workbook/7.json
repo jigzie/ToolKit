@@ -1,0 +1,136 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "ed3da529-3eda-4786-99d8-c0932e16ef14",
+    "path": "/Analytics/Workbooks/Wbk1.wbk",
+    "description": "",
+    "name": "Wbk1"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "SalesData",
+      "sheetId": "8633a2ee-5fa9-4aa1-bfff-69f7ca040a0f",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": true,
+      "datasource": {
+        "path": "/Data/FileUploads/SalesData.upl",
+        "uuid": "5970abee-f01d-4204-93fb-7e0b26c208f6"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "CountryDollarSpent",
+      "sheetId": "0d9fcedd-7610-49a4-acf2-07cddbe8fe08",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "Country",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#SalesData!Country)"
+        },
+        {
+          "columnName": "Total_DollarValue",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(INT(#SalesData!DollarValue))"
+        },
+        {
+          "columnName": "Average_DollarValue",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPAVERAGE(INT(#SalesData!DollarValue))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Country",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Total_DollarValue",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Average_DollarValue",
+          "width": 226,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "CC_Spend",
+      "sheetId": "96a14726-330d-4cae-8a41-e240de3919de",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "CreditCard",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#SalesData!CreditCard)"
+        },
+        {
+          "columnName": "Total_DollarValue",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(INT(#SalesData!DollarValue))"
+        },
+        {
+          "columnName": "Max_DollarValue",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(INT(#SalesData!DollarValue))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "CreditCard",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Total_DollarValue",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Max_DollarValue",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

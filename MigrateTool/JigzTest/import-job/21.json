@@ -1,0 +1,130 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "bf7d39cb-6a3d-4aef-9af4-c5293e1db5f4",
+    "path": "/Data/FileUploads/Citi Erkin w comments.upl",
+    "description": "test",
+    "name": "Citi Erkin w comments"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "5f924401-3c53-48c1-9fef-f31bc794ffd5"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-4.1.2-cdh4.6-mr2/das-data/fileuploads/21/test.txt"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "10"
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "escapeCharacter": [
+      "\u0027"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "data.includes.header": [
+      "false"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "ea6451f0-1296-4ccd-a010-533cb9e06812"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 139,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "A",
+      "origin": "0",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 140,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "B",
+      "origin": "1",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 141,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "C",
+      "origin": "2",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 142,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 143,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 144,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

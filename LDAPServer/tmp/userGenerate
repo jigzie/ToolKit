@@ -1,0 +1,19 @@
+for a in {30000..30500}; 
+do 
+	echo -e "dn: uid=das$a,ou=professional services,ou=people,ou=datameer,dc=jigz-local,dc=com" >> SampleUserList.ldif;
+ 	echo -e "cn: User $a" >> SampleUserList.ldif; 
+	echo -e "uidNumber: `expr $a - 1000`" >> SampleUserList.ldif; 
+	echo -e "uid: das$a" >> SampleUserList.ldif; 
+	echo -e "sn: UserM" >> SampleUserList.ldif; 
+	echo -e "homeDirectory: /home/das$a" >> SampleUserList.ldif; 
+	echo -e "gidNumber: 1" >> SampleUserList.ldif; 
+	echo -e "objectClass: top" >> SampleUserList.ldif; 
+	echo -e "objectClass: posixAccount" >> SampleUserList.ldif; 
+	echo -e "objectClass: shadowAccount" >> SampleUserList.ldif; 
+	echo -e "objectClass: inetOrgPerson" >> SampleUserList.ldif; 
+	echo -e "objectClass: person" >> SampleUserList.ldif; 
+	echo -e "mail: das$a@jigz-local.com" >> SampleUserList.ldif; 
+	echo -e "memberOf: cn=DM_USERS,ou=groups,ou=datameer,dc=jigz-local,dc=com" >> SampleUserList.ldif; 
+	echo -e "" >> SampleUserList.ldif; 
+	echo -e ""; 
+done

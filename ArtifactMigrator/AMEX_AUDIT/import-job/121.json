@@ -1,0 +1,133 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "54209610-c7e8-4e8a-baf5-2c5ed35b8f55",
+    "path": "/AMEX_Audit/Data Sources/WC.lnk",
+    "description": "Workbook_Configuration Table",
+    "name": "WC"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "c4d45958-d6d6-46eb-be6a-1987d97a690f"
+    ],
+    "jdbc.property.select.sql.action": [
+      "TABLE"
+    ],
+    "jdbc.property.table": [
+      "\u0027workbook_configuration\u0027"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "orderColumn": [
+      "id"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/AMEX_Audit/Connections/DB_Self.dst",
+    "uuid": "9ddbed56-8987-45ef-905f-bd1ccecef594"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 440,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "error_handling_mode",
+      "origin": "error_handling_mode",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 441,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "max_log_errors",
+      "origin": "max_log_errors",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 442,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "notification_addresses",
+      "origin": "notification_addresses",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 443,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "notification_success_addresses",
+      "origin": "notification_success_addresses",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 444,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 445,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "full_data_permission_fk",
+      "origin": "full_data_permission_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 446,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "workbook_view_fk",
+      "origin": "workbook_view_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 447,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 448,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

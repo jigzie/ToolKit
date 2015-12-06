@@ -1,0 +1,184 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "fe781c11-7c1f-4e25-ac28-790f8798213a",
+    "path": "/Data/ImportJobs/DapFile.imp",
+    "description": "Dap_File Table",
+    "name": "DapFile"
+  },
+  "pullType": "MANUALLY",
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "d9324dc1-00c4-4422-bab6-613580c35fc0"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      ""
+    ],
+    "tableName": [
+      "\u0027dap_file\u0027"
+    ],
+    "orderColumn": [
+      "id"
+    ],
+    "incrementalMode": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Data/Connections/Dap4120.dst",
+    "uuid": "1412c847-b9a7-4686-84c7-fd5caebd9a20"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 54,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 55,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "bytes_processed",
+      "origin": "bytes_processed",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 56,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "creation_date",
+      "origin": "creation_date",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 57,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "description",
+      "origin": "description",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 58,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "extension",
+      "origin": "extension",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 59,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "file_mode",
+      "origin": "file_mode",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 60,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "job_status",
+      "origin": "job_status",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 61,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "last_changed_date",
+      "origin": "last_changed_date",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 62,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "last_executed",
+      "origin": "last_executed",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 63,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "name",
+      "origin": "name",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 64,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "uuid",
+      "origin": "uuid",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 65,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "version",
+      "origin": "version",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 66,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "folder_fk",
+      "origin": "folder_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 67,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "permission_fk",
+      "origin": "permission_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

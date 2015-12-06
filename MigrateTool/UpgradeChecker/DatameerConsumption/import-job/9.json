@@ -1,0 +1,70 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "724c5fcf-f596-4e4c-b281-2ad6bfe4a787",
+    "path": "/Datameer Consumption Stats/Resources/DM_Ingestion_Utilization.lnk",
+    "description": "Data Link to identify highly utilized: ImportJobs, DataLinks and Uploads utilized by the Datameer Application.",
+    "name": "DM_Ingestion_Utilization"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "c32c972f-25b7-4485-99a5-aeb0cf0d281a"
+    ],
+    "!query!": [
+      "select df.name NAME, df.extension INGESTION_TYPE, count(*) REFERENCE_COUNT\r\nfrom sheet s, dap_file df\r\nwhere s.data_source_id is not null\r\nand df.name \u003d s.name\r\ngroup by NAME\r\norder by REFERENCE_COUNT desc"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Datameer Consumption Stats/Resources/MySQL_DB.dst",
+    "uuid": "0672f52b-2468-4942-996c-f12b4facc747"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 17,
+      "acceptEmpty": false,
+      "name": "NAME",
+      "origin": "NAME",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 18,
+      "acceptEmpty": false,
+      "name": "INGESTION_TYPE",
+      "origin": "INGESTION_TYPE",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 19,
+      "acceptEmpty": false,
+      "name": "REFERENCE_COUNT",
+      "origin": "REFERENCE_COUNT",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

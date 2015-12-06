@@ -1,0 +1,52 @@
+####Put the files in HDFS & then create table/partitions for Hive
+hadoop fs -put AAM_2014-08-07.log /user/warehouse/aamlogs/2014/08/07
+hadoop fs -put AAM_2014-08-22.log /user/warehouse/aamlogs/2014/08/22
+hadoop fs -put AAM_2014-08-23.log /user/warehouse/aamlogs/2014/08/23
+hadoop fs -put AAM_2014-08-24.log /user/warehouse/aamlogs/2014/08/24
+hadoop fs -put AAM_2014-08-25.log /user/warehouse/aamlogs/2014/08/25
+hadoop fs -put AAM_2014-08-26.log /user/warehouse/aamlogs/2014/08/26
+hadoop fs -put AAM_2014-08-27.log /user/warehouse/aamlogs/2014/08/27
+hadoop fs -put AAM_2014-08-28.log /user/warehouse/aamlogs/2014/08/28
+hadoop fs -put AAM_2014-08-29.log /user/warehouse/aamlogs/2014/08/29
+hadoop fs -put AAM_2014-08-30.log /user/warehouse/aamlogs/2014/08/30
+hadoop fs -put AAM_2014-08-31.log /user/warehouse/aamlogs/2014/08/31
+hadoop fs -put AAM_2014-09-01.log /user/warehouse/aamlogs/2014/09/01
+hadoop fs -put AAM_2014-09-02.log /user/warehouse/aamlogs/2014/09/02
+
+
+
+####Retrieve the files from hadoop: CDH51.HA:/tmp
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/07/AAM*.log
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/22/AAM*.log
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/23/AAM*.log
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/24/AAM*.log
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/25/AAM*.log
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/26/AAM*.log
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/27/AAM*.log
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/28/AAM*.log
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/29/AAM*.log
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/30/AAM*.log
+hadoop fs -get  /user/warehouse/aamlogs/2014/08/31/AAM*.log
+
+#####Create Hive Table#####
+create external table log_messages (
+timestamp string, logger string, level string, thread string, class string, file string, line string, method string, message string, ndc string, exception string, user string)
+partitioned by (year int, month int, day int)
+row format DELIMITED FIELDS TERMINATED BY ',';
+
+AAM logs
+- 
+
+######Add partition to the table###
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 09, day = 01) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/09/01';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 09, day = 02) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/09/02';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 08, day = 22) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/08/22';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 08, day = 23) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/08/23';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 08, day = 24) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/08/24';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 08, day = 25) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/08/25';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 08, day = 26) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/08/26';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 08, day = 27) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/08/27';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 08, day = 28) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/08/28';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 08, day = 29) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/08/29';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 08, day = 30) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/08/30';
+ALTER TABLE log_messages ADD PARTITION(year = 2014, month = 08, day = 31) LOCATION 'hdfs://ip-10-46-147-169.ec2.internal:8020/user/warehouse/aamlogs/2014/08/31';

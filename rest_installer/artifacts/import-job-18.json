@@ -1,0 +1,85 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": true,
+            "id": 10780,
+            "include": true,
+            "name": "id",
+            "origin": "id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10781,
+            "include": true,
+            "name": "day",
+            "origin": "day",
+            "pattern": "",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10782,
+            "include": true,
+            "name": "job_conf_id",
+            "origin": "job_conf_id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10783,
+            "include": true,
+            "name": "volume",
+            "origin": "volume",
+            "pattern": "",
+            "valueType": "{\"type\":\"BIG_INTEGER\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "data_volume_summary",
+        "name": "MySQL_dap_vol",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_dap_vol.lnk",
+        "uuid": "92bdd06f-21c0-40d7-b670-945bf9fdcd5c"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 1,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            ""
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "2f7c5bbf-f63d-43d6-acf5-3d2e223545a4"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ],
+        "tableName": [
+            "'data_volume_summary'"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

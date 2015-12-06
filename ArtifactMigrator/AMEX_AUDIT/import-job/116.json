@@ -1,0 +1,162 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "e05e4bd8-4860-408b-b298-27689578c2a3",
+    "path": "/Users/admin/Applications/Tutorial Click Path/Customer Profile.upl",
+    "description": "Customer profile data, used by several examples, including the Basic Tutorial.  While provided as a CSV for demonstration purposes, typically this information would come from a database.",
+    "name": "Customer Profile"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "fileType": [
+      "CSV"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-5.9.4-mapr-4.0.2-mr2/das-data/fileuploads/135/users.csv"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "external.header.file": [
+      ""
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "external.header.delimiter": [
+      ","
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "5825f462-f278-47c6-b1fd-4fb4cf0b90be"
+    ],
+    "data.includes.header": [
+      "false"
+    ],
+    "external.contains.data": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "b92bfaf1-5794-48fc-a490-e679c78290cd"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 402,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "ID",
+      "origin": "0",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 403,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "User",
+      "origin": "1",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 404,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Email",
+      "origin": "2",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 405,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Role",
+      "origin": "3",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 406,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Activated",
+      "origin": "4",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 407,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 408,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 409,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

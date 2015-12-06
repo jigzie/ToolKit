@@ -1,0 +1,163 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "4abe005d-73c8-42c1-97bb-ec3c1f562deb",
+    "path": "/AMEX_Audit/Data Sources/DJC.lnk",
+    "description": "Dap_Job_Configuration Table",
+    "name": "DJC"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "4bff36e2-e97e-46c9-940c-10b450ed2907"
+    ],
+    "jdbc.property.select.sql.action": [
+      "TABLE"
+    ],
+    "jdbc.property.table": [
+      "\u0027dap_job_configuration\u0027"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "orderColumn": [
+      "id"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/AMEX_Audit/Connections/DB_Self.dst",
+    "uuid": "9ddbed56-8987-45ef-905f-bd1ccecef594"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 428,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 429,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "data_volume_size_by_license_period",
+      "origin": "data_volume_size_by_license_period",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 430,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "expire_time_days",
+      "origin": "expire_time_days",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 431,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "hadoop_properties",
+      "origin": "hadoop_properties",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 432,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "min_keep_count",
+      "origin": "min_keep_count",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 433,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "pull_type",
+      "origin": "pull_type",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 434,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "schedule",
+      "origin": "schedule",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 435,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dap_file__id",
+      "origin": "dap_file__id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 436,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "logging_properties",
+      "origin": "logging_properties",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 437,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "root_logger_level",
+      "origin": "root_logger_level",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 438,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 439,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

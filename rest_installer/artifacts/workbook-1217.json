@@ -1,0 +1,4722 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_b_UserActionAnalysis",
+        "path": "/Administration/HUMv2/Reports/logs/_b_UserActionAnalysis.wbk",
+        "uuid": "717c0f07-a8f7-4205-9629-b67aff7aeaf7"
+    },
+    "hadoopProperties": "das.job.concurrent-mr-jobs=1",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "cardinalities.generation": [
+            "true"
+        ],
+        "histograms.generation": [
+            "true"
+        ],
+        "minmaxmean.generation": [
+            "true"
+        ],
+        "topk.generation": [
+            "true"
+        ]
+    },
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "25",
+                    "thousandSeparator": true,
+                    "width": 126
+                }
+            ],
+            "keep": false,
+            "name": "user_action",
+            "referencedSheet": {
+                "name": "User_Action",
+                "sheetId": "b0279367-e4e1-461a-9f0d-9fde7d140fa4",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/base/_02_00_User_Action.wbk",
+                    "uuid": "c76f1c58-ab6a-4958-8e39-af93bcca7783"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "ff2159ae-bc04-4fdb-a2cf-0296e378f160",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "performer_roles",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "ip_address",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "file_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "file_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "folder_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "group_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "read_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "write_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "execute_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "13",
+                    "name": "shared_public",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "14",
+                    "name": "new_owner_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "15",
+                    "name": "user_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "16",
+                    "name": "role_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "17",
+                    "name": "execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "18",
+                    "name": "execution_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "19",
+                    "name": "execution_triggered_by",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "20",
+                    "name": "execution_job_schedule",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "21",
+                    "name": "execution_configuration_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "22",
+                    "name": "execution_configuration_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "23",
+                    "name": "execution_job_status",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "24",
+                    "name": "execution_job_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "25",
+                    "name": "data_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "26",
+                    "name": "data_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "27",
+                    "name": "workbook_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "28",
+                    "name": "workbook_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "29",
+                    "name": "workbook_sheet_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "30",
+                    "name": "workbook_sheet_column_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "31",
+                    "name": "workbook_sheet_column_index",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "32",
+                    "name": "datasource_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "33",
+                    "name": "datasource_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "34",
+                    "name": "workbook_join_sheets",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "35",
+                    "name": "application_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "36",
+                    "name": "application_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "37",
+                    "name": "old_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "38",
+                    "name": "Pseudo_Group",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "timestamp",
+                    "formulaString": "=#user_action!timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "action_type",
+                    "formulaString": "=#user_action!action_type"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "action",
+                    "formulaString": "=#user_action!action"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=#user_action!performed_by_user"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "performer_roles",
+                    "formulaString": "=#user_action!performer_roles"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "ip_address",
+                    "formulaString": "=#user_action!ip_address"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "file_uuid",
+                    "formulaString": "=#user_action!file_uuid"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "file_path",
+                    "formulaString": "=#user_action!file_path"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "folder_path",
+                    "formulaString": "=#user_action!folder_path"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "group_name",
+                    "formulaString": "=#user_action!group_name"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "read_permission",
+                    "formulaString": "=#user_action!read_permission"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "write_permission",
+                    "formulaString": "=#user_action!write_permission"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 12,
+                    "columnName": "execute_permission",
+                    "formulaString": "=#user_action!execute_permission"
+                },
+                {
+                    "columnId": "13",
+                    "columnIndex": 13,
+                    "columnName": "shared_public",
+                    "formulaString": "=#user_action!shared_public"
+                },
+                {
+                    "columnId": "14",
+                    "columnIndex": 14,
+                    "columnName": "new_owner_name",
+                    "formulaString": "=#user_action!new_owner_name"
+                },
+                {
+                    "columnId": "15",
+                    "columnIndex": 15,
+                    "columnName": "user_name",
+                    "formulaString": "=#user_action!user_name"
+                },
+                {
+                    "columnId": "16",
+                    "columnIndex": 16,
+                    "columnName": "role_name",
+                    "formulaString": "=#user_action!role_name"
+                },
+                {
+                    "columnId": "17",
+                    "columnIndex": 17,
+                    "columnName": "execution_id",
+                    "formulaString": "=#user_action!execution_id"
+                },
+                {
+                    "columnId": "18",
+                    "columnIndex": 18,
+                    "columnName": "execution_type",
+                    "formulaString": "=#user_action!execution_type"
+                },
+                {
+                    "columnId": "19",
+                    "columnIndex": 19,
+                    "columnName": "execution_triggered_by",
+                    "formulaString": "=#user_action!execution_triggered_by"
+                },
+                {
+                    "columnId": "20",
+                    "columnIndex": 20,
+                    "columnName": "execution_job_schedule",
+                    "formulaString": "=#user_action!execution_job_schedule"
+                },
+                {
+                    "columnId": "21",
+                    "columnIndex": 21,
+                    "columnName": "execution_configuration_path",
+                    "formulaString": "=#user_action!execution_configuration_path"
+                },
+                {
+                    "columnId": "22",
+                    "columnIndex": 22,
+                    "columnName": "execution_configuration_uuid",
+                    "formulaString": "=#user_action!execution_configuration_uuid"
+                },
+                {
+                    "columnId": "23",
+                    "columnIndex": 23,
+                    "columnName": "execution_job_status",
+                    "formulaString": "=#user_action!execution_job_status"
+                },
+                {
+                    "columnId": "24",
+                    "columnIndex": 24,
+                    "columnName": "execution_job_user",
+                    "formulaString": "=#user_action!execution_job_user"
+                },
+                {
+                    "columnId": "25",
+                    "columnIndex": 25,
+                    "columnName": "data_uuid",
+                    "formulaString": "=#user_action!data_uuid"
+                },
+                {
+                    "columnId": "26",
+                    "columnIndex": 26,
+                    "columnName": "data_path",
+                    "formulaString": "=#user_action!data_path"
+                },
+                {
+                    "columnId": "27",
+                    "columnIndex": 27,
+                    "columnName": "workbook_uuid",
+                    "formulaString": "=#user_action!workbook_uuid"
+                },
+                {
+                    "columnId": "28",
+                    "columnIndex": 28,
+                    "columnName": "workbook_path",
+                    "formulaString": "=#user_action!workbook_path"
+                },
+                {
+                    "columnId": "29",
+                    "columnIndex": 29,
+                    "columnName": "workbook_sheet_name",
+                    "formulaString": "=#user_action!workbook_sheet_name"
+                },
+                {
+                    "columnId": "30",
+                    "columnIndex": 30,
+                    "columnName": "workbook_sheet_column_name",
+                    "formulaString": "=#user_action!workbook_sheet_column_name"
+                },
+                {
+                    "columnId": "31",
+                    "columnIndex": 31,
+                    "columnName": "workbook_sheet_column_index",
+                    "formulaString": "=#user_action!workbook_sheet_column_index"
+                },
+                {
+                    "columnId": "32",
+                    "columnIndex": 32,
+                    "columnName": "datasource_uuid",
+                    "formulaString": "=#user_action!datasource_uuid"
+                },
+                {
+                    "columnId": "33",
+                    "columnIndex": 33,
+                    "columnName": "datasource_path",
+                    "formulaString": "=#user_action!datasource_path"
+                },
+                {
+                    "columnId": "34",
+                    "columnIndex": 34,
+                    "columnName": "workbook_join_sheets",
+                    "formulaString": "=#user_action!workbook_join_sheets"
+                },
+                {
+                    "columnId": "35",
+                    "columnIndex": 35,
+                    "columnName": "application_uuid",
+                    "formulaString": "=#user_action!application_uuid"
+                },
+                {
+                    "columnId": "36",
+                    "columnIndex": 36,
+                    "columnName": "application_path",
+                    "formulaString": "=#user_action!application_path"
+                },
+                {
+                    "columnId": "37",
+                    "columnIndex": 37,
+                    "columnName": "old_name",
+                    "formulaString": "=#user_action!old_name"
+                },
+                {
+                    "columnId": "38",
+                    "columnIndex": 38,
+                    "columnName": "Pseudo_Group",
+                    "formulaString": "=\"PseudoGroup\""
+                }
+            ],
+            "keep": false,
+            "name": "UserActionLog_PseudoGroup",
+            "nextColumnId": 39,
+            "sheetId": "b65cf5fd-b252-41cc-a7fa-71526f166097",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Pseudo_Group",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Min_timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Max_timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Pseudo_Group",
+                    "formulaString": "=GROUPBY(#UserActionLog_PseudoGroup!Pseudo_Group)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Min_timestamp",
+                    "formulaString": "=GROUPMIN(#UserActionLog_PseudoGroup!timestamp)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Max_timestamp",
+                    "formulaString": "=GROUPMAX(#UserActionLog_PseudoGroup!timestamp)"
+                }
+            ],
+            "keep": false,
+            "name": "TimeRange",
+            "nextColumnId": 3,
+            "sheetId": "1128ac9a-6491-4afb-bfb0-8f60730228d3",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Pseudo_Group",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "3",
+                    "columnIndex": 0,
+                    "columnName": "Pseudo_Group",
+                    "formulaString": "=\"PseudoGroup\""
+                },
+                {
+                    "columnId": "0",
+                    "columnIndex": 1,
+                    "columnName": "action_type",
+                    "formulaString": "=GROUPBY(#user_action!action_type)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 2,
+                    "columnName": "action",
+                    "formulaString": "=GROUPBY(#user_action!action)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 3,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": false,
+            "name": "ActionCount",
+            "nextColumnId": 5,
+            "sheetId": "75af5fb0-3704-4fc7-bd4e-eaf9632d1d6c",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "TimeRangeXActionCount",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "Pseudo_Group"
+                        ],
+                        "joinColumns2": [
+                            "Pseudo_Group"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "TimeRange",
+                        "sheet2": "ActionCount"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "ActionCount": [
+                        "Pseudo_Group",
+                        "action_type",
+                        "action",
+                        "Count"
+                    ],
+                    "TimeRange": [
+                        "Pseudo_Group",
+                        "Min_timestamp",
+                        "Max_timestamp"
+                    ]
+                }
+            },
+            "sheetId": "2e790b04-420c-4ef6-a205-8ff60e8ea7c3",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Min_Time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Max_Time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "action_count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "Hours_Seen",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "Actions_Per_Hour",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "Actions_Per_Day",
+                    "thousandSeparator": true,
+                    "width": 110
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Min_Time",
+                    "formulaString": "=#TimeRangeXActionCount!TimeRange.Min_timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Max_Time",
+                    "formulaString": "=#TimeRangeXActionCount!TimeRange.Max_timestamp"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "action_type",
+                    "formulaString": "=#TimeRangeXActionCount!ActionCount.action_type"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "action",
+                    "formulaString": "=#TimeRangeXActionCount!ActionCount.action"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "action_count",
+                    "formulaString": "=#TimeRangeXActionCount!ActionCount.Count"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 5,
+                    "columnName": "Hours_Seen",
+                    "formulaString": "=SUBTRACT(#Max_Time;#Min_Time)/60/60/1000"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 6,
+                    "columnName": "Actions_Per_Hour",
+                    "formulaString": "=ROUND(#ActionsPerTime!action_count/#ActionsPerTime!Hours_Seen)"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 7,
+                    "columnName": "Actions_Per_Day",
+                    "formulaString": "=ROUND(#ActionsPerTime!action_count/#ActionsPerTime!Hours_Seen*24)"
+                }
+            ],
+            "keep": false,
+            "name": "ActionsPerTime",
+            "nextColumnId": 9,
+            "sheetId": "50a53360-b5f7-417a-bf98-88f3bdc48759",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "action_type",
+                    "formulaString": "=GROUPBY(#user_action!action_type)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "T1_ActionTypeCount",
+            "nextColumnId": 2,
+            "sheetId": "ff2a7d9b-c648-4a87-8898-021808103c5d",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "timestamp",
+                    "formulaString": "=GROUPBYBIN(#user_action!timestamp;1*60*1000)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "T1_ActionTimeLine",
+            "nextColumnId": 2,
+            "sheetId": "74040f9d-8af9-48ff-8150-aa3da3cc1e9d",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "timestamp",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "T1_ActionTimeLine",
+            "sortTargetSheet": "T1_ActionTimeLine"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "LOGIN",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_MostLoggedInUser",
+            "filterTargetSheet": "T1_MostLoggedInUser",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "action",
+                    "formulaString": "=GROUPBY(#user_action!action)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 1,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=GROUPBY(#user_action!performed_by_user)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 2,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "T1_MostLoggedInUser",
+            "nextColumnId": 5,
+            "sheetId": "86464892-948e-4b18-920e-3aeaa49e6b6d",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Count",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "T1_MostLoggedInUser",
+            "sortTargetSheet": "T1_MostLoggedInUser",
+            "topN": 1
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "UNABLE_TO_AUTHENTICATE",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_NumberOfFailedLogins",
+            "filterTargetSheet": "T1_NumberOfFailedLogins",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "action",
+                    "formulaString": "=GROUPBY(#user_action!action)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "T1_NumberOfFailedLogins",
+            "nextColumnId": 2,
+            "sheetId": "24692f0d-3a7b-48b4-be53-c4ff7f4180dd",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Min_Time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Max_Time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "action_count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "Hours_Seen",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "Actions_Per_Hour",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "Actions_Per_Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "START_EXECUTION",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_JobExecutionsPerTime",
+            "filterTargetSheet": "T1_JobExecutionsPerTime",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Min_Time",
+                    "formulaString": "=#ActionsPerTime!Min_Time"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Max_Time",
+                    "formulaString": "=#ActionsPerTime!Max_Time"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "action_type",
+                    "formulaString": "=#ActionsPerTime!action_type"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "action",
+                    "formulaString": "=#ActionsPerTime!action"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "action_count",
+                    "formulaString": "=#ActionsPerTime!action_count"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "Hours_Seen",
+                    "formulaString": "=#ActionsPerTime!Hours_Seen"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "Actions_Per_Hour",
+                    "formulaString": "=#ActionsPerTime!Actions_Per_Hour"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "Actions_Per_Day",
+                    "formulaString": "=#ActionsPerTime!Actions_Per_Day"
+                }
+            ],
+            "keep": true,
+            "name": "T1_JobExecutionsPerTime",
+            "nextColumnId": 8,
+            "sheetId": "887ee332-2468-4e39-8a59-90cce33e43cb",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action_type",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "JOB",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_JobExecution_TMP",
+            "filterTargetSheet": "T1_JobExecution_TMP",
+            "formulas": [
+                {
+                    "columnId": "1",
+                    "columnIndex": 0,
+                    "columnName": "action_type",
+                    "formulaString": "=GROUPBY(#user_action!action_type)"
+                },
+                {
+                    "columnId": "0",
+                    "columnIndex": 1,
+                    "columnName": "execution_id",
+                    "formulaString": "=GROUPBY(#user_action!execution_id)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "action",
+                    "formulaString": "=#user_action!action"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "timestamp",
+                    "formulaString": "=#user_action!timestamp"
+                }
+            ],
+            "keep": false,
+            "name": "T1_JobExecution_TMP",
+            "nextColumnId": 4,
+            "sheetId": "e9620730-5f56-415d-bfe6-c16964572b7a",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "START_EXECUTION",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_JobExecution_StartExecution_TMP",
+            "filterTargetSheet": "T1_JobExecution_StartExecution_TMP",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "action_type",
+                    "formulaString": "=#T1_JobExecution_TMP!action_type"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "execution_id",
+                    "formulaString": "=#T1_JobExecution_TMP!execution_id"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "action",
+                    "formulaString": "=#T1_JobExecution_TMP!action"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "timestamp",
+                    "formulaString": "=#T1_JobExecution_TMP!timestamp"
+                }
+            ],
+            "keep": false,
+            "name": "T1_JobExecution_StartExecution_TMP",
+            "nextColumnId": 4,
+            "sheetId": "53165cd4-3020-4b64-9799-12b598549a66",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "STOP_EXECUTION",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_JobExecution_StopExecution_TMP",
+            "filterTargetSheet": "T1_JobExecution_StopExecution_TMP",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "action_type",
+                    "formulaString": "=#T1_JobExecution_TMP!action_type"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "execution_id",
+                    "formulaString": "=#T1_JobExecution_TMP!execution_id"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "action",
+                    "formulaString": "=#T1_JobExecution_TMP!action"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "timestamp",
+                    "formulaString": "=#T1_JobExecution_TMP!timestamp"
+                }
+            ],
+            "keep": false,
+            "name": "T1_JobExecution_StopExecution_TMP",
+            "nextColumnId": 4,
+            "sheetId": "c288d022-f077-45d0-8ad2-7be0dd550997",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "T1_JobExecution_Joined_TMP",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "execution_id"
+                        ],
+                        "joinColumns2": [
+                            "execution_id"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "T1_JobExecution_StartExecution_TMP",
+                        "sheet2": "T1_JobExecution_StopExecution_TMP"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "T1_JobExecution_StartExecution_TMP": [
+                        "action_type",
+                        "execution_id",
+                        "action",
+                        "timestamp"
+                    ],
+                    "T1_JobExecution_StopExecution_TMP": [
+                        "action_type",
+                        "execution_id",
+                        "action",
+                        "timestamp"
+                    ]
+                }
+            },
+            "sheetId": "41a5fbb3-63fa-4dcc-a3ed-17141d0abf74",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Job_Duration",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Job_Duration_Sec",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "C",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Job_Duration",
+                    "formulaString": "=SUBTRACT(#T1_JobExecution_Joined_TMP!T1_JobExecution_StopExecution_TMP.timestamp;#T1_JobExecution_Joined_TMP!T1_JobExecution_StartExecution_TMP.timestamp)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Job_Duration_Sec",
+                    "formulaString": "=#Job_Duration/1000"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "C",
+                    "formulaString": "=\"PseudoGroup\""
+                }
+            ],
+            "keep": false,
+            "name": "T1_JobExecutionTime_TMP",
+            "nextColumnId": 3,
+            "sheetId": "882e0ef8-4657-4abd-86b0-65006dcf3378",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "C",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Average_Job_Duration_Sec",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "C",
+                    "formulaString": "=GROUPBY(#T1_JobExecutionTime_TMP!C)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Average_Job_Duration_Sec",
+                    "formulaString": "=ROUND(GROUPAVERAGE(#T1_JobExecutionTime_TMP!Job_Duration_Sec))"
+                }
+            ],
+            "keep": true,
+            "name": "T1_AvgJobDuration",
+            "nextColumnId": 2,
+            "sheetId": "d8104cb4-fcdd-4a04-97f0-9ea67bc58e21",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Min_Time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Max_Time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "action_count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "Hours_Seen",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "Actions_Per_Hour",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "Actions_Per_Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action_type",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "FILESYSTEM",
+                    "valueStatic": true
+                },
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "CREATE",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_FilesCreatedPerDay",
+            "filterTargetSheet": "T1_FilesCreatedPerDay",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Min_Time",
+                    "formulaString": "=#ActionsPerTime!Min_Time"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Max_Time",
+                    "formulaString": "=#ActionsPerTime!Max_Time"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "action_type",
+                    "formulaString": "=#ActionsPerTime!action_type"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "action",
+                    "formulaString": "=#ActionsPerTime!action"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "action_count",
+                    "formulaString": "=#ActionsPerTime!action_count"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "Hours_Seen",
+                    "formulaString": "=#ActionsPerTime!Hours_Seen"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "Actions_Per_Hour",
+                    "formulaString": "=#ActionsPerTime!Actions_Per_Hour"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "Actions_Per_Day",
+                    "formulaString": "=#ActionsPerTime!Actions_Per_Day"
+                }
+            ],
+            "keep": true,
+            "name": "T1_FilesCreatedPerDay",
+            "nextColumnId": 8,
+            "sheetId": "139e9254-6834-4c6f-99e3-fe934877c65f",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Min_Time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Max_Time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "action_count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "Hours_Seen",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "Actions_Per_Hour",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "Actions_Per_Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action_type",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "FILESYSTEM",
+                    "valueStatic": true
+                },
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "DELETE",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_FilesDeletedPerDay",
+            "filterTargetSheet": "T1_FilesDeletedPerDay",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Min_Time",
+                    "formulaString": "=#ActionsPerTime!Min_Time"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Max_Time",
+                    "formulaString": "=#ActionsPerTime!Max_Time"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "action_type",
+                    "formulaString": "=#ActionsPerTime!action_type"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "action",
+                    "formulaString": "=#ActionsPerTime!action"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "action_count",
+                    "formulaString": "=#ActionsPerTime!action_count"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "Hours_Seen",
+                    "formulaString": "=#ActionsPerTime!Hours_Seen"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "Actions_Per_Hour",
+                    "formulaString": "=#ActionsPerTime!Actions_Per_Hour"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "Actions_Per_Day",
+                    "formulaString": "=#ActionsPerTime!Actions_Per_Day"
+                }
+            ],
+            "keep": true,
+            "name": "T1_FilesDeletedPerDay",
+            "nextColumnId": 8,
+            "sheetId": "b9f5ecea-205a-4364-9e44-817591d81b41",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Total_Actions_Per_Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action_type",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "PERMISSION",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_PermissionManipulationsPerDay",
+            "filterTargetSheet": "T1_PermissionManipulationsPerDay",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "action_type",
+                    "formulaString": "=GROUPBY(#ActionsPerTime!action_type)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Total_Actions_Per_Day",
+                    "formulaString": "=GROUPSUM(#ActionsPerTime!Actions_Per_Day)"
+                }
+            ],
+            "keep": true,
+            "name": "T1_PermissionManipulationsPerDay",
+            "nextColumnId": 2,
+            "sheetId": "9d504382-cd5a-4f4e-9bfe-b9db59a863a5",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action_type",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "USER_MANAGEMENT",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_MostActiveUserManager",
+            "filterTargetSheet": "T1_MostActiveUserManager",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "action_type",
+                    "formulaString": "=GROUPBY(#user_action!action_type)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=GROUPBY(#user_action!performed_by_user)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "T1_MostActiveUserManager",
+            "nextColumnId": 3,
+            "sheetId": "7a2aa171-e4e4-468f-9599-9c25008e848c",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Count",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "T1_MostActiveUserManager",
+            "sortTargetSheet": "T1_MostActiveUserManager",
+            "topN": 1
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action_type",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "WORKBOOK",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T1_MostActiveAnalyst",
+            "filterTargetSheet": "T1_MostActiveAnalyst",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "action_type",
+                    "formulaString": "=GROUPBY(#user_action!action_type)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=GROUPBY(#user_action!performed_by_user)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "T1_MostActiveAnalyst",
+            "nextColumnId": 3,
+            "sheetId": "daa0f527-cc50-4a2b-b9a4-445ce652cf7b",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Count",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "T1_MostActiveAnalyst",
+            "sortTargetSheet": "T1_MostActiveAnalyst",
+            "topN": 1
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "performer_roles",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "ip_address",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "file_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "file_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "folder_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "group_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "read_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "write_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "execute_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "13",
+                    "name": "shared_public",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "14",
+                    "name": "new_owner_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "15",
+                    "name": "user_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "16",
+                    "name": "role_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "17",
+                    "name": "execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "18",
+                    "name": "execution_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "19",
+                    "name": "execution_triggered_by",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "20",
+                    "name": "execution_job_schedule",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "21",
+                    "name": "execution_configuration_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "22",
+                    "name": "execution_configuration_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "23",
+                    "name": "execution_job_status",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "24",
+                    "name": "execution_job_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "25",
+                    "name": "data_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "26",
+                    "name": "data_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "27",
+                    "name": "workbook_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "28",
+                    "name": "workbook_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "29",
+                    "name": "workbook_sheet_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "30",
+                    "name": "workbook_sheet_column_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "31",
+                    "name": "workbook_sheet_column_index",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "32",
+                    "name": "datasource_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "33",
+                    "name": "datasource_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "34",
+                    "name": "workbook_join_sheets",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "35",
+                    "name": "application_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "36",
+                    "name": "application_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "37",
+                    "name": "old_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "workbook_uuid",
+                    "filterExpression": "NOT_EMPTY",
+                    "type": "CONSTANT",
+                    "value": "null",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T2_WorkbookActions_TMP",
+            "filterTargetSheet": "T2_WorkbookActions_TMP",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "timestamp",
+                    "formulaString": "=#user_action!timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "action_type",
+                    "formulaString": "=#user_action!action_type"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "action",
+                    "formulaString": "=#user_action!action"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=#user_action!performed_by_user"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "performer_roles",
+                    "formulaString": "=#user_action!performer_roles"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "ip_address",
+                    "formulaString": "=#user_action!ip_address"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "file_uuid",
+                    "formulaString": "=#user_action!file_uuid"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "file_path",
+                    "formulaString": "=#user_action!file_path"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "folder_path",
+                    "formulaString": "=#user_action!folder_path"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "group_name",
+                    "formulaString": "=#user_action!group_name"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "read_permission",
+                    "formulaString": "=#user_action!read_permission"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "write_permission",
+                    "formulaString": "=#user_action!write_permission"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 12,
+                    "columnName": "execute_permission",
+                    "formulaString": "=#user_action!execute_permission"
+                },
+                {
+                    "columnId": "13",
+                    "columnIndex": 13,
+                    "columnName": "shared_public",
+                    "formulaString": "=#user_action!shared_public"
+                },
+                {
+                    "columnId": "14",
+                    "columnIndex": 14,
+                    "columnName": "new_owner_name",
+                    "formulaString": "=#user_action!new_owner_name"
+                },
+                {
+                    "columnId": "15",
+                    "columnIndex": 15,
+                    "columnName": "user_name",
+                    "formulaString": "=#user_action!user_name"
+                },
+                {
+                    "columnId": "16",
+                    "columnIndex": 16,
+                    "columnName": "role_name",
+                    "formulaString": "=#user_action!role_name"
+                },
+                {
+                    "columnId": "17",
+                    "columnIndex": 17,
+                    "columnName": "execution_id",
+                    "formulaString": "=#user_action!execution_id"
+                },
+                {
+                    "columnId": "18",
+                    "columnIndex": 18,
+                    "columnName": "execution_type",
+                    "formulaString": "=#user_action!execution_type"
+                },
+                {
+                    "columnId": "19",
+                    "columnIndex": 19,
+                    "columnName": "execution_triggered_by",
+                    "formulaString": "=#user_action!execution_triggered_by"
+                },
+                {
+                    "columnId": "20",
+                    "columnIndex": 20,
+                    "columnName": "execution_job_schedule",
+                    "formulaString": "=#user_action!execution_job_schedule"
+                },
+                {
+                    "columnId": "21",
+                    "columnIndex": 21,
+                    "columnName": "execution_configuration_path",
+                    "formulaString": "=#user_action!execution_configuration_path"
+                },
+                {
+                    "columnId": "22",
+                    "columnIndex": 22,
+                    "columnName": "execution_configuration_uuid",
+                    "formulaString": "=#user_action!execution_configuration_uuid"
+                },
+                {
+                    "columnId": "23",
+                    "columnIndex": 23,
+                    "columnName": "execution_job_status",
+                    "formulaString": "=#user_action!execution_job_status"
+                },
+                {
+                    "columnId": "24",
+                    "columnIndex": 24,
+                    "columnName": "execution_job_user",
+                    "formulaString": "=#user_action!execution_job_user"
+                },
+                {
+                    "columnId": "25",
+                    "columnIndex": 25,
+                    "columnName": "data_uuid",
+                    "formulaString": "=#user_action!data_uuid"
+                },
+                {
+                    "columnId": "26",
+                    "columnIndex": 26,
+                    "columnName": "data_path",
+                    "formulaString": "=#user_action!data_path"
+                },
+                {
+                    "columnId": "27",
+                    "columnIndex": 27,
+                    "columnName": "workbook_uuid",
+                    "formulaString": "=#user_action!workbook_uuid"
+                },
+                {
+                    "columnId": "28",
+                    "columnIndex": 28,
+                    "columnName": "workbook_path",
+                    "formulaString": "=#user_action!workbook_path"
+                },
+                {
+                    "columnId": "29",
+                    "columnIndex": 29,
+                    "columnName": "workbook_sheet_name",
+                    "formulaString": "=#user_action!workbook_sheet_name"
+                },
+                {
+                    "columnId": "30",
+                    "columnIndex": 30,
+                    "columnName": "workbook_sheet_column_name",
+                    "formulaString": "=#user_action!workbook_sheet_column_name"
+                },
+                {
+                    "columnId": "31",
+                    "columnIndex": 31,
+                    "columnName": "workbook_sheet_column_index",
+                    "formulaString": "=#user_action!workbook_sheet_column_index"
+                },
+                {
+                    "columnId": "32",
+                    "columnIndex": 32,
+                    "columnName": "datasource_uuid",
+                    "formulaString": "=#user_action!datasource_uuid"
+                },
+                {
+                    "columnId": "33",
+                    "columnIndex": 33,
+                    "columnName": "datasource_path",
+                    "formulaString": "=#user_action!datasource_path"
+                },
+                {
+                    "columnId": "34",
+                    "columnIndex": 34,
+                    "columnName": "workbook_join_sheets",
+                    "formulaString": "=#user_action!workbook_join_sheets"
+                },
+                {
+                    "columnId": "35",
+                    "columnIndex": 35,
+                    "columnName": "application_uuid",
+                    "formulaString": "=#user_action!application_uuid"
+                },
+                {
+                    "columnId": "36",
+                    "columnIndex": 36,
+                    "columnName": "application_path",
+                    "formulaString": "=#user_action!application_path"
+                },
+                {
+                    "columnId": "37",
+                    "columnIndex": 37,
+                    "columnName": "old_name",
+                    "formulaString": "=#user_action!old_name"
+                }
+            ],
+            "keep": false,
+            "name": "T2_WorkbookActions_TMP",
+            "nextColumnId": 38,
+            "sheetId": "87bd07a6-4744-49f8-a152-762b7a799402",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "action",
+                    "formulaString": "=GROUPBY(#T2_WorkbookActions_TMP!action)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "T2_WorkbookActionCount",
+            "nextColumnId": 2,
+            "sheetId": "173764ad-6982-4a1f-b21c-67ce7a794b38",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "workbook_uuid",
+                    "thousandSeparator": true,
+                    "width": 169
+                },
+                {
+                    "columnId": "1",
+                    "name": "Latest_Access",
+                    "thousandSeparator": true,
+                    "width": 191
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "workbook_uuid",
+                    "formulaString": "=GROUPBY(#T2_WorkbookActions_TMP!workbook_uuid)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Latest_Access",
+                    "formulaString": "=GROUPMAX(#T2_WorkbookActions_TMP!timestamp)"
+                }
+            ],
+            "keep": false,
+            "name": "T2_WorkbookLatestUUID_TMP",
+            "nextColumnId": 3,
+            "sheetId": "9554e600-f336-47ce-b590-d4fd9d471990",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "T2_WorkbookLatestAccess_TMP",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "Latest_Access",
+                            "workbook_uuid"
+                        ],
+                        "joinColumns2": [
+                            "timestamp",
+                            "workbook_uuid"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "T2_WorkbookLatestUUID_TMP",
+                        "sheet2": "T2_WorkbookActions_TMP"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "T2_WorkbookActions_TMP": [
+                        "timestamp",
+                        "action_type",
+                        "action",
+                        "performed_by_user",
+                        "performer_roles",
+                        "ip_address",
+                        "file_uuid",
+                        "file_path",
+                        "folder_path",
+                        "group_name",
+                        "read_permission",
+                        "write_permission",
+                        "execute_permission",
+                        "shared_public",
+                        "new_owner_name",
+                        "user_name",
+                        "role_name",
+                        "execution_id",
+                        "execution_type",
+                        "execution_triggered_by",
+                        "execution_job_schedule",
+                        "execution_configuration_path",
+                        "execution_configuration_uuid",
+                        "execution_job_status",
+                        "execution_job_user",
+                        "data_uuid",
+                        "data_path",
+                        "workbook_uuid",
+                        "workbook_path",
+                        "workbook_sheet_name",
+                        "workbook_sheet_column_name",
+                        "workbook_sheet_column_index",
+                        "datasource_uuid",
+                        "datasource_path",
+                        "workbook_join_sheets",
+                        "application_uuid",
+                        "application_path",
+                        "old_name"
+                    ],
+                    "T2_WorkbookLatestUUID_TMP": [
+                        "workbook_uuid",
+                        "Latest_Access"
+                    ]
+                }
+            },
+            "sheetId": "313ae134-0669-44c5-b6cb-fca5ec798c4b",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "1",
+                    "name": "T2_WorkbookLatestUUID.Latest_Access",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "T2_WorkbookActions_TMP.timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "T2_WorkbookActions_TMP.action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "T2_WorkbookActions_TMP.action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "T2_WorkbookActions_TMP.performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "T2_WorkbookActions_TMP.performer_roles",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "T2_WorkbookActions_TMP.ip_address",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "T2_WorkbookActions_TMP.file_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "T2_WorkbookActions_TMP.file_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "T2_WorkbookActions_TMP.folder_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "T2_WorkbookActions_TMP.group_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "T2_WorkbookActions_TMP.read_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "13",
+                    "name": "T2_WorkbookActions_TMP.write_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "14",
+                    "name": "T2_WorkbookActions_TMP.execute_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "15",
+                    "name": "T2_WorkbookActions_TMP.shared_public",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "16",
+                    "name": "T2_WorkbookActions_TMP.new_owner_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "17",
+                    "name": "T2_WorkbookActions_TMP.user_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "18",
+                    "name": "T2_WorkbookActions_TMP.role_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "19",
+                    "name": "T2_WorkbookActions_TMP.execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "20",
+                    "name": "T2_WorkbookActions_TMP.execution_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "21",
+                    "name": "T2_WorkbookActions_TMP.execution_triggered_by",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "22",
+                    "name": "T2_WorkbookActions_TMP.execution_job_schedule",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "23",
+                    "name": "T2_WorkbookActions_TMP.execution_configuration_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "24",
+                    "name": "T2_WorkbookActions_TMP.execution_configuration_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "25",
+                    "name": "T2_WorkbookActions_TMP.execution_job_status",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "26",
+                    "name": "T2_WorkbookActions_TMP.execution_job_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "27",
+                    "name": "T2_WorkbookActions_TMP.data_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "28",
+                    "name": "T2_WorkbookActions_TMP.data_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "29",
+                    "name": "T2_WorkbookActions_TMP.workbook_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "30",
+                    "name": "T2_WorkbookActions_TMP.workbook_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "31",
+                    "name": "T2_WorkbookActions_TMP.workbook_sheet_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "32",
+                    "name": "T2_WorkbookActions_TMP.workbook_sheet_column_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "33",
+                    "name": "T2_WorkbookActions_TMP.workbook_sheet_column_index",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "34",
+                    "name": "T2_WorkbookActions_TMP.datasource_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "35",
+                    "name": "T2_WorkbookActions_TMP.datasource_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "36",
+                    "name": "T2_WorkbookActions_TMP.workbook_join_sheets",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "37",
+                    "name": "T2_WorkbookActions_TMP.application_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "38",
+                    "name": "T2_WorkbookActions_TMP.application_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "39",
+                    "name": "T2_WorkbookActions_TMP.old_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "41",
+                    "name": "T2_WorkbookLatestUUID_workbook_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "42",
+                    "name": "Row_Number",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Row_Number",
+                    "filterExpression": "EQUALS",
+                    "type": "CONSTANT",
+                    "value": "1",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T2_WorkbookLatestAccess_Unique_TMP",
+            "filterTargetSheet": "T2_WorkbookLatestAccess_Unique_TMP",
+            "formulas": [
+                {
+                    "columnId": "41",
+                    "columnIndex": 0,
+                    "columnName": "T2_WorkbookLatestUUID_workbook_uuid",
+                    "formulaString": "=GROUPBY(#T2_WorkbookLatestAccess_TMP!T2_WorkbookLatestUUID_TMP.workbook_uuid)"
+                },
+                {
+                    "columnId": "42",
+                    "columnIndex": 1,
+                    "columnName": "Row_Number",
+                    "formulaString": "=GROUPROWNUMBER()"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 2,
+                    "columnName": "T2_WorkbookLatestUUID.Latest_Access",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookLatestUUID_TMP.Latest_Access"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 3,
+                    "columnName": "T2_WorkbookActions_TMP.timestamp",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.timestamp"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 4,
+                    "columnName": "T2_WorkbookActions_TMP.action_type",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.action_type"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 5,
+                    "columnName": "T2_WorkbookActions_TMP.action",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.action"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 6,
+                    "columnName": "T2_WorkbookActions_TMP.performed_by_user",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.performed_by_user"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 7,
+                    "columnName": "T2_WorkbookActions_TMP.performer_roles",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.performer_roles"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 8,
+                    "columnName": "T2_WorkbookActions_TMP.ip_address",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.ip_address"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 9,
+                    "columnName": "T2_WorkbookActions_TMP.file_uuid",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.file_uuid"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 10,
+                    "columnName": "T2_WorkbookActions_TMP.file_path",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.file_path"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 11,
+                    "columnName": "T2_WorkbookActions_TMP.folder_path",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.folder_path"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 12,
+                    "columnName": "T2_WorkbookActions_TMP.group_name",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.group_name"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 13,
+                    "columnName": "T2_WorkbookActions_TMP.read_permission",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.read_permission"
+                },
+                {
+                    "columnId": "13",
+                    "columnIndex": 14,
+                    "columnName": "T2_WorkbookActions_TMP.write_permission",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.write_permission"
+                },
+                {
+                    "columnId": "14",
+                    "columnIndex": 15,
+                    "columnName": "T2_WorkbookActions_TMP.execute_permission",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.execute_permission"
+                },
+                {
+                    "columnId": "15",
+                    "columnIndex": 16,
+                    "columnName": "T2_WorkbookActions_TMP.shared_public",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.shared_public"
+                },
+                {
+                    "columnId": "16",
+                    "columnIndex": 17,
+                    "columnName": "T2_WorkbookActions_TMP.new_owner_name",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.new_owner_name"
+                },
+                {
+                    "columnId": "17",
+                    "columnIndex": 18,
+                    "columnName": "T2_WorkbookActions_TMP.user_name",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.user_name"
+                },
+                {
+                    "columnId": "18",
+                    "columnIndex": 19,
+                    "columnName": "T2_WorkbookActions_TMP.role_name",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.role_name"
+                },
+                {
+                    "columnId": "19",
+                    "columnIndex": 20,
+                    "columnName": "T2_WorkbookActions_TMP.execution_id",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.execution_id"
+                },
+                {
+                    "columnId": "20",
+                    "columnIndex": 21,
+                    "columnName": "T2_WorkbookActions_TMP.execution_type",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.execution_type"
+                },
+                {
+                    "columnId": "21",
+                    "columnIndex": 22,
+                    "columnName": "T2_WorkbookActions_TMP.execution_triggered_by",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.execution_triggered_by"
+                },
+                {
+                    "columnId": "22",
+                    "columnIndex": 23,
+                    "columnName": "T2_WorkbookActions_TMP.execution_job_schedule",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.execution_job_schedule"
+                },
+                {
+                    "columnId": "23",
+                    "columnIndex": 24,
+                    "columnName": "T2_WorkbookActions_TMP.execution_configuration_path",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.execution_configuration_path"
+                },
+                {
+                    "columnId": "24",
+                    "columnIndex": 25,
+                    "columnName": "T2_WorkbookActions_TMP.execution_configuration_uuid",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.execution_configuration_uuid"
+                },
+                {
+                    "columnId": "25",
+                    "columnIndex": 26,
+                    "columnName": "T2_WorkbookActions_TMP.execution_job_status",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.execution_job_status"
+                },
+                {
+                    "columnId": "26",
+                    "columnIndex": 27,
+                    "columnName": "T2_WorkbookActions_TMP.execution_job_user",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.execution_job_user"
+                },
+                {
+                    "columnId": "27",
+                    "columnIndex": 28,
+                    "columnName": "T2_WorkbookActions_TMP.data_uuid",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.data_uuid"
+                },
+                {
+                    "columnId": "28",
+                    "columnIndex": 29,
+                    "columnName": "T2_WorkbookActions_TMP.data_path",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.data_path"
+                },
+                {
+                    "columnId": "29",
+                    "columnIndex": 30,
+                    "columnName": "T2_WorkbookActions_TMP.workbook_uuid",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.workbook_uuid"
+                },
+                {
+                    "columnId": "30",
+                    "columnIndex": 31,
+                    "columnName": "T2_WorkbookActions_TMP.workbook_path",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.workbook_path"
+                },
+                {
+                    "columnId": "31",
+                    "columnIndex": 32,
+                    "columnName": "T2_WorkbookActions_TMP.workbook_sheet_name",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.workbook_sheet_name"
+                },
+                {
+                    "columnId": "32",
+                    "columnIndex": 33,
+                    "columnName": "T2_WorkbookActions_TMP.workbook_sheet_column_name",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.workbook_sheet_column_name"
+                },
+                {
+                    "columnId": "33",
+                    "columnIndex": 34,
+                    "columnName": "T2_WorkbookActions_TMP.workbook_sheet_column_index",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.workbook_sheet_column_index"
+                },
+                {
+                    "columnId": "34",
+                    "columnIndex": 35,
+                    "columnName": "T2_WorkbookActions_TMP.datasource_uuid",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.datasource_uuid"
+                },
+                {
+                    "columnId": "35",
+                    "columnIndex": 36,
+                    "columnName": "T2_WorkbookActions_TMP.datasource_path",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.datasource_path"
+                },
+                {
+                    "columnId": "36",
+                    "columnIndex": 37,
+                    "columnName": "T2_WorkbookActions_TMP.workbook_join_sheets",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.workbook_join_sheets"
+                },
+                {
+                    "columnId": "37",
+                    "columnIndex": 38,
+                    "columnName": "T2_WorkbookActions_TMP.application_uuid",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.application_uuid"
+                },
+                {
+                    "columnId": "38",
+                    "columnIndex": 39,
+                    "columnName": "T2_WorkbookActions_TMP.application_path",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.application_path"
+                },
+                {
+                    "columnId": "39",
+                    "columnIndex": 40,
+                    "columnName": "T2_WorkbookActions_TMP.old_name",
+                    "formulaString": "=#T2_WorkbookLatestAccess_TMP!T2_WorkbookActions_TMP.old_name"
+                }
+            ],
+            "keep": false,
+            "name": "T2_WorkbookLatestAccess_Unique_TMP",
+            "nextColumnId": 43,
+            "sheetId": "c631b223-0f01-45ba-bca3-33286a41214e",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "workbook_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Actions",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "workbook_uuid",
+                    "formulaString": "=GROUPBY(#T2_WorkbookActions_TMP!workbook_uuid)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Actions",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": false,
+            "name": "T2_MostActiveWorkbooks_TMP",
+            "nextColumnId": 2,
+            "sheetId": "a9ada166-b96c-4bbd-a98e-54214ff23add",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Actions",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "T2_MostActiveWorkbooks_TMP",
+            "sortTargetSheet": "T2_MostActiveWorkbooks_TMP",
+            "topN": 10
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "T2_MostActiveWorkbooksXLatestAccess_TMP",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "workbook_uuid"
+                        ],
+                        "joinColumns2": [
+                            "T2_WorkbookLatestUUID_workbook_uuid"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "T2_MostActiveWorkbooks_TMP",
+                        "sheet2": "T2_WorkbookLatestAccess_Unique_TMP"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "T2_MostActiveWorkbooks_TMP": [
+                        "workbook_uuid",
+                        "Actions"
+                    ],
+                    "T2_WorkbookLatestAccess_Unique_TMP": [
+                        "T2_WorkbookLatestUUID_workbook_uuid",
+                        "Row_Number",
+                        "T2_WorkbookLatestUUID.Latest_Access",
+                        "T2_WorkbookActions_TMP.timestamp",
+                        "T2_WorkbookActions_TMP.action_type",
+                        "T2_WorkbookActions_TMP.action",
+                        "T2_WorkbookActions_TMP.performed_by_user",
+                        "T2_WorkbookActions_TMP.performer_roles",
+                        "T2_WorkbookActions_TMP.ip_address",
+                        "T2_WorkbookActions_TMP.file_uuid",
+                        "T2_WorkbookActions_TMP.file_path",
+                        "T2_WorkbookActions_TMP.folder_path",
+                        "T2_WorkbookActions_TMP.group_name",
+                        "T2_WorkbookActions_TMP.read_permission",
+                        "T2_WorkbookActions_TMP.write_permission",
+                        "T2_WorkbookActions_TMP.execute_permission",
+                        "T2_WorkbookActions_TMP.shared_public",
+                        "T2_WorkbookActions_TMP.new_owner_name",
+                        "T2_WorkbookActions_TMP.user_name",
+                        "T2_WorkbookActions_TMP.role_name",
+                        "T2_WorkbookActions_TMP.execution_id",
+                        "T2_WorkbookActions_TMP.execution_type",
+                        "T2_WorkbookActions_TMP.execution_triggered_by",
+                        "T2_WorkbookActions_TMP.execution_job_schedule",
+                        "T2_WorkbookActions_TMP.execution_configuration_path",
+                        "T2_WorkbookActions_TMP.execution_configuration_uuid",
+                        "T2_WorkbookActions_TMP.execution_job_status",
+                        "T2_WorkbookActions_TMP.execution_job_user",
+                        "T2_WorkbookActions_TMP.data_uuid",
+                        "T2_WorkbookActions_TMP.data_path",
+                        "T2_WorkbookActions_TMP.workbook_uuid",
+                        "T2_WorkbookActions_TMP.workbook_path",
+                        "T2_WorkbookActions_TMP.workbook_sheet_name",
+                        "T2_WorkbookActions_TMP.workbook_sheet_column_name",
+                        "T2_WorkbookActions_TMP.workbook_sheet_column_index",
+                        "T2_WorkbookActions_TMP.datasource_uuid",
+                        "T2_WorkbookActions_TMP.datasource_path",
+                        "T2_WorkbookActions_TMP.workbook_join_sheets",
+                        "T2_WorkbookActions_TMP.application_uuid",
+                        "T2_WorkbookActions_TMP.application_path",
+                        "T2_WorkbookActions_TMP.old_name"
+                    ]
+                }
+            },
+            "sheetId": "0eb99dd4-eb24-4756-9ed2-6e2e63db2e32",
+            "sheetType": "das.internal.JoinedSheetType",
+            "sortKeys": [
+                {
+                    "column": "T2_MostActiveWorkbooks_TMP.Actions",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "T2_MostActiveWorkbooksXLatestAccess_TMP",
+            "sortTargetSheet": "T2_MostActiveWorkbooksXLatestAccess_TMP",
+            "topN": 10
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "UUID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Actions",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Last_Accessed_By",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "UUID",
+                    "formulaString": "=#T2_MostActiveWorkbooksXLatestAccess_TMP!T2_MostActiveWorkbooks_TMP.workbook_uuid"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Actions",
+                    "formulaString": "=#T2_MostActiveWorkbooksXLatestAccess_TMP!T2_MostActiveWorkbooks_TMP.Actions"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 2,
+                    "columnName": "Last_Accessed_By",
+                    "formulaString": "=#T2_MostActiveWorkbooksXLatestAccess_TMP!T2_WorkbookLatestAccess_Unique_TMP.performed_by_user"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 3,
+                    "columnName": "Path",
+                    "formulaString": "=#T2_MostActiveWorkbooksXLatestAccess_TMP!T2_WorkbookLatestAccess_Unique_TMP.workbook_path"
+                }
+            ],
+            "keep": true,
+            "name": "T2_MostActiveWorkbooksComplete",
+            "nextColumnId": 4,
+            "sheetId": "162f517e-d703-472e-9753-d38063959dd5",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "performer_roles",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "ip_address",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "file_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "file_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "folder_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "group_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "read_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "write_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "execute_permission",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "13",
+                    "name": "shared_public",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "14",
+                    "name": "new_owner_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "15",
+                    "name": "user_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "16",
+                    "name": "role_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "17",
+                    "name": "execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "18",
+                    "name": "execution_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "19",
+                    "name": "execution_triggered_by",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "20",
+                    "name": "execution_job_schedule",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "21",
+                    "name": "execution_configuration_path",
+                    "thousandSeparator": true,
+                    "width": 451
+                },
+                {
+                    "columnId": "22",
+                    "name": "execution_configuration_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "23",
+                    "name": "execution_job_status",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "24",
+                    "name": "execution_job_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "25",
+                    "name": "data_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "26",
+                    "name": "data_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "27",
+                    "name": "workbook_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "28",
+                    "name": "workbook_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "29",
+                    "name": "workbook_sheet_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "30",
+                    "name": "workbook_sheet_column_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "31",
+                    "name": "workbook_sheet_column_index",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "32",
+                    "name": "datasource_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "33",
+                    "name": "datasource_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "34",
+                    "name": "workbook_join_sheets",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "35",
+                    "name": "application_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "36",
+                    "name": "application_path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "37",
+                    "name": "old_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action_type",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "JOB",
+                    "valueStatic": true
+                },
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "START_EXECUTION",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T2_JobActions_TMP",
+            "filterTargetSheet": "T2_JobActions_TMP",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "timestamp",
+                    "formulaString": "=#user_action!timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "action_type",
+                    "formulaString": "=#user_action!action_type"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "action",
+                    "formulaString": "=#user_action!action"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=#user_action!performed_by_user"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "performer_roles",
+                    "formulaString": "=#user_action!performer_roles"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "ip_address",
+                    "formulaString": "=#user_action!ip_address"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "file_uuid",
+                    "formulaString": "=#user_action!file_uuid"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "file_path",
+                    "formulaString": "=#user_action!file_path"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "folder_path",
+                    "formulaString": "=#user_action!folder_path"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "group_name",
+                    "formulaString": "=#user_action!group_name"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "read_permission",
+                    "formulaString": "=#user_action!read_permission"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "write_permission",
+                    "formulaString": "=#user_action!write_permission"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 12,
+                    "columnName": "execute_permission",
+                    "formulaString": "=#user_action!execute_permission"
+                },
+                {
+                    "columnId": "13",
+                    "columnIndex": 13,
+                    "columnName": "shared_public",
+                    "formulaString": "=#user_action!shared_public"
+                },
+                {
+                    "columnId": "14",
+                    "columnIndex": 14,
+                    "columnName": "new_owner_name",
+                    "formulaString": "=#user_action!new_owner_name"
+                },
+                {
+                    "columnId": "15",
+                    "columnIndex": 15,
+                    "columnName": "user_name",
+                    "formulaString": "=#user_action!user_name"
+                },
+                {
+                    "columnId": "16",
+                    "columnIndex": 16,
+                    "columnName": "role_name",
+                    "formulaString": "=#user_action!role_name"
+                },
+                {
+                    "columnId": "17",
+                    "columnIndex": 17,
+                    "columnName": "execution_id",
+                    "formulaString": "=#user_action!execution_id"
+                },
+                {
+                    "columnId": "18",
+                    "columnIndex": 18,
+                    "columnName": "execution_type",
+                    "formulaString": "=#user_action!execution_type"
+                },
+                {
+                    "columnId": "19",
+                    "columnIndex": 19,
+                    "columnName": "execution_triggered_by",
+                    "formulaString": "=#user_action!execution_triggered_by"
+                },
+                {
+                    "columnId": "20",
+                    "columnIndex": 20,
+                    "columnName": "execution_job_schedule",
+                    "formulaString": "=#user_action!execution_job_schedule"
+                },
+                {
+                    "columnId": "21",
+                    "columnIndex": 21,
+                    "columnName": "execution_configuration_path",
+                    "formulaString": "=#user_action!execution_configuration_path"
+                },
+                {
+                    "columnId": "22",
+                    "columnIndex": 22,
+                    "columnName": "execution_configuration_uuid",
+                    "formulaString": "=#user_action!execution_configuration_uuid"
+                },
+                {
+                    "columnId": "23",
+                    "columnIndex": 23,
+                    "columnName": "execution_job_status",
+                    "formulaString": "=#user_action!execution_job_status"
+                },
+                {
+                    "columnId": "24",
+                    "columnIndex": 24,
+                    "columnName": "execution_job_user",
+                    "formulaString": "=#user_action!execution_job_user"
+                },
+                {
+                    "columnId": "25",
+                    "columnIndex": 25,
+                    "columnName": "data_uuid",
+                    "formulaString": "=#user_action!data_uuid"
+                },
+                {
+                    "columnId": "26",
+                    "columnIndex": 26,
+                    "columnName": "data_path",
+                    "formulaString": "=#user_action!data_path"
+                },
+                {
+                    "columnId": "27",
+                    "columnIndex": 27,
+                    "columnName": "workbook_uuid",
+                    "formulaString": "=#user_action!workbook_uuid"
+                },
+                {
+                    "columnId": "28",
+                    "columnIndex": 28,
+                    "columnName": "workbook_path",
+                    "formulaString": "=#user_action!workbook_path"
+                },
+                {
+                    "columnId": "29",
+                    "columnIndex": 29,
+                    "columnName": "workbook_sheet_name",
+                    "formulaString": "=#user_action!workbook_sheet_name"
+                },
+                {
+                    "columnId": "30",
+                    "columnIndex": 30,
+                    "columnName": "workbook_sheet_column_name",
+                    "formulaString": "=#user_action!workbook_sheet_column_name"
+                },
+                {
+                    "columnId": "31",
+                    "columnIndex": 31,
+                    "columnName": "workbook_sheet_column_index",
+                    "formulaString": "=#user_action!workbook_sheet_column_index"
+                },
+                {
+                    "columnId": "32",
+                    "columnIndex": 32,
+                    "columnName": "datasource_uuid",
+                    "formulaString": "=#user_action!datasource_uuid"
+                },
+                {
+                    "columnId": "33",
+                    "columnIndex": 33,
+                    "columnName": "datasource_path",
+                    "formulaString": "=#user_action!datasource_path"
+                },
+                {
+                    "columnId": "34",
+                    "columnIndex": 34,
+                    "columnName": "workbook_join_sheets",
+                    "formulaString": "=#user_action!workbook_join_sheets"
+                },
+                {
+                    "columnId": "35",
+                    "columnIndex": 35,
+                    "columnName": "application_uuid",
+                    "formulaString": "=#user_action!application_uuid"
+                },
+                {
+                    "columnId": "36",
+                    "columnIndex": 36,
+                    "columnName": "application_path",
+                    "formulaString": "=#user_action!application_path"
+                },
+                {
+                    "columnId": "37",
+                    "columnIndex": 37,
+                    "columnName": "old_name",
+                    "formulaString": "=#user_action!old_name"
+                }
+            ],
+            "keep": false,
+            "name": "T2_JobActions_TMP",
+            "nextColumnId": 38,
+            "sheetId": "184aa1eb-5af7-4b73-b47f-b8ba83cbf813",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "execution_triggered_by",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "execution_triggered_by",
+                    "formulaString": "=GROUPBY(#T2_JobActions_TMP!execution_triggered_by)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "T2_TriggeredByCounts",
+            "nextColumnId": 2,
+            "sheetId": "bb7872fc-43dc-461a-b328-09da76b44953",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "execution_configuration_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Latest_Run",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "execution_configuration_uuid",
+                    "formulaString": "=GROUPBY(#T2_JobActions_TMP!execution_configuration_uuid)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Latest_Run",
+                    "formulaString": "=GROUPMAX(#T2_JobActions_TMP!timestamp)"
+                }
+            ],
+            "keep": false,
+            "name": "T2_JobLatestUUID_TMP",
+            "nextColumnId": 3,
+            "sheetId": "fc7ee58c-c49d-47e6-ae7c-b5467c8608e3",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "T2_JobLatestExecution_TMP",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "Latest_Run",
+                            "execution_configuration_uuid"
+                        ],
+                        "joinColumns2": [
+                            "timestamp",
+                            "execution_configuration_uuid"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "T2_JobLatestUUID_TMP",
+                        "sheet2": "T2_JobActions_TMP"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "T2_JobActions_TMP": [
+                        "timestamp",
+                        "action_type",
+                        "action",
+                        "performed_by_user",
+                        "performer_roles",
+                        "ip_address",
+                        "file_uuid",
+                        "file_path",
+                        "folder_path",
+                        "group_name",
+                        "read_permission",
+                        "write_permission",
+                        "execute_permission",
+                        "shared_public",
+                        "new_owner_name",
+                        "user_name",
+                        "role_name",
+                        "execution_id",
+                        "execution_type",
+                        "execution_triggered_by",
+                        "execution_job_schedule",
+                        "execution_configuration_path",
+                        "execution_configuration_uuid",
+                        "execution_job_status",
+                        "execution_job_user",
+                        "data_uuid",
+                        "data_path",
+                        "workbook_uuid",
+                        "workbook_path",
+                        "workbook_sheet_name",
+                        "workbook_sheet_column_name",
+                        "workbook_sheet_column_index",
+                        "datasource_uuid",
+                        "datasource_path",
+                        "workbook_join_sheets",
+                        "application_uuid",
+                        "application_path",
+                        "old_name"
+                    ],
+                    "T2_JobLatestUUID_TMP": [
+                        "execution_configuration_uuid",
+                        "Latest_Run"
+                    ]
+                }
+            },
+            "sheetId": "a70c9d6d-598b-4281-a027-ba413a6b1491",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "execution_configuration_uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "execution_configuration_uuid",
+                    "formulaString": "=GROUPBY(#T2_JobActions_TMP!execution_configuration_uuid)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": false,
+            "name": "T2_MostExecutedJobs_TMP",
+            "nextColumnId": 2,
+            "sheetId": "a53e21fe-08ca-4d5d-98c3-df807a842e17",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Count",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "T2_MostExecutedJobs_TMP",
+            "sortTargetSheet": "T2_MostExecutedJobs_TMP"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "T2_MostExecutedJobsXLatest_TMP",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "execution_configuration_uuid"
+                        ],
+                        "joinColumns2": [
+                            "T2_JobActions_TMP.execution_configuration_uuid"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "T2_MostExecutedJobs_TMP",
+                        "sheet2": "T2_JobLatestExecution_TMP"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "T2_JobLatestExecution_TMP": [
+                        "T2_JobLatestUUID_TMP.execution_configuration_uuid",
+                        "T2_JobActions_TMP.execution_configuration_uuid",
+                        "T2_JobLatestUUID_TMP.Latest_Run",
+                        "T2_JobActions_TMP.timestamp",
+                        "T2_JobActions_TMP.action_type",
+                        "T2_JobActions_TMP.action",
+                        "T2_JobActions_TMP.performed_by_user",
+                        "T2_JobActions_TMP.performer_roles",
+                        "T2_JobActions_TMP.ip_address",
+                        "T2_JobActions_TMP.file_uuid",
+                        "T2_JobActions_TMP.file_path",
+                        "T2_JobActions_TMP.folder_path",
+                        "T2_JobActions_TMP.group_name",
+                        "T2_JobActions_TMP.read_permission",
+                        "T2_JobActions_TMP.write_permission",
+                        "T2_JobActions_TMP.execute_permission",
+                        "T2_JobActions_TMP.shared_public",
+                        "T2_JobActions_TMP.new_owner_name",
+                        "T2_JobActions_TMP.user_name",
+                        "T2_JobActions_TMP.role_name",
+                        "T2_JobActions_TMP.execution_id",
+                        "T2_JobActions_TMP.execution_type",
+                        "T2_JobActions_TMP.execution_triggered_by",
+                        "T2_JobActions_TMP.execution_job_schedule",
+                        "T2_JobActions_TMP.execution_configuration_path",
+                        "T2_JobActions_TMP.execution_job_status",
+                        "T2_JobActions_TMP.execution_job_user",
+                        "T2_JobActions_TMP.data_uuid",
+                        "T2_JobActions_TMP.data_path",
+                        "T2_JobActions_TMP.workbook_uuid",
+                        "T2_JobActions_TMP.workbook_path",
+                        "T2_JobActions_TMP.workbook_sheet_name",
+                        "T2_JobActions_TMP.workbook_sheet_column_name",
+                        "T2_JobActions_TMP.workbook_sheet_column_index",
+                        "T2_JobActions_TMP.datasource_uuid",
+                        "T2_JobActions_TMP.datasource_path",
+                        "T2_JobActions_TMP.workbook_join_sheets",
+                        "T2_JobActions_TMP.application_uuid",
+                        "T2_JobActions_TMP.application_path",
+                        "T2_JobActions_TMP.old_name"
+                    ],
+                    "T2_MostExecutedJobs_TMP": [
+                        "execution_configuration_uuid",
+                        "Count"
+                    ]
+                }
+            },
+            "sheetId": "0df2004d-0dfd-47cd-b0f8-c9a7842fea12",
+            "sheetType": "das.internal.JoinedSheetType",
+            "sortKeys": [
+                {
+                    "column": "T2_MostExecutedJobs_TMP.Count",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "T2_MostExecutedJobsXLatest_TMP",
+            "sortTargetSheet": "T2_MostExecutedJobsXLatest_TMP"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "UUID",
+                    "thousandSeparator": true,
+                    "width": 344
+                },
+                {
+                    "columnId": "1",
+                    "name": "Owner",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Path",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Runs",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "UUID",
+                    "formulaString": "=#T2_MostExecutedJobsXLatest_TMP!T2_JobLatestExecution_TMP.execution_configuration_uuid"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 1,
+                    "columnName": "Runs",
+                    "formulaString": "=#T2_MostExecutedJobsXLatest_TMP!T2_MostExecutedJobs_TMP.Count"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 2,
+                    "columnName": "Owner",
+                    "formulaString": "=#T2_MostExecutedJobsXLatest_TMP!T2_JobLatestExecution_TMP.execution_job_user"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 3,
+                    "columnName": "Path",
+                    "formulaString": "=#T2_MostExecutedJobsXLatest_TMP!T2_JobLatestExecution_TMP.execution_configuration_path"
+                }
+            ],
+            "keep": true,
+            "name": "T2_MostExecutedJobsComplete",
+            "nextColumnId": 4,
+            "sheetId": "9a6a9f5f-0a9f-42c3-bf4f-24ccaaa09cdf",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Runs",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "T2_MostExecutedJobsComplete",
+            "sortTargetSheet": "T2_MostExecutedJobsComplete",
+            "topN": 10
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "performed_by_user",
+                    "filterExpression": "TEXT_NOT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "anonymous",
+                    "valueStatic": true
+                },
+                {
+                    "column": "performed_by_user",
+                    "filterExpression": "TEXT_NOT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "system",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T3_MostActiveUsers",
+            "filterTargetSheet": "T3_MostActiveUsers",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=GROUPBY(#user_action!performed_by_user)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "T3_MostActiveUsers",
+            "nextColumnId": 2,
+            "sheetId": "0576a14d-69d6-4ef6-9fcc-e8f275d3cceb",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Roles",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Expanded_Roles",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Roles",
+                    "formulaString": "=JSONTOLIST(#user_action!performer_roles)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Expanded_Roles",
+                    "formulaString": "=EXPAND(#Roles)"
+                }
+            ],
+            "keep": false,
+            "name": "T3_Roles_TMP",
+            "nextColumnId": 2,
+            "sheetId": "ad157a8d-e611-4111-8f29-75782d9ad88f",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Expanded_Roles",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Expanded_Roles",
+                    "formulaString": "=GROUPBY(#T3_Roles_TMP!Expanded_Roles)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "T3_MostActiveRoles",
+            "nextColumnId": 2,
+            "sheetId": "14dd1f55-d7f0-4dd8-9ff7-c964ddf2db43",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "performed_by_user",
+                    "filterExpression": "TEXT_NOT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "anonymous",
+                    "valueStatic": true
+                },
+                {
+                    "column": "performed_by_user",
+                    "filterExpression": "TEXT_NOT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "system",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T3_AllUsers_TMP",
+            "filterTargetSheet": "T3_AllUsers_TMP",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=GROUPBY(#user_action!performed_by_user)"
+                }
+            ],
+            "keep": false,
+            "name": "T3_AllUsers_TMP",
+            "nextColumnId": 1,
+            "sheetId": "8f73d527-23d3-4e0d-a242-b49fd9afb63f",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "LOGIN",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T3_UserLogins_TMP",
+            "filterTargetSheet": "T3_UserLogins_TMP",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=GROUPBY(#user_action!performed_by_user)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "action",
+                    "formulaString": "=GROUPBY(#user_action!action)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": false,
+            "name": "T3_UserLogins_TMP",
+            "nextColumnId": 3,
+            "sheetId": "072927d1-4b75-4f18-aa4c-02efab3c19ff",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "UNABLE_TO_AUTHENTICATE",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T3_FailedUserLogins_TMP",
+            "filterTargetSheet": "T3_FailedUserLogins_TMP",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=GROUPBY(#user_action!performed_by_user)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "action",
+                    "formulaString": "=GROUPBY(#user_action!action)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": false,
+            "name": "T3_FailedUserLogins_TMP",
+            "nextColumnId": 3,
+            "sheetId": "04cb26d6-855b-4c8a-ba97-ffdf61bb02f6",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "executing_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "action",
+                    "thousandSeparator": true,
+                    "width": 112
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "START_EXECUTION",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T3_ExecutingUsers_TMP",
+            "filterTargetSheet": "T3_ExecutingUsers_TMP",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "executing_user",
+                    "formulaString": "=GROUPBY(#user_action!execution_job_user)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 1,
+                    "columnName": "action",
+                    "formulaString": "=GROUPBY(#user_action!action)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 2,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": false,
+            "name": "T3_ExecutingUsers_TMP",
+            "nextColumnId": 3,
+            "sheetId": "48ee3cb6-2732-48a7-b633-fec76634bfa5",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action_type",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "FILESYSTEM",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T3_FilesystemUserCounts_TMP",
+            "filterTargetSheet": "T3_FilesystemUserCounts_TMP",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=GROUPBY(#user_action!performed_by_user)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "action_type",
+                    "formulaString": "=GROUPBY(#user_action!action_type)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": false,
+            "name": "T3_FilesystemUserCounts_TMP",
+            "nextColumnId": 3,
+            "sheetId": "d5ba0e7d-5154-4b56-8f7f-8df495e0f1b4",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "performed_by_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "action_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action_type",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "WORKBOOK",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "T3_AnalyticsUserCounts_TMP",
+            "filterTargetSheet": "T3_AnalyticsUserCounts_TMP",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "performed_by_user",
+                    "formulaString": "=GROUPBY(#user_action!performed_by_user)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "action_type",
+                    "formulaString": "=GROUPBY(#user_action!action_type)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": false,
+            "name": "T3_AnalyticsUserCounts_TMP",
+            "nextColumnId": 3,
+            "sheetId": "27a46482-7e0a-4a75-b04b-1e278ddaf583",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "T3_RawUserTable_TMP",
+            "sheetDefinition": {
+                "joinCategory": "MULTI_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "performed_by_user"
+                        ],
+                        "joinColumns2": [
+                            "performed_by_user"
+                        ],
+                        "joinType": "OUTER_LEFT",
+                        "sheet1": "T3_AllUsers_TMP",
+                        "sheet2": "T3_UserLogins_TMP"
+                    },
+                    {
+                        "joinColumns1": [
+                            "performed_by_user"
+                        ],
+                        "joinColumns2": [
+                            "performed_by_user"
+                        ],
+                        "joinType": "OUTER_LEFT",
+                        "sheet1": "T3_AllUsers_TMP",
+                        "sheet2": "T3_FailedUserLogins_TMP"
+                    },
+                    {
+                        "joinColumns1": [
+                            "performed_by_user"
+                        ],
+                        "joinColumns2": [
+                            "executing_user"
+                        ],
+                        "joinType": "OUTER_LEFT",
+                        "sheet1": "T3_AllUsers_TMP",
+                        "sheet2": "T3_ExecutingUsers_TMP"
+                    },
+                    {
+                        "joinColumns1": [
+                            "performed_by_user"
+                        ],
+                        "joinColumns2": [
+                            "performed_by_user"
+                        ],
+                        "joinType": "OUTER_LEFT",
+                        "sheet1": "T3_AllUsers_TMP",
+                        "sheet2": "T3_FilesystemUserCounts_TMP"
+                    },
+                    {
+                        "joinColumns1": [
+                            "performed_by_user"
+                        ],
+                        "joinColumns2": [
+                            "performed_by_user"
+                        ],
+                        "joinType": "OUTER_LEFT",
+                        "sheet1": "T3_AllUsers_TMP",
+                        "sheet2": "T3_AnalyticsUserCounts_TMP"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "T3_AllUsers_TMP": [
+                        "performed_by_user"
+                    ],
+                    "T3_AnalyticsUserCounts_TMP": [
+                        "performed_by_user",
+                        "action_type",
+                        "Count"
+                    ],
+                    "T3_ExecutingUsers_TMP": [
+                        "executing_user",
+                        "Count"
+                    ],
+                    "T3_FailedUserLogins_TMP": [
+                        "performed_by_user",
+                        "action",
+                        "Count"
+                    ],
+                    "T3_FilesystemUserCounts_TMP": [
+                        "performed_by_user",
+                        "action_type",
+                        "Count"
+                    ],
+                    "T3_UserLogins_TMP": [
+                        "performed_by_user",
+                        "action",
+                        "Count"
+                    ]
+                }
+            },
+            "sheetId": "e30ee40e-a045-4405-8cc2-0758172c3b57",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "User",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Logins",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Failed_Logins",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Job_Executions",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Filesystem_Actions",
+                    "thousandSeparator": true,
+                    "width": 127
+                },
+                {
+                    "columnId": "5",
+                    "name": "Workbook_Actions",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "User",
+                    "formulaString": "=#T3_RawUserTable_TMP!T3_AllUsers_TMP.performed_by_user"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Logins",
+                    "formulaString": "=DENULLIFY(#T3_RawUserTable_TMP!T3_UserLogins_TMP.Count)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Failed_Logins",
+                    "formulaString": "=DENULLIFY(#T3_RawUserTable_TMP!T3_FailedUserLogins_TMP.Count)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Job_Executions",
+                    "formulaString": "=DENULLIFY(#T3_RawUserTable_TMP!T3_ExecutingUsers_TMP.Count)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Filesystem_Actions",
+                    "formulaString": "=DENULLIFY(#T3_RawUserTable_TMP!T3_FilesystemUserCounts_TMP.Count)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "Workbook_Actions",
+                    "formulaString": "=DENULLIFY(#T3_RawUserTable_TMP!T3_AnalyticsUserCounts_TMP.Count)"
+                }
+            ],
+            "keep": true,
+            "name": "T3_UserTable",
+            "nextColumnId": 7,
+            "sheetId": "56f62112-4fc0-4108-afa2-025de088bdb8",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "execution_job_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "execution_job_user",
+                    "formulaString": "=#user_action!execution_job_user"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "execution_id",
+                    "formulaString": "=#user_action!execution_id"
+                }
+            ],
+            "keep": true,
+            "name": "ExecutionJobUserXExecutionId",
+            "nextColumnId": 2,
+            "sheetId": "00580d02-9419-47f3-827e-998ae4b24d85",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "execution_job_user",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "execution_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "execution_job_user",
+                    "filterExpression": "NOT_BLANK",
+                    "type": "CONSTANT",
+                    "value": "null",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "Sheet1",
+            "filterTargetSheet": "Sheet1",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "execution_job_user",
+                    "formulaString": "=#ExecutionJobUserXExecutionId!execution_job_user"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "execution_id",
+                    "formulaString": "=#ExecutionJobUserXExecutionId!execution_id"
+                }
+            ],
+            "keep": true,
+            "name": "Sheet1",
+            "nextColumnId": 2,
+            "sheetId": "122e24fd-624a-4910-a841-460dbf27890d",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

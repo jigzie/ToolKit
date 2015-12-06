@@ -1,0 +1,3498 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "8dcf6616-2cc4-42dd-9ff1-3a99562f911f",
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/HealthCheck.wbk",
+    "description": "Health Check Workbook",
+    "name": "HealthCheck"
+  },
+  "pullType": "SCHEDULED",
+  "schedule": "0 4 * * 0-6",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.sampling.lookahahead.maxdepth\u003d5",
+  "sheets": [
+    {
+      "name": "DF",
+      "sheetId": "a91f8f35-7c97-4f9b-8352-d7a12b7e2a03",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/DF.lnk",
+        "uuid": "9de37459-2b1f-4f9d-8d24-e1e55f61c754"
+      },
+      "columnStyles": [
+        {
+          "columnId": "Extension",
+          "width": 170,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "DJC",
+      "sheetId": "dc798575-7e20-4503-ad2d-0768bac3c3ce",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/DJC.lnk",
+        "uuid": "0cbcbc3c-234a-41b2-831e-40104561c32c"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "DJE",
+      "sheetId": "2f0c7674-e3ec-4790-a870-e54ecff17bf9",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/DJE.lnk",
+        "uuid": "e49dedf7-407c-49bf-831e-03cadadc9238"
+      },
+      "columnStyles": [
+        {
+          "columnId": "JobData",
+          "width": 218,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "dummy",
+          "width": 615,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "ExecHadoopProps",
+          "width": 326,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Perm",
+      "sheetId": "85b3a014-7297-4ab7-bb5a-2b492986643e",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/Perm.lnk",
+        "uuid": "8d44ae5e-e45d-43ec-9d71-c9b29e9454a6"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "WC",
+      "sheetId": "a0770e0c-6be2-4604-93ff-7f827a7b1da4",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/WC.lnk",
+        "uuid": "dab6bbf6-c0f7-479c-8e8e-3a41c1d1f634"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Sht",
+      "sheetId": "202ad6c9-be76-4a6c-b422-a087b2442669",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/Sht.lnk",
+        "uuid": "80de1de8-9a67-4d90-ac24-159d05d49cba"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "User",
+      "sheetId": "82274549-f121-4d50-b462-d34eef60a24c",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/User.lnk",
+        "uuid": "8b6ae2a4-a0e2-49e6-aec2-f550a7ec385b"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "JoinedJobData",
+      "sheetId": "bdc6c24c-0c26-44cf-b4d8-c6e2e232a930",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "MULTI_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "DF",
+            "sheet2": "DJC",
+            "joinColumns1": [
+              "DapFileId"
+            ],
+            "joinColumns2": [
+              "dap_file__id"
+            ]
+          },
+          {
+            "joinType": "OUTER_LEFT",
+            "sheet1": "DJC",
+            "sheet2": "DJE",
+            "joinColumns1": [
+              "DapJobConfigId"
+            ],
+            "joinColumns2": [
+              "dap_job_configuration__id"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "DF",
+            "sheet2": "Perm",
+            "joinColumns1": [
+              "permission_fk"
+            ],
+            "joinColumns2": [
+              "PermissionId"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "DJC": [
+            "DapJobConfigId",
+            "DataSize",
+            "ConfigHadoopProps",
+            "KeepCount"
+          ],
+          "DF": [
+            "DapFileId",
+            "Name",
+            "Description",
+            "Mode",
+            "Extension",
+            "CreationDate",
+            "ModifiedDate",
+            "LastRunDate"
+          ],
+          "DJE": [
+            "DapJobExecId",
+            "ExecHadoopProps",
+            "JobData",
+            "StartTime",
+            "StopTime",
+            "User",
+            "Exception",
+            "JobStatusId",
+            "Status",
+            "TriggerId",
+            "TriggerType"
+          ],
+          "Perm": [
+            "PermissionId",
+            "Owner",
+            "OtherPermissionBit"
+          ]
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "JJDFilter",
+      "sheetId": "314b0be9-2e5d-4af8-a149-d5026b25642f",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "JoinedJobData",
+      "filterTargetSheet": "JJDFilter",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "DF.Mode",
+          "filterExpression": "TEXT_NOT_EQUALS",
+          "value": "TEMPORARY",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "JJDCalc_S",
+      "sheetId": "88a34136-b016-4a85-b4a4-d725a6ad5c5d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "DapFileId",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#JJDFilter!DF.DapFileId"
+        },
+        {
+          "columnName": "Name",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#JJDFilter!DF.Name"
+        },
+        {
+          "columnName": "Description",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#JJDFilter!DF.Description"
+        },
+        {
+          "columnName": "DF.Mode",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#JJDFilter!DF.Mode"
+        },
+        {
+          "columnName": "Extension",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dSUBSTR(#JJDFilter!DF.Extension;0;INDEX(#JJDFilter!DF.Extension; \"_EXTENSION\"))"
+        },
+        {
+          "columnName": "CreationDate",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#JJDFilter!DF.CreationDate"
+        },
+        {
+          "columnName": "ModifiedDate",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#JJDFilter!DF.ModifiedDate"
+        },
+        {
+          "columnName": "LastRunDate",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#JJDFilter!DF.LastRunDate"
+        },
+        {
+          "columnName": "DJC.DapJobConfigId",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#JJDFilter!DJC.DapJobConfigId"
+        },
+        {
+          "columnName": "DataSize",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#JJDFilter!DJC.DataSize"
+        },
+        {
+          "columnName": "DJC.ConfigHadoopProps",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#JJDFilter!DJC.ConfigHadoopProps"
+        },
+        {
+          "columnName": "KeepCount",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#JJDFilter!DJC.KeepCount"
+        },
+        {
+          "columnName": "DapJobExecId",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#JJDFilter!DJE.DapJobExecId"
+        },
+        {
+          "columnName": "DJE.ExecHadoopProps",
+          "columnId": "13",
+          "columnIndex": 13,
+          "formulaString": "\u003d#JJDFilter!DJE.ExecHadoopProps"
+        },
+        {
+          "columnName": "DJE.JobData",
+          "columnId": "14",
+          "columnIndex": 14,
+          "formulaString": "\u003d#JJDFilter!DJE.JobData"
+        },
+        {
+          "columnName": "StartTime",
+          "columnId": "15",
+          "columnIndex": 15,
+          "formulaString": "\u003d#JJDFilter!DJE.StartTime"
+        },
+        {
+          "columnName": "StopTime",
+          "columnId": "16",
+          "columnIndex": 16,
+          "formulaString": "\u003d#JJDFilter!DJE.StopTime"
+        },
+        {
+          "columnName": "User",
+          "columnId": "17",
+          "columnIndex": 17,
+          "formulaString": "\u003dIF(#JJDFilter!DJE.User\u003d\u003dnull;\"Unknown\";#JJDFilter!DJE.User)"
+        },
+        {
+          "columnName": "Exception",
+          "columnId": "18",
+          "columnIndex": 18,
+          "formulaString": "\u003d#JJDFilter!DJE.Exception"
+        },
+        {
+          "columnName": "PermissionId",
+          "columnId": "19",
+          "columnIndex": 19,
+          "formulaString": "\u003d#JJDFilter!Perm.PermissionId"
+        },
+        {
+          "columnName": "Owner",
+          "columnId": "20",
+          "columnIndex": 20,
+          "formulaString": "\u003d#JJDFilter!Perm.Owner"
+        },
+        {
+          "columnName": "OtherPermissionBit",
+          "columnId": "21",
+          "columnIndex": 21,
+          "formulaString": "\u003d#JJDFilter!Perm.OtherPermissionBit"
+        },
+        {
+          "columnName": "JobStatusId",
+          "columnId": "22",
+          "columnIndex": 22,
+          "formulaString": "\u003d#JJDFilter!DJE.JobStatusId"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "23",
+          "columnIndex": 23,
+          "formulaString": "\u003d#JJDFilter!DJE.Status"
+        },
+        {
+          "columnName": "Trig.TriggerId",
+          "columnId": "24",
+          "columnIndex": 24,
+          "formulaString": "\u003d#JJDFilter!DJE.TriggerId"
+        },
+        {
+          "columnName": "Trig.TriggerType",
+          "columnId": "25",
+          "columnIndex": 25,
+          "formulaString": "\u003d#JJDFilter!DJE.TriggerType"
+        },
+        {
+          "columnName": "RunTime",
+          "columnId": "27",
+          "columnIndex": 26,
+          "formulaString": "\u003dIF((#JJDCalc_S!Status!\u003dnull)\u0026\u0026CONTAINS(#JJDCalc_S!Status;\"COMPLETED\");(INT(#JJDCalc_S!StopTime)-INT(#JJDCalc_S!StartTime))/(1000*60);-1)"
+        },
+        {
+          "columnName": "Last7Days",
+          "columnId": "30",
+          "columnIndex": 27,
+          "formulaString": "\u003dOR(LE(INT(NOW())-(7*24*3600000);INT(#JJDCalc_S!StartTime));LE(INT(NOW())-(7*24*3600000);INT(#JJDCalc_S!StartTime)))"
+        },
+        {
+          "columnName": "Last30Days",
+          "columnId": "32",
+          "columnIndex": 28,
+          "formulaString": "\u003dOR(LE(INT(NOW())-(30*24*3600000);INT(#JJDCalc_S!StartTime));LE(INT(NOW())-(30*24*3600000);INT(#JJDCalc_S!StartTime)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "DapFileId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Description",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "DF.Mode",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Extension",
+          "width": 159,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "CreationDate",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "ModifiedDate",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "LastRunDate",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "DJC.DapJobConfigId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "DataSize",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "DJC.ConfigHadoopProps",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "KeepCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "DapJobExecId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "13",
+          "name": "DJE.ExecHadoopProps",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "14",
+          "name": "DJE.JobData",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "StartTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "StopTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "17",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "18",
+          "name": "Exception",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "19",
+          "name": "PermissionId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "20",
+          "name": "Owner",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "21",
+          "name": "OtherPermissionBit",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "22",
+          "name": "JobStatusId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "23",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "24",
+          "name": "Trig.TriggerId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "25",
+          "name": "Trig.TriggerType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "27",
+          "name": "RunTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "30",
+          "name": "Last7Days",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "32",
+          "name": "Last30Days",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 42
+    },
+    {
+      "name": "JobExeFilter",
+      "sheetId": "958c1d05-3c69-4a88-8352-4e8f26cd7b11",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": true,
+      "filterSourceSheet": "JJDCalc_S",
+      "filterTargetSheet": "JobExeFilter",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "DapJobExecId",
+          "filterExpression": "NOT_EMPTY",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "ECAll",
+      "sheetId": "448fc12a-0024-44f8-be29-b250c90f5325",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "JJDCalc_S",
+      "filterTargetSheet": "ECAll",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Status",
+          "filterExpression": "MATCHES",
+          "value": "CANCELLED|ERROR",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "ECAllGroup",
+      "sheetId": "29e70fe2-f6d9-430f-a814-18593a1127c9",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#ECAll!Name)"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#ECAll!Status)"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPFIRST(#ECAll!Extension;#ECAll!Extension)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "2",
+          "name": "Type",
+          "width": 117,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 121,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "ECAllNorm",
+      "sheetId": "7c51e4b2-b836-4be6-861b-1c3fd6f6c573",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "2",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#ECAllGroup!Name)"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "4",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPFIRST(#ECAllGroup!Type;#ECAllGroup!Type)"
+        },
+        {
+          "columnName": "Cancelled",
+          "columnId": "1",
+          "columnIndex": 2,
+          "formulaString": "\u003dif(GROUPFIRST(#ECAllGroup!Status;#ECAllGroup!Status)\u003d\u003d\"CANCELLED\"; GROUPFIRST(#ECAllGroup!Count;#ECAllGroup!Status);if(GROUPLAST(#ECAllGroup!Status;#ECAllGroup!Status)\u003d\u003d\"CANCELLED\"; GROUPLAST(#ECAllGroup!Count;#ECAllGroup!Status);0))"
+        },
+        {
+          "columnName": "Error",
+          "columnId": "6",
+          "columnIndex": 3,
+          "formulaString": "\u003dif(GROUPFIRST(#ECAllGroup!Status;#ECAllGroup!Status)\u003d\u003d\"ERROR\"; GROUPFIRST(#ECAllGroup!Count;#ECAllGroup!Status);if(GROUPLAST(#ECAllGroup!Status;#ECAllGroup!Status)\u003d\u003d\"ERROR\"; GROUPLAST(#ECAllGroup!Count;#ECAllGroup!Status);0))"
+        },
+        {
+          "columnName": "Sum",
+          "columnId": "8",
+          "columnIndex": 4,
+          "formulaString": "\u003d#ECAllNorm!Cancelled+#ECAllNorm!Error"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "Cancelled",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "Error",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Sum",
+          "width": 101,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 12
+    },
+    {
+      "name": "ECAllNorm_S",
+      "sheetId": "8e9bf3c6-b6af-44d6-a748-88fe48a5cab5",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "ECAllNorm",
+      "sortTargetSheet": "ECAllNorm_S",
+      "sortKeys": [
+        {
+          "column": "Sum",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "EC30",
+      "sheetId": "6aba6524-95f4-4f11-a7fa-4bfd47ec6193",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "ECAll",
+      "filterTargetSheet": "EC30",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Last30Days",
+          "filterExpression": "TRUE",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "EC30Group",
+      "sheetId": "4a7a85f3-37bf-4def-ad7f-42d69d7a4d8d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#EC30!Name)"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#EC30!Status)"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPFIRST(#EC30!Extension;#EC30!Extension)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "4",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "EC30Norm",
+      "sheetId": "9a18e2ba-7f2a-4a36-8378-c3e2516962cf",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#EC30Group!Name)"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPFIRST(#EC30Group!Type;#EC30Group!Type)"
+        },
+        {
+          "columnName": "Cancelled",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dif(GROUPFIRST(#EC30Group!Status;#EC30Group!Status)\u003d\u003d\"CANCELLED\"; GROUPFIRST(#EC30Group!Count;#EC30Group!Status);if(GROUPLAST(#EC30Group!Status;#EC30Group!Status)\u003d\u003d\"CANCELLED\"; GROUPLAST(#EC30Group!Count;#EC30Group!Status);0))"
+        },
+        {
+          "columnName": "Error",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003dif(GROUPFIRST(#EC30Group!Status;#EC30Group!Status)\u003d\u003d\"ERROR\"; GROUPFIRST(#EC30Group!Count;#EC30Group!Status);if(GROUPLAST(#EC30Group!Status;#EC30Group!Status)\u003d\u003d\"ERROR\"; GROUPLAST(#EC30Group!Count;#EC30Group!Status);0))"
+        },
+        {
+          "columnName": "Sum",
+          "columnId": "7",
+          "columnIndex": 4,
+          "formulaString": "\u003dSUM(#EC30Norm!Cancelled;#EC30Norm!Error)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Cancelled",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Error",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Sum",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 8
+    },
+    {
+      "name": "EC7",
+      "sheetId": "2388f00a-abdf-4a6f-84f5-4306f9b55c1c",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "ECAll",
+      "filterTargetSheet": "EC7",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Last7Days",
+          "filterExpression": "TRUE",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "EC7Group",
+      "sheetId": "d669e580-9092-4910-b7eb-28add8ef02b1",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#EC7!Name)"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#EC7!Status)"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPFIRST(#EC7!Extension;#EC7!Extension)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "4",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "EC7Norm",
+      "sheetId": "7e981c29-95ac-4a29-842c-72512fac6e71",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#EC7Group!Name)"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPFIRST(#EC7Group!Type;#EC7Group!Type)"
+        },
+        {
+          "columnName": "Cancelled",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dif(GROUPFIRST(#EC7Group!Status;#EC7Group!Status)\u003d\u003d\"CANCELLED\"; GROUPFIRST(#EC7Group!Count;#EC7Group!Status);if(GROUPLAST(#EC7Group!Status;#EC7Group!Status)\u003d\u003d\"CANCELLED\"; GROUPLAST(#EC7Group!Count;#EC7Group!Status);0))"
+        },
+        {
+          "columnName": "Error",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003dif(GROUPFIRST(#EC7Group!Status;#EC7Group!Status)\u003d\u003d\"ERROR\"; GROUPFIRST(#EC7Group!Count;#EC7Group!Status);if(GROUPLAST(#EC7Group!Status;#EC7Group!Status)\u003d\u003d\"ERROR\"; GROUPLAST(#EC7Group!Count;#EC7Group!Status);0))"
+        },
+        {
+          "columnName": "Sum",
+          "columnId": "7",
+          "columnIndex": 4,
+          "formulaString": "\u003dSUM(#EC7Norm!Cancelled;#EC7Norm!Error)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "5",
+          "name": "Error",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Cancelled",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Sum",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 8
+    },
+    {
+      "name": "OwnExeCount",
+      "sheetId": "cf64534e-d114-46ef-8a1a-44ee260df0e5",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#JJDCalc_S!Name)"
+        },
+        {
+          "columnName": "Owner",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#JJDCalc_S!Owner)"
+        },
+        {
+          "columnName": "User",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPBY(#JJDCalc_S!User)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "4",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Owner",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 11
+    },
+    {
+      "name": "NotOwnExeCount",
+      "sheetId": "1f0f3490-ad22-4a11-b7d6-9810ed1c8ef4",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "OwnExeCount",
+      "filterTargetSheet": "NotOwnExeCount",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Owner",
+          "filterExpression": "TEXT_NOT_EQUALS",
+          "value": "User",
+          "valueStatic": false,
+          "type": "COLUMN"
+        },
+        {
+          "column": "User",
+          "filterExpression": "NOT_EMPTY",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "NotOwnExeCountFilter_S",
+      "sheetId": "0362b052-abcf-46a3-96be-ff91c8cd41c6",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "NotOwnExeCount",
+      "sortTargetSheet": "NotOwnExeCountFilter_S",
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "JobExeInfo",
+      "sheetId": "9d2ef935-0545-429b-b45b-33401bafac2f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#JobExeFilter!Name)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "16",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "Owner",
+          "columnId": "53",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPFIRST(#JobExeFilter!Owner;#JobExeFilter!Owner)"
+        },
+        {
+          "columnName": "DataSize",
+          "columnId": "54",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPMAX(#JobExeFilter!DataSize)"
+        },
+        {
+          "columnName": "DataTotal",
+          "columnId": "66",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPSUM(#JobExeFilter!DataSize)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 163,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "53",
+          "name": "Owner",
+          "width": 186,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "54",
+          "name": "DataSize",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "66",
+          "name": "DataTotal",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 67
+    },
+    {
+      "name": "JobExeCountByStatus_S",
+      "sheetId": "46bfbac7-bd93-4bfd-ae15-1c1854f6fbd0",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "Status",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#JobExeFilter!Status)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "0",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    },
+    {
+      "name": "JobExeCount100_S",
+      "sheetId": "2a42b2f3-10ab-4503-99ea-054d91156142",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "JobExeInfo",
+      "sortTargetSheet": "JobExeCount100_S",
+      "topN": 100,
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "JobExeSize100_S",
+      "sheetId": "b078357f-2f4e-46ca-8206-ba21975f35d8",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "JobExeInfo",
+      "sortTargetSheet": "JobExeSize100_S",
+      "topN": 100,
+      "sortKeys": [
+        {
+          "column": "DataSize",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "DatasetKept",
+      "sheetId": "b9cfc4a5-63b0-4de8-950f-c9a1e85918c4",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "JJDCalc_S",
+      "filterTargetSheet": "DatasetKept",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "KeepCount",
+          "filterExpression": "GREATER_EQUALS",
+          "value": "2",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "DatasetKeptGroup",
+      "sheetId": "036ac5ad-6667-41ea-b8ec-4111210156e6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#DatasetKept!Name)"
+        },
+        {
+          "columnName": "Id",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#DatasetKept!DapFileId)"
+        },
+        {
+          "columnName": "Number",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPFIRST(#DatasetKept!KeepCount;#DatasetKept!KeepCount)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Number",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "DatasetKeptSort_S",
+      "sheetId": "b82b0bfd-3b0a-4337-b934-8ada2ae83fbb",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "DatasetKeptGroup",
+      "sortTargetSheet": "DatasetKeptSort_S",
+      "sortKeys": [
+        {
+          "column": "Number",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "TypeJobCExeC_S",
+      "sheetId": "062b91e1-7de5-43d3-99e5-6c7f6e893301",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "Type",
+          "columnId": "2",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#JJDCalc_S!Extension)"
+        },
+        {
+          "columnName": "JobCount",
+          "columnId": "3",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#JJDCalc_S!DapFileId)"
+        },
+        {
+          "columnName": "ExeCount",
+          "columnId": "5",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "2",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "JobCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "ExeCount",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 11
+    },
+    {
+      "name": "UserTypeJobCExeC",
+      "sheetId": "f6b0bf25-0471-448a-8633-9b26165039a5",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "User",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#JobExeFilter!User)"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#JobExeFilter!Extension)"
+        },
+        {
+          "columnName": "JobCount",
+          "columnId": "6",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#JobExeFilter!Name)"
+        },
+        {
+          "columnName": "ExeCount",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "ExJob",
+          "columnId": "40",
+          "columnIndex": 4,
+          "formulaString": "\u003dIF(#Type\u003d\u003d\"EXPORT_JOB\";#UserTypeJobCExeC!JobCount;0)"
+        },
+        {
+          "columnName": "ImJob",
+          "columnId": "43",
+          "columnIndex": 5,
+          "formulaString": "\u003dIF(#Type\u003d\u003d\"IMPORT_JOB\";#UserTypeJobCExeC!JobCount;0)"
+        },
+        {
+          "columnName": "LiJob",
+          "columnId": "45",
+          "columnIndex": 6,
+          "formulaString": "\u003dIF(#Type\u003d\u003d\"IMPORT_LINK_JOB\";#UserTypeJobCExeC!JobCount;0)"
+        },
+        {
+          "columnName": "UpJob",
+          "columnId": "47",
+          "columnIndex": 7,
+          "formulaString": "\u003dIF(#Type\u003d\u003d\"UPLOAD_JOB\";#UserTypeJobCExeC!JobCount;0)"
+        },
+        {
+          "columnName": "WbJob",
+          "columnId": "49",
+          "columnIndex": 8,
+          "formulaString": "\u003dIF(#Type\u003d\u003d\"WORKBOOK\";#UserTypeJobCExeC!JobCount;0)"
+        },
+        {
+          "columnName": "ExExe",
+          "columnId": "52",
+          "columnIndex": 9,
+          "formulaString": "\u003dIF(#Type\u003d\u003d\"EXPORT_JOB\";#UserTypeJobCExeC!ExeCount;0)"
+        },
+        {
+          "columnName": "ImExe",
+          "columnId": "54",
+          "columnIndex": 10,
+          "formulaString": "\u003dIF(#Type\u003d\u003d\"IMPORT_JOB\";#UserTypeJobCExeC!ExeCount;0)"
+        },
+        {
+          "columnName": "LiExe",
+          "columnId": "56",
+          "columnIndex": 11,
+          "formulaString": "\u003dIF(#Type\u003d\u003d\"IMPORT_LINK_JOB\";#UserTypeJobCExeC!ExeCount;0)"
+        },
+        {
+          "columnName": "UpExe",
+          "columnId": "58",
+          "columnIndex": 12,
+          "formulaString": "\u003dIF(#Type\u003d\u003d\"UPLOAD_JOB\";#UserTypeJobCExeC!ExeCount;0)"
+        },
+        {
+          "columnName": "WbExe",
+          "columnId": "60",
+          "columnIndex": 13,
+          "formulaString": "\u003dIF(#Type\u003d\u003d\"WORKBOOK\";#UserTypeJobCExeC!ExeCount;0)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "JobCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "ExeCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "40",
+          "name": "ExJob",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "43",
+          "name": "ImJob",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "45",
+          "name": "LiJob",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "47",
+          "name": "UpJob",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "49",
+          "name": "WbJob",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "52",
+          "name": "ExExe",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "54",
+          "name": "ImExe",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "56",
+          "name": "LiExe",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "58",
+          "name": "UpExe",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "60",
+          "name": "WbExe",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 62
+    },
+    {
+      "name": "UserTypeJobCExeCPivot",
+      "sheetId": "e8023d71-cb8c-45d0-b43a-832b6a96ee00",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "User",
+          "columnId": "14",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#UserTypeJobCExeC!User)"
+        },
+        {
+          "columnName": "ExportJobCount",
+          "columnId": "15",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMAX(#UserTypeJobCExeC!ExJob)"
+        },
+        {
+          "columnName": "ImportJobCount",
+          "columnId": "17",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#UserTypeJobCExeC!ImJob)"
+        },
+        {
+          "columnName": "LinkedJobCount",
+          "columnId": "19",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPMAX(#UserTypeJobCExeC!LiJob)"
+        },
+        {
+          "columnName": "UploadJobCount",
+          "columnId": "21",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPMAX(#UserTypeJobCExeC!UpJob)"
+        },
+        {
+          "columnName": "WbJobCount",
+          "columnId": "23",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPMAX(#UserTypeJobCExeC!WbJob)"
+        },
+        {
+          "columnName": "ExportRunCount",
+          "columnId": "25",
+          "columnIndex": 6,
+          "formulaString": "\u003dGROUPMAX(#UserTypeJobCExeC!ExExe)"
+        },
+        {
+          "columnName": "ImportRunCount",
+          "columnId": "27",
+          "columnIndex": 7,
+          "formulaString": "\u003dGROUPMAX(#UserTypeJobCExeC!ImExe)"
+        },
+        {
+          "columnName": "LinkedRunCount",
+          "columnId": "29",
+          "columnIndex": 8,
+          "formulaString": "\u003dGROUPMAX(#UserTypeJobCExeC!LiExe)"
+        },
+        {
+          "columnName": "UploadRunCount",
+          "columnId": "31",
+          "columnIndex": 9,
+          "formulaString": "\u003dGROUPMAX(#UserTypeJobCExeC!UpExe)"
+        },
+        {
+          "columnName": "WbRunCount",
+          "columnId": "33",
+          "columnIndex": 10,
+          "formulaString": "\u003dGROUPMAX(#UserTypeJobCExeC!WbExe)"
+        },
+        {
+          "columnName": "JobCountTotal",
+          "columnId": "34",
+          "columnIndex": 11,
+          "formulaString": "\u003dGROUPSUM(#UserTypeJobCExeC!JobCount)"
+        },
+        {
+          "columnName": "ExeCountTotal",
+          "columnId": "36",
+          "columnIndex": 12,
+          "formulaString": "\u003dGROUPSUM(#UserTypeJobCExeC!ExeCount)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "14",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "ExportJobCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "17",
+          "name": "ImportJobCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "19",
+          "name": "LinkedJobCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "21",
+          "name": "UploadJobCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "23",
+          "name": "WbJobCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "25",
+          "name": "ExportRunCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "27",
+          "name": "ImportRunCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "29",
+          "name": "LinkedRunCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "31",
+          "name": "UploadRunCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "33",
+          "name": "WbRunCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "34",
+          "name": "JobCountTotal",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "36",
+          "name": "ExeCountTotal",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 37
+    },
+    {
+      "name": "UserTypeJobCountSort_S",
+      "sheetId": "3933345a-fe04-4376-8852-a866dc1af092",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "UserTypeJobCExeCPivot",
+      "sortTargetSheet": "UserTypeJobCountSort_S",
+      "sortKeys": [
+        {
+          "column": "JobCountTotal",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "UserTypeExeCountSort_S",
+      "sheetId": "f28ae653-c1d1-4930-84ab-9962df973ac2",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "UserTypeJobCExeCPivot",
+      "sortTargetSheet": "UserTypeExeCountSort_S",
+      "sortKeys": [
+        {
+          "column": "ExeCountTotal",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "UserJobCount",
+      "sheetId": "ed0e93c0-234a-4cee-b25a-a0ed3dca8722",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "User",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#JobExeFilter!User)"
+        },
+        {
+          "columnName": "Job",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#JobExeFilter!Name)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Job",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "UserJobCount100_S",
+      "sheetId": "3c984e9f-6f40-4a47-92c5-825d3e1e87b2",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "UserJobCount",
+      "sortTargetSheet": "UserJobCount100_S",
+      "topN": 100,
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "JoinWB",
+      "sheetId": "94bc7974-0254-48dd-aaa8-15f137039a19",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "MULTI_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "WC",
+            "sheet2": "DJC",
+            "joinColumns1": [
+              "WbConfigId"
+            ],
+            "joinColumns2": [
+              "DapJobConfigId"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "DJC",
+            "sheet2": "DF",
+            "joinColumns1": [
+              "dap_file__id"
+            ],
+            "joinColumns2": [
+              "DapFileId"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "WC",
+            "sheet2": "Sht",
+            "joinColumns1": [
+              "WbConfigId"
+            ],
+            "joinColumns2": [
+              "workbook_fk"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "WC",
+            "sheet2": "Perm",
+            "joinColumns1": [
+              "full_data_permission_fk"
+            ],
+            "joinColumns2": [
+              "PermissionId"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "WC": [
+            "WbConfigId"
+          ],
+          "DJC": [
+            "DataSize",
+            "ConfigHadoopProps",
+            "KeepCount"
+          ],
+          "DF": [
+            "DapFileId",
+            "Name",
+            "Description",
+            "Mode",
+            "Extension",
+            "CreationDate",
+            "ModifiedDate",
+            "LastRunDate",
+            "permission_fk"
+          ],
+          "Sht": [
+            "SheetId",
+            "Name",
+            "Keep"
+          ],
+          "Perm": [
+            "PermissionId",
+            "Owner",
+            "OtherPermissionBit"
+          ]
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "WBSaved",
+      "sheetId": "c0e5aa46-0764-47fb-b9f4-75699386b4e4",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#JoinWB!DF.Name)"
+        },
+        {
+          "columnName": "Saved",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#JoinWB!Sht.Keep)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "WBId",
+          "columnId": "4",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPBY(#JoinWB!WC.WbConfigId)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Saved",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "WBId",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    },
+    {
+      "name": "WBSavedPivot",
+      "sheetId": "a4ffc169-01c4-4dbd-9c41-144449aa7beb",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#WBSaved!Name)"
+        },
+        {
+          "columnName": "Saved",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dif(GROUPFIRST(#WBSaved!Saved;#WBSaved!Saved)\u003d\u003dtrue; GROUPFIRST(#WBSaved!Count;#WBSaved!Saved);if(GROUPLAST(#WBSaved!Saved;#WBSaved!Saved)\u003d\u003dtrue; GROUPLAST(#WBSaved!Count;#WBSaved!Saved);0))"
+        },
+        {
+          "columnName": "Discarded",
+          "columnId": "5",
+          "columnIndex": 2,
+          "formulaString": "\u003dif(GROUPFIRST(#WBSaved!Saved;#WBSaved!Saved)\u003d\u003dfalse; GROUPFIRST(#WBSaved!Count;#WBSaved!Saved);if(GROUPLAST(#WBSaved!Saved;#WBSaved!Saved)\u003d\u003dfalse; GROUPLAST(#WBSaved!Count;#WBSaved!Saved);0))"
+        },
+        {
+          "columnName": "WBId",
+          "columnId": "10",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPBY(#WBSaved!WBId)"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "12",
+          "columnIndex": 4,
+          "formulaString": "\u003dSUM(#WBSavedPivot!Saved;#WBSavedPivot!Discarded)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Saved",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Discarded",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "WBId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "WBSavedPivotSort_S",
+      "sheetId": "548a2ffc-f781-49b0-90a1-8aebb3b99391",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "WBSavedPivot",
+      "sortTargetSheet": "WBSavedPivotSort_S",
+      "sortKeys": [
+        {
+          "column": "Total",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "HasRuntime",
+      "sheetId": "429944e6-539b-4554-91da-294edc7a35ba",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "JobExeFilter",
+      "filterTargetSheet": "HasRuntime",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "StartTime",
+          "filterExpression": "NOT_EMPTY",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "StopTime",
+          "filterExpression": "NOT_EMPTY",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "RunTime",
+          "filterExpression": "GREATER_EQUALS",
+          "value": "0",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "JobStartLength",
+      "sheetId": "6080756c-77e1-4df5-857f-2790c348c300",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "RealStartTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#HasRuntime!StartTime"
+        },
+        {
+          "columnName": "RunTime",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#HasRuntime!RunTime"
+        },
+        {
+          "columnName": "HourStartTime",
+          "columnId": "7",
+          "columnIndex": 2,
+          "formulaString": "\u003dASDATE(FORMATDATE(#JobStartLength!RealStartTime;\"MMM dd, yyyy 00:00:00\");\"MMM dd, yyyy HH:mm:ss\")"
+        },
+        {
+          "columnName": "Name",
+          "columnId": "33",
+          "columnIndex": 3,
+          "formulaString": "\u003d#HasRuntime!Name"
+        },
+        {
+          "columnName": "Hour",
+          "columnId": "16",
+          "columnIndex": 4,
+          "formulaString": "\u003dHOUR(#JobStartLength!RealStartTime)"
+        },
+        {
+          "columnName": "DayOfWeek",
+          "columnId": "24",
+          "columnIndex": 5,
+          "formulaString": "\u003dFORMATDATE(#JobStartLength!RealStartTime;\"EEEEEE\")"
+        },
+        {
+          "columnName": "HourMin",
+          "columnId": "31",
+          "columnIndex": 6,
+          "formulaString": "\u003dHOUR(#JobStartLength!RealStartTime)+(MINUTE(#JobStartLength!RealStartTime)/60)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "RealStartTime",
+          "width": 155,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "RunTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "HourStartTime",
+          "width": 162,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "Hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "24",
+          "name": "DayOfWeek",
+          "width": 101,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "31",
+          "name": "HourMin",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "33",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 35
+    },
+    {
+      "name": "H",
+      "sheetId": "891215ee-d82a-4dcc-9623-b3f780427431",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/H.upl",
+        "uuid": "4f21526a-5fc4-4840-8e01-d6ac354821ed"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "GroupByHour",
+      "sheetId": "7a7fec06-f2fc-4601-b661-822d9f92d26d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Hour",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#JobStartLength!Hour)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "GroupByHourJoin",
+      "sheetId": "1d73d57a-7f82-442d-81f7-9a0122bdf2d8",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "FULL_OUTER",
+            "sheet1": "GroupByHour",
+            "sheet2": "H",
+            "joinColumns1": [
+              "Hour"
+            ],
+            "joinColumns2": [
+              "hour"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "H": [
+            "hour"
+          ],
+          "GroupByHour": [
+            "Count"
+          ]
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "JobExeByHour",
+      "sheetId": "de94db23-3ba7-44a4-8f78-57126bd05549",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Hour",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#GroupByHourJoin!H.hour"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dIF(#GroupByHourJoin!GroupByHour.Count \u003d\u003dnull;0;#GroupByHourJoin!GroupByHour.Count)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "JobExeByHourSort_S",
+      "sheetId": "b15d6614-5da9-402a-be13-ea7117245a73",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "JobExeByHour",
+      "sortTargetSheet": "JobExeByHourSort_S",
+      "sortKeys": [
+        {
+          "column": "Hour",
+          "sortOrder": "ASC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "DoW",
+      "sheetId": "158dcf6616-2cc4-42dd-9ff1-3a99562f911fc96-8f22-4cd8-ae65-06a073c6ab6c",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/DoW.upl",
+        "uuid": "598cd8d6-9d92-4ae0-ba98-cd78beca74f5"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "JobStartDoW",
+      "sheetId": "b6b135c6-1370-4878-a7ac-8418bf799adf",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "OUTER_LEFT",
+            "sheet1": "JobStartLength",
+            "sheet2": "DoW",
+            "joinColumns1": [
+              "DayOfWeek"
+            ],
+            "joinColumns2": [
+              "Name"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "JobStartLength": [
+            "RealStartTime",
+            "RunTime",
+            "HourStartTime",
+            "Name",
+            "Hour",
+            "DayOfWeek",
+            "HourMin"
+          ],
+          "DoW": [
+            "DayId"
+          ]
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "JobStartDoWSort",
+      "sheetId": "140ddd3f-a91c-46e1-a369-4b5524e62853",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": false,
+      "sortSourceSheet": "JobStartDoW",
+      "sortTargetSheet": "JobStartDoWSort",
+      "sortKeys": [
+        {
+          "column": "JobStartLength.RealStartTime",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "dummy",
+          "width": 199,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "dummy",
+          "width": 187,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "JobDist_S",
+      "sheetId": "dc412f85-1f63-4000-b0b1-99f108ebf39f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "DayOfWeek",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#JobStartDoWSort!JobStartLength.DayOfWeek"
+        },
+        {
+          "columnName": "RealStartTime",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#JobStartDoWSort!JobStartLength.RealStartTime"
+        },
+        {
+          "columnName": "RunTime",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#JobStartDoWSort!JobStartLength.RunTime"
+        },
+        {
+          "columnName": "HourlyStartTime",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#JobStartDoWSort!JobStartLength.HourStartTime"
+        },
+        {
+          "columnName": "Name",
+          "columnId": "12",
+          "columnIndex": 4,
+          "formulaString": "\u003d#JobStartDoWSort!JobStartLength.Name"
+        },
+        {
+          "columnName": "Hour",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#JobStartDoWSort!JobStartLength.Hour"
+        },
+        {
+          "columnName": "HourMin",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#JobStartDoWSort!JobStartLength.HourMin"
+        },
+        {
+          "columnName": "DoW.DayId",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#JobStartDoWSort!DoW.DayId"
+        },
+        {
+          "columnName": "DoWHm",
+          "columnId": "9",
+          "columnIndex": 8,
+          "formulaString": "\u003d#JobDist_S!DoW.DayId+#JobDist_S!HourMin/24"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "DayOfWeek",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "RealStartTime",
+          "width": 174,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "RunTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "HourlyStartTime",
+          "width": 164,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "HourMin",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "DoW.DayId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "DoWHm",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "GP",
+      "sheetId": "9d1db7f5-2bc1-4a84-8d09-6b13ab656078",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer Scheduling/Resources/GP.lnk",
+        "uuid": "7fbc4b22-f063-40d4-8ac7-18a569d89493"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "DataFiles",
+      "sheetId": "de61a1b3-2fad-47f2-b1ee-21a199b6d110",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "DF",
+      "filterTargetSheet": "DataFiles",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Extension",
+          "filterExpression": "MATCHES",
+          "value": "UPLOAD_JOB_EXTENSION|IMPORT_JOB_EXTENSION|IMPORT_LINK_JOB_EXTENSION|EXPORT_JOB_EXTENSION|WORKBOOK_EXTENSION|DATA_STORE_EXTENSION",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "Extension",
+          "width": 160,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "UserAccess",
+      "sheetId": "121b3b29-0177-42d0-9dfc-b7876f50bd20",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "MULTI_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "DataFiles",
+            "sheet2": "Perm",
+            "joinColumns1": [
+              "permission_fk"
+            ],
+            "joinColumns2": [
+              "PermissionId"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "Perm",
+            "sheet2": "GP",
+            "joinColumns1": [
+              "PermissionId"
+            ],
+            "joinColumns2": [
+              "PermissionId"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "GP",
+            "sheet2": "User",
+            "joinColumns1": [
+              "user_id"
+            ],
+            "joinColumns2": [
+              "UserId"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "Perm": [
+            "PermissionId",
+            "Owner",
+            "OtherPermissionBit"
+          ],
+          "DataFiles": [
+            "DapFileId",
+            "Name",
+            "Extension"
+          ],
+          "GP": [
+            "GroupPermId",
+            "GroupName",
+            "Permissions"
+          ],
+          "User": [
+            "UserId",
+            "User",
+            "Enabled"
+          ]
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "UserAccessCalc",
+      "sheetId": "cd2a08b6-03e0-4752-a735-7014f05c76be",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "DapFileId",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#UserAccess!DataFiles.DapFileId"
+        },
+        {
+          "columnName": "Name",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#UserAccess!DataFiles.Name"
+        },
+        {
+          "columnName": "Extension",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dSUBSTR(#UserAccess!DataFiles.Extension;0;INDEX(#UserAccess!DataFiles.Extension; \"_EXTENSION\"))"
+        },
+        {
+          "columnName": "PermissionId",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#UserAccess!Perm.PermissionId"
+        },
+        {
+          "columnName": "Owner",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#UserAccess!Perm.Owner"
+        },
+        {
+          "columnName": "OtherPermissionBit",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#UserAccess!Perm.OtherPermissionBit"
+        },
+        {
+          "columnName": "GroupPermId",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#UserAccess!GP.GroupPermId"
+        },
+        {
+          "columnName": "GroupName",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#UserAccess!GP.GroupName"
+        },
+        {
+          "columnName": "GroupPermissions",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#UserAccess!GP.Permissions"
+        },
+        {
+          "columnName": "User",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#UserAccess!User.User"
+        },
+        {
+          "columnName": "UserId",
+          "columnId": "12",
+          "columnIndex": 10,
+          "formulaString": "\u003d#UserAccess!User.UserId"
+        },
+        {
+          "columnName": "Enabled",
+          "columnId": "15",
+          "columnIndex": 11,
+          "formulaString": "\u003d#UserAccess!User.Enabled"
+        },
+        {
+          "columnName": "Read",
+          "columnId": "17",
+          "columnIndex": 12,
+          "formulaString": "\u003dif(MATCHES(#UserAccessCalc!GroupPermissions;\"R.*\")||MATCHES(#UserAccessCalc!OtherPermissionBit;\"R.*\");1;0)"
+        },
+        {
+          "columnName": "Write",
+          "columnId": "26",
+          "columnIndex": 13,
+          "formulaString": "\u003dIF(MATCHES(#UserAccessCalc!GroupPermissions;\".W.\")||MATCHES(#UserAccessCalc!OtherPermissionBit;\".W.\");1;0)"
+        },
+        {
+          "columnName": "Execute",
+          "columnId": "25",
+          "columnIndex": 14,
+          "formulaString": "\u003dIF(MATCHES(#UserAccessCalc!GroupPermissions;\".*X\")||MATCHES(#UserAccessCalc!OtherPermissionBit;\".*X\");1;0)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "DapFileId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Extension",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "PermissionId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Owner",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "OtherPermissionBit",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "GroupPermId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "GroupName",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "GroupPermissions",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "UserId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "Enabled",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "17",
+          "name": "Read",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "26",
+          "name": "Write",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "25",
+          "name": "Execute",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 27
+    },
+    {
+      "name": "UserAccessFinal",
+      "sheetId": "a2e8a5fb-7963-466c-8888-cf0a30179a66",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "User",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#UserAccessCalc!User)"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "26",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPFIRST(#UserAccessCalc!Extension;#UserAccessCalc!Name)"
+        },
+        {
+          "columnName": "Name",
+          "columnId": "24",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPBY(#UserAccessCalc!Name)"
+        },
+        {
+          "columnName": "Read",
+          "columnId": "4",
+          "columnIndex": 3,
+          "formulaString": "\u003dIF(GROUPMAX(#UserAccessCalc!UserId)\u003e0;\"True\";\"False\")"
+        },
+        {
+          "columnName": "Write",
+          "columnId": "15",
+          "columnIndex": 4,
+          "formulaString": "\u003dIF(GROUPMAX(#UserAccessCalc!Write)\u003e0;\"True\";\"False\")"
+        },
+        {
+          "columnName": "Execute",
+          "columnId": "17",
+          "columnIndex": 5,
+          "formulaString": "\u003dIF(GROUPMAX(#UserAccessCalc!Read)\u003e0;\"True\";\"False\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Read",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "Write",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "17",
+          "name": "Execute",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "26",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "24",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 30
+    },
+    {
+      "name": "UserAccessFinalSort_S",
+      "sheetId": "2225b71a-8a44-44f8-aabc-c7b8985430e1",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "UserAccessFinal",
+      "sortTargetSheet": "UserAccessFinalSort_S",
+      "sortKeys": [
+        {
+          "column": "User",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "Type",
+          "sortOrder": "ASC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "GlobalPermission",
+      "sheetId": "a84a99f5-46e3-4212-9ef9-32ba4831072c",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "UserAccessCalc",
+      "filterTargetSheet": "GlobalPermission",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "OtherPermissionBit",
+          "filterExpression": "TEXT_NOT_EQUALS",
+          "value": "___",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "GlobalPermissionGroup",
+      "sheetId": "9e445372-46a7-4480-86d7-530c1f46f975",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#GlobalPermission!Name)"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPFIRST(#GlobalPermission!Extension;#GlobalPermission!Extension)"
+        },
+        {
+          "columnName": "Permission",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPFIRST(#GlobalPermission!OtherPermissionBit;#GlobalPermission!Extension)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Permission",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "GlobalPermGroupSort_S",
+      "sheetId": "4baa9823-981f-457b-8938-e8380b52ba1d",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "GlobalPermissionGroup",
+      "sortTargetSheet": "GlobalPermGroupSort_S",
+      "sortKeys": [
+        {
+          "column": "Type",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "Name",
+          "sortOrder": "ASC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "Exception30",
+      "sheetId": "c6921e03-68f1-4d5f-9299-8b7b7ba6189f",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "EC30",
+      "filterTargetSheet": "Exception30",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Exception",
+          "filterExpression": "NOT_EMPTY",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "EC30Norm_S",
+      "sheetId": "8dcb24a4-c5f0-4cc0-bf11-069ae4bd6a50",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "EC30Norm",
+      "sortTargetSheet": "EC30Norm_S",
+      "sortKeys": [
+        {
+          "column": "Sum",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "EC7Norm_S",
+      "sheetId": "1d311625-a52c-4d09-9669-80692733e302",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "EC7Norm",
+      "sortTargetSheet": "EC7Norm_S",
+      "sortKeys": [
+        {
+          "column": "Sum",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "Exception30_S",
+      "sheetId": "f5989b32-4242-46e8-a94e-bd7474fdb6ae",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Exception30!Name"
+        },
+        {
+          "columnName": "JobType",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Exception30!Extension"
+        },
+        {
+          "columnName": "Exception",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Exception30!Exception"
+        },
+        {
+          "columnName": "Owner",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Exception30!Owner"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Exception30!Status"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "JobType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Exception",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Owner",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "JobExeNMed",
+      "sheetId": "4f4172ee-177d-49e9-b605-3fe8b33e2dda",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "JobExeFilter",
+            "sheet2": "JobMedian",
+            "joinColumns1": [
+              "Name"
+            ],
+            "joinColumns2": [
+              "Name"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "JobExeFilter": [
+            "Name",
+            "StartTime",
+            "RunTime"
+          ],
+          "JobMedian": [
+            "Median"
+          ]
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "JobExeOverMedFilter",
+      "sheetId": "a8c86d2d-7a00-4024-99da-520c7d2624e6",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "JobExeNMed",
+      "filterTargetSheet": "JobExeOverMedFilter",
+      "filterArguments": [
+        {
+          "filterExpression": "FORMULA",
+          "value": "#JobExeNMed!JobExeFilter.RunTime \u003e #JobExeNMed!JobMedian.Median * 1.5 ",
+          "valueStatic": false,
+          "type": "ADVANCED_FORMULA"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "JobExeOverMed",
+      "sheetId": "e98beb5b-afb3-4e69-9949-7fda5c2c6081",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#JobExeOverMedFilter!JobExeFilter.Name"
+        },
+        {
+          "columnName": "StartTime",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#JobExeOverMedFilter!JobExeFilter.StartTime"
+        },
+        {
+          "columnName": "RunTime",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#JobExeOverMedFilter!JobExeFilter.RunTime"
+        },
+        {
+          "columnName": "Median",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#JobExeOverMedFilter!JobMedian.Median"
+        },
+        {
+          "columnName": "PercentOver",
+          "columnId": "5",
+          "columnIndex": 4,
+          "formulaString": "\u003dROUND((#RunTime-#Median)*100/#Median)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "StartTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "RunTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Median",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "PercentOver",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 11
+    },
+    {
+      "name": "JobExeOverMedSort_S",
+      "sheetId": "10af6799-17cb-4207-8e9e-0334aa2f6eba",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "JobExeOverMed",
+      "sortTargetSheet": "JobExeOverMedSort_S",
+      "sortKeys": [
+        {
+          "column": "RunTime",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "width": 199,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Users_S",
+      "sheetId": "095f915f-2ba1-47ee-8fec-cd48d9028dc8",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "UserId",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#User!UserId"
+        },
+        {
+          "columnName": "User",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#User!User"
+        },
+        {
+          "columnName": "Enabled",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#User!Enabled"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "UserId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Enabled",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    },
+    {
+      "name": "JobsNotRan",
+      "sheetId": "6d731a3e-2770-4ad7-9a1b-479558f9cf3d",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": false,
+      "filterSourceSheet": "JJDCalc_S",
+      "filterTargetSheet": "JobsNotRan",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "LastRunDate",
+          "filterExpression": "EMPTY",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "JobNotRanSort",
+      "sheetId": "f4e0bf7d-4a5e-4510-bbd9-99d791d63afb",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": false,
+      "sortSourceSheet": "JobsNotRan",
+      "sortTargetSheet": "JobNotRanSort",
+      "sortKeys": [
+        {
+          "column": "CreationDate",
+          "sortOrder": "ASC"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "5",
+          "width": 196,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "dummy",
+          "width": 127,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "JobNotRan_S",
+      "sheetId": "7aab4400-d5bc-4d25-b474-67b6b089f043",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "DapFileId",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#JobNotRanSort!DapFileId"
+        },
+        {
+          "columnName": "Name",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#JobNotRanSort!Name"
+        },
+        {
+          "columnName": "Extension",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#JobNotRanSort!Extension"
+        },
+        {
+          "columnName": "CreationDate",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#JobNotRanSort!CreationDate"
+        },
+        {
+          "columnName": "Owner",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#JobNotRanSort!Owner"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "DapFileId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Name",
+          "width": 113,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Extension",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "CreationDate",
+          "width": 196,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Owner",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "JobMedian",
+      "sheetId": "dbaec4ef-24d3-4114-a006-2b22675f50c9",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(IF(#JobExeFilter!RunTime\u003e\u003d0;#JobExeFilter!Name;\"Discarded\"))"
+        },
+        {
+          "columnName": "Median",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMEDIAN(#JobExeFilter!RunTime)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 150,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Median",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "JobExeMedian100_S",
+      "sheetId": "2949c631-39d6-4df2-bf81-59d8c2dc4299",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "JobMedian",
+      "sortTargetSheet": "JobExeMedian100_S",
+      "sortKeys": [
+        {
+          "column": "Median",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

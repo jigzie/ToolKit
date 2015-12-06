@@ -1,0 +1,88 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "ab64b64a-922a-4856-906a-646c88f6380a",
+    "path": "/Users/admin/Applications/Datameer Users Stats/Resources/GP.lnk",
+    "description": "GP for Health Check",
+    "name": "GP"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "c570540e-89ff-4940-b604-1021032edd1d"
+    ],
+    "!query!": [
+      "select gp.id GroupPermId, gp.group_name GroupName, gp.permission_bits Permissions, gp.permission__id PermissionId, ugu.user_id\r\nfrom group_permission gp\r\ninner join user_group ug on gp.group_name \u003d ug.name\r\ninner join usergroup_user ugu on ug.id \u003d ugu.group_id\r\norder by GroupPermId"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer Users Stats/Resources/SystemDatabase.dst",
+    "uuid": "9de09e27-e381-473c-9032-dccae37fec71"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 5,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 57,
+      "acceptEmpty": false,
+      "name": "GroupPermId",
+      "origin": "GroupPermId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 58,
+      "acceptEmpty": false,
+      "name": "GroupName",
+      "origin": "GroupName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 59,
+      "acceptEmpty": true,
+      "name": "Permissions",
+      "origin": "Permissions",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 60,
+      "acceptEmpty": false,
+      "name": "PermissionId",
+      "origin": "PermissionId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 61,
+      "acceptEmpty": false,
+      "name": "user_id",
+      "origin": "user_id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

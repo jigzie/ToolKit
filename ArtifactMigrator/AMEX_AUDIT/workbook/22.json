@@ -1,0 +1,414 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "8b5de6c1-1f1e-45ae-ba42-9a2cef3e0053",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/_c_Stats Per Input Bytes.wbk",
+    "description": "",
+    "name": "_c_Stats Per Input Bytes"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {
+    "cardinalities.generation": [
+      "true"
+    ],
+    "histograms.generation": [
+      "true"
+    ],
+    "minmaxmean.generation": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "PerJobStats",
+      "sheetId": "27ea1a9c-3033-4970-8684-af3fa3353c5f",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "filterSourceSheet": "PerJobStats",
+      "filterTargetSheet": "PerJobStats",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "JobType",
+          "filterExpression": "CONTAINS",
+          "value": "Workbook job",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "referencedSheet": {
+        "name": "PerMrJobStats",
+        "sheetId": "592b1879-4b10-4daa-877e-652071b4a6ff",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/_a_Hadoop MR Job Metrics.wbk",
+          "uuid": "9407fd8e-0c95-462f-a8cf-3d7546e98c66"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ExecutionId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Timestamp",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "OutputBytes",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "RunTimeMinutes",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "JobTypeId",
+          "width": 432,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "JobType",
+          "width": 401,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Execution_Id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "InputBytes",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "MapSlots",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "ReduceSlots",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "partitionSelectionExpression": "$partition \u003e ADDTODATE(TODAY();\"-30d\")"
+    },
+    {
+      "name": "StatsPerInputBytes",
+      "sheetId": "7321f1f8-a3b6-4db0-ae06-a6e85da26289",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "bytesBucket",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBYCUSTOMBIN(#PerJobStats!InputBytes;0;1000000;10000000;100000000;1000000000;10000000000;100000000000;1000000000000;10000000000000;100000000000000)"
+        },
+        {
+          "columnName": "mbBucket",
+          "columnId": "11",
+          "columnIndex": 1,
+          "formulaString": "\u003d#bytesBucket/1000/1000"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "Average_RunTimeMinutes",
+          "columnId": "2",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPAVERAGE(#PerJobStats!RunTimeMinutes)"
+        },
+        {
+          "columnName": "MbPerMapper",
+          "columnId": "10",
+          "columnIndex": 4,
+          "formulaString": "\u003dDIV(#bytesBucket;#Average_MapSlots)/1024/1024"
+        },
+        {
+          "columnName": "ThroughputMbPerMinute",
+          "columnId": "3",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPAVERAGE(DIV(#PerJobStats!InputBytes;#PerJobStats!RunTimeMinutes))/1024/1024"
+        },
+        {
+          "columnName": "Total_RunTimeHours",
+          "columnId": "5",
+          "columnIndex": 6,
+          "formulaString": "\u003dGROUPSUM(#PerJobStats!RunTimeMinutes)/60"
+        },
+        {
+          "columnName": "TotalGb",
+          "columnId": "6",
+          "columnIndex": 7,
+          "formulaString": "\u003dGROUPSUM(#PerJobStats!InputBytes)/1024/1024/1024"
+        },
+        {
+          "columnName": "Average_MapSlots",
+          "columnId": "7",
+          "columnIndex": 8,
+          "formulaString": "\u003dGROUPAVERAGE(#PerJobStats!MapSlots)"
+        },
+        {
+          "columnName": "Average_ReduceSlots",
+          "columnId": "8",
+          "columnIndex": 9,
+          "formulaString": "\u003dGROUPAVERAGE(DENULLIFY(#PerJobStats!ReduceSlots))"
+        },
+        {
+          "columnName": "Total_Tasks",
+          "columnId": "9",
+          "columnIndex": 10,
+          "formulaString": "\u003dSUM(#Average_MapSlots;#Average_ReduceSlots)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "bytesBucket",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Average_RunTimeMinutes",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "3",
+          "name": "ThroughputMbPerMinute",
+          "width": 201,
+          "alignment": "LEFT",
+          "decimalDigits": 2,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "5",
+          "name": "Total_RunTimeHours",
+          "width": 157,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "6",
+          "name": "TotalGb",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "7",
+          "name": "Average_MapSlots",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "8",
+          "name": "Average_ReduceSlots",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "9",
+          "name": "Total_Tasks",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "10",
+          "name": "MbPerMapper",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "11",
+          "name": "mbBucket",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 12
+    },
+    {
+      "name": "AccumulatedRuntime",
+      "sheetId": "c11578ab-e951-4dd9-9fb3-292ea6b2a723",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "constant",
+          "columnId": "9",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(1)"
+        },
+        {
+          "columnName": "mbBucket",
+          "columnId": "0",
+          "columnIndex": 1,
+          "formulaString": "\u003d#StatsPerInputBytes!mbBucket"
+        },
+        {
+          "columnName": "RunTimeHours",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#StatsPerInputBytes!Total_RunTimeHours"
+        },
+        {
+          "columnName": "Accumulated_RunTimeHours",
+          "columnId": "1",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPACCUMULATE(#StatsPerInputBytes!mbBucket;#StatsPerInputBytes!Total_RunTimeHours)"
+        },
+        {
+          "columnName": "ThroughputGbPerMinute",
+          "columnId": "3",
+          "columnIndex": 4,
+          "formulaString": "\u003d#TotalGb/#AccumulatedRuntime!RunTimeHours/60"
+        },
+        {
+          "columnName": "TotalGb",
+          "columnId": "4",
+          "columnIndex": 5,
+          "formulaString": "\u003d#StatsPerInputBytes!TotalGb"
+        },
+        {
+          "columnName": "AssumedThroughput",
+          "columnId": "5",
+          "columnIndex": 6,
+          "formulaString": "\u003dMAX(100;#ThroughputGbPerMinute)"
+        },
+        {
+          "columnName": "AssumedRuntime",
+          "columnId": "6",
+          "columnIndex": 7,
+          "formulaString": "\u003d#TotalGb/#AssumedThroughput/60"
+        },
+        {
+          "columnName": "SavedHours",
+          "columnId": "7",
+          "columnIndex": 8,
+          "formulaString": "\u003dSUBTRACT(#RunTimeHours;#AssumedRuntime)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "mbBucket",
+          "width": 123,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Accumulated_RunTimeHours",
+          "width": 260,
+          "alignment": "LEFT",
+          "decimalDigits": 0,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "2",
+          "name": "RunTimeHours",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 0,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "3",
+          "name": "ThroughputGbPerMinute",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 2,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "4",
+          "name": "TotalGb",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "5",
+          "name": "AssumedThroughput",
+          "width": 185,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "6",
+          "name": "AssumedRuntime",
+          "width": 192,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "7",
+          "name": "SavedHours",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "9",
+          "name": "constant",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 10
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

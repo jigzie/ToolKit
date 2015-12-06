@@ -1,0 +1,146 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.FileDataSinkImpl",
+  "file": {
+    "uuid": "326438fc-8e41-45c8-9c99-4884e25d4e0b",
+    "path": "/Examples/Hello World/Solution/ExportJob5.exp",
+    "description": "",
+    "name": "ExportJob5"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "table_name": [
+      "8d8e2ead_afb6_49ef_9baf_b681a85d8796_Joined"
+    ],
+    "transformation_name": [
+      "Workbook_newone_basic"
+    ],
+    "transformation_description": [
+      ""
+    ],
+    "business_purpose": [
+      ""
+    ],
+    "run_frequency": [
+      "Daily"
+    ],
+    "status": [
+      "REQUEST_CREATION"
+    ]
+  },
+  "hadoopProperties": "",
+  "connection": "/Data/Connections/Datameer server filesystem",
+  "sheet": {
+    "name": "Joined",
+    "sheetId": "056a2240-0d82-4b81-aaca-5f14b51f6b2a",
+    "workbook": {
+      "path": "/Examples/Hello World/Solution/Workbook_newone_basic.wbk",
+      "uuid": "8d8e2ead-afb6-49ef-9baf-b681a85d8796"
+    }
+  },
+  "mappings": [
+    {
+      "name": "UnionSheet1_C",
+      "srcColumnIndex": 0,
+      "nullable": true
+    },
+    {
+      "name": "Sheet1_C",
+      "srcColumnIndex": 1,
+      "nullable": true
+    },
+    {
+      "name": "UnionSheet1_A",
+      "srcColumnIndex": 2,
+      "nullable": true
+    },
+    {
+      "name": "UnionSheet1_B",
+      "srcColumnIndex": 3,
+      "nullable": true
+    },
+    {
+      "name": "UnionSheet1_D",
+      "srcColumnIndex": 4,
+      "nullable": true
+    },
+    {
+      "name": "UnionSheet1_E",
+      "srcColumnIndex": 5,
+      "nullable": true
+    },
+    {
+      "name": "UnionSheet1_F",
+      "srcColumnIndex": 6,
+      "nullable": true
+    },
+    {
+      "name": "UnionSheet1_G",
+      "srcColumnIndex": 7,
+      "nullable": true
+    },
+    {
+      "name": "UnionSheet1_H",
+      "srcColumnIndex": 8,
+      "nullable": true
+    },
+    {
+      "name": "UnionSheet1_I",
+      "srcColumnIndex": 9,
+      "nullable": true
+    },
+    {
+      "name": "Sheet1_A",
+      "srcColumnIndex": 10,
+      "nullable": true
+    },
+    {
+      "name": "Sheet1_B",
+      "srcColumnIndex": 11,
+      "nullable": true
+    },
+    {
+      "name": "Sheet1_D",
+      "srcColumnIndex": 12,
+      "nullable": true
+    },
+    {
+      "name": "Sheet1_E",
+      "srcColumnIndex": 13,
+      "nullable": true
+    },
+    {
+      "name": "Sheet1_F",
+      "srcColumnIndex": 14,
+      "nullable": true
+    },
+    {
+      "name": "Sheet1_G",
+      "srcColumnIndex": 15,
+      "nullable": true
+    },
+    {
+      "name": "Sheet1_H",
+      "srcColumnIndex": 16,
+      "nullable": true
+    },
+    {
+      "name": "Sheet1_I",
+      "srcColumnIndex": 17,
+      "nullable": true
+    }
+  ],
+  "errorHandlingMode": "DROP_RECORD",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fileName": "tmp/Test5",
+  "confirmOverwrite": false,
+  "clearTargetDirectory": false,
+  "includeHeader": true,
+  "delimiterString": ",",
+  "quoteString": "\"",
+  "escapeString": "\\",
+  "characterEncoding": "UTF-8",
+  "exportFileType": "DT_export"
+}

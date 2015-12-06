@@ -1,0 +1,229 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10796,
+            "include": true,
+            "name": "id",
+            "origin": "id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10797,
+            "include": true,
+            "name": "hadoop_properties",
+            "origin": "hadoop_properties",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10798,
+            "include": true,
+            "name": "job_data",
+            "origin": "job_data",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10799,
+            "include": true,
+            "name": "job_exception",
+            "origin": "job_exception",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10800,
+            "include": true,
+            "name": "job_status",
+            "origin": "job_status",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10801,
+            "include": true,
+            "name": "queued_time",
+            "origin": "queued_time",
+            "pattern": "yyyy-MM-dd",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10802,
+            "include": true,
+            "name": "start_time",
+            "origin": "start_time",
+            "pattern": "yyyy-MM-dd",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10803,
+            "include": true,
+            "name": "stop_time",
+            "origin": "stop_time",
+            "pattern": "yyyy-MM-dd",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10804,
+            "include": true,
+            "name": "triggered_by",
+            "origin": "triggered_by",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10805,
+            "include": true,
+            "name": "type",
+            "origin": "type",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10806,
+            "include": true,
+            "name": "user",
+            "origin": "user",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10807,
+            "include": true,
+            "name": "created_data__id",
+            "origin": "created_data__id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10808,
+            "include": true,
+            "name": "dap_job_configuration__id",
+            "origin": "dap_job_configuration__id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10809,
+            "include": true,
+            "name": "execution_plan_fk",
+            "origin": "execution_plan_fk",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10810,
+            "include": true,
+            "name": "logging_properties",
+            "origin": "logging_properties",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10811,
+            "include": true,
+            "name": "root_logger_level",
+            "origin": "root_logger_level",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10812,
+            "include": false,
+            "name": "dasJobExecutionId",
+            "origin": "jobexecutionInfo.id",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10813,
+            "include": false,
+            "name": "dasJobExecutionStartTime",
+            "origin": "jobexecutionInfo.starttime",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "",
+        "name": "MySQL_job_execution",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_job_execution.lnk",
+        "uuid": "344b0062-608e-4c98-a82d-45ffb6275183"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "GenericConfigurationImpl.temp-file-store": [
+            "09e2db42-a540-40f7-b82b-42a0855d242d"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "jdbc.property.query": [
+            "select ug.id, ug.name, ugu.user_id from user_group ug, usergroup_user ugu\r\nwhere ug.id = ugu.group_id"
+        ],
+        "jdbc.property.select.sql.action": [
+            "TABLE"
+        ],
+        "jdbc.property.table": [
+            "'dap_job_execution'"
+        ],
+        "tableName": [
+            "\u0027dap_job_execution\u0027"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

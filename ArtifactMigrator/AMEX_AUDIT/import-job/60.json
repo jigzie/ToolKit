@@ -1,0 +1,160 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "38880e5b-d694-4eb8-9339-5e59109d53a3",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Logs_HTTP_Errors.lnk",
+    "description": "",
+    "name": "Logs_HTTP_Errors"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "3041fe9a-709b-49a8-aaac-08eeb4b6eb97"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ],
+    "file": [
+      "logs/httperror.log*"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "data.includes.header": [
+      "false"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "fileNameTimeRange_mode": [
+      "OFF"
+    ],
+    "filter.maxAge": [
+      ""
+    ],
+    "filter.minAge": [
+      ""
+    ],
+    "external.store": [
+      "false"
+    ],
+    "source.data.partitioned": [
+      "false"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_Logs_SSH.dst",
+    "uuid": "295824be-d327-47ec-b46c-e03311616a6d"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 246,
+      "pattern": "yyyy-MM-dd HH:mm:ss",
+      "acceptEmpty": true,
+      "name": "Timestamp",
+      "origin": "0",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 247,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "HttpStatusCode",
+      "origin": "1",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 248,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Page",
+      "origin": "2",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 249,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Stacktrace",
+      "origin": "3",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 250,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 251,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 252,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

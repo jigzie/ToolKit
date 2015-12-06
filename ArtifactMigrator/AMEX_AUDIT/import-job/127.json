@@ -1,0 +1,147 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "3a964df9-2f6d-4042-9347-02b1bf36cde7",
+    "path": "/Users/admin/Applications/AMEX/jobConf_550.upl",
+    "description": "JobConf 55",
+    "name": "jobConf_550"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "d3027d4f-f08d-4ad6-aecc-aea699fa6f57"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-5.9.4-mapr-4.0.2-mr2/das-data/fileuploads/26/job-conf.xml"
+    ],
+    "fileType": [
+      "XML"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "rootPath": [
+      ""
+    ],
+    "maxTraverseDepth": [
+      "0"
+    ],
+    "alwaysIncludePaths": [
+      ""
+    ],
+    "skipExpandPaths": [
+      ""
+    ],
+    "ignorePaths": [
+      ""
+    ],
+    "collect_additional_fields": [
+      "false"
+    ],
+    "unwrap_root_array": [
+      "false"
+    ],
+    "ignore_surrounding_text": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT_SCANNER"
+    ],
+    "namespaces": [
+      ""
+    ],
+    "rootElement": [
+      "property"
+    ],
+    "xPaths": [
+      "/"
+    ],
+    "delimiter": [
+      "\u0001/property"
+    ],
+    "separator": [
+      "\u0002"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "quoteCharacter": [
+      "\""
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "b92bfaf1-5794-48fc-a490-e679c78290cd"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 82,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "jobConf_55",
+      "origin": "/",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 83,
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 84,
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 85,
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 86,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 87,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10722,
+            "include": true,
+            "name": "id",
+            "origin": "id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10723,
+            "include": true,
+            "name": "bytes_processed",
+            "origin": "bytes_processed",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10724,
+            "include": false,
+            "name": "creation_date",
+            "origin": "creation_date",
+            "pattern": "",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10725,
+            "include": false,
+            "name": "description",
+            "origin": "description",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10726,
+            "include": true,
+            "name": "extension",
+            "origin": "extension",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10727,
+            "include": true,
+            "name": "file_mode",
+            "origin": "file_mode",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10728,
+            "include": false,
+            "name": "job_status",
+            "origin": "job_status",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10729,
+            "include": false,
+            "name": "last_changed_date",
+            "origin": "last_changed_date",
+            "pattern": "",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10730,
+            "include": false,
+            "name": "last_executed",
+            "origin": "last_executed",
+            "pattern": "",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10731,
+            "include": true,
+            "name": "name",
+            "origin": "name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10732,
+            "include": false,
+            "name": "uuid",
+            "origin": "uuid",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10733,
+            "include": true,
+            "name": "version",
+            "origin": "version",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10734,
+            "include": true,
+            "name": "folder_fk",
+            "origin": "folder_fk",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10735,
+            "include": true,
+            "name": "permission_fk",
+            "origin": "permission_fk",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "dap_file",
+        "name": "MySQL_dap_file",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_dap_file.lnk",
+        "uuid": "7f6ba152-a980-45fe-9a89-7ed8e2b9b12f"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            ""
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "2f7c5bbf-f63d-43d6-acf5-3d2e223545a4"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "id"
+        ],
+        "tableName": [
+            "'dap_file'"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

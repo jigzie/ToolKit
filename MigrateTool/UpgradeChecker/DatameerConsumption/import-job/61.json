@@ -1,0 +1,161 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "1c2e66ee-b05d-42ec-9286-e34c5157612f",
+    "path": "/Users/admin/Applications/Facebook Social Stats/Resources/PittSentimentLexicon.upl",
+    "description": "",
+    "name": "PittSentimentLexicon"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "data.includes.header": [
+      "true"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "ddfe1c77-3a90-4e74-a758-f70db6aff1f3"
+    ],
+    "histogram.generation": [
+      "false"
+    ],
+    "file": [
+      "/Users/hadoop/DM2144/fileuploads/61/pitt_lexion_sentiment.csv"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "quoteCharacter": [
+      "\""
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "08eba90e-189d-402e-9e85-3662d5a587ce"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 184,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Type",
+      "origin": "0",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 185,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Length",
+      "origin": "1",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 186,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Word",
+      "origin": "2",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 187,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Pos",
+      "origin": "3",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 188,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Stemmed",
+      "origin": "4",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 189,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Priorpolarity",
+      "origin": "5",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 190,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 191,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 192,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

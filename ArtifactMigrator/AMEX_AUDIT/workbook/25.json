@@ -1,0 +1,2210 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "95824a8e-73ed-466d-9dc0-7c64553641b4",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/_a_Scheduling_prep.wbk",
+    "description": "",
+    "name": "_a_Scheduling_prep"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_job_configuration",
+      "sheetId": "1bf18f95-2e1e-45fa-b8ee-c8d2bc6f1a68",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "MySQL_job_configuration",
+        "sheetId": "f9f668f3-1f0a-4111-9031-7103e55243e2",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_32_job_configuration.wbk",
+          "uuid": "f910d342-b3b2-4b3b-bb7c-27243a6096c6"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "pull_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "schedule",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "pre_process",
+      "sheetId": "cfc61c85-b4ad-4c45-b3c3-6ab327908c2d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "pre_process",
+      "filterTargetSheet": "pre_process",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "schedule",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_job_configuration!id"
+        },
+        {
+          "columnName": "expire_time_days",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_job_configuration!expire_time_days"
+        },
+        {
+          "columnName": "min_keep_count",
+          "columnId": "4",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_job_configuration!min_keep_count"
+        },
+        {
+          "columnName": "pull_type",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_job_configuration!pull_type"
+        },
+        {
+          "columnName": "schedule",
+          "columnId": "6",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MySQL_job_configuration!schedule"
+        },
+        {
+          "columnName": "dap_file__id",
+          "columnId": "7",
+          "columnIndex": 5,
+          "formulaString": "\u003d#MySQL_job_configuration!dap_file__id"
+        },
+        {
+          "columnName": "schedule_Tokenized",
+          "columnId": "11",
+          "columnIndex": 6,
+          "formulaString": "\u003dTOKENIZELIST(#schedule;\" \")"
+        },
+        {
+          "columnName": "m",
+          "columnId": "28",
+          "columnIndex": 7,
+          "formulaString": "\u003dIF(EQUALS(LISTELEMENT(#schedule_Tokenized;0);\"*\");REPLACEALL(LISTELEMENT(#schedule_Tokenized;0);\"\\\\*\";\"0-59\");LISTELEMENT(#schedule_Tokenized;0))"
+        },
+        {
+          "columnName": "m_start_gt_step",
+          "columnId": "32",
+          "columnIndex": 8,
+          "formulaString": "\u003dAND(CONTAINS(#m;\"/\");GT(INT(REPLACEALL(LISTELEMENT(TOKENIZELIST(#m;\"/\");0);\"\\\\*\";\"0\"));INT(LISTELEMENT(TOKENIZELIST(#m;\"/\");0))))"
+        },
+        {
+          "columnName": "min",
+          "columnId": "10",
+          "columnIndex": 9,
+          "formulaString": "\u003dIF(#m_start_gt_step;REPLACEALL(LISTELEMENT(TOKENIZELIST(#m;\"/\");0);\"\\\\*\";\"0\");#m)"
+        },
+        {
+          "columnName": "h",
+          "columnId": "29",
+          "columnIndex": 10,
+          "formulaString": "\u003dIF(EQUALS(LISTELEMENT(#schedule_Tokenized;1);\"*\");REPLACEALL(LISTELEMENT(#schedule_Tokenized;1);\"\\\\*\";\"0-23\");LISTELEMENT(#schedule_Tokenized;1))"
+        },
+        {
+          "columnName": "h_start_gt_step",
+          "columnId": "33",
+          "columnIndex": 11,
+          "formulaString": "\u003dAND(CONTAINS(#h;\"/\");GT(INT(REPLACEALL(LISTELEMENT(TOKENIZELIST(#h;\"/\");0);\"\\\\*\";\"0\"));INT(LISTELEMENT(TOKENIZELIST(#h;\"/\");0))))"
+        },
+        {
+          "columnName": "hour",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003dIF(#h_start_gt_step;REPLACEALL(LISTELEMENT(TOKENIZELIST(#h;\"/\");0);\"\\\\*\";\"0\");#h)"
+        },
+        {
+          "columnName": "dom",
+          "columnId": "25",
+          "columnIndex": 13,
+          "formulaString": "\u003dIF(EQUALS(LISTELEMENT(#schedule_Tokenized;2);\"*\");REPLACEALL(LISTELEMENT(#schedule_Tokenized;2);\"\\\\*\";\"1-31\");LISTELEMENT(#schedule_Tokenized;2))"
+        },
+        {
+          "columnName": "dom_start_gt_step",
+          "columnId": "24",
+          "columnIndex": 14,
+          "formulaString": "\u003dAND(CONTAINS(#dom;\"/\");GT(INT(REPLACEALL(LISTELEMENT(TOKENIZELIST(#dom;\"/\");0);\"\\\\*\";\"1\"));INT(LISTELEMENT(TOKENIZELIST(#dom;\"/\");1))))"
+        },
+        {
+          "columnName": "day_of_month",
+          "columnId": "13",
+          "columnIndex": 15,
+          "formulaString": "\u003dIF(#dom_start_gt_step;REPLACEALL(LISTELEMENT(TOKENIZELIST(#dom;\"/\");0);\"\\\\*\";\"1\");#dom)"
+        },
+        {
+          "columnName": "M",
+          "columnId": "30",
+          "columnIndex": 16,
+          "formulaString": "\u003dIF(EQUALS(LISTELEMENT(#schedule_Tokenized;3);\"*\");REPLACEALL(LISTELEMENT(#schedule_Tokenized;3);\"\\\\*\";\"1-12\");LISTELEMENT(#schedule_Tokenized;3))"
+        },
+        {
+          "columnName": "M_start_gt_step",
+          "columnId": "34",
+          "columnIndex": 17,
+          "formulaString": "\u003dAND(CONTAINS(#M;\"/\");GT(INT(REPLACEALL(LISTELEMENT(TOKENIZELIST(#M;\"/\");0);\"\\\\*\";\"1\"));INT(LISTELEMENT(TOKENIZELIST(#M;\"/\");1))))"
+        },
+        {
+          "columnName": "month",
+          "columnId": "15",
+          "columnIndex": 18,
+          "formulaString": "\u003dIF(#M_start_gt_step;REPLACEALL(LISTELEMENT(TOKENIZELIST(#M;\"/\");0);\"\\\\*\";\"1\");#M)"
+        },
+        {
+          "columnName": "dow",
+          "columnId": "31",
+          "columnIndex": 19,
+          "formulaString": "\u003dIF(EQUALS(LISTELEMENT(#schedule_Tokenized;4);\"*\");REPLACEALL(LISTELEMENT(#schedule_Tokenized;4);\"\\\\*\";\"0-6\");LISTELEMENT(#schedule_Tokenized;4))"
+        },
+        {
+          "columnName": "dow_start_gt_step",
+          "columnId": "35",
+          "columnIndex": 20,
+          "formulaString": "\u003dAND(CONTAINS(#dow;\"/\");GT(INT(REPLACEALL(LISTELEMENT(TOKENIZELIST(#dow;\"/\");0);\"\\\\*\";\"0\"));INT(LISTELEMENT(TOKENIZELIST(#dow;\"/\");0))))"
+        },
+        {
+          "columnName": "day_of_week",
+          "columnId": "14",
+          "columnIndex": 21,
+          "formulaString": "\u003dIF(#dow_start_gt_step;REPLACEALL(LISTELEMENT(TOKENIZELIST(#dow;\"/\");0);\"\\\\*\";\"0\");#dow)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "expire_time_days",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "min_keep_count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "pull_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "schedule",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "dap_file__id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "schedule_Tokenized",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "13",
+          "name": "day_of_month",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "14",
+          "name": "day_of_week",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "month",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "24",
+          "name": "dom_start_gt_step",
+          "width": 133,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "25",
+          "name": "dom",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "28",
+          "name": "m",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "29",
+          "name": "h",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "30",
+          "name": "M",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "31",
+          "name": "dow",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "32",
+          "name": "m_start_gt_step",
+          "width": 121,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "33",
+          "name": "h_start_gt_step",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "34",
+          "name": "M_start_gt_step",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "35",
+          "name": "dow_start_gt_step",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 36
+    },
+    {
+      "name": "day_of_month_step_prep",
+      "sheetId": "aeef834a-c673-42a0-9038-f2ee235a450b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "day_of_month_step_prep",
+      "filterTargetSheet": "day_of_month_step_prep",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "day_of_month",
+          "filterExpression": "CONTAINS",
+          "value": "/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "day_of_month",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(#pre_process!day_of_month;\"\\\\*\";\"1\")"
+        },
+        {
+          "columnName": "day_of_month_tokens",
+          "columnId": "4",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZELIST(#day_of_month;\"/\")"
+        },
+        {
+          "columnName": "start_day",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003dINT(LISTELEMENT(#day_of_month_tokens;0))"
+        },
+        {
+          "columnName": "step",
+          "columnId": "6",
+          "columnIndex": 4,
+          "formulaString": "\u003dINT(LISTELEMENT(#day_of_month_tokens;1))"
+        },
+        {
+          "columnName": "days_in_month",
+          "columnId": "3",
+          "columnIndex": 5,
+          "formulaString": "\u003dEXPLODE_RANGE(#start_day;31)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "day_of_month",
+          "width": 130,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "days_in_month",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "day_of_month_tokens",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "start_day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "step",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 8
+    },
+    {
+      "name": "day_of_month_process",
+      "sheetId": "3705dc9c-60e0-4c76-b170-96b85dbfbec8",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#day_of_month_step_prep!id)"
+        },
+        {
+          "columnName": "bins",
+          "columnId": "5",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBYBIN(#day_of_month_step_prep!days_in_month;#day_of_month_step_prep!step)"
+        },
+        {
+          "columnName": "steps",
+          "columnId": "6",
+          "columnIndex": 2,
+          "formulaString": "\u003dPLUS(#bins;1)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "bins",
+          "width": 180,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "steps",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    },
+    {
+      "name": "day_of_month_steps_rpt",
+      "sheetId": "99d7e873-ab51-427f-9998-dc5bc172af4f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#day_of_month_process!id)"
+        },
+        {
+          "columnName": "days",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dTOJSON(SORT(GROUPCONCAT(#day_of_month_process!steps)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "days",
+          "width": 165,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "day_of_month_dash_prep",
+      "sheetId": "6a2a3c7d-bea9-4fc8-9a9a-93ec7ac00711",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "day_of_month_dash_prep",
+      "filterTargetSheet": "day_of_month_dash_prep",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "day_of_month",
+          "filterExpression": "CONTAINS",
+          "value": "-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "day_of_month",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#pre_process!day_of_month"
+        },
+        {
+          "columnName": "day_of_month_tokens",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZELIST(#day_of_month;\"-\")"
+        },
+        {
+          "columnName": "days",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dRANGE(INT(LISTELEMENT(#day_of_month_tokens; 0));INT(LISTELEMENT(#day_of_month_tokens; 1)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "day_of_month",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "day_of_month_tokens",
+          "width": 156,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "days",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "day_of_month_dash_rpt",
+      "sheetId": "a57f2a6b-d393-4500-ad27-47c6646b8756",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#day_of_month_dash_prep!id"
+        },
+        {
+          "columnName": "days",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dTOJSON(SORT(#day_of_month_dash_prep!days))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "days",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "day_of_month_commas_rpt",
+      "sheetId": "4eea7ab6-c075-44c7-8b9a-df082b7d0b81",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "day_of_month_commas_rpt",
+      "filterTargetSheet": "day_of_month_commas_rpt",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "days",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "days",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "days",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(TOJSON(SORT(TOKENIZELIST(#pre_process!day_of_month;\",\")));\"\\\"\";\"\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "days",
+          "width": 121,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "day_of_month",
+      "sheetId": "05a5dd2f-d407-44a8-a72b-c867d960ed96",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "unionSources": [
+          "day_of_month_steps_rpt",
+          "day_of_month_dash_rpt",
+          "day_of_month_commas_rpt"
+        ]
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "min_step_prep",
+      "sheetId": "4c047f98-0605-4925-8a07-93c33c7b1d57",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "min_step_prep",
+      "filterTargetSheet": "min_step_prep",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "min",
+          "filterExpression": "CONTAINS",
+          "value": "/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "min",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(#pre_process!min;\"\\\\*\";\"0\")"
+        },
+        {
+          "columnName": "min_tokens",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZELIST(#min;\"/\")"
+        },
+        {
+          "columnName": "start_min",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dINT(LISTELEMENT(#min_tokens;0))"
+        },
+        {
+          "columnName": "step",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dINT(LISTELEMENT(#min_tokens;1))"
+        },
+        {
+          "columnName": "mins_in_hour",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dEXPLODE_RANGE(#start_min;60)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "min_tokens",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "start_min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "step",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "mins_in_hour",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "min_process",
+      "sheetId": "ef1b6de1-caa2-458a-9de3-b8763f145bcc",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#min_step_prep!id)"
+        },
+        {
+          "columnName": "steps",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBYBIN(#min_step_prep!mins_in_hour;#min_step_prep!step)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "steps",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "min_step_rpt",
+      "sheetId": "f190139a-a1a9-4d19-9142-a26cc26a9939",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#min_process!id)"
+        },
+        {
+          "columnName": "mins",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dTOJSON(SORT(GROUPCONCAT(#min_process!steps)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "mins",
+          "width": 253,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "min_dash_prep",
+      "sheetId": "cf409fff-1c9f-4d13-aeb9-a2eecb5ad2f3",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "min_dash_prep",
+      "filterTargetSheet": "min_dash_prep",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "min",
+          "filterExpression": "CONTAINS",
+          "value": "-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "min",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#pre_process!min"
+        },
+        {
+          "columnName": "min_tokens",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZELIST(#min;\"-\")"
+        },
+        {
+          "columnName": "mins",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dRANGE(INT(LISTELEMENT(#min_tokens; 0));INT(LISTELEMENT(#min_tokens; 1)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "min_tokens",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "mins",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "min_dash_rpt",
+      "sheetId": "3c7ea3a8-2060-4baa-b748-3c44bb2ab3c7",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#min_dash_prep!id"
+        },
+        {
+          "columnName": "mins",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dTOJSON(SORT(#min_dash_prep!mins))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "mins",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "min_commas_rpt",
+      "sheetId": "e33684f2-54e1-4e65-a917-f472c44b7645",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "min_commas_rpt",
+      "filterTargetSheet": "min_commas_rpt",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "min",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "min",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "min",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(TOJSON(SORT(TOKENIZELIST(#pre_process!min;\",\")));\"\\\"\";\"\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "min",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "min",
+      "sheetId": "fa1b781c-4ebe-4b0d-aa42-7d486c74beee",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "unionSources": [
+          "min_step_rpt",
+          "min_dash_rpt",
+          "min_commas_rpt"
+        ]
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "hour_step_prep",
+      "sheetId": "f7155ac2-c3fd-4754-80dd-e6d8b6c707df",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "hour_step_prep",
+      "filterTargetSheet": "hour_step_prep",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "hour",
+          "filterExpression": "CONTAINS",
+          "value": "/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "hour",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(#pre_process!hour;\"\\\\*\";\"0\")"
+        },
+        {
+          "columnName": "hour_tokens",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZELIST(#hour;\"/\")"
+        },
+        {
+          "columnName": "start_hour",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dINT(LISTELEMENT(#hour_tokens;0))"
+        },
+        {
+          "columnName": "step",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dINT(LISTELEMENT(#hour_tokens;1))"
+        },
+        {
+          "columnName": "hours_in_day",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dEXPLODE_RANGE(#start_hour;24)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "hour_tokens",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "start_hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "step",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "hours_in_day",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "hour_process",
+      "sheetId": "403d33d7-fb54-46b4-a5fc-bfe198248fe4",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#hour_step_prep!id)"
+        },
+        {
+          "columnName": "steps",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBYBIN(#hour_step_prep!hours_in_day;#hour_step_prep!step)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "steps",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "hour_step_rpt",
+      "sheetId": "fd300155-7615-4610-a7fc-edf9b7c5ba8e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#hour_process!id)"
+        },
+        {
+          "columnName": "hours",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dTOJSON(SORT(GROUPCONCAT(#hour_process!steps)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "hours",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "hour_dash_prep",
+      "sheetId": "49655518-791b-4cb8-8e5e-69b89ce34c9a",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "hour_dash_prep",
+      "filterTargetSheet": "hour_dash_prep",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "hour",
+          "filterExpression": "CONTAINS",
+          "value": "-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "hour",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#pre_process!hour"
+        },
+        {
+          "columnName": "hour_tokens",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZELIST(#hour;\"-\")"
+        },
+        {
+          "columnName": "hours",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dRANGE(INT(LISTELEMENT(#hour_tokens; 0));INT(LISTELEMENT(#hour_tokens; 1)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "hour_tokens",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "hours",
+          "width": 491,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "hour_dash_rpt",
+      "sheetId": "bc02d8c2-2bb4-4a4e-9392-f1e30cf5d7c5",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#hour_dash_prep!id"
+        },
+        {
+          "columnName": "hours",
+          "columnId": "3",
+          "columnIndex": 1,
+          "formulaString": "\u003dTOJSON(SORT(#hour_dash_prep!hours))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "hours",
+          "width": 491,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "hour_commas_rpt",
+      "sheetId": "8e6f1801-7c7f-4800-82fd-a23a8021c0cc",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "hour_commas_rpt",
+      "filterTargetSheet": "hour_commas_rpt",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "hour",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "hour",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "hour",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(TOJSON(SORT(TOKENIZELIST(#pre_process!hour;\",\")));\"\\\"\";\"\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "hour",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "hour",
+      "sheetId": "505ed0d2-0657-4ec3-9479-f5fedac95ff6",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "unionSources": [
+          "hour_step_rpt",
+          "hour_dash_rpt",
+          "hour_commas_rpt"
+        ]
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "month_step_prep",
+      "sheetId": "23c3e8ea-a7e5-4e61-8669-90355648b0c6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "month_step_prep",
+      "filterTargetSheet": "month_step_prep",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "month",
+          "filterExpression": "CONTAINS",
+          "value": "/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "month",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(#pre_process!month;\"\\\\*\";\"1\")"
+        },
+        {
+          "columnName": "month_tokens",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZELIST(#month;\"/\")"
+        },
+        {
+          "columnName": "start_month",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dINT(LISTELEMENT(#month_tokens;0))"
+        },
+        {
+          "columnName": "step",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dINT(LISTELEMENT(#month_tokens;1))"
+        },
+        {
+          "columnName": "months_in_year",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dEXPLODE_RANGE(#start_month;12)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "month",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "month_tokens",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "start_month",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "step",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "months_in_year",
+          "width": 115,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "month_process",
+      "sheetId": "261d4677-a202-4f83-bc07-4af90850bbf2",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#month_step_prep!id)"
+        },
+        {
+          "columnName": "steps",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBYBIN(#month_step_prep!months_in_year;#month_step_prep!step)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "steps",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "month_step_rpt",
+      "sheetId": "ad7b19a2-b70f-4284-9fc5-ad12f19cf761",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#month_process!id)"
+        },
+        {
+          "columnName": "months",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(TOJSON(SORT(GROUPCONCAT(#month_process!steps)));\"11\";\"Nov\");\"12\";\"Dec\");\"3\";\"Mar\");\"4\";\"Apr\");\"5\";\"May\");\"6\";\"Jun\");\"7\";\"Jul\");\"8\";\"Aug\");\"9\";\"Sep\");\"10\";\"Oct\");\"1\";\"Jan\");\"2\";\"Feb\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "months",
+          "width": 259,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "month_dash_prep",
+      "sheetId": "ae5d800d-393c-4e4c-85e8-82c3c8ac1377",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "month_dash_prep",
+      "filterTargetSheet": "month_dash_prep",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "month",
+          "filterExpression": "CONTAINS",
+          "value": "-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "month",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#pre_process!month"
+        },
+        {
+          "columnName": "month_tokens",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZELIST(#month;\"-\")"
+        },
+        {
+          "columnName": "months",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dRANGE(INT(LISTELEMENT(#month_tokens; 0));INT(LISTELEMENT(#month_tokens; 1)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "month",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "month_tokens",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "months",
+          "width": 349,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "month_dash_rpt",
+      "sheetId": "8b892042-21a0-4c97-a2ee-6fecb8aad4fe",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#month_dash_prep!id"
+        },
+        {
+          "columnName": "months",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(TOJSON(SORT(#month_dash_prep!months));\"11\";\"Nov\");\"12\";\"Dec\");\"3\";\"Mar\");\"4\";\"Apr\");\"5\";\"May\");\"6\";\"Jun\");\"7\";\"Jul\");\"8\";\"Aug\");\"9\";\"Sep\");\"10\";\"Oct\");\"1\";\"Jan\");\"2\";\"Feb\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "months",
+          "width": 349,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "month_commas_rpt",
+      "sheetId": "003ed537-02de-441d-80cb-82ff055f482c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "month_commas_rpt",
+      "filterTargetSheet": "month_commas_rpt",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "month",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "month",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "month",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(TOJSON(SORT(TOKENIZELIST(#pre_process!month;\",\")));\"\\\"\";\"\");\"11\";\"Nov\");\"12\";\"Dec\");\"3\";\"Mar\");\"4\";\"Apr\");\"5\";\"May\");\"6\";\"Jun\");\"7\";\"Jul\");\"8\";\"Aug\");\"9\";\"Sep\");\"10\";\"Oct\");\"1\";\"Jan\");\"2\";\"Feb\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "month",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "month",
+      "sheetId": "aa62d01c-1d12-4a12-8d97-9554327e43cf",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "unionSources": [
+          "month_step_rpt",
+          "month_dash_rpt",
+          "month_commas_rpt"
+        ]
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "day_of_week_step_prep",
+      "sheetId": "e8017f2a-0333-47ce-ad0a-52c7d5b5bdf0",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "day_of_week_step_prep",
+      "filterTargetSheet": "day_of_week_step_prep",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "day_of_week",
+          "filterExpression": "CONTAINS",
+          "value": "/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "day_of_week",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(#pre_process!day_of_week;\"\\\\*\";\"0\")"
+        },
+        {
+          "columnName": "day_of_week_tokens",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZELIST(#day_of_week;\"/\")"
+        },
+        {
+          "columnName": "start_day_of_week",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dINT(LISTELEMENT(#day_of_week_tokens;0))"
+        },
+        {
+          "columnName": "step",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dINT(LISTELEMENT(#day_of_week_tokens;1))"
+        },
+        {
+          "columnName": "days_in_week",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dEXPLODE_RANGE(#start_day_of_week;7)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "day_of_week",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "day_of_week_tokens",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "start_day_of_week",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "step",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "days_in_week",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "day_of_week_process",
+      "sheetId": "e779fde5-7881-443b-ace3-8ffa81075eeb",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#day_of_week_step_prep!id)"
+        },
+        {
+          "columnName": "steps",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBYBIN(#day_of_week_step_prep!days_in_week;#day_of_week_step_prep!step)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "steps",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "day_of_week_rpt",
+      "sheetId": "35305858-3919-4e7a-b39b-eabc16610207",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#day_of_week_process!id)"
+        },
+        {
+          "columnName": "day_of_week",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(TOJSON(UNIQUES(JSONTOLIST(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(TOJSON(SORT(GROUPCONCAT(#day_of_week_process!steps)));\"0|7\";\"Sun\");\"1\";\"Mon\");\"2\";\"Tue\");\"3\";\"Wed\");\"4\";\"Thu\");\"5\";\"Fri\");\"6\";\"Sat\"))));\"\\\"\";\"\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "day_of_week",
+          "width": 295,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "day_of_week_dash_prep",
+      "sheetId": "6a52b779-44eb-4919-8254-e29945be5161",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "day_of_week_dash_prep",
+      "filterTargetSheet": "day_of_week_dash_prep",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "day_of_week",
+          "filterExpression": "CONTAINS",
+          "value": "-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "day_of_week",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#pre_process!day_of_week"
+        },
+        {
+          "columnName": "day_of_week_tokens",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dTOKENIZELIST(#day_of_week;\"-\")"
+        },
+        {
+          "columnName": "days",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dRANGE(INT(LISTELEMENT(#day_of_week_tokens; 0));INT(LISTELEMENT(#day_of_week_tokens; 1)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "day_of_week",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "day_of_week_tokens",
+          "width": 179,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "days",
+          "width": 214,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "day_of_week_dash_rpt",
+      "sheetId": "1c41b9f3-16df-4c15-89a6-fe47c8d98a3d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#day_of_week_dash_prep!id"
+        },
+        {
+          "columnName": "days",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(TOJSON(SORT(#day_of_week_dash_prep!days));\"0|7\";\"Sun\");\"1\";\"Mon\");\"2\";\"Tue\");\"3\";\"Wed\");\"4\";\"Thu\");\"5\";\"Fri\");\"6\";\"Sat\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "days",
+          "width": 214,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "day_of_week_commas_rpt",
+      "sheetId": "b676105d-3035-4c01-bba9-a431c2e0ff09",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "day_of_week_commas_rpt",
+      "filterTargetSheet": "day_of_week_commas_rpt",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "day_of_week",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "day_of_week",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#pre_process!id"
+        },
+        {
+          "columnName": "day_of_week",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(REPLACEALL(TOJSON(SORT(TOKENIZELIST(#pre_process!day_of_week;\",\")));\"\\\"\";\"\");\"0|7\";\"Sun\");\"1\";\"Mon\");\"2\";\"Tue\");\"3\";\"Wed\");\"4\";\"Thu\");\"5\";\"Fri\");\"6\";\"Sat\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "day_of_week",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "day_of_week",
+      "sheetId": "4e276fa9-83c9-4956-9c38-4f2e642640a5",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "unionSources": [
+          "day_of_week_rpt",
+          "day_of_week_dash_rpt",
+          "day_of_week_commas_rpt"
+        ]
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "schedule_enriched",
+      "sheetId": "319f15f7-ea2f-4acf-afda-a6720733be47",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "MULTI_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "pre_process",
+            "sheet2": "min",
+            "joinColumns1": [
+              "id"
+            ],
+            "joinColumns2": [
+              "id"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "pre_process",
+            "sheet2": "hour",
+            "joinColumns1": [
+              "id"
+            ],
+            "joinColumns2": [
+              "id"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "pre_process",
+            "sheet2": "day_of_month",
+            "joinColumns1": [
+              "id"
+            ],
+            "joinColumns2": [
+              "id"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "pre_process",
+            "sheet2": "month",
+            "joinColumns1": [
+              "id"
+            ],
+            "joinColumns2": [
+              "id"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "pre_process",
+            "sheet2": "day_of_week",
+            "joinColumns1": [
+              "id"
+            ],
+            "joinColumns2": [
+              "id"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "pre_process": [
+            "id",
+            "expire_time_days",
+            "min_keep_count",
+            "pull_type",
+            "schedule",
+            "dap_file__id"
+          ],
+          "min": [
+            "mins"
+          ],
+          "hour": [
+            "hours"
+          ],
+          "day_of_month": [
+            "days"
+          ],
+          "month": [
+            "months"
+          ],
+          "day_of_week": [
+            "day_of_week"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "c5aaac2f134d60b26624feead517e04d",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "88b341734dbf9a139f6f49e6ac77afc5",
+          "name": "expire_time_days",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "bf685eca796ff997aeec4927a81bd4dc",
+          "name": "min_keep_count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9d1a6efc348c9b036c479214f6c9fce8",
+          "name": "pull_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8c7f7eb55d134ef6828ea92bb1dfdce6",
+          "name": "schedule",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "f09400d0cbec44dccc3b3e688df7c784",
+          "name": "dap_file__id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "f7982217b375381d5296fd4b77870c91",
+          "name": "mins",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8bb98a7d40244e6d5d9b8ed991608c6d",
+          "name": "hours",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8d07bf07e886546e89fbfbe152e7b2e7",
+          "name": "days",
+          "width": 504,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "efce1cf0a667e6d32d0001b94eb2581a",
+          "name": "months",
+          "width": 295,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "247ae1383286d34d8dd35e37150bdcfa",
+          "name": "day_of_week",
+          "width": 180,
+          "thousandSeparator": true
+        }
+      ]
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

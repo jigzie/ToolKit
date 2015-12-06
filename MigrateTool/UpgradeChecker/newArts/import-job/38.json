@@ -1,0 +1,61 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "4b04b15b-0f03-44ea-9240-cc85a127b316",
+    "path": "/Users/admin/Applications/Datameer Users Stats 1/Resources/WC.lnk",
+    "description": "WC for Health Check",
+    "name": "WC"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "73cdad4a-ede7-4402-8e27-c5193858e54f"
+    ],
+    "!query!": [
+      "select wc.id WbConfigId, wc.full_data_permission_fk \r\nfrom workbook_configuration wc"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer Users Stats 1/Resources/SystemDatabase.dst",
+    "uuid": "f4898f2a-49f8-4ce8-a461-f61aee477daf"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 5,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 103,
+      "acceptEmpty": false,
+      "name": "WbConfigId",
+      "origin": "WbConfigId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 104,
+      "acceptEmpty": false,
+      "name": "full_data_permission_fk",
+      "origin": "full_data_permission_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

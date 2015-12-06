@@ -1,0 +1,88 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "f5471821-c785-45a9-9a8d-d7a8b3392ec9",
+    "path": "/Users/admin/Applications/Datameer Users Stats/Resources/DJC.lnk",
+    "description": "DJC for Health Check",
+    "name": "DJC"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "4ce3459d-17be-4fd4-8348-fab4f16b0af1"
+    ],
+    "!query!": [
+      "select djc.id DapJobConfigId, djc.data_volume_size_by_license_period DataSize, djc.hadoop_properties ConfigHadoopProps,\r\n       djc.min_keep_count KeepCount, djc.dap_file__id \r\nfrom dap_job_configuration djc"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer Users Stats/Resources/SystemDatabase.dst",
+    "uuid": "9de09e27-e381-473c-9032-dccae37fec71"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 5,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 31,
+      "acceptEmpty": false,
+      "name": "DapJobConfigId",
+      "origin": "DapJobConfigId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 32,
+      "acceptEmpty": false,
+      "name": "DataSize",
+      "origin": "DataSize",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 33,
+      "acceptEmpty": true,
+      "name": "ConfigHadoopProps",
+      "origin": "ConfigHadoopProps",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 34,
+      "acceptEmpty": true,
+      "name": "KeepCount",
+      "origin": "KeepCount",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 35,
+      "acceptEmpty": false,
+      "name": "dap_file__id",
+      "origin": "dap_file__id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

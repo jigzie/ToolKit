@@ -1,0 +1,121 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "09e8941b-34d4-4c36-ae3c-0582f0602156",
+    "path": "/Users/admin/Applications/Facebook Social Stats/Resources/FBPostTypes.upl",
+    "description": "",
+    "name": "FBPostTypes"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "data.includes.header": [
+      "true"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "5340dabf-1d7d-4249-a902-fc9b03d48e0e"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "file": [
+      "/Users/hadoop/DM2144/fileuploads/60/FBPostTypes.csv"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "histogram.generation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "08eba90e-189d-402e-9e85-3662d5a587ce"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 179,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "type_id",
+      "origin": "0",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 180,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "description",
+      "origin": "1",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 181,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 182,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 183,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

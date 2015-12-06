@@ -1,0 +1,65 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "e3a4f941-fb1f-40ce-b647-d1fdad7c2bb5",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_fileupload_file_types.lnk",
+    "description": "",
+    "name": "MySQL_fileupload_file_types"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "a4043a94-ac5b-443e-bff3-7b3a652ccb14"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      "select df.extension,jcp.property_value from dap_file df\r\ninner join dap_job_configuration djc on djc.dap_file__id\u003ddf.id\r\nleft join job_configuration_property jcp on jcp.configuration_fk\u003ddjc.id and jcp.property_key\u003d\u0027fileType\u0027\r\nwhere df.extension\u003d\u0027UPLOAD_JOB_EXTENSION\u0027 and df.extension is not null and jcp.property_value is not null"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 241,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "ConsumerType",
+      "origin": "extension",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 242,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "FileType",
+      "origin": "property_value",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

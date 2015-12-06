@@ -1,0 +1,96 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10784,
+            "include": false,
+            "name": "id",
+            "origin": "id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10785,
+            "include": true,
+            "name": "name",
+            "origin": "name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10786,
+            "include": true,
+            "name": "value",
+            "origin": "value",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10787,
+            "include": false,
+            "name": "dasJobExecutionId",
+            "origin": "jobexecutionInfo.id",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10788,
+            "include": false,
+            "name": "dasJobExecutionStartTime",
+            "origin": "jobexecutionInfo.starttime",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "Datameer data from the property table.",
+        "name": "MySQL_property",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_property.lnk",
+        "uuid": "443e843a-44bd-416d-aebe-df7ae3d0ade5"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 1,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "GenericConfigurationImpl.temp-file-store": [
+            "2f7c5bbf-f63d-43d6-acf5-3d2e223545a4"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "tableName": [
+            "\u0027property\u0027"
+        ],
+        "jdbc.property.select.sql.action": [
+            "TABLE"
+        ],
+        "jdbc.property.table": [
+            "'property'"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

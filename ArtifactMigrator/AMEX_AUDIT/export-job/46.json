@@ -1,0 +1,42 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.FileDataSinkImpl",
+  "file": {
+    "uuid": "92bc87b4-60f4-4a0f-af4b-24a91a7b15a1",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Exports/MetricsResultsExport.exp",
+    "description": "",
+    "name": "MetricsResultsExport"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.debug.job.report-progress-interval\u003d60000\r\ndas.splitting.max-split-count\u003d1\r\nmapred.map.output.compression.codec\u003dorg.apache.hadoop.io.compress.GzipCodec\r\ndas.execution-framework\u003dLocal",
+  "connection": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_Logs_SSH",
+  "sheet": {
+    "name": "json_output",
+    "sheetId": "3657c23b-c057-4525-a0a0-fe595b991ece",
+    "workbook": {
+      "path": "/Users/admin/Applications/Datameer HUM V2/Exports/_04_CentralizedExport.wbk",
+      "uuid": "bc91804b-c08b-44c8-bbf2-e183ef6dde19"
+    }
+  },
+  "mappings": [
+    {
+      "name": "json",
+      "srcColumnIndex": 0,
+      "nullable": true
+    }
+  ],
+  "errorHandlingMode": "DROP_RECORD",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fileName": "/logs/%productId%_%env:companyName%_%env:Name%-v2-%year%%month%%day%_%hour%%min%.avro",
+  "confirmOverwrite": false,
+  "clearTargetDirectory": false,
+  "includeHeader": false,
+  "delimiterString": ",",
+  "quoteString": "\"",
+  "escapeString": "\\",
+  "characterEncoding": "UTF-8",
+  "exportFileType": "datameer.das.plugin.avro.AvroExportFileType"
+}

@@ -1,0 +1,65 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "8ffd3f65-5a53-4796-a71d-0a5934e26f78",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_file_type.lnk",
+    "description": "",
+    "name": "MySQL_file_type"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "b1f43d0c-4a51-4025-bef1-e8e59447e271"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      "select fds.export_file_type,ds.dap_file__id from data_store ds inner join data_sink_configuration dsc on ds.id\u003ddsc.connection_fk inner join file_data_sink fds on fds.id\u003ddsc.id"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 217,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "file_type",
+      "origin": "export_file_type",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 218,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dap_file_id",
+      "origin": "dap_file__id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

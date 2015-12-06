@@ -1,0 +1,85 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "c722062b-9499-4f08-bbfc-d86f6ed32c3e",
+    "path": "/Analytics/Workbooks/ZementisPlugin.wbk",
+    "description": "",
+    "name": "ZementisPlugin"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Zementis",
+      "sheetId": "639e9584-c6e9-4540-b0d8-dfdf473d88d3",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Data/FileUploads/Zementis.upl",
+        "uuid": "32f9096c-cbb8-4038-aa78-e4873051602d"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Sheet1",
+      "sheetId": "bab66e03-9b92-40a7-b364-460ccd7811f5",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "Sheet1",
+      "sortTargetSheet": "Sheet1",
+      "sortKeys": [
+        {
+          "column": "C",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "CLASS",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dCOPY(#Zementis!CLASS)"
+        },
+        {
+          "columnName": "B",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dIRIS_KM(#Zementis!SEPAL_LE;#Zementis!SEPAL_WI;#Zementis!PETAL_LE;#Zementis!PETAL_WI)"
+        },
+        {
+          "columnName": "C",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dCOMPARE(#CLASS;#B)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "CLASS",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "B",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "C",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

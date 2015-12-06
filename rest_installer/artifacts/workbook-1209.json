@@ -1,0 +1,722 @@
+{
+    "advancedSchedulingInUse": false,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_e_Garbage Collection Metrics",
+        "path": "/Administration/HUMv2/Reports/logs/_e_Garbage Collection Metrics.wbk",
+        "uuid": "2fdd642f-4eed-4388-902a-eec904c17586"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "cardinalities.generation": [
+            "true"
+        ],
+        "histograms.generation": [
+            "true"
+        ],
+        "minmaxmean.generation": [
+            "true"
+        ]
+    },
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "Label",
+                    "thousandSeparator": true,
+                    "width": 279
+                }
+            ],
+            "keep": false,
+            "name": "Metrics_Jamon",
+            "referencedSheet": {
+                "name": "Metrics_Jamon",
+                "sheetId": "df910fe1-0a9a-4ba5-b02b-93dd9c4397fb",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/base/_02_40_Metrics_Jamon.wbk",
+                    "uuid": "206dadc1-9ee4-4004-a5e8-8cc54ac98b5a"
+                }
+            },
+            "sheetId": "852629be-b5fc-424d-97e8-b928e381be73",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "LogTime",
+                    "thousandSeparator": true,
+                    "width": 351
+                },
+                {
+                    "columnId": "1",
+                    "name": "Label",
+                    "thousandSeparator": true,
+                    "width": 559
+                },
+                {
+                    "columnId": "2",
+                    "name": "Units",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Hits",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Avg",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "Total",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "StdDev",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "Min",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "Max",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "Active",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "AvgActive",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "MaxActive",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "CollectionTime",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Label",
+                    "filterExpression": "CONTAINS",
+                    "type": "CONSTANT",
+                    "value": "garbage_collection_metrics",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "GarbageCollectionMetrics",
+            "filterTargetSheet": "GarbageCollectionMetrics",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "LogTime",
+                    "formulaString": "=#Metrics_Jamon!LogTime"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Label",
+                    "formulaString": "=#Metrics_Jamon!Label"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Units",
+                    "formulaString": "=#Metrics_Jamon!Units"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Hits",
+                    "formulaString": "=#Metrics_Jamon!Count"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Avg",
+                    "formulaString": "=#Metrics_Jamon!Average"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "Total",
+                    "formulaString": "=#Metrics_Jamon!Total"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "StdDev",
+                    "formulaString": "=#Metrics_Jamon!StandardDev"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "Min",
+                    "formulaString": "=#Metrics_Jamon!Min"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "Max",
+                    "formulaString": "=#Metrics_Jamon!Max"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "Active",
+                    "formulaString": "=#Metrics_Jamon!Active"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "AvgActive",
+                    "formulaString": "=#Metrics_Jamon!AverageActive"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "MaxActive",
+                    "formulaString": "=#Metrics_Jamon!MaxActive"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 12,
+                    "columnName": "CollectionTime",
+                    "formulaString": "=#Metrics_Jamon!CollectionTime"
+                }
+            ],
+            "keep": false,
+            "name": "GarbageCollectionMetrics",
+            "nextColumnId": 13,
+            "sheetId": "e9194486-51d3-4fc6-a895-b66168d102d0",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "LogTime",
+                    "sortOrder": "DESC"
+                },
+                {
+                    "column": "Label",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "GarbageCollectionMetrics",
+            "sortTargetSheet": "GarbageCollectionMetrics"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "LogTime",
+                    "thousandSeparator": true,
+                    "width": 351
+                },
+                {
+                    "columnId": "1",
+                    "name": "Label",
+                    "thousandSeparator": true,
+                    "width": 559
+                },
+                {
+                    "columnId": "2",
+                    "name": "Units",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Hits",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Avg",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "Total",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "StdDev",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "Min",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "Max",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "Active",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "AvgActive",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "MaxActive",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "CollectionTime",
+                    "thousandSeparator": true,
+                    "width": 185
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Units",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "count",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "GarbageCollectionCount",
+            "filterTargetSheet": "GarbageCollectionCount",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "LogTime",
+                    "formulaString": "=#GarbageCollectionMetrics!LogTime"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Label",
+                    "formulaString": "=#GarbageCollectionMetrics!Label"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Units",
+                    "formulaString": "=#GarbageCollectionMetrics!Units"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Hits",
+                    "formulaString": "=#GarbageCollectionMetrics!Hits"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Avg",
+                    "formulaString": "=#GarbageCollectionMetrics!Avg"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "Total",
+                    "formulaString": "=#GarbageCollectionMetrics!Total"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "StdDev",
+                    "formulaString": "=#GarbageCollectionMetrics!StdDev"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "Min",
+                    "formulaString": "=#GarbageCollectionMetrics!Min"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "Max",
+                    "formulaString": "=#GarbageCollectionMetrics!Max"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "Active",
+                    "formulaString": "=#GarbageCollectionMetrics!Active"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "AvgActive",
+                    "formulaString": "=#GarbageCollectionMetrics!AvgActive"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "MaxActive",
+                    "formulaString": "=#GarbageCollectionMetrics!MaxActive"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 12,
+                    "columnName": "CollectionTime",
+                    "formulaString": "=#GarbageCollectionMetrics!CollectionTime"
+                }
+            ],
+            "keep": false,
+            "name": "GarbageCollectionCount",
+            "nextColumnId": 13,
+            "sheetId": "f1f714b1-77cc-4d37-8bc4-e09c8935a5e9",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "LogTime",
+                    "thousandSeparator": true,
+                    "width": 351
+                },
+                {
+                    "columnId": "1",
+                    "name": "Label",
+                    "thousandSeparator": true,
+                    "width": 559
+                },
+                {
+                    "columnId": "2",
+                    "name": "Units",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Hits",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Avg",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "Total",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "StdDev",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "Min",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "Max",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "Active",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "AvgActive",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "MaxActive",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "12",
+                    "name": "CollectionTime",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Units",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "ms.",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "GarbageCollectionTime",
+            "filterTargetSheet": "GarbageCollectionTime",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "LogTime",
+                    "formulaString": "=#GarbageCollectionMetrics!LogTime"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Label",
+                    "formulaString": "=#GarbageCollectionMetrics!Label"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Units",
+                    "formulaString": "=#GarbageCollectionMetrics!Units"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Hits",
+                    "formulaString": "=#GarbageCollectionMetrics!Hits"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Avg",
+                    "formulaString": "=#GarbageCollectionMetrics!Avg"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "Total",
+                    "formulaString": "=#GarbageCollectionMetrics!Total"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "StdDev",
+                    "formulaString": "=#GarbageCollectionMetrics!StdDev"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "Min",
+                    "formulaString": "=#GarbageCollectionMetrics!Min"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "Max",
+                    "formulaString": "=#GarbageCollectionMetrics!Max"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "Active",
+                    "formulaString": "=#GarbageCollectionMetrics!Active"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "AvgActive",
+                    "formulaString": "=#GarbageCollectionMetrics!AvgActive"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "MaxActive",
+                    "formulaString": "=#GarbageCollectionMetrics!MaxActive"
+                },
+                {
+                    "columnId": "12",
+                    "columnIndex": 12,
+                    "columnName": "CollectionTime",
+                    "formulaString": "=#GarbageCollectionMetrics!CollectionTime"
+                }
+            ],
+            "keep": false,
+            "name": "GarbageCollectionTime",
+            "nextColumnId": 13,
+            "sheetId": "cb52b7bd-3bee-4e54-881c-cc114ad0ebcc",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 144
+                },
+                {
+                    "columnId": "1",
+                    "name": "GcDailyCount",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "GcMaxPerMinute",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=GROUPBY(FORMATDATE(#GarbageCollectionCount!CollectionTime;\"yyyy-MM-dd\"))"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "GcDailyCount",
+                    "formulaString": "=GROUPSUM(#GarbageCollectionCount!Total)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "GcMaxPerMinute",
+                    "formulaString": "=GROUPMAX(#GarbageCollectionCount!Max)"
+                }
+            ],
+            "keep": true,
+            "name": "GarbageCollectionCountByDay",
+            "nextColumnId": 3,
+            "sheetId": "79072c79-9c96-4cc2-9e06-7354ef3f6cf3",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Day",
+                    "sortOrder": "ASC"
+                }
+            ],
+            "sortSourceSheet": "GarbageCollectionCountByDay",
+            "sortTargetSheet": "GarbageCollectionCountByDay"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "GcDailyTime",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "GcDailyMaxTimePerMinute",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "TimeUnits",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=GROUPBY(FORMATDATE(#GarbageCollectionTime!CollectionTime;\"yyyy-MM-dd\"))"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 1,
+                    "columnName": "TimeUnits",
+                    "formulaString": "=\"minutes\""
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 2,
+                    "columnName": "GcDailyTime",
+                    "formulaString": "=GROUPSUM(#GarbageCollectionTime!Total/(1000*60))"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 3,
+                    "columnName": "GcDailyMaxTimePerMinute",
+                    "formulaString": "=GROUPMAX(#GarbageCollectionTime!Max/(1000*60))"
+                }
+            ],
+            "keep": true,
+            "name": "GarbageCollectionTimeByDay",
+            "nextColumnId": 4,
+            "sheetId": "d31e8211-29a8-43fc-99d0-383d66d31e04",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Day",
+                    "sortOrder": "ASC"
+                }
+            ],
+            "sortSourceSheet": "GarbageCollectionTimeByDay",
+            "sortTargetSheet": "GarbageCollectionTimeByDay"
+        }
+    ],
+    "version": "4.5.0"
+}

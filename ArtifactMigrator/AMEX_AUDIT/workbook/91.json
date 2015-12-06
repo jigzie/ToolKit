@@ -1,0 +1,90 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "3ceaf048-afba-40d7-85c7-07189ec19611",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_06_dap_vol.wbk",
+    "description": "",
+    "name": "_00_06_dap_vol"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_dap_vol_src",
+      "sheetId": "9fcb129c-7134-4357-9f95-fb63b4c6f48e",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_dap_vol.lnk",
+        "uuid": "923f31c3-ea4a-4201-a192-90e93386cdad"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_dap_vol",
+      "sheetId": "07f5ba3c-c458-4536-887a-0e2e704a84a0",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_dap_vol_src!id"
+        },
+        {
+          "columnName": "day",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_dap_vol_src!day"
+        },
+        {
+          "columnName": "job_conf_id",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_dap_vol_src!job_conf_id"
+        },
+        {
+          "columnName": "volume",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_dap_vol_src!volume"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "job_conf_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "volume",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

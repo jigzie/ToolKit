@@ -1,0 +1,31 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataBaseConnection",
+  "file": {
+    "uuid": "3c81ba86-ffc4-41fb-b60e-2fc5f07862bf",
+    "path": "/Users/admin/Datameer Consumption/Connections/DatameerDatabase.dst",
+    "description": "Datameer database (dap) connection using user/password for READ-ONLY (Import) Connection.",
+    "name": "DatameerDatabase"
+  },
+  "typeId": "das.JdbcDataStoreType",
+  "properties": {
+    "user_name": [
+      "dap"
+    ],
+    "password": [
+      "SECURE:0:CKTT7ZbxXJgn8rRal/fxyw\u003d\u003d"
+    ],
+    "key.connectionUrl": [
+      "jdbc:mysql://localhost:3306/dap_kabam"
+    ],
+    "dataStoreTemplate": [
+      "false"
+    ],
+    "dataStoreUsage": [
+      "IMPORT"
+    ]
+  },
+  "dbType": {
+    "name": "MySQL"
+  }
+}

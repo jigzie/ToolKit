@@ -1,0 +1,138 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "e7123a69-812d-42c6-83af-c8c8f630fa32",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_Workbook_Config_Stats.lnk",
+    "description": "Workbook configuration Statistics",
+    "name": "MySQL_Workbook_Config_Stats"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "bc771e66-2756-43b1-a698-26f43596bc5a"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      "select id, workbook_fk, filter_fk, sort_fk, external_sheet__id, sheet_type, partition_definition, partition_selector, keep from sheet where workbook_fk is not null"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "empty.value.placeholders": [
+      "null"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 154,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "SheetID",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 155,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "WorkbookID",
+      "origin": "workbook_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 156,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "FilterID",
+      "origin": "filter_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 157,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "SortID",
+      "origin": "sort_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 158,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "ExternalSheetID",
+      "origin": "external_sheet__id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 159,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "SheetType",
+      "origin": "sheet_type",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 160,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "PartitionDefinition",
+      "origin": "partition_definition",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 161,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "PartitionSelector",
+      "origin": "partition_selector",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 162,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "Keep",
+      "origin": "keep",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

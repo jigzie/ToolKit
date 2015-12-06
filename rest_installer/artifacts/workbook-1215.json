@@ -1,0 +1,681 @@
+{
+    "advancedSchedulingInUse": false,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_f_Job Scheduler",
+        "path": "/Administration/HUMv2/Reports/logs/_f_Job Scheduler.wbk",
+        "uuid": "79c68a50-969a-4d60-8b4d-ca78bb1274eb"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "cardinalities.generation": [
+            "true"
+        ],
+        "histograms.generation": [
+            "true"
+        ],
+        "minmaxmean.generation": [
+            "true"
+        ]
+    },
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "Event",
+                    "thousandSeparator": true,
+                    "width": 214
+                },
+                {
+                    "columnId": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 150
+                },
+                {
+                    "columnId": "1",
+                    "thousandSeparator": true,
+                    "width": 205
+                }
+            ],
+            "keep": false,
+            "name": "Metrics",
+            "referencedSheet": {
+                "name": "Metrics",
+                "sheetId": "73f9c80d-003c-48ff-a1b3-bbe3e7af6707",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/base/_02_30_Metrics.wbk",
+                    "uuid": "53590388-9038-4bfe-b43a-5ab0060f6c90"
+                }
+            },
+            "sheetId": "f24c302a-21f7-4d67-b26a-c59239bdf93c",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "MinTime",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "MaxTime",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "AverageTime",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Time",
+                    "formulaString": "=GROUPBY(FORMATDATE(#CompleteHousekeepingData!Timestamp;\"yyyy-MM-dd\"))"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "MinTime",
+                    "formulaString": "=GROUPMIN(#CompleteHousekeepingData!ms)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "MaxTime",
+                    "formulaString": "=GROUPMAX(#CompleteHousekeepingData!ms)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "AverageTime",
+                    "formulaString": "=GROUPAVERAGE(#CompleteHousekeepingData!ms)"
+                }
+            ],
+            "keep": true,
+            "name": "CompleteHousekeeping",
+            "nextColumnId": 4,
+            "sheetId": "33b4830a-01a2-42b9-a210-9b968b5a3de3",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Time",
+                    "sortOrder": "ASC"
+                }
+            ],
+            "sortSourceSheet": "CompleteHousekeeping",
+            "sortTargetSheet": "CompleteHousekeeping"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "Event",
+                    "thousandSeparator": true,
+                    "width": 214
+                },
+                {
+                    "columnId": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 150
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Event",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "job-scheduler-complete-housekeeping",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "Metrics",
+            "filterTargetSheet": "CompleteHousekeepingData",
+            "keep": false,
+            "name": "CompleteHousekeepingData",
+            "sheetId": "a1c077ef-61b2-4061-9c39-0f3e12338e80",
+            "sheetType": "das.internal.FilterSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Event",
+                    "thousandSeparator": true,
+                    "width": 233
+                },
+                {
+                    "columnId": "2",
+                    "name": "ms",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Value2",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Value3",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Event",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "job-preparing-submission",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "JobPreparingSubmission",
+            "filterTargetSheet": "JobPreparingSubmission",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Metrics!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Event",
+                    "formulaString": "=#Metrics!Event"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ms",
+                    "formulaString": "=#Metrics!ms"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Value2",
+                    "formulaString": "=#Metrics!Value2"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Value3",
+                    "formulaString": "=#Metrics!Value3"
+                }
+            ],
+            "keep": true,
+            "name": "JobPreparingSubmission",
+            "nextColumnId": 5,
+            "sheetId": "7e6ac40a-4667-417b-9d24-24b575b52331",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Time",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "2",
+                    "decimalDigits": 1,
+                    "name": "TimeInMs",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Time",
+                    "formulaString": "=GROUPBY(FORMATDATE(#JobPreparingSubmission!Timestamp;\"yyyy-MM-dd\"))"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "TimeInMs",
+                    "formulaString": "=GROUPAVERAGE(#JobPreparingSubmission!Value2)"
+                }
+            ],
+            "keep": true,
+            "name": "PreparingSubmissionTimeline",
+            "nextColumnId": 3,
+            "sheetId": "f1bc7e7c-07fc-4467-b3a5-2d681011878c",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 150
+                },
+                {
+                    "columnId": "1",
+                    "name": "Configuration",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Duration",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "filterArguments": [
+                {
+                    "filterExpression": "FORMULA",
+                    "type": "ADVANCED_FORMULA",
+                    "value": "#Timestamp >= TODAY()-7d",
+                    "valueStatic": false
+                }
+            ],
+            "filterSourceSheet": "PreparingSubmissionLastWeek",
+            "filterTargetSheet": "PreparingSubmissionLastWeek",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#JobPreparingSubmission!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Configuration",
+                    "formulaString": "=#JobPreparingSubmission!ms"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Duration",
+                    "formulaString": "=#JobPreparingSubmission!Value2"
+                }
+            ],
+            "keep": false,
+            "name": "PreparingSubmissionLastWeek",
+            "nextColumnId": 3,
+            "sheetId": "7a8c3b64-0a51-44b0-869d-985366a86330",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Configuration",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "1",
+                    "decimalDigits": 1,
+                    "name": "TimeInSeconds",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Configuration",
+                    "formulaString": "=GROUPBY(#PreparingSubmissionLastWeek!Configuration)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "TimeInSeconds",
+                    "formulaString": "=GROUPAVERAGE(#PreparingSubmissionLastWeek!Duration)/1s"
+                }
+            ],
+            "keep": true,
+            "name": "Top10SlowestPreparing",
+            "nextColumnId": 2,
+            "sheetId": "2498f38b-95fb-41ba-9437-1f909a4dc698",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "TimeInSeconds",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "Top10SlowestPreparing",
+            "sortTargetSheet": "Top10SlowestPreparing",
+            "topN": 10
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 150
+                },
+                {
+                    "columnId": "1",
+                    "name": "Event",
+                    "thousandSeparator": true,
+                    "width": 214
+                },
+                {
+                    "columnId": "2",
+                    "name": "ms",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Value2",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Event",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "mark-obsolete-data-for-deletion",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "MarkObsoleteData",
+            "filterTargetSheet": "MarkObsoleteData",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Metrics!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Event",
+                    "formulaString": "=#Metrics!Event"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ms",
+                    "formulaString": "=#Metrics!ms"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Value2",
+                    "formulaString": "=#Metrics!Value2"
+                }
+            ],
+            "keep": false,
+            "name": "MarkObsoleteData",
+            "nextColumnId": 4,
+            "sheetId": "c27f5112-d01b-4527-812f-4fad5434a2e7",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "1",
+                    "decimalDigits": 1,
+                    "name": "Average",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Max",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=GROUPBY(FORMATDATE(#MarkObsoleteData!Timestamp;\"yyyy-MM-dd\"))"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Average",
+                    "formulaString": "=GROUPAVERAGE(#MarkObsoleteData!Value2)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Max",
+                    "formulaString": "=GROUPMAX(#MarkObsoleteData!Value2)"
+                }
+            ],
+            "keep": true,
+            "name": "MarkObsoleteDataPerDay",
+            "nextColumnId": 3,
+            "sheetId": "144e5fd0-c2fb-46c0-821d-395b3cf785af",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Day",
+                    "sortOrder": "ASC"
+                }
+            ],
+            "sortSourceSheet": "MarkObsoleteDataPerDay",
+            "sortTargetSheet": "MarkObsoleteDataPerDay"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Configuration",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "1",
+                    "decimalDigits": 1,
+                    "name": "AverageTime",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Configuration",
+                    "formulaString": "=GROUPBY(#MarkObsoleteData!ms)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "AverageTime",
+                    "formulaString": "=GROUPAVERAGE(#MarkObsoleteData!Value2)"
+                }
+            ],
+            "keep": true,
+            "name": "Top10SlowestMarkObsoleteData",
+            "nextColumnId": 2,
+            "sheetId": "108f1af6-41a8-4177-8ab1-af780d0a9bae",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "AverageTime",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "Top10SlowestMarkObsoleteData",
+            "sortTargetSheet": "Top10SlowestMarkObsoleteData",
+            "topN": 10
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 150
+                },
+                {
+                    "columnId": "1",
+                    "name": "Event",
+                    "thousandSeparator": true,
+                    "width": 214
+                },
+                {
+                    "columnId": "2",
+                    "name": "ms",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Event",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "JobScheduler-busy-ratio",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "BusyRatio",
+            "filterTargetSheet": "BusyRatio",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Metrics!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Event",
+                    "formulaString": "=#Metrics!Event"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ms",
+                    "formulaString": "=#Metrics!ms"
+                }
+            ],
+            "keep": false,
+            "name": "BusyRatio",
+            "nextColumnId": 3,
+            "sheetId": "40816d18-f16c-44e7-a71e-c8e5955de8cc",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "AverageBusyRatio",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "AverageIdleRatio",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=GROUPBY(FORMATDATE(#BusyRatio!Timestamp;\"yyyy-MM-dd\"))"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "AverageBusyRatio",
+                    "formulaString": "=GROUPAVERAGE(#BusyRatio!ms)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "AverageIdleRatio",
+                    "formulaString": "=1-#BusyRatioPerDay!AverageBusyRatio"
+                }
+            ],
+            "keep": true,
+            "name": "BusyRatioPerDay",
+            "nextColumnId": 4,
+            "sheetId": "9a7668fc-2bdf-4a62-b6c4-95ca52250aa0",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Day",
+                    "sortOrder": "ASC"
+                }
+            ],
+            "sortSourceSheet": "BusyRatioPerDay",
+            "sortTargetSheet": "BusyRatioPerDay"
+        }
+    ],
+    "version": "4.5.0"
+}

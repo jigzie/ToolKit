@@ -1,0 +1,85 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10714,
+            "include": true,
+            "name": "ConnectionType",
+            "origin": "type_id",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10715,
+            "include": true,
+            "name": "JDBC",
+            "origin": "name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10716,
+            "include": true,
+            "name": "ConsumerType",
+            "origin": "extension",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10717,
+            "include": true,
+            "name": "FileType",
+            "origin": "property_value",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "",
+        "name": "MySQL_import_file_types",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_import_file_types.lnk",
+        "uuid": "052c4991-a1f2-41fb-ade5-9eb022044647"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            "select ds.type_id,dd.name,df2.extension,jcp.property_value from file_dependency fd\r\ninner join dap_file df1 on df1.id=fd.dependency_file_id and df1.extension='DATA_STORE_EXTENSION'\r\ninner join dap_file df2 on df2.id=fd.source_file_id and (df2.extension='IMPORT_JOB_EXTENSION' or df2.extension='IMPORT_LINK_JOB_EXTENSION')\r\ninner join data_store ds on ds.dap_file__id=df1.id\r\nleft join db_driver dd on ds.db_type_fk=dd.id\r\ninner join dap_job_configuration djc on djc.dap_file__id=df2.id\r\nleft join job_configuration_property jcp on jcp.configuration_fk=djc.id and jcp.property_key='fileType'"
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "a4043a94-ac5b-443e-bff3-7b3a652ccb14"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ],
+        "tableName": [
+            "!query!"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

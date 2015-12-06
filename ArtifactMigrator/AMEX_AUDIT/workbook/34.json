@@ -1,0 +1,174 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "96930828-6bb3-45df-a3d4-ed6786aad929",
+    "path": "/Examples/Hello World/Solution/AMEX_Permission_My Workbook.wbk",
+    "description": "STEP 2 of the \"Hello World\" tutorial.\n\nFor more information, please visit: http://datameer.com/documentation/display/DAS20/Getting+Started",
+    "name": "AMEX_Permission_My Workbook"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MyUpload",
+      "sheetId": "8efc9fed-8213-4daa-bfb9-9eec5861e4c9",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Examples/Hello World/Solution/My Upload.upl",
+        "uuid": "6029f886-2430-4285-9695-90e5a650adea"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Dup",
+      "sheetId": "9daeef1d-22c6-45cc-8417-d01aea2cf99d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MyUpload!Name"
+        },
+        {
+          "columnName": "Age",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MyUpload!Age"
+        },
+        {
+          "columnName": "City",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MyUpload!City"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Age",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "City",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "UnionSheet1",
+      "sheetId": "80db2430-53f1-43e0-9788-ffebbe17ba02",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "unionSources": [
+          "MyUpload",
+          "Dup"
+        ]
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "FilterSheet",
+      "sheetId": "1098f44d-360a-4242-9459-4793d7719db2",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "FilterSheet",
+      "filterTargetSheet": "FilterSheet",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Age",
+          "filterExpression": "GREATER",
+          "value": "20",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#UnionSheet1!Name"
+        },
+        {
+          "columnName": "Age",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#UnionSheet1!Age"
+        },
+        {
+          "columnName": "City",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#UnionSheet1!City"
+        },
+        {
+          "columnName": "D",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d\"{\\\"key\\\":\\\"value\\\",\\\"key\\\":\\\"value1\\\"}\""
+        },
+        {
+          "columnName": "E",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dJSON_VALUE(#D;\"key\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Age",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "City",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "D",
+          "width": 214,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "E",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    }
+  ],
+  "advancedSchedulingInUse": false,
+  "errorHandlingMode": "IGNORE"
+}

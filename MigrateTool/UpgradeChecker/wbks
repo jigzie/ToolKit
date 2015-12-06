@@ -1,0 +1,30 @@
+[
+,{
+  "uuid": "79bb62bc-3795-49b4-b892-298228a45bd8",
+  "path": "/Datameer Consumption Stats/Resources/Wbks_Volume.wbk",
+  "description": "Datameer Volume Consumption Analysis",
+  "name": "Wbks_Volume",
+  "id": 7
+}
+,{
+  "uuid": "e4fdaeca-1a1f-458c-94f5-b3d36ad85a5e",
+  "path": "/Datameer Consumption Stats/Resources/Top10_DataIngestion_Points.wbk",
+  "description": "",
+  "name": "Top10_DataIngestion_Points",
+  "id": 10
+}
+,{
+  "uuid": "cbbf998f-347f-4692-9da3-dd56421cb3f2",
+  "path": "/Datameer Consumption Stats/Resources/DM_Top5_UserIngestions.wbk",
+  "description": "",
+  "name": "DM_Top5_UserIngestions",
+  "id": 16
+}
+,{
+  "uuid": "edaa3b42-0c8f-48ce-8948-859470938a4a",
+  "path": "/Datameer Consumption Stats/Resources/DM_Table.wbk",
+  "description": "",
+  "name": "DM_Table",
+  "id": 17
+}
+]

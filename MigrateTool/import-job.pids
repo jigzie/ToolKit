@@ -1,0 +1,40 @@
+{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/ImportJobs/DataVolumeSummary.imp\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/ImportJobs/Permissions.lnk\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/ImportJobs/GroupPermission.imp\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/ImportJobs/DapJobConfiguration.imp\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/FileUploads/Zementis.upl\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/FileUploads/Citi Erkin.upl\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/FileUploads/UserData.upl\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/FileUploads/Citi Erkin w comments.upl\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Name \u002793af603a-ffa9-477b-8288-22d387ab4223\u0027 contains invalid characters. Allowed characters are a-z, A-Z, 0-9, \u0027_\u0027, \u0027 \u0027."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/FileUploads/Temp.upl\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/FileUploads/SalesData.upl\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/FileUploads/AmericanTimeSpent.upl\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/ImportJobs/DapFile.imp\u0027 already exists."
+}

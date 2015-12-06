@@ -1,0 +1,52 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.FileDataSinkImpl",
+  "file": {
+    "uuid": "de8e154d-aa7a-47e5-8992-625949c04656",
+    "path": "/Examples/Hello World/Solution/ExportJob_CSV.exp",
+    "description": "",
+    "name": "ExportJob_CSV"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "connection": "/Data/Connections/Datameer server filesystem",
+  "sheet": {
+    "name": "UnionSheet1",
+    "sheetId": "80db2430-53f1-43e0-9788-ffebbe17ba02",
+    "workbook": {
+      "path": "/Examples/Hello World/Solution/My Workbook.wbk",
+      "uuid": "bc0300ac-e8b2-459d-8a2e-d16d8db7584e"
+    }
+  },
+  "mappings": [
+    {
+      "name": "Name",
+      "srcColumnIndex": 0,
+      "nullable": true
+    },
+    {
+      "name": "Age",
+      "srcColumnIndex": 1,
+      "nullable": true
+    },
+    {
+      "name": "City",
+      "srcColumnIndex": 2,
+      "nullable": true
+    }
+  ],
+  "errorHandlingMode": "DROP_RECORD",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fileName": "idn/home/userdata/UserStory1/result_%date%",
+  "confirmOverwrite": false,
+  "clearTargetDirectory": false,
+  "includeHeader": true,
+  "delimiterString": ",",
+  "quoteString": "\"",
+  "escapeString": "\\",
+  "characterEncoding": "UTF-8",
+  "exportFileType": "datameer.dap.sdk.exportjob.internal.CsvExportFileType"
+}

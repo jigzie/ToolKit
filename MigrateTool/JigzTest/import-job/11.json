@@ -1,0 +1,85 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "3ebceaab-c10a-4725-9e95-d5a479ef0272",
+    "path": "/Data/ImportJobs/Permissions.lnk",
+    "description": "Permission: Datalink to test the high-water mark",
+    "name": "Permissions"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "3e1675f2-f34f-417e-ad12-f0686867d02e"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      ""
+    ],
+    "tableName": [
+      "\u0027permission\u0027"
+    ],
+    "orderColumn": [
+      "id"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Data/Connections/Dap4120.dst",
+    "uuid": "1412c847-b9a7-4686-84c7-fd5caebd9a20"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 72,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 73,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "other_permission_bits",
+      "origin": "other_permission_bits",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 74,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "owner",
+      "origin": "owner",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 75,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "shared",
+      "origin": "shared",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

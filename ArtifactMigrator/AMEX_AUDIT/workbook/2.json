@@ -1,0 +1,132 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "67c7ed45-774a-4010-8216-b380a2108fc7",
+    "path": "/Examples/Hello World/Solution/Copy_of_My Workbook.wbk",
+    "description": "STEP 2 of the \"Hello World\" tutorial.\n\nFor more information, please visit: http://datameer.com/documentation/display/DAS20/Getting+Started",
+    "name": "Copy_of_My Workbook"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MyUpload",
+      "sheetId": "8efc9fed-8213-4daa-bfb9-9eec5861e4c9",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Examples/Hello World/Solution/My Upload.upl",
+        "uuid": "6029f886-2430-4285-9695-90e5a650adea"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "FilterByChicago",
+      "sheetId": "813ff37c-9381-4539-9126-7a16db547129",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": true,
+      "filterSourceSheet": "MyUpload",
+      "filterTargetSheet": "FilterByChicago",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "City",
+          "filterExpression": "TEXT_EQUALS",
+          "value": "Chicago",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "Dup",
+      "sheetId": "9daeef1d-22c6-45cc-8417-d01aea2cf99d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MyUpload!Name"
+        },
+        {
+          "columnName": "Age",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MyUpload!Age"
+        },
+        {
+          "columnName": "City",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MyUpload!City"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Age",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "City",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "Joined",
+      "sheetId": "4f1f8e6b-5e66-431c-8c2d-30d9e4a59a73",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "MyUpload",
+            "sheet2": "Dup",
+            "joinColumns1": [
+              "Name"
+            ],
+            "joinColumns2": [
+              "Name"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "MyUpload": [
+            "Name",
+            "Age",
+            "City"
+          ],
+          "Dup": [
+            "Name",
+            "Age",
+            "City"
+          ]
+        }
+      },
+      "columnStyles": []
+    }
+  ],
+  "advancedSchedulingInUse": false,
+  "errorHandlingMode": "IGNORE"
+}

@@ -1,0 +1,90 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "d9ac7ae5-0aa4-488b-a99e-1790c70ebcb4",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_12_export_file_types.wbk",
+    "description": "",
+    "name": "_00_12_export_file_types"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_export_file_types_src",
+      "sheetId": "e74fad37-b39a-4755-b86e-63ab6aaee3a0",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_export_file_types.lnk",
+        "uuid": "5610f055-e046-4c9d-af0d-a93a8542c4f5"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_export_file_types",
+      "sheetId": "10950f6d-312f-43a1-aab1-eb85ae9a9aa1",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ConnectionType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_export_file_types_src!ConnectionType"
+        },
+        {
+          "columnName": "JDBC",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_export_file_types_src!JDBC"
+        },
+        {
+          "columnName": "ConsumerType",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_export_file_types_src!ConsumerType"
+        },
+        {
+          "columnName": "FileType",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_export_file_types_src!FileType"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConnectionType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "JDBC",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ConsumerType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "FileType",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

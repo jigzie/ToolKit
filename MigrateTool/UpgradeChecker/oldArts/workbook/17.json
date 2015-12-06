@@ -1,0 +1,373 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "edaa3b42-0c8f-48ce-8948-859470938a4a",
+    "path": "/Datameer Consumption Stats/Resources/DM_Table.wbk",
+    "description": "",
+    "name": "DM_Table"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "sheets": [
+    {
+      "name": "DM_User_Group_Info",
+      "sheetId": "b1e9d628-46f1-4934-9ccd-525304dfedc2",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Datameer Consumption Stats/Resources/DM_User_Group_Info.lnk",
+        "uuid": "43fb6ac4-aa23-41d6-9694-ada3107e5bf5"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "DM_Owner_Volume",
+      "sheetId": "87bffe4f-bb35-49ca-a4b3-a76746ffc313",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Datameer Consumption Stats/Resources/DM_Owner_Volume.lnk",
+        "uuid": "02d5d356-510d-408b-922b-9c21102836af"
+      },
+      "columnStyles": [
+        {
+          "columnId": "VOLUME",
+          "width": 204,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "DM_Owner_Wbk_Sheet_Stats",
+      "sheetId": "3acbe329-3c2f-4bda-839c-1d9eb0f2e3f9",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Datameer Consumption Stats/Resources/DM_Owner_Wbk_Sheet_Stats.lnk",
+        "uuid": "d8fcf87f-ceea-48a5-b98c-428809753a6d"
+      },
+      "columnStyles": [
+        {
+          "columnId": "DataStatistics",
+          "width": 510,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Joined",
+      "sheetId": "16ed0eb0-7cb5-43f6-86dd-2706fa641124",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "MULTI_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "FULL_OUTER",
+            "sheet1": "DM_User_Group_Info",
+            "sheet2": "DM_Owner_Volume",
+            "joinColumns1": [
+              "UserName"
+            ],
+            "joinColumns2": [
+              "OWNER"
+            ]
+          },
+          {
+            "joinType": "FULL_OUTER",
+            "sheet1": "DM_Owner_Wbk_Sheet_Stats",
+            "sheet2": "DM_User_Group_Info",
+            "joinColumns1": [
+              "owner"
+            ],
+            "joinColumns2": [
+              "UserName"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "DM_Owner_Volume": [
+            "OWNER",
+            "VOLUME"
+          ],
+          "DM_User_Group_Info": [
+            "UserName",
+            "GroupName"
+          ],
+          "DM_Owner_Wbk_Sheet_Stats": [
+            "owner",
+            "WorkbookName"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "494600541a8a50fc6afd99ca11f1cc73",
+          "width": 194,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "c540289cee9baa9edfa7aaafc02f263a",
+          "width": 186,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "a9e0fda749a9119b17a6cd4f679f1d96",
+          "width": 225,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "c61aca8601c935e69b2305498665fd95",
+          "width": 165,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1eea27d89cfb36398db122bc46a3aedd",
+          "width": 216,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8ff0b2e29d94107e2e9b94ec4d78eb73",
+          "width": 330,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "44d6af239167ec1adab1e6a008ce413e",
+          "width": 239,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "e891c15611e7fe5d781a41a6966087a9",
+          "width": 200,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Joined_Cleanup",
+      "sheetId": "9815ea75-d561-4ab2-9caa-8b834e071c64",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "Joined_Cleanup",
+      "filterTargetSheet": "Joined_Cleanup",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "DM_Owner_Wbk_Sheet_Stats.WorkbookName",
+          "filterExpression": "NOT_EMPTY",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "DM_Owner_Wbk_Sheet_Stats.owner",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Joined!DM_Owner_Wbk_Sheet_Stats.owner"
+        },
+        {
+          "columnName": "DM_Owner_Wbk_Sheet_Stats.WorkbookName",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Joined!DM_Owner_Wbk_Sheet_Stats.WorkbookName"
+        },
+        {
+          "columnName": "DM_User_Group_Info.UserName",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Joined!DM_User_Group_Info.UserName"
+        },
+        {
+          "columnName": "DM_User_Group_Info.GroupName",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Joined!DM_User_Group_Info.GroupName"
+        },
+        {
+          "columnName": "DM_Owner_Volume.OWNER",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Joined!DM_Owner_Volume.OWNER"
+        },
+        {
+          "columnName": "DM_Owner_Volume.VOLUME",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Joined!DM_Owner_Volume.VOLUME"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "DM_Owner_Wbk_Sheet_Stats.owner",
+          "width": 239,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "DM_Owner_Wbk_Sheet_Stats.WorkbookName",
+          "width": 330,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "DM_User_Group_Info.UserName",
+          "width": 216,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "DM_User_Group_Info.GroupName",
+          "width": 186,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "DM_Owner_Volume.OWNER",
+          "width": 200,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "DM_Owner_Volume.VOLUME",
+          "width": 194,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "Group_User_Artifact_Stats",
+      "sheetId": "272aed90-acae-4bac-a230-c2c41a526f30",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "Group_User_Artifact_Stats",
+      "sortTargetSheet": "Group_User_Artifact_Stats",
+      "topN": 20,
+      "sortKeys": [
+        {
+          "column": "StorageVolume_in_GB",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "GroupName",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Joined_Cleanup!DM_User_Group_Info.GroupName)"
+        },
+        {
+          "columnName": "B",
+          "columnId": "7",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#Joined_Cleanup!DM_Owner_Wbk_Sheet_Stats.owner)"
+        },
+        {
+          "columnName": "Total_Artifacts",
+          "columnId": "1",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "StorageVolume_in_GB",
+          "columnId": "8",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPSUM(#Joined_Cleanup!DM_Owner_Volume.VOLUME)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "GroupName",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Total_Artifacts",
+          "width": 145,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "B",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "StorageVolume_in_GB",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 9
+    },
+    {
+      "name": "Sheet1",
+      "sheetId": "be87efca-9484-492a-a9f9-beb4f990f0cc",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "A",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Joined_Cleanup!DM_User_Group_Info.GroupName)"
+        },
+        {
+          "columnName": "B",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#Joined_Cleanup!DM_Owner_Wbk_Sheet_Stats.owner)"
+        },
+        {
+          "columnName": "C",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#Joined_Cleanup!DM_Owner_Wbk_Sheet_Stats.WorkbookName)"
+        },
+        {
+          "columnName": "D",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPSUM(#Joined_Cleanup!DM_Owner_Volume.VOLUME)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "A",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "B",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "C",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "D",
+          "width": 182,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

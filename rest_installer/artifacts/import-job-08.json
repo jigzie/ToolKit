@@ -1,0 +1,65 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10712,
+            "include": true,
+            "name": "file_type",
+            "origin": "export_file_type",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10713,
+            "include": true,
+            "name": "dap_file_id",
+            "origin": "dap_file__id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "",
+        "name": "MySQL_file_type",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_file_type.lnk",
+        "uuid": "991e862d-a5d1-4d39-834b-9bece40fe8b0"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            "select fds.export_file_type,ds.dap_file__id from data_store ds inner join data_sink_configuration dsc on ds.id=dsc.connection_fk inner join file_data_sink fds on fds.id=dsc.id"
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "b1f43d0c-4a51-4025-bef1-e8e59447e271"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ],
+        "tableName": [
+            "!query!"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

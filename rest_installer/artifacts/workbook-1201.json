@@ -1,0 +1,107 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_02_10_Hadoop_Metrics",
+        "path": "/Administration/HUMv2/Reports/logs/base/_02_10_Hadoop_Metrics.wbk",
+        "uuid": "958332b0-e4b6-4f6b-9792-f9ebe2ec7b0e"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "10 2 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/Logs_Hadoop_Metrics.lnk",
+                "uuid": "7401c415-fe67-4072-99f4-4f8e9bd20bf3"
+            },
+            "keep": false,
+            "name": "Hadoop_Metrics_src",
+            "sheetId": "2decd755-ad48-4437-859a-b3aa9bfe04df",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Hadoop_Job_Id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Job_Name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Counter_Name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Counter_Value",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Hadoop_Metrics_src!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Hadoop_Job_Id",
+                    "formulaString": "=#Hadoop_Metrics_src!Hadoop_Job_Id"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Job_Name",
+                    "formulaString": "=#Hadoop_Metrics_src!Job_Name"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Counter_Name",
+                    "formulaString": "=#Hadoop_Metrics_src!Counter_Name"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Counter_Value",
+                    "formulaString": "=#Hadoop_Metrics_src!Counter_Value"
+                }
+            ],
+            "keep": true,
+            "name": "Hadoop_Metrics",
+            "nextColumnId": 5,
+            "outputPartitionDefinition": {
+                "dateFormat": "yyyyMMdd",
+                "dateGenerator": "=(#Timestamp)"
+            },
+            "sheetId": "232cd893-6474-498b-b1fb-c9354aa8db6a",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

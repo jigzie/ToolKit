@@ -1,0 +1,1869 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "564b3be7-678a-4d9b-846d-9cceffd5601d",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/_b_a_scheduledJobs.wbk",
+    "description": "",
+    "name": "_b_a_scheduledJobs"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "scheduled_enriched",
+      "sheetId": "1c280136-9b4c-4d48-a54e-fb10db5e37bd",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "filterSourceSheet": "scheduled_enriched",
+      "filterTargetSheet": "scheduled_enriched",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "pull_type",
+          "filterExpression": "EQUALS",
+          "value": "2",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "referencedSheet": {
+        "name": "schedule_enriched",
+        "sheetId": "319f15f7-ea2f-4acf-afda-a6720733be47",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/_a_Scheduling_prep.wbk",
+          "uuid": "95824a8e-73ed-466d-9dc0-7c64553641b4"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "hadoop_properties",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "MySQL_dap_file",
+      "sheetId": "a0460f00-43e3-4cdb-9149-9162d99d12b4",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "filterSourceSheet": "MySQL_dap_file",
+      "filterTargetSheet": "MySQL_dap_file",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "file_mode",
+          "filterExpression": "TEXT_NOT_EQUALS",
+          "value": "HIDDEN",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "referencedSheet": {
+        "name": "MySQL_dap_file",
+        "sheetId": "c4b99187-2d5c-41a0-9ab1-851dda23f133",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_04_dap_file.wbk",
+          "uuid": "8bb9eab8-be30-4e30-9cb9-b4c5cd43044a"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "file_mode",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Joined",
+      "sheetId": "3e98c252-3f3e-4687-ada1-6d277684a772",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "MySQL_dap_file",
+            "sheet2": "scheduled_enriched",
+            "joinColumns1": [
+              "id"
+            ],
+            "joinColumns2": [
+              "dap_file__id"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "MySQL_dap_file": [
+            "bytes_processed",
+            "extension",
+            "file_mode",
+            "name",
+            "version",
+            "folder_fk",
+            "permission_fk"
+          ],
+          "scheduled_enriched": [
+            "id",
+            "data_volume_size_by_license_period",
+            "expire_time_days",
+            "hadoop_properties",
+            "min_keep_count",
+            "pull_type",
+            "mins",
+            "hours",
+            "days",
+            "months",
+            "day_of_week",
+            "schedule",
+            "logging_properties",
+            "root_logger_level"
+          ]
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "data_prep",
+      "sheetId": "5960c114-c43e-46b4-a28f-61a48aa47f04",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "file_extension",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Joined!MySQL_dap_file.extension)"
+        },
+        {
+          "columnName": "schedule",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#Joined!scheduled_enriched.schedule)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "artifact_ids",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPCONCAT(#Joined!scheduled_enriched.id)"
+        },
+        {
+          "columnName": "mins",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPANY(#Joined!scheduled_enriched.mins)"
+        },
+        {
+          "columnName": "hours",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPANY(#Joined!scheduled_enriched.hours)"
+        },
+        {
+          "columnName": "days",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003dGROUPANY(#Joined!scheduled_enriched.days)"
+        },
+        {
+          "columnName": "months",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003dGROUPANY(#Joined!scheduled_enriched.months)"
+        },
+        {
+          "columnName": "day_of_week",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003dGROUPANY(#Joined!scheduled_enriched.day_of_week)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "file_extension",
+          "width": 241,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "schedule",
+          "width": 240,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "artifact_ids",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "mins",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "hours",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "days",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "months",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "day_of_week",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 9
+    },
+    {
+      "name": "ArtifactNames",
+      "sheetId": "2a8315de-821a-4f89-9bdd-6ae4d5909446",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "ArtifactNames",
+        "sheetId": "05e3c751-6b71-4e99-9347-b945b4551b8d",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/ArtifactNames.wbk",
+          "uuid": "7b1e12ea-d9f5-4385-bf33-13970c0b57fa"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "6374b22ca13c4f404ecee3c2fbf8cf84",
+          "name": "extension",
+          "width": 196,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "ba0f19c94067b7d12c47d4cb38529336",
+          "name": "artifact",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Joined2",
+      "sheetId": "6ff2f7a5-a5b0-4bbe-bfd6-86c0f28199fd",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "data_prep",
+            "sheet2": "ArtifactNames",
+            "joinColumns1": [
+              "file_extension"
+            ],
+            "joinColumns2": [
+              "extension"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "data_prep": [
+            "schedule",
+            "Count",
+            "artifact_ids",
+            "mins",
+            "hours",
+            "days",
+            "months",
+            "day_of_week"
+          ],
+          "ArtifactNames": [
+            "artifact"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "dab52f0f697d24e889501700224eaae4",
+          "name": "schedule",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "916f62d0cfd5c968421cfcb7e749e52c",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "f7c29fa49200d99b6099cf282199bcf4",
+          "name": "artifact_ids",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "47ec81990da8a86f5729a5d949ad9a55",
+          "name": "artifact_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "43817353e6d35a9a9a7efe28b0b44765",
+          "name": "mins",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "81e5163300b44f014e9fe4b193d21ea6",
+          "name": "hours",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "693f0b6e34836ee228dc96412441890f",
+          "name": "days",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "61ca69a902f926420b0829fcb367d50e",
+          "name": "months",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3741bcb1458a34e259f82ca480f0969b",
+          "name": "day_of_week",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "view",
+      "sheetId": "23ae6cb1-5d28-4d63-9b21-b96c56228fb3",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "artifact_type",
+          "columnId": "3",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Joined2!artifact_type"
+        },
+        {
+          "columnName": "schedule",
+          "columnId": "0",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Joined2!schedule"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Joined2!Count"
+        },
+        {
+          "columnName": "artifact_ids",
+          "columnId": "2",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Joined2!artifact_ids"
+        },
+        {
+          "columnName": "mins",
+          "columnId": "29",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Joined2!mins"
+        },
+        {
+          "columnName": "mins_cnt",
+          "columnId": "35",
+          "columnIndex": 5,
+          "formulaString": "\u003dJSONARRAYSIZE(#mins)"
+        },
+        {
+          "columnName": "mins_display",
+          "columnId": "41",
+          "columnIndex": 6,
+          "formulaString": "\u003dIF(EQUALS(#mins_cnt;60);\"Every Minute\";CONCAT(\"At \";REPLACEALL(#mins;\"\\\\[|\\\\]\";\"\");\" mins\"))"
+        },
+        {
+          "columnName": "hours",
+          "columnId": "30",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Joined2!hours"
+        },
+        {
+          "columnName": "hours_cnt",
+          "columnId": "36",
+          "columnIndex": 8,
+          "formulaString": "\u003dJSONARRAYSIZE(#hours)"
+        },
+        {
+          "columnName": "hours_display",
+          "columnId": "42",
+          "columnIndex": 9,
+          "formulaString": "\u003dIF(EQUALS(#hours_cnt;24);\"Every Hour\";CONCAT(\"On \";REPLACEALL(#hours;\"\\\\[|\\\\]\";\"\");\" hrs\"))"
+        },
+        {
+          "columnName": "days",
+          "columnId": "34",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Joined2!days"
+        },
+        {
+          "columnName": "days_cnt",
+          "columnId": "37",
+          "columnIndex": 11,
+          "formulaString": "\u003dJSONARRAYSIZE(#days)"
+        },
+        {
+          "columnName": "days_display",
+          "columnId": "43",
+          "columnIndex": 12,
+          "formulaString": "\u003dIF(EQUALS(#days_cnt;31);\"Every Day\";CONCAT(\"On \";REPLACEALL(#days;\"\\\\[|\\\\]\";\"\");\" days\"))"
+        },
+        {
+          "columnName": "months",
+          "columnId": "32",
+          "columnIndex": 13,
+          "formulaString": "\u003d#Joined2!months"
+        },
+        {
+          "columnName": "months_cnt",
+          "columnId": "38",
+          "columnIndex": 14,
+          "formulaString": "\u003dJSONARRAYSIZE(#months)"
+        },
+        {
+          "columnName": "month_display",
+          "columnId": "44",
+          "columnIndex": 15,
+          "formulaString": "\u003dIF(EQUALS(#months_cnt;12);\"Every Month\";CONCAT(\"In \";REPLACEALL(#months;\"\\\\[|\\\\]\";\"\");\" months\"))"
+        },
+        {
+          "columnName": "day_of_week",
+          "columnId": "33",
+          "columnIndex": 16,
+          "formulaString": "\u003d#Joined2!day_of_week"
+        },
+        {
+          "columnName": "day_of_week_cnt",
+          "columnId": "39",
+          "columnIndex": 17,
+          "formulaString": "\u003dJSONARRAYSIZE(#day_of_week)"
+        },
+        {
+          "columnName": "day_of_wee_display",
+          "columnId": "45",
+          "columnIndex": 18,
+          "formulaString": "\u003dIF(EQUALS(#day_of_week_cnt;7);\"Every Day of the Week\";CONCAT(\"On \";REPLACEALL(#day_of_week;\"\\\\[|\\\\]\";\"\")))"
+        },
+        {
+          "columnName": "display",
+          "columnId": "48",
+          "columnIndex": 19,
+          "formulaString": "\u003dIF(AND(EQUALS(#mins_cnt;60);EQUALS(#hours_cnt;24);EQUALS(#days_cnt;31);EQUALS(#months_cnt;12);EQUALS(#day_of_week_cnt;7));\"Every Minute\";REPLACEALL(CONCAT(#mins_display;\",\";#hours_display;\",\";#days_display;\",\";#month_display;\",\";#day_of_wee_display);\",\";\", \"))"
+        },
+        {
+          "columnName": "freq_score",
+          "columnId": "40",
+          "columnIndex": 20,
+          "formulaString": "\u003dPLUS(#mins_cnt;#hours_cnt;#days_cnt;#months_cnt;#day_of_week_cnt)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "schedule",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "artifact_ids",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "artifact_type",
+          "width": 124,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "29",
+          "name": "mins",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "30",
+          "name": "hours",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "32",
+          "name": "months",
+          "width": 188,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "33",
+          "name": "day_of_week",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "34",
+          "name": "days",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "35",
+          "name": "mins_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "36",
+          "name": "hours_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "37",
+          "name": "days_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "38",
+          "name": "months_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "39",
+          "name": "day_of_week_cnt",
+          "width": 136,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "40",
+          "name": "freq_score",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "41",
+          "name": "mins_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "42",
+          "name": "hours_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "43",
+          "name": "days_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "44",
+          "name": "month_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "45",
+          "name": "day_of_wee_display",
+          "width": 144,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "48",
+          "name": "display",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 49
+    },
+    {
+      "name": "top_20_freq_schedule_by_type_rpt",
+      "sheetId": "420b2599-d1a1-4a31-a374-665d2f7fa07d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "top_20_freq_schedule_by_type_rpt",
+      "sortTargetSheet": "top_20_freq_schedule_by_type_rpt",
+      "topN": 20,
+      "sortKeys": [
+        {
+          "column": "freq_score",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "artifact_type",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#view!artifact_type"
+        },
+        {
+          "columnName": "schedule",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#view!schedule"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#view!Count"
+        },
+        {
+          "columnName": "artifact_ids",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#view!artifact_ids"
+        },
+        {
+          "columnName": "mins",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#view!mins"
+        },
+        {
+          "columnName": "mins_cnt",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#view!mins_cnt"
+        },
+        {
+          "columnName": "mins_display",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#view!mins_display"
+        },
+        {
+          "columnName": "hours",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#view!hours"
+        },
+        {
+          "columnName": "hours_cnt",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#view!hours_cnt"
+        },
+        {
+          "columnName": "hours_display",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#view!hours_display"
+        },
+        {
+          "columnName": "days",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#view!days"
+        },
+        {
+          "columnName": "days_cnt",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#view!days_cnt"
+        },
+        {
+          "columnName": "days_display",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#view!days_display"
+        },
+        {
+          "columnName": "months",
+          "columnId": "13",
+          "columnIndex": 13,
+          "formulaString": "\u003d#view!months"
+        },
+        {
+          "columnName": "months_cnt",
+          "columnId": "14",
+          "columnIndex": 14,
+          "formulaString": "\u003d#view!months_cnt"
+        },
+        {
+          "columnName": "month_display",
+          "columnId": "15",
+          "columnIndex": 15,
+          "formulaString": "\u003d#view!month_display"
+        },
+        {
+          "columnName": "day_of_week",
+          "columnId": "16",
+          "columnIndex": 16,
+          "formulaString": "\u003d#view!day_of_week"
+        },
+        {
+          "columnName": "day_of_week_cnt",
+          "columnId": "17",
+          "columnIndex": 17,
+          "formulaString": "\u003d#view!day_of_week_cnt"
+        },
+        {
+          "columnName": "day_of_wee_display",
+          "columnId": "18",
+          "columnIndex": 18,
+          "formulaString": "\u003d#view!day_of_wee_display"
+        },
+        {
+          "columnName": "display",
+          "columnId": "19",
+          "columnIndex": 19,
+          "formulaString": "\u003d#view!display"
+        },
+        {
+          "columnName": "freq_score",
+          "columnId": "20",
+          "columnIndex": 20,
+          "formulaString": "\u003d#view!freq_score"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "artifact_type",
+          "width": 124,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "schedule",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "artifact_ids",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "mins",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "mins_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "mins_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "hours",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "hours_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "hours_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "days",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "days_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "days_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "13",
+          "name": "months",
+          "width": 188,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "14",
+          "name": "months_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "month_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "day_of_week",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "17",
+          "name": "day_of_week_cnt",
+          "width": 136,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "18",
+          "name": "day_of_wee_display",
+          "width": 144,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "19",
+          "name": "display",
+          "width": 131,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "20",
+          "name": "freq_score",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 21
+    },
+    {
+      "name": "most_freq_schedule_by_type_rpt",
+      "sheetId": "f6cd041a-882b-48ae-8c3e-ba4d69743a48",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "most_freq_schedule_by_type_rpt",
+      "sortTargetSheet": "most_freq_schedule_by_type_rpt",
+      "sortKeys": [
+        {
+          "column": "freq_score",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "artifact_type",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#view!artifact_type"
+        },
+        {
+          "columnName": "schedule",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#view!schedule"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#view!Count"
+        },
+        {
+          "columnName": "artifact_ids",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dTOJSON(#view!artifact_ids)"
+        },
+        {
+          "columnName": "mins",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#view!mins"
+        },
+        {
+          "columnName": "mins_cnt",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#view!mins_cnt"
+        },
+        {
+          "columnName": "mins_display",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#view!mins_display"
+        },
+        {
+          "columnName": "hours",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#view!hours"
+        },
+        {
+          "columnName": "hours_cnt",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#view!hours_cnt"
+        },
+        {
+          "columnName": "hours_display",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#view!hours_display"
+        },
+        {
+          "columnName": "days",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#view!days"
+        },
+        {
+          "columnName": "days_cnt",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#view!days_cnt"
+        },
+        {
+          "columnName": "days_display",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#view!days_display"
+        },
+        {
+          "columnName": "months",
+          "columnId": "13",
+          "columnIndex": 13,
+          "formulaString": "\u003d#view!months"
+        },
+        {
+          "columnName": "months_cnt",
+          "columnId": "14",
+          "columnIndex": 14,
+          "formulaString": "\u003d#view!months_cnt"
+        },
+        {
+          "columnName": "month_display",
+          "columnId": "15",
+          "columnIndex": 15,
+          "formulaString": "\u003d#view!month_display"
+        },
+        {
+          "columnName": "day_of_week",
+          "columnId": "16",
+          "columnIndex": 16,
+          "formulaString": "\u003d#view!day_of_week"
+        },
+        {
+          "columnName": "day_of_week_cnt",
+          "columnId": "17",
+          "columnIndex": 17,
+          "formulaString": "\u003d#view!day_of_week_cnt"
+        },
+        {
+          "columnName": "day_of_wee_display",
+          "columnId": "18",
+          "columnIndex": 18,
+          "formulaString": "\u003d#view!day_of_wee_display"
+        },
+        {
+          "columnName": "display",
+          "columnId": "19",
+          "columnIndex": 19,
+          "formulaString": "\u003d#view!display"
+        },
+        {
+          "columnName": "freq_score",
+          "columnId": "20",
+          "columnIndex": 20,
+          "formulaString": "\u003d#view!freq_score"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "artifact_type",
+          "width": 124,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "schedule",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "artifact_ids",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "mins",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "mins_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "mins_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "hours",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "hours_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "hours_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "days",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "days_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "days_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "13",
+          "name": "months",
+          "width": 188,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "14",
+          "name": "months_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "15",
+          "name": "month_display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "16",
+          "name": "day_of_week",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "17",
+          "name": "day_of_week_cnt",
+          "width": 136,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "18",
+          "name": "day_of_wee_display",
+          "width": 144,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "19",
+          "name": "display",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "20",
+          "name": "freq_score",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 21
+    },
+    {
+      "name": "most_popular_schedules_by_type_rpt",
+      "sheetId": "e1c728e4-9e54-4e5a-923f-bd1387b55f31",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "most_popular_schedules_by_type_rpt",
+      "sortTargetSheet": "most_popular_schedules_by_type_rpt",
+      "sortKeys": [
+        {
+          "column": "jobs_scheduled",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "artifact_type",
+          "columnId": "4",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#view!artifact_type)"
+        },
+        {
+          "columnName": "schedule",
+          "columnId": "0",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#view!schedule)"
+        },
+        {
+          "columnName": "artifact_ids",
+          "columnId": "5",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPBY(TOJSON(#view!artifact_ids))"
+        },
+        {
+          "columnName": "jobs_scheduled",
+          "columnId": "1",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPSUM(#view!Count)"
+        },
+        {
+          "columnName": "schedule_display",
+          "columnId": "3",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPANY(#view!display)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "schedule",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "jobs_scheduled",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "schedule_display",
+          "width": 479,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "artifact_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "artifact_ids",
+          "width": 196,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "top_20_popular_schedules_rpt",
+      "sheetId": "7a640702-f14f-42b8-998f-234b8350a0d8",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "top_20_popular_schedules_rpt",
+      "sortTargetSheet": "top_20_popular_schedules_rpt",
+      "topN": 20,
+      "sortKeys": [
+        {
+          "column": "job_cnt",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "schedule",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#view!schedule)"
+        },
+        {
+          "columnName": "job_cnt",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "schedule",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "job_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "dow_expand",
+      "sheetId": "f5c184cb-94b8-42df-8d2d-22b631319ed4",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "artifact_type",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#view!artifact_type)"
+        },
+        {
+          "columnName": "day_of_week",
+          "columnId": "3",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#view!day_of_week)"
+        },
+        {
+          "columnName": "dow_jobs_cnt",
+          "columnId": "6",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#view!Count)"
+        },
+        {
+          "columnName": "dow_list",
+          "columnId": "4",
+          "columnIndex": 3,
+          "formulaString": "\u003dJSONTOLIST(#day_of_week)"
+        },
+        {
+          "columnName": "dow",
+          "columnId": "5",
+          "columnIndex": 4,
+          "formulaString": "\u003dEXPAND(#dow_list)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "artifact_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "day_of_week",
+          "width": 216,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "dow_list",
+          "width": 210,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "dow",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "dow_jobs_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    },
+    {
+      "name": "busiest_dow_by_type_rpt",
+      "sheetId": "4c6df0ab-35d1-4f5b-85f1-6b2a73b3511c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "busiest_dow_by_type_rpt",
+      "sortTargetSheet": "busiest_dow_by_type_rpt",
+      "sortKeys": [
+        {
+          "column": "artifact_type",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "total_scheduled_jobs",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "artifact_type",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#dow_expand!artifact_type)"
+        },
+        {
+          "columnName": "dow",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#dow_expand!dow)"
+        },
+        {
+          "columnName": "total_scheduled_jobs",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#dow_expand!dow_jobs_cnt)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "artifact_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "dow",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "total_scheduled_jobs",
+          "width": 137,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "busiest_dow_rpt",
+      "sheetId": "d7ee9d93-9446-4c4f-a0d6-721f425cb7a4",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "busiest_dow_rpt",
+      "sortTargetSheet": "busiest_dow_rpt",
+      "sortKeys": [
+        {
+          "column": "total_scheduled_jobs",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "dow",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#busiest_dow_by_type_rpt!dow)"
+        },
+        {
+          "columnName": "total_scheduled_jobs",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#busiest_dow_by_type_rpt!total_scheduled_jobs)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "dow",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "total_scheduled_jobs",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "hour_expand",
+      "sheetId": "5483f95f-475f-48c8-8241-b9622daccbbd",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "artifact_type",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#view!artifact_type)"
+        },
+        {
+          "columnName": "hours",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#view!hours)"
+        },
+        {
+          "columnName": "hr_job_cnt",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#view!Count)"
+        },
+        {
+          "columnName": "hours_list",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dJSONTOLIST(#hours)"
+        },
+        {
+          "columnName": "hour",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dEXPAND(#hours_list)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "artifact_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "hours",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "hr_job_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "hours_list",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "hour",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "busiest_hour_by_type_rpt",
+      "sheetId": "1af3552d-9f93-42f2-91c2-72b67926f71b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "busiest_hour_by_type_rpt",
+      "sortTargetSheet": "busiest_hour_by_type_rpt",
+      "sortKeys": [
+        {
+          "column": "artifact_type",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "hour",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "artifact_type",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#hour_expand!artifact_type)"
+        },
+        {
+          "columnName": "hour",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(INT(#hour_expand!hour))"
+        },
+        {
+          "columnName": "total_scheduled_jobs",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#hour_expand!hr_job_cnt)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "artifact_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "total_scheduled_jobs",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "busiest_hour_rpt",
+      "sheetId": "121ba03c-275f-4ce2-bdaf-86703b8e6b26",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "busiest_hour_rpt",
+      "sortTargetSheet": "busiest_hour_rpt",
+      "sortKeys": [
+        {
+          "column": "hour",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "hour",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(INT(#busiest_hour_by_type_rpt!hour))"
+        },
+        {
+          "columnName": "total_scheduled_jobs",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#busiest_hour_by_type_rpt!total_scheduled_jobs)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "total_scheduled_jobs",
+          "width": 160,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "dow_by_hr_expand",
+      "sheetId": "4d207079-91a6-4d84-88e0-0150a10e0081",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "day_of_week",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#view!day_of_week)"
+        },
+        {
+          "columnName": "hours",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#view!hours)"
+        },
+        {
+          "columnName": "total_jobs_by_dow",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#view!Count)"
+        },
+        {
+          "columnName": "dow_list",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dJSONTOLIST(#day_of_week)"
+        },
+        {
+          "columnName": "dow",
+          "columnId": "5",
+          "columnIndex": 4,
+          "formulaString": "\u003dEXPAND(#dow_list)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "day_of_week",
+          "width": 252,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "hours",
+          "width": 402,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "total_jobs_by_dow",
+          "width": 155,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "dow_list",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "dow",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "hr_by_dow_expand",
+      "sheetId": "690a447a-9de4-4407-8762-a9c7846d9e8a",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "dow",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#dow_by_hr_expand!dow)"
+        },
+        {
+          "columnName": "hours",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#dow_by_hr_expand!hours)"
+        },
+        {
+          "columnName": "total_jobs_by_hour_per_dow_cnt",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#dow_by_hr_expand!total_jobs_by_dow)"
+        },
+        {
+          "columnName": "hours_list",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dJSONTOLIST(#hours)"
+        },
+        {
+          "columnName": "hour",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dEXPAND(#hours_list)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "dow",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "hours",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "total_jobs_by_hour_per_dow_cnt",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "hours_list",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "hour",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "busiest_dow_by_hr_rpt",
+      "sheetId": "5e5670ef-1a97-414f-8ddc-2732fd7941be",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "busiest_dow_by_hr_rpt",
+      "sortTargetSheet": "busiest_dow_by_hr_rpt",
+      "sortKeys": [
+        {
+          "column": "dow",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "hour",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "dow",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#hr_by_dow_expand!dow)"
+        },
+        {
+          "columnName": "hour",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(INT(#hr_by_dow_expand!hour))"
+        },
+        {
+          "columnName": "jobs_scheduled_cnt",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#hr_by_dow_expand!total_jobs_by_hour_per_dow_cnt)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "dow",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "jobs_scheduled_cnt",
+          "width": 127,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

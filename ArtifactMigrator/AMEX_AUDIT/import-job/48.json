@@ -1,0 +1,95 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "79aa1624-809e-4952-86bd-3b8b29ffab1e",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_file_dependency.lnk",
+    "description": "file_dependency",
+    "name": "MySQL_file_dependency"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "76950b78-9eda-45b3-82d5-cc65ab9501f1"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      ""
+    ],
+    "tableName": [
+      "\u0027file_dependency\u0027"
+    ],
+    "orderColumn": [
+      "id"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 144,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 145,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "key_text",
+      "origin": "key_text",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 146,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "path",
+      "origin": "path",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 147,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "dependency_file_id",
+      "origin": "dependency_file_id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 148,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "source_file_id",
+      "origin": "source_file_id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

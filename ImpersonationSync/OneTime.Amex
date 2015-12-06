@@ -1,0 +1,54 @@
+#####Hadoop One Time Commands######
+####Run the workbook/importjobs in each individual shell; allowing CPU level parallelism
+
+#####Set the permission on ALL folders, to allow RWX by OTHERS (non-recursive)
+hadoop fs -chmod 757 /axp/dmr/*
+
+##For joblogs/systemjobs/jobjars/jdbc-jars/temp/tmp: Set to 757 (EVERYONE can RWX)
+hadoop fs -chmod -R 757 /axp/dmr/joblogs
+hadoop fs -chmod -R 757 /axp/dmr/systemjobs
+hadoop fs -chmod -R 757 /axp/dmr/jobjars
+hadoop fs -chmod -R 757 /axp/dmr/jdbc-jars
+hadoop fs -chmod -R 757 /axp/dmr/temp
+hadoop fs -chmod -R 757 /axp/dmr/tmp
+
+
+#####Change permissions on ALL folders/files to be 751, after ownership is changed
+#####ArtifactTypes: exportjobs, fileuploads, importjobs, importlinks, workbooks
+hadoop fs -chmod -R 751 /axp/dmr/exportjobs/*
+
+##For FileUploads
+hadoop fs -chmod -R 751 /axp/dmr/fileuploads/*
+
+##For ImportJobs
+hadoop fs -chmod -R 751 /axp/dmr/importjobs/1*
+hadoop fs -chmod -R 751 /axp/dmr/importjobs/2*
+hadoop fs -chmod -R 751 /axp/dmr/importjobs/3*
+hadoop fs -chmod -R 751 /axp/dmr/importjobs/4*
+hadoop fs -chmod -R 751 /axp/dmr/importjobs/5*
+hadoop fs -chmod -R 751 /axp/dmr/importjobs/6*
+hadoop fs -chmod -R 751 /axp/dmr/importjobs/7*
+hadoop fs -chmod -R 751 /axp/dmr/importjobs/8*
+hadoop fs -chmod -R 751 /axp/dmr/importjobs/9*
+
+##For ImportLinks
+hadoop fs -chmod -R 751 /axp/dmr/importlinks/1*
+hadoop fs -chmod -R 751 /axp/dmr/importlinks/2*
+hadoop fs -chmod -R 751 /axp/dmr/importlinks/3*
+hadoop fs -chmod -R 751 /axp/dmr/importlinks/4*
+hadoop fs -chmod -R 751 /axp/dmr/importlinks/5*
+hadoop fs -chmod -R 751 /axp/dmr/importlinks/6*
+hadoop fs -chmod -R 751 /axp/dmr/importlinks/7*
+hadoop fs -chmod -R 751 /axp/dmr/importlinks/8*
+hadoop fs -chmod -R 751 /axp/dmr/importlinks/9*
+
+##For Workbooks
+hadoop fs -chmod -R 751 /axp/dmr/workbooks/1*
+hadoop fs -chmod -R 751 /axp/dmr/workbooks/2*
+hadoop fs -chmod -R 751 /axp/dmr/workbooks/3*
+hadoop fs -chmod -R 751 /axp/dmr/workbooks/4*
+hadoop fs -chmod -R 751 /axp/dmr/workbooks/5*
+hadoop fs -chmod -R 751 /axp/dmr/workbooks/6*
+hadoop fs -chmod -R 751 /axp/dmr/workbooks/7*
+hadoop fs -chmod -R 751 /axp/dmr/workbooks/8*
+hadoop fs -chmod -R 751 /axp/dmr/workbooks/9*

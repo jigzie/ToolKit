@@ -1,0 +1,204 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "d274de64-d2fc-471a-a809-bbb14562dbed",
+    "path": "/Datameer Consumption Stats/Resources/LicenseDetails.imp",
+    "description": "License Details for installation of Datameer",
+    "name": "LicenseDetails"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "ignore_surrounding_text": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT_SCANNER"
+    ],
+    "histogram.generation": [
+      "false"
+    ],
+    "incrementalMode": [
+      "false"
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "a6d08037-e007-468c-bcf3-82ce49ef2650"
+    ],
+    "fileType": [
+      "JSON"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "skipExpandPaths": [
+      ""
+    ],
+    "file": [
+      "license-details"
+    ],
+    "alwaysIncludePaths": [
+      ""
+    ],
+    "maxTraverseDepth": [
+      "0"
+    ],
+    "rootPath": [
+      ""
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "filter.maxAge": [
+      ""
+    ],
+    "filter.minAge": [
+      ""
+    ],
+    "ignorePaths": [
+      ""
+    ],
+    "fileNameTimeRange_startDate": [
+      ""
+    ],
+    "fileNameTimeRange_mode": [
+      "OFF"
+    ],
+    "collect_additional_fields": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Datameer Consumption Stats/Resources/HTTPLicenseDetails.dst",
+    "uuid": "5719b44c-2005-471b-8b39-3a74a6b2d045"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 131,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "ProductId",
+      "origin": "ProductId",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 132,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "ProductVersion",
+      "origin": "ProductVersion",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 133,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "LicenseHolder",
+      "origin": "LicenseHolder",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 134,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "LicenseType",
+      "origin": "LicenseType",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 135,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "LicenseStartDate",
+      "origin": "LicenseStartDate",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 136,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "LicenseExpirationDate",
+      "origin": "LicenseExpirationDate",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 137,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "LicenseVolumePeriodInMonths",
+      "origin": "LicenseVolumePeriodInMonths",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 138,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "LicenseVolumelimitInBytes",
+      "origin": "LicenseVolumelimitInBytes",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 139,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "TotalVolumeConsumedInBytes",
+      "origin": "TotalVolumeConsumedInBytes",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 140,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 141,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 142,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "Plugins",
+        "path": "/Administration/HUMv2/Reports/http/Plugins.wbk",
+        "uuid": "3076e475-7acb-48d3-8b16-35e276e5f8b0"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "HTTP_Plugins_Page",
+            "referencedSheet": {
+                "name": "HTTP_Plugins_Page",
+                "sheetId": "83eef186-ecae-4f6f-8c23-5f630c86ed7f",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/base/_01_30_Plugins_Page.wbk",
+                    "uuid": "b3657474-5abb-44ea-992f-71c5fcf1f074"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "fa471f30-bedc-489a-a179-3d978fd1eb82",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "plugin_div",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "thread_removed",
+                    "thousandSeparator": true,
+                    "width": 134
+                },
+                {
+                    "columnId": "2",
+                    "name": "plugins",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "plugin_div",
+                    "formulaString": "=LISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#HTTP_Plugins_Page!parsed_html;\"#plugins\");0)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "thread_removed",
+                    "formulaString": "=REMOVE_ELEMENTS_BY_TAG_NAME(#plugin_div;\"thead\")"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "plugins",
+                    "formulaString": "=LISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#thread_removed;\"#plugins\");0)"
+                }
+            ],
+            "keep": false,
+            "name": "data_prep",
+            "nextColumnId": 5,
+            "sheetId": "47be5996-36d0-4a95-b6f0-b772fab537ce",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "tr_elements",
+                    "thousandSeparator": true,
+                    "width": 543
+                },
+                {
+                    "columnId": "16",
+                    "name": "td_contents",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "tr_elements",
+                    "formulaString": "=CONCAT(\"<table>\";EXPAND(ELEMENTS_BY_TAG_NAME(#data_prep!plugins;\"tr\"));\"</table>\")"
+                },
+                {
+                    "columnId": "16",
+                    "columnIndex": 1,
+                    "columnName": "td_contents",
+                    "formulaString": "=CONTENTS_BY_TAG_NAME(#data_prep_expand!tr_elements;\"td\")"
+                }
+            ],
+            "keep": false,
+            "name": "data_prep_expand",
+            "nextColumnId": 17,
+            "sheetId": "65ab1e93-6213-46b0-a970-ef04cf7d128a",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "1",
+                    "name": "plugin_name",
+                    "thousandSeparator": true,
+                    "width": 214
+                },
+                {
+                    "columnId": "2",
+                    "name": "plugin_version",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "1",
+                    "columnIndex": 0,
+                    "columnName": "plugin_name",
+                    "formulaString": "=LISTELEMENT(#data_prep_expand!td_contents;0)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 1,
+                    "columnName": "plugin_version",
+                    "formulaString": "=LISTELEMENT(#data_prep_expand!td_contents;1)"
+                }
+            ],
+            "keep": true,
+            "name": "plugins_n_versions",
+            "nextColumnId": 3,
+            "sheetId": "2ebb8afd-37fc-4d58-aa30-93151e6e635e",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

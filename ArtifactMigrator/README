@@ -1,0 +1,50 @@
+AMEX_Audit:
+Upload the artifacts to the Datameer server, using REST API. Replace the artifactType for different types of artifacts.
+
+artifactType: connections,import-job, workbook
+REST CALL: curl -u username:password -X POST -d @${filename} 'http://SERVER:PORT/rest/${artifactType}'
+
+Connections:  
+./AMEX_AUDIT/connections/6.json
+
+ImportJobs/Datalinks:
+./AMEX_AUDIT/import-job/117.json
+./AMEX_AUDIT/import-job/117.json
+./AMEX_AUDIT/import-job/118.json
+./AMEX_AUDIT/import-job/118.json
+./AMEX_AUDIT/import-job/119.json
+./AMEX_AUDIT/import-job/119.json
+./AMEX_AUDIT/import-job/120.json
+./AMEX_AUDIT/import-job/120.json
+./AMEX_AUDIT/import-job/121.json
+./AMEX_AUDIT/import-job/121.json
+./AMEX_AUDIT/import-job/137.json
+./AMEX_AUDIT/import-job/137.json
+./AMEX_AUDIT/import-job/139.json
+./AMEX_AUDIT/import-job/139.json
+
+Workbooks:
+./AMEX_AUDIT/workbook/133.json
+./AMEX_AUDIT/workbook/133.json
+./AMEX_AUDIT/workbook/133.json
+./AMEX_AUDIT/workbook/133.json
+./AMEX_AUDIT/workbook/133.json
+./AMEX_AUDIT/workbook/133.json
+./AMEX_AUDIT/workbook/136.json
+./AMEX_AUDIT/workbook/136.json
+./AMEX_AUDIT/workbook/136.json
+./AMEX_AUDIT/workbook/136.json
+
+How to Run:
+1. Upload the artifacts (ALL of the above)
+2. Configure the connection to point to your environment datameer database; verify it is successful by saving it.
+3. Start executing the datalinks; all of them should be successful
+4. Run the workbooks
+	i. Audit Workbooks Sharing: This has the logic to identify shared workbooks. The last sheet Shared_workbooks has the output to identify the workbook, owner and the permissions used for sharing.
+	ii. Wbk_MinHistory_GT_1: Workbooks where the minimum number of results saved is greater than 1. Best practices recommends only saving last results, unless there is a need for historical results for visualization (infographics)
+
+
+Additional Updates/Future Enhancements:
+- Use the WSD (workbook_sheet_data) to identify a particular column name and join it with the Audit Workbook to truly identify only shared workbooks with interested column names.
+- Build historical trends
+- Build infographics

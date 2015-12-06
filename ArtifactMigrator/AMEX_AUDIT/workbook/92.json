@@ -1,0 +1,102 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "b9aa6c71-84fa-4cb4-8f6e-a641a2e965ab",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_08_data_store.wbk",
+    "description": "",
+    "name": "_00_08_data_store"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_data_store_src",
+      "sheetId": "4281bb25-1149-4f7d-9ba0-962a7b7398f5",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_data_store.lnk",
+        "uuid": "81e098c4-eaf5-42b7-a1bb-ef67386974bd"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_data_store",
+      "sheetId": "5cf48759-c46c-47dc-879e-9f58fc4cee34",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "type",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_data_store_src!type"
+        },
+        {
+          "columnName": "id",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_data_store_src!id"
+        },
+        {
+          "columnName": "type_id",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_data_store_src!type_id"
+        },
+        {
+          "columnName": "dap_file__id",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_data_store_src!dap_file__id"
+        },
+        {
+          "columnName": "db_type_fk",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MySQL_data_store_src!db_type_fk"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "type_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "dap_file__id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "db_type_fk",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

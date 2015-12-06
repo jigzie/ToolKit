@@ -1,0 +1,206 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "85f18675-4aaa-4330-8ce6-c04027030b0e",
+    "path": "/Examples/Hello World/Solution/Workbook_Joined_union_filter_testcase2.wbk",
+    "description": "",
+    "name": "Workbook_Joined_union_filter_testcase2"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "DataLink_today1",
+      "sheetId": "24fd2035-587b-4986-9c26-323efb84afa8",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Examples/Hello World/Solution/DataLink_today1.upl",
+        "uuid": "08ec9bda-bd95-48d7-af70-44b5f2d21cc9"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Sheet1",
+      "sheetId": "cd57d3e0-b592-48ca-815d-9703c9aff266",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "A",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#DataLink_today1!A"
+        },
+        {
+          "columnName": "D",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#DataLink_today1!D"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "A",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "D",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "Sheet2",
+      "sheetId": "9b14e57d-bc9e-46c0-9e80-709a39f62581",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "Sheet2",
+      "filterTargetSheet": "Sheet2",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "D",
+          "filterExpression": "GREATER_EQUALS",
+          "value": "100",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "D",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#DataLink_today1!B)"
+        },
+        {
+          "columnName": "B",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dABS(#DataLink_today1!D)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "D",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "B",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "Sheet3",
+      "sheetId": "b001fa4d-a84e-4b8a-afcc-6ef098e1329d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "A",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dLIST(#DataLink_today1!B)"
+        },
+        {
+          "columnName": "A1",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dCOPY(#DataLink_today1!C)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "A",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "A1",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "Joined",
+      "sheetId": "497bcda7-ce3e-4fb4-bd34-87508e9cd68f",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "Sheet1",
+            "sheet2": "Sheet2",
+            "joinColumns1": [
+              "D"
+            ],
+            "joinColumns2": [
+              "D"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "Sheet1": [
+            "A",
+            "D"
+          ],
+          "Sheet2": [
+            "D"
+          ]
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "UnionSheet1",
+      "sheetId": "3e799b72-61cb-42e7-81b0-41d9770ad1b2",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "unionSources": [
+          "Sheet1",
+          "Sheet2"
+        ]
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "UnionSheet2",
+      "sheetId": "153de4cf-4867-4833-9ee5-bf88928c35d8",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "unionSources": [
+          "DataLink_today1",
+          "Sheet2"
+        ]
+      },
+      "columnStyles": []
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

@@ -1,0 +1,138 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10649,
+            "include": true,
+            "name": "SheetID",
+            "origin": "id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10650,
+            "include": true,
+            "name": "WorkbookID",
+            "origin": "workbook_fk",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10651,
+            "include": true,
+            "name": "FilterID",
+            "origin": "filter_fk",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10652,
+            "include": true,
+            "name": "SortID",
+            "origin": "sort_fk",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10653,
+            "include": true,
+            "name": "ExternalSheetID",
+            "origin": "external_sheet__id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10654,
+            "include": true,
+            "name": "SheetType",
+            "origin": "sheet_type",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10655,
+            "include": true,
+            "name": "PartitionDefinition",
+            "origin": "partition_definition",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10656,
+            "include": true,
+            "name": "PartitionSelector",
+            "origin": "partition_selector",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10657,
+            "include": true,
+            "name": "Keep",
+            "origin": "keep",
+            "pattern": "",
+            "valueType": "{\"type\":\"BOOLEAN\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "Workbook configuration Statistics",
+        "name": "MySQL_Workbook_Config_Stats",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_Workbook_Config_Stats.lnk",
+        "uuid": "fde13a0e-aca2-44c9-aee0-f68961d0aa98"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            "select id, workbook_fk, filter_fk, sort_fk, external_sheet__id, sheet_type, partition_definition, partition_selector, keep from sheet where workbook_fk is not null"
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "bc771e66-2756-43b1-a698-26f43596bc5a"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "empty.value.placeholders": [
+            "null"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ],
+        "tableName": [
+            "!query!"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

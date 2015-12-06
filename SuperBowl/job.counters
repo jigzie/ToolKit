@@ -1,0 +1,14 @@
+{
+  "startTime": "Jan 30, 2015 9:19:24 AM",
+  "jobStatus": "COMPLETED",
+  "failureCount": 0,
+  "successCount": 914,
+  "counters": {
+    "WORKBOOK_CONSUMED_RECORD_COUNT": 15,
+    "WORKBOOK_PRODUCED_BYTES": 8483,
+    "WORKBOOK_DROPPED_RECORDS": 0,
+    "WORKBOOK_CONSUMED_BYTES": 1060,
+    "WORKBOOK_PRODUCED_RECORD_COUNT": 914
+  },
+  "stopTime": "Jan 30, 2015 9:19:27 AM"
+}

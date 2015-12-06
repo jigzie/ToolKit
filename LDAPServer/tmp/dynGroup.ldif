@@ -1,0 +1,6 @@
+dn: cn=my Dynamic Group, ou=groups,ou=datameer,dc=Jigz-local,dc=com
+cn: my Dynamic Group
+objectClass: top
+objectClass: groupOfURLs
+ou: groups
+memberURL: ldap:///ou=Professional Services,ou=people,ou=datameer,dc=jigz-local,dc=com?sub?uid=das30100

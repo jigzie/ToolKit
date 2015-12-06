@@ -1,0 +1,153 @@
+{
+    "advancedSchedulingInUse": false,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_j_Page Requests With Errors",
+        "path": "/Administration/HUMv2/Reports/logs/_j_Page Requests With Errors.wbk",
+        "uuid": "67b3218e-baf3-41fa-bac9-edef0b9d61aa"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "cardinalities.generation": [
+            "true"
+        ],
+        "histograms.generation": [
+            "true"
+        ],
+        "minmaxmean.generation": [
+            "true"
+        ]
+    },
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "Page",
+                    "thousandSeparator": true,
+                    "width": 279
+                }
+            ],
+            "keep": false,
+            "name": "HTTP_Errors",
+            "referencedSheet": {
+                "name": "HTTP_Errors",
+                "sheetId": "cdcc2735-860a-4b79-8c46-8e76b0f77783",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/base/_02_20_HTTP_Errors.wbk",
+                    "uuid": "ef7da2af-7664-42b9-800c-88c790a79a39"
+                }
+            },
+            "sheetId": "d11cf1f9-b3f8-488e-abc3-a9be7b398977",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 265
+                },
+                {
+                    "columnId": "1",
+                    "name": "HttpStatusCode",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Page",
+                    "thousandSeparator": true,
+                    "width": 279
+                },
+                {
+                    "columnId": "3",
+                    "name": "Stacktrace",
+                    "thousandSeparator": true,
+                    "width": 411
+                },
+                {
+                    "columnId": "4",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Page",
+                    "filterExpression": "NOT_CONTAINS",
+                    "type": "CONSTANT",
+                    "value": "error-pages",
+                    "valueStatic": true
+                },
+                {
+                    "column": "Page",
+                    "filterExpression": "NOT_CONTAINS",
+                    "type": "CONSTANT",
+                    "value": "ajax-",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "pageRequestsWithErrors",
+            "filterTargetSheet": "pageRequestsWithErrors",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=GROUPBY(FORMATDATE(#HTTP_Errors!Timestamp;\"yyyy-MM-dd\"))"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "HttpStatusCode",
+                    "formulaString": "=GROUPBY(#HTTP_Errors!HttpStatusCode)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Page",
+                    "formulaString": "=GROUPBY(#HTTP_Errors!Page)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Stacktrace",
+                    "formulaString": "=GROUPANY(#HTTP_Errors!Stacktrace)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                }
+            ],
+            "keep": true,
+            "name": "pageRequestsWithErrors",
+            "nextColumnId": 5,
+            "sheetId": "668fd490-93dd-4a00-95e1-6f18c9998fd8",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Timestamp",
+                    "sortOrder": "DESC"
+                },
+                {
+                    "column": "Count",
+                    "sortOrder": "DESC"
+                }
+            ],
+            "sortSourceSheet": "pageRequestsWithErrors",
+            "sortTargetSheet": "pageRequestsWithErrors"
+        }
+    ],
+    "version": "4.5.0"
+}

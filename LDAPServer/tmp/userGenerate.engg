@@ -1,0 +1,22 @@
+echo "Generating Engineering Users for loading into ldap"
+for a in {10000..10500}; 
+do 
+	echo "dn: uid=das$a,ou=engineering,ou=people,ou=datameer,dc=jigz-local,dc=com" >> SampleEnggList.ldif;
+ 	echo "cn: User $a" >> SampleEnggList.ldif; 
+	echo "uidNumber: `expr $a - 100`" >> SampleEnggList.ldif; 
+	echo "uid: das$a" >> SampleEnggList.ldif; 
+	echo "sn: UserM" >> SampleEnggList.ldif; 
+	echo "homeDirectory: /home/das$a" >> SampleEnggList.ldif; 
+	echo "gidNumber: 99" >> SampleEnggList.ldif; 
+	echo "objectClass: top" >> SampleEnggList.ldif; 
+	echo "objectClass: posixAccount" >> SampleEnggList.ldif; 
+	echo "objectClass: shadowAccount" >> SampleEnggList.ldif; 
+	echo "objectClass: inetOrgPerson" >> SampleEnggList.ldif; 
+	echo "objectClass: person" >> SampleEnggList.ldif; 
+	echo "mail: das$a@jigz-local.com" >> SampleEnggList.ldif; 
+	echo "memberOf: cn=DM Linked,ou=groups,ou=datameer,dc=jigz-local,dc=com" >> SampleEnggList.ldif; 
+	echo "userPassword: {SHA}1vl2tkNTLqvx9Boo5TWjhfAc5vU=" >> SampleEnggList.ldif;
+	echo "" >> SampleEnggList.ldif; 
+done
+echo ""
+echo "Done."

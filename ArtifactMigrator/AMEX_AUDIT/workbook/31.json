@@ -1,0 +1,533 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "a4c4fa16-9daa-41d2-82e1-b4da94e5b17f",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/_d_Artifact_Connections_Workbook.wbk",
+    "description": "",
+    "name": "_d_Artifact_Connections_Workbook"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_import_file_types",
+      "sheetId": "0d7c6512-4c28-4f43-9d81-a5012d157496",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "MySQL_import_file_types",
+        "sheetId": "9c5cc9d6-46c1-4cab-b6a3-f198b8284f33",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_22_import_file_type.wbk",
+          "uuid": "2af6a113-f0b5-48df-bde7-1810f2709d3b"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "ConnectionType",
+          "width": 339,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "ConsumerType",
+          "width": 331,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "MySQL_export_file_types",
+      "sheetId": "51b4bfd6-df0c-4f59-a645-79a816bcd2e7",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "MySQL_export_file_types",
+        "sheetId": "10950f6d-312f-43a1-aab1-eb85ae9a9aa1",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_12_export_file_types.wbk",
+          "uuid": "d9ac7ae5-0aa4-488b-a99e-1790c70ebcb4"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "ConnectionType",
+          "width": 275,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "ConsumerType",
+          "width": 295,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "FileType",
+          "width": 353,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "MySQL_fileupload_file_types",
+      "sheetId": "25913d9d-355b-4a50-b017-a6a53aca9ac1",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "MySQL_fileupload_file_types",
+        "sheetId": "beb64991-cbc4-456b-b606-2fdd6438ad4f",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_14_fileupload_file_types.wbk",
+          "uuid": "67bf2b07-22fb-445a-b7f8-31667e3bc45f"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "ConsumerType",
+          "width": 214,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Prepared_FileUploads",
+      "sheetId": "12712796-2bcb-4bb5-bcb0-4696b8416141",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ConnectionType",
+          "columnId": "4",
+          "columnIndex": 0,
+          "formulaString": "\u003d\" \""
+        },
+        {
+          "columnName": "JDBC",
+          "columnId": "5",
+          "columnIndex": 1,
+          "formulaString": "\u003d\" \""
+        },
+        {
+          "columnName": "ConsumerType",
+          "columnId": "0",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_fileupload_file_types!ConsumerType"
+        },
+        {
+          "columnName": "FileType",
+          "columnId": "1",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_fileupload_file_types!FileType"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConsumerType",
+          "width": 214,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "FileType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "ConnectionType",
+          "width": 138,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "JDBC",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "Combined",
+      "sheetId": "a45c02d4-ba57-439f-a38b-a47d9b48b754",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "unionSources": [
+          "MySQL_import_file_types",
+          "MySQL_export_file_types",
+          "Prepared_FileUploads"
+        ]
+      },
+      "columnStyles": [
+        {
+          "columnId": "FileType",
+          "width": 328,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "ConsumerType",
+          "width": 192,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "ConnectionType",
+          "width": 180,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Corrections",
+      "sheetId": "49559c74-dd26-4587-a0ea-b6567b83b805",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "ConnectionType_raw",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Combined!ConnectionType"
+        },
+        {
+          "columnName": "JDBC",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Combined!JDBC"
+        },
+        {
+          "columnName": "ConsumerType",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Combined!ConsumerType"
+        },
+        {
+          "columnName": "FileType_raw",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Combined!FileType"
+        },
+        {
+          "columnName": "ConnectionType",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dIF(ISNULL(#JDBC);#ConnectionType_raw;#JDBC)"
+        },
+        {
+          "columnName": "FileType",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003dIF(CONTAINS(#FileType_raw;\"Avro\");\"AVRO\";IF(CONTAINS(#FileType_raw;\"Csv\");\"CSV\";#FileType_raw))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConnectionType_raw",
+          "width": 180,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "JDBC",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ConsumerType",
+          "width": 212,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "FileType_raw",
+          "width": 328,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "ConnectionType",
+          "width": 163,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "FileType",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "ArtifactNames",
+      "sheetId": "167b8444-1724-4ff5-a497-71c28fe28c66",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": true,
+      "referencedSheet": {
+        "name": "ArtifactNames",
+        "sheetId": "05e3c751-6b71-4e99-9347-b945b4551b8d",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/ArtifactNames.wbk",
+          "uuid": "7b1e12ea-d9f5-4385-bf33-13970c0b57fa"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "6374b22ca13c4f404ecee3c2fbf8cf84",
+          "name": "extension",
+          "width": 196,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "ba0f19c94067b7d12c47d4cb38529336",
+          "name": "artifact",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "CorrectNames",
+      "sheetId": "62db5fa6-a0f9-416e-bdae-1760190e80a2",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "Corrections",
+            "sheet2": "ArtifactNames",
+            "joinColumns1": [
+              "ConsumerType"
+            ],
+            "joinColumns2": [
+              "extension"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "Corrections": [
+            "ConnectionType",
+            "FileType"
+          ],
+          "ArtifactNames": [
+            "artifact"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "a171b6e1614e141aab483df47ab7cc83",
+          "width": 187,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "387e76dbe85c697ff4549531a4355ec6",
+          "width": 143,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "FileTypeCount",
+      "sheetId": "f1976156-c97c-4187-bbdd-b67fe421e75d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "FileTypeCount",
+      "filterTargetSheet": "FileTypeCount",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "FileType",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "FileTypeCount",
+      "sortTargetSheet": "FileTypeCount",
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "FileType",
+          "columnId": "2",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#CorrectNames!Corrections.FileType)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "2",
+          "name": "FileType",
+          "width": 268,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "ArtifactByFileType",
+      "sheetId": "c1081b36-9833-4bc3-b4f9-771a08cd9bbc",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "ArtifactByFileType",
+      "filterTargetSheet": "ArtifactByFileType",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "FileType",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "ArtifactByFileType",
+      "sortTargetSheet": "ArtifactByFileType",
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "ArtifactType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#CorrectNames!ArtifactNames.artifact)"
+        },
+        {
+          "columnName": "FileType",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#CorrectNames!Corrections.FileType)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ArtifactType",
+          "width": 210,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "FileType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "ConnectionsByArtifactType",
+      "sheetId": "60cf9fec-6573-452d-bffa-9e95639f57ee",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "ConnectionsByArtifactType",
+      "filterTargetSheet": "ConnectionsByArtifactType",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "ConnectionType",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "ConnectionsByArtifactType",
+      "sortTargetSheet": "ConnectionsByArtifactType",
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "ConnectionType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#CorrectNames!Corrections.ConnectionType)"
+        },
+        {
+          "columnName": "Artifact_Type",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#CorrectNames!ArtifactNames.artifact)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConnectionType",
+          "width": 168,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Artifact_Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

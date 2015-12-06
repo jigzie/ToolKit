@@ -1,0 +1,54 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "28d267cf-7d4b-41f9-8177-ca543427ecb4",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_00_Advanced_Filter_Functions.wbk",
+    "description": "",
+    "name": "_00_00_Advanced_Filter_Functions"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_Advanced_Filter_Functions_src",
+      "sheetId": "9820b8bd-8e05-48a6-8ccd-996d33ee53f4",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_Advanced_Filter_Functions.lnk",
+        "uuid": "7001c510-4b1a-4e38-be80-91b86fc082c8"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_Advanced_Filter_Functions",
+      "sheetId": "35b315b6-450b-4371-bca4-b514a5f196c1",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "FormulaString",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_Advanced_Filter_Functions_src!FormulaString"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "FormulaString",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 1
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

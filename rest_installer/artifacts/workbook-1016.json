@@ -1,0 +1,151 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_30_Workbook_Config_Stats",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_30_Workbook_Config_Stats.wbk",
+        "uuid": "692634b4-0d8a-4d93-8504-f9d1903f7ac8"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "30 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_Workbook_Config_Stats.lnk",
+                "uuid": "fde13a0e-aca2-44c9-aee0-f68961d0aa98"
+            },
+            "keep": false,
+            "name": "MySQL_Workbook_Config_Stats_src",
+            "sheetId": "9b6c6db7-5c39-492a-b82b-3d5752ff93b7",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "SheetID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "WorkbookID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "FilterID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "SortID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "ExternalSheetID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "SheetType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "PartitionDefinition",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "PartitionSelector",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "Keep",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "SheetID",
+                    "formulaString": "=#MySQL_Workbook_Config_Stats_src!SheetID"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "WorkbookID",
+                    "formulaString": "=#MySQL_Workbook_Config_Stats_src!WorkbookID"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "FilterID",
+                    "formulaString": "=#MySQL_Workbook_Config_Stats_src!FilterID"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "SortID",
+                    "formulaString": "=#MySQL_Workbook_Config_Stats_src!SortID"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "ExternalSheetID",
+                    "formulaString": "=#MySQL_Workbook_Config_Stats_src!ExternalSheetID"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "SheetType",
+                    "formulaString": "=#MySQL_Workbook_Config_Stats_src!SheetType"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "PartitionDefinition",
+                    "formulaString": "=#MySQL_Workbook_Config_Stats_src!PartitionDefinition"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "PartitionSelector",
+                    "formulaString": "=#MySQL_Workbook_Config_Stats_src!PartitionSelector"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "Keep",
+                    "formulaString": "=#MySQL_Workbook_Config_Stats_src!Keep"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_Workbook_Config_Stats",
+            "nextColumnId": 9,
+            "sheetId": "f52c3f95-9638-4c7a-ae1b-776e77a16180",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

@@ -1,0 +1,93 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.FileDataSinkImpl",
+  "file": {
+    "uuid": "a1746cc8-c53c-4b6b-a6c7-725ae7310179",
+    "path": "/Examples/Hello World/Solution/ExportJob7.exp",
+    "description": "",
+    "name": "ExportJob7"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "table_name": [
+      "85f18675_4aaa_4330_8ce6_c04027030b0e_UnionSheet2"
+    ],
+    "transformation_name": [
+      "Workbook_Joined_union_filter_testcase2"
+    ],
+    "transformation_description": [
+      ""
+    ],
+    "business_purpose": [
+      ""
+    ],
+    "run_frequency": [
+      "Daily"
+    ],
+    "status": [
+      "REQUEST_CREATION"
+    ],
+    "A": [
+      ""
+    ],
+    "B": [
+      ""
+    ],
+    "C": [
+      ""
+    ],
+    "D": [
+      ""
+    ],
+    "E": [
+      ""
+    ],
+    "F": [
+      ""
+    ],
+    "G": [
+      ""
+    ],
+    "H": [
+      ""
+    ],
+    "I": [
+      ""
+    ]
+  },
+  "hadoopProperties": "",
+  "connection": "/Data/Connections/Datameer server filesystem",
+  "sheet": {
+    "name": "UnionSheet1",
+    "sheetId": "3e799b72-61cb-42e7-81b0-41d9770ad1b2",
+    "workbook": {
+      "path": "/Examples/Hello World/Solution/Workbook_Joined_union_filter_testcase2.wbk",
+      "uuid": "85f18675-4aaa-4330-8ce6-c04027030b0e"
+    }
+  },
+  "mappings": [
+    {
+      "name": "A",
+      "srcColumnIndex": 0,
+      "nullable": true
+    },
+    {
+      "name": "D",
+      "srcColumnIndex": 1,
+      "nullable": true
+    }
+  ],
+  "errorHandlingMode": "DROP_RECORD",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fileName": "tmp/Test7",
+  "confirmOverwrite": false,
+  "clearTargetDirectory": false,
+  "includeHeader": true,
+  "delimiterString": ",",
+  "quoteString": "\"",
+  "escapeString": "\\",
+  "characterEncoding": "UTF-8",
+  "exportFileType": "DT_export"
+}

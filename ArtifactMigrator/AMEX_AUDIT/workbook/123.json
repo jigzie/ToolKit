@@ -1,0 +1,126 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "8cb949c0-0d0c-447c-8039-bfece3e1ff5c",
+    "path": "/Users/admin/Applications/AMEX/JsonP_sheets.wbk",
+    "description": "",
+    "name": "JsonP_sheets"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "jobDefn_5941",
+      "sheetId": "015998ae-3c3c-4ec7-85f3-3be902bc76b8",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/AMEX/jobDefn_5941.upl",
+        "uuid": "5b0be934-21fd-4952-9daa-251d622733b6"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "jobDefn_550",
+      "sheetId": "6dab70ce-c0a1-43ea-af1d-8a47d1b17687",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/AMEX/jobDefn_550.upl",
+        "uuid": "6cb7b70b-4670-4d51-9fff-61d86b6cd845"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Joined",
+      "sheetId": "72267c98-b283-4710-8227-81f0a2c04604",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "jobDefn_5941",
+            "sheet2": "jobDefn_550",
+            "joinColumns1": [
+              "pullType"
+            ],
+            "joinColumns2": [
+              "pullType"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "jobDefn_5941": [
+            "sheets"
+          ],
+          "jobDefn_550": [
+            "sheets"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "605eef274d98a97d1defa0da15abc0d8",
+          "width": 203,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "compare",
+      "sheetId": "a9a3b06c-d8c4-441c-aa06-147e9014dd71",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "jobDefn_5941.sheets",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Joined!jobDefn_5941.sheets"
+        },
+        {
+          "columnName": "jobDefn_550.sheets",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Joined!jobDefn_550.sheets"
+        },
+        {
+          "columnName": "C",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dCOMPARE(#jobDefn_5941.sheets;#jobDefn_550.sheets)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "jobDefn_5941.sheets",
+          "width": 203,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "jobDefn_550.sheets",
+          "width": 290,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "C",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

@@ -1,0 +1,99 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "1298bd94-0bab-4490-867e-c2b7ca9dfd11",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_property.lnk",
+    "description": "Datameer data from the property table.",
+    "name": "MySQL_property"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "jdbc.property.table": [
+      "\u0027property\u0027"
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "2f7c5bbf-f63d-43d6-acf5-3d2e223545a4"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ],
+    "jdbc.property.query": [
+      "select value \r\nfrom property \r\nwhere name\u003d\"system.latestUpgradeVersion\""
+    ],
+    "jdbc.property.select.sql.action": [
+      "TABLE"
+    ],
+    "tableName": [
+      "\u0027property\u0027"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 291,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 292,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "name",
+      "origin": "name",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 293,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "value",
+      "origin": "value",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 294,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 295,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

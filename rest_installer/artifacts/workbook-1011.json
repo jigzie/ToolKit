@@ -1,0 +1,103 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_20_Functions",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_20_Functions.wbk",
+        "uuid": "2f0508b5-d062-4a5f-bfe9-20b44b0e2aaf"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "20 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_Functions.lnk",
+                "uuid": "c7fde5b5-ae93-4425-b666-914adfd30e66"
+            },
+            "keep": false,
+            "name": "MySQL_Functions_src",
+            "sheetId": "ae150d13-cee1-44de-a8eb-5b756223ad16",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "FormulaID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "ColumnID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "FormulaString",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "SheetID",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "WorkbookID",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "FormulaID",
+                    "formulaString": "=#MySQL_Functions_src!FormulaID"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "ColumnID",
+                    "formulaString": "=#MySQL_Functions_src!ColumnID"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "FormulaString",
+                    "formulaString": "=#MySQL_Functions_src!FormulaString"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "SheetID",
+                    "formulaString": "=#MySQL_Functions_src!SheetID"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "WorkbookID",
+                    "formulaString": "=#MySQL_Functions_src!WorkbookID"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_Functions",
+            "nextColumnId": 6,
+            "sheetId": "ae0ff95c-34e3-40b3-82fd-676dc3000846",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

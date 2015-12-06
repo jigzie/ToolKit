@@ -1,0 +1,65 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10637,
+            "include": true,
+            "name": "extension",
+            "origin": "extension",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10638,
+            "include": true,
+            "name": "NumOfArtifacts",
+            "origin": "NumOfArtifacts",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "Getting the count for each Artifact type",
+        "name": "MySQL_Artifact_Count_By_Type",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_Artifact_Count_By_Type.lnk",
+        "uuid": "94be56c0-19d2-419c-a06b-873635c79dad"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 1,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            "select df.extension, count(*) as NumOfArtifacts from dap_file df\r\ninner join permission p on df.permission_fk=p.id\r\nwhere df.file_mode='NORMAL' and p.owner!='system' and df.extension in \r\n('DATA_STORE_EXTENSION','UPLOAD_JOB_EXTENSION','IMPORT_JOB_EXTENSION','IMPORT_LINK_JOB_EXTENSION','EXPORT_JOB_EXTENSION','WORKBOOK_EXTENSION','INFOGRAPHIC_EXTENSION')\r\ngroup by df.extension"
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "ad6e0010-952e-4d0f-9b1f-dda66f72915d"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ],
+        "tableName": [
+            "!query!"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

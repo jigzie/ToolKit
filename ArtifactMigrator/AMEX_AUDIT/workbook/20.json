@@ -1,0 +1,112 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "8ab39afa-26ed-4772-97ee-6afe854bce73",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_30_Metrics.wbk",
+    "description": "",
+    "name": "_02_30_Metrics"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Metrics_src",
+      "sheetId": "f6156a3d-4a91-4628-a26c-b42b88926758",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Logs_Metrics.lnk",
+        "uuid": "ca091694-9faf-497c-83ed-0f50274fe5f9"
+      },
+      "columnStyles": [
+        {
+          "columnId": "Event",
+          "width": 214,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Metrics",
+      "sheetId": "73f9c80d-003c-48ff-a1b3-bbe3e7af6707",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "outputPartitionDefinition": {
+        "dateFormat": "yyyyMMdd",
+        "dateGenerator": "\u003d(#Timestamp)"
+      },
+      "formulas": [
+        {
+          "columnName": "Timestamp",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics_src!Timestamp"
+        },
+        {
+          "columnName": "Event",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics_src!Event"
+        },
+        {
+          "columnName": "ms",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_src!Value1"
+        },
+        {
+          "columnName": "Value2",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Metrics_src!Value2"
+        },
+        {
+          "columnName": "Value3",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Metrics_src!Value3"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Timestamp",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Event",
+          "width": 208,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ms",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Value2",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Value3",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

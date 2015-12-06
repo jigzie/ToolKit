@@ -1,0 +1,67 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_02_Artifact_Count_By_Type",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_02_Artifact_Count_By_Type.wbk",
+        "uuid": "7a9588e2-7222-4d78-a038-c7abfdb9c5fb"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "2 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_Artifact_Count_By_Type.lnk",
+                "uuid": "94be56c0-19d2-419c-a06b-873635c79dad"
+            },
+            "keep": false,
+            "name": "MySQL_Artifact_Count_By_Type_src",
+            "sheetId": "5f5c0cfc-713a-41e3-8ce9-1349cb3e8094",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "extension",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "NumOfArtifacts",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "extension",
+                    "formulaString": "=#MySQL_Artifact_Count_By_Type_src!extension"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "NumOfArtifacts",
+                    "formulaString": "=#MySQL_Artifact_Count_By_Type_src!NumOfArtifacts"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_Artifact_Count_By_Type",
+            "nextColumnId": 2,
+            "sheetId": "6127ba20-6b27-4290-bfdb-f2eae57294da",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

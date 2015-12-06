@@ -1,0 +1,151 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "480953e4-87ea-4f48-aa85-7008cdf9893d",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/_f_User_job_execution.wbk",
+    "description": "",
+    "name": "_f_User_job_execution"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "users",
+      "sheetId": "859d2710-2878-4981-bee0-9a80be6d74f6",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "MySQL_users",
+        "sheetId": "063305fd-fe2a-4f43-91c4-263ece882554",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_28_users.wbk",
+          "uuid": "df357902-c8d0-4882-a419-2cdf90943d15"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "job_execution",
+      "sheetId": "a71c8441-a1ab-4876-b266-21a007293110",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "MySQL_job_execution",
+        "sheetId": "45543d9a-470f-4059-bb11-018aa46b4c9e",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_24_job_execution.wbk",
+          "uuid": "573eab9d-408a-4b47-9f68-ac4376886156"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "UserXExecutionIdXConfigurationId",
+      "sheetId": "dd9d58e5-2451-4af6-8651-15cd901b477a",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sortSourceSheet": "UserXExecutionIdXConfigurationId",
+      "sortTargetSheet": "UserXExecutionIdXConfigurationId",
+      "sortKeys": [
+        {
+          "column": "job_execution.dap_job_configuration__id",
+          "sortOrder": "DESC"
+        }
+      ],
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "users",
+            "sheet2": "job_execution",
+            "joinColumns1": [
+              "name"
+            ],
+            "joinColumns2": [
+              "user"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "users": [
+            "name"
+          ],
+          "job_execution": [
+            "id",
+            "dap_job_configuration__id"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "d94650c965809748cf5118940e35ef64",
+          "width": 174,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8821f2d86bd354da6963b265894b0162",
+          "width": 340,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "LastExecutionPerConfiguration",
+      "sheetId": "66f0d24e-0dbf-44bb-8366-f25b8ead3d1c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "MySQL_job_execution_dap_job_configuration__id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#UserXExecutionIdXConfigurationId!job_execution.dap_job_configuration__id)"
+        },
+        {
+          "columnName": "Max_MySQL_job_execution_id",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMAX(#UserXExecutionIdXConfigurationId!job_execution.id)"
+        },
+        {
+          "columnName": "MySQL_users_name",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPLAST(#UserXExecutionIdXConfigurationId!users.name;#UserXExecutionIdXConfigurationId!job_execution.id)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "MySQL_job_execution_dap_job_configuration__id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Max_MySQL_job_execution_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "MySQL_users_name",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

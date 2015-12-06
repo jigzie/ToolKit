@@ -1,0 +1,113 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_02_30_Metrics",
+        "path": "/Administration/HUMv2/Reports/logs/base/_02_30_Metrics.wbk",
+        "uuid": "53590388-9038-4bfe-b43a-5ab0060f6c90"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "30 2 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "Event",
+                    "thousandSeparator": true,
+                    "width": 214
+                }
+            ],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/Logs_Metrics.lnk",
+                "uuid": "6a0cdbcb-841a-4a76-a402-b61fb86c6130"
+            },
+            "keep": false,
+            "name": "Metrics_src",
+            "sheetId": "f6156a3d-4a91-4628-a26c-b42b88926758",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Event",
+                    "thousandSeparator": true,
+                    "width": 208
+                },
+                {
+                    "columnId": "2",
+                    "name": "ms",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Value2",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Value3",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Metrics_src!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Event",
+                    "formulaString": "=#Metrics_src!Event"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ms",
+                    "formulaString": "=#Metrics_src!Value1"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Value2",
+                    "formulaString": "=#Metrics_src!Value2"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Value3",
+                    "formulaString": "=#Metrics_src!Value3"
+                }
+            ],
+            "keep": true,
+            "name": "Metrics",
+            "nextColumnId": 5,
+            "outputPartitionDefinition": {
+                "dateFormat": "yyyyMMdd",
+                "dateGenerator": "=(#Timestamp)"
+            },
+            "sheetId": "73f9c80d-003c-48ff-a1b3-bbe3e7af6707",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

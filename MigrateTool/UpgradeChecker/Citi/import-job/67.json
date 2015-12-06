@@ -1,0 +1,124 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "9de37459-2b1f-4f9d-8d24-e1e55f61c754",
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/DF.lnk",
+    "description": "DF for Health Check",
+    "name": "DF"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "91dc3334-329e-4784-b9e3-e7c66bd4dd59"
+    ],
+    "!query!": [
+      "select df.id DapFileId, df.name Name, df.description Description, df.file_mode Mode, df.extension Extension, \r\n       df.creation_date CreationDate, df.last_changed_date ModifiedDate, df.last_executed LastRunDate, df.permission_fk  \r\nfrom dap_file df"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/SystemDatabase.dst",
+    "uuid": "1c07895a-11dd-4e7b-9929-642b7db9c90d"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 5,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 193,
+      "acceptEmpty": false,
+      "name": "DapFileId",
+      "origin": "DapFileId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 194,
+      "acceptEmpty": true,
+      "name": "Name",
+      "origin": "Name",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 195,
+      "acceptEmpty": true,
+      "name": "Description",
+      "origin": "Description",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 196,
+      "acceptEmpty": false,
+      "name": "Mode",
+      "origin": "Mode",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 197,
+      "acceptEmpty": false,
+      "name": "Extension",
+      "origin": "Extension",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 198,
+      "acceptEmpty": false,
+      "name": "CreationDate",
+      "origin": "CreationDate",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 199,
+      "acceptEmpty": false,
+      "name": "ModifiedDate",
+      "origin": "ModifiedDate",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 200,
+      "acceptEmpty": true,
+      "name": "LastRunDate",
+      "origin": "LastRunDate",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 201,
+      "acceptEmpty": false,
+      "name": "permission_fk",
+      "origin": "permission_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "cebd559e-eb30-47e2-a190-8c223f9e91a3",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_users.lnk",
+    "description": "user data",
+    "name": "MySQL_users"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "09e2db42-a540-40f7-b82b-42a0855d242d"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ],
+    "jdbc.property.table": [
+      "\u0027permission\u0027"
+    ],
+    "jdbc.property.select.sql.action": [
+      "CUSTOM_SQL"
+    ],
+    "jdbc.property.query": [
+      "select id, name, email, login_count, enabled from user"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "!query!": [
+      "select id, name, email, login_count, enabled from user"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 296,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 297,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "name",
+      "origin": "name",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 298,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "email",
+      "origin": "email",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 299,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "login_count",
+      "origin": "login_count",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 300,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "enabled",
+      "origin": "enabled",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 301,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 302,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

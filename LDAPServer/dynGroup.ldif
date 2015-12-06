@@ -1,0 +1,4 @@
+dn: cn=my Dynamic Group,ou=groups,ou=datameer,dc=Jigz-local,dc=com
+objectClass: groupOfURLs
+cn: my Dynamic Group
+memberURL: ldap:///ou=people,ou=datameer,dc=jigz-local,dc=com?cn,mail,uid?(uid=das*)

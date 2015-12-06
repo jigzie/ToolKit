@@ -1,0 +1,282 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "de366b2e-bd66-4723-80e3-66c5b6b9df5f",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Logs_Volume.lnk",
+    "description": "Job Volume Logs",
+    "name": "Logs_Volume"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "0986a9af-d2a4-43e6-8112-5f1099973556"
+    ],
+    "TextFileFormat": [
+      "TEXT_SCANNER"
+    ],
+    "file": [
+      "logs/volume.log*"
+    ],
+    "fileNameTimeRange_mode": [
+      "OFF"
+    ],
+    "filter.maxAge": [
+      ""
+    ],
+    "filter.minAge": [
+      ""
+    ],
+    "source.data.partitioned": [
+      "false"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "incrementalMode": [
+      "false"
+    ],
+    "rootPath": [
+      ""
+    ],
+    "alwaysIncludePaths": [
+      ""
+    ],
+    "skipExpandPaths": [
+      ""
+    ],
+    "ignorePaths": [
+      ""
+    ],
+    "collect_additional_fields": [
+      "false"
+    ],
+    "ignore_surrounding_text": [
+      "false"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "fileType": [
+      "JSON"
+    ],
+    "maxTraverseDepth": [
+      "0"
+    ],
+    "unwrap_root_array": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_Logs_SSH.dst",
+    "uuid": "295824be-d327-47ec-b46c-e03311616a6d"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 321,
+      "pattern": "yyyy-MM-dd HH:mm:ss",
+      "acceptEmpty": true,
+      "name": "execution_date",
+      "origin": "execution-date",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 322,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "execution_id",
+      "origin": "execution-id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 323,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "execution_configuration_uuid",
+      "origin": "execution-configuration-uuid",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 324,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "execution_configuration_job_type",
+      "origin": "execution-configuration-job-type",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 325,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "total_sample_size",
+      "origin": "total-sample-size",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 326,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "source_input_size",
+      "origin": "source-input-size",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 327,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "dropped_records",
+      "origin": "dropped-records",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 328,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "dropped_splits",
+      "origin": "dropped-splits",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 329,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "byte_throughput",
+      "origin": "byte-throughput",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 330,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "record_throughput",
+      "origin": "record-throughput",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 331,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "records_proccesed",
+      "origin": "records-proccesed",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 332,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "data_volume_imported",
+      "origin": "data-volume-imported",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 333,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "import_size_imported",
+      "origin": "import-size-imported",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 334,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "produced_records",
+      "origin": "produced-records",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 335,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "produced_size",
+      "origin": "produced-size",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 336,
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 337,
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 338,
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 339,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 340,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

@@ -1,0 +1,806 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "6b0ca307-c67c-44c9-9d8f-4c10abf20242",
+    "path": "/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk",
+    "description": "",
+    "name": "Facebook Social Statistics Summary"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "sheets": [
+    {
+      "name": "MyPosts",
+      "sheetId": "43d1b05a-5efe-4e07-a2ca-cd0ac48a0094",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Facebook Social Stats/Resources/MyPosts.imp",
+        "uuid": "3fa4f325-882f-4a52-a9b9-f522aa28ab21"
+      },
+      "columnStyles": [
+        {
+          "columnId": "post_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "actor_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "target_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "message",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "comments_can_remove",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "comments_can_post",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "comments_count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "comments_comment_list",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "place",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_sample",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_friends",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_can_like",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "impressions",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "created_time",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_href",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_user_likes",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "FBPostTypes",
+      "sheetId": "7ac4b269-52a9-40a8-83ba-3dfa9a126291",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Facebook Social Stats/Resources/FBPostTypes.upl",
+        "uuid": "09e8941b-34d4-4c36-ae3c-0582f0602156"
+      },
+      "columnStyles": [
+        {
+          "columnId": "type_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "description",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "PittSentimentLexicon",
+      "sheetId": "8a3cc8ff-79da-49b7-9f67-74a511d45c49",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": true,
+      "datasource": {
+        "path": "/Users/admin/Applications/Facebook Social Stats/Resources/PittSentimentLexicon.upl",
+        "uuid": "1c2e66ee-b05d-42ec-9286-e34c5157612f"
+      },
+      "columnStyles": [
+        {
+          "columnId": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "Length",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "Word",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "Pos",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "Stemmed",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "Priorpolarity",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "PostsWithWeek",
+      "sheetId": "a130a0cb-f012-4478-b1d1-d23dbba3fe6b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "message",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MyPosts!message"
+        },
+        {
+          "columnName": "comments_count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MyPosts!comments_count"
+        },
+        {
+          "columnName": "type",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MyPosts!type"
+        },
+        {
+          "columnName": "created_time",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MyPosts!created_time"
+        },
+        {
+          "columnName": "weekOfYear",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dINT(FORMATDATE(#PostsWithWeek!created_time;\"ww\"))"
+        },
+        {
+          "columnName": "likes_count",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#MyPosts!likes_count"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "message",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "comments_count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "created_time",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "weekOfYear",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "likes_count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "CountsByWeek",
+      "sheetId": "28a5ae3d-372a-4cd3-822c-29c105fa87a4",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "weekOfYear",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#PostsWithWeek!weekOfYear)"
+        },
+        {
+          "columnName": "PostingsCount",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "CommentsCount",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#PostsWithWeek!comments_count)"
+        },
+        {
+          "columnName": "LikesCount",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPSUM(#PostsWithWeek!likes_count)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "weekOfYear",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "PostingsCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "CommentsCount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "LikesCount",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "PostsWithTypeInfo",
+      "sheetId": "06862bdd-0029-460d-8326-56e60bf7b9e2",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": true,
+      "filterSourceSheet": "MyPosts",
+      "filterTargetSheet": "PostsWithTypeInfo",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "type",
+          "filterExpression": "NOT_EMPTY",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "post_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "actor_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "target_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "message",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "comments_can_remove",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "comments_can_post",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "comments_count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "comments_comment_list",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "place",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_sample",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_friends",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_can_like",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "impressions",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "created_time",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_href",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "likes_user_likes",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "PostsWithTypeDescription",
+      "sheetId": "b44f45fe-88f3-4d97-a6cd-5b11f47d81fa",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "PostsWithTypeInfo",
+            "sheet2": "FBPostTypes",
+            "joinColumns1": [
+              "type"
+            ],
+            "joinColumns2": [
+              "type_id"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "PostsWithTypeInfo": [
+            "post_id"
+          ],
+          "FBPostTypes": [
+            "description"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0d07b2711a3d0736bfca794b7d4a7b60",
+          "width": 317,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "PostsByType",
+      "sheetId": "138eaf99-c50f-426b-9827-c3d891ad863b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "type",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#PostsWithTypeDescription!FBPostTypes.description)"
+        },
+        {
+          "columnName": "count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "Words",
+      "sheetId": "428fe265-e904-4e50-8474-06722b41502f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "word",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dTOKENIZE(LOWER(#PostsWithTypeInfo!message);\" \")"
+        },
+        {
+          "columnName": "wordWoPunctuation",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dREPLACEALL(#Words!word;\"[^a-z]*\";\"\")"
+        },
+        {
+          "columnName": "week",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dINT(FORMATDATE(#PostsWithTypeInfo!created_time;\"ww\"))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "word",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "wordWoPunctuation",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "week",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "StopWordFilter",
+      "sheetId": "82f78576-c5ed-4f0d-8195-1ddff5828277",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": true,
+      "filterSourceSheet": "Words",
+      "filterTargetSheet": "StopWordFilter",
+      "filterArguments": [
+        {
+          "filterExpression": "FORMULA",
+          "value": "!ISBLANK(#wordWoPunctuation) \u0026\u0026 !CONTAINS([\"a\", \"about\", \"above\", \"across\", \"after\", \"again\", \"against\", \"all\", \"almost\", \"alone\", \"along\", \"already\", \"also\", \"although\", \"am\", \"always\", \"among\", \"an\", \"and\", \"another\", \"any\", \"anybody\", \"anyone\", \"anything\", \"anywhere\", \"are\", \"area\", \"areas\", \"around\", \"as\", \"ask\", \"asked\", \"asking\", \"asks\", \"at\", \"away\", \"b\", \"back\", \"backed\", \"backing\", \"backs\", \"be\", \"became\", \"because\", \"become\", \"becomes\", \"been\", \"before\", \"began\", \"behind\", \"being\", \"beings\", \"best\", \"better\", \"between\", \"big\", \"both\", \"but\", \"by\", \"c\", \"came\", \"can\", \"cannot\", \"case\", \"cases\", \"certain\", \"certainly\", \"clear\", \"clearly\", \"come\", \"could\", \"d\", \"did\", \"differ\", \"different\", \"differently\", \"do\", \"does\", \"done\", \"down\", \"down\", \"downed\", \"downing\", \"downs\", \"during\", \"e\", \"each\", \"early\", \"either\", \"end\", \"ended\", \"ending\", \"ends\", \"enough\", \"even\", \"evenly\", \"ever\", \"every\", \"everybody\", \"everyone\", \"everything\", \"everywhere\", \"f\", \"face\", \"faces\", \"fact\", \"facts\", \"far\", \"felt\", \"few\", \"find\", \"finds\", \"first\", \"for\", \"four\", \"from\", \"full\", \"fully\", \"further\", \"furthered\", \"furthering\", \"furthers\", \"g\", \"gave\", \"general\", \"generally\", \"get\", \"gets\", \"give\", \"given\", \"gives\", \"go\", \"going\", \"good\", \"goods\", \"got\", \"great\", \"greater\", \"greatest\", \"group\", \"grouped\", \"grouping\", \"groups\", \"h\", \"had\", \"has\", \"have\", \"having\", \"he\", \"her\", \"here\", \"herself\", \"high\", \"high\", \"high\", \"higher\", \"highest\", \"him\", \"himself\", \"his\", \"how\", \"however\", \"i\", \"if\", \"important\", \"in\", \"interest\", \"interested\", \"interesting\", \"interests\", \"into\", \"is\", \"it\", \"its\", \"itself\", \"j\", \"just\", \"k\", \"keep\", \"keeps\", \"kind\", \"knew\", \"know\", \"known\", \"knows\", \"l\", \"large\", \"largely\", \"last\", \"later\", \"latest\", \"least\", \"less\", \"let\", \"lets\", \"like\", \"likely\", \"long\", \"longer\", \"longest\", \"m\", \"made\", \"make\", \"making\", \"man\", \"many\", \"may\", \"me\", \"member\", \"members\", \"men\", \"might\", \"more\", \"most\", \"mostly\", \"mr\", \"mrs\", \"much\", \"must\", \"my\", \"myself\", \"n\", \"necessary\", \"need\", \"needed\", \"needing\", \"needs\", \"never\", \"new\", \"new\", \"newer\", \"newest\", \"next\", \"no\", \"nobody\", \"non\", \"noone\", \"not\", \"nothing\", \"now\", \"nowhere\", \"number\", \"numbers\", \"o\", \"of\", \"off\", \"often\", \"old\", \"older\", \"oldest\", \"on\", \"once\", \"one\", \"only\", \"open\", \"opened\", \"opening\", \"opens\", \"or\", \"order\", \"ordered\", \"ordering\", \"orders\", \"other\", \"others\", \"our\", \"out\", \"over\", \"p\", \"part\", \"parted\", \"parting\", \"parts\", \"per\", \"perhaps\", \"place\", \"places\", \"point\", \"pointed\", \"pointing\", \"points\", \"possible\", \"present\", \"presented\", \"presenting\", \"presents\", \"problem\", \"problems\", \"put\", \"puts\", \"q\", \"quite\", \"r\", \"rather\", \"really\", \"right\", \"right\", \"room\", \"rooms\", \"s\", \"said\", \"same\", \"saw\", \"say\", \"says\", \"second\", \"seconds\", \"see\", \"seem\", \"seemed\", \"seeming\", \"seems\", \"sees\", \"several\", \"shall\", \"she\", \"should\", \"show\", \"showed\", \"showing\", \"shows\", \"side\", \"sides\", \"since\", \"small\", \"smaller\", \"smallest\", \"so\", \"some\", \"somebody\", \"someone\", \"something\", \"somewhere\", \"state\", \"states\", \"still\", \"still\", \"such\", \"sure\", \"t\", \"take\", \"taken\", \"than\", \"that\", \"the\", \"their\", \"them\", \"then\", \"there\", \"therefore\", \"these\", \"they\", \"thing\", \"things\", \"think\", \"thinks\", \"this\", \"those\", \"though\", \"thought\", \"thoughts\", \"three\", \"through\", \"thus\", \"to\", \"today\", \"together\", \"too\", \"took\", \"toward\", \"turn\", \"turned\", \"turning\", \"turns\", \"two\", \"u\", \"under\", \"until\", \"up\", \"upon\", \"us\", \"use\", \"used\", \"uses\", \"v\", \"very\", \"w\", \"want\", \"wanted\", \"wanting\", \"wants\", \"was\", \"way\", \"ways\", \"we\", \"well\", \"wells\", \"went\", \"were\", \"what\", \"when\", \"where\", \"whether\", \"which\", \"while\", \"who\", \"whole\", \"whose\", \"why\", \"will\", \"with\", \"within\", \"without\", \"work\", \"worked\", \"working\", \"works\", \"would\", \"x\", \"y\", \"year\", \"years\", \"yet\", \"you\", \"young\", \"younger\", \"youngest\", \"your\", \"yours\", \"z\"];#wordWoPunctuation)",
+          "valueStatic": false,
+          "type": "ADVANCED_FORMULA"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "WordCount",
+      "sheetId": "56ee5896-b93a-4a03-aba9-865fd70c9da1",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "word",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#StopWordFilter!wordWoPunctuation)"
+        },
+        {
+          "columnName": "count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "word",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "TopWords",
+      "sheetId": "0d68dc56-7476-4669-81ba-9014c8d8fdd7",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "WordCount",
+      "sortTargetSheet": "TopWords",
+      "topN": 100,
+      "sortKeys": [
+        {
+          "column": "count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "WordSentiment",
+      "sheetId": "0c87077e-b95d-41cf-b106-3884d22c3335",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "PittSentimentLexicon",
+            "sheet2": "StopWordFilter",
+            "joinColumns1": [
+              "Word"
+            ],
+            "joinColumns2": [
+              "wordWoPunctuation"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "StopWordFilter": [
+            "word",
+            "wordWoPunctuation",
+            "week"
+          ],
+          "PittSentimentLexicon": [
+            "Type",
+            "Length",
+            "Word",
+            "Pos",
+            "Stemmed",
+            "Priorpolarity"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "dummy",
+          "width": 276,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "a6e1bfab69edd337f515daa720c2b09d",
+          "width": 191,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "e0bd87f4b369465fc55e0a3396cd567b",
+          "width": 171,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9ad2e2fa0b1676b0b653ca47316fe082",
+          "width": 207,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "dummy",
+          "width": 141,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "dummy",
+          "width": 142,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "54070307306d535b7755501a14f8ba10",
+          "width": 182,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "HappinessScore",
+      "sheetId": "25e52863-d845-4809-a785-85b2b3fbf7f6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "word",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#WordSentiment!PittSentimentLexicon.Word"
+        },
+        {
+          "columnName": "sentiment",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#WordSentiment!PittSentimentLexicon.Priorpolarity"
+        },
+        {
+          "columnName": "week",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#WordSentiment!StopWordFilter.week"
+        },
+        {
+          "columnName": "score",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dIF(#sentiment\u003d\u003d\"positive\";1;IF(#sentiment\u003d\u003d\"negative\";-1;0))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "word",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "sentiment",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "week",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "score",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "HappinessByWeek",
+      "sheetId": "b5dc116a-88aa-4386-868a-bf2648573cb6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "week",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#HappinessScore!week)"
+        },
+        {
+          "columnName": "score",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPAVERAGE(#HappinessScore!score)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "week",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "score",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

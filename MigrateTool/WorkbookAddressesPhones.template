@@ -1,0 +1,95 @@
+{
+  "version": "2.1.4.5",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "00d70b8a-1a76-45fc-87ed-35d24b2c11e4",
+    "path": "/Users/admin/Analytics/Workbooks/CR_PA_AddressPhone_Summary.wbk",
+    "description": "CR Address Phone Summary - PA",
+    "name": "CR_PA_AddressPhone_Summary"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "sheets": [
+    {
+      "name": "CR_PA_Addresses_Import",
+      "sheetId": "769f4475-8bc4-4eaf-a74e-2fc339e2daa5",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Data/ImportJobs/SQL DBs/American Crossroads/CR_PA_Addresses_Import.imp",
+        "uuid": "456811f2-a9e9-45d3-a67e-e067a3a8ab29"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "CR_PA_Phones_Import",
+      "sheetId": "4231cd41-e284-4bcc-ba67-ab6b3805c814",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Data/ImportJobs/SQL DBs/American Crossroads/CR_PA_Phones_Import.imp",
+        "uuid": "37d5e097-cc71-4161-b738-86300d7b93f2"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Joined",
+      "sheetId": "28e17861-7555-4f92-841b-0bcab25728ec",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "CR_PA_Addresses_Import",
+            "sheet2": "CR_PA_Phones_Import",
+            "joinColumns1": [
+              "VoterId"
+            ],
+            "joinColumns2": [
+              "VoterId"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "CR_PA_Addresses_Import": [
+            "AddressId",
+            "VoterId",
+            "AddressType",
+            "Address1",
+            "Address2",
+            "City",
+            "State",
+            "Zip",
+            "Zip4",
+            "OddEvenCode",
+            "HouseNumber",
+            "HouseHalf",
+            "StreetPre",
+            "StreetName",
+            "StreetType",
+            "StreetPost",
+            "Unit",
+            "UnitNumber",
+            "CreatedBy",
+            "CreatedOn",
+            "ModifiedBy",
+            "ModifiedOn"
+          ],
+          "CR_PA_Phones_Import": [
+            "PhoneId",
+            "VoterId",
+            "PhoneType",
+            "AreaCode",
+            "PhoneNumber"
+          ]
+        }
+      },
+      "columnStyles": []
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

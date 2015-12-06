@@ -1,0 +1,50 @@
+#version: 1
+#ORGANIZATIONAL
+dn: ou=datameer,dc=jigz-local,dc=com
+objectClass: organizationalUnit
+ou: datameer
+
+#ORGANIZATION PEOPLE
+dn: ou=people,ou=datameer,dc=jigz-local,dc=com
+objectClass: organizationalUnit
+ou: people
+
+#ORGANIZATION GROUPS
+dn: ou=groups,ou=datameer,dc=jigz-local,dc=com
+objectClass: organizationalUnit
+ou: datameer
+#PROFESSIONAL SERVICES TREE
+dn: ou=Professional Services,ou=people,dc=jigz-local,dc=com
+objectClass: organizationalUnit
+objectClass: top
+cn: ps@jigz-local.com
+gidNumber: 10
+homeDirectory: /home/ps
+uid: ps
+uidNumber: 1000
+ou: Professional Services
+description: Professional Services Business Unit
+
+#dn: people,ou=Professional Services,ou=people,dc=jigz-local,dc=com
+#objectClass: organizationalUnit
+#objectClass: top
+#objectClass: posixAccount
+#cn: people@ps.jigz-local.com
+#gidNumber: 11
+#homeDirectory: /home/ps/people
+#uid: people
+#uidNumber: 1100
+#ou: people
+##description: Professional Services People Business Unit
+
+#dn: ou=Support,ou=people,ou=Professional Services,ou=people,dc=jigz-local,dc=com
+#objectClass: organizationalUnit
+#objectClass: top
+#objectClass: posixAccount
+#cn: support@people.ps.jigz-local.com
+#gidNumber: 12
+#homeDirectory: /home/ps/people/support
+#uid: support
+#uidNumber: 1200
+#ou: Support
+#description: Professional Services Support People Business Unit

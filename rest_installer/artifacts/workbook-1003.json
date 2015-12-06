@@ -1,0 +1,139 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_04_dap_file",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_04_dap_file.wbk",
+        "uuid": "b1008197-c92b-4cb5-9451-4f633f83ba51"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "4 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_dap_file.lnk",
+                "uuid": "7f6ba152-a980-45fe-9a89-7ed8e2b9b12f"
+            },
+            "keep": false,
+            "name": "MySQL_dap_file_src",
+            "sheetId": "a26ab68f-67a5-4aec-880e-fc85607fb5d5",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "bytes_processed",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "extension",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "file_mode",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "version",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "folder_fk",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "permission_fk",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=#MySQL_dap_file_src!id"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "bytes_processed",
+                    "formulaString": "=#MySQL_dap_file_src!bytes_processed"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "extension",
+                    "formulaString": "=#MySQL_dap_file_src!extension"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "file_mode",
+                    "formulaString": "=#MySQL_dap_file_src!file_mode"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "name",
+                    "formulaString": "=#MySQL_dap_file_src!name"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "version",
+                    "formulaString": "=#MySQL_dap_file_src!version"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "folder_fk",
+                    "formulaString": "=#MySQL_dap_file_src!folder_fk"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "permission_fk",
+                    "formulaString": "=#MySQL_dap_file_src!permission_fk"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_dap_file",
+            "nextColumnId": 8,
+            "sheetId": "c4b99187-2d5c-41a0-9ab1-851dda23f133",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

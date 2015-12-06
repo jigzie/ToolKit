@@ -1,0 +1,144 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "d56e4792-4085-4080-a639-7a6da2a58058",
+    "path": "/Data/ImportJobs/DapJobConfiguration.imp",
+    "description": "DapJobConfiguration: The table to join ID to Dap_file for DataVolumeStore",
+    "name": "DapJobConfiguration"
+  },
+  "pullType": "MANUALLY",
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "faf31ab0-30f1-4355-b8dc-2983cfd4670b"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      ""
+    ],
+    "tableName": [
+      "\u0027dap_job_configuration\u0027"
+    ],
+    "orderColumn": [
+      "id"
+    ],
+    "incrementalMode": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Data/Connections/Dap4120.dst",
+    "uuid": "1412c847-b9a7-4686-84c7-fd5caebd9a20"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 80,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 81,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "data_volume_size_by_license_period",
+      "origin": "data_volume_size_by_license_period",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 82,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "expire_time_days",
+      "origin": "expire_time_days",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 83,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "hadoop_properties",
+      "origin": "hadoop_properties",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 84,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "logging_properties",
+      "origin": "logging_properties",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 85,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "min_keep_count",
+      "origin": "min_keep_count",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 86,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "pull_type",
+      "origin": "pull_type",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 87,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "root_logger_level",
+      "origin": "root_logger_level",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 88,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "schedule",
+      "origin": "schedule",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 89,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dap_file__id",
+      "origin": "dap_file__id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.infographic.Infographic",
+  "links": {
+    "self": "/rest/infographics/1"
+  },
+  "file": {
+    "uuid": "12464165-a4e7-4ebb-a9a1-9534702df970",
+    "path": "/Examples/Hello World/Solution/My Infographic.ifg",
+    "description": "STEP 3 of the \"Hello World\" tutorial.\n\nFor more information, please visit: http://datameer.com/documentation/display/DAS20/Getting+Started",
+    "name": "My Infographic"
+  },
+  "tabs": [
+    {
+      "name": "Page 1",
+      "order": 0,
+      "id": "6f9c79f0-dfb0-494a-a732-80ea12b23767",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Multi bar chart",
+            "chart": "charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 20,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "panelGroup": "chart",
+            "isBarChart": true
+          },
+          "name": "Multi bar chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 403,
+          "top": 187,
+          "width": 245,
+          "height": 411,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 2,
+          "id": "42b79bf6-4e87-4c53-9006-5ea76c975dec",
+          "dataSet": {
+            "maxSize": 20,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "type": "INTEGER",
+                  "name": "Age",
+                  "id": "5a4d0a33-516f-4383-8738-24d9cb672c45",
+                  "columnId": "Age",
+                  "dataSourceId": "V0JLOy9FeGFtcGxlcy9IZWxsbyBXb3JsZC9Tb2x1dGlvbi9NeSBXb3JrYm9vay53Yms7YmMwMzAwYWMtZThiMi00NTlkLThhMmUtZDE2ZDhkYjc1ODRlOzA7MDs4MTNmZjM3Yy05MzgxLTQ1MzktOTEyNi03YTE2ZGI1NDcxMjk"
+                }
+              ],
+              "label": [
+                {
+                  "type": "STRING",
+                  "name": "Name",
+                  "id": "94992095-f2bf-406a-b2b1-f22398accf0e",
+                  "columnId": "Name",
+                  "dataSourceId": "V0JLOy9FeGFtcGxlcy9IZWxsbyBXb3JsZC9Tb2x1dGlvbi9NeSBXb3JrYm9vay53Yms7YmMwMzAwYWMtZThiMi00NTlkLThhMmUtZDE2ZDhkYjc1ODRlOzA7MDs4MTNmZjM3Yy05MzgxLTQ1MzktOTEyNi03YTE2ZGI1NDcxMjk"
+                }
+              ]
+            },
+            "lastExecutionDate": "06/18/2012 05:42:23 PM",
+            "isTruncated": false,
+            "dataSourceId": "V0JLOy9FeGFtcGxlcy9IZWxsbyBXb3JsZC9Tb2x1dGlvbi9NeSBXb3JrYm9vay53Yms7YmMwMzAwYWMtZThiMi00NTlkLThhMmUtZDE2ZDhkYjc1ODRlOzA7MDs4MTNmZjM3Yy05MzgxLTQ1MzktOTEyNi03YTE2ZGI1NDcxMjk"
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "maxSize": "20",
+          "offset": 10,
+          "scale": "linear",
+          "isShadowVisible": false,
+          "isStyleVisible": false,
+          "labelOrientation": "horizontal",
+          "fillColorList": [
+            "rgb(29, 144, 206)",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "steelblue",
+          "labelColor": "black",
+          "dataDescriptor": {
+            "maxSize": 20,
+            "data": {
+              "type": [
+                "INTEGER",
+                "BIG_INTEGER",
+                "FLOAT",
+                "BIG_DECIMAL"
+              ],
+              "dimensions": [
+                1,
+                10
+              ]
+            },
+            "label": {
+              "type": [
+                "ANY"
+              ],
+              "dimensions": [
+                1,
+                1
+              ]
+            }
+          },
+          "variant": "grouped",
+          "groupGapInPercent": 20,
+          "fontSize": 10,
+          "fontName": "Verdana",
+          "labelLength": 100,
+          "colorScheme": "categorical",
+          "isBarChart": true,
+          "showPoints": true,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 122.50000000000001,
+          "marginLeft": 122.50000000000001,
+          "autoMargins": false,
+          "legendVisible": false,
+          "hasLegend": true,
+          "legendId": "b35e9a11-f5dd-4867-b2de-caee304c24e1",
+          "resetLegendPosition": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 449,
+          "top": 133,
+          "width": 223,
+          "height": 39,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "010af9dc-fb6c-415e-8a00-80dc725beab1",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Hello World",
+          "fontSize": "30",
+          "fontName": "Arial",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black"
+        },
+        {
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": -1,
+          "maxSize": 20,
+          "showFrame": true,
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "id": "b35e9a11-f5dd-4867-b2de-caee304c24e1",
+          "_uicType": "widget",
+          "inspectorName": "infographics/views/legend_inspector",
+          "titleHeight": 30,
+          "left": 403,
+          "top": 608,
+          "width": 245,
+          "height": 45,
+          "isLegend": true,
+          "parentChartId": "42b79bf6-4e87-4c53-9006-5ea76c975dec",
+          "legendLock": false,
+          "legendOffsetX": 0,
+          "legendOffsetY": 421,
+          "visible": false,
+          "frameColor": "#ecebeb",
+          "name": "Legend: Multi bar chart",
+          "type": {
+            "name": "Chart Legend",
+            "chart": "charts/legends/box_legend",
+            "dataDescriptor": {
+              "maxSize": 20,
+              "color": {
+                "type": [
+                  "STRING"
+                ]
+              },
+              "label": {
+                "type": [
+                  "STRING"
+                ]
+              }
+            },
+            "inspector": "infographics/views/legend_inspector",
+            "panelGroup": "none",
+            "supportsLegend": false
+          }
+        },
+        {
+          "id": "871d478a-d3fa-49b7-8a29-8d86664a8224",
+          "widgets": [
+            "42b79bf6-4e87-4c53-9006-5ea76c975dec",
+            "b35e9a11-f5dd-4867-b2de-caee304c24e1"
+          ],
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "name": "Multi bar chart",
+          "_uicType": "legendGroup",
+          "isLegendGroup": true,
+          "childNames": [
+            "Multi bar chart",
+            "Legend: Multi bar chart"
+          ],
+          "left": 403,
+          "top": 187,
+          "width": 245,
+          "height": 411
+        }
+      ],
+      "backgroundType": "color",
+      "backgroundImagePlacement": "full",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both"
+    }
+  ]
+}

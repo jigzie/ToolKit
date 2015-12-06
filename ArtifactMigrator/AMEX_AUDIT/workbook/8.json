@@ -1,0 +1,76 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "8b249835-57ac-4895-af0b-6ca685706239",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_26_property.wbk",
+    "description": "",
+    "name": "_00_26_property"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_property_src",
+      "sheetId": "874b1e33-2218-4146-90a5-b8bd0aaa6bb7",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_property.lnk",
+        "uuid": "1298bd94-0bab-4490-867e-c2b7ca9dfd11"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_property",
+      "sheetId": "2181ef28-b94a-4239-8076-b663baea8d4f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "MySQL_property",
+      "filterTargetSheet": "MySQL_property",
+      "filterArguments": [
+        {
+          "filterExpression": "FORMULA",
+          "value": "#name !\u003d \"mail.password\" \u0026\u0026 #name !\u003d \"hadoop.ec2PrivateKeyFile\" \u0026\u0026 #name !\u003d \"hadoop.ec2AccessSecret\" \u0026\u0026 #name !\u003d \"hadoop.ec2AccessKey\" \u0026\u0026 #name !\u003d \"hadoop.secureHdfsPrincipal\" \u0026\u0026 #name !\u003d \"hadoop.secureUserPrincipal\" \u0026\u0026 #name !\u003d \"hadoop.secureUserKeytabPath\" \u0026\u0026 #name !\u003d \"hadoop.secureMapReducePrincipal\" \u0026\u0026 #name !\u003d \"hadoop.secureYarnPrincipal\"",
+          "valueStatic": false,
+          "type": "ADVANCED_FORMULA"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_property_src!name"
+        },
+        {
+          "columnName": "value",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_property_src!value"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "value",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

@@ -1,0 +1,5181 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.infographic.Infographic",
+  "links": {
+    "self": "/rest/infographics/2"
+  },
+  "file": {
+    "uuid": "b45ddcc4-9efe-431d-9bb0-2323cbc185a6",
+    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.ifg",
+    "name": "UserActionAnalysis"
+  },
+  "sameBackgroundForTabs": true,
+  "presentationMode": "tabs",
+  "slideshowEffect": "none",
+  "slideshowTime": 5,
+  "pageSize": "USLetter",
+  "pageOrientation": "portrait",
+  "showGuides": false,
+  "allowPdfFromView": false,
+  "tabs": [
+    {
+      "backgroundType": "color",
+      "backgroundImagePlacement": "tile",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both",
+      "name": "Overview",
+      "order": 0,
+      "id": "564385ac-0d7e-4cc7-ba30-d8cde068cc0e",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Pie Chart",
+            "chart": "charts/pie_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/piechart_inspector",
+            "panelGroup": "chart",
+            "holeRadius": -1
+          },
+          "name": "Pie Chart",
+          "inspectorName": "infographics/views/piechart_inspector",
+          "left": 52,
+          "top": 184,
+          "width": 526,
+          "height": 306,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 5,
+          "id": "95d3297c-b3a6-4e04-831e-2d18557b0551",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2ZmMmE3ZDliLWM2NDgtNGE4Ny04ODk4LTAyMTgwODEwM2M1ZA",
+                  "type": "STRING",
+                  "name": "action_type",
+                  "columnId": "0",
+                  "id": "6a6e98d7-090b-45b2-8a32-10e862584df5",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "ff2a7d9b-c648-4a87-8898-021808103c5d",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2ZmMmE3ZDliLWM2NDgtNGE4Ny04ODk4LTAyMTgwODEwM2M1ZA",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "1",
+                  "id": "e1b76e4f-9cc6-4927-a837-d10b674a42a5",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "ff2a7d9b-c648-4a87-8898-021808103c5d",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2ZmMmE3ZDliLWM2NDgtNGE4Ny04ODk4LTAyMTgwODEwM2M1ZA",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "ff2a7d9b-c648-4a87-8898-021808103c5d",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 35,
+          "marginRight": 30,
+          "marginBottom": 30,
+          "marginLeft": 30,
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "white",
+          "labelColor": "rgb(82, 82, 82)",
+          "colorScheme": "range",
+          "isShadowVisible": false,
+          "style": "glossy",
+          "showLabels": true,
+          "labelType": "numeric",
+          "fontSize": "12",
+          "fontName": "OpenSans",
+          "labelLength": 100,
+          "enableTooltips": true,
+          "labelReduction": 0,
+          "labelLayoutVariant": "side-aligned",
+          "labelGap": "11",
+          "holeRadius": 80,
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "otherSliceSize": 5,
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "autoMargins": true,
+          "subtype": "doughnut",
+          "subtype_text": "Doughnut Chart",
+          "colorScheme_text": "Range",
+          "labelType_text": "Numeric",
+          "labelLayoutVariant_text": "Sides",
+          "style_text": "Glossy",
+          "fontName_text": "OpenSans",
+          "legendVisible": false,
+          "hasLegend": true,
+          "legendId": "0732297e-4695-4beb-9e3d-16e25cc6c0e7",
+          "resetLegendPosition": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Line and Area Chart",
+            "isBarChart": false,
+            "showAreas": false,
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "chart": "charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "panelGroup": "chart"
+          },
+          "name": "Line and Area Chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 656,
+          "top": 196,
+          "width": 692,
+          "height": 292,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "05e37e90-1c88-459f-af2d-6da12e6c388c",
+          "maxSize": "50",
+          "dataSet": {
+            "maxSize": "50",
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzc0MDQwZjlkLThhZjktNDhmZi04MTUwLWFhM2RhM2NjMWU5ZA",
+                  "type": "DATE",
+                  "name": "timestamp",
+                  "columnId": "0",
+                  "id": "02465dd7-1214-42b8-8274-c637225391a5",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "74040f9d-8af9-48ff-8150-aa3da3cc1e9d",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzc0MDQwZjlkLThhZjktNDhmZi04MTUwLWFhM2RhM2NjMWU5ZA",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "1",
+                  "id": "1dbb1703-0b6a-4ec0-9ae7-e4642735eba0",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "74040f9d-8af9-48ff-8150-aa3da3cc1e9d",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "category": []
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzc0MDQwZjlkLThhZjktNDhmZi04MTUwLWFhM2RhM2NjMWU5ZA",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "74040f9d-8af9-48ff-8150-aa3da3cc1e9d",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "subtype": "line",
+          "margin": 20,
+          "offset": 10,
+          "marginTop": 20,
+          "marginRight": 20,
+          "marginBottom": 70,
+          "marginLeft": 50,
+          "scale": "linear",
+          "isGridVisible": true,
+          "isVisibleX": true,
+          "isVisibleY": true,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "isShadowVisible": false,
+          "isStyleVisible": false,
+          "colorScheme": "categorical",
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "white",
+          "labelColor": "rgb(82, 82, 82)",
+          "labelLength": 100,
+          "labelOrientationX": "diagonal",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "variant": "grouped",
+          "offsetVariant": "zero",
+          "groupGapInPercent": 10,
+          "fontSize": 10,
+          "fontName": "OpenSans",
+          "isBarChart": false,
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showPoints": true,
+          "showAreas": false,
+          "enableTooltips": true,
+          "xAxisSkipCount": "5",
+          "transpose": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": true,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "rgb(29, 144, 206)",
+          "lineTension": "0.51",
+          "ignoreEmpties": true,
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "gridToBack": true,
+          "autoMargins": true,
+          "yRangeOverride": [],
+          "labelOrientationX_text": "Diagonal",
+          "subtype_text": "Line Chart",
+          "colorScheme_text": "Categorical",
+          "fontName_text": "OpenSans",
+          "otherSliceSize": 5,
+          "legendVisible": false,
+          "hasLegend": true,
+          "legendId": "eeb02e2e-1838-4243-9858-d7b9504f0744",
+          "resetLegendPosition": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 159,
+          "top": 95,
+          "width": 335,
+          "height": 44,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 7,
+          "id": "be9f0e07-e08d-4d58-b869-13f90a4d3572",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Frequent Action Types",
+          "fontSize": "22",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 831,
+          "top": 95,
+          "width": 297,
+          "height": 35,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 8,
+          "id": "c0e53faa-e248-4a0d-83f6-2b94faae5005",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Actions Over Time",
+          "fontSize": "22",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 115,
+          "top": 545,
+          "width": 206,
+          "height": 22,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 9,
+          "id": "6991c299-1827-443c-b948-8a0addb3e631",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Number of failed log-ins:",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": 323,
+          "top": 543,
+          "width": 102,
+          "height": 27,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 34,
+          "id": "b94f8501-150e-46f7-818e-04fdd4c80393",
+          "maxSize": 1000,
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzI0NjkyZjBkLTNhN2ItNDhiNC1iZTUzLWM0ZmY3ZjQxODBkZA",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "1",
+                  "id": "970b6c9a-18de-4cf4-8113-3c05d3f6c2a2",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "24692f0d-3a7b-48b4-be53-c4ff7f4180dd",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzI0NjkyZjBkLTNhN2ItNDhiNC1iZTUzLWM0ZmY3ZjQxODBkZA",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "24692f0d-3a7b-48b4-be53-c4ff7f4180dd",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(29, 144, 206)",
+          "statistic": "sum",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 147,
+          "top": 577,
+          "width": 206,
+          "height": 22,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 10,
+          "id": "aeb39210-0fd6-4b68-86b8-dd73c4bd5ac3",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Most logged-in user:",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 527,
+          "top": 574,
+          "width": 245,
+          "height": 22,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 11,
+          "id": "1cc2ced1-c34e-4e45-9bc2-631247031330",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Average job duration [sec]:\n\n",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 601,
+          "top": 541,
+          "width": 206,
+          "height": 22,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 12,
+          "id": "278507ba-8397-47b7-a21f-70bb5b28694f",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Jobs run per day:",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": 743,
+          "top": 538,
+          "width": 193,
+          "height": 33,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 23,
+          "id": "2c2c2eb9-a5c7-47f0-87a8-f8c2204d7f15",
+          "maxSize": 1000,
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzg4N2VlMzMyLTI0NjgtNGUzOS04YTU5LTkwY2NlMzNlNDNjYg",
+                  "type": "INTEGER",
+                  "name": "Actions_Per_Day",
+                  "columnId": "7",
+                  "id": "e5ed0163-77a6-44ef-a299-d943db1d5875",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "887ee332-2468-4e39-8a59-90cce33e43cb",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzg4N2VlMzMyLTI0NjgtNGUzOS04YTU5LTkwY2NlMzNlNDNjYg",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "887ee332-2468-4e39-8a59-90cce33e43cb",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(29, 144, 206)",
+          "statistic": "sum",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": 743,
+          "top": 573,
+          "width": 251,
+          "height": 33,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 24,
+          "id": "8e748322-3719-4e7f-9a85-886469d0e822",
+          "maxSize": 1000,
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2Q4MTA0Y2I0LWZjZGQtNGEwNC05N2YwLTllYTY3YmM1OGUyMQ",
+                  "type": "INTEGER",
+                  "name": "Average_Job_Duration_Sec",
+                  "columnId": "1",
+                  "id": "78891433-c5f6-49d7-b437-8b99b6023c22",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "d8104cb4-fcdd-4a04-97f0-9ea67bc58e21",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2Q4MTA0Y2I0LWZjZGQtNGEwNC05N2YwLTllYTY3YmM1OGUyMQ",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "d8104cb4-fcdd-4a04-97f0-9ea67bc58e21",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(29, 144, 206)",
+          "statistic": "sum",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "statistic_text": "Sum",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 943,
+          "top": 542,
+          "width": 206,
+          "height": 22,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 13,
+          "id": "fbfb90db-eba7-43ad-a0a0-61beaa894e1c",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Files created per day:",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": 1122,
+          "top": 541,
+          "width": 251,
+          "height": 33,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 25,
+          "id": "33ba3934-9cd2-47b1-a5d2-1999631904f9",
+          "maxSize": 1000,
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzEzOWU5MjU0LTY4MzQtNGM2Zi05OWUzLWZlOTM0ODc3YzY1Zg",
+                  "type": "INTEGER",
+                  "name": "Actions_Per_Day",
+                  "columnId": "7",
+                  "id": "00e1c1b0-a4aa-477e-9058-d248d3beed62",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "139e9254-6834-4c6f-99e3-fe934877c65f",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzEzOWU5MjU0LTY4MzQtNGM2Zi05OWUzLWZlOTM0ODc3YzY1Zg",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "139e9254-6834-4c6f-99e3-fe934877c65f",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(29, 144, 206)",
+          "statistic": "sum",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 943,
+          "top": 576,
+          "width": 206,
+          "height": 22,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 14,
+          "id": "df3da8aa-34b5-46da-bbc2-0f430e5edc01",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Files deleted per day:",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": 1123,
+          "top": 576,
+          "width": 251,
+          "height": 33,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 26,
+          "id": "8b125922-7a08-43bc-a03a-6373778e79d8",
+          "maxSize": 1000,
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2I5ZjVlY2VhLTIwNWEtNDM2NC05ZTQ0LTgxNzU5MWQ4MWI0MQ",
+                  "type": "INTEGER",
+                  "name": "Actions_Per_Day",
+                  "columnId": "7",
+                  "id": "d27fcad9-729b-4a20-9b03-bcaee6cd2f8a",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "b9f5ecea-205a-4364-9e44-817591d81b41",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2I5ZjVlY2VhLTIwNWEtNDM2NC05ZTQ0LTgxNzU5MWQ4MWI0MQ",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "b9f5ecea-205a-4364-9e44-817591d81b41",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(29, 144, 206)",
+          "statistic": "sum",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "statistic_text": "Sum",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 523,
+          "top": 656,
+          "width": 279,
+          "height": 32,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 16,
+          "id": "1a96c35a-e2f4-4318-896f-94c393aec617",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Permission manipultions / day:\n",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": 771,
+          "top": 655,
+          "width": 251,
+          "height": 33,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 27,
+          "id": "fb7b1d16-db8d-49e8-b069-37533c4ce6b9",
+          "maxSize": 1000,
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzlkNTA0MzgyLWNkNWEtNGY0ZS05YmZlLWI5ZGI1OWE4NjNhNQ",
+                  "type": "INTEGER",
+                  "name": "Total_Actions_Per_Day",
+                  "columnId": "1",
+                  "id": "51e0c204-98a4-4164-9e8e-8418c8f4d259",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "9d504382-cd5a-4f4e-9bfe-b9db59a863a5",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzlkNTA0MzgyLWNkNWEtNGY0ZS05YmZlLWI5ZGI1OWE4NjNhNQ",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "9d504382-cd5a-4f4e-9bfe-b9db59a863a5",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(29, 144, 206)",
+          "statistic": "sum",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "statistic_text": "Sum",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 230,
+          "top": 689,
+          "width": 206,
+          "height": 22,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 17,
+          "id": "4641e237-f1d7-4c7a-90e5-9752458aa059",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "performed",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 117,
+          "top": 659,
+          "width": 228,
+          "height": 22,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 18,
+          "id": "e33fd005-ea49-4a75-a653-be3f22aa95b4",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Most active user manager:",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": 322,
+          "top": 687,
+          "width": 20,
+          "height": 20,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 28,
+          "id": "bb8cb52e-327c-4a60-8f61-9496d3147fd1",
+          "maxSize": 1000,
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzdhMmFhMTcxLWU0ZTQtNDY4Zi05NTk5LTljMjUwMDhlODQ4Yw",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "2",
+                  "id": "d312b523-60bf-40b9-9333-2ac3717d4964",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "7a2aa171-e4e4-468f-9599-9c25008e848c",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzdhMmFhMTcxLWU0ZTQtNDY4Zi05NTk5LTljMjUwMDhlODQ4Yw",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "7a2aa171-e4e4-468f-9599-9c25008e848c",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "right",
+          "color": "rgb(29, 144, 206)",
+          "statistic": "sum",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 366,
+          "top": 688,
+          "width": 206,
+          "height": 22,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 19,
+          "id": "3fc0f166-16ff-4c16-9d5f-5ae064e008f5",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "actions in total.",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 1155,
+          "top": 684,
+          "width": 206,
+          "height": 22,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 20,
+          "id": "615c417c-ccd3-4a69-bf94-d3560728df56",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "actions in total.",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 941,
+          "top": 655,
+          "width": 166,
+          "height": 26,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 21,
+          "id": "69bd8886-87ea-4732-b8c9-82ab0f1e95cf",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Most active analyst:",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 3",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 1003,
+          "top": 683,
+          "width": 94,
+          "height": 26,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 22,
+          "id": "6b9b193b-3c2a-4b66-8ffd-6165591132b2",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "performed",
+          "fontSize": "16",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Statistics text",
+            "chart": "charts/statistics_text",
+            "inspector": "infographics/views/statistics_text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50,
+            "dataDescriptor": {
+              "maxSize": 1000,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            }
+          },
+          "name": "Statistics text",
+          "inspectorName": "infographics/views/statistics_text_inspector",
+          "left": 1082,
+          "top": 682,
+          "width": 59,
+          "height": 30,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 29,
+          "id": "6c4544fd-105c-4eb6-b16d-e43fa97d7f30",
+          "maxSize": 1000,
+          "dataSet": {
+            "maxSize": 1000,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2RhYTBmNTI3LWNjNTAtNGEyYi1iOWE0LTQ0NWNlNjUyY2Y3Yg",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "2",
+                  "id": "25a88aa2-a9bf-4062-92be-9416533ffb68",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "daa0f527-cc50-4a2b-b9a4-445ce652cf7b",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2RhYTBmNTI3LWNjNTAtNGEyYi1iOWE0LTQ0NWNlNjUyY2Y3Yg",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "daa0f527-cc50-4a2b-b9a4-445ce652cf7b",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "100%",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "right",
+          "color": "rgb(29, 144, 206)",
+          "statistic": "sum",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "color",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 304,
+          "top": 548,
+          "width": 136,
+          "height": 98,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 2,
+          "id": "0b2157fc-ab6d-4823-a5fc-3e77cb2534ec",
+          "maxSize": "1",
+          "dataSet": {
+            "maxSize": "1",
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzg2NDY0ODkyLTk0OGUtNGIxOC05MjBlLTNhZWFhNDllNmI2ZA",
+                  "type": "STRING",
+                  "name": "performed_by_user",
+                  "columnId": "2",
+                  "id": "d94b7caf-cc70-4157-8fdc-18278f4cc211",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "86464892-948e-4b18-920e-3aeaa49e6b6d",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzg2NDY0ODkyLTk0OGUtNGIxOC05MjBlLTNhZWFhNDllNmI2ZA",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "86464892-948e-4b18-920e-3aeaa49e6b6d",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": "0",
+          "marginRight": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(199, 199, 199)",
+          "cellBgColor": "rgb(199, 199, 199)",
+          "defaultStrokeColor": "rgb(199, 199, 199)",
+          "frontierStrokeColor": "rgb(199, 199, 199)",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(29, 144, 206)",
+          "headerFontColor": "rgb(199, 199, 199)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": 70,
+          "cellH": "26",
+          "colWidths": [
+            125
+          ],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "backgroundType_text": "Color",
+          "fontName_text": "OpenSans",
+          "hideHeader": false,
+          "oddRowBgColor": "rgb(199, 199, 199)",
+          "backgroundColor": "rgb(199, 199, 199)"
+        },
+        {
+          "backgroundType": "color",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 314,
+          "top": 635,
+          "width": 202,
+          "height": 69,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "dc0dbee6-a95c-4e81-a07b-1258fc5b4d9e",
+          "maxSize": "1",
+          "dataSet": {
+            "maxSize": "1",
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzdhMmFhMTcxLWU0ZTQtNDY4Zi05NTk5LTljMjUwMDhlODQ4Yw",
+                  "type": "STRING",
+                  "name": "performed_by_user",
+                  "columnId": "1",
+                  "id": "2fbea801-05fc-4d94-8ed0-566ae5cc1d55",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "7a2aa171-e4e4-468f-9599-9c25008e848c",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzdhMmFhMTcxLWU0ZTQtNDY4Zi05NTk5LTljMjUwMDhlODQ4Yw",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "7a2aa171-e4e4-468f-9599-9c25008e848c",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": "0",
+          "marginRight": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(199, 199, 199)",
+          "cellBgColor": "rgb(199, 199, 199)",
+          "defaultStrokeColor": "rgb(199, 199, 199)",
+          "frontierStrokeColor": "rgb(199, 199, 199)",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(29, 144, 206)",
+          "headerFontColor": "rgb(199, 199, 199)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": 70,
+          "cellH": "22",
+          "colWidths": [],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "backgroundType_text": "Color",
+          "fontName_text": "OpenSans",
+          "hideHeader": false,
+          "oddRowBgColor": "rgb(199, 199, 199)",
+          "backgroundColor": "rgb(199, 199, 199)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 1088,
+          "top": 635,
+          "width": 234,
+          "height": 59,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 4,
+          "id": "d82c8fcf-093e-45a1-a84d-f5fa1daa0ae1",
+          "maxSize": "1",
+          "dataSet": {
+            "maxSize": "1",
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2RhYTBmNTI3LWNjNTAtNGEyYi1iOWE0LTQ0NWNlNjUyY2Y3Yg",
+                  "type": "STRING",
+                  "name": "performed_by_user",
+                  "columnId": "1",
+                  "id": "8102ca38-b710-461f-8990-6055ed681006",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "daa0f527-cc50-4a2b-b9a4-445ce652cf7b",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2RhYTBmNTI3LWNjNTAtNGEyYi1iOWE0LTQ0NWNlNjUyY2Y3Yg",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "daa0f527-cc50-4a2b-b9a4-445ce652cf7b",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": "0",
+          "marginRight": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": "18",
+          "fontName": "OpenSans",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(199, 199, 199)",
+          "cellBgColor": "rgb(199, 199, 199)",
+          "defaultStrokeColor": "rgb(199, 199, 199)",
+          "frontierStrokeColor": "rgb(199, 199, 199)",
+          "frameStrokeColor": "rgb(199, 199, 199)",
+          "cellFontColor": "rgb(29, 144, 206)",
+          "headerFontColor": "rgb(199, 199, 199)",
+          "cellBorderRadius": "5",
+          "cellStrokeSize": "0",
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": "0",
+          "frameStrokeSize": 0,
+          "cellW": 70,
+          "cellH": "20",
+          "colWidths": [
+            57
+          ],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "backgroundType_text": "None",
+          "fontName_text": "OpenSans",
+          "hideHeader": false,
+          "oddRowBgColor": "rgb(199, 199, 199)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text 17",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 28,
+          "top": 19,
+          "width": 342,
+          "height": 51,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 33,
+          "id": "f37fb707-4fa5-41e5-9e47-20cc2073c7c4",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "User Action Analysis",
+          "fontSize": "30",
+          "fontName": "OpenSans",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(29, 144, 206)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Speech bubble corners right",
+            "imageName": "bubble_rect1.svg",
+            "defaultWidth": 76,
+            "defaultHeight": 63,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Speech bubble corners right",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 98,
+          "top": 528,
+          "width": 457,
+          "height": 129,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 36,
+          "id": "fc81dfa5-9cba-453a-80ee-6045ecd7b265",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": "0.201",
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "white",
+          "imageName": "bubble_rect1.svg",
+          "shadow": false,
+          "shadowOpacity": "0",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": true,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Speech bubble corners right",
+            "imageName": "bubble_rect1.svg",
+            "defaultWidth": 76,
+            "defaultHeight": 63,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Speech bubble corners right",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 510,
+          "top": 529,
+          "width": 457,
+          "height": 129,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 36,
+          "id": "441c15fe-4d44-45a7-9913-3eae20e5a955",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": "0.201",
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "white",
+          "imageName": "bubble_rect1.svg",
+          "shadow": false,
+          "shadowOpacity": "0",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": true,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Speech bubble corners right",
+            "imageName": "bubble_rect1.svg",
+            "defaultWidth": 76,
+            "defaultHeight": 63,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Speech bubble corners right",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 923,
+          "top": 529,
+          "width": 457,
+          "height": 129,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 36,
+          "id": "43b3131e-5135-4554-b3c9-e91b5c2484b6",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": "0.201",
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "white",
+          "imageName": "bubble_rect1.svg",
+          "shadow": false,
+          "shadowOpacity": "0",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": true,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Speech bubble corners right",
+            "imageName": "bubble_rect1.svg",
+            "defaultWidth": 76,
+            "defaultHeight": 63,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Speech bubble corners right",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 98,
+          "top": 643,
+          "width": 457,
+          "height": 129,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 36,
+          "id": "409a1ebf-bc8e-44e1-8b45-4229627f70b6",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": "0.201",
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "white",
+          "imageName": "bubble_rect1.svg",
+          "shadow": false,
+          "shadowOpacity": "0",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": true,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Speech bubble corners right",
+            "imageName": "bubble_rect1.svg",
+            "defaultWidth": 76,
+            "defaultHeight": 63,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Speech bubble corners right",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 510,
+          "top": 643,
+          "width": 457,
+          "height": 129,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 36,
+          "id": "d259e789-3d09-4e8e-b7e6-cad45eece8d2",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": "0.201",
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "white",
+          "imageName": "bubble_rect1.svg",
+          "shadow": false,
+          "shadowOpacity": "0",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": true,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Speech bubble corners right",
+            "imageName": "bubble_rect1.svg",
+            "defaultWidth": 76,
+            "defaultHeight": 63,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Speech bubble corners right",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 923,
+          "top": 643,
+          "width": 457,
+          "height": 129,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 36,
+          "id": "cc68dfec-83c5-4866-bd55-60f35af81724",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": "0.201",
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "white",
+          "imageName": "bubble_rect1.svg",
+          "shadow": false,
+          "shadowOpacity": "0",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": true,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Datameer",
+            "imageName": "datameer2.svg",
+            "defaultWidth": 141,
+            "defaultHeight": 71,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Datameer",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 275,
+          "top": 316,
+          "width": 99.38461538461539,
+          "height": 51,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 38,
+          "id": "8662e85a-51ac-4a14-8d94-f4864dcd3086",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "white",
+          "imageName": "datameer2.svg",
+          "shadow": false,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js"
+        },
+        {
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": -1,
+          "maxSize": 20,
+          "showFrame": true,
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "id": "0732297e-4695-4beb-9e3d-16e25cc6c0e7",
+          "_uicType": "widget",
+          "inspectorName": "infographics/views/legend_inspector",
+          "titleHeight": 30,
+          "left": 52,
+          "top": 500,
+          "width": 526,
+          "height": 45,
+          "isLegend": true,
+          "parentChartId": "95d3297c-b3a6-4e04-831e-2d18557b0551",
+          "legendLock": false,
+          "legendOffsetX": 0,
+          "legendOffsetY": 316,
+          "visible": false,
+          "frameColor": "#ecebeb",
+          "name": "Legend: Pie Chart",
+          "type": {
+            "name": "Chart Legend",
+            "chart": "charts/legends/box_legend",
+            "dataDescriptor": {
+              "maxSize": 20,
+              "color": {
+                "type": [
+                  "STRING"
+                ]
+              },
+              "label": {
+                "type": [
+                  "STRING"
+                ]
+              }
+            },
+            "inspector": "infographics/views/legend_inspector",
+            "panelGroup": "none",
+            "supportsLegend": false
+          }
+        },
+        {
+          "id": "a67d39b9-e7b5-4d15-b109-a4adfae0b88b",
+          "widgets": [
+            "95d3297c-b3a6-4e04-831e-2d18557b0551",
+            "0732297e-4695-4beb-9e3d-16e25cc6c0e7"
+          ],
+          "inspectorName": "infographics/views/piechart_inspector",
+          "name": "Pie Chart",
+          "_uicType": "legendGroup",
+          "isLegendGroup": true,
+          "childNames": [
+            "Pie Chart",
+            "Legend: Pie Chart"
+          ],
+          "left": 52,
+          "top": 184,
+          "width": 526,
+          "height": 306
+        },
+        {
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": -1,
+          "maxSize": 20,
+          "showFrame": true,
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "id": "eeb02e2e-1838-4243-9858-d7b9504f0744",
+          "_uicType": "widget",
+          "inspectorName": "infographics/views/legend_inspector",
+          "titleHeight": 30,
+          "left": 656,
+          "top": 498,
+          "width": 692,
+          "height": 45,
+          "isLegend": true,
+          "parentChartId": "05e37e90-1c88-459f-af2d-6da12e6c388c",
+          "legendLock": false,
+          "legendOffsetX": 0,
+          "legendOffsetY": 302,
+          "visible": false,
+          "frameColor": "#ecebeb",
+          "name": "Legend: Line and Area Chart",
+          "type": {
+            "name": "Chart Legend",
+            "chart": "charts/legends/box_legend",
+            "dataDescriptor": {
+              "maxSize": 20,
+              "color": {
+                "type": [
+                  "STRING"
+                ]
+              },
+              "label": {
+                "type": [
+                  "STRING"
+                ]
+              }
+            },
+            "inspector": "infographics/views/legend_inspector",
+            "panelGroup": "none",
+            "supportsLegend": false
+          }
+        },
+        {
+          "id": "047b4d59-6f38-4020-8bdc-793c23c8d068",
+          "widgets": [
+            "05e37e90-1c88-459f-af2d-6da12e6c388c",
+            "eeb02e2e-1838-4243-9858-d7b9504f0744"
+          ],
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "name": "Line and Area Chart",
+          "_uicType": "legendGroup",
+          "isLegendGroup": true,
+          "childNames": [
+            "Line and Area Chart",
+            "Legend: Line and Area Chart"
+          ],
+          "left": 656,
+          "top": 196,
+          "width": 692,
+          "height": 292
+        }
+      ],
+      "links": [],
+      "backgroundColor": "rgb(199, 199, 199)",
+      "backgroundImage": {
+        "uuid": "8d53e5c7-d7c9-436d-b8a4-00c8bc54b7fc",
+        "id": 472650,
+        "path": "/FrankR/UserActionAnalysis/Copy_of_back476.jpg",
+        "name": "Copy_of_back476",
+        "type": "jpg"
+      },
+      "backgroundType_text": "Color",
+      "backgroundImagePlacement_text": "Tile"
+    },
+    {
+      "backgroundType": "color",
+      "backgroundImagePlacement": "tile",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both",
+      "name": "Analytics",
+      "order": 1,
+      "id": "b6d2060e-d1d7-4d57-92cf-4c3ecbee2a78",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 239,
+          "top": 28,
+          "width": 437,
+          "height": 39,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 4,
+          "id": "6d706727-d0cf-4e63-8a96-86ed5598e4d4",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 10 Most Active Workbooks",
+          "fontSize": "23",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 37,
+          "top": 84,
+          "width": 127,
+          "height": 399,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "0c3d52f8-6235-4d60-966b-b7805b2cacbd",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE2MmY1MTdlLWQ3MDMtNDcyZS05NzUzLWQzODA2Mzk1OWRkNQ",
+                  "type": "STRING",
+                  "name": "UUID",
+                  "columnId": "0",
+                  "id": "fa5651cb-b30c-4cd5-9474-b53b110652c5",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "162f517e-d703-472e-9753-d38063959dd5",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE2MmY1MTdlLWQ3MDMtNDcyZS05NzUzLWQzODA2Mzk1OWRkNQ",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "162f517e-d703-472e-9753-d38063959dd5",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "Verdana",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(29, 144, 206)",
+          "cellBgColor": "#f5f5f5",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(82, 82, 82)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": "100",
+          "cellH": "30",
+          "colWidths": [],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "hideHeader": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 313.5,
+          "top": 479.5,
+          "width": 263,
+          "height": 35,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 4,
+          "id": "7b52a2da-75a3-418b-a996-ad4978a9f607",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 10 Most Run Jobs",
+          "fontSize": "23",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 142,
+          "top": 934,
+          "width": 263,
+          "height": 35,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 4,
+          "id": "3fe0c22a-8087-4ad6-9069-a31fea3fb339",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Workbook Actions",
+          "fontSize": "23",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Pie Chart",
+            "chart": "charts/pie_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/piechart_inspector",
+            "panelGroup": "chart",
+            "holeRadius": -1
+          },
+          "name": "Pie Chart",
+          "inspectorName": "infographics/views/piechart_inspector",
+          "left": 44,
+          "top": 984,
+          "width": 461,
+          "height": 307,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 7,
+          "id": "04e4f62c-d155-4d6d-af58-90d811ec5310",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE3Mzc2NGFkLTY5ODItNGExZi1iMjFjLTY3Y2U3YTc5NGIzOA",
+                  "type": "STRING",
+                  "name": "action",
+                  "columnId": "0",
+                  "id": "605afd17-5c7d-4898-98fb-e4bd5fde2858",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "173764ad-6982-4a1f-b21c-67ce7a794b38",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE3Mzc2NGFkLTY5ODItNGExZi1iMjFjLTY3Y2U3YTc5NGIzOA",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "1",
+                  "id": "6123cd02-c3d5-4eb3-9852-7bd721b500c3",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "173764ad-6982-4a1f-b21c-67ce7a794b38",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE3Mzc2NGFkLTY5ODItNGExZi1iMjFjLTY3Y2U3YTc5NGIzOA",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "173764ad-6982-4a1f-b21c-67ce7a794b38",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 35,
+          "marginRight": 30,
+          "marginBottom": 30,
+          "marginLeft": 30,
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "white",
+          "labelColor": "rgb(82, 82, 82)",
+          "colorScheme": "range",
+          "isShadowVisible": false,
+          "style": "glossy",
+          "showLabels": true,
+          "labelType": "percentage",
+          "fontSize": "11",
+          "fontName": "OpenSans",
+          "labelLength": 100,
+          "enableTooltips": true,
+          "labelReduction": 0,
+          "labelLayoutVariant": "circle-aligned",
+          "labelGap": 20,
+          "holeRadius": 80,
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "otherSliceSize": "10",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "autoMargins": true,
+          "subtype": "doughnut",
+          "fontName_text": "OpenSans",
+          "colorScheme_text": "Range",
+          "subtype_text": "Doughnut Chart",
+          "style_text": "Glossy",
+          "legendVisible": false,
+          "hasLegend": true,
+          "legendId": "4353809a-5242-4ae3-9ab8-60e053bd6ccd",
+          "resetLegendPosition": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Pie Chart",
+            "chart": "charts/pie_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/piechart_inspector",
+            "panelGroup": "chart",
+            "holeRadius": -1
+          },
+          "name": "Pie Chart",
+          "inspectorName": "infographics/views/piechart_inspector",
+          "left": 516,
+          "top": 952,
+          "width": 424,
+          "height": 333,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 7,
+          "id": "a8561070-bf22-44ec-98df-15118f3d699a",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2JiNzg3MmZjLTQzZGMtNDYxYS1iMzI4LTA5ZGE3NmI0NDk1Mw",
+                  "type": "STRING",
+                  "name": "execution_triggered_by",
+                  "columnId": "0",
+                  "id": "62ea8770-55f8-4136-9c30-ea2b154d6f10",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "bb7872fc-43dc-461a-b328-09da76b44953",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2JiNzg3MmZjLTQzZGMtNDYxYS1iMzI4LTA5ZGE3NmI0NDk1Mw",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "1",
+                  "id": "ec7d23f8-6f45-4e10-9bf5-7448331fe863",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "bb7872fc-43dc-461a-b328-09da76b44953",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswO2JiNzg3MmZjLTQzZGMtNDYxYS1iMzI4LTA5ZGE3NmI0NDk1Mw",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "bb7872fc-43dc-461a-b328-09da76b44953",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 35,
+          "marginRight": 30,
+          "marginBottom": 30,
+          "marginLeft": 30,
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "white",
+          "labelColor": "rgb(82, 82, 82)",
+          "colorScheme": "range",
+          "isShadowVisible": false,
+          "style": "glossy",
+          "showLabels": true,
+          "labelType": "percentage",
+          "fontSize": "11",
+          "fontName": "OpenSans",
+          "labelLength": 100,
+          "enableTooltips": true,
+          "labelReduction": 0,
+          "labelLayoutVariant": "circle-aligned",
+          "labelGap": "25",
+          "holeRadius": 80,
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "otherSliceSize": "10",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "autoMargins": true,
+          "subtype": "doughnut",
+          "fontName_text": "OpenSans",
+          "subtype_text": "Doughnut Chart",
+          "colorScheme_text": "Range",
+          "style_text": "Glossy",
+          "legendVisible": false,
+          "hasLegend": true,
+          "legendId": "1c8fdf41-dfb2-42b6-9fe7-d787e6185d08",
+          "resetLegendPosition": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 594,
+          "top": 932,
+          "width": 263,
+          "height": 35,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 4,
+          "id": "1c19a547-f49f-431b-93d3-8e9d3f388117",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Job Triggered By",
+          "fontSize": "23",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 139,
+          "top": 84,
+          "width": 122,
+          "height": 397,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "fdb435d5-4a26-409d-8833-a00ddbc3c980",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE2MmY1MTdlLWQ3MDMtNDcyZS05NzUzLWQzODA2Mzk1OWRkNQ",
+                  "type": "INTEGER",
+                  "name": "Actions",
+                  "columnId": "1",
+                  "id": "e657f5a3-325b-4734-ac30-9b614db1be26",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "162f517e-d703-472e-9753-d38063959dd5",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE2MmY1MTdlLWQ3MDMtNDcyZS05NzUzLWQzODA2Mzk1OWRkNQ",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "162f517e-d703-472e-9753-d38063959dd5",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "OpenSans",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(29, 144, 206)",
+          "cellBgColor": "#f5f5f5",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(82, 82, 82)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": "80",
+          "cellH": "30",
+          "colWidths": [],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "fontName_text": "OpenSans",
+          "hideHeader": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 220,
+          "top": 84,
+          "width": 179,
+          "height": 391,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "21139bce-5d63-447d-a785-99990c70243b",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE2MmY1MTdlLWQ3MDMtNDcyZS05NzUzLWQzODA2Mzk1OWRkNQ",
+                  "type": "STRING",
+                  "name": "Last_Accessed_By",
+                  "columnId": "3",
+                  "id": "e1cc73b0-f8e3-4961-91ec-0052680c6b01",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "162f517e-d703-472e-9753-d38063959dd5",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE2MmY1MTdlLWQ3MDMtNDcyZS05NzUzLWQzODA2Mzk1OWRkNQ",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "162f517e-d703-472e-9753-d38063959dd5",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "OpenSans",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(29, 144, 206)",
+          "cellBgColor": "#f5f5f5",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(82, 82, 82)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": "150",
+          "cellH": "30",
+          "colWidths": [],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "fontName_text": "OpenSans",
+          "hideHeader": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 371,
+          "top": 84,
+          "width": 538,
+          "height": 370,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "32eea59d-8c5b-4ac0-963f-b05ca94a441a",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE2MmY1MTdlLWQ3MDMtNDcyZS05NzUzLWQzODA2Mzk1OWRkNQ",
+                  "type": "STRING",
+                  "name": "Path",
+                  "columnId": "2",
+                  "id": "f89d8dd7-4e97-42f9-9d9c-7124bddb56fb",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "162f517e-d703-472e-9753-d38063959dd5",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE2MmY1MTdlLWQ3MDMtNDcyZS05NzUzLWQzODA2Mzk1OWRkNQ",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "162f517e-d703-472e-9753-d38063959dd5",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "OpenSans",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(29, 144, 206)",
+          "cellBgColor": "#f5f5f5",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(82, 82, 82)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": "500",
+          "cellH": "30",
+          "colWidths": [],
+          "textAlign": "left",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "textAlign_text": "Left",
+          "fontName_text": "OpenSans",
+          "hideHeader": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 40,
+          "top": 515,
+          "width": 131,
+          "height": 424,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "f1e55be2-f12a-42df-8b60-27da4f5b2a46",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzlhNmE5ZjVmLTBhOWYtNDJjMy1iZjRmLTI0Y2NhYWEwOWNkZg",
+                  "type": "STRING",
+                  "name": "UUID",
+                  "columnId": "0",
+                  "id": "e5b14cff-bcec-4203-b414-706fec240b7f",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "9a6a9f5f-0a9f-42c3-bf4f-24ccaaa09cdf",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzlhNmE5ZjVmLTBhOWYtNDJjMy1iZjRmLTI0Y2NhYWEwOWNkZg",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "9a6a9f5f-0a9f-42c3-bf4f-24ccaaa09cdf",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "Verdana",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(29, 144, 206)",
+          "cellBgColor": "#f5f5f5",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(82, 82, 82)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": "100",
+          "cellH": "30",
+          "colWidths": [],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "hideHeader": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 142,
+          "top": 515,
+          "width": 122,
+          "height": 397,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "a88bdddc-c154-4d8b-8e95-de0288364f81",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzlhNmE5ZjVmLTBhOWYtNDJjMy1iZjRmLTI0Y2NhYWEwOWNkZg",
+                  "type": "INTEGER",
+                  "name": "Runs",
+                  "columnId": "3",
+                  "id": "bf160aef-e998-4ba9-b8d0-a6622d172d11",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "9a6a9f5f-0a9f-42c3-bf4f-24ccaaa09cdf",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzlhNmE5ZjVmLTBhOWYtNDJjMy1iZjRmLTI0Y2NhYWEwOWNkZg",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "9a6a9f5f-0a9f-42c3-bf4f-24ccaaa09cdf",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "OpenSans",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(29, 144, 206)",
+          "cellBgColor": "#f5f5f5",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(82, 82, 82)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": "80",
+          "cellH": "30",
+          "colWidths": [],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "fontName_text": "OpenSans",
+          "hideHeader": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 223,
+          "top": 514,
+          "width": 177,
+          "height": 397,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "365b25c8-32a5-4ec3-8c65-be19c3603245",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzlhNmE5ZjVmLTBhOWYtNDJjMy1iZjRmLTI0Y2NhYWEwOWNkZg",
+                  "type": "STRING",
+                  "name": "Owner",
+                  "columnId": "1",
+                  "id": "b8d456b5-cf81-4ce4-9ae1-f4e1ffed8cca",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "9a6a9f5f-0a9f-42c3-bf4f-24ccaaa09cdf",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzlhNmE5ZjVmLTBhOWYtNDJjMy1iZjRmLTI0Y2NhYWEwOWNkZg",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "9a6a9f5f-0a9f-42c3-bf4f-24ccaaa09cdf",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "OpenSans",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(29, 144, 206)",
+          "cellBgColor": "#f5f5f5",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(82, 82, 82)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": "150",
+          "cellH": "30",
+          "colWidths": [],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "fontName_text": "OpenSans",
+          "hideHeader": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 374,
+          "top": 514,
+          "width": 538,
+          "height": 370,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "51dcc2a4-cfa8-4d2a-b734-dab601567159",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzlhNmE5ZjVmLTBhOWYtNDJjMy1iZjRmLTI0Y2NhYWEwOWNkZg",
+                  "type": "STRING",
+                  "name": "Path",
+                  "columnId": "2",
+                  "id": "c23f95cd-07b4-4959-b1be-68dfb93a7e3f",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "9a6a9f5f-0a9f-42c3-bf4f-24ccaaa09cdf",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzlhNmE5ZjVmLTBhOWYtNDJjMy1iZjRmLTI0Y2NhYWEwOWNkZg",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "9a6a9f5f-0a9f-42c3-bf4f-24ccaaa09cdf",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "OpenSans",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(29, 144, 206)",
+          "cellBgColor": "#f5f5f5",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(82, 82, 82)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": "500",
+          "cellH": "30",
+          "colWidths": [],
+          "textAlign": "left",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "textAlign_text": "Left",
+          "fontName_text": "OpenSans",
+          "hideHeader": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Datameer",
+            "imageName": "datameer2.svg",
+            "defaultWidth": 141,
+            "defaultHeight": 71,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Datameer",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 685,
+          "top": 1122,
+          "width": 63.30434782608695,
+          "height": 32,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 16,
+          "id": "f3883847-f35a-46f2-9f28-7d4640d460fd",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "white",
+          "imageName": "datameer2.svg",
+          "shadow": false,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Datameer",
+            "imageName": "datameer2.svg",
+            "defaultWidth": 141,
+            "defaultHeight": 71,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Datameer",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 248,
+          "top": 1118,
+          "width": 63.30434782608695,
+          "height": 32,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 16,
+          "id": "155d8ab6-906f-4b26-936c-7fb63a92e122",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "white",
+          "imageName": "datameer2.svg",
+          "shadow": false,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js"
+        },
+        {
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": -1,
+          "maxSize": 20,
+          "showFrame": true,
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "id": "4353809a-5242-4ae3-9ab8-60e053bd6ccd",
+          "_uicType": "widget",
+          "inspectorName": "infographics/views/legend_inspector",
+          "titleHeight": 30,
+          "left": 44,
+          "top": 1301,
+          "width": 461,
+          "height": 45,
+          "isLegend": true,
+          "parentChartId": "04e4f62c-d155-4d6d-af58-90d811ec5310",
+          "legendLock": false,
+          "legendOffsetX": 0,
+          "legendOffsetY": 317,
+          "visible": false,
+          "frameColor": "#ecebeb",
+          "name": "Legend: Pie Chart",
+          "type": {
+            "name": "Chart Legend",
+            "chart": "charts/legends/box_legend",
+            "dataDescriptor": {
+              "maxSize": 20,
+              "color": {
+                "type": [
+                  "STRING"
+                ]
+              },
+              "label": {
+                "type": [
+                  "STRING"
+                ]
+              }
+            },
+            "inspector": "infographics/views/legend_inspector",
+            "panelGroup": "none",
+            "supportsLegend": false
+          }
+        },
+        {
+          "id": "dc6735d6-886b-49da-9668-273fba4060b0",
+          "widgets": [
+            "04e4f62c-d155-4d6d-af58-90d811ec5310",
+            "4353809a-5242-4ae3-9ab8-60e053bd6ccd"
+          ],
+          "inspectorName": "infographics/views/piechart_inspector",
+          "name": "Pie Chart",
+          "_uicType": "legendGroup",
+          "isLegendGroup": true,
+          "childNames": [
+            "Pie Chart",
+            "Legend: Pie Chart"
+          ],
+          "left": 44,
+          "top": 984,
+          "width": 461,
+          "height": 307
+        },
+        {
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": -1,
+          "maxSize": 20,
+          "showFrame": true,
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "id": "1c8fdf41-dfb2-42b6-9fe7-d787e6185d08",
+          "_uicType": "widget",
+          "inspectorName": "infographics/views/legend_inspector",
+          "titleHeight": 30,
+          "left": 516,
+          "top": 1295,
+          "width": 424,
+          "height": 45,
+          "isLegend": true,
+          "parentChartId": "a8561070-bf22-44ec-98df-15118f3d699a",
+          "legendLock": false,
+          "legendOffsetX": 0,
+          "legendOffsetY": 343,
+          "visible": false,
+          "frameColor": "#ecebeb",
+          "name": "Legend: Pie Chart",
+          "type": {
+            "name": "Chart Legend",
+            "chart": "charts/legends/box_legend",
+            "dataDescriptor": {
+              "maxSize": 20,
+              "color": {
+                "type": [
+                  "STRING"
+                ]
+              },
+              "label": {
+                "type": [
+                  "STRING"
+                ]
+              }
+            },
+            "inspector": "infographics/views/legend_inspector",
+            "panelGroup": "none",
+            "supportsLegend": false
+          }
+        },
+        {
+          "id": "57ef0df1-3423-4b82-b986-5a36c3d37cbc",
+          "widgets": [
+            "a8561070-bf22-44ec-98df-15118f3d699a",
+            "1c8fdf41-dfb2-42b6-9fe7-d787e6185d08"
+          ],
+          "inspectorName": "infographics/views/piechart_inspector",
+          "name": "Pie Chart",
+          "_uicType": "legendGroup",
+          "isLegendGroup": true,
+          "childNames": [
+            "Pie Chart",
+            "Legend: Pie Chart"
+          ],
+          "left": 516,
+          "top": 952,
+          "width": 424,
+          "height": 333
+        }
+      ],
+      "links": [],
+      "backgroundColor": "rgb(199, 199, 199)",
+      "backgroundImage": {
+        "uuid": "8d53e5c7-d7c9-436d-b8a4-00c8bc54b7fc",
+        "id": 472650,
+        "path": "/FrankR/UserActionAnalysis/Copy_of_back476.jpg",
+        "name": "Copy_of_back476",
+        "type": "jpg"
+      }
+    },
+    {
+      "backgroundType": "color",
+      "backgroundImagePlacement": "tile",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both",
+      "name": "Users",
+      "order": 2,
+      "id": "e1eeb7c1-bb34-4391-a550-8cccb99cec50",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Tag List",
+            "chart": "charts/tag_list",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "word": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "value": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/tag_list_inspector",
+            "panelGroup": "chart"
+          },
+          "name": "Tag List",
+          "inspectorName": "infographics/views/tag_list_inspector",
+          "left": 114,
+          "top": 112,
+          "width": 302,
+          "height": 125,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "6c4c272b-cf58-49a5-adff-be7a306d4d5f",
+          "maxSize": "10",
+          "dataSet": {
+            "maxSize": "10",
+            "descriptor": {
+              "word": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "value": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "word": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzA1NzZhMTRkLTY5ZDYtNGVmNi05ZmNjLWU4ZjI3NWQzY2NlYg",
+                  "type": "STRING",
+                  "name": "performed_by_user",
+                  "columnId": "0",
+                  "id": "34e341a6-c3e4-46d4-9474-dfb63e85a418",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "0576a14d-69d6-4ef6-9fcc-e8f275d3cceb",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "value": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzA1NzZhMTRkLTY5ZDYtNGVmNi05ZmNjLWU4ZjI3NWQzY2NlYg",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "1",
+                  "id": "6603c184-4f13-4b16-bbfa-aaee50cf55d7",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "0576a14d-69d6-4ef6-9fcc-e8f275d3cceb",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzA1NzZhMTRkLTY5ZDYtNGVmNi05ZmNjLWU4ZjI3NWQzY2NlYg",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "0576a14d-69d6-4ef6-9fcc-e8f275d3cceb",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "skyblue",
+          "backColor": "transparent",
+          "fontSize": "12.4",
+          "maxFontSizeMultiplier": 3,
+          "fontName": "Verdana",
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(29, 144, 206)",
+          "wordPadding": 5,
+          "fontName_text": "Verdana"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 146,
+          "top": 46,
+          "width": 263,
+          "height": 35,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 5,
+          "id": "73b3d924-490f-4c0a-9214-8432ded4ada3",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Most Active Users",
+          "fontSize": "23",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Tag List",
+            "chart": "charts/tag_list",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "word": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "value": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/tag_list_inspector",
+            "panelGroup": "chart"
+          },
+          "name": "Tag List",
+          "inspectorName": "infographics/views/tag_list_inspector",
+          "left": 545,
+          "top": 106,
+          "width": 320,
+          "height": 115,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 4,
+          "id": "07f69dcb-6d73-4a80-9ef9-03965370ab60",
+          "maxSize": "10",
+          "dataSet": {
+            "maxSize": "10",
+            "descriptor": {
+              "word": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "value": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "word": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE0ZGQxZjU1LWQ3ZjAtNGRkOC05ZmY3LWM5NjRkZGYyZGI0Mw",
+                  "type": "STRING",
+                  "name": "Expanded_Roles",
+                  "columnId": "0",
+                  "id": "ffb0d0c2-87b4-4e15-9b1b-e5151d0a989f",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "14dd1f55-d7f0-4dd8-9ff7-c964ddf2db43",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "value": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE0ZGQxZjU1LWQ3ZjAtNGRkOC05ZmY3LWM5NjRkZGYyZGI0Mw",
+                  "type": "INTEGER",
+                  "name": "Count",
+                  "columnId": "1",
+                  "id": "26e14239-7f88-4e11-9b7a-62b8b779a35d",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "14dd1f55-d7f0-4dd8-9ff7-c964ddf2db43",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzE0ZGQxZjU1LWQ3ZjAtNGRkOC05ZmY3LWM5NjRkZGYyZGI0Mw",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "14dd1f55-d7f0-4dd8-9ff7-c964ddf2db43",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "skyblue",
+          "backColor": "transparent",
+          "fontSize": "14",
+          "maxFontSizeMultiplier": 3,
+          "fontName": "Verdana",
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(29, 144, 206)",
+          "wordPadding": 5,
+          "fontName_text": "Verdana"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 574,
+          "top": 49,
+          "width": 263,
+          "height": 35,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "405ede9e-ea71-47cc-8890-85417518a3d1",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Most Active Roles",
+          "fontSize": "23",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 412,
+          "top": 332,
+          "width": 263,
+          "height": 35,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 7,
+          "id": "57cac2a2-3398-4769-807d-5f70534ea61e",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "User Statistics",
+          "fontSize": "23",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(82, 82, 82)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Table",
+            "chart": "charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 91,
+          "top": 372,
+          "width": 821,
+          "height": 501,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 8,
+          "id": "1eaaceac-46c2-4828-a3d7-3f06d0a51376",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzU2ZjYyMTEyLTRmYzAtNDEwOC1hZmEyLTAyNWRlMDg4YmRiOA",
+                  "type": "STRING",
+                  "name": "User",
+                  "columnId": "0",
+                  "id": "1129af88-6ac4-402d-9a58-816d0373866e",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "56f62112-4fc0-4108-afa2-025de088bdb8",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzU2ZjYyMTEyLTRmYzAtNDEwOC1hZmEyLTAyNWRlMDg4YmRiOA",
+                  "type": "INTEGER",
+                  "name": "Logins",
+                  "columnId": "1",
+                  "id": "b5ee8340-7df1-45d2-b79f-f5ee4959c204",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "56f62112-4fc0-4108-afa2-025de088bdb8",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzU2ZjYyMTEyLTRmYzAtNDEwOC1hZmEyLTAyNWRlMDg4YmRiOA",
+                  "type": "INTEGER",
+                  "name": "Failed_Logins",
+                  "columnId": "2",
+                  "id": "53c3a32c-5456-4b68-aa3e-aec8620b3a9c",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "56f62112-4fc0-4108-afa2-025de088bdb8",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzU2ZjYyMTEyLTRmYzAtNDEwOC1hZmEyLTAyNWRlMDg4YmRiOA",
+                  "type": "INTEGER",
+                  "name": "Job_Executions",
+                  "columnId": "3",
+                  "id": "d67534aa-2b48-48ed-ad79-b1cd2f7c6042",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "56f62112-4fc0-4108-afa2-025de088bdb8",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzU2ZjYyMTEyLTRmYzAtNDEwOC1hZmEyLTAyNWRlMDg4YmRiOA",
+                  "type": "INTEGER",
+                  "name": "Filesystem_Actions",
+                  "columnId": "4",
+                  "id": "1c48d321-d86f-4a52-a14f-1bb492ebd9f1",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "56f62112-4fc0-4108-afa2-025de088bdb8",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzU2ZjYyMTEyLTRmYzAtNDEwOC1hZmEyLTAyNWRlMDg4YmRiOA",
+                  "type": "INTEGER",
+                  "name": "Workbook_Actions",
+                  "columnId": "5",
+                  "id": "87ed4f16-21ca-4b2b-8499-2ad08898720f",
+                  "dataSourceSpec": {
+                    "jobId": 5,
+                    "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+                    "sheetId": "56f62112-4fc0-4108-afa2-025de088bdb8",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9Vc2Vycy9hZG1pbi9BcHBsaWNhdGlvbnMvVXNlciBBY3Rpb24gQW5hbHlzaXMvVXNlckFjdGlvbkFuYWx5c2lzLndiazswZDM0NGQ4Yi0yMzk4LTQxYTMtOWUwNi0zYmI2ZDVkZDEwZGU7MDswOzU2ZjYyMTEyLTRmYzAtNDEwOC1hZmEyLTAyNWRlMDg4YmRiOA",
+            "dataSourceSpec": {
+              "jobId": 5,
+              "path": "/Users/admin/Applications/User Action Analysis/UserActionAnalysis.wbk",
+              "sheetId": "56f62112-4fc0-4108-afa2-025de088bdb8",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "enableClearSelectionOnBackground": true,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "OpenSans",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(29, 144, 206)",
+          "cellBgColor": "#f5f5f5",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "rgb(82, 82, 82)",
+          "headerFontColor": "rgb(255, 255, 255)",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": 70,
+          "cellH": 40,
+          "colWidths": [
+            112,
+            100,
+            109,
+            119,
+            172,
+            164
+          ],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "fontName_text": "OpenSans",
+          "hideHeader": false
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Monitor",
+            "imageName": "screen.svg",
+            "defaultWidth": 77,
+            "defaultHeight": 54,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Monitor",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 99,
+          "top": 91,
+          "width": 393,
+          "height": 218,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 2,
+          "id": "6858c353-4408-4e10-9ea8-98ea70e5744d",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": "0.803",
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "rgb(82, 82, 82)",
+          "fillColor": "rgb(255, 255, 255)",
+          "imageName": "screen.svg",
+          "shadow": false,
+          "shadowOpacity": "1",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Monitor",
+            "imageName": "screen.svg",
+            "defaultWidth": 77,
+            "defaultHeight": 54,
+            "panelGroup": "shape",
+            "chart": "charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Monitor",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 532,
+          "top": 92,
+          "width": 393,
+          "height": 218,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 2,
+          "id": "2a4227ba-bfc6-496b-922d-32bad83514b0",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": "0.803",
+          "enableClearSelectionOnBackground": true,
+          "baseColor": "white",
+          "strokeColor": "rgb(82, 82, 82)",
+          "fillColor": "rgb(255, 255, 255)",
+          "imageName": "screen.svg",
+          "shadow": false,
+          "shadowOpacity": "1",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js"
+        }
+      ],
+      "links": [],
+      "backgroundColor": "rgb(199, 199, 199)",
+      "backgroundImage": {
+        "uuid": "8d53e5c7-d7c9-436d-b8a4-00c8bc54b7fc",
+        "id": 472650,
+        "path": "/FrankR/UserActionAnalysis/Copy_of_back476.jpg",
+        "name": "Copy_of_back476",
+        "type": "jpg"
+      }
+    }
+  ]
+}

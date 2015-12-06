@@ -1,0 +1,353 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "e4fdaeca-1a1f-458c-94f5-b3d36ad85a5e",
+    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+    "description": "",
+    "name": "Datameer_Top10_Data_Ingestions"
+  },
+  "pullType": "SCHEDULED",
+  "schedule": "30 * * * *",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "sheets": [
+    {
+      "name": "DM_Ingestion_Utilization",
+      "sheetId": "e4220d4e-e717-4894-8536-ab4fc02d3b4d",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Datameer Consumption Stats/Resources/DM_Ingestion_Utilization.lnk",
+        "uuid": "724c5fcf-f596-4e4c-b281-2ad6bfe4a787"
+      },
+      "columnStyles": [
+        {
+          "columnId": "NAME",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "INGESTION_TYPE",
+          "width": 174,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "REFERENCE_COUNT",
+          "width": 159,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Top10_DataIngestions",
+      "sheetId": "f88ab5e1-caf9-4191-ba4f-9e93fc5f0c52",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "Top10_DataIngestions",
+      "sortTargetSheet": "Top10_DataIngestions",
+      "topN": 10,
+      "sortKeys": [
+        {
+          "column": "REFERENCE_COUNT",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "NAME",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!NAME"
+        },
+        {
+          "columnName": "INGESTION_TYPE",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!INGESTION_TYPE"
+        },
+        {
+          "columnName": "INGESTION_SOURCE",
+          "columnId": "9",
+          "columnIndex": 2,
+          "formulaString": "\u003dCONCAT(REGEX(#INGESTION_TYPE;\"IMPORT_JOB.*\";\"IMPORT JOB\";\"\");REGEX(#INGESTION_TYPE;\"IMPORT_LINK.*\";\"DATA LINK\";\"\");REGEX(#INGESTION_TYPE;\"UPLOAD.*\";\"FILE UPLOAD\";\"\"))"
+        },
+        {
+          "columnName": "REFERENCE_COUNT",
+          "columnId": "2",
+          "columnIndex": 3,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!REFERENCE_COUNT"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "NAME",
+          "width": 223,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "INGESTION_TYPE",
+          "width": 156,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "REFERENCE_COUNT",
+          "width": 159,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "INGESTION_SOURCE",
+          "width": 137,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 10
+    },
+    {
+      "name": "Top10_DataLinks",
+      "sheetId": "582e811c-6572-4f1d-b6d6-993e26ac39cd",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "Top10_DataLinks",
+      "filterTargetSheet": "Top10_DataLinks",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "INGESTION_TYPE",
+          "filterExpression": "CONTAINS",
+          "value": "IMPORT_LINK",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "Top10_DataLinks",
+      "sortTargetSheet": "Top10_DataLinks",
+      "topN": 10,
+      "sortKeys": [
+        {
+          "column": "REFERENCE_COUNT",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "NAME",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!NAME"
+        },
+        {
+          "columnName": "INGESTION_TYPE",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!INGESTION_TYPE"
+        },
+        {
+          "columnName": "INGESTION_SOURCE",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dCONCAT(REGEX(#INGESTION_TYPE;\"IMPORT_JOB.*\";\"IMPORT JOB\";\"\");REGEX(#INGESTION_TYPE;\"IMPORT_LINK.*\";\"DATA LINK\";\"\");REGEX(#INGESTION_TYPE;\"UPLOAD.*\";\"FILE UPLOAD\";\"\"))"
+        },
+        {
+          "columnName": "REFERENCE_COUNT",
+          "columnId": "2",
+          "columnIndex": 3,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!REFERENCE_COUNT"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "NAME",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "INGESTION_TYPE",
+          "width": 174,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "REFERENCE_COUNT",
+          "width": 159,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "INGESTION_SOURCE",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "Top10_ImportJobs",
+      "sheetId": "0fa18dba-3b2d-4528-a19e-c76063ab30ca",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "Top10_ImportJobs",
+      "filterTargetSheet": "Top10_ImportJobs",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "INGESTION_TYPE",
+          "filterExpression": "CONTAINS",
+          "value": "IMPORT_JOB",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "Top10_ImportJobs",
+      "sortTargetSheet": "Top10_ImportJobs",
+      "topN": 10,
+      "sortKeys": [
+        {
+          "column": "REFERENCE_COUNT",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "NAME",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!NAME"
+        },
+        {
+          "columnName": "INGESTION_TYPE",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!INGESTION_TYPE"
+        },
+        {
+          "columnName": "INGESTION_SOURCE",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dCONCAT(REGEX(#INGESTION_TYPE;\"IMPORT_JOB.*\";\"IMPORT JOB\";\"\");REGEX(#INGESTION_TYPE;\"IMPORT_LINK.*\";\"DATA LINK\";\"\");REGEX(#INGESTION_TYPE;\"UPLOAD.*\";\"FILE UPLOAD\";\"\"))"
+        },
+        {
+          "columnName": "REFERENCE_COUNT",
+          "columnId": "2",
+          "columnIndex": 3,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!REFERENCE_COUNT"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "NAME",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "INGESTION_TYPE",
+          "width": 174,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "REFERENCE_COUNT",
+          "width": 159,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "INGESTION_SOURCE",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "Top10_FileUploads",
+      "sheetId": "6f865060-b926-4c36-b83f-49d332275024",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "Top10_FileUploads",
+      "filterTargetSheet": "Top10_FileUploads",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "INGESTION_TYPE",
+          "filterExpression": "CONTAINS",
+          "value": "FILE",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "Top10_FileUploads",
+      "sortTargetSheet": "Top10_FileUploads",
+      "topN": 10,
+      "sortKeys": [
+        {
+          "column": "REFERENCE_COUNT",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "NAME",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!NAME"
+        },
+        {
+          "columnName": "INGESTION_TYPE",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!INGESTION_TYPE"
+        },
+        {
+          "columnName": "INGESTION_SOURCE",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dCONCAT(REGEX(#INGESTION_TYPE;\"IMPORT_JOB.*\";\"IMPORT JOB\";\"\");REGEX(#INGESTION_TYPE;\"IMPORT_LINK.*\";\"DATA LINK\";\"\");REGEX(#INGESTION_TYPE;\"FILE_UPLOAD.*\";\"FILE UPLOAD\";\"\"))"
+        },
+        {
+          "columnName": "REFERENCE_COUNT",
+          "columnId": "2",
+          "columnIndex": 3,
+          "formulaString": "\u003d#DM_Ingestion_Utilization!REFERENCE_COUNT"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "NAME",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "INGESTION_TYPE",
+          "width": 174,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "REFERENCE_COUNT",
+          "width": 159,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "INGESTION_SOURCE",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

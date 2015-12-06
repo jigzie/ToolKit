@@ -1,0 +1,101 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.FileDataSinkImpl",
+  "file": {
+    "uuid": "6f5cde6f-fed9-45f9-ac43-780eaa88e434",
+    "path": "/Examples/Hello World/Solution/ExportJob_copy.exp",
+    "description": "",
+    "name": "ExportJob_copy"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "table_name": [
+      "418a65eb_e576_4a41_83dd_2198814b9f61_UnionSheet2"
+    ],
+    "transformation_name": [
+      "Copy_of_Workbook_Joined_union_filter_testcase2"
+    ],
+    "transformation_description": [
+      ""
+    ],
+    "business_purpose": [
+      ""
+    ],
+    "run_frequency": [
+      "Daily"
+    ],
+    "status": [
+      "REQUEST_CREATION"
+    ]
+  },
+  "hadoopProperties": "",
+  "connection": "/Data/Connections/Datameer server filesystem",
+  "sheet": {
+    "name": "UnionSheet2",
+    "sheetId": "153de4cf-4867-4833-9ee5-bf88928c35d8",
+    "workbook": {
+      "path": "/Examples/Hello World/Solution/Copy_of_Workbook_Joined_union_filter_testcase2.wbk",
+      "uuid": "418a65eb-e576-4a41-83dd-2198814b9f61"
+    }
+  },
+  "mappings": [
+    {
+      "name": "A",
+      "srcColumnIndex": 0,
+      "nullable": true
+    },
+    {
+      "name": "B",
+      "srcColumnIndex": 1,
+      "nullable": true
+    },
+    {
+      "name": "C",
+      "srcColumnIndex": 2,
+      "nullable": true
+    },
+    {
+      "name": "D",
+      "srcColumnIndex": 3,
+      "nullable": true
+    },
+    {
+      "name": "E",
+      "srcColumnIndex": 4,
+      "nullable": true
+    },
+    {
+      "name": "F",
+      "srcColumnIndex": 5,
+      "nullable": true
+    },
+    {
+      "name": "G",
+      "srcColumnIndex": 6,
+      "nullable": true
+    },
+    {
+      "name": "H",
+      "srcColumnIndex": 7,
+      "nullable": true
+    },
+    {
+      "name": "I",
+      "srcColumnIndex": 8,
+      "nullable": true
+    }
+  ],
+  "errorHandlingMode": "DROP_RECORD",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fileName": "tmp/Try.delete",
+  "confirmOverwrite": false,
+  "clearTargetDirectory": true,
+  "includeHeader": true,
+  "delimiterString": ",",
+  "quoteString": "\"",
+  "escapeString": "\\",
+  "characterEncoding": "UTF-8",
+  "exportFileType": "DT_export"
+}

@@ -1,0 +1,79 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "7001c510-4b1a-4e38-be80-91b86fc082c8",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_Advanced_Filter_Functions.lnk",
+    "description": "Importing Advanced Filter configuration formulas",
+    "name": "MySQL_Advanced_Filter_Functions"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "tableName": [
+      "!query!"
+    ],
+    "!query!": [
+      "select value from filter_argument where type\u003d\u0027ADVANCED_FORMULA\u0027"
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "1e63714b-f5ea-4da2-8486-73c88ee7595d"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ],
+    "jdbc.property.query": [
+      "select value from filter_argument where type\u003d\u0027ADVANCED_FORMULA\u0027"
+    ],
+    "jdbc.property.select.sql.action": [
+      "CUSTOM_SQL"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 243,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "FormulaString",
+      "origin": "value",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 244,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 245,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

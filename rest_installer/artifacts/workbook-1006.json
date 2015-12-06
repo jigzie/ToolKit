@@ -1,0 +1,115 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_10_db_driver",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_10_db_driver.wbk",
+        "uuid": "fef313c2-a5de-4f84-9441-5659cd0c14d6"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "10 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_db_driver.lnk",
+                "uuid": "92592be0-ee1b-47df-939d-30b5fdd1e03a"
+            },
+            "keep": false,
+            "name": "MySQL_db_driver_src",
+            "sheetId": "5e9d251b-9f60-4826-81ff-f3fc6fb47850",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "connection_pattern",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "dialect_class_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "driver_class_name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "uuid",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=#MySQL_db_driver_src!id"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "name",
+                    "formulaString": "=#MySQL_db_driver_src!name"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "connection_pattern",
+                    "formulaString": "=#MySQL_db_driver_src!connection_pattern"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "dialect_class_name",
+                    "formulaString": "=#MySQL_db_driver_src!dialect_class_name"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "driver_class_name",
+                    "formulaString": "=#MySQL_db_driver_src!driver_class_name"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "uuid",
+                    "formulaString": "=#MySQL_db_driver_src!uuid"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_db_driver",
+            "nextColumnId": 6,
+            "sheetId": "1e005457-5746-4168-a810-4f8148663cc8",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

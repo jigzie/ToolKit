@@ -1,0 +1,160 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_Logs_SSH.dst",
+        "uuid": "3b3f9a84-7034-41e2-920d-4fe01cc05623"
+    },
+    "errorHandlingMode": "DROP_RECORD",
+    "fields": [
+        {
+            "acceptEmpty": true,
+            "id": 10739,
+            "include": true,
+            "name": "Timestamp",
+            "origin": "0",
+            "pattern": "yyyy-MM-dd HH:mm:ss",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10740,
+            "include": true,
+            "name": "HttpStatusCode",
+            "origin": "1",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10741,
+            "include": true,
+            "name": "Page",
+            "origin": "2",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10742,
+            "include": true,
+            "name": "Stacktrace",
+            "origin": "3",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10743,
+            "include": false,
+            "name": "dasFileName",
+            "origin": "fileInfo.fileName",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10744,
+            "include": false,
+            "name": "dasFilePath",
+            "origin": "fileInfo.filePath",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10745,
+            "include": false,
+            "name": "dasLastModified",
+            "origin": "fileInfo.lastModified",
+            "pattern": "",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "",
+        "name": "Logs_HTTP_Errors",
+        "path": "/Administration/HUMv2/Ingestion/Logs_HTTP_Errors.lnk",
+        "uuid": "edc17310-5e41-4ecb-bd53-d973f1c9d51c"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 1,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "GenericConfigurationImpl.temp-file-store": [
+            "3041fe9a-709b-49a8-aaac-08eeb4b6eb97"
+        ],
+        "TextFileFormat": [
+            "TEXT"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "collectAdditionalFields": [
+            "false"
+        ],
+        "csv.max-lines-per-record": [
+            "1"
+        ],
+        "data.includes.header": [
+            "false"
+        ],
+        "delimiter": [
+            ","
+        ],
+        "detectColumnDefinition": [
+            "SELECT_PARSE_AUTO"
+        ],
+        "escapeCharacter": [
+            ""
+        ],
+        "external.store": [
+            "false"
+        ],
+        "file": [
+            "logs/httperror.log*"
+        ],
+        "fileNameTimeRange_mode": [
+            "OFF"
+        ],
+        "fileType": [
+            "CSV"
+        ],
+        "filter.maxAge": [
+            ""
+        ],
+        "filter.minAge": [
+            ""
+        ],
+        "filter.page.does.split.creation": [
+            "false"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "quoteCharacter": [
+            "\""
+        ],
+        "recordSampleSize": [
+            "1000"
+        ],
+        "source.data.partitioned": [
+            "false"
+        ],
+        "strictQuotes": [
+            "false"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

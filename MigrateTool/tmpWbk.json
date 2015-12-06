@@ -1,0 +1,336 @@
+{
+  "version": "3.0.5",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "162e877d-f207-4208-b30a-4f189094f2e7",
+    "path": "/Users/admin/Applications/Hadoop Summit v4/Clustering/Result1.wbk",
+    "description": "",
+    "name": "Result"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "histograms.generation": [
+      "false"
+    ],
+    "cardinalities.generation": [
+      "false"
+    ],
+    "minmax.generation": [
+      "false"
+    ],
+    "mean.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Opportunities",
+      "sheetId": "e4f75b0f-4853-4622-a82d-a69a5b89612e",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": true,
+      "datasource": {
+        "path": "/Users/admin/Applications/Hadoop Summit v4/_data/Opportunities.upl",
+        "uuid": "28e6a471-0013-40bb-852e-efaf2861eb13"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "kMeansSheet1",
+      "sheetId": "2f2699ac-a526-4c6d-a94a-f32da99313c3",
+      "sheetType": "das.internal.DataMiningSheetType",
+      "keep": true,
+      "columnStyles": [],
+      "dataMiningConfiguration": {
+        "parameters": {
+          "dataMiningSheetType": "kMeans",
+          "sourceSheetName": "Opportunities",
+          "includedColumns": [
+            "Amount",
+            "Age",
+            "Annual_Revenue"
+          ],
+          "numClusters": "2",
+          "numIterations": "5",
+          "normalizeNumericalColumns": "true",
+          "numIndicatorValues": "5"
+        }
+      }
+    },
+    {
+      "name": "Prepare",
+      "sheetId": "eb52d039-e332-4903-ad1e-8c99f1184e66",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "Amount",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dINT(#kMeansSheet1!Amount)"
+        },
+        {
+          "columnName": "Age",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dINT(#kMeansSheet1!Age)"
+        },
+        {
+          "columnName": "Annual_Revenue",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#kMeansSheet1!Annual_Revenue"
+        },
+        {
+          "columnName": "ClusterID",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#kMeansSheet1!ClusterID"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Amount",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Age",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Annual_Revenue",
+          "width": 130,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "ClusterID",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    },
+    {
+      "name": "AvgByCluster",
+      "sheetId": "8daedb13-7456-4504-9234-67e677e7d2d3",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "one",
+          "columnId": "9",
+          "columnIndex": 0,
+          "formulaString": "\u003d1"
+        },
+        {
+          "columnName": "ClusterID",
+          "columnId": "0",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#Prepare!ClusterID)"
+        },
+        {
+          "columnName": "Average_Amount",
+          "columnId": "1",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPAVERAGE(#Prepare!Amount)"
+        },
+        {
+          "columnName": "Average_Age",
+          "columnId": "2",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPAVERAGE(#Prepare!Age)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ClusterID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Average_Amount",
+          "width": 140,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Average_Age",
+          "width": 154,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "one",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 10
+    },
+    {
+      "name": "AvgAmt",
+      "sheetId": "70a31d3d-523a-4560-99f8-84b9c91137cc",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ID",
+          "columnId": "3",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(CONCAT(\"Cluster \";#AvgByCluster!ClusterID))"
+        },
+        {
+          "columnName": "ClusterA",
+          "columnId": "4",
+          "columnIndex": 1,
+          "formulaString": "\u003dROUND(GROUPSUM(SELECT(#AvgByCluster!ClusterID;\"A\";#AvgByCluster!Average_Amount)))"
+        },
+        {
+          "columnName": "ClusterB",
+          "columnId": "5",
+          "columnIndex": 2,
+          "formulaString": "\u003dROUND(GROUPSUM(SELECT(#AvgByCluster!ClusterID;\"B\";#AvgByCluster!Average_Amount)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "3",
+          "name": "ID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "ClusterA",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "ClusterB",
+          "width": 205,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "AvgAge",
+      "sheetId": "58f3e351-993f-40d2-afab-b42c362d14d4",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(CONCAT(\"Cluster \";#AvgByCluster!ClusterID))"
+        },
+        {
+          "columnName": "ClusterA",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dROUND(GROUPSUM(SELECT(#AvgByCluster!ClusterID;\"A\";#AvgByCluster!Average_Age)))"
+        },
+        {
+          "columnName": "ClusterB",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dROUND(GROUPSUM(SELECT(#AvgByCluster!ClusterID;\"B\";#AvgByCluster!Average_Age)))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "ClusterA",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ClusterB",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "byRevenue",
+      "sheetId": "bbff8f7e-d997-4468-a46f-1af402452b59",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "byRevenue",
+      "sortTargetSheet": "byRevenue",
+      "sortKeys": [
+        {
+          "column": "ID",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "ID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(CONCAT(\"Cluster \";#Prepare!ClusterID))"
+        },
+        {
+          "columnName": "Annual_Revenue",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#Prepare!Annual_Revenue)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Annual_Revenue",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

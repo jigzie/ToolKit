@@ -1,0 +1,15 @@
+#version: 1
+#ORGANIZATIONAL
+dn: ou=datameer,dc=jigz-local,dc=com
+objectClass: organizationalUnit
+ou: datameer
+
+#ORGANIZATION PEOPLE
+dn: ou=people,ou=datameer,dc=jigz-local,dc=com
+objectClass: organizationalUnit
+ou: people
+
+#ORGANIZATION GROUPS
+dn: ou=groups,ou=datameer,dc=jigz-local,dc=com
+objectClass: organizationalUnit
+ou: datameer

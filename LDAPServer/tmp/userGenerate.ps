@@ -1,0 +1,22 @@
+echo "Generating Professional Services Users for loading into ldap"
+for a in {1000..1500}; 
+do 
+	echo "dn: uid=das$a,ou=professional services,ou=people,ou=datameer,dc=jigz-local,dc=com" >> SampleUserList.ldif;
+ 	echo "cn: User $a" >> SampleUserList.ldif; 
+	echo "uidNumber: `expr $a - 100`" >> SampleUserList.ldif; 
+	echo "uid: das$a" >> SampleUserList.ldif; 
+	echo "sn: UserM" >> SampleUserList.ldif; 
+	echo "homeDirectory: /home/das$a" >> SampleUserList.ldif; 
+	echo "gidNumber: 99" >> SampleUserList.ldif; 
+	echo "objectClass: top" >> SampleUserList.ldif; 
+	echo "objectClass: posixAccount" >> SampleUserList.ldif; 
+	echo "objectClass: shadowAccount" >> SampleUserList.ldif; 
+	echo "objectClass: inetOrgPerson" >> SampleUserList.ldif; 
+	echo "objectClass: person" >> SampleUserList.ldif; 
+	echo "mail: das$a@jigz-local.com" >> SampleUserList.ldif; 
+	echo "memberOf: cn=DM Linked,ou=groups,ou=datameer,dc=jigz-local,dc=com" >> SampleUserList.ldif; 
+	echo "userPassword: {SHA}1vl2tkNTLqvx9Boo5TWjhfAc5vU=" >> SampleUserList.ldif;
+	echo "" >> SampleUserList.ldif; 
+done
+echo ""
+echo "Done."

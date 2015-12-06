@@ -1,0 +1,114 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "3e370b8e-c1ac-459a-b1a4-a00530766104",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_10_db_driver.wbk",
+    "description": "",
+    "name": "_00_10_db_driver"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_db_driver_src",
+      "sheetId": "5e9d251b-9f60-4826-81ff-f3fc6fb47850",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_db_driver.lnk",
+        "uuid": "22752146-70b3-4ae6-9b93-c4c56333699a"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_db_driver",
+      "sheetId": "1e005457-5746-4168-a810-4f8148663cc8",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "id",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_db_driver_src!id"
+        },
+        {
+          "columnName": "name",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_db_driver_src!name"
+        },
+        {
+          "columnName": "connection_pattern",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_db_driver_src!connection_pattern"
+        },
+        {
+          "columnName": "dialect_class_name",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_db_driver_src!dialect_class_name"
+        },
+        {
+          "columnName": "driver_class_name",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MySQL_db_driver_src!driver_class_name"
+        },
+        {
+          "columnName": "uuid",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#MySQL_db_driver_src!uuid"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "connection_pattern",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "dialect_class_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "driver_class_name",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "uuid",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

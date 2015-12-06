@@ -1,0 +1,151 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "88245e47-ec80-49ec-9f56-50a9a439cd47",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/_g_VolumeByMonth.wbk",
+    "description": "",
+    "name": "_g_VolumeByMonth"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {
+    "histograms.generation": [
+      "true"
+    ],
+    "cardinalities.generation": [
+      "true"
+    ],
+    "topk.generation": [
+      "true"
+    ],
+    "minmaxmean.generation": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "dap_vol",
+      "sheetId": "3699479b-76e2-44cb-bece-4588e88bb19a",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "MySQL_dap_vol",
+        "sheetId": "07f5ba3c-c458-4536-887a-0e2e704a84a0",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_06_dap_vol.wbk",
+          "uuid": "3ceaf048-afba-40d7-85c7-07189ec19611"
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "prep",
+      "sheetId": "f7c65014-47ba-4972-8740-2aa6490845cc",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "prep",
+      "filterTargetSheet": "prep",
+      "filterArguments": [
+        {
+          "filterExpression": "FORMULA",
+          "value": "BEFORE(#day;STARTOFMONTH(TODAY()))",
+          "valueStatic": false,
+          "type": "ADVANCED_FORMULA"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#dap_vol!day"
+        },
+        {
+          "columnName": "month",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dFORMATDATE(#day;\"yyyy-MM\")"
+        },
+        {
+          "columnName": "volume",
+          "columnId": "1",
+          "columnIndex": 2,
+          "formulaString": "\u003d#dap_vol!volume"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "day",
+          "width": 168,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "volume",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "month",
+          "width": 157,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "volumeByMonth_rpt",
+      "sheetId": "8567e339-134e-445d-8ec8-10c03a62f98c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "volumeByMonth_rpt",
+      "sortTargetSheet": "volumeByMonth_rpt",
+      "sortKeys": [
+        {
+          "column": "month",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "month",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#prep!month)"
+        },
+        {
+          "columnName": "volume_gb",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dFLOOR(((GROUPSUM(#prep!volume)/1024)/1024)/1024;2)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "month",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "volume_gb",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

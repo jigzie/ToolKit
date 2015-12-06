@@ -1,0 +1,31 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.sdk.entity.CustomDataStore",
+  "file": {
+    "uuid": "1c27b1bf-fe13-47fa-9391-e1cb14dba780",
+    "path": "/Users/admin/Datameer Consumption/Connections/LicenseDetails.dst",
+    "description": "HTTP Connection to Datameer REST interface",
+    "name": "LicenseDetails"
+  },
+  "typeId": "das.CustomFileDataStoreType",
+  "properties": {
+    "dataStoreUsage": [
+      "IMPORT"
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "733509fa-00bd-4f3c-819b-011ece73a87b"
+    ],
+    "user_name": [
+      "admin"
+    ],
+    "custom-file-protocol.url": [
+      "http://localhost:2144/rest/"
+    ],
+    "rootPathPrefix": [
+      "/rest/"
+    ],
+    "password": [
+      "SECURE:0:5OJZkzOwdA9JYGXA69dOLA\u003d\u003d"
+    ]
+  }
+}

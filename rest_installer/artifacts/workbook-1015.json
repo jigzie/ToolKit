@@ -1,0 +1,103 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_28_users",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_28_users.wbk",
+        "uuid": "6ef03463-280f-48ad-a033-52e13d4ed7b2"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "28 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_users.lnk",
+                "uuid": "d2aca5b3-8bed-45e9-9047-bf2f4987bbfa"
+            },
+            "keep": false,
+            "name": "MySQL_users_src",
+            "sheetId": "4b09ed6f-3b41-44db-a235-80f3403a6ffe",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "name",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "email",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "login_count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "enabled",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "id",
+                    "formulaString": "=#MySQL_users_src!id"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "name",
+                    "formulaString": "=#MySQL_users_src!name"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "email",
+                    "formulaString": "=#MySQL_users_src!email"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "login_count",
+                    "formulaString": "=#MySQL_users_src!login_count"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "enabled",
+                    "formulaString": "=#MySQL_users_src!enabled"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_users",
+            "nextColumnId": 5,
+            "sheetId": "063305fd-fe2a-4f43-91c4-263ece882554",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

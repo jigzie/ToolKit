@@ -1,0 +1,150 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "b348cb35-b250-4154-92ac-ac6b728f0c9f",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_30_Workbook_Config_Stats.wbk",
+    "description": "",
+    "name": "_00_30_Workbook_Config_Stats"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_Workbook_Config_Stats_src",
+      "sheetId": "9b6c6db7-5c39-492a-b82b-3d5752ff93b7",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_Workbook_Config_Stats.lnk",
+        "uuid": "e7123a69-812d-42c6-83af-c8c8f630fa32"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_Workbook_Config_Stats",
+      "sheetId": "f52c3f95-9638-4c7a-ae1b-776e77a16180",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "SheetID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_Workbook_Config_Stats_src!SheetID"
+        },
+        {
+          "columnName": "WorkbookID",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_Workbook_Config_Stats_src!WorkbookID"
+        },
+        {
+          "columnName": "FilterID",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MySQL_Workbook_Config_Stats_src!FilterID"
+        },
+        {
+          "columnName": "SortID",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MySQL_Workbook_Config_Stats_src!SortID"
+        },
+        {
+          "columnName": "ExternalSheetID",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MySQL_Workbook_Config_Stats_src!ExternalSheetID"
+        },
+        {
+          "columnName": "SheetType",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#MySQL_Workbook_Config_Stats_src!SheetType"
+        },
+        {
+          "columnName": "PartitionDefinition",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#MySQL_Workbook_Config_Stats_src!PartitionDefinition"
+        },
+        {
+          "columnName": "PartitionSelector",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#MySQL_Workbook_Config_Stats_src!PartitionSelector"
+        },
+        {
+          "columnName": "Keep",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#MySQL_Workbook_Config_Stats_src!Keep"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "SheetID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "WorkbookID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "FilterID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "SortID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "ExternalSheetID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "SheetType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "PartitionDefinition",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "PartitionSelector",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Keep",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 9
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

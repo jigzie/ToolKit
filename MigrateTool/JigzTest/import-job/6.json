@@ -1,0 +1,220 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "5970abee-f01d-4204-93fb-7e0b26c208f6",
+    "path": "/Data/FileUploads/SalesData.upl",
+    "description": "Sample File UPload",
+    "name": "SalesData"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "092ae0bf-3a84-4d83-9d64-b0db389742cf"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-4.1.2-cdh4.6-mr2/das-data/fileuploads/6/SalesJan2009.csv"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "data.includes.header": [
+      "false"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "ea6451f0-1296-4ccd-a010-533cb9e06812"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 10,
+      "pattern": "MM/dd/yy HH:mm",
+      "acceptEmpty": true,
+      "name": "Date",
+      "origin": "0",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 11,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "ProductID",
+      "origin": "1",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 12,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "DollarValue",
+      "origin": "2",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 13,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "CreditCard",
+      "origin": "3",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 14,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "LastName",
+      "origin": "4",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 15,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "City",
+      "origin": "5",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 16,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "State_County",
+      "origin": "6",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 17,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Country",
+      "origin": "7",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 18,
+      "pattern": "MM/dd/yy HH:mm",
+      "acceptEmpty": true,
+      "name": "Date_FirstContact",
+      "origin": "8",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 19,
+      "pattern": "MM/dd/yy HH:mm",
+      "acceptEmpty": true,
+      "name": "Date_SecondContact",
+      "origin": "9",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 20,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Longitude",
+      "origin": "10",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 21,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Latitude",
+      "origin": "11",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 22,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 23,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 24,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

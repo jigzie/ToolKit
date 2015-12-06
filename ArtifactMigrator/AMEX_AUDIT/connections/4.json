@@ -1,0 +1,31 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataBaseConnection",
+  "file": {
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "description": "Connection to MySQL database",
+    "name": "Datameer_DB"
+  },
+  "typeId": "das.JdbcDataStoreType",
+  "properties": {
+    "dataStoreTemplate": [
+      "false"
+    ],
+    "dataStoreUsage": [
+      "IMPORT"
+    ],
+    "key.connectionUrl": [
+      "jdbc:mysql://54.81.124.105:3306/dap2?tinyInt1isBit\u003dfalse"
+    ],
+    "user_name": [
+      "dap"
+    ],
+    "password": [
+      "SECURE:0:hllRerSURnUH593ZaNBWkA\u003d\u003d"
+    ]
+  },
+  "dbType": {
+    "name": "MySQL"
+  }
+}

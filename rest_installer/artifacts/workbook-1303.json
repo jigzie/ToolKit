@@ -1,0 +1,103 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_04_CentralizedExport",
+        "path": "/Administration/HUMv2/Exports/_04_CentralizedExport.wbk",
+        "uuid": "964f64cc-a18d-4a51-b8db-5028dddec6d7"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "db_encoded_output",
+            "referencedSheet": {
+                "name": "db_encoded_output",
+                "sheetId": "afc739ac-c62b-4015-af0d-76b580c7c957",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Exports/_01_DB_Data_Combiner.wbk",
+                    "uuid": "6bb0ab3b-bde7-4ca3-b39a-9ecdc6a2ef07"
+                }
+            },
+            "sheetId": "d42238a5-0cb3-46f9-87b2-917d74fd10fb",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "logs_encoded_output",
+            "referencedSheet": {
+                "name": "logs_encoded_output",
+                "sheetId": "96cadb14-d668-4073-be8a-84f05ffe478a",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Exports/_03_Logs_Combiner.wbk",
+                    "uuid": "91ec094d-8480-4790-9ba6-d8609aaec359"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "7562e83c-eb8d-4839-9088-65856da4d3c0",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "json",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "http_encoded_output",
+            "referencedSheet": {
+                "name": "http_encoded_output",
+                "sheetId": "9a60a594-c0b2-40c1-8824-b6b14fdce0a6",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Exports/_02_HTTP_Combiner.wbk",
+                    "uuid": "7d25320f-8dd7-4223-be0b-8091cd0c5266"
+                }
+            },
+            "sheetId": "857015a4-c490-405a-aaf3-846993940b4f",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": true,
+            "name": "json_output",
+            "sheetDefinition": {
+                "unionSources": [
+                    "db_encoded_output",
+                    "logs_encoded_output",
+                    "http_encoded_output"
+                ]
+            },
+            "sheetId": "3657c23b-c057-4525-a0a0-fe595b991ece",
+            "sheetType": "das.internal.UnionSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

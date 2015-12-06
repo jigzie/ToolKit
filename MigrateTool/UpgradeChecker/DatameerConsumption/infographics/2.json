@@ -1,0 +1,3059 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.infographic.Infographic",
+  "links": {
+    "self": "/rest/infographics/2"
+  },
+  "file": {
+    "uuid": "5eb6762d-3539-4b4a-988f-2c6335adbb9d",
+    "path": "/Datameer Consumption Stats/DatameerReport.ifg",
+    "name": "DatameerReport"
+  },
+  "sameBackgroundForTabs": false,
+  "presentationMode": "tabs",
+  "slideshowEffect": "none",
+  "slideshowTime": 5,
+  "pageSize": "USLetter",
+  "pageOrientation": "portrait",
+  "showGuides": false,
+  "allowPdfFromView": false,
+  "tabs": [
+    {
+      "backgroundType": "color",
+      "backgroundImagePlacement": "full",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both",
+      "name": "Datameer Active Users",
+      "order": 0,
+      "id": "b801c90f-4bc8-474e-ab4f-b1ad6ba1cdec",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square round",
+            "imageName": "rect_rounded.svg",
+            "defaultWidth": 76,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Square round",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 34,
+          "top": 0,
+          "width": 1533.777777671814,
+          "height": 764.777777671814,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 2,
+          "id": "f966637b-0aa0-4c12-a9c8-01c2ba63eb5c",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(255, 255, 255)",
+          "imageName": "rect_rounded.svg",
+          "shadow": true,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": 1,
+          "baseUrl": "/js",
+          "backgroundType_text": "None",
+          "backgroundImage": {
+            "uuid": "f39adae4-78bd-4f5c-b4fb-8401db161688",
+            "id": 75,
+            "path": "/Images/banner_datameer30.jpg",
+            "name": "banner_datameer30",
+            "type": "jpg"
+          },
+          "backgroundColor": "rgb(29, 144, 206)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "defaultUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200,
+            "async": true
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 543.777777671814,
+          "top": 0,
+          "width": 253.77777767181396,
+          "height": 63.777777671813965,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "0ac5a348-40ef-420a-86e1-491d9aa1b3e9",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "imageUrl": "/image-upload?path\u003d%2FImages%2FDatameer.png\u0026uuid\u003d1eb0409c-2d39-4a6c-8b20-c48dcfc26529",
+          "imageName": "Datameer.png",
+          "defaultUrl": "/js/infographics/charts/images/image_example.png",
+          "image": {
+            "uuid": "1eb0409c-2d39-4a6c-8b20-c48dcfc26529",
+            "id": 76,
+            "path": "/Images/Datameer.png",
+            "name": "Datameer",
+            "type": "png"
+          }
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Polar Area Chart",
+            "chart": "infographics/charts/polar_area_chart",
+            "dataDescriptor": {
+              "maxSize": 20,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              }
+            },
+            "inspector": "infographics/views/polar_area_inspector",
+            "panelGroup": "chart"
+          },
+          "name": "Polar Area Chart",
+          "inspectorName": "infographics/views/polar_area_inspector",
+          "left": 34,
+          "top": 159.5,
+          "width": 509.77777767181396,
+          "height": 445.77777767181396,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 4,
+          "id": "9fa6d155-61eb-44d2-ad1a-0abaafc76fd3",
+          "maxSize": 20,
+          "dataSet": {
+            "maxSize": 20,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wNV9Vc2Vyc19Jbmdlc3Rpb24ud2JrO2NiYmY5OThmLTM0N2YtNDY5Mi05ZGEzLWRkNTY0MjFjYjNmMjswOzA7ODhjZjdkODktZTE1Zi00NmRjLThjNzgtYTEyNmNiOTQzYzhj",
+                  "type": "STRING",
+                  "name": "OWNER",
+                  "columnId": "0",
+                  "toolTip": "Resources / Datameer_Top5_Users_Ingestion / Latest Result / Top5_IngestionByVolumeinGB / OWNER",
+                  "id": "b7cd7a48-f823-4cec-bafb-e51600da874b",
+                  "dataSourceSpec": {
+                    "jobId": 16,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top5_Users_Ingestion.wbk",
+                    "sheetId": "88cf7d89-e15f-46dc-8c78-a126cb943c8c",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wNV9Vc2Vyc19Jbmdlc3Rpb24ud2JrO2NiYmY5OThmLTM0N2YtNDY5Mi05ZGEzLWRkNTY0MjFjYjNmMjswOzA7ODhjZjdkODktZTE1Zi00NmRjLThjNzgtYTEyNmNiOTQzYzhj",
+                  "type": "BIG_INTEGER",
+                  "name": "VOLUME_in_GB",
+                  "columnId": "1",
+                  "toolTip": "Resources / Datameer_Top5_Users_Ingestion / Latest Result / Top5_IngestionByVolumeinGB / VOLUME_in_GB",
+                  "id": "9365d59b-2702-45e4-bd44-9051ffd1b2fb",
+                  "dataSourceSpec": {
+                    "jobId": 16,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top5_Users_Ingestion.wbk",
+                    "sheetId": "88cf7d89-e15f-46dc-8c78-a126cb943c8c",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wNV9Vc2Vyc19Jbmdlc3Rpb24ud2JrO2NiYmY5OThmLTM0N2YtNDY5Mi05ZGEzLWRkNTY0MjFjYjNmMjswOzA7ODhjZjdkODktZTE1Zi00NmRjLThjNzgtYTEyNmNiOTQzYzhj",
+            "dataSourceSpec": {
+              "jobId": 16,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_Top5_Users_Ingestion.wbk",
+              "sheetId": "88cf7d89-e15f-46dc-8c78-a126cb943c8c",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "margin": 0,
+          "marginTop": "0",
+          "marginRight": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "fillColorList": [
+            "rgb(15, 94, 133)",
+            "rgb(20, 123, 174)",
+            "rgb(25, 156, 220)",
+            "rgb(67, 179, 234)",
+            "rgb(131, 205, 241)",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf",
+            "rgb(162, 162, 162)",
+            "rgb(49, 157, 185)",
+            "rgb(198, 178, 213)"
+          ],
+          "strokeColor": "white",
+          "labelColor": "black",
+          "colorScheme": "categorical",
+          "isShadowVisible": false,
+          "style": "plain",
+          "showLabels": true,
+          "labelType": "percentage",
+          "fontSize": "15",
+          "fontName": "Verdana",
+          "labelLength": 100,
+          "enableTooltips": true,
+          "labelReduction": 0,
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": false,
+          "labelRadius": 50,
+          "decimalPlaces": ""
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 170.38888883590698,
+          "top": 102,
+          "width": 291,
+          "height": 35,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 5,
+          "id": "734cc957-de26-437c-ace8-3689c7d8b1fd",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 5 HDFS Consumers",
+          "fontSize": "19",
+          "fontName": "Chunk",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "black",
+          "fontName_text": "Chunk"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Multi bar chart",
+            "variant": "simple",
+            "isBarChart": true,
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "panelGroup": "chart"
+          },
+          "name": "Multi bar chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 779.388888835907,
+          "top": 137,
+          "width": 611,
+          "height": 398,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "cfbff4d3-1874-4180-be1a-e4d2b6ea4125",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+                  "type": "STRING",
+                  "name": "owner",
+                  "columnId": "0",
+                  "toolTip": "Resources / Datameer_Volume_Consumption / Latest Result / Top20_Wbk_Sheet_Storage / owner",
+                  "id": "2f194518-5496-46ea-87db-45478f111007",
+                  "dataSourceSpec": {
+                    "jobId": 7,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+                    "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+                  "type": "INTEGER",
+                  "name": "HDFS_Stored_in_GB",
+                  "columnId": "4",
+                  "toolTip": "Resources / Datameer_Volume_Consumption / Latest Result / Top20_Wbk_Sheet_Storage / HDFS_Stored_in_GB",
+                  "id": "6a5ee068-671f-48ce-b02a-6f04e79906dd",
+                  "dataSourceSpec": {
+                    "jobId": 7,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+                    "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "category": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+                  "type": "STRING",
+                  "name": "WorkbookName",
+                  "columnId": "2",
+                  "toolTip": "Resources / Datameer_Volume_Consumption / Latest Result / Top20_Wbk_Sheet_Storage / WorkbookName",
+                  "id": "73fbafa0-6352-4d5c-bf1b-18fb2379e87f",
+                  "dataSourceSpec": {
+                    "jobId": 7,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+                    "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+            "dataSourceSpec": {
+              "jobId": 7,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+              "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": "1",
+          "margin": 20,
+          "offset": 10,
+          "marginTop": "30",
+          "marginRight": "20",
+          "marginBottom": "48",
+          "marginLeft": "60",
+          "scale": "linear",
+          "isGridVisible": false,
+          "isVisibleX": true,
+          "isVisibleY": true,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "isShadowVisible": false,
+          "isStyleVisible": true,
+          "colorScheme": "flat",
+          "fillColorList": [
+            "rgb(22, 136, 192)"
+          ],
+          "strokeColor": "rgb(195, 121, 9)",
+          "labelColor": "black",
+          "labelLength": "56",
+          "labelOrientationX": "diagonal",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "variant": "stacked",
+          "offsetVariant": "zero",
+          "groupGapInPercent": 10,
+          "fontSize": "11",
+          "fontName": "Verdana",
+          "isBarChart": true,
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showPoints": true,
+          "showAreas": false,
+          "enableTooltips": true,
+          "xAxisSkipCount": "1",
+          "transpose": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": false,
+          "showDataLabels": true,
+          "dataLabelSkipCount": "0",
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "rgb(4, 26, 37)",
+          "lineTension": 1,
+          "ignoreEmpties": true,
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "gridToBack": true,
+          "subtype": "stacked_bar",
+          "subtype_text": "Stacked Bar Chart",
+          "scale_text": "Linear",
+          "labelOrientationX_text": "Diagonal",
+          "labelOrientationY_text": "Horizontal",
+          "dataLabelOrientation_text": "Horizontal",
+          "colorScheme_text": "Flat",
+          "fontName_text": "Verdana",
+          "backgroundType_text": "None"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 893.5,
+          "top": 106,
+          "width": 382.77777767181396,
+          "height": "41px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 5,
+          "id": "8cead4f7-b632-4ce2-a179-435a59033eb7",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "HDFS Used by Owner",
+          "fontSize": "19",
+          "fontName": "Chunk",
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "black",
+          "fontName_text": "Chunk"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 135.5,
+          "top": 542.777777671814,
+          "width": 306.77777767181396,
+          "height": "53px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 8,
+          "id": "3877b530-3816-47e4-b946-de484e2534ff",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 5 Datameer-HDFS Users consuming HDFS storage. The volume is displayed in GB (Gigabytes)",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 920,
+          "top": 542.777777671814,
+          "width": 329.77777767181396,
+          "height": "28px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 8,
+          "id": "3bbe9168-f767-4726-9d42-0dfa0d91fe4b",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 20 Users and related artifacts in HDFS",
+          "fontSize": 12,
+          "fontName": "Arial",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black"
+        }
+      ],
+      "links": []
+    },
+    {
+      "backgroundType": "color",
+      "backgroundImagePlacement": "full",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both",
+      "name": "Datameer Artifacts by References",
+      "order": 1,
+      "id": "57f987ff-fd66-40b9-978c-86f3408426f6",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square round",
+            "imageName": "rect_rounded.svg",
+            "defaultWidth": 76,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Square round",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 17.166666507720947,
+          "top": 0,
+          "width": 1560.777777671814,
+          "height": 930.777777671814,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 2,
+          "id": "a431122d-993b-4efa-a52d-6421794c7bd4",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(248, 247, 247)",
+          "imageName": "rect_rounded.svg",
+          "shadow": true,
+          "shadowOpacity": "0.4",
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": 1,
+          "baseUrl": "/js",
+          "backgroundType_text": "None",
+          "backgroundImage": {
+            "uuid": "f39adae4-78bd-4f5c-b4fb-8401db161688",
+            "id": 75,
+            "path": "/Images/banner_datameer30.jpg",
+            "name": "banner_datameer30",
+            "type": "jpg"
+          },
+          "backgroundColor": "rgb(29, 144, 206)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "defaultUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200,
+            "async": true
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 543.777777671814,
+          "top": 0,
+          "width": 253.77777767181396,
+          "height": 63.777777671813965,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "f6db1b97-768a-4eb5-8971-e6389a0e48c2",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "imageUrl": "/image-upload?path\u003d%2FImages%2FDatameer.png\u0026uuid\u003d1eb0409c-2d39-4a6c-8b20-c48dcfc26529",
+          "imageName": "Datameer.png",
+          "defaultUrl": "/js/infographics/charts/images/image_example.png",
+          "image": {
+            "uuid": "1eb0409c-2d39-4a6c-8b20-c48dcfc26529",
+            "id": 76,
+            "path": "/Images/Datameer.png",
+            "name": "Datameer",
+            "type": "png"
+          }
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 281,
+          "top": 62.234375,
+          "width": 305,
+          "height": 39,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 4,
+          "id": "51b60f59-e46f-47cf-8203-6eeb41d7de7f",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 10 Referenced Artifacts",
+          "fontSize": "24",
+          "fontName": "Goudy",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black",
+          "fontName_text": "Goudy"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Pie Chart",
+            "chart": "infographics/charts/pie_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/piechart_inspector",
+            "panelGroup": "chart",
+            "holeRadius": -1
+          },
+          "name": "Pie Chart",
+          "inspectorName": "infographics/views/piechart_inspector",
+          "left": 83.88888883590698,
+          "top": 63.777777671813965,
+          "width": 586.777777671814,
+          "height": 452.77777767181396,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 8,
+          "id": "7a00c2f6-5227-4603-bfa8-d5380c4a5c02",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswO2Y4OGFiNWUxLWNhZjktNDE5MS1iYTRmLTllOTNmYzVmMGM1Mg",
+                  "type": "STRING",
+                  "name": "NAME",
+                  "columnId": "0",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_DataIngestions / NAME",
+                  "id": "fcf8d0ff-718a-4c8d-9b63-564ad776ce82",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "f88ab5e1-caf9-4191-ba4f-9e93fc5f0c52",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswO2Y4OGFiNWUxLWNhZjktNDE5MS1iYTRmLTllOTNmYzVmMGM1Mg",
+                  "type": "INTEGER",
+                  "name": "REFERENCE_COUNT",
+                  "columnId": "2",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_DataIngestions / REFERENCE_COUNT",
+                  "id": "9ac7f9bd-f76a-4187-a025-c134a959428f",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "f88ab5e1-caf9-4191-ba4f-9e93fc5f0c52",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswO2Y4OGFiNWUxLWNhZjktNDE5MS1iYTRmLTllOTNmYzVmMGM1Mg",
+            "dataSourceSpec": {
+              "jobId": 10,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+              "sheetId": "f88ab5e1-caf9-4191-ba4f-9e93fc5f0c52",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "marginTop": "0",
+          "marginRight": "129",
+          "marginBottom": "0",
+          "marginLeft": "200",
+          "fillColorList": [
+            "rgb(162, 135, 7)",
+            "rgb(181, 151, 7)",
+            "rgb(206, 171, 8)",
+            "rgb(225, 188, 9)",
+            "rgb(245, 204, 10)",
+            "rgb(247, 212, 49)",
+            "rgb(248, 218, 79)",
+            "rgb(249, 225, 113)",
+            "rgb(250, 229, 128)",
+            "rgb(251, 236, 162)"
+          ],
+          "strokeColor": "rgb(16, 45, 79)",
+          "labelColor": "black",
+          "colorScheme": "categorical",
+          "isShadowVisible": false,
+          "style": "plain",
+          "showLabels": true,
+          "labelType": "percentage",
+          "fontSize": 10,
+          "fontName": "Verdana",
+          "labelLength": 100,
+          "enableTooltips": true,
+          "labelReduction": 0,
+          "labelLayoutVariant": "circle-aligned",
+          "labelGap": 20,
+          "holeRadius": -1,
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "otherSliceSize": 5,
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "subtype": "pie"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Multi bar chart",
+            "variant": "simple",
+            "isBarChart": true,
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "panelGroup": "chart"
+          },
+          "name": "Multi bar chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 936.666666507721,
+          "top": 89,
+          "width": 327.77777767181396,
+          "height": 274.77777767181396,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "b4ecdac3-c372-4444-8263-4f35e183337e",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzBmYTE4ZGJhLTNiMmQtNDUyOC1hMTllLWM3NjA2M2FiMzBjYQ",
+                  "type": "STRING",
+                  "name": "NAME",
+                  "columnId": "0",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_ImportJobs / NAME",
+                  "id": "6bc2a8f3-d9ad-4d3e-b1a5-5b9901b6aba1",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "0fa18dba-3b2d-4528-a19e-c76063ab30ca",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzBmYTE4ZGJhLTNiMmQtNDUyOC1hMTllLWM3NjA2M2FiMzBjYQ",
+                  "type": "INTEGER",
+                  "name": "REFERENCE_COUNT",
+                  "columnId": "2",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_ImportJobs / REFERENCE_COUNT",
+                  "id": "5f404526-780f-4066-9e0f-b1184ac79511",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "0fa18dba-3b2d-4528-a19e-c76063ab30ca",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "category": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzBmYTE4ZGJhLTNiMmQtNDUyOC1hMTllLWM3NjA2M2FiMzBjYQ",
+                  "type": "STRING",
+                  "name": "INGESTION_SOURCE",
+                  "columnId": "3",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_ImportJobs / INGESTION_SOURCE",
+                  "id": "eca5db8c-16ca-4c1f-8941-220b54294985",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "0fa18dba-3b2d-4528-a19e-c76063ab30ca",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzBmYTE4ZGJhLTNiMmQtNDUyOC1hMTllLWM3NjA2M2FiMzBjYQ",
+            "dataSourceSpec": {
+              "jobId": 10,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+              "sheetId": "0fa18dba-3b2d-4528-a19e-c76063ab30ca",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "margin": 20,
+          "offset": 10,
+          "marginTop": 20,
+          "marginRight": 20,
+          "marginBottom": "159",
+          "marginLeft": 50,
+          "scale": "linear",
+          "isGridVisible": true,
+          "isVisibleX": true,
+          "isVisibleY": true,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "isShadowVisible": false,
+          "isStyleVisible": true,
+          "colorScheme": "categorical",
+          "fillColorList": [
+            "rgb(144, 167, 11)"
+          ],
+          "strokeColor": "white",
+          "labelColor": "black",
+          "labelLength": "100",
+          "labelOrientationX": "vertical",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "variant": "simple",
+          "offsetVariant": "zero",
+          "groupGapInPercent": 10,
+          "fontSize": "10",
+          "fontName": "Verdana",
+          "isBarChart": true,
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showPoints": true,
+          "showAreas": false,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "transpose": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": true,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1,
+          "ignoreEmpties": true,
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "gridToBack": true,
+          "subtype": "bar",
+          "subtype_text": "Bar Chart",
+          "colorScheme_text": "Categorical",
+          "labelOrientationX_text": "Vertical",
+          "labelOrientationY_text": "Horizontal",
+          "fontName_text": "Verdana"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 1045.458279132843,
+          "top": 63.777777671813965,
+          "width": 167.77777767181396,
+          "height": "38px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 10,
+          "id": "54f229aa-fc3d-41aa-8f09-99bbebf2f18b",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 10 Import Jobs",
+          "fontSize": "19",
+          "fontName": "Goudy",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black",
+          "fontName_text": "Goudy"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Multi bar chart",
+            "variant": "simple",
+            "isBarChart": true,
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "panelGroup": "chart"
+          },
+          "name": "Multi bar chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 696.388888835907,
+          "top": 372.66666650772095,
+          "width": 312.77777767181396,
+          "height": 287.77777767181396,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 7,
+          "id": "22cf0493-3fc1-4a18-a3da-963fb7c68f5e",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzZmODY1MDYwLWI5MjYtNGMzNi1iODNmLTQ5ZDMzMjI3NTAyNA",
+                  "type": "STRING",
+                  "name": "NAME",
+                  "columnId": "0",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_FileUploads / NAME",
+                  "id": "0d5d5fb7-248f-46c1-b944-027904369932",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "6f865060-b926-4c36-b83f-49d332275024",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzZmODY1MDYwLWI5MjYtNGMzNi1iODNmLTQ5ZDMzMjI3NTAyNA",
+                  "type": "INTEGER",
+                  "name": "REFERENCE_COUNT",
+                  "columnId": "2",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_FileUploads / REFERENCE_COUNT",
+                  "id": "16c70829-6868-4e30-a376-1a6b9b4b9d0f",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "6f865060-b926-4c36-b83f-49d332275024",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "category": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzZmODY1MDYwLWI5MjYtNGMzNi1iODNmLTQ5ZDMzMjI3NTAyNA",
+                  "type": "STRING",
+                  "name": "INGESTION_SOURCE",
+                  "columnId": "3",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_FileUploads / INGESTION_SOURCE",
+                  "id": "5815eb3c-3fe6-4d41-a685-0fdbcc2610c5",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "6f865060-b926-4c36-b83f-49d332275024",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzZmODY1MDYwLWI5MjYtNGMzNi1iODNmLTQ5ZDMzMjI3NTAyNA",
+            "dataSourceSpec": {
+              "jobId": 10,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+              "sheetId": "6f865060-b926-4c36-b83f-49d332275024",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "margin": 20,
+          "offset": 10,
+          "marginTop": 20,
+          "marginRight": 20,
+          "marginBottom": "159",
+          "marginLeft": 50,
+          "scale": "linear",
+          "isGridVisible": true,
+          "isVisibleX": true,
+          "isVisibleY": true,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "isShadowVisible": false,
+          "isStyleVisible": true,
+          "colorScheme": "categorical",
+          "fillColorList": [
+            "rgb(18, 159, 86)"
+          ],
+          "strokeColor": "white",
+          "labelColor": "black",
+          "labelLength": "100",
+          "labelOrientationX": "vertical",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "variant": "simple",
+          "offsetVariant": "zero",
+          "groupGapInPercent": 10,
+          "fontSize": "10",
+          "fontName": "Verdana",
+          "isBarChart": true,
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showPoints": true,
+          "showAreas": false,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "transpose": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": true,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1,
+          "ignoreEmpties": true,
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "gridToBack": true,
+          "subtype": "bar",
+          "subtype_text": "Bar Chart",
+          "colorScheme_text": "Categorical",
+          "labelOrientationX_text": "Vertical",
+          "labelOrientationY_text": "Horizontal",
+          "fontName_text": "Verdana"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 1129.34716796875,
+          "top": 411,
+          "width": 167.77777767181396,
+          "height": "38px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 5,
+          "id": "b2d175e6-a7c9-4817-943a-9a774d192da4",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 10 Data Links",
+          "fontSize": "19",
+          "fontName": "Goudy",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black",
+          "fontName_text": "Goudy"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 768.888888835907,
+          "top": 363.77777767181396,
+          "width": 167.77777767181396,
+          "height": "38px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 9,
+          "id": "9cccbcd5-e322-47e6-9d7c-d75ead1247d6",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 10 File Uploads",
+          "fontSize": "19",
+          "fontName": "Goudy",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black",
+          "fontName_text": "Goudy"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Multi bar chart",
+            "variant": "simple",
+            "isBarChart": true,
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "panelGroup": "chart"
+          },
+          "name": "Multi bar chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 1073.84716796875,
+          "top": 411,
+          "width": 278.77777767181396,
+          "height": 288.77777767181396,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "764941cd-7a4a-4346-b3ce-b9b74bb097b4",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzU4MmU4MTFjLTY1NzItNGYxZC1iNmQ2LTk5M2UyNmFjMzljZA",
+                  "type": "STRING",
+                  "name": "NAME",
+                  "columnId": "0",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_DataLinks / NAME",
+                  "id": "08ca9a1c-3df4-468a-b819-b05c49ce7a99",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "582e811c-6572-4f1d-b6d6-993e26ac39cd",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzU4MmU4MTFjLTY1NzItNGYxZC1iNmQ2LTk5M2UyNmFjMzljZA",
+                  "type": "INTEGER",
+                  "name": "REFERENCE_COUNT",
+                  "columnId": "2",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_DataLinks / REFERENCE_COUNT",
+                  "id": "c7780a13-e31a-491a-9ca0-689f48955731",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "582e811c-6572-4f1d-b6d6-993e26ac39cd",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "category": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzU4MmU4MTFjLTY1NzItNGYxZC1iNmQ2LTk5M2UyNmFjMzljZA",
+                  "type": "STRING",
+                  "name": "INGESTION_SOURCE",
+                  "columnId": "3",
+                  "toolTip": "Resources / Datameer_Top10_Data_Ingestions / Latest Result / Top10_DataLinks / INGESTION_SOURCE",
+                  "id": "2ae87788-5ef4-4e02-bb02-71d1365c7b28",
+                  "dataSourceSpec": {
+                    "jobId": 10,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+                    "sheetId": "582e811c-6572-4f1d-b6d6-993e26ac39cd",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wMTBfRGF0YV9Jbmdlc3Rpb25zLndiaztlNGZkYWVjYS0xYTFmLTQ1OGMtOTRmNS1iM2QzNmFkODVhNWU7MDswOzU4MmU4MTFjLTY1NzItNGYxZC1iNmQ2LTk5M2UyNmFjMzljZA",
+            "dataSourceSpec": {
+              "jobId": 10,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_Top10_Data_Ingestions.wbk",
+              "sheetId": "582e811c-6572-4f1d-b6d6-993e26ac39cd",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "rgb(0, 145, 218)",
+          "opacity": 1,
+          "margin": 20,
+          "offset": 10,
+          "marginTop": 20,
+          "marginRight": 20,
+          "marginBottom": "159",
+          "marginLeft": 50,
+          "scale": "linear",
+          "isGridVisible": true,
+          "isVisibleX": true,
+          "isVisibleY": true,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "isShadowVisible": false,
+          "isStyleVisible": true,
+          "colorScheme": "categorical",
+          "fillColorList": [
+            "rgb(0, 145, 218)"
+          ],
+          "strokeColor": "white",
+          "labelColor": "black",
+          "labelLength": "100",
+          "labelOrientationX": "vertical",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "variant": "simple",
+          "offsetVariant": "zero",
+          "groupGapInPercent": 10,
+          "fontSize": "10",
+          "fontName": "Verdana",
+          "isBarChart": true,
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showPoints": true,
+          "showAreas": false,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "transpose": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": false,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "diagonal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1,
+          "ignoreEmpties": true,
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "gridToBack": true,
+          "subtype": "bar",
+          "subtype_text": "Bar Chart",
+          "colorScheme_text": "Categorical",
+          "labelOrientationX_text": "Vertical",
+          "labelOrientationY_text": "Horizontal",
+          "fontName_text": "Verdana",
+          "dataLabelOrientation_text": "Diagonal",
+          "scale_text": "Linear"
+        }
+      ],
+      "links": []
+    },
+    {
+      "backgroundType": "color",
+      "backgroundImagePlacement": "full",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both",
+      "name": "Datameer User Group Consumption Report",
+      "order": 2,
+      "id": "757bffa7-a53b-4572-bc21-f8ecff889761",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square round",
+            "imageName": "rect_rounded.svg",
+            "defaultWidth": 76,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Square round",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 30.666666507720947,
+          "top": 0,
+          "width": 1533.777777671814,
+          "height": 764.777777671814,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 2,
+          "id": "ae180573-68e9-49a1-a69e-c54fe636b874",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(248, 247, 247)",
+          "imageName": "rect_rounded.svg",
+          "shadow": true,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": 1,
+          "baseUrl": "/js",
+          "backgroundType_text": "None",
+          "backgroundImage": {
+            "uuid": "f39adae4-78bd-4f5c-b4fb-8401db161688",
+            "id": 75,
+            "path": "/Images/banner_datameer30.jpg",
+            "name": "banner_datameer30",
+            "type": "jpg"
+          },
+          "backgroundColor": "rgb(29, 144, 206)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "defaultUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200,
+            "async": true
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 543.777777671814,
+          "top": 0,
+          "width": 253.77777767181396,
+          "height": 63.777777671813965,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "394254c2-4e73-4bde-839d-bad7b1749da1",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "imageUrl": "/image-upload?path\u003d%2FImages%2FDatameer.png\u0026uuid\u003d1eb0409c-2d39-4a6c-8b20-c48dcfc26529",
+          "imageName": "Datameer.png",
+          "defaultUrl": "/js/infographics/charts/images/image_example.png",
+          "image": {
+            "uuid": "1eb0409c-2d39-4a6c-8b20-c48dcfc26529",
+            "id": 76,
+            "path": "/Images/Datameer.png",
+            "name": "Datameer",
+            "type": "png"
+          }
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 575.777777671814,
+          "top": 63.777777671813965,
+          "width": 259.77777767181396,
+          "height": "33px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 5,
+          "id": "7cdb8d87-922a-4332-a61f-56a936b482e3",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Groups/Users Consumption",
+          "fontSize": "19",
+          "fontName": "Goudy",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "black",
+          "fontName_text": "Goudy"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Pie Chart",
+            "chart": "infographics/charts/pie_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/piechart_inspector",
+            "panelGroup": "chart",
+            "holeRadius": -1
+          },
+          "name": "Pie Chart",
+          "inspectorName": "infographics/views/piechart_inspector",
+          "left": 74,
+          "top": 63.777777671813965,
+          "width": 501.77777767181396,
+          "height": 392.77777767181396,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "4adb17fc-701a-4c81-b812-028c4a681c51",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVXNlckdyb3VwX0hERlNfQ29uc3VtcHRpb24ud2JrO2VkYWEzYjQyLTBjOGYtNDhjZS04OTQ4LTg1OTQ3MDkzOGE0YTswOzA7YmU4N2VmY2EtOTQ4NC00OTJhLWE5ZjktYmViNGY5OTBmMGNj",
+                  "type": "STRING",
+                  "name": "GroupName",
+                  "columnId": "0",
+                  "toolTip": "Resources / Datameer_UserGroup_HDFS_Consumption / Latest Result / GroupStats / GroupName",
+                  "id": "2eebcadc-053b-4098-b296-98ea4436a61e",
+                  "dataSourceSpec": {
+                    "jobId": 17,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_UserGroup_HDFS_Consumption.wbk",
+                    "sheetId": "be87efca-9484-492a-a9f9-beb4f990f0cc",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVXNlckdyb3VwX0hERlNfQ29uc3VtcHRpb24ud2JrO2VkYWEzYjQyLTBjOGYtNDhjZS04OTQ4LTg1OTQ3MDkzOGE0YTswOzA7YmU4N2VmY2EtOTQ4NC00OTJhLWE5ZjktYmViNGY5OTBmMGNj",
+                  "type": "BIG_DECIMAL",
+                  "name": "TotalVolume_GB",
+                  "columnId": "3",
+                  "toolTip": "Resources / Datameer_UserGroup_HDFS_Consumption / Latest Result / GroupStats / TotalVolume_GB",
+                  "id": "2de2a3dc-0adc-477e-9312-686cf3562a44",
+                  "dataSourceSpec": {
+                    "jobId": 17,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_UserGroup_HDFS_Consumption.wbk",
+                    "sheetId": "be87efca-9484-492a-a9f9-beb4f990f0cc",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVXNlckdyb3VwX0hERlNfQ29uc3VtcHRpb24ud2JrO2VkYWEzYjQyLTBjOGYtNDhjZS04OTQ4LTg1OTQ3MDkzOGE0YTswOzA7YmU4N2VmY2EtOTQ4NC00OTJhLWE5ZjktYmViNGY5OTBmMGNj",
+            "dataSourceSpec": {
+              "jobId": 17,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_UserGroup_HDFS_Consumption.wbk",
+              "sheetId": "be87efca-9484-492a-a9f9-beb4f990f0cc",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "marginTop": "50",
+          "marginRight": "70",
+          "marginBottom": "70",
+          "marginLeft": "70",
+          "fillColorList": [
+            "rgb(160, 128, 8)",
+            "rgb(194, 155, 10)",
+            "rgb(238, 189, 12)",
+            "rgb(246, 208, 70)",
+            "rgb(250, 228, 148)",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "white",
+          "labelColor": "black",
+          "colorScheme": "categorical",
+          "isShadowVisible": false,
+          "style": "plain",
+          "showLabels": true,
+          "labelType": "percentage",
+          "fontSize": "10",
+          "fontName": "Verdana",
+          "labelLength": 100,
+          "enableTooltips": true,
+          "labelReduction": 0,
+          "labelLayoutVariant": "side-aligned",
+          "labelGap": 20,
+          "holeRadius": -1,
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "otherSliceSize": 5,
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "subtype": "pie",
+          "labelLayoutVariant_text": "Sides",
+          "labelType_text": "Percentage"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 256,
+          "top": 415,
+          "width": 137.77777767181396,
+          "height": "27px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "edbc3df4-0f43-4557-a4ca-0a87a3b03963",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 5 Groups",
+          "fontSize": "17",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": true,
+          "underline": false,
+          "align": "left",
+          "color": "black",
+          "fontName_text": "Chunk"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Multi bar chart",
+            "variant": "simple",
+            "isBarChart": true,
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "panelGroup": "chart"
+          },
+          "name": "Multi bar chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 852.111111164093,
+          "top": 73.22222232818604,
+          "width": 413.77777767181396,
+          "height": 341.77777767181396,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 7,
+          "id": "0ea5d95c-f0a9-4c13-ae57-2db5eef52bbe",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wNV9Vc2Vyc19Jbmdlc3Rpb24ud2JrO2NiYmY5OThmLTM0N2YtNDY5Mi05ZGEzLWRkNTY0MjFjYjNmMjswOzA7ODhjZjdkODktZTE1Zi00NmRjLThjNzgtYTEyNmNiOTQzYzhj",
+                  "type": "STRING",
+                  "name": "OWNER",
+                  "columnId": "0",
+                  "toolTip": "Resources / Datameer_Top5_Users_Ingestion / Latest Result / Top5_IngestionByVolumeinGB / OWNER",
+                  "id": "afdf8ab6-4e33-455f-83dc-2ddb77b6a3f6",
+                  "dataSourceSpec": {
+                    "jobId": 16,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top5_Users_Ingestion.wbk",
+                    "sheetId": "88cf7d89-e15f-46dc-8c78-a126cb943c8c",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wNV9Vc2Vyc19Jbmdlc3Rpb24ud2JrO2NiYmY5OThmLTM0N2YtNDY5Mi05ZGEzLWRkNTY0MjFjYjNmMjswOzA7ODhjZjdkODktZTE1Zi00NmRjLThjNzgtYTEyNmNiOTQzYzhj",
+                  "type": "BIG_INTEGER",
+                  "name": "VOLUME_in_GB",
+                  "columnId": "1",
+                  "toolTip": "Resources / Datameer_Top5_Users_Ingestion / Latest Result / Top5_IngestionByVolumeinGB / VOLUME_in_GB",
+                  "id": "b274c520-d83d-48a2-a39d-e8746a626a41",
+                  "dataSourceSpec": {
+                    "jobId": 16,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Top5_Users_Ingestion.wbk",
+                    "sheetId": "88cf7d89-e15f-46dc-8c78-a126cb943c8c",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "category": []
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVG9wNV9Vc2Vyc19Jbmdlc3Rpb24ud2JrO2NiYmY5OThmLTM0N2YtNDY5Mi05ZGEzLWRkNTY0MjFjYjNmMjswOzA7ODhjZjdkODktZTE1Zi00NmRjLThjNzgtYTEyNmNiOTQzYzhj",
+            "dataSourceSpec": {
+              "jobId": 16,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_Top5_Users_Ingestion.wbk",
+              "sheetId": "88cf7d89-e15f-46dc-8c78-a126cb943c8c",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "margin": 20,
+          "offset": 10,
+          "marginTop": 20,
+          "marginRight": 20,
+          "marginBottom": 70,
+          "marginLeft": "50",
+          "scale": "linear",
+          "isGridVisible": false,
+          "isVisibleX": true,
+          "isVisibleY": true,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "isShadowVisible": false,
+          "isStyleVisible": true,
+          "colorScheme": "categorical",
+          "fillColorList": [
+            "rgb(203, 173, 21)"
+          ],
+          "strokeColor": "white",
+          "labelColor": "black",
+          "labelLength": 100,
+          "labelOrientationX": "diagonal",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "variant": "simple",
+          "offsetVariant": "zero",
+          "groupGapInPercent": 10,
+          "fontSize": 10,
+          "fontName": "Verdana",
+          "isBarChart": true,
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showPoints": true,
+          "showAreas": false,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "transpose": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": true,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1,
+          "ignoreEmpties": true,
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "gridToBack": true,
+          "subtype": "bar"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 990.111111164093,
+          "top": 382.388888835907,
+          "width": 137.77777767181396,
+          "height": "27px",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "b0f54689-0d88-4fa0-bcf5-0b6a08f2ef10",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Top 5 Users",
+          "fontSize": "17",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": true,
+          "underline": false,
+          "align": "left",
+          "color": "black",
+          "fontName_text": "Chunk"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "New Table",
+            "displayName": "Table",
+            "chart": "infographics/charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "New Table",
+          "displayName": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 489.66666650772095,
+          "top": 415,
+          "width": 615.777777671814,
+          "height": 277.77777767181396,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 9,
+          "id": "7a60ad16-a07d-47d8-9252-36249fe4a9df",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVXNlckdyb3VwX0hERlNfQ29uc3VtcHRpb24ud2JrO2VkYWEzYjQyLTBjOGYtNDhjZS04OTQ4LTg1OTQ3MDkzOGE0YTswOzA7YmU4N2VmY2EtOTQ4NC00OTJhLWE5ZjktYmViNGY5OTBmMGNj",
+                  "type": "STRING",
+                  "name": "GroupName",
+                  "columnId": "0",
+                  "toolTip": "Resources / Datameer_UserGroup_HDFS_Consumption / Latest Result / GroupStats / GroupName",
+                  "id": "38eca258-df90-4da3-8c6a-da2d29c68790",
+                  "dataSourceSpec": {
+                    "jobId": 17,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_UserGroup_HDFS_Consumption.wbk",
+                    "sheetId": "be87efca-9484-492a-a9f9-beb4f990f0cc",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVXNlckdyb3VwX0hERlNfQ29uc3VtcHRpb24ud2JrO2VkYWEzYjQyLTBjOGYtNDhjZS04OTQ4LTg1OTQ3MDkzOGE0YTswOzA7YmU4N2VmY2EtOTQ4NC00OTJhLWE5ZjktYmViNGY5OTBmMGNj",
+                  "type": "INTEGER",
+                  "name": "NumberofUsers",
+                  "columnId": "1",
+                  "toolTip": "Resources / Datameer_UserGroup_HDFS_Consumption / Latest Result / GroupStats / NumberofUsers",
+                  "id": "0e138cd2-b195-48dc-8974-666cab2c7648",
+                  "dataSourceSpec": {
+                    "jobId": 17,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_UserGroup_HDFS_Consumption.wbk",
+                    "sheetId": "be87efca-9484-492a-a9f9-beb4f990f0cc",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVXNlckdyb3VwX0hERlNfQ29uc3VtcHRpb24ud2JrO2VkYWEzYjQyLTBjOGYtNDhjZS04OTQ4LTg1OTQ3MDkzOGE0YTswOzA7YmU4N2VmY2EtOTQ4NC00OTJhLWE5ZjktYmViNGY5OTBmMGNj",
+                  "type": "INTEGER",
+                  "name": "WorkbookCounts",
+                  "columnId": "2",
+                  "toolTip": "Resources / Datameer_UserGroup_HDFS_Consumption / Latest Result / GroupStats / WorkbookCounts",
+                  "id": "5aeb4557-1b7c-4c62-9b07-6e9d0d302017",
+                  "dataSourceSpec": {
+                    "jobId": 17,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_UserGroup_HDFS_Consumption.wbk",
+                    "sheetId": "be87efca-9484-492a-a9f9-beb4f990f0cc",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVXNlckdyb3VwX0hERlNfQ29uc3VtcHRpb24ud2JrO2VkYWEzYjQyLTBjOGYtNDhjZS04OTQ4LTg1OTQ3MDkzOGE0YTswOzA7YmU4N2VmY2EtOTQ4NC00OTJhLWE5ZjktYmViNGY5OTBmMGNj",
+                  "type": "BIG_DECIMAL",
+                  "name": "TotalVolume_GB",
+                  "columnId": "3",
+                  "toolTip": "Resources / Datameer_UserGroup_HDFS_Consumption / Latest Result / GroupStats / TotalVolume_GB",
+                  "id": "a3e72d2d-db9e-4c2e-9793-11fc3a49d801",
+                  "dataSourceSpec": {
+                    "jobId": 17,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_UserGroup_HDFS_Consumption.wbk",
+                    "sheetId": "be87efca-9484-492a-a9f9-beb4f990f0cc",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVXNlckdyb3VwX0hERlNfQ29uc3VtcHRpb24ud2JrO2VkYWEzYjQyLTBjOGYtNDhjZS04OTQ4LTg1OTQ3MDkzOGE0YTswOzA7YmU4N2VmY2EtOTQ4NC00OTJhLWE5ZjktYmViNGY5OTBmMGNj",
+            "dataSourceSpec": {
+              "jobId": 17,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_UserGroup_HDFS_Consumption.wbk",
+              "sheetId": "be87efca-9484-492a-a9f9-beb4f990f0cc",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "Verdana",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(134, 115, 9)",
+          "cellBgColor": "rgb(244, 188, 41)",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "black",
+          "headerFontColor": "black",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "cellW": 70,
+          "cellH": 40,
+          "colWidths": [
+            99.8853759765625,
+            111,
+            161.9896240234375,
+            171.9896240234375
+          ],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A",
+          "oddRowBgColor": "rgb(253, 240, 206)"
+        }
+      ],
+      "links": []
+    },
+    {
+      "backgroundType": "color",
+      "backgroundImagePlacement": "full",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both",
+      "name": "Datameer vs Uncompressed",
+      "order": 3,
+      "id": "f0fcc373-3e63-4ea0-b879-d1beeb240067",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square round",
+            "imageName": "rect_rounded.svg",
+            "defaultWidth": 76,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "async": true
+          },
+          "name": "Square round",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 30.666666507720947,
+          "top": 0,
+          "width": 1533.777777671814,
+          "height": 764.777777671814,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 2,
+          "id": "8f95289a-d1a7-462d-b694-908a329e53db",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(248, 247, 247)",
+          "imageName": "rect_rounded.svg",
+          "shadow": true,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": 1,
+          "baseUrl": "/js",
+          "backgroundType_text": "None",
+          "backgroundImage": {
+            "uuid": "f39adae4-78bd-4f5c-b4fb-8401db161688",
+            "id": 75,
+            "path": "/Images/banner_datameer30.jpg",
+            "name": "banner_datameer30",
+            "type": "jpg"
+          },
+          "backgroundColor": "rgb(29, 144, 206)"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Image",
+            "chart": "infographics/charts/image",
+            "inspector": "infographics/views/inspectors/image_inspector",
+            "panelGroup": "other",
+            "defaultUrl": "/js/infographics/charts/images/image_example.png",
+            "imageName": "DefaultImage.png",
+            "defaultWidth": 199,
+            "defaultHeight": 200,
+            "async": true
+          },
+          "name": "Image",
+          "inspectorName": "infographics/views/inspectors/image_inspector",
+          "left": 543.777777671814,
+          "top": 0,
+          "width": 253.77777767181396,
+          "height": 63.777777671813965,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "0ced5734-d60e-4ea9-8710-47b6c7686c12",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "imageUrl": "/image-upload?path\u003d%2FImages%2FDatameer.png\u0026uuid\u003d1eb0409c-2d39-4a6c-8b20-c48dcfc26529",
+          "imageName": "Datameer.png",
+          "defaultUrl": "/js/infographics/charts/images/image_example.png",
+          "image": {
+            "uuid": "1eb0409c-2d39-4a6c-8b20-c48dcfc26529",
+            "id": 76,
+            "path": "/Images/Datameer.png",
+            "name": "Datameer",
+            "type": "png"
+          }
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 473.66666650772095,
+          "top": 12.388888835906982,
+          "width": 394,
+          "height": 109,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 5,
+          "id": "acc7fac0-6303-455a-904d-dae600a1b3d2",
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Datameer HDFS Storage with Compression\n                  vs.\nStorage without any Compression",
+          "fontSize": "19",
+          "fontName": "Goudy",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "black",
+          "fontName_text": "Goudy"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Grouped Bar Chart",
+            "variant": "grouped",
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "panelGroup": "chart"
+          },
+          "name": "Grouped Bar Chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 233.38888883590698,
+          "top": 346,
+          "width": 843.777777671814,
+          "height": 374.77777767181396,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "0be0e11c-c275-4639-b489-3aa2e093ef33",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              },
+              "category": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "STRING",
+                  "DATE"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+                  "type": "STRING",
+                  "name": "WorkbookName",
+                  "columnId": "2",
+                  "toolTip": "Resources / Datameer_Volume_Consumption / Latest Result / Top20_Wbk_Sheet_Storage / WorkbookName",
+                  "id": "a57f3690-e7d0-4b6c-ae56-8e9f6adab345",
+                  "dataSourceSpec": {
+                    "jobId": 7,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+                    "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+                  "type": "INTEGER",
+                  "name": "HDFS_Stored_in_GB",
+                  "columnId": "4",
+                  "toolTip": "Resources / Datameer_Volume_Consumption / Latest Result / Top20_Wbk_Sheet_Storage / HDFS_Stored_in_GB",
+                  "id": "ef682ed7-31fa-4cf9-b422-5673b7482379",
+                  "dataSourceSpec": {
+                    "jobId": 7,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+                    "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+                  "type": "INTEGER",
+                  "name": "Uncompressed_Size_in_GB",
+                  "columnId": "5",
+                  "toolTip": "Resources / Datameer_Volume_Consumption / Latest Result / Top20_Wbk_Sheet_Storage / Uncompressed_Size_in_GB",
+                  "id": "2494812b-1850-4cf2-87ba-e454d6cf5a00",
+                  "dataSourceSpec": {
+                    "jobId": 7,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+                    "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+                    "dataType": "latest"
+                  }
+                }
+              ],
+              "category": []
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+            "dataSourceSpec": {
+              "jobId": 7,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+              "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "margin": 20,
+          "offset": 10,
+          "marginTop": 20,
+          "marginRight": "50",
+          "marginBottom": "150",
+          "marginLeft": "50",
+          "scale": "linear",
+          "isGridVisible": false,
+          "isVisibleX": true,
+          "isVisibleY": true,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "isShadowVisible": false,
+          "isStyleVisible": true,
+          "colorScheme": "categorical",
+          "fillColorList": [
+            "rgb(22, 136, 192)",
+            "rgb(174, 16, 3)"
+          ],
+          "strokeColor": "white",
+          "labelColor": "black",
+          "labelLength": 100,
+          "labelOrientationX": "diagonal",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "variant": "stacked",
+          "offsetVariant": "zero",
+          "groupGapInPercent": 10,
+          "fontSize": "11",
+          "fontName": "Verdana",
+          "isBarChart": false,
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showPoints": true,
+          "showAreas": true,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "transpose": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": false,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1,
+          "ignoreEmpties": true,
+          "drillLevelFilters": [],
+          "drillLevelIndex": 0,
+          "groupAggregation": "default",
+          "gridToBack": true,
+          "subtype": "area_line",
+          "dataLabelOrientation_text": "Horizontal",
+          "labelOrientationX_text": "Diagonal",
+          "scale_text": "Linear",
+          "colorScheme_text": "Categorical",
+          "subtype_text": "Area Chart"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "New Table",
+            "displayName": "Table",
+            "chart": "infographics/charts/stylable_table",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "inspector": "infographics/views/stylable_table_inspector",
+            "panelGroup": "other"
+          },
+          "name": "New Table",
+          "displayName": "Table",
+          "inspectorName": "infographics/views/stylable_table_inspector",
+          "left": 264.16666650772095,
+          "top": 121.38888883590698,
+          "width": 813,
+          "height": 261,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "096ff076-4d33-45d8-9e53-6a50b155802c",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL",
+                  "STRING",
+                  "DATE",
+                  "BOOLEAN"
+                ],
+                "dimensions": [
+                  1,
+                  100
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "data": [
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+                  "type": "STRING",
+                  "name": "WorkbookName",
+                  "columnId": "2",
+                  "toolTip": "Resources / Datameer_Volume_Consumption / Latest Result / Top20_Wbk_Sheet_Storage / WorkbookName",
+                  "id": "4b171858-ca92-4930-a02c-d81c62c7d521",
+                  "dataSourceSpec": {
+                    "jobId": 7,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+                    "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+                  "type": "INTEGER",
+                  "name": "HDFS_Stored_in_GB",
+                  "columnId": "4",
+                  "toolTip": "Resources / Datameer_Volume_Consumption / Latest Result / Top20_Wbk_Sheet_Storage / HDFS_Stored_in_GB",
+                  "id": "69fd2aaf-8037-4027-8191-7b9da458cb29",
+                  "dataSourceSpec": {
+                    "jobId": 7,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+                    "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+                  "type": "INTEGER",
+                  "name": "Uncompressed_Size_in_GB",
+                  "columnId": "5",
+                  "toolTip": "Resources / Datameer_Volume_Consumption / Latest Result / Top20_Wbk_Sheet_Storage / Uncompressed_Size_in_GB",
+                  "id": "00ca4e20-18bf-463e-9f03-d71499ce92c1",
+                  "dataSourceSpec": {
+                    "jobId": 7,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+                    "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+                    "dataType": "latest"
+                  }
+                },
+                {
+                  "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+                  "type": "INTEGER",
+                  "name": "PercentReduction",
+                  "columnId": "7",
+                  "toolTip": "Resources / Datameer_Volume_Consumption / Latest Result / Top20_Wbk_Sheet_Storage / PercentReduction",
+                  "id": "5ef0c8d6-906e-43e2-8e12-604c31029849",
+                  "dataSourceSpec": {
+                    "jobId": 7,
+                    "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+                    "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+                    "dataType": "latest"
+                  }
+                }
+              ]
+            },
+            "dataSourceId": "V0JLOy9EYXRhbWVlciBDb25zdW1wdGlvbiBTdGF0cy9SZXNvdXJjZXMvRGF0YW1lZXJfVm9sdW1lX0NvbnN1bXB0aW9uLndiazs3OWJiNjJiYy0zNzk1LTQ5YjQtYjg5Mi0yOTgyMjhhNDViZDg7MDswOzhjNzFmMzgyLTZjYzgtNDYxYi05OWFkLWZmNzI4YmM1NjQ1ZQ",
+            "dataSourceSpec": {
+              "jobId": 7,
+              "path": "/Datameer Consumption Stats/Resources/Datameer_Volume_Consumption.wbk",
+              "sheetId": "8c71f382-6cc8-461b-99ad-ff728bc5645e",
+              "dataType": "latest"
+            }
+          },
+          "showFrame": false,
+          "frameColor": "#ffffff",
+          "opacity": 1,
+          "marginTop": 10,
+          "marginRight": 10,
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "isGridVisible": true,
+          "isFrameVisible": true,
+          "prefix": "",
+          "suffix": "",
+          "fontSize": 12,
+          "fontName": "Verdana",
+          "enableTooltips": true,
+          "hasThousandSeparator": true,
+          "headerBgColor": "rgb(22, 136, 192)",
+          "cellBgColor": "rgb(127, 203, 240)",
+          "defaultStrokeColor": "white",
+          "frontierStrokeColor": "white",
+          "frameStrokeColor": "gray",
+          "cellFontColor": "black",
+          "headerFontColor": "black",
+          "cellBorderRadius": 5,
+          "cellStrokeSize": 1,
+          "cellStrokeStyle": "solid",
+          "frontierStrokeSize": 1,
+          "frameStrokeSize": 0,
+          "oddRowBgColor": "rgb(182, 225, 247)",
+          "cellW": 70,
+          "cellH": 40,
+          "colWidths": [
+            335.609375,
+            140.78125,
+            175,
+            124
+          ],
+          "textAlign": "center",
+          "cellPadding": 3,
+          "verticalAlign": "center",
+          "allowHtml": false,
+          "datePattern": "MMM DD, YYYY hh:mm:ss A"
+        }
+      ],
+      "links": []
+    }
+  ]
+}

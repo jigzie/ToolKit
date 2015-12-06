@@ -1,0 +1,31 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataBaseConnection",
+  "file": {
+    "uuid": "1412c847-b9a7-4686-84c7-fd5caebd9a20",
+    "path": "/Data/Connections/Dap4120.dst",
+    "description": "Dap4120 Database Connection",
+    "name": "Dap4120"
+  },
+  "typeId": "das.JdbcDataStoreType",
+  "properties": {
+    "user_name": [
+      "dap"
+    ],
+    "password": [
+      "SECURE:0:wFQhzXXJmjMFnLTFKZ2d9A\u003d\u003d"
+    ],
+    "key.connectionUrl": [
+      "jdbc:mysql://localhost:3306/dap4120?tinyInt1isBit\u003dfalse"
+    ],
+    "dataStoreTemplate": [
+      "false"
+    ],
+    "dataStoreUsage": [
+      "IMPORT_EXPORT"
+    ]
+  },
+  "dbType": {
+    "name": "MySQL"
+  }
+}

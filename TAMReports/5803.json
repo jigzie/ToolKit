@@ -1,0 +1,853 @@
+{
+  "version": "4.5.16",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "2fbf7667-4f63-45b9-8b6d-cfa7fe0e559a",
+    "path": "/Datameer/Services/TAM Reports/DatameerMaster.wbk",
+    "description": "",
+    "name": "DatameerMaster"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "schedule": "0 4 * * 1-5",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "SFDC_Accounts",
+      "sheetId": "162cba22-14d7-4f33-b8f1-2a745cf69ebe",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "filterSourceSheet": "SFDC_Accounts",
+      "filterTargetSheet": "SFDC_Accounts",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "CustomerSuccessMgr",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "Name",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "Type",
+          "filterExpression": "CONTAINS",
+          "value": "Active",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "datasource": {
+        "path": "/Datameer/Services/TAM Reports/SFDC Accounts.imp",
+        "uuid": "b7934e6b-83a1-44e9-9c25-f48b41824549"
+      },
+      "columnStyles": [
+        {
+          "columnId": "4976e082fb3222c89eff45ef0afc67aa",
+          "width": 205,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "Id",
+          "width": 204,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "Name",
+          "width": 250,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Zendesk_Tickets",
+      "sheetId": "14afacab-0ce6-4e99-8698-65e99439bdab",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "datasource": {
+        "path": "/Datameer/Services/TAM Reports/Zendesk Tickets.imp",
+        "uuid": "1fe11e6a-971f-408c-94d0-4b2f4a831c55"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Zendesk_Organizations",
+      "sheetId": "7268dfd4-f552-4c23-a711-8ea39cce0f3e",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "sortSourceSheet": "Zendesk_Organizations",
+      "sortTargetSheet": "Zendesk_Organizations",
+      "sortKeys": [
+        {
+          "column": "name",
+          "sortOrder": "ASC"
+        }
+      ],
+      "datasource": {
+        "path": "/Datameer/Services/TAM Reports/Zendesk Organizations.imp",
+        "uuid": "3ceddda9-1652-449a-ab42-9310d1e9910b"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "ZendeskTickets",
+      "sheetId": "159de774-df89-4ebc-893e-6c362666d12a",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "Zendesk_Tickets",
+            "sheet2": "Zendesk_Organizations",
+            "joinColumns1": [
+              "organization_id"
+            ],
+            "joinColumns2": [
+              "id"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "Zendesk_Tickets": [
+            "id",
+            "created_at",
+            "type",
+            "subject",
+            "description",
+            "priority",
+            "status",
+            "requester_id",
+            "submitter_id",
+            "assignee_id",
+            "satisfaction_rating_score",
+            "tags",
+            "custom_fields",
+            "via_source_from_name"
+          ],
+          "Zendesk_Organizations": [
+            "name",
+            "domain_names"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "6bc998cd997be1cffa05a151a7a6c23e",
+          "width": 258,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Zen_SFDC_Join",
+      "sheetId": "9384c50a-89bc-486c-909e-230f80f6b0b9",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "SFDC_Accounts",
+            "sheet2": "ZendeskTickets",
+            "joinColumns1": [
+              "Name"
+            ],
+            "joinColumns2": [
+              "Zendesk_Organizations.name"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "ZendeskTickets": [
+            "Zendesk_Tickets.id",
+            "Zendesk_Tickets.created_at",
+            "Zendesk_Tickets.type",
+            "Zendesk_Tickets.subject",
+            "Zendesk_Tickets.description",
+            "Zendesk_Tickets.priority",
+            "Zendesk_Tickets.status",
+            "Zendesk_Tickets.requester_id",
+            "Zendesk_Tickets.submitter_id",
+            "Zendesk_Tickets.assignee_id",
+            "Zendesk_Tickets.tags",
+            "Zendesk_Tickets.custom_fields",
+            "Zendesk_Tickets.satisfaction_rating_score",
+            "Zendesk_Tickets.via_source_from_name",
+            "Zendesk_Organizations.name",
+            "Zendesk_Organizations.domain_names"
+          ],
+          "SFDC_Accounts": [
+            "Name",
+            "Type",
+            "CustomerSuccessMgr"
+          ]
+        }
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "ZendeskStatus",
+      "sheetId": "12362314-3bf1-4357-a16f-4ab2eb09b2b3",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "sortSourceSheet": "ZendeskStatus",
+      "sortTargetSheet": "ZendeskStatus",
+      "sortKeys": [
+        {
+          "column": "TAM",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "Customer",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "ZendeskTickets_id",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "TAM",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Zen_SFDC_Join!SFDC_Accounts.CustomerSuccessMgr)"
+        },
+        {
+          "columnName": "Customer",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#Zen_SFDC_Join!SFDC_Accounts.Name)"
+        },
+        {
+          "columnName": "ZendeskTickets_id",
+          "columnId": "4",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPBY(#Zen_SFDC_Join!ZendeskTickets.id)"
+        },
+        {
+          "columnName": "Issue",
+          "columnId": "2",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPBY(#Zen_SFDC_Join!ZendeskTickets.subject)"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "5",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPBY(#Zen_SFDC_Join!ZendeskTickets.status)"
+        },
+        {
+          "columnName": "CreateDate",
+          "columnId": "6",
+          "columnIndex": 5,
+          "formulaString": "\u003dGROUPBY(#Zen_SFDC_Join!ZendeskTickets.created_at)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "TAM",
+          "width": 161,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Customer",
+          "width": 168,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Issue",
+          "width": 500,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "ZendeskTickets_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "CreateDate",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    },
+    {
+      "name": "Jira_ALL_Tickets",
+      "sheetId": "7f05f1cd-0895-4b81-8fe6-aab42aa3d529",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "filterSourceSheet": "Jira_ALL_Tickets",
+      "filterTargetSheet": "Jira_ALL_Tickets",
+      "connector": "OR",
+      "filterArguments": [
+        {
+          "column": "Custom_ZendeskID",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "Custom_Customer",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "datasource": {
+        "path": "/Datameer/Services/TAM Reports/Jira ALL Tickets.imp",
+        "uuid": "1505e201-7754-45b7-a0e6-af933c5e494e"
+      },
+      "columnStyles": [
+        {
+          "columnId": "Summary",
+          "width": 257,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "CustJIRAs",
+      "sheetId": "934e9d9b-bdf0-4ae4-a120-530c88b7b84b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "CustJIRAs",
+      "filterTargetSheet": "CustJIRAs",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "CustName",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "CustJIRAs",
+      "sortTargetSheet": "CustJIRAs",
+      "sortKeys": [
+        {
+          "column": "CustName",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "Status",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "CustName",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dREPLACEALL(EXPAND(JSONTOLIST(#Jira_ALL_Tickets!Custom_Customer));\"\\\\\u0026amp;\";\"\\\\\u0026\")"
+        },
+        {
+          "columnName": "Key",
+          "columnId": "11",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Jira_ALL_Tickets!Key"
+        },
+        {
+          "columnName": "Zendesk",
+          "columnId": "7",
+          "columnIndex": 2,
+          "formulaString": "\u003dINT(#Jira_ALL_Tickets!Custom_ZendeskID)"
+        },
+        {
+          "columnName": "Title",
+          "columnId": "1",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Jira_ALL_Tickets!Summary"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "2",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Jira_ALL_Tickets!IssueType"
+        },
+        {
+          "columnName": "Priority",
+          "columnId": "3",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Jira_ALL_Tickets!Priority"
+        },
+        {
+          "columnName": "Status",
+          "columnId": "4",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Jira_ALL_Tickets!Status"
+        },
+        {
+          "columnName": "CreatedAt",
+          "columnId": "12",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Jira_ALL_Tickets!CreatedAt"
+        },
+        {
+          "columnName": "AffectedVersion",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003dJSONTOLIST(#Jira_ALL_Tickets!Versions)"
+        },
+        {
+          "columnName": "FixVersions",
+          "columnId": "5",
+          "columnIndex": 9,
+          "formulaString": "\u003dJSONTOLIST(#Jira_ALL_Tickets!FixVersions)"
+        },
+        {
+          "columnName": "ResolvedDate",
+          "columnId": "6",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Jira_ALL_Tickets!ResolutionDate"
+        },
+        {
+          "columnName": "Resolution",
+          "columnId": "9",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Jira_ALL_Tickets!Resolution"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "CustName",
+          "width": 126,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Title",
+          "width": 198,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Priority",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Status",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "FixVersions",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "ResolvedDate",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Zendesk",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "AffectedVersion",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Resolution",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "Key",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CreatedAt",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "ALLData",
+      "sheetId": "d547d5dc-f707-49e7-b7ed-6fc5c5d11779",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "filterSourceSheet": "ALLData",
+      "filterTargetSheet": "ALLData",
+      "connector": "OR",
+      "filterArguments": [
+        {
+          "column": "CustJIRAs.CustName",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "Zen_SFDC_Join.name",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "FULL_OUTER",
+            "sheet1": "CustJIRAs",
+            "sheet2": "Zen_SFDC_Join",
+            "joinColumns1": [
+              "CustName",
+              "Zendesk"
+            ],
+            "joinColumns2": [
+              "SFDC_Accounts.Name",
+              "ZendeskTickets.id"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "CustJIRAs": [
+            "CustName",
+            "Key",
+            "Zendesk",
+            "Title",
+            "Type",
+            "Priority",
+            "Status",
+            "CreatedAt",
+            "AffectedVersion",
+            "FixVersions",
+            "ResolvedDate",
+            "Resolution"
+          ],
+          "Zen_SFDC_Join": [
+            "ZendeskTickets.name",
+            "SFDC_Accounts.Type",
+            "SFDC_Accounts.CustomerSuccessMgr",
+            "ZendeskTickets.created_at",
+            "ZendeskTickets.id",
+            "ZendeskTickets.type",
+            "ZendeskTickets.subject",
+            "ZendeskTickets.description",
+            "ZendeskTickets.priority",
+            "ZendeskTickets.status",
+            "ZendeskTickets.requester_id",
+            "ZendeskTickets.submitter_id",
+            "ZendeskTickets.assignee_id",
+            "ZendeskTickets.tags",
+            "ZendeskTickets.custom_fields",
+            "ZendeskTickets.satisfaction_rating_score",
+            "ZendeskTickets.via_source_from_name",
+            "ZendeskTickets.domain_names"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "d66feb69dfc2ceb925dab2fde39818f5",
+          "width": 190,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "87cb0efba9efd37f676f86a4551d8590",
+          "width": 153,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "bce00e0d988d809456e1727b33db8625",
+          "width": 189,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "46ff0ecd1d12e23b179bd12800b4ba58",
+          "width": 185,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "EnvironmentsSalesforce",
+      "sheetId": "895d4a0c-07bc-4f68-94b5-1d3fef3b6d2a",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "datasource": {
+        "path": "/Datameer/Services/TAM Reports/EnvironmentsSalesforce.lnk",
+        "uuid": "5d80761c-b782-4e6a-a40e-341e7e288247"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "SFDC_Environments",
+      "sheetId": "1d69abc0-adef-4121-bc29-834a0ad27d3d",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "SFDC_Accounts",
+            "sheet2": "EnvironmentsSalesforce",
+            "joinColumns1": [
+              "Id"
+            ],
+            "joinColumns2": [
+              "Account"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "SFDC_Accounts": [
+            "Name",
+            "Type",
+            "CustomerSuccessMgr"
+          ],
+          "EnvironmentsSalesforce": [
+            "Name",
+            "Cluster_Capacity_TB",
+            "Datameer_Cluster_Use_TB",
+            "Datameer_Users_Accounts",
+            "Datameer_Version",
+            "Data_Nodes",
+            "Hadoop_Distribution",
+            "Hadoop_Version",
+            "Licence_Volume",
+            "Mappers",
+            "MapReduce_Version",
+            "Paying_Hadoop_Support",
+            "Reducers",
+            "Remaining_Space_TB",
+            "License_Key_Expiration"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "945297877c451c6454d7ff4f61a4faf8",
+          "width": 275,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "SFDC_UseCases",
+      "sheetId": "4c76f949-3647-4dfd-853b-26048c17b3ea",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "datasource": {
+        "path": "/Datameer/Services/TAM Reports/SFDC UseCases.imp",
+        "uuid": "90821094-ce19-4433-a7d3-838528f22777"
+      },
+      "columnStyles": [
+        {
+          "columnId": "Account__c",
+          "width": 202,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "attributes_type",
+          "width": 236,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "UseCases",
+      "sheetId": "a339aacd-cd69-478b-a5c8-9f9f7572e684",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "filterSourceSheet": "UseCases",
+      "filterTargetSheet": "UseCases",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "SFDC_Accounts.Name",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "SFDC_UseCases",
+            "sheet2": "SFDC_Accounts",
+            "joinColumns1": [
+              "Account__c"
+            ],
+            "joinColumns2": [
+              "Id"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "SFDC_UseCases": [
+            "Name",
+            "AddCategory__c",
+            "TypeOfData__c",
+            "PSCategory__c",
+            "SubCategory__c",
+            "UseCaseCategory__c",
+            "Use_Case_Description__c"
+          ],
+          "SFDC_Accounts": [
+            "Name"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "fb33f43158bb9932cf79905f420fd54d",
+          "width": 278,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "33a54bbec26842422ae9374bc700ea84",
+          "width": 254,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4010b18f4aa8007c2a53568b90d3372d",
+          "width": 228,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "ActiveAccounts",
+      "sheetId": "7c843929-2c01-496c-89cc-d5a28e02f760",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "ActiveAccounts",
+      "filterTargetSheet": "ActiveAccounts",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Type",
+          "filterExpression": "CONTAINS",
+          "value": "Active",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "Type",
+          "filterExpression": "NOT_BLANK",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Name",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#SFDC_Accounts!Name"
+        },
+        {
+          "columnName": "CustomerSuccessMgr",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003d#SFDC_Accounts!CustomerSuccessMgr"
+        },
+        {
+          "columnName": "Type",
+          "columnId": "1",
+          "columnIndex": 2,
+          "formulaString": "\u003d#SFDC_Accounts!Type"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Name",
+          "width": 250,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "CustomerSuccessMgr",
+          "width": 205,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

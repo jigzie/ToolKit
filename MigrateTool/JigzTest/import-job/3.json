@@ -1,0 +1,310 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "444d71f0-689e-4572-ab46-a1d316ca0618",
+    "path": "/Data/FileUploads/Temp.upl",
+    "description": "Temperature Data",
+    "name": "Temp"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "5ff00900-2274-4825-9a96-0fda1a613cf3"
+    ],
+    "file": [
+      "/usr/local/Datameer/Datameer-4.1.2-cdh4.6-mr2/das-data/fileuploads/3/MacroEconomics_Factors.csv"
+    ],
+    "fileType": [
+      "CSV"
+    ],
+    "collectAdditionalFields": [
+      "false"
+    ],
+    "csv.max-lines-per-record": [
+      "1"
+    ],
+    "strictQuotes": [
+      "false"
+    ],
+    "quoteCharacter": [
+      "\""
+    ],
+    "escapeCharacter": [
+      ""
+    ],
+    "recordSampleSize": [
+      "1000"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "detectColumnDefinition": [
+      "SELECT_PARSE_AUTO"
+    ],
+    "data.includes.header": [
+      "true"
+    ],
+    "delimiter": [
+      ","
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "TextFileFormat": [
+      "TEXT"
+    ]
+  },
+  "dataStore": {
+    "path": "/.system/FileUploadDataStore.dst",
+    "uuid": "ea6451f0-1296-4ccd-a010-533cb9e06812"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 95,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Country",
+      "origin": "0",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 96,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Subject_Descriptor",
+      "origin": "1",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 97,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Units",
+      "origin": "2",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 98,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Scale",
+      "origin": "3",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 99,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2002",
+      "origin": "4",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 100,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2003",
+      "origin": "5",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 101,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2004",
+      "origin": "6",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 102,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2005",
+      "origin": "7",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 103,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2006",
+      "origin": "8",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 104,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2007",
+      "origin": "9",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 105,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2008",
+      "origin": "10",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 106,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2009",
+      "origin": "11",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 107,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2010",
+      "origin": "12",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 108,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2011",
+      "origin": "13",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 109,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2012",
+      "origin": "14",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 110,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2013",
+      "origin": "15",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 111,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2014",
+      "origin": "16",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 112,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2015",
+      "origin": "17",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 113,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2016",
+      "origin": "18",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 114,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "_2017",
+      "origin": "19",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 115,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "Estimates_Start_After",
+      "origin": "20",
+      "valueType": "{\"type\":\"FLOAT\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 116,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFileName",
+      "origin": "fileInfo.fileName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 117,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasFilePath",
+      "origin": "fileInfo.filePath",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 118,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dasLastModified",
+      "origin": "fileInfo.lastModified",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

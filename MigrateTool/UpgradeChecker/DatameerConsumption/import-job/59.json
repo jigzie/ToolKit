@@ -1,0 +1,222 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "3fa4f325-882f-4a52-a9b9-f522aa28ab21",
+    "path": "/Users/admin/Applications/Facebook Social Stats/Resources/MyPosts.imp",
+    "description": "",
+    "name": "MyPosts"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "277993dc-6bb5-4e44-ac85-dcee7205e482"
+    ],
+    "recordSampleSize": [
+      "500"
+    ],
+    "filter.page.does.split.creation": [
+      "false"
+    ],
+    "facebook.query": [
+      "SELECT post_id, actor_id, target_id, message, comments, type, place, likes, impressions, created_time FROM stream WHERE source_id \u003d me() AND created_time \u003e 1325394000 LIMIT 5000"
+    ],
+    "incrementalMode": [
+      "false"
+    ],
+    "histogram.generation": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Facebook Social Stats/Resources/Facebook.dst",
+    "uuid": "0aa0f660-27c3-487e-a9e4-7d8aa82b94c5"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 161,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "post_id",
+      "origin": "post_id",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 162,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "actor_id",
+      "origin": "actor_id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 163,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "target_id",
+      "origin": "target_id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 164,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "message",
+      "origin": "message",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 165,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "comments_can_remove",
+      "origin": "comments.can_remove",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 166,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "comments_can_post",
+      "origin": "comments.can_post",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 167,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "comments_count",
+      "origin": "comments.count",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 168,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "comments_comment_list",
+      "origin": "comments.comment_list",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 169,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "type",
+      "origin": "type",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 170,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "place",
+      "origin": "place",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 171,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "likes_sample",
+      "origin": "likes.sample",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 172,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "likes_friends",
+      "origin": "likes.friends",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 173,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "likes_can_like",
+      "origin": "likes.can_like",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 174,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "impressions",
+      "origin": "impressions",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 175,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "created_time",
+      "origin": "created_time",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 176,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "likes_href",
+      "origin": "likes.href",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 177,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "likes_count",
+      "origin": "likes.count",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 178,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "likes_user_likes",
+      "origin": "likes.user_likes",
+      "valueType": "{\"type\":\"BOOLEAN\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

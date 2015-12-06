@@ -1,0 +1,31 @@
+{
+  "version": "2.1.4.5",
+  "className": "datameer.dap.common.entity.DataBaseConnection",
+  "file": {
+    "uuid": "269db53d-e5ef-4829-98ad-2fd642eebaae",
+    "path": "/Users/admin/Data/Connections/CR_SQL01_DC_CR_PA_Sep212012.dst",
+    "description": "Connection to CR_SQL01 - DC_CR_PA_Sep212012 Database",
+    "name": "CR_SQL01_DC_CR_PA_Sep212012"
+  },
+  "typeId": "das.JdbcDataStoreType",
+  "properties": {
+    "user_name": [
+      "sa"
+    ],
+    "password": [
+      "SECURE:0:aHBf/ikmpQGeLSlX7i8NanthxsKIcySB"
+    ],
+    "key.connectionUrl": [
+      "jdbc:sqlserver://10.0.1.36;databaseName\u003dDC_CR_PA_Sep212012;selectMethod\u003dcursor"
+    ],
+    "dataStoreTemplate": [
+      "false"
+    ],
+    "dataStoreUsage": [
+      "IMPORT_EXPORT"
+    ]
+  },
+  "dbType": {
+    "name": "MySQL"
+  }
+}

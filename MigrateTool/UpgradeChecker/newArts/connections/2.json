@@ -1,0 +1,19 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.sdk.entity.CustomDataStore",
+  "file": {
+    "uuid": "93bd580d-ce44-4252-8cfe-aaf9f3ff28f8",
+    "path": "/Data/Connections/Datameer server filesystem.dst",
+    "description": "A data store for the local filesystem where Datameer is running.  Note, this works ONLY for Datameer Personal, Workgroup, and Trial editions.\n",
+    "name": "Datameer server filesystem"
+  },
+  "typeId": "das.FileDataStoreType",
+  "properties": {
+    "dataStoreUsage": [
+      "IMPORT_EXPORT"
+    ],
+    "rootPathPrefix": [
+      "/"
+    ]
+  }
+}

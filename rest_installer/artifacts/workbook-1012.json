@@ -1,0 +1,91 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_22_import_file_type",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_22_import_file_type.wbk",
+        "uuid": "f5d81570-845c-4bc9-92aa-bf9c0a41f46d"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "22 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_import_file_types.lnk",
+                "uuid": "052c4991-a1f2-41fb-ade5-9eb022044647"
+            },
+            "keep": false,
+            "name": "MySQL_import_file_types_src",
+            "sheetId": "d96c05e7-c901-4882-8103-92bb99ccddf0",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ConnectionType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "JDBC",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ConsumerType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "FileType",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "ConnectionType",
+                    "formulaString": "=#MySQL_import_file_types_src!ConnectionType"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "JDBC",
+                    "formulaString": "=#MySQL_import_file_types_src!JDBC"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "ConsumerType",
+                    "formulaString": "=#MySQL_import_file_types_src!ConsumerType"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "FileType",
+                    "formulaString": "=#MySQL_import_file_types_src!FileType"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_import_file_types",
+            "nextColumnId": 4,
+            "sheetId": "9c5cc9d6-46c1-4cab-b6a3-f198b8284f33",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

@@ -1,0 +1,2935 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "4b9aadb6-be38-438a-80c2-5790fa75641f",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/_p_Jamon Metrics.wbk",
+    "description": "",
+    "name": "_p_Jamon Metrics"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {
+    "cardinalities.generation": [
+      "true"
+    ],
+    "histograms.generation": [
+      "true"
+    ],
+    "minmaxmean.generation": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Metrics_Jamon",
+      "sheetId": "17d5e2cf-a99b-43ff-afa0-272665a360ab",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "Metrics_Jamon",
+        "sheetId": "df910fe1-0a9a-4ba5-b02b-93dd9c4397fb",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_40_Metrics_Jamon.wbk",
+          "uuid": "d8cff675-7fd3-4a52-8cb9-2475192a6f78"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "Label",
+          "width": 317,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "width": 231,
+          "thousandSeparator": true
+        }
+      ],
+      "partitionSelectionExpression": "$partition \u003e\u003d ADDTODATE(TODAY();\"-30d\")"
+    },
+    {
+      "name": "AllSql",
+      "sheetId": "4dad4c82-ed2a-49d5-9e8c-df7c3ab74867",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "AllSql",
+      "filterTargetSheet": "AllSql",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Label",
+          "filterExpression": "TEXT_EQUALS",
+          "value": "MonProxy-SQL-Type: All",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics_Jamon!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics_Jamon!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_Jamon!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Metrics_Jamon!Count"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Metrics_Jamon!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Metrics_Jamon!Total"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Metrics_Jamon!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Metrics_Jamon!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Metrics_Jamon!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Metrics_Jamon!Active"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Metrics_Jamon!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Metrics_Jamon!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#Metrics_Jamon!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 173,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "AllPageRequests",
+      "sheetId": "e28c34f7-c2f7-467e-a8e8-dc0baa76dcb6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "AllPageRequests",
+      "filterTargetSheet": "AllPageRequests",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Label",
+          "filterExpression": "CONTAINS",
+          "value": "request.allPages",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "AllPageRequests",
+      "sortTargetSheet": "AllPageRequests",
+      "sortKeys": [
+        {
+          "column": "CollectionTime",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics_Jamon!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics_Jamon!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_Jamon!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Metrics_Jamon!Count"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Metrics_Jamon!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Metrics_Jamon!Total"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Metrics_Jamon!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Metrics_Jamon!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Metrics_Jamon!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Metrics_Jamon!Active"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Metrics_Jamon!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Metrics_Jamon!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#Metrics_Jamon!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 376,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "Memory",
+      "sheetId": "fc24238a-f9ad-4b04-ab98-413b4ee3773c",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "Memory",
+      "filterTargetSheet": "Memory",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Label",
+          "filterExpression": "TEXT_EQUALS",
+          "value": "memory.totalMemoryUsed",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "Memory",
+      "sortTargetSheet": "Memory",
+      "sortKeys": [
+        {
+          "column": "CollectionTime",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics_Jamon!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics_Jamon!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_Jamon!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Metrics_Jamon!Count"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Metrics_Jamon!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Metrics_Jamon!Total"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Metrics_Jamon!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Metrics_Jamon!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Metrics_Jamon!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Metrics_Jamon!Active"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Metrics_Jamon!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Metrics_Jamon!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#Metrics_Jamon!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 191,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "Exceptions",
+      "sheetId": "5d11d028-8953-4187-9b37-e3028e09d8c0",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "Exceptions",
+      "filterTargetSheet": "Exceptions",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Label",
+          "filterExpression": "CONTAINS",
+          "value": "com.jamonapi.Exceptions",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics_Jamon!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics_Jamon!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_Jamon!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Metrics_Jamon!Count"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Metrics_Jamon!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Metrics_Jamon!Total"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Metrics_Jamon!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Metrics_Jamon!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Metrics_Jamon!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Metrics_Jamon!Active"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Metrics_Jamon!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Metrics_Jamon!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#Metrics_Jamon!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 233,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "IndividualSql",
+      "sheetId": "eeaf99cd-4290-4055-8200-5d6b027ae0d6",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "IndividualSql",
+      "filterTargetSheet": "IndividualSql",
+      "filterArguments": [
+        {
+          "filterExpression": "FORMULA",
+          "value": "STARTSWITH(#Label;\"MonProxy-SQL-PreparedStatement:\") || STARTSWITH(#Label;\"MonProxy-SQL-Statement:\")",
+          "valueStatic": false,
+          "type": "ADVANCED_FORMULA"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MetrisLastWeek!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MetrisLastWeek!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MetrisLastWeek!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MetrisLastWeek!Count"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MetrisLastWeek!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#MetrisLastWeek!Total"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#MetrisLastWeek!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#MetrisLastWeek!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#MetrisLastWeek!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#MetrisLastWeek!Active"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#MetrisLastWeek!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#MetrisLastWeek!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#MetrisLastWeek!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 454,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "IndividualPageRequests",
+      "sheetId": "7ed56a66-8a56-4106-b1ad-58de5fa2abe9",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "IndividualPageRequests",
+      "filterTargetSheet": "IndividualPageRequests",
+      "connector": "OR",
+      "filterArguments": [
+        {
+          "column": "Label",
+          "filterExpression": "STARTS_WITH",
+          "value": "com.jamonapi.http.JAMonJettyHandler.request.page.value:",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "Label",
+          "filterExpression": "STARTS_WITH",
+          "value": "com.jamonapi.http.JAMonJettyHandlerNew.request.page.value:",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MetrisLastWeek!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MetrisLastWeek!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#MetrisLastWeek!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#MetrisLastWeek!Count"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#MetrisLastWeek!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#MetrisLastWeek!Total"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#MetrisLastWeek!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#MetrisLastWeek!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#MetrisLastWeek!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#MetrisLastWeek!Active"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#MetrisLastWeek!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#MetrisLastWeek!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#MetrisLastWeek!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 230,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 711,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "AllSqlByDay",
+      "sheetId": "bdbdf50d-9de9-4d2f-81e6-339532c9e523",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "AllSqlByDay",
+      "sortTargetSheet": "AllSqlByDay",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(FORMATDATE(#AllSql!CollectionTime;\"yyyy-MM-dd\"))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#AllSql!Count)"
+        },
+        {
+          "columnName": "TotalTimeMs",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#AllSql!Total)"
+        },
+        {
+          "columnName": "AverageTimeMs",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#AllSqlByDay!TotalTimeMs/#AllSqlByDay!Count"
+        },
+        {
+          "columnName": "MaxTimeMs",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPMAX(#AllSql!Max)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "TotalTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "AverageTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "MaxTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "AllSqlByDayDesc",
+      "sheetId": "1b5ede4d-ad5d-4353-b423-7163d1b527ce",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "AllSqlByDayDesc",
+      "sortTargetSheet": "AllSqlByDayDesc",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#AllSqlByDay!Day"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#AllSqlByDay!Count"
+        },
+        {
+          "columnName": "TotalTimeMs",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#AllSqlByDay!TotalTimeMs"
+        },
+        {
+          "columnName": "AverageTimeMs",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#AllSqlByDay!AverageTimeMs"
+        },
+        {
+          "columnName": "MaxTimeMs",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#AllSqlByDay!MaxTimeMs"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "TotalTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "AverageTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "MaxTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "AllPageRequestsByDay",
+      "sheetId": "aefa6228-f1f8-427d-8cb3-6acbcc3b19d0",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "AllPageRequestsByDay",
+      "sortTargetSheet": "AllPageRequestsByDay",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(FORMATDATE(#AllPageRequests!CollectionTime;\"yyyy-MM-dd\"))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#AllPageRequests!Count)"
+        },
+        {
+          "columnName": "TotalTimeMs",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#AllPageRequests!Total)"
+        },
+        {
+          "columnName": "AverageTimeMs",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#AllPageRequestsByDay!TotalTimeMs/#AllPageRequestsByDay!Count"
+        },
+        {
+          "columnName": "MaxTimeMs",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPMAX(#AllPageRequests!Max)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "TotalTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "AverageTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "MaxTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "AllPageRequestsByDayDesc",
+      "sheetId": "c609ef9f-14e4-4f52-af8f-98d9446655ac",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "AllPageRequestsByDayDesc",
+      "sortTargetSheet": "AllPageRequestsByDayDesc",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#AllPageRequestsByDay!Day"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#AllPageRequestsByDay!Count"
+        },
+        {
+          "columnName": "TotalTimeMs",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#AllPageRequestsByDay!TotalTimeMs"
+        },
+        {
+          "columnName": "AverageTimeMs",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#AllPageRequestsByDay!AverageTimeMs"
+        },
+        {
+          "columnName": "MaxTimeMs",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#AllPageRequestsByDay!MaxTimeMs"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "TotalTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "AverageTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "MaxTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "MemoryByDay",
+      "sheetId": "eea18d21-00f6-4c76-96a2-964efc0c86fd",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "MemoryByDay",
+      "sortTargetSheet": "MemoryByDay",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(FORMATDATE(#Memory!CollectionTime;\"yyyy-MM-dd\"))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#Memory!Count)"
+        },
+        {
+          "columnName": "MaxMemoryConsumed",
+          "columnId": "4",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#Memory!Max)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "MaxMemoryConsumed",
+          "width": 227,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "ExceptionsByDay",
+      "sheetId": "2dd5b944-9f0f-42b7-8bd4-7b675a58bf3e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "ExceptionsByDay",
+      "sortTargetSheet": "ExceptionsByDay",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(FORMATDATE(#Exceptions!CollectionTime;\"yyyy-MM-dd\"))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#Exceptions!Count)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "IndividualSqlWorstPerforming",
+      "sheetId": "7b97a4f8-e765-4b8c-9939-7ad7b45314b1",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "IndividualSqlWorstPerforming",
+      "sortTargetSheet": "IndividualSqlWorstPerforming",
+      "sortKeys": [
+        {
+          "column": "TotalTimeMs",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "SqlQuery",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(REPLACEALL(REPLACEALL(#IndividualSql!Label;\"MonProxy-SQL-PreparedStatement: \");\"MonProxy-SQL-Statement: \"))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#IndividualSql!Count)"
+        },
+        {
+          "columnName": "TotalTimeMs",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#IndividualSql!Total)"
+        },
+        {
+          "columnName": "AverageTimeMs",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#IndividualSqlWorstPerforming!TotalTimeMs/#IndividualSqlWorstPerforming!Count"
+        },
+        {
+          "columnName": "MaxTimeMs",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPMAX(#IndividualSql!Max)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "SqlQuery",
+          "width": 250,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "TotalTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "AverageTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "MaxTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "IndividualPageRequestsWorstPerforming",
+      "sheetId": "dbb8f4c2-59cd-4727-9cc5-10a458d93cae",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "IndividualPageRequestsWorstPerforming",
+      "filterTargetSheet": "IndividualPageRequestsWorstPerforming",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "PageRequest",
+          "filterExpression": "NOT_STARTS_WITH",
+          "value": "/rest/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "IndividualPageRequestsWorstPerforming",
+      "sortTargetSheet": "IndividualPageRequestsWorstPerforming",
+      "sortKeys": [
+        {
+          "column": "TotalTimeMs",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "PageRequest",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(REPLACEALL(#IndividualPageRequests!Label;\"com.jamonapi.http.JAMonJettyHandler.request.page.value: \"))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#IndividualPageRequests!Count)"
+        },
+        {
+          "columnName": "TotalTimeMs",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#IndividualPageRequests!Total)"
+        },
+        {
+          "columnName": "AverageTimeMs",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#IndividualPageRequestsWorstPerforming!TotalTimeMs/#IndividualPageRequestsWorstPerforming!Count"
+        },
+        {
+          "columnName": "MaxTimeMs",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPMAX(#IndividualPageRequests!Max)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "PageRequest",
+          "width": 342,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "TotalTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "AverageTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "MaxTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "IndividualPageRequestWorstPerformingRest",
+      "sheetId": "6807f435-926a-4288-8213-2f11aa7e4394",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "IndividualPageRequestWorstPerformingRest",
+      "filterTargetSheet": "IndividualPageRequestWorstPerformingRest",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "RestPageRequest",
+          "filterExpression": "CONTAINS",
+          "value": "/rest/",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "RestPageRequest",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(REPLACEALL(REPLACEALL(#IndividualPageRequests!Label;\"com.jamonapi.http.JAMonJettyHandler.request.page.value: \");\"com.jamonapi.http.JAMonJettyHandlerNew.request.page.value: \";\u0027\u0027))"
+        },
+        {
+          "columnName": "CountRest",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#IndividualPageRequests!Count)"
+        },
+        {
+          "columnName": "TotalTimeMs",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#IndividualPageRequests!Total)"
+        },
+        {
+          "columnName": "AverageTimeMs",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003d#IndividualPageRequestWorstPerformingRest!TotalTimeMs/#IndividualPageRequestWorstPerformingRest!CountRest"
+        },
+        {
+          "columnName": "MaxTimeMs",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPMAX(#IndividualPageRequests!Max)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "RestPageRequest",
+          "width": 681,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "CountRest",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "TotalTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "MaxTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "null",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "AverageTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "IndividualPageRequestWorstPerformingLogical",
+      "sheetId": "25e46490-540c-466e-b26d-5db35f6e7546",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": true,
+      "filterSourceSheet": "IndividualPageRequestsWorstPerforming",
+      "filterTargetSheet": "IndividualPageRequestWorstPerformingLogical",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "PageRequest",
+          "filterExpression": "NOT_CONTAINS",
+          "value": ".",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "PageRequest",
+          "width": 342,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "TotalTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "AverageTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "MaxTimeMs",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "HttpStatus",
+      "sheetId": "6f055ca5-c749-4b06-a802-fa8126388108",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "HttpStatus",
+      "filterTargetSheet": "HttpStatus",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Label",
+          "filterExpression": "CONTAINS",
+          "value": "getStatus()",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics_Jamon!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics_Jamon!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_Jamon!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Metrics_Jamon!Count"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Metrics_Jamon!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Metrics_Jamon!Total"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Metrics_Jamon!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Metrics_Jamon!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Metrics_Jamon!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Metrics_Jamon!Active"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Metrics_Jamon!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Metrics_Jamon!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#Metrics_Jamon!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 492,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "HttpStatusByDay",
+      "sheetId": "506c3cfb-b044-4d5b-a1d6-cf78c5d2b77f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "sortSourceSheet": "HttpStatusByDay",
+      "sortTargetSheet": "HttpStatusByDay",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "DESC"
+        },
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(FORMATDATE(#HttpStatus!CollectionTime;\"yyyy-MM-dd\"))"
+        },
+        {
+          "columnName": "HttpStatus",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(SUBSTITUTEALL(#HttpStatus!Label; \"com.jamonapi.http.JAMonJettyHandler.response.getStatus().value: \";\"\"))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#HttpStatus!Count)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "HttpStatus",
+          "width": 464,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "HttpStatusCategoryByDayDesc",
+      "sheetId": "835a9cb6-e5c6-49fd-b957-aa4fb9168b1f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "sortSourceSheet": "HttpStatusCategoryByDayDesc",
+      "sortTargetSheet": "HttpStatusCategoryByDayDesc",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "HttpStatusCategory",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(FORMATDATE(#HttpStatus!CollectionTime;\"yyyy-MM-dd\"))"
+        },
+        {
+          "columnName": "HttpStatusCategory",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(CONCAT(SUBSTR(SUBSTITUTEALL(#HttpStatus!Label; \"com.jamonapi.http.JAMonJettyHandler.response.getStatus().value: \";\"\");0;1);\"xx\"))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#HttpStatus!Count)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "HttpStatusCategory",
+          "width": 464,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "HttpStatusCategoryByDay",
+      "sheetId": "3c8dce45-f9c7-4dc2-908b-5fe12bd9e411",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "sortSourceSheet": "HttpStatusCategoryByDay",
+      "sortTargetSheet": "HttpStatusCategoryByDay",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "HttpStatusCategory",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#HttpStatusCategoryByDayDesc!Day"
+        },
+        {
+          "columnName": "HttpStatusCategory",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#HttpStatusCategoryByDayDesc!HttpStatusCategory"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#HttpStatusCategoryByDayDesc!Count"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "HttpStatusCategory",
+          "width": 464,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "Hibernate",
+      "sheetId": "8611e3e2-0db9-4591-8e05-0eb2276bad0b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "Hibernate",
+      "filterTargetSheet": "Hibernate",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Label",
+          "filterExpression": "STARTS_WITH",
+          "value": "hibernatemetrics.",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "Hibernate",
+      "sortTargetSheet": "Hibernate",
+      "sortKeys": [
+        {
+          "column": "Label",
+          "sortOrder": "DESC"
+        },
+        {
+          "column": "CollectionTime",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics_Jamon!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics_Jamon!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_Jamon!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Metrics_Jamon!Count"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Metrics_Jamon!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Metrics_Jamon!Total"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Metrics_Jamon!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Metrics_Jamon!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Metrics_Jamon!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Metrics_Jamon!Active"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Metrics_Jamon!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Metrics_Jamon!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#Metrics_Jamon!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 317,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "log4j",
+      "sheetId": "162b69a0-79f2-46d9-a645-79ba115ca20d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "log4j",
+      "filterTargetSheet": "log4j",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Units",
+          "filterExpression": "TEXT_EQUALS",
+          "value": "log4j",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "log4j",
+      "sortTargetSheet": "log4j",
+      "sortKeys": [
+        {
+          "column": "CollectionTime",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics_Jamon!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics_Jamon!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_Jamon!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Metrics_Jamon!Count"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Metrics_Jamon!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Metrics_Jamon!Total"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Metrics_Jamon!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Metrics_Jamon!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Metrics_Jamon!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Metrics_Jamon!Active"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Metrics_Jamon!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Metrics_Jamon!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#Metrics_Jamon!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 317,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "HttpStatusCategoryByDayPivot",
+      "sheetId": "f594be6b-32db-46ac-bd96-5c8ca8d2da46",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#HttpStatusCategoryByDayDesc!Day)"
+        },
+        {
+          "columnName": "http2xx",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(IF(#HttpStatusCategoryByDayDesc!HttpStatusCategory\u003d\u003d\"2xx\";#HttpStatusCategoryByDayDesc!Count;0))"
+        },
+        {
+          "columnName": "http3xx",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(IF(#HttpStatusCategoryByDayDesc!HttpStatusCategory\u003d\u003d\"3xx\";#HttpStatusCategoryByDayDesc!Count;0))"
+        },
+        {
+          "columnName": "http4xx",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPSUM(IF(#HttpStatusCategoryByDayDesc!HttpStatusCategory\u003d\u003d\"4xx\";#HttpStatusCategoryByDayDesc!Count;0))"
+        },
+        {
+          "columnName": "http5xx",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPSUM(IF(#HttpStatusCategoryByDayDesc!HttpStatusCategory\u003d\u003d\"5xx\";#HttpStatusCategoryByDayDesc!Count;0))"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "http2xx",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "http3xx",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "http4xx",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "http5xx",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "HttpStatusCategoryByDayPivotDesc",
+      "sheetId": "41ee981d-ff7a-42c2-b87a-551a7d7893b2",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "HttpStatusCategoryByDayPivot",
+      "sortTargetSheet": "HttpStatusCategoryByDayPivotDesc",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "DatameerVersion_tmp",
+      "sheetId": "6186adce-727f-4f99-90fc-a013c33192b4",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "filterSourceSheet": "DatameerVersion_tmp",
+      "filterTargetSheet": "DatameerVersion_tmp",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Label",
+          "filterExpression": "CONTAINS",
+          "value": "datameer.version",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "DatameerVersion_tmp",
+      "sortTargetSheet": "DatameerVersion_tmp",
+      "sortKeys": [
+        {
+          "column": "LogTime",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "LogTime",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics_Jamon!LogTime"
+        },
+        {
+          "columnName": "Label",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Metrics_Jamon!Label"
+        },
+        {
+          "columnName": "Units",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics_Jamon!Units"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Metrics_Jamon!Count"
+        },
+        {
+          "columnName": "Average",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Metrics_Jamon!Average"
+        },
+        {
+          "columnName": "Total",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Metrics_Jamon!Total"
+        },
+        {
+          "columnName": "StandardDev",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Metrics_Jamon!StandardDev"
+        },
+        {
+          "columnName": "Min",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Metrics_Jamon!Min"
+        },
+        {
+          "columnName": "Max",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Metrics_Jamon!Max"
+        },
+        {
+          "columnName": "Active",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Metrics_Jamon!Active"
+        },
+        {
+          "columnName": "AverageActive",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Metrics_Jamon!AverageActive"
+        },
+        {
+          "columnName": "MaxActive",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Metrics_Jamon!MaxActive"
+        },
+        {
+          "columnName": "CollectionTime",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#Metrics_Jamon!CollectionTime"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "LogTime",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Label",
+          "width": 317,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Units",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Total",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "StandardDev",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "Min",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "Max",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Active",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "AverageActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "MaxActive",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "CollectionTime",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 13
+    },
+    {
+      "name": "DatameerVersion",
+      "sheetId": "01e5bc09-54c6-4073-8dc1-df358b0da64d",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Version",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#DatameerVersion_tmp!Label)"
+        },
+        {
+          "columnName": "InstallDate",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMIN(#DatameerVersion_tmp!LogTime)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Version",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "InstallDate",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "MetrisLastWeek",
+      "sheetId": "8229cb22-a584-4fcd-a155-ef94e8a370ab",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "Metrics_Jamon",
+        "sheetId": "df910fe1-0a9a-4ba5-b02b-93dd9c4397fb",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_40_Metrics_Jamon.wbk",
+          "uuid": "d8cff675-7fd3-4a52-8cb9-2475192a6f78"
+        }
+      },
+      "columnStyles": [],
+      "partitionSelectionExpression": "$partition \u003e\u003d ADDTODATE(TODAY();\"-7d\")"
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

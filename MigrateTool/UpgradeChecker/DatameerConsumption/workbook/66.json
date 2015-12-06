@@ -1,0 +1,45 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "84f1cd30-3d8a-4895-91d9-99e5bf276815",
+    "path": "/Analytics/Workbooks/MotoTest.wbk",
+    "description": "",
+    "name": "MotoTest"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "sheets": [
+    {
+      "name": "Top5_IngestionByVolumeinGB",
+      "sheetId": "2888e5b7-b97d-4950-8c9f-01eb712b268a",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": true,
+      "referencedSheet": {
+        "name": "Top5_IngestionByVolumeinGB",
+        "sheetId": "88cf7d89-e15f-46dc-8c78-a126cb943c8c",
+        "workbook": {
+          "path": "/Datameer Consumption Stats/Resources/Datameer_Top5_Users_Ingestion.wbk",
+          "uuid": "cbbf998f-347f-4692-9da3-dd56421cb3f2"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "OWNER",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "VOLUME_in_GB",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

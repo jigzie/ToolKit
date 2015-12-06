@@ -1,0 +1,347 @@
+{
+    "advancedSchedulingInUse": false,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_g_Housekeeping Service",
+        "path": "/Administration/HUMv2/Reports/logs/_g_Housekeeping Service.wbk",
+        "uuid": "360f8115-243b-4528-a004-a80f5f08b1be"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "Event",
+                    "thousandSeparator": true,
+                    "width": 322
+                }
+            ],
+            "keep": false,
+            "name": "Metrics",
+            "referencedSheet": {
+                "name": "Metrics",
+                "sheetId": "73f9c80d-003c-48ff-a1b3-bbe3e7af6707",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/base/_02_30_Metrics.wbk",
+                    "uuid": "53590388-9038-4bfe-b43a-5ab0060f6c90"
+                }
+            },
+            "sheetId": "4b85a416-a0f3-4acf-9336-201162034fcb",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Event",
+                    "thousandSeparator": true,
+                    "width": 322
+                },
+                {
+                    "columnId": "2",
+                    "name": "DataLinks",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "FileStores",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "JobExecutions",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "MigratedDataEntities",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "DeleteObsoleteArtifactsFromCluster",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "DeletePhysicalData",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "DeleteDataEntities",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "TemporaryFiles",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "TotalTime",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=FORMATDATE(#Metrics!Timestamp;\"yyyy-MM-dd\")"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Event",
+                    "formulaString": "=SUBSTR(#Metrics!Event;13)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "DataLinks",
+                    "formulaString": "=IF(#Event==\"Housekeep data links\";#Metrics!ms/1000;null)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 3,
+                    "columnName": "FileStores",
+                    "formulaString": "=IF(#Event==\"Housekeep file stores\";#Metrics!ms/1000;null)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 4,
+                    "columnName": "JobExecutions",
+                    "formulaString": "=IF(#Event==\"Housekeep job executions\";#Metrics!ms/1000;null)"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 5,
+                    "columnName": "MigratedDataEntities",
+                    "formulaString": "=IF(#Event==\"Housekeep migrated data entities\";#Metrics!ms/1000;null)"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 6,
+                    "columnName": "DeleteObsoleteArtifactsFromCluster",
+                    "formulaString": "=IF(#Event==\"Housekeep obsolete artifacts from cluster\";#Metrics!ms/1000;null)"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 7,
+                    "columnName": "DeletePhysicalData",
+                    "formulaString": "=IF(#Event==\"Housekeep physical data\";#Metrics!ms/1000;null)"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 8,
+                    "columnName": "DeleteDataEntities",
+                    "formulaString": "=IF(#Event==\"Housekeep physically deleted data entities\";#Metrics!ms/1000;null)"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 9,
+                    "columnName": "TemporaryFiles",
+                    "formulaString": "=IF(#Event==\"Housekeep temporary files\";#Metrics!ms/1000;null)"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 10,
+                    "columnName": "TotalTime",
+                    "formulaString": "=IF(#Event==\"time\";#Metrics!ms/1000;null)"
+                }
+            ],
+            "keep": false,
+            "name": "Pivot",
+            "nextColumnId": 12,
+            "sheetId": "8324e121-a347-4f68-a49a-ca0932ff04f8",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "DataLinks",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "FileStores",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "JobExecutions",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "MigratedDataEntities",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "DeleteObsoleteArtifactsFromCluster",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "DeletePhysicalData",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "DeleteDataEntities",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "8",
+                    "name": "TemporaryFiles",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "TotalTime",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "BusyTimeSeconds",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "IdleTimeSeconds",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=GROUPBY(#Pivot!Timestamp)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "DataLinks",
+                    "formulaString": "=GROUPSUM(#Pivot!DataLinks)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "FileStores",
+                    "formulaString": "=GROUPSUM(#Pivot!FileStores)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "JobExecutions",
+                    "formulaString": "=GROUPSUM(#Pivot!JobExecutions)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "MigratedDataEntities",
+                    "formulaString": "=GROUPSUM(#Pivot!MigratedDataEntities)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "DeleteObsoleteArtifactsFromCluster",
+                    "formulaString": "=GROUPSUM(#Pivot!DeleteObsoleteArtifactsFromCluster)"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "DeletePhysicalData",
+                    "formulaString": "=GROUPSUM(#Pivot!DeletePhysicalData)"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "DeleteDataEntities",
+                    "formulaString": "=GROUPSUM(#Pivot!DeleteDataEntities)"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 8,
+                    "columnName": "TemporaryFiles",
+                    "formulaString": "=GROUPSUM(#Pivot!TemporaryFiles)"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 9,
+                    "columnName": "TotalTime",
+                    "formulaString": "=GROUPSUM(#Pivot!TotalTime)"
+                },
+                {
+                    "columnId": "10",
+                    "columnIndex": 10,
+                    "columnName": "BusyTimeSeconds",
+                    "formulaString": "=GROUPSUM(#Pivot!TotalTime)"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 11,
+                    "columnName": "IdleTimeSeconds",
+                    "formulaString": "=1d/1000-#BusyTimeSeconds"
+                }
+            ],
+            "keep": true,
+            "name": "TotalTimePerDay",
+            "nextColumnId": 12,
+            "sheetId": "683ce728-95f9-413a-a6a2-4319a866f9bb",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Timestamp",
+                    "sortOrder": "ASC"
+                }
+            ],
+            "sortSourceSheet": "TotalTimePerDay",
+            "sortTargetSheet": "TotalTimePerDay"
+        }
+    ],
+    "version": "4.5.0"
+}

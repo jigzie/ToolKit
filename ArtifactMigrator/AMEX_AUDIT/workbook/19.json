@@ -1,0 +1,192 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "05f8140b-c60e-488f-b099-6121beb79959",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/_l_Login Statistics per Day.wbk",
+    "description": "",
+    "name": "_l_Login Statistics per Day"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {
+    "cardinalities.generation": [
+      "true"
+    ],
+    "histograms.generation": [
+      "true"
+    ],
+    "minmaxmean.generation": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "user_action",
+      "sheetId": "4004442e-5fa4-444c-8f0f-35522d2808ca",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "filterSourceSheet": "user_action",
+      "filterTargetSheet": "user_action",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "action_type",
+          "filterExpression": "TEXT_EQUALS",
+          "value": "AUTHENTICATION",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "action",
+          "filterExpression": "TEXT_EQUALS",
+          "value": "LOGIN",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "timestamp",
+          "filterExpression": "AFTER",
+          "value": "TODAY() - 90d",
+          "valueStatic": false,
+          "type": "COL_FORMULA"
+        }
+      ],
+      "referencedSheet": {
+        "name": "User_Action",
+        "sheetId": "b0279367-e4e1-461a-9f0d-9fde7d140fa4",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_00_User_Action.wbk",
+          "uuid": "f292852a-c4a8-4d5c-b80b-7240a4f72faa"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "behaviour",
+          "width": 148,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "action",
+          "width": 245,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Logins_per_Day",
+      "sheetId": "c3ccd45c-c0c3-44c5-a3be-e35d13bd2f17",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "Logins_per_Day",
+      "sortTargetSheet": "Logins_per_Day",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "3",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(ASDATE(FORMATDATE(#user_action!timestamp;\"yyyy-MM-dd\")))"
+        },
+        {
+          "columnName": "Logins",
+          "columnId": "4",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "DistinctUsers",
+          "columnId": "5",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#user_action!performed_by_user)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "3",
+          "name": "Day",
+          "width": 171,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Logins",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "DistinctUsers",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "LoginsPerTimeOfDay",
+      "sheetId": "2ef19629-59ea-4459-ada4-a7fb4e3a6ea0",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "LoginsPerTimeOfDay",
+      "sortTargetSheet": "LoginsPerTimeOfDay",
+      "sortKeys": [
+        {
+          "column": "Hour",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Hour",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(HOUR(#user_action!timestamp))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        },
+        {
+          "columnName": "user_DistinctCount",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNTDISTINCT(#user_action!performed_by_user)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Hour",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "user_DistinctCount",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "advancedSchedulingInUse": false,
+  "errorHandlingMode": "DROP_RECORD"
+}

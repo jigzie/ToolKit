@@ -1,0 +1,102 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "9508a34d-7e84-4e49-bf04-ee1acbe31c95",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/_o_Conf Execution Mapping.wbk",
+    "description": "",
+    "name": "_o_Conf Execution Mapping"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {
+    "cardinalities.generation": [
+      "true"
+    ],
+    "histograms.generation": [
+      "true"
+    ],
+    "minmaxmean.generation": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Metrics",
+      "sheetId": "5ad8037a-a6db-4883-95b1-7b7339598503",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "Metrics",
+        "sheetId": "73f9c80d-003c-48ff-a1b3-bbe3e7af6707",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_30_Metrics.wbk",
+          "uuid": "8ab39afa-26ed-4772-97ee-6afe854bce73"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "Event",
+          "width": 208,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Mapping",
+      "sheetId": "2d80db95-c770-44f0-b60e-b66ecc5cea51",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "outputPartitionDefinition": {
+        "dateFormat": "yyyyMMdd",
+        "dateGenerator": "\u003d(#Timestamp)"
+      },
+      "formulas": [
+        {
+          "columnName": "Timestamp",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Metrics!Timestamp"
+        },
+        {
+          "columnName": "ConfId",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dINT(#Metrics!ms)"
+        },
+        {
+          "columnName": "ExecutionId",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Metrics!Value2"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Timestamp",
+          "width": 158,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "ConfId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "ExecutionId",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "advancedSchedulingInUse": false,
+  "errorHandlingMode": "DROP_RECORD"
+}

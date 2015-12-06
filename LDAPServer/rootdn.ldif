@@ -1,0 +1,16 @@
+dn: dc=hadoop,dc=com
+objectClass: dcObject
+objectClass: organization
+dc: hadoop
+o: DATAMEER CORP
+
+dn: cn=admin,dc=hadoop,dc=com
+objectClass: organizationalRole
+cn: dm_admin
+description: LDAP Directory Admin-SuperUser
+
+#dn: ou=datameer,dc=hadoop,dc=com
+#objectClass: organizationalUnit
+#objectClass: top
+#ou: datameer
+#description: DATAMEER, Inc

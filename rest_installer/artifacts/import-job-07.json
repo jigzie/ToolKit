@@ -1,0 +1,105 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10706,
+            "include": true,
+            "name": "id",
+            "origin": "id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10707,
+            "include": true,
+            "name": "name",
+            "origin": "name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10708,
+            "include": true,
+            "name": "connection_pattern",
+            "origin": "connection_pattern",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10709,
+            "include": true,
+            "name": "dialect_class_name",
+            "origin": "dialect_class_name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10710,
+            "include": true,
+            "name": "driver_class_name",
+            "origin": "driver_class_name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10711,
+            "include": true,
+            "name": "uuid",
+            "origin": "uuid",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "db_driver table",
+        "name": "MySQL_db_driver",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_db_driver.lnk",
+        "uuid": "92592be0-ee1b-47df-939d-30b5fdd1e03a"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            ""
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "448d401e-e921-4ec0-9913-10284ef29681"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "id"
+        ],
+        "tableName": [
+            "'db_driver'"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

@@ -1,0 +1,84 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "f12a7825-388c-41ed-bb5a-12269c186782",
+    "path": "/Data/ImportJobs/DataVolumeSummary.imp",
+    "description": "Data_Volume_Summary\nAssuming this contains all FileUploads, ImportJobs and Datalinks (executed using workbook)",
+    "name": "DataVolumeSummary"
+  },
+  "pullType": "MANUALLY",
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "41cd8893-249a-44b8-b439-75e4c7f9eb6b"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      ""
+    ],
+    "tableName": [
+      "\u0027data_volume_summary\u0027"
+    ],
+    "orderColumn": [
+      "id"
+    ],
+    "incrementalMode": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Data/Connections/Dap4120.dst",
+    "uuid": "1412c847-b9a7-4686-84c7-fd5caebd9a20"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 68,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 69,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "day",
+      "origin": "day",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 70,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "job_conf_id",
+      "origin": "job_conf_id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 71,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "volume",
+      "origin": "volume",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "67bf2b07-22fb-445a-b7f8-31667e3bc45f",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_14_fileupload_file_types.wbk",
+    "description": "",
+    "name": "_00_14_fileupload_file_types"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_fileupload_file_types_src",
+      "sheetId": "1707ac4f-ac8a-4a7c-ac3f-1b27c18f23d3",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_fileupload_file_types.lnk",
+        "uuid": "e3a4f941-fb1f-40ce-b647-d1fdad7c2bb5"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_fileupload_file_types",
+      "sheetId": "beb64991-cbc4-456b-b606-2fdd6438ad4f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ConsumerType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_fileupload_file_types_src!ConsumerType"
+        },
+        {
+          "columnName": "FileType",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_fileupload_file_types_src!FileType"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConsumerType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "FileType",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

@@ -1,0 +1,337 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "1f589a28-ac04-4095-965a-ef5158b4b7f3",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/_m_Ha_Scheduled Versus Ad Hoc.wbk",
+    "description": "",
+    "name": "_m_Ha_Scheduled Versus Ad Hoc"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {
+    "cardinalities.generation": [
+      "true"
+    ],
+    "histograms.generation": [
+      "true"
+    ],
+    "minmaxmean.generation": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "PerMrJobStats",
+      "sheetId": "e6675e5b-a748-46da-8d38-0c2541d25581",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "PerMrJobStats",
+        "sheetId": "592b1879-4b10-4daa-877e-652071b4a6ff",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/_a_Hadoop MR Job Metrics.wbk",
+          "uuid": "9407fd8e-0c95-462f-a8cf-3d7546e98c66"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ExecutionId",
+          "width": 187,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Timestamp",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "OutputBytes",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "InputBytes",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "RunTimeMinutes",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "JobTypeId",
+          "width": 149,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "JobType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "Execution_Id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "MapSlots",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "ReduceSlots",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "partitionSelectionExpression": "$partition \u003e ADDTODATE(TODAY(); \"-30d\")"
+    },
+    {
+      "name": "ExecutionMetaData",
+      "sheetId": "60fecccc-80f6-4282-89a8-92b39173c597",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "runTriggeringConfiguration": {
+        "runTrigger": true
+      },
+      "referencedSheet": {
+        "name": "ExecutionMetaData",
+        "sheetId": "a9fec789-9d7e-4b19-be00-0a60ebd26cff",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/_h_Configuration and Job Metadata.wbk",
+          "uuid": "70036691-6316-4dba-95c9-4815232ad951"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ConfigurationId",
+          "width": 136,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "ExecutionId",
+          "width": 123,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "UnnecessaryKeptSheets",
+          "width": 221,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "PullType",
+          "width": 126,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "JoinedMetaData",
+      "sheetId": "13534e5d-6b72-4ba0-a0b1-268545e06d52",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "PerMrJobStats",
+            "sheet2": "ExecutionMetaData",
+            "joinColumns1": [
+              "Execution_Id"
+            ],
+            "joinColumns2": [
+              "ExecutionId"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "PerMrJobStats": [
+            "Timestamp",
+            "JobTypeId",
+            "JobType",
+            "RunTimeMinutes"
+          ],
+          "ExecutionMetaData": [
+            "ExecutionId",
+            "PullType"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "9ba4f3a5d8bbd7ebff7979c655533d9b",
+          "width": 180,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "PerExecution",
+      "sheetId": "8ddab9a2-2898-4330-8a26-6cd2a9706fc3",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "ExecutionId",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#JoinedMetaData!ExecutionMetaData.ExecutionId)"
+        },
+        {
+          "columnName": "Start",
+          "columnId": "2",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPMIN(#JoinedMetaData!PerMrJobStats.Timestamp)"
+        },
+        {
+          "columnName": "End",
+          "columnId": "1",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPMAX(#JoinedMetaData!PerMrJobStats.Timestamp)"
+        },
+        {
+          "columnName": "RunTimeMin",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPSUM(#JoinedMetaData!PerMrJobStats.RunTimeMinutes)"
+        },
+        {
+          "columnName": "PullType",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPANY(#JoinedMetaData!ExecutionMetaData.PullType)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "ExecutionId",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "End",
+          "width": 116,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Start",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "RunTimeMin",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "4",
+          "name": "PullType",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    },
+    {
+      "name": "RunTimePerPullType",
+      "sheetId": "06c4c7a7-0432-4cfe-b09e-8a4cbc7a6d81",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "RunTimePerPullType",
+      "sortTargetSheet": "RunTimePerPullType",
+      "sortKeys": [
+        {
+          "column": "Day",
+          "sortOrder": "ASC"
+        },
+        {
+          "column": "PullType",
+          "sortOrder": "ASC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Day",
+          "columnId": "2",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(FORMATDATE(#PerExecution!End;\"yyyy-MM-dd\"))"
+        },
+        {
+          "columnName": "PullType",
+          "columnId": "0",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#PerExecution!PullType)"
+        },
+        {
+          "columnName": "RunTimeHours",
+          "columnId": "1",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPSUM(#PerExecution!RunTimeMin)/60"
+        },
+        {
+          "columnName": "JobRuns",
+          "columnId": "4",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "PullType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "RunTimeHours",
+          "width": 100,
+          "alignment": "LEFT",
+          "decimalDigits": 1,
+          "thousandSeparator": false
+        },
+        {
+          "columnId": "2",
+          "name": "Day",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "JobRuns",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

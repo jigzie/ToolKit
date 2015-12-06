@@ -1,0 +1,154 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "e49dedf7-407c-49bf-831e-03cadadc9238",
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/DJE.lnk",
+    "description": "DJE for Health Check",
+    "name": "DJE"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "0f2ffbd0-bb93-44a9-b4b8-bd50e9e25e89"
+    ],
+    "!query!": [
+      "select dje.id DapJobExecId, dje.hadoop_properties ExecHadoopProps, dje.job_data JobData, dje.start_time StartTime, dje.stop_time StopTime,\r\n       dje.user User, dje.job_exception Exception, dje.dap_job_configuration__id, dje.job_status JobStatusId,\r\n       CASE dje.job_status \r\n       WHEN 0 THEN \u0027QUEUED\u0027 \r\n       WHEN 1 THEN \u0027RUNNING\u0027 \r\n       WHEN 2 THEN \u0027COMPLETED\u0027\r\n       WHEN 3 THEN \u0027ERROR\u0027 \r\n       WHEN 4 THEN \u0027COMPLETED_WITH_WARNINGS\u0027 \r\n       WHEN 5 THEN \u0027WAITING_FOR_OTHER_JOB\u0027 \r\n       WHEN 6 THEN \u0027CANCELED\u0027\r\n       WHEN 7 THEN \u0027ABORTING\u0027\r\n       WHEN 8 THEN \u0027WAITING\u0027\r\n       ELSE dje.job_status END Status,\r\n       dje.triggered_by TriggerId,\r\n       CASE dje.triggered_by \r\n       WHEN 0 THEN \u0027USER\u0027 \r\n       WHEN 1 THEN \u0027SCHEDULER\u0027 \r\n       WHEN 2 THEN \u0027RESTAPI\u0027\r\n       WHEN 3 THEN \u0027IMPORTJOB\u0027 \r\n       WHEN 4 THEN \u0027EXPORTJOB\u0027 \r\n       WHEN 5 THEN \u0027WORKBOOK\u0027\r\n       ELSE dje.job_status END TriggerType\r\nfrom dap_job_execution dje"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "histogram.generation": [
+      "false"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer Scheduling/Resources/SystemDatabase.dst",
+    "uuid": "1c07895a-11dd-4e7b-9929-642b7db9c90d"
+  },
+  "errorHandlingMode": "DROP_RECORD",
+  "maxLogErrors": 1000,
+  "maxMappers": 5,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 207,
+      "acceptEmpty": false,
+      "name": "DapJobExecId",
+      "origin": "DapJobExecId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 208,
+      "acceptEmpty": true,
+      "name": "ExecHadoopProps",
+      "origin": "ExecHadoopProps",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 209,
+      "acceptEmpty": true,
+      "name": "JobData",
+      "origin": "JobData",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 210,
+      "acceptEmpty": true,
+      "name": "StartTime",
+      "origin": "StartTime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 211,
+      "acceptEmpty": true,
+      "name": "StopTime",
+      "origin": "StopTime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 212,
+      "acceptEmpty": true,
+      "name": "User",
+      "origin": "User",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 213,
+      "acceptEmpty": true,
+      "name": "Exception",
+      "origin": "Exception",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 214,
+      "acceptEmpty": false,
+      "name": "dap_job_configuration__id",
+      "origin": "dap_job_configuration__id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 215,
+      "acceptEmpty": false,
+      "name": "JobStatusId",
+      "origin": "JobStatusId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 216,
+      "acceptEmpty": false,
+      "name": "Status",
+      "origin": "Status",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 217,
+      "acceptEmpty": true,
+      "name": "TriggerId",
+      "origin": "TriggerId",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 218,
+      "acceptEmpty": true,
+      "name": "TriggerType",
+      "origin": "TriggerType",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

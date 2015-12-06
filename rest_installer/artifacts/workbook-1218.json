@@ -1,0 +1,412 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_n_Oa_Metrics for Workbook With a lot of branches",
+        "path": "/Administration/HUMv2/Reports/logs/_n_Oa_Metrics for Workbook With a lot of branches.wbk",
+        "uuid": "0af23b49-0f7b-496f-86b0-3c3fe35ce499"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "cardinalities.generation": [
+            "true"
+        ],
+        "histograms.generation": [
+            "true"
+        ],
+        "minmaxmean.generation": [
+            "true"
+        ]
+    },
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 158
+                },
+                {
+                    "columnId": "1",
+                    "name": "ConfId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "ExecutionId",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "ConfId",
+                    "filterExpression": "EQUALS",
+                    "type": "CONSTANT",
+                    "value": "3748",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "Mapping",
+            "filterTargetSheet": "Mapping",
+            "keep": true,
+            "name": "Mapping",
+            "referencedSheet": {
+                "name": "Mapping",
+                "sheetId": "2d80db95-c770-44f0-b60e-b66ecc5cea51",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/_o_Conf Execution Mapping.wbk",
+                    "uuid": "0ed95463-2227-40e7-9eb3-d77bbd3dc751"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "ee44fa73-0c47-4d61-a0ad-e4ed6b1804c8",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ExecutionId",
+                    "thousandSeparator": true,
+                    "width": 187
+                },
+                {
+                    "columnId": "1",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "OutputBytes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "InputBytes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "RunTimeMinutes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "JobTypeId",
+                    "thousandSeparator": true,
+                    "width": 149
+                },
+                {
+                    "columnId": "8",
+                    "name": "JobType",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "9",
+                    "name": "Execution_Id",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "10",
+                    "name": "MapSlots",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "11",
+                    "name": "ReduceSlots",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "keep": false,
+            "name": "PerMrJobStats",
+            "referencedSheet": {
+                "name": "PerMrJobStats",
+                "sheetId": "592b1879-4b10-4daa-877e-652071b4a6ff",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/_a_Hadoop MR Job Metrics.wbk",
+                    "uuid": "1aaaadea-bfd0-44ee-aec4-e211ec096685"
+                }
+            },
+            "sheetId": "32166a57-c4c5-4713-bc1e-8598c46049e1",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "6734fc813eb0fb5f7adca53df2461f8f",
+                    "thousandSeparator": true,
+                    "width": 190
+                },
+                {
+                    "columnId": "21fa1431349b3fcf027d29afa3e42a66",
+                    "thousandSeparator": true,
+                    "width": 186
+                },
+                {
+                    "columnId": "9127a406b68144aec4ff8ad0cbe40af5",
+                    "thousandSeparator": true,
+                    "width": 185
+                },
+                {
+                    "columnId": "1c74cb605bbcf44d9d6c93f074461e20",
+                    "thousandSeparator": true,
+                    "width": 194
+                }
+            ],
+            "keep": true,
+            "name": "Joined",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "ExecutionId"
+                        ],
+                        "joinColumns2": [
+                            "Execution_Id"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "Mapping",
+                        "sheet2": "PerMrJobStats"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "Mapping": [],
+                    "PerMrJobStats": [
+                        "ExecutionId",
+                        "Execution_Id",
+                        "Timestamp",
+                        "InputBytes",
+                        "OutputBytes",
+                        "RunTimeMinutes",
+                        "MapSlots",
+                        "ReduceSlots"
+                    ]
+                }
+            },
+            "sheetId": "68eec0a9-b2e2-4923-a4cf-e32b8fb1f7c4",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ExecutionId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "MrJobId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "InputBytes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "OutputBytes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "RunTimeMinutes",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "6",
+                    "name": "MapSlots",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "7",
+                    "name": "ReduceSlots",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "ExecutionId",
+                    "formulaString": "=GROUPBY(#Joined!PerMrJobStats.Execution_Id)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Timestamp",
+                    "formulaString": "=GROUP_SORT_ASC(#Joined!PerMrJobStats.Timestamp)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "MrJobId",
+                    "formulaString": "=GROUPROWNUMBER()"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "InputBytes",
+                    "formulaString": "=COPY(#Joined!PerMrJobStats.InputBytes)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "OutputBytes",
+                    "formulaString": "=COPY(#Joined!PerMrJobStats.OutputBytes)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "RunTimeMinutes",
+                    "formulaString": "=COPY(#Joined!PerMrJobStats.RunTimeMinutes)"
+                },
+                {
+                    "columnId": "6",
+                    "columnIndex": 6,
+                    "columnName": "MapSlots",
+                    "formulaString": "=COPY(#Joined!PerMrJobStats.MapSlots)"
+                },
+                {
+                    "columnId": "7",
+                    "columnIndex": 7,
+                    "columnName": "ReduceSlots",
+                    "formulaString": "=COPY(#Joined!PerMrJobStats.ReduceSlots)"
+                }
+            ],
+            "keep": true,
+            "name": "CreateMrNumber",
+            "nextColumnId": 8,
+            "sheetId": "e3d4da02-ceae-44a1-aab9-00ea78dcd09f",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "MrJobId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "1",
+                    "decimalDigits": 0,
+                    "name": "Average_InputBytesKb",
+                    "thousandSeparator": true,
+                    "width": 150
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "2",
+                    "decimalDigits": 0,
+                    "name": "Average_OutputBytes",
+                    "thousandSeparator": false,
+                    "width": 133
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "3",
+                    "decimalDigits": 1,
+                    "name": "Average_RunTimeMinutes",
+                    "thousandSeparator": false,
+                    "width": 145
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "4",
+                    "decimalDigits": 0,
+                    "name": "Average_MapSlots",
+                    "thousandSeparator": false,
+                    "width": 153
+                },
+                {
+                    "alignment": "LEFT",
+                    "columnId": "5",
+                    "decimalDigits": 0,
+                    "name": "Average_ReduceSlots",
+                    "thousandSeparator": false,
+                    "width": 144
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "MrJobId",
+                    "formulaString": "=GROUPBY(#CreateMrNumber!MrJobId)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Average_InputBytesKb",
+                    "formulaString": "=GROUPAVERAGE(#CreateMrNumber!InputBytes)/1024"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Average_OutputBytes",
+                    "formulaString": "=GROUPAVERAGE(#CreateMrNumber!OutputBytes)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Average_RunTimeMinutes",
+                    "formulaString": "=GROUPAVERAGE(#CreateMrNumber!RunTimeMinutes)"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Average_MapSlots",
+                    "formulaString": "=GROUPAVERAGE(#CreateMrNumber!MapSlots)"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 5,
+                    "columnName": "Average_ReduceSlots",
+                    "formulaString": "=GROUPAVERAGE(#CreateMrNumber!ReduceSlots)"
+                }
+            ],
+            "keep": true,
+            "name": "PerJobStats",
+            "nextColumnId": 6,
+            "sheetId": "97cfd197-4505-46e8-b5db-892cd7329bab",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

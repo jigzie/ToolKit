@@ -1,0 +1,105 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "8ecc5e69-7c14-4cc7-8096-582faf52feb1",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_Functions.lnk",
+    "description": "Importing Formulas from the Formula table joined with Sheet table",
+    "name": "MySQL_Functions"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "1e63714b-f5ea-4da2-8486-73c88ee7595d"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      "select formula.id, formula.column_id,formula.column_index,formula.formula_string,sheet.id,sheet.workbook_fk from formula,sheet where formula.sheet_fk \u003d sheet.id"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 163,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "FormulaID",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 164,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "ColumnID",
+      "origin": "column_id",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 165,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "column_index",
+      "origin": "column_index",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 166,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "FormulaString",
+      "origin": "formula_string",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 167,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "SheetID",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 168,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "WorkbookID",
+      "origin": "workbook_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

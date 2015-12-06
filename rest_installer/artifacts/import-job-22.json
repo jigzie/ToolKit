@@ -1,0 +1,282 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_Logs_SSH.dst",
+        "uuid": "3b3f9a84-7034-41e2-920d-4fe01cc05623"
+    },
+    "errorHandlingMode": "DROP_RECORD",
+    "fields": [
+        {
+            "acceptEmpty": true,
+            "id": 10814,
+            "include": true,
+            "name": "execution_date",
+            "origin": "execution-date",
+            "pattern": "yyyy-MM-dd HH:mm:ss",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10815,
+            "include": true,
+            "name": "execution_id",
+            "origin": "execution-id",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10816,
+            "include": true,
+            "name": "execution_configuration_uuid",
+            "origin": "execution-configuration-uuid",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10817,
+            "include": true,
+            "name": "execution_configuration_job_type",
+            "origin": "execution-configuration-job-type",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10818,
+            "include": true,
+            "name": "total_sample_size",
+            "origin": "total-sample-size",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10819,
+            "include": true,
+            "name": "source_input_size",
+            "origin": "source-input-size",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10820,
+            "include": true,
+            "name": "dropped_records",
+            "origin": "dropped-records",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10821,
+            "include": true,
+            "name": "dropped_splits",
+            "origin": "dropped-splits",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10822,
+            "include": true,
+            "name": "byte_throughput",
+            "origin": "byte-throughput",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10823,
+            "include": true,
+            "name": "record_throughput",
+            "origin": "record-throughput",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10824,
+            "include": true,
+            "name": "records_proccesed",
+            "origin": "records-proccesed",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10825,
+            "include": true,
+            "name": "data_volume_imported",
+            "origin": "data-volume-imported",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10826,
+            "include": true,
+            "name": "import_size_imported",
+            "origin": "import-size-imported",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10827,
+            "include": true,
+            "name": "produced_records",
+            "origin": "produced-records",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10828,
+            "include": true,
+            "name": "produced_size",
+            "origin": "produced-size",
+            "pattern": "",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10829,
+            "include": false,
+            "name": "dasFileName",
+            "origin": "fileInfo.fileName",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10830,
+            "include": false,
+            "name": "dasFilePath",
+            "origin": "fileInfo.filePath",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10831,
+            "include": false,
+            "name": "dasLastModified",
+            "origin": "fileInfo.lastModified",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10832,
+            "include": false,
+            "name": "dasJobExecutionId",
+            "origin": "jobexecutionInfo.id",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10833,
+            "include": false,
+            "name": "dasJobExecutionStartTime",
+            "origin": "jobexecutionInfo.starttime",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "Job Volume Logs",
+        "name": "Logs_Volume",
+        "path": "/Administration/HUMv2/Ingestion/Logs_Volume.lnk",
+        "uuid": "e606b755-5e16-4012-a10a-697d9125d509"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 1,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "GenericConfigurationImpl.temp-file-store": [
+            "0986a9af-d2a4-43e6-8112-5f1099973556"
+        ],
+        "TextFileFormat": [
+            "TEXT_SCANNER"
+        ],
+        "alwaysIncludePaths": [
+            ""
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "collect_additional_fields": [
+            "false"
+        ],
+        "file": [
+            "logs/volume.log*"
+        ],
+        "fileNameTimeRange_mode": [
+            "OFF"
+        ],
+        "fileType": [
+            "JSON"
+        ],
+        "filter.maxAge": [
+            ""
+        ],
+        "filter.minAge": [
+            ""
+        ],
+        "filter.page.does.split.creation": [
+            "false"
+        ],
+        "ignorePaths": [
+            ""
+        ],
+        "ignore_surrounding_text": [
+            "false"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "maxTraverseDepth": [
+            "0"
+        ],
+        "recordSampleSize": [
+            "1000"
+        ],
+        "rootPath": [
+            ""
+        ],
+        "skipExpandPaths": [
+            ""
+        ],
+        "source.data.partitioned": [
+            "false"
+        ],
+        "unwrap_root_array": [
+            "false"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

@@ -1,0 +1,470 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "27e96fc5-10db-42ad-9279-5fcc01a804fa",
+    "path": "/AMEX_Audit/Audit Workbooks Sharing.wbk",
+    "description": "",
+    "name": "Audit Workbooks Sharing"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "DF",
+      "sheetId": "613306c8-9ed0-4a55-a0cc-8bb367c36273",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/AMEX_Audit/Data Sources/DF.lnk",
+        "uuid": "93971caa-8867-486b-8b63-8105810bbb47"
+      },
+      "columnStyles": [
+        {
+          "columnId": "Permission_FK",
+          "width": 228,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "Workbook_Name",
+          "width": 208,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "DJC",
+      "sheetId": "e163cd60-5523-4464-82d8-4dd265b0e98e",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/AMEX_Audit/Data Sources/DJC.lnk",
+        "uuid": "4abe005d-73c8-42c1-97bb-ec3c1f562deb"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "WC",
+      "sheetId": "674e0ee4-6d5e-46b2-ae45-43017f200a22",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/AMEX_Audit/Data Sources/WC.lnk",
+        "uuid": "54209610-c7e8-4e8a-baf5-2c5ed35b8f55"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Permission",
+      "sheetId": "96029caf-a0c9-4b24-96b9-4493f5ff14dc",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/AMEX_Audit/Data Sources/Permission.lnk",
+        "uuid": "5ffc1058-8f51-412a-a9f9-9bd780527f05"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "GP",
+      "sheetId": "459e81f0-796b-459d-af8c-57b53e301998",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/AMEX_Audit/Data Sources/GP.lnk",
+        "uuid": "3e6070c8-379a-4e9e-b974-fa9806095969"
+      },
+      "columnStyles": [
+        {
+          "columnId": "permission__id",
+          "width": 311,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Normalized_GP",
+      "sheetId": "169ae2b6-1126-407d-b817-93ebe4b8e1e8",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "PermissionID",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#GP!permission__id)"
+        },
+        {
+          "columnName": "GroupPermissions",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCONCAT(#GP!group_name+\":\"+#GP!permission_bits;#GP!id)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "PermissionID",
+          "width": 212,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "GroupPermissions",
+          "width": 354,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "Permission_GroupPermission",
+      "sheetId": "f35c1dca-1c64-4953-8d56-b70585c626a8",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "OUTER_LEFT",
+            "sheet1": "Permission",
+            "sheet2": "Normalized_GP",
+            "joinColumns1": [
+              "id"
+            ],
+            "joinColumns2": [
+              "PermissionID"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "Permission": [
+            "id",
+            "other_permission_bits",
+            "owner",
+            "shared"
+          ],
+          "Normalized_GP": [
+            "GroupPermissions"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "84fbdd52aaff7862710c69141f254951",
+          "width": 179,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "cb6cc3e325c5019da476c9cca8a6ccba",
+          "width": 290,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "c7db75ec59c1422392b274b097d406ff",
+          "width": 286,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "41dcd6d11d9a77a0ea94986407c76097",
+          "width": 173,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "DF_DJC_PermsAggr",
+      "sheetId": "48fef3a9-8d56-400d-87c3-32538bdf4604",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "MULTI_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "DF",
+            "sheet2": "Permission_GroupPermission",
+            "joinColumns1": [
+              "Permission_FK"
+            ],
+            "joinColumns2": [
+              "Permission.id"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "DJC",
+            "sheet2": "DF",
+            "joinColumns1": [
+              "dap_file__id"
+            ],
+            "joinColumns2": [
+              "ID"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "DF": [
+            "ID",
+            "Workbook_Name",
+            "Description"
+          ],
+          "DJC": [
+            "id",
+            "data_volume_size_by_license_period",
+            "min_keep_count"
+          ],
+          "Permission_GroupPermission": [
+            "Permission.id",
+            "Permission.other_permission_bits",
+            "Permission.owner",
+            "Permission.shared",
+            "Normalized_GP.GroupPermissions"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "ede4aa6458022eba09a33fb1bcd0d48c",
+          "width": 159,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "84fbdd52aaff7862710c69141f254951",
+          "width": 219,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "e3abc28106441cbef0f33ae8e1ce8630",
+          "width": 234,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1c030320dffee14f3fe5203554b3d6f6",
+          "width": 217,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "f436c7f384f39b2cd67040d1e1ff0b96",
+          "name": "GROUP_PERMISSIONS",
+          "width": 326,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8ce9d0071eb29880d4cce5f90a0569bf",
+          "name": "OTHER",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "619aac9cf933c1198875598894df7f8d",
+          "name": "OWNER",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "0d1ce3e94071b37aab24368e1afccd9f",
+          "name": "Workbook_Name",
+          "width": 337,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1971da2184c2fb87e45db495e794bec2",
+          "name": "Shared",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "74b338febee1b936d8b0d220b2a3f7b1",
+          "name": "PERMISSION_ID",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "PermsAggr_WC",
+      "sheetId": "1d2142e2-4cf0-46d7-b340-04f643e3e34c",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": false,
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "OUTER_LEFT",
+            "sheet1": "Permission_GroupPermission",
+            "sheet2": "WC",
+            "joinColumns1": [
+              "Permission.id"
+            ],
+            "joinColumns2": [
+              "full_data_permission_fk"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "Permission_GroupPermission": [
+            "Permission.id",
+            "Permission.other_permission_bits",
+            "Permission.owner",
+            "Permission.shared",
+            "Normalized_GP.GroupPermissions"
+          ],
+          "WC": [
+            "id",
+            "full_data_permission_fk"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "74b338febee1b936d8b0d220b2a3f7b1",
+          "width": 245,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "0737e93868d1b37f67a473bd3432df5f",
+          "width": 265,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "f436c7f384f39b2cd67040d1e1ff0b96",
+          "width": 246,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Shared_Workbooks",
+      "sheetId": "bc20290b-5559-4db3-8eb5-6be3db7186e6",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "filterSourceSheet": "Shared_Workbooks",
+      "filterTargetSheet": "Shared_Workbooks",
+      "connector": "OR",
+      "filterArguments": [
+        {
+          "column": "ArtifactsShared_Groups",
+          "filterExpression": "NOT_EMPTY",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "SharingData_Groups",
+          "filterExpression": "NOT_EMPTY",
+          "value": "null",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "SharingData_OTHERS",
+          "filterExpression": "MATCHES",
+          "value": ".*R.*|.*W.*|.*X.*",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "ArtifactsShared_OTHERS",
+          "filterExpression": "MATCHES",
+          "value": ".*R.*|.*W.*|.*X.*",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sheetDefinition": {
+        "joinCategory": "TWO_MEMBER_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "OUTER_RIGHT",
+            "sheet1": "PermsAggr_WC",
+            "sheet2": "DF_DJC_PermsAggr",
+            "joinColumns1": [
+              "WC.id"
+            ],
+            "joinColumns2": [
+              "DJC.id"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "DF_DJC_PermsAggr": [
+            "DJC.id",
+            "Workbook_Name",
+            "DF.Description",
+            "OTHER",
+            "OWNER",
+            "Shared",
+            "GROUP_PERMISSIONS"
+          ],
+          "PermsAggr_WC": [
+            "Permission_GroupPermission.other_permission_bits",
+            "Permission_GroupPermission.GroupPermissions"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "c43237e7d0df8917a29180cf36eebdbd",
+          "name": "SharingData_Groups",
+          "width": 276,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "196fe3a778c65c448f1cc984b9b58c6b",
+          "name": "ArtifactsShared_Groups",
+          "width": 195,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "a76a38846e1b5acd86c9d82386100448",
+          "name": "SharingData_OTHERS",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "42a669276aea98b81bc7e97876b6e75b",
+          "name": "Workbook_Name",
+          "width": 186,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "b74cd076f5c04c853c65171cf2a577e7",
+          "name": "ArtifactsShared_OTHERS",
+          "width": 192,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "199cf97fb274bfbf2e30c2a6a6f1a4aa",
+          "name": "WbkID",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "60321196bd3c7841fb613ac771d1dcee",
+          "name": "Description",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9d937c757becb7427f7f63dac276c684",
+          "name": "Owner",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8a6a825bfbf32d722c64d63aa5d1e3aa",
+          "name": "Shared",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ]
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

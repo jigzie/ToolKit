@@ -1,0 +1,702 @@
+{
+    "advancedSchedulingInUse": false,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_h_Configuration and Job Metadata",
+        "path": "/Administration/HUMv2/Reports/logs/_h_Configuration and Job Metadata.wbk",
+        "uuid": "d9dd5d1a-bbcf-4374-8bad-6974df583925"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "cardinalities.generation": [
+            "true"
+        ],
+        "histograms.generation": [
+            "true"
+        ],
+        "minmaxmean.generation": [
+            "true"
+        ]
+    },
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "Event",
+                    "thousandSeparator": true,
+                    "width": 204
+                }
+            ],
+            "keep": false,
+            "name": "Metrics",
+            "partitionSelectionExpression": "$partition >= ADDTODATE(TODAY();\"-30d\")",
+            "referencedSheet": {
+                "name": "Metrics",
+                "sheetId": "73f9c80d-003c-48ff-a1b3-bbe3e7af6707",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/base/_02_30_Metrics.wbk",
+                    "uuid": "53590388-9038-4bfe-b43a-5ab0060f6c90"
+                }
+            },
+            "sheetId": "9437163a-8372-4f47-aa71-ffd4993d42f7",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Event",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Value1",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Value2",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Value3",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Event",
+                    "filterExpression": "STARTS_WITH",
+                    "type": "CONSTANT",
+                    "value": "executing",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "ConfToExecutionMapping",
+            "filterTargetSheet": "ConfToExecutionMapping",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Metrics!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Event",
+                    "formulaString": "=#Metrics!Event"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Value1",
+                    "formulaString": "=#Metrics!ms"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Value2",
+                    "formulaString": "=#Metrics!Value2"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Value3",
+                    "formulaString": "=#Metrics!Value3"
+                }
+            ],
+            "keep": true,
+            "name": "ConfToExecutionMapping",
+            "nextColumnId": 5,
+            "sheetId": "b6516d6f-cfe4-491b-8cb5-484be21b8528",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "2",
+                    "name": "confId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "executionId",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "2",
+                    "columnIndex": 0,
+                    "columnName": "confId",
+                    "formulaString": "=INT(#ConfToExecutionMapping!Value1)"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 1,
+                    "columnName": "executionId",
+                    "formulaString": "=#ConfToExecutionMapping!Value2"
+                }
+            ],
+            "keep": true,
+            "name": "ConfIdToExecutionId",
+            "nextColumnId": 4,
+            "sheetId": "a2eecf5e-ab48-4ede-9e7a-492b9b49eb7e",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Event",
+                    "thousandSeparator": true,
+                    "width": 204
+                },
+                {
+                    "columnId": "2",
+                    "name": "Value1",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Value2",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Value3",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Event",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "unnecessary-kept-sheets",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "UnkeptSheetsPerConf",
+            "filterTargetSheet": "UnkeptSheetsPerConf",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Metrics!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Event",
+                    "formulaString": "=#Metrics!Event"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Value1",
+                    "formulaString": "=#Metrics!ms"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Value2",
+                    "formulaString": "=#Metrics!Value2"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Value3",
+                    "formulaString": "=#Metrics!Value3"
+                }
+            ],
+            "keep": true,
+            "name": "UnkeptSheetsPerConf",
+            "nextColumnId": 5,
+            "sheetId": "63d228bf-0f73-41ed-aa77-e87961946427",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "1",
+                    "name": "Configuration",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "UnnecessaryKeptSheets",
+                    "thousandSeparator": true,
+                    "width": 126
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "1",
+                    "columnIndex": 0,
+                    "columnName": "Configuration",
+                    "formulaString": "=GROUPBY(INT(#UnkeptSheetsPerConf!Value1))"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 1,
+                    "columnName": "UnnecessaryKeptSheets",
+                    "formulaString": "=GROUPLAST(T(#UnkeptSheetsPerConf!Value2);#UnkeptSheetsPerConf!Timestamp)"
+                }
+            ],
+            "keep": false,
+            "name": "UniqueKeptSheets",
+            "nextColumnId": 3,
+            "sheetId": "93f9abe5-d4e4-4502-81bd-932c4bf16376",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Event",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "Value1",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "3",
+                    "name": "Value2",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "4",
+                    "name": "Value3",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "Event",
+                    "filterExpression": "STARTS_WITH",
+                    "type": "CONSTANT",
+                    "value": "execution-",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "Metrics_Log_Import",
+            "filterTargetSheet": "Metrics_Log_Import",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Metrics!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Event",
+                    "formulaString": "=#Metrics!Event"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "Value1",
+                    "formulaString": "=#Metrics!ms"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "Value2",
+                    "formulaString": "=#Metrics!Value2"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 4,
+                    "columnName": "Value3",
+                    "formulaString": "=#Metrics!Value3"
+                }
+            ],
+            "keep": true,
+            "name": "Metrics_Log_Import",
+            "nextColumnId": 5,
+            "sheetId": "0b50b00a-d9a7-489b-9044-faa3ca315268",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Timestamp",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "ExecutionId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "PullType",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "PullType",
+                    "filterExpression": "NOT_BLANK",
+                    "type": "CONSTANT",
+                    "value": "null",
+                    "valueStatic": true
+                }
+            ],
+            "filterSourceSheet": "SchedulingInfo2",
+            "filterTargetSheet": "SchedulingInfo2",
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Timestamp",
+                    "formulaString": "=#Metrics_Log_Import!Timestamp"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "ExecutionId",
+                    "formulaString": "=INT(#Metrics_Log_Import!Value1)"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "PullType",
+                    "formulaString": "=#Metrics_Log_Import!Value3"
+                }
+            ],
+            "keep": false,
+            "name": "SchedulingInfo2",
+            "nextColumnId": 3,
+            "sheetId": "19f9129d-4d5a-4329-b14d-7d3b8a9487fe",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "Joined",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "executionId"
+                        ],
+                        "joinColumns2": [
+                            "ExecutionId"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "ConfIdToExecutionId",
+                        "sheet2": "SchedulingInfo2"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "ConfIdToExecutionId": [
+                        "confId",
+                        "executionId"
+                    ],
+                    "SchedulingInfo2": [
+                        "Timestamp",
+                        "PullType"
+                    ]
+                }
+            },
+            "sheetId": "155dbb78-0913-4164-8342-c8d52b84ded9",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ConfigurationId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "PullType",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "ConfigurationId",
+                    "formulaString": "=GROUPBY(#Joined!ConfIdToExecutionId.confId)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "PullType",
+                    "formulaString": "=GROUPLAST(#Joined!SchedulingInfo2.PullType;#Joined!SchedulingInfo2.Timestamp)"
+                }
+            ],
+            "keep": false,
+            "name": "SchedulingInfoPerConf",
+            "nextColumnId": 2,
+            "sheetId": "00465f40-dcb8-4acd-a1f6-b1a97b3af266",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0118516cc1343b9fa4864efbaa805210",
+                    "thousandSeparator": true,
+                    "width": 218
+                },
+                {
+                    "columnId": "411b1aa7c31cbcba6e4770a2a931e8d6",
+                    "thousandSeparator": true,
+                    "width": 224
+                }
+            ],
+            "keep": true,
+            "name": "ConfigurationMetaDataTemp",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "Configuration"
+                        ],
+                        "joinColumns2": [
+                            "ConfigurationId"
+                        ],
+                        "joinType": "FULL_OUTER",
+                        "sheet1": "UniqueKeptSheets",
+                        "sheet2": "SchedulingInfoPerConf"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "SchedulingInfoPerConf": [
+                        "ConfigurationId",
+                        "PullType"
+                    ],
+                    "UniqueKeptSheets": [
+                        "Configuration",
+                        "UnnecessaryKeptSheets"
+                    ]
+                }
+            },
+            "sheetId": "95c6723b-bb64-40f6-942c-7c066c31aba3",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ConfigurationId",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "UnnecessaryKeptSheets",
+                    "thousandSeparator": true,
+                    "width": 224
+                },
+                {
+                    "columnId": "2",
+                    "name": "PullType",
+                    "thousandSeparator": true,
+                    "width": 218
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "ConfigurationId",
+                    "formulaString": "=COALESCE(#ConfigurationMetaDataTemp!UniqueKeptSheets.Configuration;#ConfigurationMetaDataTemp!SchedulingInfoPerConf.ConfigurationId)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "UnnecessaryKeptSheets",
+                    "formulaString": "=#ConfigurationMetaDataTemp!UniqueKeptSheets.UnnecessaryKeptSheets"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "PullType",
+                    "formulaString": "=#ConfigurationMetaDataTemp!SchedulingInfoPerConf.PullType"
+                }
+            ],
+            "keep": true,
+            "name": "ConfMetaData",
+            "nextColumnId": 4,
+            "sheetId": "c620ab15-0526-42f2-af85-7456874acf15",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "3838981ed6380ebc16ab835c3fca2b99",
+                    "thousandSeparator": true,
+                    "width": 136
+                },
+                {
+                    "columnId": "566e708c5d674b58004cb6f441c4e10a",
+                    "thousandSeparator": true,
+                    "width": 123
+                },
+                {
+                    "columnId": "2407566b152366e81ae332eaade0cc6c",
+                    "thousandSeparator": true,
+                    "width": 221
+                },
+                {
+                    "columnId": "3451eeecbbd1dfde749517416b49fd96",
+                    "thousandSeparator": true,
+                    "width": 126
+                }
+            ],
+            "keep": false,
+            "name": "Joined2",
+            "sheetDefinition": {
+                "joinCategory": "TWO_MEMBER_JOIN",
+                "joinPairs": [
+                    {
+                        "joinColumns1": [
+                            "confId"
+                        ],
+                        "joinColumns2": [
+                            "SchedulingInfoPerConf.ConfigurationId"
+                        ],
+                        "joinType": "INNER",
+                        "sheet1": "ConfIdToExecutionId",
+                        "sheet2": "ConfigurationMetaDataTemp"
+                    }
+                ],
+                "sheetToIncludeColumns": {
+                    "ConfIdToExecutionId": [
+                        "confId",
+                        "executionId"
+                    ],
+                    "ConfigurationMetaDataTemp": [
+                        "UniqueKeptSheets.UnnecessaryKeptSheets",
+                        "SchedulingInfoPerConf.PullType"
+                    ]
+                }
+            },
+            "sheetId": "6f84273f-14ab-44b9-a055-6f5eb0a43392",
+            "sheetType": "das.internal.JoinedSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "ConfigurationId",
+                    "thousandSeparator": true,
+                    "width": 136
+                },
+                {
+                    "columnId": "1",
+                    "name": "ExecutionId",
+                    "thousandSeparator": true,
+                    "width": 123
+                },
+                {
+                    "columnId": "2",
+                    "name": "UnnecessaryKeptSheets",
+                    "thousandSeparator": true,
+                    "width": 221
+                },
+                {
+                    "columnId": "3",
+                    "name": "PullType",
+                    "thousandSeparator": true,
+                    "width": 126
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "1",
+                    "columnIndex": 0,
+                    "columnName": "ExecutionId",
+                    "formulaString": "=#Joined2!ConfIdToExecutionId.executionId"
+                },
+                {
+                    "columnId": "0",
+                    "columnIndex": 1,
+                    "columnName": "ConfigurationId",
+                    "formulaString": "=#Joined2!ConfIdToExecutionId.confId"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "UnnecessaryKeptSheets",
+                    "formulaString": "=#Joined2!ConfigurationMetaDataTemp.UnnecessaryKeptSheets"
+                },
+                {
+                    "columnId": "3",
+                    "columnIndex": 3,
+                    "columnName": "PullType",
+                    "formulaString": "=#Joined2!ConfigurationMetaDataTemp.PullType"
+                }
+            ],
+            "keep": true,
+            "name": "ExecutionMetaData",
+            "nextColumnId": 4,
+            "sheetId": "a9fec789-9d7e-4b19-be00-0a60ebd26cff",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

@@ -1,0 +1,35 @@
+#Adjust the following: 
+#hadoopLocation=/user/datameer3110_test (change it to your hadoop configuration)
+hadoopLocation="/user/datameer3110_test"
+#Database String DM_DAP="-udap -pdap dap"
+DM_DAP="-udap -pdap LocalDap205"
+
+rm HadoopData.list* DMData.list CustomReport
+echo "Starting Datameer Sync Test"
+echo "Gathering Hadoop Information........."
+hadoop fs -ls "$hadoopLocation"/fileuploads/*/ > HadoopData.list.tmp
+#hadoop fs -ls /user/datameer3110_test/importjobs/*/ >> HadoopData.list
+#hadoop fs -ls /user/datameer3110_test/workbooks/*/ >> HadoopData.list
+#hadoop fs -ls /user/datameer3110_test/exportjobs/*/ >> HadoopData.list
+#hadoop fs -ls /user/datameer3110_test/infographics/*/ >> HadoopData.list
+
+echo "Gathering Database Information........."
+#mysql -udap -pdap dap_ops < sqlquery > DMData.list
+mysql $DM_DAP < sqlquery > DMData.list
+grep -o '/.*' HadoopData.list.tmp | grep -o '.*/fileuploads/[0-9]*/[0-9]*' | sort -u > HadoopData.list
+#grep -o '/.*' HadoopData.list.tmp | grep -o '.*/importjobs/[0-9]*/[0-9]*' | sort -u >> HadoopData.list
+#grep -o '/.*' HadoopData.list.tmp | grep -o '.*/workbooks/[0-9]*/[0-9]*' | sort -u >> HadoopData.list
+#grep -o '/.*' HadoopData.list.tmp | grep -o '.*/exportjobs/[0-9]*/[0-9]*' | sort -u >> HadoopData.list
+
+echo "Done Collecting Hadoop Information"
+
+echo "Comparing HADOOP and DATAMEER........."
+for fileId in `cat HadoopData.list`; 
+do 
+	result=`grep $fileId DMData.list | wc -l|sed "s/ //g"`; 
+	echo "Searching $fileId with Result:$result"; 
+	if [[ $result == "0" ]]; 
+	then 
+		echo "$fileId" >> CustomReport; 
+	fi; 
+done

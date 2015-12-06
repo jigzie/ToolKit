@@ -1,0 +1,131 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "ClusterConfig",
+        "path": "/Administration/HUMv2/Reports/http/ClusterConfig.wbk",
+        "uuid": "de78919e-b8c7-4d87-bbf4-14671f333b6f"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "HTTP_Cluster_Config_Page",
+            "referencedSheet": {
+                "name": "HTTP_Cluster_Config_Page",
+                "sheetId": "c1700c95-ae37-4bcb-a43b-f09ed02e3a02",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/base/_01_05_Cluster_Config_Page.wbk",
+                    "uuid": "3df1b849-2af4-4a18-9691-455842abfd50"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "a0e1bdef-2f8a-430e-bf90-17a26b06d6ea",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "clusterProps",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "clusterProps",
+                    "formulaString": "=LISTELEMENT(CONTENTS_BY_TAG_NAME(#HTTP_Cluster_Config_Page!parsed_html;\"pre\");0)"
+                }
+            ],
+            "keep": false,
+            "name": "data_prep",
+            "nextColumnId": 1,
+            "sheetId": "d5e99987-9b74-42d1-98ff-67ca09d7321e",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "clusterProps",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "equalsIdx",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "clusterProps",
+                    "formulaString": "=TOKENIZE(#data_prep!clusterProps;\"\\\\n\")"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "equalsIdx",
+                    "formulaString": "=INDEX(#clusterProps;\"=\")"
+                }
+            ],
+            "keep": false,
+            "name": "explode_props",
+            "nextColumnId": 2,
+            "sheetId": "04747f23-8b5a-44c4-9c0d-3328d17f9d55",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 223
+                },
+                {
+                    "columnId": "1",
+                    "name": "val",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "key",
+                    "formulaString": "=LEFT(#explode_props!clusterProps;#explode_props!equalsIdx)"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "val",
+                    "formulaString": "=SUBSTR(#explode_props!clusterProps;#explode_props!equalsIdx+1)"
+                }
+            ],
+            "keep": true,
+            "name": "clusterConfs",
+            "nextColumnId": 2,
+            "sheetId": "45657f19-6479-44b0-9c46-aa8179ec331f",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

@@ -1,0 +1,72 @@
+##################DATAMEER ORG#################
+dn: ou=datameer,dc=hadoop,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: datameer
+description: DATAMEER, Inc
+
+########################PEOPLE######################
+#ORGANIZATION PEOPLE
+dn: ou=people,ou=datameer,dc=hadoop,dc=com
+objectClass: organizationalUnit
+ou: people
+
+#PROFESSIONAL SERVICES TREE
+dn: ou=Professional Services,ou=people,ou=datameer,dc=hadoop,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: Professional Services
+description: Professional Services Business Unit
+
+#ENGINEERING TREE
+dn: ou=Engineering,ou=people,ou=datameer,dc=hadoop,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: Engineering 
+description:  Engineering Business Unit
+
+#SALES TREE
+dn: ou=Sales,ou=people,ou=datameer,dc=hadoop,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: Sales 
+description: Sales Business Unit
+
+########################GROUPS#########################
+#GROUPS TREE STRUCTURE
+#PARENT Groups
+dn: ou=groups,ou=datameer,dc=hadoop,dc=com
+objectClass: organizationalUnit
+ou: groups
+
+#STATIC: GROUP OF UNIQUE NAMES
+dn: cn=DM Static GroupOfUniqueNames,ou=groups,ou=datameer,dc=hadoop,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: DM Static GroupOfUniqueNames
+description: Static Datameer Group of Unique Names (add using uniqueMember: $user.DN)
+uniqueMember: uid=DM Dummy,ou=people,ou=datameer,dc=hadoop,dc=com
+
+#STATICL GROUP OF NAMES
+dn: cn=DM Static GroupOfNames,ou=groups,ou=datameer,dc=hadoop,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: DM Static GroupOfNames
+description: Static Datameer Group of Names (add using member: $user.DN)
+member: uid=DM DUMMY,ou=people,ou=datameer,dc=hadoop,dc=com
+
+#DYNAMIC GROUP
+#dn: cn=DM Dynamic PS GroupOfURLs,ou=groups,ou=datameer,dc=hadoop,dc=com
+#objectClass: groupOfURLs
+#objectClass: top
+#cn: DM Dynamic PS GroupOfURLs
+#memberURL: ldap:///ou=professional services,ou=people,ou=datameer,dc=hadoop,dc=com??sub?
+#description: Dynamic Datameer PS Group using URL
+
+#STATIC GROUP WHERE users will be linked using isMemberOf 
+dn: cn=DM Linked,ou=groups,ou=datameer,dc=hadoop,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: DM Linked
+description: Static Datameer Group for Linking(add membership thru users: memberOf: cn=DM Static,ou=groups....dc=com
+member: uid=DM DUMMY,ou=people,ou=datameer,dc=hadoop,dc=com

@@ -1,0 +1,97 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "d8fcf87f-ceea-48a5-b98c-428809753a6d",
+    "path": "/Datameer Consumption Stats/Resources/DM_Owner_Wbk_Sheet_Stats.lnk",
+    "description": "Datameer Workbook, Sheet, Owner, Statistics information from MySQL",
+    "name": "DM_Owner_Wbk_Sheet_Stats"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "c4229254-3297-4385-8555-61d06baa380b"
+    ],
+    "!query!": [
+      "select p.owner Owner, wc.id WorkbookID, d.uri HDFS_Location, df.name WorkbookName,  wsd.sheet_name WorkbookSheetName, wsd.statistics DataStatistics\r\nfrom workbook_configuration wc, workbook_sheet_data wsd, data d, dap_file df, permission p \r\nwhere \r\nd.dap_job_configuration__id\u003dwc.id \r\nand d.id\u003dwsd.workbook_data_fk \r\nand d.dap_file__id\u003ddf.id\r\nand p.id \u003d df.permission_fk\r\nand wsd.statistics like \u0027%bytes%\u0027\r\ngroup by p.owner, wc.id"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "tableName": [
+      "!query!"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ]
+  },
+  "hadoopProperties": "",
+  "dataStore": {
+    "path": "/Datameer Consumption Stats/Resources/MySQL_DB.dst",
+    "uuid": "0672f52b-2468-4942-996c-f12b4facc747"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "fields": [
+    {
+      "id": 1,
+      "acceptEmpty": true,
+      "name": "owner",
+      "origin": "owner",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 2,
+      "acceptEmpty": false,
+      "name": "WorkbookID",
+      "origin": "WorkbookID",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 3,
+      "acceptEmpty": false,
+      "name": "HDFS_Location",
+      "origin": "HDFS_Location",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 4,
+      "acceptEmpty": true,
+      "name": "WorkbookName",
+      "origin": "WorkbookName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 5,
+      "acceptEmpty": false,
+      "name": "WorkbookSheetName",
+      "origin": "WorkbookSheetName",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 6,
+      "acceptEmpty": true,
+      "name": "DataStatistics",
+      "origin": "DataStatistics",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

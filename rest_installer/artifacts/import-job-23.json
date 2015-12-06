@@ -1,0 +1,131 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_HTTP.dst",
+        "uuid": "05a24283-cd71-4679-9ae8-e66cb6904041"
+    },
+    "errorHandlingMode": "DROP_RECORD",
+    "fields": [
+        {
+            "acceptEmpty": true,
+            "id": 10834,
+            "include": true,
+            "name": "parsed_html",
+            "origin": "parsed_html",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10835,
+            "include": false,
+            "name": "original_html",
+            "origin": "original_html",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10836,
+            "include": false,
+            "name": "dasFileName",
+            "origin": "fileInfo.fileName",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10837,
+            "include": false,
+            "name": "dasFilePath",
+            "origin": "fileInfo.filePath",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10838,
+            "include": false,
+            "name": "dasLastModified",
+            "origin": "fileInfo.lastModified",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10839,
+            "include": false,
+            "name": "dasJobExecutionId",
+            "origin": "jobexecutionInfo.id",
+            "valueType": "{\"type\":\"INTEGER\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10840,
+            "include": false,
+            "name": "dasJobExecutionStartTime",
+            "origin": "jobexecutionInfo.starttime",
+            "valueType": "{\"type\":\"DATE\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "Admin Page Information",
+        "name": "HTTP_Admin_Page",
+        "path": "/Administration/HUMv2/Ingestion/HTTP_Admin_Page.lnk",
+        "uuid": "2c846545-c0d9-4be2-8acb-24ebacadeb0a"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 1,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "GenericConfigurationImpl.temp-file-store": [
+            "9254e70e-d65c-417e-a2d7-c38c2b3cb1f3"
+        ],
+        "TextFileFormat": [
+            "TEXT_WHOLE_FILE"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "file": [
+            "admin/system-overview"
+        ],
+        "fileNameTimeRange_mode": [
+            "OFF"
+        ],
+        "fileType": [
+            "datameer.das.plugin.html.input.HtmlFileType"
+        ],
+        "filter.maxAge": [
+            ""
+        ],
+        "filter.minAge": [
+            ""
+        ],
+        "filter.page.does.split.creation": [
+            "false"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "maxFileSizeLimit": [
+            "4096"
+        ],
+        "parseOptions": [
+            "removeMeta"
+        ],
+        "recordSampleSize": [
+            "1000"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

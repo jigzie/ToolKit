@@ -1,0 +1,85 @@
+{
+    "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+    "dataStore": {
+        "path": "/Administration/HUMv2/Ingestion/Datameer_DB.dst",
+        "uuid": "97281eb5-03fb-4ba6-bb1f-2498ca8ae6c7"
+    },
+    "errorHandlingMode": "ABORT_JOB",
+    "fields": [
+        {
+            "acceptEmpty": false,
+            "id": 10718,
+            "include": true,
+            "name": "ConnectionType",
+            "origin": "type_id",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": true,
+            "id": 10719,
+            "include": true,
+            "name": "JDBC",
+            "origin": "name",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10720,
+            "include": true,
+            "name": "ConsumerType",
+            "origin": "extension",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        },
+        {
+            "acceptEmpty": false,
+            "id": 10721,
+            "include": true,
+            "name": "FileType",
+            "origin": "export_file_type",
+            "pattern": "",
+            "valueType": "{\"type\":\"STRING\"}",
+            "version": 3
+        }
+    ],
+    "file": {
+        "description": "",
+        "name": "MySQL_export_file_types",
+        "path": "/Administration/HUMv2/Ingestion/MySQL_export_file_types.lnk",
+        "uuid": "93d5bfe5-76a1-46fc-8e30-f21335a3931a"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "maxLogErrors": 1000,
+    "maxMappers": 4,
+    "maxPreviewRecords": 5000,
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "!query!": [
+            "select ds.type_id,dd.name,df3.extension,fds.export_file_type from file_dependency fd1\r\ninner join file_dependency fd2 on fd1.source_file_id=fd2.source_file_id \r\ninner join dap_file df1 on df1.id=fd1.dependency_file_id and df1.extension='DATA_STORE_EXTENSION'\r\ninner join dap_file df2 on df2.id=fd2.dependency_file_id and df2.extension='WORKBOOK_EXTENSION'\r\ninner join dap_file df3 on df3.id=fd1.source_file_id and df3.extension='EXPORT_JOB_EXTENSION'\r\ninner join data_store ds on ds.dap_file__id=df1.id\r\nleft join db_driver dd on ds.db_type_fk=dd.id\r\ninner join data_sink_configuration dsc on ds.id=dsc.connection_fk \r\ninner join dap_job_configuration djc on dsc.id=djc.id and djc.dap_file__id=fd1.source_file_id\r\ninner join file_data_sink fds on fds.id=dsc.id"
+        ],
+        "GenericConfigurationImpl.temp-file-store": [
+            "81d90f44-c91b-4439-9fb6-a336c6ba05a4"
+        ],
+        "characterEncoding": [
+            "UTF-8"
+        ],
+        "incrementalMode": [
+            "false"
+        ],
+        "orderColumn": [
+            "$NO_APPROPRIATE_ORDER_COLUMN$"
+        ],
+        "tableName": [
+            "!query!"
+        ]
+    },
+    "pullType": "MANUALLY",
+    "version": "4.5.0"
+}

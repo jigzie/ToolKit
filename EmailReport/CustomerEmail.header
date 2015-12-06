@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>CSM Report</title>
+<style type="text/css">
+@media only screen and (max-width: 640px) {
+#templateColumns {
+	width: 100% !important;
+}
+.templateColumnContainer {
+	display: block !important;
+	width: 100% !important;
+}
+.columnImage {
+	height: auto !important;
+	max-width: 480px !important;
+	width: 100% !important;
+}
+.thumbIcon {
+	height: auto !important;
+	max-width: 84px !important;
+	width: 100% !important;
+}
+.leftColumnContent {
+	font-size: 16px !important;
+	line-height: 1.5em !important;
+}
+.rightColumnContent {
+	font-size: 16px !important;
+	line-height: 1.5em !important;
+}
+}
+
+.info th, .info td {
+	font-size:12px;
+	line-height:1.5em;
+}
+</style>
+</head>
+<body style="background-color:#dfdfdf; color: #5b6770 !important;" >
+<table style="max-width:640px; margin:0 auto; background-color:#ffffff; border-radius:8px;" class="main-wrapping-table" cellspacing="0" cellpadding="0" >
+  <tr >
+    <td style="padding:0 20px; " ><div class="mktEditable" id="header-logo" >
+        <table width="100%">
+          <tbody>
+            <tr>
+              <td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #365ebf; text-align: center;"><p><a href="http://www.datameer.com?ls=Email&amp;lsd=Nurture&amp;c=Email&amp;cd=Nurture"><img src="http://www.datameer.com/images/logo/logo.png" alt="Datameer - The Only End-to-End Big Data Analytics for Hadoop" width="100%" style="max-width:200px; border: none;"></a></p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div></td>
+  </tr>
+  
+  <tr >
+    <td style="padding:10px 30px;" ><div class="mktEditable" id="content-section-1" >
+        <table id="templateColumns1" border="0" cellspacing="0" cellpadding="0" width="100%">
+          <tbody>
+            <tr>
+              <td class="templateColumnContainer" width="100%" align="center" valign="top"><table border="0" cellspacing="0" cellpadding="10" width="100%">
+                  <tbody>
+                    <tr>
+                      <td class="leftColumnContent" style="font-family: Helvetica; font-size: 15px; line-height: 1.5em; font-weight: 400;" valign="top">
+                      <p style="font-weight: 400; font-family: Helvetica;">
+Hello,<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the latest information on the Datameer fixes applicable to CUSTOMER, available in the release listed. Additionally listed is the New & Noteworthy features of Datameer that are available for your environment.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will be a bi-weekly notification. If you would like to increase/decrease or unsubscribe please notify your Customer Success Manager at Datameer.
+                      </p>

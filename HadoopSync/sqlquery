@@ -1,0 +1,1 @@
+Select CONCAT("/",SUBSTRING_INDEX(URI,'/',-5)) DataList from data where uri like 'hdfs%';

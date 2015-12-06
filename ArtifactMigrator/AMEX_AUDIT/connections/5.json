@@ -1,0 +1,31 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.sdk.entity.CustomDataStore",
+  "file": {
+    "uuid": "53c64e6b-82c6-43ac-a49b-c3b374461d2a",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_HTTP.dst",
+    "description": "",
+    "name": "Datameer_HTTP"
+  },
+  "typeId": "das.CustomFileDataStoreType",
+  "properties": {
+    "dataStoreUsage": [
+      "IMPORT"
+    ],
+    "custom-file-protocol.url": [
+      "http://54.81.124.105:8080/"
+    ],
+    "rootPathPrefix": [
+      "/"
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "e98defda-8a6f-41a2-ade6-3260df269305"
+    ],
+    "user_name": [
+      "admin"
+    ],
+    "password": [
+      "SECURE:0:uw0dy2r/0Gf/3FwuR0IQig\u003d\u003d"
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "81e098c4-eaf5-42b7-a1bb-ef67386974bd",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_data_store.lnk",
+    "description": "data_store",
+    "name": "MySQL_data_store"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "tableName": [
+      "\u0027data_store\u0027"
+    ],
+    "orderColumn": [
+      "id"
+    ],
+    "incrementalMode": [
+      "false"
+    ],
+    "GenericConfigurationImpl.temp-file-store": [
+      "8db9a967-abe2-4003-ab47-506ad869b7b8"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "!query!": [
+      ""
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 4,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 149,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "type",
+      "origin": "type",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 150,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 151,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "type_id",
+      "origin": "type_id",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 152,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dap_file__id",
+      "origin": "dap_file__id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 153,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "db_type_fk",
+      "origin": "db_type_fk",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    }
+  ]
+}

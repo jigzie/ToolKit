@@ -1,0 +1,153 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "05fbd86b-d5e7-4719-9f6e-7dfc81d757b8",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/_j_Page Requests With Errors.wbk",
+    "description": "",
+    "name": "_j_Page Requests With Errors"
+  },
+  "pullType": "WHEN_NEW_DATA_COMES_IN",
+  "minKeepCount": 1,
+  "properties": {
+    "cardinalities.generation": [
+      "true"
+    ],
+    "histograms.generation": [
+      "true"
+    ],
+    "minmaxmean.generation": [
+      "true"
+    ]
+  },
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "HTTP_Errors",
+      "sheetId": "d11cf1f9-b3f8-488e-abc3-a9be7b398977",
+      "sheetType": "das.internal.ExternalWorkbookSheetType",
+      "keep": false,
+      "referencedSheet": {
+        "name": "HTTP_Errors",
+        "sheetId": "cdcc2735-860a-4b79-8c46-8e76b0f77783",
+        "workbook": {
+          "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_20_HTTP_Errors.wbk",
+          "uuid": "a524d2f8-8f60-4b9a-b185-598223163afe"
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "Page",
+          "width": 279,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "pageRequestsWithErrors",
+      "sheetId": "668fd490-93dd-4a00-95e1-6f18c9998fd8",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "filterSourceSheet": "pageRequestsWithErrors",
+      "filterTargetSheet": "pageRequestsWithErrors",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "Page",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "error-pages",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "Page",
+          "filterExpression": "NOT_CONTAINS",
+          "value": "ajax-",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "sortSourceSheet": "pageRequestsWithErrors",
+      "sortTargetSheet": "pageRequestsWithErrors",
+      "sortKeys": [
+        {
+          "column": "Timestamp",
+          "sortOrder": "DESC"
+        },
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "Timestamp",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(FORMATDATE(#HTTP_Errors!Timestamp;\"yyyy-MM-dd\"))"
+        },
+        {
+          "columnName": "HttpStatusCode",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#HTTP_Errors!HttpStatusCode)"
+        },
+        {
+          "columnName": "Page",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPBY(#HTTP_Errors!Page)"
+        },
+        {
+          "columnName": "Stacktrace",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003dGROUPANY(#HTTP_Errors!Stacktrace)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Timestamp",
+          "width": 265,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "HttpStatusCode",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Page",
+          "width": 279,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Stacktrace",
+          "width": 411,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 5
+    }
+  ],
+  "advancedSchedulingInUse": false,
+  "errorHandlingMode": "DROP_RECORD"
+}

@@ -1,0 +1,1408 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.infographic.Infographic",
+  "links": {
+    "self": "/rest/infographics/6"
+  },
+  "file": {
+    "uuid": "72002dd5-89fb-400c-b20f-3ba8714c5093",
+    "path": "/Users/admin/Applications/Facebook Social Stats/Facebook Social Statistics.ifg",
+    "name": "Facebook Social Statistics"
+  },
+  "presentationMode": "tabs",
+  "slideshowEffect": "none",
+  "slideshowTime": 5,
+  "tabs": [
+    {
+      "name": "Page 1",
+      "order": 0,
+      "id": "50b3d3d2-8290-4121-a4a1-5084ffde0d44",
+      "widgets": [
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Line and Area Chart",
+            "isBarChart": false,
+            "showAreas": false,
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              }
+            },
+            "panelGroup": "chart"
+          },
+          "name": "Line and Area Chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 45,
+          "top": 124.5,
+          "width": 940,
+          "height": 249,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 7,
+          "id": "52261017-b42d-424b-874d-9b8a3b57a335",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;28a5ae3d-372a-4cd3-822c-29c105fa87a4",
+                  "type": "INTEGER",
+                  "name": "weekOfYear",
+                  "columnId": "0",
+                  "toolTip": "Activity / Latest Result / CountsByWeek / weekOfYear",
+                  "id": "a3c8d9a8-d3d6-4e9e-bcc4-c7eebe919b68"
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;28a5ae3d-372a-4cd3-822c-29c105fa87a4",
+                  "type": "INTEGER",
+                  "name": "PostingsCount",
+                  "columnId": "1",
+                  "toolTip": "Activity / Latest Result / CountsByWeek / PostingsCount",
+                  "id": "593a0524-033a-4c98-b261-42eaf5e62e35"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;28a5ae3d-372a-4cd3-822c-29c105fa87a4",
+                  "type": "INTEGER",
+                  "name": "CommentsCount",
+                  "columnId": "2",
+                  "toolTip": "Activity / Latest Result / CountsByWeek / CommentsCount",
+                  "id": "77b9ebcd-502b-4c3b-8465-1dde501456f5"
+                },
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;28a5ae3d-372a-4cd3-822c-29c105fa87a4",
+                  "type": "INTEGER",
+                  "name": "LikesCount",
+                  "columnId": "3",
+                  "toolTip": "Activity / Latest Result / CountsByWeek / LikesCount",
+                  "id": "b35c7eee-9ae8-4c26-9ad2-20376b0a6610"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;28a5ae3d-372a-4cd3-822c-29c105fa87a4",
+            "lastExecutionDate": "10/18/2012 07:40:29 AM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "margin": 20,
+          "offset": 10,
+          "marginTop": 20,
+          "marginRight": 20,
+          "marginBottom": 70,
+          "marginLeft": 50,
+          "scale": "linear",
+          "isGridVisible": true,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "isShadowVisible": false,
+          "isStyleVisible": false,
+          "colorScheme": "categorical",
+          "fillColorList": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "white",
+          "labelColor": "rgb(125, 125, 125)",
+          "labelLength": 100,
+          "labelOrientationX": "diagonal",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "variant": "stacked",
+          "offsetVariant": "zero",
+          "groupGapInPercent": 10,
+          "fontSize": "9",
+          "fontName": "Arial",
+          "isBarChart": false,
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showPoints": true,
+          "showAreas": false,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "transpose": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": true,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1,
+          "fontName_text": "Arial",
+          "labelOrientationX_text": "Diagonal",
+          "variant_text": "Stacked"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Pie Chart",
+            "chart": "infographics/charts/pie_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/piechart_inspector",
+            "panelGroup": "chart"
+          },
+          "name": "Pie Chart",
+          "inspectorName": "infographics/views/piechart_inspector",
+          "left": 6.5,
+          "top": 482,
+          "width": 533,
+          "height": 245,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 8,
+          "id": "0829dc9e-0e6e-4690-ac2f-0c1dc2b9bd90",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;138eaf99-c50f-426b-9827-c3d891ad863b",
+                  "type": "STRING",
+                  "name": "type",
+                  "columnId": "0",
+                  "toolTip": "Activity / Latest Result / PostsByType / type",
+                  "id": "d9050aed-5b16-45fb-854d-58b848f590aa"
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;138eaf99-c50f-426b-9827-c3d891ad863b",
+                  "type": "INTEGER",
+                  "name": "count",
+                  "columnId": "1",
+                  "toolTip": "Activity / Latest Result / PostsByType / count",
+                  "id": "c0dc7cd0-8069-48cf-8272-e742b3b050ac"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;138eaf99-c50f-426b-9827-c3d891ad863b",
+            "lastExecutionDate": "10/18/2012 07:40:29 AM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "marginTop": "50",
+          "marginRight": "50",
+          "marginBottom": "50",
+          "marginLeft": "50",
+          "fillColorList": [
+            "rgb(59, 89, 152)",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "white",
+          "labelColor": "rgb(125, 125, 125)",
+          "colorScheme": "range",
+          "isShadowVisible": true,
+          "style": "plain",
+          "showLabels": true,
+          "labelType": "percentage",
+          "fontSize": "11",
+          "fontName": "Arial",
+          "labelLength": "50",
+          "enableTooltips": true,
+          "labelReduction": "0",
+          "labelLayoutVariant": "side-aligned",
+          "labelGap": "19",
+          "holeRadius": "60",
+          "prefix": "",
+          "suffix": "",
+          "hasThousandSeparator": true,
+          "labelLayoutVariant_text": "Sides",
+          "fontName_text": "Arial",
+          "labelType_text": "Percentage",
+          "colorScheme_text": "Range"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Tag List",
+            "chart": "infographics/charts/tag_list",
+            "dataDescriptor": {
+              "maxSize": 100,
+              "word": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "value": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "inspector": "infographics/views/tag_list_inspector",
+            "panelGroup": "chart"
+          },
+          "name": "Tag List",
+          "inspectorName": "infographics/views/tag_list_inspector",
+          "left": 601,
+          "top": 496,
+          "width": 421,
+          "height": 285,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 9,
+          "id": "fd071bac-b0f0-40fa-85a7-231f3f63e6ae",
+          "maxSize": 100,
+          "dataSet": {
+            "maxSize": 100,
+            "descriptor": {
+              "word": {
+                "type": [
+                  "STRING"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "value": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  0,
+                  1
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "word": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;0d68dc56-7476-4669-81ba-9014c8d8fdd7",
+                  "type": "STRING",
+                  "name": "word",
+                  "columnId": "0",
+                  "toolTip": "FacebookFinal / Activity / Latest Result / TopWords / word",
+                  "id": "5beec27b-0297-4172-8c12-c5ddff165188"
+                }
+              ],
+              "value": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;0d68dc56-7476-4669-81ba-9014c8d8fdd7",
+                  "type": "INTEGER",
+                  "name": "count",
+                  "columnId": "1",
+                  "toolTip": "FacebookFinal / Activity / Latest Result / TopWords / count",
+                  "id": "65134817-bbfd-4171-ba74-bd08052fd796"
+                }
+              ]
+            },
+            "lastExecutionDate": "10/18/2012 07:40:29 AM",
+            "isTruncated": false,
+            "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;0d68dc56-7476-4669-81ba-9014c8d8fdd7"
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "skyblue",
+          "backColor": "transparent",
+          "fontSize": "8.17",
+          "maxFontSizeMultiplier": 3,
+          "fontName": "Arial",
+          "italic": false,
+          "underline": false,
+          "align": "center",
+          "color": "rgb(99, 99, 99)",
+          "wordPadding": 5
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Line and Area Chart",
+            "isBarChart": false,
+            "showAreas": false,
+            "inspector": "infographics/views/multi_bar_chart_inspector",
+            "chart": "infographics/charts/multi_bar_chart",
+            "dataDescriptor": {
+              "maxSize": 50,
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              }
+            },
+            "panelGroup": "chart"
+          },
+          "name": "Line and Area Chart",
+          "inspectorName": "infographics/views/multi_bar_chart_inspector",
+          "left": 45,
+          "top": 866,
+          "width": 926,
+          "height": 223,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 10,
+          "id": "161018db-61b6-44d9-a573-e71792103da9",
+          "maxSize": 50,
+          "dataSet": {
+            "maxSize": 50,
+            "descriptor": {
+              "label": {
+                "type": [
+                  "ANY"
+                ],
+                "dimensions": [
+                  1,
+                  1
+                ]
+              },
+              "data": {
+                "type": [
+                  "INTEGER",
+                  "BIG_INTEGER",
+                  "FLOAT",
+                  "BIG_DECIMAL"
+                ],
+                "dimensions": [
+                  1,
+                  10
+                ]
+              }
+            },
+            "dataSeriesGroups": {
+              "label": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;b5dc116a-88aa-4386-868a-bf2648573cb6",
+                  "type": "INTEGER",
+                  "name": "week",
+                  "columnId": "0",
+                  "toolTip": "Activity / Latest Result / HappinessByWeek / week",
+                  "id": "6b02942c-9133-4de5-8208-f5756f77e3ab"
+                }
+              ],
+              "data": [
+                {
+                  "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;b5dc116a-88aa-4386-868a-bf2648573cb6",
+                  "type": "FLOAT",
+                  "name": "score",
+                  "columnId": "1",
+                  "toolTip": "Activity / Latest Result / HappinessByWeek / score",
+                  "id": "2e87b222-86ea-4be0-9f15-92516fb478c0"
+                }
+              ]
+            },
+            "dataSourceId": "WBK;/Users/admin/Applications/Facebook Social Stats/Resources/Facebook Social Statistics Summary.wbk;6b0ca307-c67c-44c9-9d8f-4c10abf20242;0;0;b5dc116a-88aa-4386-868a-bf2648573cb6",
+            "lastExecutionDate": "10/18/2012 07:40:29 AM",
+            "isTruncated": false
+          },
+          "showFrame": true,
+          "opacity": 1,
+          "margin": 20,
+          "offset": 10,
+          "marginTop": 20,
+          "marginRight": 20,
+          "marginBottom": 70,
+          "marginLeft": 50,
+          "scale": "linear",
+          "isGridVisible": false,
+          "isZeroLineVisible": true,
+          "isFrameVisible": false,
+          "isShadowVisible": false,
+          "isStyleVisible": false,
+          "colorScheme": "categorical",
+          "fillColorList": [
+            "rgb(59, 89, 152)",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf"
+          ],
+          "strokeColor": "white",
+          "labelColor": "rgb(59, 89, 152)",
+          "labelLength": 100,
+          "labelOrientationX": "diagonal",
+          "labelOrientationY": "horizontal",
+          "datePattern": "MM/dd/yyyy HH:mm",
+          "prefix": "",
+          "suffix": "",
+          "variant": "simple",
+          "offsetVariant": "zero",
+          "groupGapInPercent": 10,
+          "fontSize": 10,
+          "fontName": "Arial",
+          "isBarChart": false,
+          "isBulletChart": false,
+          "isHistogram": false,
+          "showPoints": true,
+          "showAreas": true,
+          "enableTooltips": true,
+          "xAxisSkipCount": 0,
+          "transpose": false,
+          "baseUrl": "/js",
+          "dotSize": 4,
+          "hasThousandSeparator": true,
+          "showDataLabels": false,
+          "dataLabelSkipCount": 0,
+          "dataLabelFontSize": 10,
+          "dataLabelOrientation": "horizontal",
+          "dataLabelColor": "#0a3d56",
+          "lineTension": 1,
+          "fontName_text": "Arial"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 77.5,
+          "top": 63.5,
+          "width": 354,
+          "height": 32,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 14,
+          "id": "0be52a7c-8b1d-45c3-9833-37dd07057294",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Posts, Comments, Likes",
+          "fontSize": "30",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 255, 255)",
+          "fontName_text": "Chunk"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 67,
+          "top": 414,
+          "width": 274,
+          "height": 34,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 15,
+          "id": "f9cda44b-11d8-48cb-a560-350b80255ded",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Types of Posts",
+          "fontSize": "30",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 255, 255)",
+          "fontName_text": "Chunk"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 119.5,
+          "top": 344,
+          "width": 48,
+          "height": 21,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 17,
+          "id": "bfc643ef-1ba2-45a1-8c7a-bd6129febd57",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Posts",
+          "fontSize": 12,
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(125, 125, 125)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 201.5,
+          "top": 345,
+          "width": 74,
+          "height": 24,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 18,
+          "id": "afddb801-fe9e-4221-9ffe-860e23cf3994",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Comments",
+          "fontSize": "11",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(125, 125, 125)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 305.5,
+          "top": 345,
+          "width": 39,
+          "height": 20,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 19,
+          "id": "b1e129d5-cd46-46b5-aa19-cd0943ddcfb4",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Likes",
+          "fontSize": "11",
+          "fontName": "OpenSans",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(125, 125, 125)",
+          "fontName_text": "OpenSans"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "imageName": "rect.svg",
+            "defaultWidth": 79,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "async": true
+          },
+          "name": "Square",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 97.5,
+          "top": 346,
+          "width": "15",
+          "height": "15",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 20,
+          "id": "bbaaf5d1-19d7-435f-b7f6-33856e50c271",
+          "showFrame": true,
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(45, 121, 177)",
+          "imageName": "rect.svg",
+          "shadow": true,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": 1,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "imageName": "rect.svg",
+            "defaultWidth": 79,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "async": true
+          },
+          "name": "Square",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 178.5,
+          "top": 345,
+          "width": "15",
+          "height": "15",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 21,
+          "id": "4d801f15-2931-4bee-86c1-8e6e47a73ad5",
+          "showFrame": true,
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(44, 153, 78)",
+          "imageName": "rect.svg",
+          "shadow": true,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": 1,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "imageName": "rect.svg",
+            "defaultWidth": 79,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "async": true
+          },
+          "name": "Square",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 281.5,
+          "top": 345,
+          "width": "15",
+          "height": "15",
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 22,
+          "id": "123f0051-3f54-4bc7-a9d2-76a90992be98",
+          "showFrame": true,
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(239, 132, 56)",
+          "imageName": "rect.svg",
+          "shadow": true,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": 1,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "imageName": "rect.svg",
+            "defaultWidth": 79,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "async": true
+          },
+          "name": "Square",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 45,
+          "top": 49.5,
+          "width": 459,
+          "height": 62,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 3,
+          "id": "abaca979-7a7a-4a2d-bb3a-afa009ebf775",
+          "showFrame": true,
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(59, 89, 152)",
+          "imageName": "rect.svg",
+          "shadow": false,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "imageName": "rect.svg",
+            "defaultWidth": 79,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "async": true
+          },
+          "name": "Square",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 45,
+          "top": 398,
+          "width": 470,
+          "height": 62,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 6,
+          "id": "4799e10b-7c5c-41b4-a61c-cef45856f77d",
+          "showFrame": true,
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(59, 89, 152)",
+          "imageName": "rect.svg",
+          "shadow": false,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "imageName": "rect.svg",
+            "defaultWidth": 79,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "async": true
+          },
+          "name": "Square",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 583,
+          "top": 400,
+          "width": 486,
+          "height": 63,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 5,
+          "id": "87817e75-bd06-4085-8123-71a9bc67de59",
+          "showFrame": true,
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(59, 89, 152)",
+          "imageName": "rect.svg",
+          "shadow": false,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 605,
+          "top": 416,
+          "width": 274,
+          "height": 34,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 16,
+          "id": "26c0121b-69c3-41c8-9636-8d3b04f90b9a",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Word Cloud",
+          "fontSize": "30",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 255, 255)",
+          "fontName_text": "Chunk"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 76,
+          "top": 811,
+          "width": 265,
+          "height": 34,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 13,
+          "id": "3da2fe22-4573-4eb3-9177-671adbfb6482",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Happiness Score",
+          "fontSize": "30",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(255, 255, 255)",
+          "fontName_text": "Chunk"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Square",
+            "chart": "infographics/charts/shape",
+            "inspector": "infographics/views/shape_inspector",
+            "baseColor": "white",
+            "imageName": "rect.svg",
+            "defaultWidth": 79,
+            "defaultHeight": 79,
+            "panelGroup": "shape",
+            "async": true
+          },
+          "name": "Square",
+          "inspectorName": "infographics/views/shape_inspector",
+          "left": 45,
+          "top": 794,
+          "width": 478,
+          "height": 63,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 4,
+          "id": "d57fb34e-4e5e-416f-9cee-dcbab6e97c83",
+          "showFrame": true,
+          "opacity": 1,
+          "baseColor": "white",
+          "strokeColor": "grey",
+          "fillColor": "rgb(59, 89, 152)",
+          "imageName": "rect.svg",
+          "shadow": false,
+          "shadowOpacity": 0.5,
+          "shapeSizeMin": 30,
+          "shapeSizeMax": 75,
+          "strokeSize": false,
+          "baseUrl": "/js"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 479,
+          "top": 59,
+          "width": 158,
+          "height": 43,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 12,
+          "id": "4cf818bb-cd63-4da8-8fdf-f3f376d58dfb",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Per Week",
+          "fontSize": "24",
+          "fontName": "Georgia",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(59, 89, 152)",
+          "fontName_text": "Georgia"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 495,
+          "top": 810,
+          "width": 111,
+          "height": 34,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 11,
+          "id": "8bc792e5-c954-4595-97fa-5f55f12af969",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "By Week",
+          "fontSize": "24",
+          "fontName": "Georgia",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(59, 89, 152)",
+          "fontName_text": "Georgia"
+        },
+        {
+          "widgets": [
+            "0be52a7c-8b1d-45c3-9833-37dd07057294",
+            "abaca979-7a7a-4a2d-bb3a-afa009ebf775",
+            "4cf818bb-cd63-4da8-8fdf-f3f376d58dfb",
+            "52261017-b42d-424b-874d-9b8a3b57a335"
+          ],
+          "z-index": 23,
+          "id": "792be4df-82c9-4da7-a020-7e5d34d6bac3",
+          "left": 45,
+          "top": 49.5,
+          "width": 940,
+          "height": 324
+        },
+        {
+          "widgets": [
+            "bbaaf5d1-19d7-435f-b7f6-33856e50c271",
+            "bfc643ef-1ba2-45a1-8c7a-bd6129febd57",
+            "4d801f15-2931-4bee-86c1-8e6e47a73ad5",
+            "afddb801-fe9e-4221-9ffe-860e23cf3994",
+            "b1e129d5-cd46-46b5-aa19-cd0943ddcfb4",
+            "123f0051-3f54-4bc7-a9d2-76a90992be98"
+          ],
+          "z-index": 25,
+          "id": "d8cff997-e6f1-4e1b-af38-0c71041ba311",
+          "left": 97.5,
+          "top": 344,
+          "width": 247,
+          "height": 34271
+        },
+        {
+          "widgets": [
+            "d8cff997-e6f1-4e1b-af38-0c71041ba311",
+            "792be4df-82c9-4da7-a020-7e5d34d6bac3"
+          ],
+          "z-index": 2,
+          "id": "22dcf6f4-aafc-4416-9aad-2f31fb5c50b8",
+          "left": 45,
+          "top": 49.5,
+          "width": 940,
+          "height": 34565.5
+        },
+        {
+          "widgets": [
+            "26c0121b-69c3-41c8-9636-8d3b04f90b9a",
+            "87817e75-bd06-4085-8123-71a9bc67de59",
+            "fd071bac-b0f0-40fa-85a7-231f3f63e6ae"
+          ],
+          "z-index": 26,
+          "id": "00a07eda-9347-48a4-8a43-1becfde83980",
+          "left": 583,
+          "top": 400,
+          "width": 486,
+          "height": 381
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 599,
+          "top": 750,
+          "width": 285,
+          "height": 44,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 28,
+          "id": "27765a66-76a0-4698-b958-2f9a4dcc5432",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Words that occur frequently in my posts.",
+          "fontSize": "13",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(59, 89, 152)",
+          "fontName_text": "Chunk"
+        },
+        {
+          "backgroundType": "without",
+          "backgroundImagePlacement": "full",
+          "backgroundImageFixed": "center",
+          "backgroundImageTile": "both",
+          "type": {
+            "name": "Text",
+            "chart": "infographics/charts/text",
+            "inspector": "infographics/views/text_inspector",
+            "panelGroup": "other",
+            "defaultWidth": 150,
+            "defaultHeight": 50
+          },
+          "name": "Text",
+          "inspectorName": "infographics/views/text_inspector",
+          "left": 63.5,
+          "top": 1072,
+          "width": 433,
+          "height": 45,
+          "angle": 0,
+          "isResizable": true,
+          "isDraggable": true,
+          "isLockedToBack": false,
+          "z-index": 28,
+          "id": "89548421-df50-4b84-a852-9bfd98bde2f6",
+          "showFrame": true,
+          "opacity": 1,
+          "fillColor": "black",
+          "backColor": "transparent",
+          "editMode": false,
+          "textContent": "Positive sentiment change over time.",
+          "fontSize": "14",
+          "fontName": "Chunk",
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "align": "left",
+          "color": "rgb(59, 89, 152)",
+          "fontName_text": "Chunk"
+        }
+      ],
+      "backgroundImage": {
+        "uuid": "3b5ff8a7-6711-4f7f-a4d9-f3fbcb296eef",
+        "path": "/Users/admin/Applications/Facebook Social Stats/Resources/bgtile.png"
+      },
+      "backgroundType": "image",
+      "backgroundImagePlacement": "tile",
+      "backgroundImageFixed": "center",
+      "backgroundImageTile": "both",
+      "backgroundImageUrl": "/image-upload?path\u003d%2FUsers%2Fadmin%2FApplications%2FFacebook%20Social%20Stats%2FResources%2Fbgtile.png\u0026uuid\u003d3b5ff8a7-6711-4f7f-a4d9-f3fbcb296eef"
+    }
+  ],
+  "backgroundType_text": "Image",
+  "backgroundImageUrl": "/image-upload?path\u003d%2FUsers%2Fadmin%2FApplications%2FFacebook%20Social%20Stats%2FResources%2Fbgtile.png\u0026uuid\u003dee4f691b-3210-4b8e-9406-6a39ce6f8c06",
+  "backgroundImagePlacement_text": "Tile"
+}

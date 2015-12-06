@@ -1,0 +1,1647 @@
+[
+{
+  "uuid": "c85d00ec-8da7-4d2a-97da-052b91b90f03",
+  "path": "/.system/FileUploadDataStore.dst",
+  "description": "hidden datastore to upload files: FileUploadDataStore",
+  "name": "FileUploadDataStore",
+  "id": 1
+}
+,{
+  "uuid": "93c905ca-341b-4c71-8bfc-196d7d9eda16",
+  "path": "/Applications/Work in Progress/Downloads/Datameer Download Logs.dst",
+  "description": "",
+  "name": "Datameer Download Logs",
+  "id": 2
+}
+,{
+  "uuid": "aea2bf5f-a980-49c3-a93f-94bd0de26166",
+  "path": "/DataStores/Custom Protocol.dst",
+  "description": "",
+  "name": "Custom Protocol",
+  "id": 3
+}
+,{
+  "uuid": "3c47cab0-3ab9-4b97-83a7-aa9ee0640bd3",
+  "path": "/DataStores/MySQL_4_Joel.dst",
+  "description": "",
+  "name": "MySQL_4_Joel",
+  "id": 5
+}
+,{
+  "uuid": "7d87e390-b5e1-4647-85a8-48d91f2f6d50",
+  "path": "/Applications/Work in Progress/Facebook/Custom_Protocol.dst",
+  "description": "",
+  "name": "Custom_Protocol",
+  "id": 6
+}
+,{
+  "uuid": "18092daa-ead4-48dd-ae23-495f19185ffd",
+  "path": "/Datameer/-\u003dPyRo\u003d-/ServerStatus/ds_dirty_place.dst",
+  "description": "",
+  "name": "ds_dirty_place",
+  "id": 8
+}
+,{
+  "uuid": "6d75f394-182f-4c0f-aa69-147425d6fb84",
+  "path": "/Applications/Work in Progress/Google Analytics/Google Analytics Datameer.dst",
+  "description": "",
+  "name": "Google Analytics Datameer",
+  "id": 16
+}
+,{
+  "uuid": "56e9b5a5-cc77-4e95-b18d-fc26e711136c",
+  "path": "/Applications/Backlog/GitHub/Github DataStore.dst",
+  "description": "",
+  "name": "Github DataStore",
+  "id": 19
+}
+,{
+  "uuid": "b38c71ee-30e5-44de-bfcc-7ecfb5a3fca4",
+  "path": "/Applications/Final/Zendesk Tickets/Resources/DataStore Zendesk.dst",
+  "description": "",
+  "name": "DataStore Zendesk",
+  "id": 20
+}
+,{
+  "uuid": "246f5da4-beca-4aa0-9c54-c4b574840c4b",
+  "path": "/Datameer/Joel/Customer Acquisition/CloudFront/download_datameer_com_S3.dst",
+  "description": "S3 download.datameer.com",
+  "name": "download_datameer_com_S3",
+  "id": 24
+}
+,{
+  "uuid": "028d4f17-df70-4ce5-bcda-3e17d753f6c6",
+  "path": "/DataStores/das_server_filesystem.dst",
+  "description": "injected conductor_filesystem",
+  "name": "das_server_filesystem",
+  "id": 26
+}
+,{
+  "uuid": "e193a7c5-4bd8-4c27-9bea-b885e0cedb87",
+  "path": "/Datameer/Joel/Customer Acquisition/External/HTTP.dst",
+  "description": "",
+  "name": "HTTP",
+  "id": 27
+}
+,{
+  "uuid": "ad4a9660-993b-4033-9613-9f6187cc60fd",
+  "path": "/Datameer/Joel/Customer Acquisition/MyDatameer/MyDatameer DB.dst",
+  "description": "",
+  "name": "MyDatameer DB",
+  "id": 28
+}
+,{
+  "uuid": "e91aa28c-519a-4c90-9989-da705002c74e",
+  "path": "/Datameer/Frank/GAConnection.dst",
+  "description": "",
+  "name": "GAConnection",
+  "id": 37
+}
+,{
+  "uuid": "709dc795-751b-405c-bccc-5018b6b75655",
+  "path": "/Applications/Work in Progress/Google Analytics/Google Analytics Datameer v2.dst",
+  "description": "Datameer Google Analytics",
+  "name": "Google Analytics Datameer v2",
+  "id": 38
+}
+,{
+  "uuid": "ee6c52ef-1d12-4890-8656-6391965d1963",
+  "path": "/Applications/Work in Progress/Crunchbase/Crunchbase_API.dst",
+  "description": "Crunchbase Database ",
+  "name": "Crunchbase_API",
+  "id": 40
+}
+,{
+  "uuid": "ac62dfc4-d522-467d-a368-318e6493ba2e",
+  "path": "/Applications/Work in Progress/Crunchbase/Crunchbase.dst",
+  "description": "",
+  "name": "Crunchbase",
+  "id": 42
+}
+,{
+  "uuid": "d0907b07-04c2-4f99-9284-e3d2819d3aeb",
+  "path": "/Applications/Final/Email Exchange/Resources/SampleMail.dst",
+  "description": "",
+  "name": "SampleMail",
+  "id": 46
+}
+,{
+  "uuid": "3e5fb4a5-3745-4654-a592-cafefce7a19e",
+  "path": "/Applications/Final/Email Delivery Analysis/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 49
+}
+,{
+  "uuid": "b38d8e41-36e4-46e5-9201-da936c70dcd5",
+  "path": "/Applications/Work in Progress/Email Top Contact Analytics/SampleMail.dst",
+  "description": "TestMail - Kenneth Lay from Enron",
+  "name": "SampleMail",
+  "id": 50
+}
+,{
+  "uuid": "628523df-f133-466e-96cc-b5cd4360f2cd",
+  "path": "/Applications/Final/Email Communication/Resources/SampleMail.dst",
+  "description": "",
+  "name": "SampleMail",
+  "id": 51
+}
+,{
+  "uuid": "5859f8bf-737c-416e-a223-490f96fecf16",
+  "path": "/Applications/Final/Facebook Social Stats/Resources/Facebook.dst",
+  "description": "",
+  "name": "Facebook",
+  "id": 53
+}
+,{
+  "uuid": "04c85d19-69a3-4bb7-8c02-6b76c30c5aaa",
+  "path": "/Applications/Final/Twitter Brand Sentiment/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 58
+}
+,{
+  "uuid": "1ca15adc-f10c-447d-ae07-27964364700a",
+  "path": "/Applications/Work in Progress/LinkedIn Pro Network/Resources/LinkedIn.dst",
+  "description": "",
+  "name": "LinkedIn",
+  "id": 60
+}
+,{
+  "uuid": "ab7940bc-b484-4958-913c-c494399d1530",
+  "path": "/Applications/Final/Facebook Network/Resources/Facebook.dst",
+  "description": "",
+  "name": "Facebook",
+  "id": 62
+}
+,{
+  "uuid": "f253cdc0-db58-4bc9-bafb-50373c8d6e26",
+  "path": "/Applications/Work in Progress/Google Plus/GooglePlusHHG.dst",
+  "description": "",
+  "name": "GooglePlusHHG",
+  "id": 63
+}
+,{
+  "uuid": "eab7fc92-353e-40ff-9528-ef981d034101",
+  "path": "/Applications/Work in Progress/Google Plus/GooglePlusHHGSimple.dst",
+  "description": "",
+  "name": "GooglePlusHHGSimple",
+  "id": 64
+}
+,{
+  "uuid": "2be3baad-de71-438d-8281-292127906843",
+  "path": "/Applications/Final/Website Referrals/Resources/Google Analytics Connection.dst",
+  "description": "Datameer Google Analytics",
+  "name": "Google Analytics Connection",
+  "id": 72
+}
+,{
+  "uuid": "24fa12b0-21c2-4da4-8ce3-b22d7d900219",
+  "path": "/Applications/Final/Google Adsense/Resources/Connection_adsense.dst",
+  "description": "",
+  "name": "Connection_adsense",
+  "id": 73
+}
+,{
+  "uuid": "68a7aa11-8ef4-4f73-8859-abeb05b93b7f",
+  "path": "/Applications/Final/Website Traffic/Resources/Google Analytics Connection.dst",
+  "description": "Datameer Google Analytics",
+  "name": "Google Analytics Connection",
+  "id": 74
+}
+,{
+  "uuid": "e26c23d3-5b87-4fb3-816a-893162105c59",
+  "path": "/Applications/Final/Website Visitors/Resources/Google Analytics Connection.dst",
+  "description": "Datameer Google Analytics",
+  "name": "Google Analytics Connection",
+  "id": 75
+}
+,{
+  "uuid": "7150310e-df5a-4c3c-8710-255651f8564c",
+  "path": "/Applications/Work in Progress/Zendesk/Zendesk Connector.dst",
+  "description": "",
+  "name": "Zendesk Connector",
+  "id": 76
+}
+,{
+  "uuid": "c79582f8-effc-4b06-9755-f9f31a027cb6",
+  "path": "/Applications/Work in Progress/Google Plus/GooglePlusJSH.dst",
+  "description": "",
+  "name": "GooglePlusJSH",
+  "id": 80
+}
+,{
+  "uuid": "5d746825-5c83-43a6-a01c-d7e416816f6c",
+  "path": "/Applications/Final/GitHub Commits/Resources/GitHub_Connection.dst",
+  "description": "GitHub Data",
+  "name": "GitHub_Connection",
+  "id": 82
+}
+,{
+  "uuid": "c974acd3-5c8b-43a1-ad5d-bce0df70f44a",
+  "path": "/Datameer/Joel/Customer Acquisition/External/MaxMind.dst",
+  "description": "",
+  "name": "MaxMind",
+  "id": 83
+}
+,{
+  "uuid": "f8b4d80c-112e-4cdf-9097-28c450968c16",
+  "path": "/Datameer/Tim/LinkedIn Tim/Resources/LinkedIn.dst",
+  "description": "",
+  "name": "LinkedIn",
+  "id": 89
+}
+,{
+  "uuid": "6919548c-7795-4079-b24a-192c659f055f",
+  "path": "/Applications/Work in Progress/Jira GitHub Zendesk/Resources/JiraDataStore.dst",
+  "description": "",
+  "name": "JiraDataStore",
+  "id": 91
+}
+,{
+  "uuid": "2415376f-3f57-46c5-ad2e-8097bf0fe38f",
+  "path": "/Applications/Work in Progress/Email Exchange Analytics 1/Resources/SampleMail.dst",
+  "description": "TestMail - Kenneth Lay from Enron",
+  "name": "SampleMail",
+  "id": 94
+}
+,{
+  "uuid": "10e2870c-a2e7-4ff3-99a0-c23068706a8f",
+  "path": "/Datameer/Jeff/LinkedIn Pro Network Jeff Diller/Resources/LinkedIn.dst",
+  "description": "",
+  "name": "LinkedIn",
+  "id": 100
+}
+,{
+  "uuid": "5fc888bc-1697-4644-80ca-7c399ef21939",
+  "path": "/Applications/Work in Progress/Twitter Election Sentiment Oct16 Oct18/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 102
+}
+,{
+  "uuid": "1ea93c14-7852-4ace-995e-227163f7843d",
+  "path": "/Applications/Final/Zendesk Agent Performance/resources/Zendesk.dst",
+  "description": "",
+  "name": "Zendesk",
+  "id": 142
+}
+,{
+  "uuid": "32666068-37b0-45ff-9b46-93e9e7ba9b32",
+  "path": "/Datameer/Joel/SEO/Google Docs.dst",
+  "description": "Datameer Docs",
+  "name": "Google Docs",
+  "id": 143
+}
+,{
+  "uuid": "ce217a31-00e2-4b11-8b5f-fde1d96d4e33",
+  "path": "/Applications/Final/LinkedIn Pro Stats/Resources/LinkedIn.dst",
+  "description": "",
+  "name": "LinkedIn",
+  "id": 145
+}
+,{
+  "uuid": "c11c1276-d7e0-4cd8-b70c-ba83da3830f7",
+  "path": "/Users/anguyen/Zendesk Forum Stream/ZendeskDataStore.dst",
+  "description": "Zendesk Forums Datastore",
+  "name": "ZendeskDataStore",
+  "id": 146
+}
+,{
+  "uuid": "7445a6de-3c0e-4adb-a4a9-db51c058e12f",
+  "path": "/Users/anguyen/Zendesk Forum Stream/ZendeskCustomDataStore.dst",
+  "description": "",
+  "name": "ZendeskCustomDataStore",
+  "id": 147
+}
+,{
+  "uuid": "be5203ce-3d21-480b-89dc-fbe91afa8054",
+  "path": "/Examples/Public Data/Examples in S3.dst",
+  "description": "Data files for some examples are hosted in Amazon\u0027s cloud (S3). Using this data store will download these files into your system and requires internet access",
+  "name": "Examples in S3",
+  "id": 148
+}
+,{
+  "uuid": "0dfd4c67-45cd-4641-bd91-2dcaadfebf62",
+  "path": "/Examples/Public Data/Examples from Infochimps.dst",
+  "description": "Data files for some examples are hosted by Infochimps.com in Amazon\u0027s cloud (S3). Using this data store will download these files into your system and requires internet access",
+  "name": "Examples from Infochimps",
+  "id": 149
+}
+,{
+  "uuid": "ae1b48a9-09d3-401e-bbef-49f69895b429",
+  "path": "/Applications/Work in Progress/Twitter Election Sentiment Oct16 Oct18/Twitter Brand Sentiment 1/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 150
+}
+,{
+  "uuid": "2c2da460-05e5-4fcd-ace0-f4d4936b1165",
+  "path": "/Applications/Work in Progress/Power /Twitter.dst",
+  "description": "",
+  "name": "Twitter",
+  "id": 153
+}
+,{
+  "uuid": "20a91b30-7c47-429e-8f4b-607580872d59",
+  "path": "/Applications/Work in Progress/Power Back/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 154
+}
+,{
+  "uuid": "f6eafcdf-a3dd-490c-a7d8-f4c610749c55",
+  "path": "/Datameer/Joel/Customer Acquisition/Google/Google Analytics.dst",
+  "description": "",
+  "name": "Google Analytics",
+  "id": 155
+}
+,{
+  "uuid": "224d8eb8-354a-4c4a-b63c-299218eddf15",
+  "path": "/Applications/Final/LinkedIn Pro Network/Resources/LinkedIn.dst",
+  "description": "",
+  "name": "LinkedIn",
+  "id": 178
+}
+,{
+  "uuid": "ebe8c048-8058-4f9e-a786-785fb26896aa",
+  "path": "/Applications/Work in Progress/Twitter Instant/TwitterConnection.dst",
+  "description": "",
+  "name": "TwitterConnection",
+  "id": 181
+}
+,{
+  "uuid": "f6945870-e5f5-42b3-aa0d-cab48d41751c",
+  "path": "/Applications/Final/Twitter Brand Sentiment/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 197
+}
+,{
+  "uuid": "2e51317f-8c5c-4f14-8b6f-71f7e8806ee4",
+  "path": "/Applications/Final/Email Communication/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 202
+}
+,{
+  "uuid": "e72e1c37-6684-4630-8ad8-8b47bad76591",
+  "path": "/Datameer/Joel/Customer Acquisition/Zendesk/Datameer.dst",
+  "description": "Datameer Zendesk",
+  "name": "Datameer",
+  "id": 210
+}
+,{
+  "uuid": "f0f31f2e-77b1-4a6d-8ff0-3f88b7a2bfb5",
+  "path": "/Applications/Work in Progress/Twitter Hadoop Sentiment_/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 212
+}
+,{
+  "uuid": "25aa6e5e-bbf2-4399-b341-ddb2bd645372",
+  "path": "/Applications/Work in Progress/Twitter Hadoop Sentiment_/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 213
+}
+,{
+  "uuid": "147df403-1fac-4b40-8ede-2239ce3b92a4",
+  "path": "/Datameer/Joel/Customer Acquisition/Social/Twitter REST API.dst",
+  "description": "Twitter Rest API",
+  "name": "Twitter REST API",
+  "id": 222
+}
+,{
+  "uuid": "b3ee4ab6-c02b-418e-9b83-3f2abd1c9794",
+  "path": "/Applications/Work in Progress/Twitter Viral 1/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 223
+}
+,{
+  "uuid": "9d3fa010-3a52-4957-a889-894eed718ca0",
+  "path": "/Applications/Work in Progress/Twitter Viral 1/Resources/TwitterRestConnection.dst",
+  "description": "",
+  "name": "TwitterRestConnection",
+  "id": 224
+}
+,{
+  "uuid": "eee172e8-b4e0-44f7-8f32-34cc2cc6951f",
+  "path": "/Datameer/Joel/SEO/Google Webmaster.dst",
+  "description": "",
+  "name": "Google Webmaster",
+  "id": 225
+}
+,{
+  "uuid": "224b7813-2624-4a13-ac58-a2e619031b37",
+  "path": "/Applications/Work in Progress/Twitter History/Resources/Datameer server filesystem.dst",
+  "description": "A data store for the local filesystem where Datameer is running.  Note, this works ONLY for Datameer Personal, Workgroup, and Trial editions.\n",
+  "name": "Datameer server filesystem",
+  "id": 234
+}
+,{
+  "uuid": "a242c17c-cced-48f1-9102-645f39ca4c6e",
+  "path": "/Datameer/Joel/Customer Acquisition/Google/Google Docs.dst",
+  "description": "Google Docs (Joel Horwitz)",
+  "name": "Google Docs",
+  "id": 235
+}
+,{
+  "uuid": "2f43ec14-6da9-42a5-8626-b82ea322a1f2",
+  "path": "/DataStores/Prototype.dst",
+  "description": "",
+  "name": "Prototype",
+  "id": 236
+}
+,{
+  "uuid": "cf9bdce0-b2f1-4840-8936-9a86a9f7551d",
+  "path": "/Applications/Final/Beer Consumption/Resources/Twitter Con.dst",
+  "description": "Twitter Con",
+  "name": "Twitter Con",
+  "id": 237
+}
+,{
+  "uuid": "7ec27446-cb43-4ebe-a60b-936e5044b947",
+  "path": "/Applications/Final/Beer Consumption/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 238
+}
+,{
+  "uuid": "eac8d205-8d26-42bd-b919-7a1413231c02",
+  "path": "/Applications/Final/Beer Consumption/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 239
+}
+,{
+  "uuid": "69d09d6d-4b4e-423c-bd28-0c44122cb3a2",
+  "path": "/Users/jz/TwitterConnection.dst",
+  "description": "Twitter Datastore on my (jz) account.",
+  "name": "TwitterConnection",
+  "id": 240
+}
+,{
+  "uuid": "f9297600-c5cf-4087-9853-1429bcf25df0",
+  "path": "/Applications/Work in Progress/Roman/Datameer server filesystem.dst",
+  "description": "A data store for the local filesystem where Datameer is running.  Note, this works ONLY for Datameer Personal, Workgroup, and Trial editions.\n",
+  "name": "Datameer server filesystem",
+  "id": 244
+}
+,{
+  "uuid": "0891af5e-c749-468c-a319-e7822e36ab4c",
+  "path": "/Applications/Backlog/GA Campaign Performance/GoogleAnalyticsConxn.dst",
+  "description": "GoogleAnalyticsConxn",
+  "name": "GoogleAnalyticsConxn",
+  "id": 247
+}
+,{
+  "uuid": "67a2387b-1b5b-45a5-9e80-b18d63ddfe74",
+  "path": "/Applications/Work in Progress/Twitter Hadoop Sentiment/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 252
+}
+,{
+  "uuid": "37285117-7805-480c-81d9-eab281fbae44",
+  "path": "/Applications/Work in Progress/Twitter Hadoop Sentiment/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 253
+}
+,{
+  "uuid": "75d7629b-66cf-4d7e-bad4-2a94a9e2a0f6",
+  "path": "/Applications/QA/Social Circles/Resources/LinkedIn.dst",
+  "description": "",
+  "name": "LinkedIn",
+  "id": 255
+}
+,{
+  "uuid": "4ba03e58-1acb-4e35-af7b-649e451b566d",
+  "path": "/Applications/QA/Social Circles/Resources/Facebook_Friends.dst",
+  "description": "",
+  "name": "Facebook_Friends",
+  "id": 256
+}
+,{
+  "uuid": "a46f3d7e-dea9-4005-831b-443434967fdc",
+  "path": "/Applications/QA/Social Circles/Resources/Facebook.dst",
+  "description": "",
+  "name": "Facebook",
+  "id": 257
+}
+,{
+  "uuid": "31f67177-d254-4392-b643-c7d387a03893",
+  "path": "/Applications/Work in Progress/Twitter Virality 1/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 259
+}
+,{
+  "uuid": "dd845c6c-c7f0-46a5-bd35-185dcbf125bb",
+  "path": "/Applications/Work in Progress/Twitter Virality 1/Resources/TwitterAPI.dst",
+  "description": "Twitter REST API",
+  "name": "TwitterAPI",
+  "id": 260
+}
+,{
+  "uuid": "991bce5d-3602-46d1-a5f1-1107730671db",
+  "path": "/Applications/Final/SalesTrajectory 2/Resources/Connection.dst",
+  "description": "My Salesforce oauth datasource",
+  "name": "Connection",
+  "id": 286
+}
+,{
+  "uuid": "12ce0483-7cc2-4a93-a184-3ca8c6a41895",
+  "path": "/Applications/Final/Flight Delays/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 287
+}
+,{
+  "uuid": "d245ed6f-b569-4ee3-a63b-335b2fca2880",
+  "path": "/Datameer/vlado/Hadoop Email List Analytics/Resources/Example Data S3 Bucket.dst",
+  "description": "",
+  "name": "Example Data S3 Bucket",
+  "id": 290
+}
+,{
+  "uuid": "24313ebc-8462-4ecc-be7e-31883f5a679b",
+  "path": "/DataStores/ssh_online_instance.dst",
+  "description": "Online instance",
+  "name": "ssh_online_instance",
+  "id": 292
+}
+,{
+  "uuid": "d263d586-b8f7-4c0b-8432-d386b81975db",
+  "path": "/Datameer/hgabriel/Twitter Brand Sentiment/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 293
+}
+,{
+  "uuid": "c3c4d092-7560-4c3e-9dd8-df25be03280f",
+  "path": "/Datameer/hgabriel/Twitter Brand Sentiment/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 294
+}
+,{
+  "uuid": "47038bac-ccd3-4d4c-aee8-3ec87af25b46",
+  "path": "/DataStores/ssh_online_instance_live.dst",
+  "description": "Online instance",
+  "name": "ssh_online_instance_live",
+  "id": 297
+}
+,{
+  "uuid": "413c111e-b0d7-48e8-b7e2-068e8d7194bb",
+  "path": "/Users/wbenica/WB/myDatameer/Resources/MyDatameer DB.dst",
+  "description": "",
+  "name": "MyDatameer DB",
+  "id": 298
+}
+,{
+  "uuid": "d1ff8964-4cf0-4419-8d56-05c4a75c2e2e",
+  "path": "/Datameer/Joel/Marketo/Datameer Marketo.dst",
+  "description": "Datameer Marketo",
+  "name": "Datameer Marketo",
+  "id": 301
+}
+,{
+  "uuid": "a86fecde-8b4a-4ed5-85ce-31f97d82eb79",
+  "path": "/Applications/Joels Facebook.dst",
+  "description": "",
+  "name": "Joels Facebook",
+  "id": 304
+}
+,{
+  "uuid": "03745c91-da4a-4161-93e8-666ec080c3e2",
+  "path": "/Applications/GA.dst",
+  "description": "",
+  "name": "GA",
+  "id": 305
+}
+,{
+  "uuid": "9a1a95db-95bc-4c3a-a98b-90bdc612cdae",
+  "path": "/Datameer/hgabriel/Twitter Archive/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 306
+}
+,{
+  "uuid": "9b9ec63e-a3fc-4343-b97b-627d53df1f63",
+  "path": "/Datameer/hgabriel/Twitter Viral/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 307
+}
+,{
+  "uuid": "ee8207bd-2a41-4d3c-b999-c9b39ecebb65",
+  "path": "/Datameer/hgabriel/Twitter Viral/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 308
+}
+,{
+  "uuid": "eb5d5628-33eb-40a7-ab8e-8fdcf0a8fab2",
+  "path": "/Datameer/aska/World/Marine Traffic.dst",
+  "description": "Marine",
+  "name": "Marine Traffic",
+  "id": 309
+}
+,{
+  "uuid": "62668ecd-f42d-4056-8bac-991fba39b49d",
+  "path": "/Datameer/aska/World/Connection.dst",
+  "description": "",
+  "name": "Connection",
+  "id": 319
+}
+,{
+  "uuid": "cedac172-049f-43fa-b14d-74cba6a79ff7",
+  "path": "/Datameer/aska/World/Socrata.dst",
+  "description": "",
+  "name": "Socrata",
+  "id": 320
+}
+,{
+  "uuid": "bf59bcd4-29f3-4a00-8024-afaa0de78e7e",
+  "path": "/Datameer/aska/World/CdnWeather.dst",
+  "description": "",
+  "name": "CdnWeather",
+  "id": 321
+}
+,{
+  "uuid": "63907dc9-126c-42cf-913e-58010c907cc9",
+  "path": "/Datameer/aska/World/Facebook.dst",
+  "description": "Facebook",
+  "name": "Facebook",
+  "id": 322
+}
+,{
+  "uuid": "04e0729f-7422-4dd0-aff9-247d07088aed",
+  "path": "/Datameer/aska/World/ConsumerPriceIndex.dst",
+  "description": "Consumer Price Index",
+  "name": "ConsumerPriceIndex",
+  "id": 324
+}
+,{
+  "uuid": "f4a5da70-77e2-44b1-ac9b-2ecf3e8cebf4",
+  "path": "/Applications/Fujitsu Brand Sentiment/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 327
+}
+,{
+  "uuid": "d738719d-c898-4a23-900a-8e8ec3a0a121",
+  "path": "/Applications/Fujitsu Brand Sentiment/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 328
+}
+,{
+  "uuid": "81911914-1d23-4588-b7c1-77594588338e",
+  "path": "/Applications/LastFm friends music recommender/lastfm connection.dst",
+  "description": "",
+  "name": "lastfm connection",
+  "id": 329
+}
+,{
+  "uuid": "b7c76d83-df76-4252-b547-39603277b950",
+  "path": "/Applications/Facebook Network/Resources/Facebook.dst",
+  "description": "",
+  "name": "Facebook",
+  "id": 331
+}
+,{
+  "uuid": "af9c033a-2b20-459a-a916-e255b922091e",
+  "path": "/Datameer/hgabriel/Twitter Brand Sentiment bck/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 334
+}
+,{
+  "uuid": "61f98fff-ddfa-4792-8773-bd17cad43e24",
+  "path": "/Datameer/hgabriel/Twitter Brand Sentiment bck/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 335
+}
+,{
+  "uuid": "865d9fa7-8523-495f-bc5b-e3fc94f29c3c",
+  "path": "/Users/jz/GithubConnection.dst",
+  "description": "",
+  "name": "GithubConnection",
+  "id": 336
+}
+,{
+  "uuid": "81a232ae-e913-4a27-855b-a1d0fe7ba037",
+  "path": "/Users/jz/TwitterSearchConnection.dst",
+  "description": "",
+  "name": "TwitterSearchConnection",
+  "id": 337
+}
+,{
+  "uuid": "29c7766b-c21b-481b-b6c4-ab3a53059297",
+  "path": "/Applications/Flight Delays/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 338
+}
+,{
+  "uuid": "ca96f77c-3332-49a7-b538-ed2734089504",
+  "path": "/Users/wbenica/WB/DEVAPP JIRA Release Planning/Resources/Jira.dst",
+  "description": "",
+  "name": "Jira",
+  "id": 340
+}
+,{
+  "uuid": "4d078c36-1eec-45e8-8da7-0df9ffeaf749",
+  "path": "/Applications/Facebook Network 1/Resources/Facebook.dst",
+  "description": "",
+  "name": "Facebook",
+  "id": 342
+}
+,{
+  "uuid": "fc4b6213-007c-44bc-b007-17d660608c9d",
+  "path": "/Applications/Twitter Brand Sentiment/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 343
+}
+,{
+  "uuid": "cadf4596-46a3-45e1-89e8-89f5aaa3046b",
+  "path": "/Applications/Twitter Brand Sentiment/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 345
+}
+,{
+  "uuid": "80310ba7-0b96-4716-bef9-1096a70823f0",
+  "path": "/Applications/Twitter Trending Topics/Resources/TwitterSearch.dst",
+  "description": "",
+  "name": "TwitterSearch",
+  "id": 347
+}
+,{
+  "uuid": "a853da8c-453b-40e9-87d0-87c98f39d01b",
+  "path": "/Applications/Twitter Trending Topics/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 348
+}
+,{
+  "uuid": "cd26a942-bcb0-478d-b4b3-358b9bab7a26",
+  "path": "/Applications/Friends Music Insights/Ressources/Facebook_connect.dst",
+  "description": "",
+  "name": "Facebook_connect",
+  "id": 349
+}
+,{
+  "uuid": "f2479f33-6b74-42bf-bbd7-0264d1fcfd35",
+  "path": "/Applications/Friends Music Insights/Ressources/LastFM_connect.dst",
+  "description": "",
+  "name": "LastFM_connect",
+  "id": 350
+}
+,{
+  "uuid": "3c987185-1466-4d05-a859-cb0dc2e538d1",
+  "path": "/Applications/Final/Beer Consumption/Resources/TwitterConnenction.dst",
+  "description": "Twitter REST API for Beer Sentiment App",
+  "name": "TwitterConnenction",
+  "id": 351
+}
+,{
+  "uuid": "9b2c180d-4906-4509-9d2d-63b3f90d2d34",
+  "path": "/Datameer/karel/Connection_ftp.dst",
+  "description": "",
+  "name": "Connection_ftp",
+  "id": 352
+}
+,{
+  "uuid": "31faad09-a683-4f4d-9a20-37d6732366a3",
+  "path": "/Users/jweber/Applications/Email Delivery Analysis/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 354
+}
+,{
+  "uuid": "5e5c6396-b1c8-47bc-933e-ea4450c09e67",
+  "path": "/Users/wbenica/Applications/EC2 Monitor/Ec2Connection.dst",
+  "description": "Connection for Amazon EC2 imports.",
+  "name": "Ec2Connection",
+  "id": 356
+}
+,{
+  "uuid": "6abaf471-162b-4e60-87f9-2b894a8ac8d3",
+  "path": "/Users/sbuechner/Applications/EC2 Monitor/Ec2Connection.dst",
+  "description": "Connection for Amazon EC2 imports.",
+  "name": "Ec2Connection",
+  "id": 357
+}
+,{
+  "uuid": "39d2f398-172d-4aec-becf-e8f3ff53c3b6",
+  "path": "/Users/amalbet/Services/JiraConnection.dst",
+  "description": "",
+  "name": "JiraConnection",
+  "id": 360
+}
+,{
+  "uuid": "6f293f6f-ead7-4f46-b994-2c45a3e3ef9d",
+  "path": "/Users/wbenica/WB/myDatameer/Resources/Jira.dst",
+  "description": "Jira Connection\r\n",
+  "name": "Jira",
+  "id": 366
+}
+,{
+  "uuid": "36ac0e54-8e06-473e-b067-03a442170827",
+  "path": "/Applications/onlinedemo/conn_mysql_online_demo.dst",
+  "description": "online demo",
+  "name": "conn_mysql_online_demo",
+  "id": 368
+}
+,{
+  "uuid": "ad09d1df-000b-48ca-97bb-50410b9a3af0",
+  "path": "/Applications/onlinedemo/conn_ssh_online_demo.dst",
+  "description": "online demo connection\r\n",
+  "name": "conn_ssh_online_demo",
+  "id": 369
+}
+,{
+  "uuid": "dc80da84-5013-4908-8616-06e3fed149e3",
+  "path": "/Users/fslunecko/mysql_online_instance_connector.dst",
+  "description": "",
+  "name": "mysql_online_instance_connector",
+  "id": 370
+}
+,{
+  "uuid": "db227a2d-5c1b-432d-8342-0e7cec408ba7",
+  "path": "/Pending Apps/Customer Funnel Optimization Demo/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 373
+}
+,{
+  "uuid": "f87934ce-16c0-4752-b4cc-7135222f2e0e",
+  "path": "/Pending Apps/Customer Funnel Optimization Demo/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 377
+}
+,{
+  "uuid": "a59d9e92-810d-4b59-8fde-b754dd7a0c41",
+  "path": "/Users/fh/_DataObfuscation/export/S3 Examples.dst",
+  "description": "",
+  "name": "S3 Examples",
+  "id": 378
+}
+,{
+  "uuid": "33668765-ffa3-4290-85c4-1c2d82f34797",
+  "path": "/Pending Apps/Amazon EC2 Monitor/Resources/Ec2Connection.dst",
+  "description": "Connection for Amazon EC2 imports.",
+  "name": "Ec2Connection",
+  "id": 379
+}
+,{
+  "uuid": "aec548e6-d29c-40f7-bdb3-334293f17af1",
+  "path": "/Pending Apps/Last fm friends/Resources/lastfm connection.dst",
+  "description": "",
+  "name": "lastfm connection",
+  "id": 380
+}
+,{
+  "uuid": "e793c701-beed-4c9f-aee5-7548486a9d79",
+  "path": "/Pending Apps/Last fm neighbours/Resources/lastfm connection.dst",
+  "description": "",
+  "name": "lastfm connection",
+  "id": 381
+}
+,{
+  "uuid": "d7c4e6b8-e6d5-482b-8dd7-e62e8e659a8c",
+  "path": "/Users/erosas/Applications/Zendesk Tickets/Resources/DataStore Zendesk.dst",
+  "description": "",
+  "name": "DataStore Zendesk",
+  "id": 382
+}
+,{
+  "uuid": "b740aefa-cb2c-4072-b60f-a98467ca073b",
+  "path": "/Users/tscholz/Applications/Email Delivery Analysis Improve 0.1/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 383
+}
+,{
+  "uuid": "f09f5d57-945c-48eb-b06b-fe0a1409f7d1",
+  "path": "/Ticket Scoring/Datameer Jira.dst",
+  "description": "Datameer Jira",
+  "name": "Datameer Jira",
+  "id": 386
+}
+,{
+  "uuid": "44ba0270-6715-4ddb-b8fa-5c8d9ee5464e",
+  "path": "/Users/tscholz/Lab 1/Lastfm Lab.dst",
+  "description": "",
+  "name": "Lastfm Lab",
+  "id": 388
+}
+,{
+  "uuid": "dc7c3083-bed4-4904-bfa9-320dabd29817",
+  "path": "/Users/tscholz/Lab 1/Twitter Lab.dst",
+  "description": "",
+  "name": "Twitter Lab",
+  "id": 389
+}
+,{
+  "uuid": "39c2244c-165d-418a-b938-ce25923fc394",
+  "path": "/Users/frances/Applications/Zendesk Tickets/Resources/DataStore Zendesk.dst",
+  "description": "",
+  "name": "DataStore Zendesk",
+  "id": 390
+}
+,{
+  "uuid": "a0dc0b74-1dbc-4041-bae9-27de7e4d6feb",
+  "path": "/DataStores/ssh_online_instance_live ak.dst",
+  "description": "Online instance",
+  "name": "ssh_online_instance_live ak",
+  "id": 391
+}
+,{
+  "uuid": "522b11b9-f97b-481b-9060-a5f27776e755",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights_old/Resources/Crunchbase.dst",
+  "description": "",
+  "name": "Crunchbase",
+  "id": 392
+}
+,{
+  "uuid": "18ea2eb2-0d16-408e-979e-2c0b9cfce8a1",
+  "path": "/Users/wbenica/JIRA/JIRA_CustomerRequests/JIRA_Connection.dst",
+  "description": "Jira Connection\r\n",
+  "name": "JIRA_Connection",
+  "id": 393
+}
+,{
+  "uuid": "9113a6c0-3303-4d2c-8ec9-59f48b46e684",
+  "path": "/Users/tscholz/Jira Connection.dst",
+  "description": "",
+  "name": "Jira Connection",
+  "id": 402
+}
+,{
+  "uuid": "42c8a77b-460e-4006-ad38-f57cc8e7f14b",
+  "path": "/Users/spuccinelli/CrunchBase/Connection2.dst",
+  "description": "",
+  "name": "Connection2",
+  "id": 404
+}
+,{
+  "uuid": "1741b8a1-7a71-40b1-a44b-53020ba9006b",
+  "path": "/Users/tscholz/Applications/Twitter Trending Topics/Resources/Examples in S3.dst",
+  "description": "",
+  "name": "Examples in S3",
+  "id": 406
+}
+,{
+  "uuid": "0b60e4c0-b4de-4a96-8127-816007c04172",
+  "path": "/Users/tscholz/Applications/Twitter Trending Topics/Resources/TwitterREST.dst",
+  "description": "",
+  "name": "TwitterREST",
+  "id": 407
+}
+,{
+  "uuid": "9ecebe1d-28ae-499a-b54a-233603da408b",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights_V.01/Resources/Crunchbase.dst",
+  "description": "",
+  "name": "Crunchbase",
+  "id": 408
+}
+,{
+  "uuid": "7797d3cc-3e79-46af-89cd-8ad6f3eefa69",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights V.02/Resources/Crunchbase.dst",
+  "description": "",
+  "name": "Crunchbase",
+  "id": 409
+}
+,{
+  "uuid": "d0f05fb4-04ef-4005-9881-83d1557e61f8",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights V.03/Resources/Crunchbase.dst",
+  "description": "",
+  "name": "Crunchbase",
+  "id": 410
+}
+,{
+  "uuid": "beb635b7-5109-4cd6-bf85-a749410cbc69",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights V.01.1/Resources/Crunchbase.dst",
+  "description": "",
+  "name": "Crunchbase",
+  "id": 413
+}
+,{
+  "uuid": "d0374e1a-888b-433d-a80d-d0bd1cef98cf",
+  "path": "/Users/tscholz/Applications/Acquisition Funnel 1/Connections/Salesforce API.dst",
+  "description": "",
+  "name": "Salesforce API",
+  "id": 414
+}
+,{
+  "uuid": "bdf24405-9d7c-414a-9ccb-f7b9449c130f",
+  "path": "/Users/tscholz/Applications/Acquisition Funnel 1/Connections/Google AdWords API.dst",
+  "description": "",
+  "name": "Google AdWords API",
+  "id": 415
+}
+,{
+  "uuid": "d42f4b0c-d116-45b9-b587-055836298980",
+  "path": "/Users/tscholz/Applications/Acquisition Funnel 1/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 416
+}
+,{
+  "uuid": "6c4f1128-3be4-4032-9ff5-cc9e998bd32c",
+  "path": "/Users/tscholz/Applications/Acquisition Funnel 1/Connections/Web logs aggregation point.dst",
+  "description": "",
+  "name": "Web logs aggregation point",
+  "id": 417
+}
+,{
+  "uuid": "ca00a615-07d4-436b-b48c-6ef9e20c0329",
+  "path": "/Pending Apps/Acquisition Funnelt/Connections/Salesforce API.dst",
+  "description": "",
+  "name": "Salesforce API",
+  "id": 418
+}
+,{
+  "uuid": "29bbb395-4091-49a7-baa0-044d76538e9b",
+  "path": "/Pending Apps/Acquisition Funnelt/Connections/Google AdWords API.dst",
+  "description": "",
+  "name": "Google AdWords API",
+  "id": 419
+}
+,{
+  "uuid": "76f8528b-8abc-42a8-86b2-8448e56500fd",
+  "path": "/Pending Apps/Acquisition Funnelt/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 420
+}
+,{
+  "uuid": "9ee54c25-7e13-4392-8929-d65290289a4b",
+  "path": "/Pending Apps/Acquisition Funnelt/Connections/Web Logs.dst",
+  "description": "SSH connection to server logs",
+  "name": "Web Logs",
+  "id": 422
+}
+,{
+  "uuid": "231fc9e1-2346-41f2-ab5a-6f687558477f",
+  "path": "/Pending Apps/Acquisition Funnelt/Connections/Customer DB.dst",
+  "description": "",
+  "name": "Customer DB",
+  "id": 423
+}
+,{
+  "uuid": "4ecc6cd9-d6f2-4aae-865b-2cbbe27d52d2",
+  "path": "/Users/khsu/Applications/CitiBike/CitiBike.dst",
+  "description": "",
+  "name": "CitiBike",
+  "id": 428
+}
+,{
+  "uuid": "e8280676-4631-4d77-810d-bcd55e6d5bd2",
+  "path": "/Users/wbenica/JIRA/githubConnection.dst",
+  "description": "GitHub connection",
+  "name": "githubConnection",
+  "id": 429
+}
+,{
+  "uuid": "1e8fa4a8-3740-437c-a17b-f4a656984ed1",
+  "path": "/Users/tscholz/Applications/SalesTrajectory 2/Resources/Connection.dst",
+  "description": "My Salesforce oauth datasource",
+  "name": "Connection",
+  "id": 430
+}
+,{
+  "uuid": "de2bfd77-004c-4c35-bf75-ef2a708ab874",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo_old/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 431
+}
+,{
+  "uuid": "8fb06c11-b42b-4174-9bff-694440017351",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo_old/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 432
+}
+,{
+  "uuid": "47419a9c-3602-4223-9a0c-1dfb98e9e153",
+  "path": "/Users/kkolman/Applications/Customer Funnel Optimization Demo/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 433
+}
+,{
+  "uuid": "8c961e65-0214-4770-bf24-829bc533d86f",
+  "path": "/Users/kkolman/Applications/Customer Funnel Optimization Demo/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 434
+}
+,{
+  "uuid": "7c8f8693-9ad1-4172-a1e1-ebc19d35af9e",
+  "path": "/Users/tscholz/Jira Lead Time/Connection to Jira.dst",
+  "description": "",
+  "name": "Connection to Jira",
+  "id": 435
+}
+,{
+  "uuid": "8f310ba1-04a5-4ec7-a4b3-53e9891feee3",
+  "path": "/Users/tscholz/Jira Lead Time/Connection_jira_db.dst",
+  "description": "",
+  "name": "Connection_jira_db",
+  "id": 436
+}
+,{
+  "uuid": "64f11900-e741-4f44-98ca-7021f0b1a735",
+  "path": "/Users/spuccinelli/Applications/Facebook Network/Resources/Facebook.dst",
+  "description": "",
+  "name": "Facebook",
+  "id": 437
+}
+,{
+  "uuid": "19e99162-fdbf-4bfe-9acc-b67dc2c746fa",
+  "path": "/Users/cbishop/Applications/Email Delivery Analysis/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 438
+}
+,{
+  "uuid": "8ade5fd8-59fe-4925-aecd-6759cd1580a2",
+  "path": "/Users/frances/Connections/NYT.dst",
+  "description": "NY Times Article Search",
+  "name": "NYT",
+  "id": 441
+}
+,{
+  "uuid": "c6950a40-6b02-4ccc-a864-60936dd2a144",
+  "path": "/Users/frances/Connections/Reddit.dst",
+  "description": "",
+  "name": "Reddit",
+  "id": 443
+}
+,{
+  "uuid": "0c6bbc15-17c6-4348-a27e-efad77b10208",
+  "path": "/Users/tscholz/Applications/Email Delivery Analysis Improve 0.2/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 444
+}
+,{
+  "uuid": "ed51b103-8e09-4d4e-b253-2bd6cfd760d5",
+  "path": "/Users/frances/Connections/CitiBike.dst",
+  "description": "CitiBike",
+  "name": "CitiBike",
+  "id": 445
+}
+,{
+  "uuid": "c4f1809a-e825-4ed6-81c1-5c36db57b6ba",
+  "path": "/Users/frances/Experiments/reddit.dst",
+  "description": "",
+  "name": "reddit",
+  "id": 446
+}
+,{
+  "uuid": "1a947476-7af7-4980-bba0-62b948d61ed0",
+  "path": "/Users/cbishop/Applications/Email Delivery Analysis 1/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 448
+}
+,{
+  "uuid": "4ba44be2-48f2-420e-bc76-93a76157984e",
+  "path": "/Users/cbishop/Applications/Email Delivery Analysis 2/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 449
+}
+,{
+  "uuid": "55e9cb34-86c6-49c1-b79d-5c82ddcc929e",
+  "path": "/Users/cbishop/Applications/Email Delivery Analysis 3/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 450
+}
+,{
+  "uuid": "151d14eb-083a-4339-ac15-d78168a78c08",
+  "path": "/Users/cbishop/Applications/Email Delivery Analysis 4/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 451
+}
+,{
+  "uuid": "f908dc11-db34-4588-b2ad-ddaa31deb3e0",
+  "path": "/Users/cbishop/Applications/Acquisition Funnel 1/Connections/Salesforce API.dst",
+  "description": "",
+  "name": "Salesforce API",
+  "id": 452
+}
+,{
+  "uuid": "f077abbb-e704-4d77-a020-a3b4a7fbbb51",
+  "path": "/Users/cbishop/Applications/Acquisition Funnel 1/Connections/Google AdWords API.dst",
+  "description": "",
+  "name": "Google AdWords API",
+  "id": 453
+}
+,{
+  "uuid": "a6ce3aa3-d91f-4778-8846-5a1be07c9d7b",
+  "path": "/Users/cbishop/Applications/Acquisition Funnel 1/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 454
+}
+,{
+  "uuid": "932dd645-ef36-4fd7-b069-38901db1fda0",
+  "path": "/Users/cbishop/Applications/Acquisition Funnel 1/Connections/Web logs aggregation point.dst",
+  "description": "",
+  "name": "Web logs aggregation point",
+  "id": 455
+}
+,{
+  "uuid": "9497a6b8-1ae0-4e56-95a9-5294ef3dc61e",
+  "path": "/Users/cbishop/sshtest.dst",
+  "description": "",
+  "name": "sshtest",
+  "id": 456
+}
+,{
+  "uuid": "0c637858-5626-4a15-bf90-bf0f43ae6014",
+  "path": "/Users/cbishop/Applications/Last fm friends/Resources/lastfm connection.dst",
+  "description": "",
+  "name": "lastfm connection",
+  "id": 457
+}
+,{
+  "uuid": "25c5e521-fdfb-4bf2-ae37-0e93848b5592",
+  "path": "/Users/cbishop/Applications/Amazon EC2 Monitor/Resources/Ec2Connection.dst",
+  "description": "Connection for Amazon EC2 imports.",
+  "name": "Ec2Connection",
+  "id": 458
+}
+,{
+  "uuid": "0830d959-5522-4109-be78-5866b8371e09",
+  "path": "/Users/frances/Applications/Email Communication/Resources/SampleMail.dst",
+  "description": "",
+  "name": "SampleMail",
+  "id": 461
+}
+,{
+  "uuid": "ae0197ed-50b4-4174-8511-75673273e4d2",
+  "path": "/Users/cbishop/Applications/SampleAppFunnelTest/Connections/mysql_connection.dst",
+  "description": "",
+  "name": "mysql_connection",
+  "id": 462
+}
+,{
+  "uuid": "0c06f8cb-55fc-44da-9118-c55baec98ee0",
+  "path": "/Users/cbishop/Applications/SampleAppFunnelTest/Connections/Log_connection.dst",
+  "description": "",
+  "name": "Log_connection",
+  "id": 463
+}
+,{
+  "uuid": "b0b6db87-e5ea-4514-ad6f-865479bafd4b",
+  "path": "/Users/cbishop/Applications/SampleAppFunnelTest 1/Connections/mysql_connection.dst",
+  "description": "",
+  "name": "mysql_connection",
+  "id": 464
+}
+,{
+  "uuid": "73da8f03-8eae-4e0d-9f3c-4f3055d0239c",
+  "path": "/Users/cbishop/Applications/SampleAppFunnelTest 1/Connections/Log_connection.dst",
+  "description": "",
+  "name": "Log_connection",
+  "id": 465
+}
+,{
+  "uuid": "c49c0099-f64a-4c32-b5ed-4fdbb857ca52",
+  "path": "/Users/cbishop/Applications/Customer Funnel Optimization Demo/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 466
+}
+,{
+  "uuid": "2f3ee84d-03f2-440a-9329-81fae75030a1",
+  "path": "/Users/cbishop/Applications/Customer Funnel Optimization Demo/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 467
+}
+,{
+  "uuid": "69eff147-99a3-4b0b-b8a2-fe46aaf73d9c",
+  "path": "/Users/cbishop/SampleAppFunnelTest2/Connections/Customer_DB.dst",
+  "description": "",
+  "name": "Customer_DB",
+  "id": 468
+}
+,{
+  "uuid": "0274ce92-4f63-4bae-934a-17d73775487b",
+  "path": "/Users/cbishop/Applications/SampleAppFunnelTest2/Connections/Customer_DB.dst",
+  "description": "",
+  "name": "Customer_DB",
+  "id": 469
+}
+,{
+  "uuid": "35691233-ccb5-499e-b31c-98eaaef3d215",
+  "path": "/Users/tscholz/Applications/Crunchbase InsightsV.04/Resources/Crunchbase.dst",
+  "description": "",
+  "name": "Crunchbase",
+  "id": 471
+}
+,{
+  "uuid": "5df94c37-23df-43ef-a924-f706e66c6371",
+  "path": "/Users/tscholz/Applications/Crunchbase Insights/Resources/Crunchbase.dst",
+  "description": "",
+  "name": "Crunchbase",
+  "id": 472
+}
+,{
+  "uuid": "9acce8d0-97a7-49ce-bf5c-4af001237dd5",
+  "path": "/Users/cbishop/Applications/Acquisition Funnelt/Connections/Salesforce API.dst",
+  "description": "",
+  "name": "Salesforce API",
+  "id": 473
+}
+,{
+  "uuid": "b7c4be83-1cc8-4321-89c2-cbf15a722eee",
+  "path": "/Users/cbishop/Applications/Acquisition Funnelt/Connections/Google AdWords API.dst",
+  "description": "",
+  "name": "Google AdWords API",
+  "id": 474
+}
+,{
+  "uuid": "ae32e3e7-41b2-44c5-87fa-2013326f8ff4",
+  "path": "/Users/cbishop/Applications/Acquisition Funnelt/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 475
+}
+,{
+  "uuid": "c9c36d9c-6536-402c-8dd4-151c0da96da0",
+  "path": "/Users/cbishop/Applications/Acquisition Funnelt/Connections/Web Logs.dst",
+  "description": "SSH connection to server logs",
+  "name": "Web Logs",
+  "id": 476
+}
+,{
+  "uuid": "175ed72e-4ded-4c9c-a682-0725faf16a06",
+  "path": "/Users/cbishop/Applications/Acquisition Funnelt/Connections/Customer DB.dst",
+  "description": "",
+  "name": "Customer DB",
+  "id": 477
+}
+,{
+  "uuid": "28019f11-3726-4802-b62f-9abbe11f8e9f",
+  "path": "/Users/cbishop/Applications/Acquisition Funnelt 1/Connections/Salesforce API.dst",
+  "description": "",
+  "name": "Salesforce API",
+  "id": 478
+}
+,{
+  "uuid": "5bf159d4-fd1c-44e6-90a5-1083ac13d904",
+  "path": "/Users/cbishop/Applications/Acquisition Funnelt 1/Connections/Google AdWords API.dst",
+  "description": "",
+  "name": "Google AdWords API",
+  "id": 479
+}
+,{
+  "uuid": "13e18d92-437e-4c40-a814-8ac56d1129d3",
+  "path": "/Users/cbishop/Applications/Acquisition Funnelt 1/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 480
+}
+,{
+  "uuid": "b34ae3f3-7236-4bb0-bc04-2d513d14bbb6",
+  "path": "/Users/cbishop/Applications/Acquisition Funnelt 1/Connections/Web Logs.dst",
+  "description": "SSH connection to server logs",
+  "name": "Web Logs",
+  "id": 481
+}
+,{
+  "uuid": "f58f0606-8937-43f3-be18-821709f3caa5",
+  "path": "/Users/cbishop/Applications/Acquisition Funnelt 1/Connections/Customer DB.dst",
+  "description": "",
+  "name": "Customer DB",
+  "id": 482
+}
+,{
+  "uuid": "92eb71ef-9ba8-45f4-85be-114273a07923",
+  "path": "/Users/tscholz/Applications/Email Delivery Analysis/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 483
+}
+,{
+  "uuid": "be214515-2b5f-44bb-98fe-19cd7d1c2254",
+  "path": "/Users/tscholz/Applications/Email Delivery Analysis 1/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 484
+}
+,{
+  "uuid": "4ea6e09d-9246-4d51-810f-171104e49f50",
+  "path": "/Users/tscholz/Applications/Email Delivery Analysis 2/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 485
+}
+,{
+  "uuid": "2a89480d-9f9c-4b4f-b5af-068d581e58f3",
+  "path": "/Users/cbishop/Applications/Last fm neighbours/Resources/lastfm connection.dst",
+  "description": "",
+  "name": "lastfm connection",
+  "id": 486
+}
+,{
+  "uuid": "324262a5-efcc-4750-8299-63630e52c317",
+  "path": "/Users/cbishop/Applications/LinkedIn Pro Stats/Resources/LinkedIn.dst",
+  "description": "",
+  "name": "LinkedIn",
+  "id": 487
+}
+,{
+  "uuid": "9a20d120-3d94-499d-8761-ba3d8cd8b13c",
+  "path": "/Users/cbishop/Applications/Email Delivery Analysis 5/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 488
+}
+,{
+  "uuid": "a5a8fee7-5476-4325-83ff-3012965aefd5",
+  "path": "/Users/cbishop/Applications/Email Delivery Analysis 6/Resources/SampleMail.dst",
+  "description": "Mail Server Connection",
+  "name": "SampleMail",
+  "id": 489
+}
+,{
+  "uuid": "1e86fe25-21f7-4fe6-8e0b-2a6ed6ec3d0c",
+  "path": "/Users/tscholz/Benson_Test/Jira Connection.dst",
+  "description": "",
+  "name": "Jira Connection",
+  "id": 490
+}
+,{
+  "uuid": "03892d55-3ad0-47c8-9d54-50d7c3612e14",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo Sebastian1/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 491
+}
+,{
+  "uuid": "16b9ab85-16ee-4536-9232-d34efccb862c",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo Sebastian1/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 492
+}
+,{
+  "uuid": "2ea7f886-d435-4b20-ac50-b77c9198981a",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo Sebastian2/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 493
+}
+,{
+  "uuid": "146cc0fa-49a7-4d42-84bb-8922e5967c90",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo Sebastian2/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 494
+}
+,{
+  "uuid": "acf67d07-76b7-457a-9de0-e4a2f5825d1b",
+  "path": "/Users/cbishop/Applications/Customer Funnel Optimization Demo Sebastian2/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 495
+}
+,{
+  "uuid": "1b18f2a1-1275-4c14-9aa6-70dbb815c470",
+  "path": "/Users/cbishop/Applications/Customer Funnel Optimization Demo Sebastian2/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 496
+}
+,{
+  "uuid": "5a682cec-014d-4323-ad4d-6295a49d7ed4",
+  "path": "/Users/frances/Applications/CitiBike/CitiBike.dst",
+  "description": "",
+  "name": "CitiBike",
+  "id": 497
+}
+,{
+  "uuid": "531386df-b56c-4862-8143-566590710508",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 498
+}
+,{
+  "uuid": "d78233f8-3331-4335-8fcf-2147369abb0b",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 499
+}
+,{
+  "uuid": "eafd2832-96d0-4c20-a7b0-f68bac719421",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo 1/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 500
+}
+,{
+  "uuid": "e941d777-9daf-42ab-b10c-dbf3500d8ca3",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo 1/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 501
+}
+,{
+  "uuid": "efe5dfa1-a0c3-4712-8884-91acbf5030d1",
+  "path": "/Users/bcurrier/Zendesk Ticket Monitoring/Zendesk Connection.dst",
+  "description": "",
+  "name": "Zendesk Connection",
+  "id": 502
+}
+,{
+  "uuid": "b136fb47-34ed-4f7d-8da4-0019bd37012e",
+  "path": "/Users/bcurrier/Applications/Zendesk Tickets/Resources/DataStore Zendesk.dst",
+  "description": "",
+  "name": "DataStore Zendesk",
+  "id": 503
+}
+,{
+  "uuid": "7409dbe8-c968-4880-92e8-447d6e57882f",
+  "path": "/Users/frances/Experiments/TestConenction.dst",
+  "description": "",
+  "name": "TestConenction",
+  "id": 505
+}
+,{
+  "uuid": "9034fb69-0284-418b-9c3b-a423a914477d",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo 2/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 506
+}
+,{
+  "uuid": "3240d763-3615-4230-9533-ebe4b9359264",
+  "path": "/Users/tscholz/Applications/Customer Funnel Optimization Demo 2/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 507
+}
+,{
+  "uuid": "b88708dd-a049-4b1c-8060-4ad35695e4c7",
+  "path": "/Users/sbuechner/Applications/FixedSystemHealthCheck/Resources/HC_database.dst",
+  "description": "Datameer System Database",
+  "name": "HC_database",
+  "id": 511
+}
+,{
+  "uuid": "2d07bc60-7fc2-4e9a-b0ae-6e9ebb0fed15",
+  "path": "/Datameer/Services/Datameer System Health Check/Resources/HC_database.dst",
+  "description": "Datameer System Database",
+  "name": "HC_database",
+  "id": 515
+}
+,{
+  "uuid": "6d1cfb2f-bdd6-493e-af83-af0fc5531030",
+  "path": "/Users/anguyen/Applications/Customer Funnel Optimization Demo/Connections/Geolocation Site.dst",
+  "description": "",
+  "name": "Geolocation Site",
+  "id": 516
+}
+,{
+  "uuid": "b78f86c3-9702-41e0-9f46-52efe748132e",
+  "path": "/Users/anguyen/Applications/Customer Funnel Optimization Demo/Connections/S3.dst",
+  "description": "",
+  "name": "S3",
+  "id": 517
+}
+,{
+  "uuid": "9e2e32a4-9c8e-4982-9581-f64d267f0810",
+  "path": "/Applications/Work in Progress/Twitter Instant/Twitter.dst",
+  "description": "",
+  "name": "Twitter",
+  "id": 518
+}
+,{
+  "uuid": "0f7255aa-87f6-4a18-82ba-b034b64c1e31",
+  "path": "/Users/tscholz/Applications/Datameer System Health Check/Resources/HC_database.dst",
+  "description": "Datameer System Database",
+  "name": "HC_database",
+  "id": 519
+}
+]

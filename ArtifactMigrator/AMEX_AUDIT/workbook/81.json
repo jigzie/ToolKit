@@ -1,0 +1,226 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "2c3e133c-9b80-4ba3-bf8c-2f397af31553",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/logs/base/_02_50_Volume.wbk",
+    "description": "",
+    "name": "_02_50_Volume"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "Volume_src",
+      "sheetId": "06efbe90-cb3c-45e2-bc56-4c055adea448",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Logs_Volume.lnk",
+        "uuid": "de366b2e-bd66-4723-80e3-66c5b6b9df5f"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Volume",
+      "sheetId": "35b83ba9-4b91-45db-9861-f6d6eaf89f4b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "outputPartitionDefinition": {
+        "dateFormat": "yyyyMMdd",
+        "dateGenerator": "\u003d(#execution_date)"
+      },
+      "formulas": [
+        {
+          "columnName": "execution_date",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Volume_src!execution_date"
+        },
+        {
+          "columnName": "execution_id",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Volume_src!execution_id"
+        },
+        {
+          "columnName": "execution_configuration_uuid",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d#Volume_src!execution_configuration_uuid"
+        },
+        {
+          "columnName": "execution_configuration_job_type",
+          "columnId": "3",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Volume_src!execution_configuration_job_type"
+        },
+        {
+          "columnName": "total_sample_size",
+          "columnId": "4",
+          "columnIndex": 4,
+          "formulaString": "\u003d#Volume_src!total_sample_size"
+        },
+        {
+          "columnName": "source_input_size",
+          "columnId": "5",
+          "columnIndex": 5,
+          "formulaString": "\u003d#Volume_src!source_input_size"
+        },
+        {
+          "columnName": "dropped_records",
+          "columnId": "6",
+          "columnIndex": 6,
+          "formulaString": "\u003d#Volume_src!dropped_records"
+        },
+        {
+          "columnName": "dropped_splits",
+          "columnId": "7",
+          "columnIndex": 7,
+          "formulaString": "\u003d#Volume_src!dropped_splits"
+        },
+        {
+          "columnName": "byte_throughput",
+          "columnId": "8",
+          "columnIndex": 8,
+          "formulaString": "\u003d#Volume_src!byte_throughput"
+        },
+        {
+          "columnName": "record_throughput",
+          "columnId": "9",
+          "columnIndex": 9,
+          "formulaString": "\u003d#Volume_src!record_throughput"
+        },
+        {
+          "columnName": "records_proccesed",
+          "columnId": "10",
+          "columnIndex": 10,
+          "formulaString": "\u003d#Volume_src!records_proccesed"
+        },
+        {
+          "columnName": "data_volume_imported",
+          "columnId": "11",
+          "columnIndex": 11,
+          "formulaString": "\u003d#Volume_src!data_volume_imported"
+        },
+        {
+          "columnName": "import_size_imported",
+          "columnId": "12",
+          "columnIndex": 12,
+          "formulaString": "\u003d#Volume_src!import_size_imported"
+        },
+        {
+          "columnName": "produced_records",
+          "columnId": "13",
+          "columnIndex": 13,
+          "formulaString": "\u003d#Volume_src!produced_records"
+        },
+        {
+          "columnName": "produced_size",
+          "columnId": "14",
+          "columnIndex": 14,
+          "formulaString": "\u003d#Volume_src!produced_size"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "execution_date",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "execution_id",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "execution_configuration_uuid",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "execution_configuration_job_type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "total_sample_size",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "source_input_size",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "6",
+          "name": "dropped_records",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "7",
+          "name": "dropped_splits",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "8",
+          "name": "byte_throughput",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "9",
+          "name": "record_throughput",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "records_proccesed",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "11",
+          "name": "data_volume_imported",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "12",
+          "name": "import_size_imported",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "13",
+          "name": "produced_records",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "14",
+          "name": "produced_size",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 15
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "DROP_RECORD"
+}

@@ -1,0 +1,192 @@
+{
+    "advancedSchedulingInUse": false,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "DROP_RECORD",
+    "file": {
+        "description": "",
+        "name": "_l_Login Statistics per Day",
+        "path": "/Administration/HUMv2/Reports/logs/_l_Login Statistics per Day.wbk",
+        "uuid": "9038c54a-da57-406e-a6f8-c541faef3734"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {
+        "cardinalities.generation": [
+            "true"
+        ],
+        "histograms.generation": [
+            "true"
+        ],
+        "minmaxmean.generation": [
+            "true"
+        ]
+    },
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [
+                {
+                    "columnId": "behaviour",
+                    "thousandSeparator": true,
+                    "width": 148
+                },
+                {
+                    "columnId": "action",
+                    "thousandSeparator": true,
+                    "width": 245
+                }
+            ],
+            "connector": "AND",
+            "filterArguments": [
+                {
+                    "column": "action_type",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "AUTHENTICATION",
+                    "valueStatic": true
+                },
+                {
+                    "column": "action",
+                    "filterExpression": "TEXT_EQUALS",
+                    "type": "CONSTANT",
+                    "value": "LOGIN",
+                    "valueStatic": true
+                },
+                {
+                    "column": "timestamp",
+                    "filterExpression": "AFTER",
+                    "type": "COL_FORMULA",
+                    "value": "TODAY() - 90d",
+                    "valueStatic": false
+                }
+            ],
+            "filterSourceSheet": "user_action",
+            "filterTargetSheet": "user_action",
+            "keep": false,
+            "name": "user_action",
+            "referencedSheet": {
+                "name": "User_Action",
+                "sheetId": "b0279367-e4e1-461a-9f0d-9fde7d140fa4",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/logs/base/_02_00_User_Action.wbk",
+                    "uuid": "c76f1c58-ab6a-4958-8e39-af93bcca7783"
+                }
+            },
+            "sheetId": "4004442e-5fa4-444c-8f0f-35522d2808ca",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "3",
+                    "name": "Day",
+                    "thousandSeparator": true,
+                    "width": 171
+                },
+                {
+                    "columnId": "4",
+                    "name": "Logins",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "5",
+                    "name": "DistinctUsers",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "3",
+                    "columnIndex": 0,
+                    "columnName": "Day",
+                    "formulaString": "=GROUPBY(ASDATE(FORMATDATE(#user_action!timestamp;\"yyyy-MM-dd\")))"
+                },
+                {
+                    "columnId": "4",
+                    "columnIndex": 1,
+                    "columnName": "Logins",
+                    "formulaString": "=GROUPCOUNT()"
+                },
+                {
+                    "columnId": "5",
+                    "columnIndex": 2,
+                    "columnName": "DistinctUsers",
+                    "formulaString": "=GROUPCOUNTDISTINCT(#user_action!performed_by_user)"
+                }
+            ],
+            "keep": true,
+            "name": "Logins_per_Day",
+            "nextColumnId": 6,
+            "sheetId": "c3ccd45c-c0c3-44c5-a3be-e35d13bd2f17",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Day",
+                    "sortOrder": "ASC"
+                }
+            ],
+            "sortSourceSheet": "Logins_per_Day",
+            "sortTargetSheet": "Logins_per_Day"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "Hour",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "Count",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "2",
+                    "name": "user_DistinctCount",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "Hour",
+                    "formulaString": "=GROUPBY(HOUR(#user_action!timestamp))"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "Count",
+                    "formulaString": "=GROUPCOUNT()"
+                },
+                {
+                    "columnId": "2",
+                    "columnIndex": 2,
+                    "columnName": "user_DistinctCount",
+                    "formulaString": "=GROUPCOUNTDISTINCT(#user_action!performed_by_user)"
+                }
+            ],
+            "keep": true,
+            "name": "LoginsPerTimeOfDay",
+            "nextColumnId": 3,
+            "sheetId": "2ef19629-59ea-4459-ada4-a7fb4e3a6ea0",
+            "sheetType": "das.internal.FormulaSheetType",
+            "sortKeys": [
+                {
+                    "column": "Hour",
+                    "sortOrder": "ASC"
+                }
+            ],
+            "sortSourceSheet": "LoginsPerTimeOfDay",
+            "sortTargetSheet": "LoginsPerTimeOfDay"
+        }
+    ],
+    "version": "4.5.0"
+}

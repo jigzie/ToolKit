@@ -1,0 +1,10 @@
+{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/.system/FileUploadDataStore.dst\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/Connections/Datameer server filesystem.dst\u0027 already exists."
+}{
+  "status": "failure",
+  "reason": "Can\u0027t save file. File \u0027/Data/Connections/Dap4120.dst\u0027 already exists."
+}

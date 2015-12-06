@@ -1,0 +1,219 @@
+{
+  "version": "4.1.2",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "8a570459-18d1-4e30-a9c9-7d6e5f3a3b0b",
+    "path": "/Analytics/Workbooks/ConsumptionApp.wbk",
+    "description": "",
+    "name": "ConsumptionApp"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "DapFile",
+      "sheetId": "4dfaddb9-c501-49b2-96f9-830828cf93d7",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": true,
+      "datasource": {
+        "path": "/Data/ImportJobs/DapFile.imp",
+        "uuid": "fe781c11-7c1f-4e25-ac28-790f8798213a"
+      },
+      "columnStyles": [
+        {
+          "columnId": "extension",
+          "width": 284,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "DapJobConfiguration",
+      "sheetId": "f7e7b176-5b36-457a-b5de-43a364be5d43",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Data/ImportJobs/DapJobConfiguration.imp",
+        "uuid": "d56e4792-4085-4080-a639-7a6da2a58058"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "DataVolumeSummary",
+      "sheetId": "d6c67880-ba68-459c-8d71-0df1edddf246",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": true,
+      "datasource": {
+        "path": "/Data/ImportJobs/DataVolumeSummary.imp",
+        "uuid": "f12a7825-388c-41ed-bb5a-12269c186782"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "Permissions",
+      "sheetId": "17bd0286-9e25-4790-a32c-5f1fa8add6d0",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": true,
+      "datasource": {
+        "path": "/Data/ImportJobs/Permissions.lnk",
+        "uuid": "3ebceaab-c10a-4725-9e95-d5a479ef0272"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "GroupPermission",
+      "sheetId": "e07c5536-5792-4e51-88da-46d18562cb81",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Data/ImportJobs/GroupPermission.imp",
+        "uuid": "d74ed4db-86a7-48f1-b595-ff5086d365f8"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "DataIngestion_w_Permissions",
+      "sheetId": "8a6297d5-2592-4d4f-8790-1d2881c3c154",
+      "sheetType": "das.internal.JoinedSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "joinCategory": "MULTI_JOIN",
+        "joinPairs": [
+          {
+            "joinType": "INNER",
+            "sheet1": "DapJobConfiguration",
+            "sheet2": "DapFile",
+            "joinColumns1": [
+              "dap_file__id"
+            ],
+            "joinColumns2": [
+              "id"
+            ]
+          },
+          {
+            "joinType": "INNER",
+            "sheet1": "DapFile",
+            "sheet2": "Permissions",
+            "joinColumns1": [
+              "permission_fk"
+            ],
+            "joinColumns2": [
+              "id"
+            ]
+          },
+          {
+            "joinType": "OUTER_LEFT",
+            "sheet1": "Permissions",
+            "sheet2": "GroupPermission",
+            "joinColumns1": [
+              "id"
+            ],
+            "joinColumns2": [
+              "permission__id"
+            ]
+          }
+        ],
+        "sheetToIncludeColumns": {
+          "DapJobConfiguration": [
+            "pull_type",
+            "schedule"
+          ],
+          "DapFile": [
+            "extension",
+            "bytes_processed",
+            "name"
+          ],
+          "Permissions": [
+            "owner",
+            "other_permission_bits"
+          ],
+          "GroupPermission": [
+            "group_name",
+            "permission_bits"
+          ]
+        }
+      },
+      "columnStyles": [
+        {
+          "columnId": "7e5d57e8c3261bd526185fe267cf864e",
+          "width": 148,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "baf84944fba11c353e67bd3bb107d47c",
+          "width": 215,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "083f00cc3a8f777bc92eb027ab960d3a",
+          "width": 199,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "DataIngestionVolume",
+      "sheetId": "eab50c24-1b6c-4586-a491-7ab64755ecea",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "Type",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#DataIngestion_w_Permissions!DapFile.extension)"
+        },
+        {
+          "columnName": "Sum_MB",
+          "columnId": "3",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#DataIngestion_w_Permissions!DapFile.bytes_processed)/1024"
+        },
+        {
+          "columnName": "Average_MB",
+          "columnId": "4",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPAVERAGE(#DataIngestion_w_Permissions!DapFile.bytes_processed)/1024"
+        },
+        {
+          "columnName": "Type1",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003dREPLACEALL(#Type;\"_.*\")"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Type",
+          "width": 173,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Sum_MB",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "4",
+          "name": "Average_MB",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "Type1",
+          "width": 230,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 7
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

@@ -1,0 +1,66 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "b46c58b1-7477-4b6f-9051-28021c334799",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Reports/db/base/_00_02_Artifact_Count_By_Type.wbk",
+    "description": "",
+    "name": "_00_02_Artifact_Count_By_Type"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "sheets": [
+    {
+      "name": "MySQL_Artifact_Count_By_Type_src",
+      "sheetId": "5f5c0cfc-713a-41e3-8ce9-1349cb3e8094",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_Artifact_Count_By_Type.lnk",
+        "uuid": "ba1407d8-18a5-40d7-b198-963d5ed2308b"
+      },
+      "columnStyles": []
+    },
+    {
+      "name": "MySQL_Artifact_Count_By_Type",
+      "sheetId": "6127ba20-6b27-4290-bfdb-f2eae57294da",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "extension",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#MySQL_Artifact_Count_By_Type_src!extension"
+        },
+        {
+          "columnName": "NumOfArtifacts",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#MySQL_Artifact_Count_By_Type_src!NumOfArtifacts"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "extension",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "NumOfArtifacts",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 2
+    }
+  ],
+  "advancedSchedulingInUse": true,
+  "errorHandlingMode": "IGNORE"
+}

@@ -1,0 +1,67 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "_00_18_file_type",
+        "path": "/Administration/HUMv2/Reports/db/base/_00_18_file_type.wbk",
+        "uuid": "bc001228-0fec-4963-bb31-856db82c1b96"
+    },
+    "hadoopProperties": "das.execution-framework=Local",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "SCHEDULED",
+    "schedule": "18 0 1 * *",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "datasource": {
+                "path": "/Administration/HUMv2/Ingestion/MySQL_file_type.lnk",
+                "uuid": "991e862d-a5d1-4d39-834b-9bece40fe8b0"
+            },
+            "keep": false,
+            "name": "MySQL_file_type_src",
+            "sheetId": "3d4442c9-fcc8-4bc0-82cc-27a4db769835",
+            "sheetType": "das.internal.DataSourceSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "file_type",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "dap_file_id",
+                    "thousandSeparator": true,
+                    "width": 100
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "file_type",
+                    "formulaString": "=#MySQL_file_type_src!file_type"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "dap_file_id",
+                    "formulaString": "=#MySQL_file_type_src!dap_file_id"
+                }
+            ],
+            "keep": true,
+            "name": "MySQL_file_type",
+            "nextColumnId": 2,
+            "sheetId": "9b8fb20e-06f0-47fa-956e-2f0e0db62cbb",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}

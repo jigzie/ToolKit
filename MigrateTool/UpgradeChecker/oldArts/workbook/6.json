@@ -1,0 +1,284 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "cef692e8-fc32-4619-bcd2-28ee05dfd8e2",
+    "path": "/Users/superuser/Applications/Enron Email Analytics/EnronEmailWorkbook.wbk",
+    "description": "",
+    "name": "EnronEmailWorkbook"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "sheets": [
+    {
+      "name": "EnronEmailFileUpload",
+      "sheetId": "6503c548-8093-496e-ae28-736ab05d5edb",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": true,
+      "datasource": {
+        "path": "/Users/superuser/Applications/Enron Email Analytics/EnronEmailFileUpload.upl",
+        "uuid": "b604e40a-dc04-4574-bb61-3db6473fe15c"
+      },
+      "columnStyles": [
+        {
+          "columnId": "message_id",
+          "width": 222,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "EnronEmailFiltered",
+      "sheetId": "6521d5f2-de5a-4d16-937c-ac6616b26c7a",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": true,
+      "filterSourceSheet": "EnronEmailFileUpload",
+      "filterTargetSheet": "EnronEmailFiltered",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "date",
+          "filterExpression": "AFTER",
+          "value": "1990-1-1 12:00:00 AM",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "date",
+          "filterExpression": "BEFORE",
+          "value": "2012-7-16 12:00:00 AM",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "from",
+          "filterExpression": "NOT_CONTAINS",
+          "value": ",",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "to",
+          "filterExpression": "NOT_CONTAINS",
+          "value": ",",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "from",
+          "filterExpression": "TEXT_NOT_EQUALS",
+          "value": "enron.announcements@enron.com",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "from",
+          "filterExpression": "TEXT_NOT_EQUALS",
+          "value": "to",
+          "valueStatic": false,
+          "type": "COLUMN"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "FromTo",
+      "sheetId": "f0bbef2b-b047-4ca4-847a-044fde766173",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "From",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#EnronEmailFiltered!from)"
+        },
+        {
+          "columnName": "To",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPBY(#EnronEmailFiltered!to)"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "From",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "To",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "FromToSort",
+      "sheetId": "7418f332-9a20-4393-8dcb-e6b37a24e3c5",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "FromTo",
+      "sortTargetSheet": "FromToSort",
+      "sortKeys": [
+        {
+          "column": "Count",
+          "sortOrder": "DESC"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "width": 203,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "width": 254,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "EnronEmailDateSubset",
+      "sheetId": "076834c4-4b27-41b6-be1d-2ec920f8afd0",
+      "sheetType": "das.internal.FilterSheetType",
+      "keep": true,
+      "filterSourceSheet": "EnronEmailFiltered",
+      "filterTargetSheet": "EnronEmailDateSubset",
+      "connector": "AND",
+      "filterArguments": [
+        {
+          "column": "date",
+          "filterExpression": "AFTER",
+          "value": "1999-5-1 12:00:00 AM",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        },
+        {
+          "column": "date",
+          "filterExpression": "BEFORE",
+          "value": "2002-6-30 12:00:00 AM",
+          "valueStatic": true,
+          "type": "CONSTANT"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "EmailCountByMonth",
+      "sheetId": "940d53bc-c9ae-4468-9dfe-2a517fe300fe",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Date",
+          "columnId": "1",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(ASDATE(YEAR(#EnronEmailDateSubset!date)+\"-\"+MONTH(#EnronEmailDateSubset!date);\"yy-MM\"))"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "3",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "Date",
+          "width": 231,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "3",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "EmailCountByMonthSort",
+      "sheetId": "b175c85c-3bd8-42ba-bd67-584483929e57",
+      "sheetType": "das.internal.SortedSheetType",
+      "keep": true,
+      "sortSourceSheet": "EmailCountByMonth",
+      "sortTargetSheet": "EmailCountByMonthSort",
+      "sortKeys": [
+        {
+          "column": "Date",
+          "sortOrder": "ASC"
+        }
+      ],
+      "columnStyles": []
+    },
+    {
+      "name": "FromToDate",
+      "sheetId": "0bf6a175-6dbf-4540-b97e-a8327b221882",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "From",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dCOPY(#EnronEmailFiltered!from)"
+        },
+        {
+          "columnName": "To",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dCOPY(#EnronEmailFiltered!to)"
+        },
+        {
+          "columnName": "Date",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dCOPY(#EnronEmailFiltered!date)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "From",
+          "width": 252,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "To",
+          "width": 227,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Date",
+          "width": 235,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

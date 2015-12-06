@@ -1,0 +1,169 @@
+{
+  "version": "5.9.4",
+  "className": "datameer.dap.common.entity.DataSourceConfigurationImpl",
+  "file": {
+    "uuid": "fa777c50-a72e-4342-952c-834d11740d90",
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/MySQL_job_configuration.lnk",
+    "description": "Job Configuration Details",
+    "name": "MySQL_job_configuration"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {
+    "GenericConfigurationImpl.temp-file-store": [
+      "09e2db42-a540-40f7-b82b-42a0855d242d"
+    ],
+    "characterEncoding": [
+      "UTF-8"
+    ],
+    "orderColumn": [
+      "$NO_APPROPRIATE_ORDER_COLUMN$"
+    ],
+    "incrementalMode": [
+      "false"
+    ],
+    "jdbc.property.table": [
+      "\u0027dap_job_configuration\u0027"
+    ],
+    "jdbc.property.select.sql.action": [
+      "TABLE"
+    ],
+    "jdbc.property.query": [
+      "select ug.id, ug.name, ugu.user_id from user_group ug, usergroup_user ugu\r\nwhere ug.id \u003d ugu.group_id"
+    ],
+    "tableName": [
+      "\u0027dap_job_configuration\u0027"
+    ]
+  },
+  "hadoopProperties": "das.execution-framework\u003dLocal",
+  "dataStore": {
+    "path": "/Users/admin/Applications/Datameer HUM V2/Ingestion/Datameer_DB.dst",
+    "uuid": "59cf9d39-be8a-4c76-af48-221484e3aaeb"
+  },
+  "errorHandlingMode": "ABORT_JOB",
+  "maxLogErrors": 1000,
+  "maxMappers": 1,
+  "maxPreviewRecords": 5000,
+  "notificationAddresses": "",
+  "notificationSuccessAddresses": "",
+  "fields": [
+    {
+      "id": 390,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "id",
+      "origin": "id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 391,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "data_volume_size_by_license_period",
+      "origin": "data_volume_size_by_license_period",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 392,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "expire_time_days",
+      "origin": "expire_time_days",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 393,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "hadoop_properties",
+      "origin": "hadoop_properties",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 394,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "min_keep_count",
+      "origin": "min_keep_count",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 395,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "pull_type",
+      "origin": "pull_type",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 396,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "schedule",
+      "origin": "schedule",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 397,
+      "pattern": "",
+      "acceptEmpty": false,
+      "name": "dap_file__id",
+      "origin": "dap_file__id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 398,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "logging_properties",
+      "origin": "logging_properties",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 399,
+      "pattern": "",
+      "acceptEmpty": true,
+      "name": "root_logger_level",
+      "origin": "root_logger_level",
+      "valueType": "{\"type\":\"STRING\"}",
+      "include": true,
+      "version": 3
+    },
+    {
+      "id": 400,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionId",
+      "origin": "jobexecutionInfo.id",
+      "valueType": "{\"type\":\"INTEGER\"}",
+      "include": false,
+      "version": 3
+    },
+    {
+      "id": 401,
+      "acceptEmpty": false,
+      "name": "dasJobExecutionStartTime",
+      "origin": "jobexecutionInfo.starttime",
+      "valueType": "{\"type\":\"DATE\"}",
+      "include": false,
+      "version": 3
+    }
+  ]
+}

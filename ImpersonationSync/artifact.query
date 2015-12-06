@@ -1,0 +1,1 @@
+select djc.id, df.name, p.owner, df.extension from dap_file df, permission p,dap_job_configuration djc where df.id = djc.dap_file__id and p.id=df.permission_fk and df.extension like '%EXTENSION%' and file_mode='NORMAL';

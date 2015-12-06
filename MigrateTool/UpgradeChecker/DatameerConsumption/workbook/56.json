@@ -1,0 +1,444 @@
+{
+  "version": "2.1.4.4",
+  "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+  "file": {
+    "uuid": "32f479ab-2f4e-42d3-8c56-f9e7f8cbc12a",
+    "path": "/Users/admin/Datameer Consumption/Anaysis/ConsumptionAnalysis.wbk",
+    "description": "",
+    "name": "ConsumptionAnalysis"
+  },
+  "pullType": "MANUALLY",
+  "minKeepCount": 1,
+  "properties": {},
+  "hadoopProperties": "",
+  "sheets": [
+    {
+      "name": "DM_Owner_Volume_Info",
+      "sheetId": "18c935aa-905e-4932-baf4-776cdbbc3ea8",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Datameer Consumption/Ingestions/DM_Owner_Volume_Info.lnk",
+        "uuid": "1f5ed602-68aa-4039-be45-b2356e8976e3"
+      },
+      "columnStyles": [
+        {
+          "columnId": "VOLUME_in_Bytes",
+          "width": 209,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "LicenseDetails",
+      "sheetId": "e56490c4-98d6-4cb8-ab84-37e68890a28d",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "datasource": {
+        "path": "/Users/admin/Datameer Consumption/Ingestions/LicenseDetails.imp",
+        "uuid": "f80eba12-ad99-4f81-82a0-3613be8f8e6b"
+      },
+      "columnStyles": [
+        {
+          "columnId": "LicenseHolder",
+          "width": 136,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "User_Volume_in_GB",
+      "sheetId": "9fefa544-cb96-4168-ad4d-2b8be6cfddc1",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "User_Volume_in_GB",
+      "sortTargetSheet": "User_Volume_in_GB",
+      "sortKeys": [
+        {
+          "column": "Volume_in_GB",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "User",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#DM_Owner_Volume_Info!OWNER)"
+        },
+        {
+          "columnName": "Volume_in_GB",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d((((GROUPSUM(#DM_Owner_Volume_Info!VOLUME_in_Bytes))/1024)/1024)/1024)"
+        },
+        {
+          "columnName": "LicenseUsed",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003d\"Used\""
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Volume_in_GB",
+          "width": 147,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "LicenseUsed",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "Licensed",
+      "sheetId": "812e34ea-329a-4b8a-96ec-c2a510887f8f",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Description",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d\"Licensed Volume\""
+        },
+        {
+          "columnName": "Licensed_in_TB",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dBIGDECIMAL(IF(LT(#LicenseDetails!LicenseVolumelimitInBytes;1);512000;#LicenseDetails!LicenseVolumelimitInBytes))/1024"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Description",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Licensed_in_TB",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 4
+    },
+    {
+      "name": "Consumed",
+      "sheetId": "55eb7d62-e675-4101-bbfb-eb4eb9c1b85b",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Type",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#User_Volume_in_GB!LicenseUsed)"
+        },
+        {
+          "columnName": "Value_in_GB",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#User_Volume_in_GB!Volume_in_GB)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "Type",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Value_in_GB",
+          "width": 173,
+          "alignment": "LEFT",
+          "decimalDigits": 0,
+          "thousandSeparator": false
+        }
+      ],
+      "nextColumnId": 2
+    },
+    {
+      "name": "Available",
+      "sheetId": "a11039b0-18c9-4dd9-ade0-45adfd894e01",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": false,
+      "formulas": [
+        {
+          "columnName": "Type",
+          "columnId": "2",
+          "columnIndex": 0,
+          "formulaString": "\u003d\"Available\""
+        },
+        {
+          "columnName": "Value_in_GB",
+          "columnId": "10",
+          "columnIndex": 1,
+          "formulaString": "\u003dSUBTRACT(BIGDECIMAL(IF(LT(#LicenseDetails!LicenseVolumelimitInBytes;1);512000;#LicenseDetails!LicenseVolumelimitInBytes));(((COPY(#LicenseDetails!TotalVolumeConsumedInBytes))/1024)/1024)/1024)"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "2",
+          "name": "Type",
+          "width": 137,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "name": "Value_in_GB",
+          "width": 132,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 11
+    },
+    {
+      "name": "VolumeConsumptionReport",
+      "sheetId": "872dd07c-bcdf-4565-9bff-07e5432cd7a7",
+      "sheetType": "das.internal.UnionSheetType",
+      "keep": true,
+      "sheetDefinition": {
+        "unionSources": [
+          "Available",
+          "Consumed"
+        ]
+      },
+      "columnStyles": [
+        {
+          "columnId": "1",
+          "name": "Value_in_TB",
+          "width": 147,
+          "alignment": "LEFT",
+          "decimalDigits": 2,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "10",
+          "width": 154,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Imp_Lnk_size",
+      "sheetId": "9295dbd9-0ee1-46fe-ab3e-26475480894e",
+      "sheetType": "das.internal.DataSourceSheetType",
+      "keep": false,
+      "sortSourceSheet": "Imp_Lnk_size",
+      "sortTargetSheet": "Imp_Lnk_size",
+      "sortKeys": [
+        {
+          "column": "SizeInBytes",
+          "sortOrder": "DESC"
+        }
+      ],
+      "datasource": {
+        "path": "/Users/admin/Datameer Consumption/Ingestions/Imp_Lnk_size.lnk",
+        "uuid": "ca591162-0877-4158-bdb8-8c0f7346a904"
+      },
+      "columnStyles": [
+        {
+          "columnId": "TYPE",
+          "width": 204,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "SizeInBytes",
+          "width": 191,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "NAME",
+          "width": 242,
+          "thousandSeparator": true
+        }
+      ]
+    },
+    {
+      "name": "Imp_DL_Types",
+      "sheetId": "363cca66-684a-4375-9f68-208c1ac76824",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "Imp_DL_Types",
+      "sortTargetSheet": "Imp_DL_Types",
+      "sortKeys": [
+        {
+          "column": "Size_in_GB",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "NAME",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003d#Imp_Lnk_size!NAME"
+        },
+        {
+          "columnName": "Size_in_GB",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003d#Imp_Lnk_size!SizeInBytes/1000000000"
+        },
+        {
+          "columnName": "TYPE",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dREPLACEALL(REPLACEALL(#Imp_Lnk_size!TYPE;\"IMPORT_JOB_EXTENSION\";\"IMPORTJOB\");\"LINK\";\"DATALINK\")"
+        },
+        {
+          "columnName": "User",
+          "columnId": "5",
+          "columnIndex": 3,
+          "formulaString": "\u003d#Imp_Lnk_size!owner"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "NAME",
+          "width": 242,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Size_in_GB",
+          "width": 191,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "TYPE",
+          "width": 107,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "5",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 6
+    },
+    {
+      "name": "JobType_Size",
+      "sheetId": "d89c4d56-a627-4382-abf3-8e31fe10b14e",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "formulas": [
+        {
+          "columnName": "JobType",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Imp_DL_Types!TYPE)"
+        },
+        {
+          "columnName": "TotalSuminTB",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#Imp_DL_Types!Size_in_GB)/1000000000000"
+        },
+        {
+          "columnName": "Count",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "JobType",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "TotalSuminTB",
+          "width": 172,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "Count",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    },
+    {
+      "name": "User_Stats",
+      "sheetId": "cc4b252a-f8c4-45e6-97ee-874fb9ad60f7",
+      "sheetType": "das.internal.FormulaSheetType",
+      "keep": true,
+      "sortSourceSheet": "User_Stats",
+      "sortTargetSheet": "User_Stats",
+      "sortKeys": [
+        {
+          "column": "Size_in_Terabyte",
+          "sortOrder": "DESC"
+        }
+      ],
+      "formulas": [
+        {
+          "columnName": "User",
+          "columnId": "0",
+          "columnIndex": 0,
+          "formulaString": "\u003dGROUPBY(#Imp_Lnk_size!owner)"
+        },
+        {
+          "columnName": "Size_in_Terabyte",
+          "columnId": "1",
+          "columnIndex": 1,
+          "formulaString": "\u003dGROUPSUM(#Imp_Lnk_size!SizeInBytes)/1000000000000"
+        },
+        {
+          "columnName": "TotalArtifacts",
+          "columnId": "2",
+          "columnIndex": 2,
+          "formulaString": "\u003dGROUPCOUNT()"
+        }
+      ],
+      "columnStyles": [
+        {
+          "columnId": "0",
+          "name": "User",
+          "width": 100,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "1",
+          "name": "Size_in_Terabyte",
+          "width": 169,
+          "thousandSeparator": true
+        },
+        {
+          "columnId": "2",
+          "name": "TotalArtifacts",
+          "width": 100,
+          "thousandSeparator": true
+        }
+      ],
+      "nextColumnId": 3
+    }
+  ],
+  "errorHandlingMode": "IGNORE"
+}

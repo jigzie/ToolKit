@@ -1,0 +1,132 @@
+{
+    "advancedSchedulingInUse": true,
+    "className": "datameer.dap.common.entity.WorkbookConfigurationImpl",
+    "errorHandlingMode": "IGNORE",
+    "file": {
+        "description": "",
+        "name": "VersionDetails",
+        "path": "/Administration/HUMv2/Reports/http/VersionDetails.wbk",
+        "uuid": "76576f46-359e-4999-acf0-0bae61f9bc7a"
+    },
+    "hadoopProperties": "",
+    "minKeepCount": 1,
+    "notificationAddresses": "",
+    "notificationSuccessAddresses": "",
+    "properties": {},
+    "pullType": "WHEN_NEW_DATA_COMES_IN",
+    "sheets": [
+        {
+            "columnStyles": [],
+            "keep": false,
+            "name": "HTTP_Admin_Page",
+            "referencedSheet": {
+                "name": "HTTP_Admin_Page",
+                "sheetId": "e0700f90-d525-4001-b2c1-c6b765c3b5ff",
+                "workbook": {
+                    "path": "/Administration/HUMv2/Reports/http/base/_01_00_Admin_Page.wbk",
+                    "uuid": "f0d88a99-a531-4419-9378-3edac5ef1d1b"
+                }
+            },
+            "runTriggeringConfiguration": {
+                "runTrigger": true
+            },
+            "sheetId": "0b71a135-cf9d-40c9-b1c1-81e663710e40",
+            "sheetType": "das.internal.ExternalWorkbookSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "1",
+                    "name": "A",
+                    "thousandSeparator": true,
+                    "width": 168
+                },
+                {
+                    "columnId": "8",
+                    "name": "label_contents",
+                    "thousandSeparator": true,
+                    "width": 149
+                },
+                {
+                    "columnId": "9",
+                    "name": "label",
+                    "thousandSeparator": true,
+                    "width": 194
+                },
+                {
+                    "columnId": "11",
+                    "name": "value",
+                    "thousandSeparator": true,
+                    "width": 272
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "1",
+                    "columnIndex": 0,
+                    "columnName": "A",
+                    "formulaString": "=LISTELEMENT(ELEMENTS_BY_SELECTOR_QUERY(#HTTP_Admin_Page!parsed_html;\"#aboutTable\");0)"
+                },
+                {
+                    "columnId": "8",
+                    "columnIndex": 1,
+                    "columnName": "label_contents",
+                    "formulaString": "=CONTENTS_BY_TAG_NAME(REPLACEALL(EXPAND(ELEMENTS_BY_TAG_NAME(#A;\"tr\"));\"span\";\"label\");\"label\")"
+                },
+                {
+                    "columnId": "9",
+                    "columnIndex": 2,
+                    "columnName": "label",
+                    "formulaString": "=REPLACEALL(LISTELEMENT(#label_contents;0);\":\")"
+                },
+                {
+                    "columnId": "11",
+                    "columnIndex": 3,
+                    "columnName": "value",
+                    "formulaString": "=LISTELEMENT(#label_contents;1)"
+                }
+            ],
+            "keep": false,
+            "name": "data_prep",
+            "nextColumnId": 13,
+            "sheetId": "f3dc205f-50f8-4ba9-97a4-c4f1bcf27a30",
+            "sheetType": "das.internal.FormulaSheetType"
+        },
+        {
+            "columnStyles": [
+                {
+                    "columnId": "0",
+                    "name": "key",
+                    "thousandSeparator": true,
+                    "width": 100
+                },
+                {
+                    "columnId": "1",
+                    "name": "value",
+                    "thousandSeparator": true,
+                    "width": 362
+                }
+            ],
+            "formulas": [
+                {
+                    "columnId": "0",
+                    "columnIndex": 0,
+                    "columnName": "key",
+                    "formulaString": "=REPLACEALL(LISTELEMENT(#data_prep!label_contents;0);\":\")"
+                },
+                {
+                    "columnId": "1",
+                    "columnIndex": 1,
+                    "columnName": "value",
+                    "formulaString": "=LISTELEMENT(#data_prep!label_contents;1)"
+                }
+            ],
+            "keep": true,
+            "name": "versionConfig",
+            "nextColumnId": 2,
+            "sheetId": "d6a1c435-dc71-4bb1-805c-1662eeeeaf11",
+            "sheetType": "das.internal.FormulaSheetType"
+        }
+    ],
+    "version": "4.5.0"
+}
